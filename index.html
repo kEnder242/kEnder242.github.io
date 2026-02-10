@@ -28,30 +28,30 @@
         }
         header {
             width: 100%;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
             background: linear-gradient(180deg, #11161d 0%, #0a0e14 100%);
             border-bottom: 1px solid var(--border);
         }
-        h1 { font-size: 28px; margin: 0; font-weight: 600; letter-spacing: 1px; }
-        .subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; margin-top: 5px; font-weight: bold; }
+        h1 { font-size: 32px; margin: 0; font-weight: 600; letter-spacing: 2px; }
+        .subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; margin-top: 8px; font-weight: bold; letter-spacing: 1px; }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             width: 90%;
-            padding: 40px 0;
+            padding: 60px 0;
         }
 
-        .trailer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
+        .trailer-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
         .trailer-card {
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease;
             text-decoration: none;
@@ -60,31 +60,33 @@
             flex-direction: column;
         }
         .trailer-card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.02);
             border-color: var(--accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
         }
 
         .trailer-img {
             width: 100%;
-            height: 250px;
+            height: 400px;
             object-fit: cover;
+            object-position: top center;
             border-bottom: 1px solid var(--border);
-            opacity: 0.8;
+            opacity: 0.7;
             transition: opacity 0.3s ease;
         }
         .trailer-card:hover .trailer-img { opacity: 1; }
 
         .trailer-info {
-            padding: 20px;
+            padding: 25px;
+            background: rgba(0,0,0,0.3);
         }
-        .trailer-title { font-size: 18px; font-weight: bold; color: var(--accent); margin-bottom: 5px; }
-        .trailer-desc { font-size: 14px; color: var(--sub); line-height: 1.4; }
+        .trailer-title { font-size: 22px; font-weight: bold; color: var(--accent); margin-bottom: 8px; }
+        .trailer-desc { font-size: 15px; color: var(--sub); line-height: 1.5; }
 
         footer {
             margin-top: auto;
             width: 100%;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
             border-top: 1px solid var(--border);
             font-size: 12px;
@@ -94,25 +96,26 @@
         .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.05);
-            padding: 6px 15px;
+            gap: 10px;
+            background: rgba(255,255,255,0.03);
+            padding: 8px 20px;
             border-radius: 20px;
             border: 1px solid var(--border);
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 13px;
+            font-weight: bold;
         }
         .dot { 
-            width: 8px; height: 8px; 
+            width: 10px; height: 10px; 
             background: #d29922; 
             border-radius: 50%; 
-            box-shadow: 0 0 5px #d29922;
+            box-shadow: 0 0 8px #d29922;
         }
-        .dot.online { background: var(--success); box-shadow: 0 0 5px var(--success); }
-        .dot.offline { background: var(--error); box-shadow: 0 0 5px var(--error); }
+        .dot.online { background: var(--success); box-shadow: 0 0 8px var(--success); }
+        .dot.offline { background: var(--error); box-shadow: 0 0 8px var(--error); }
 
-        @media (max-width: 600px) {
-            .trailer-grid { grid-template-columns: 1fr; }
-            .trailer-img { height: 180px; }
+        @media (max-width: 800px) {
+            .trailer-img { height: 250px; }
         }
     </style>
 </head>
@@ -130,7 +133,7 @@
             </div>
         </div>
 
-        <div class="trailer-grid">
+        <div class="trailer-stack">
             <a href="https://notes.jason-lab.dev/stories.html" class="trailer-card">
                 <img src="assets/trailers/stories_trailer.jpg" class="trailer-img" alt="Work Stories">
                 <div class="trailer-info">
@@ -162,10 +165,26 @@
                     <div class="trailer-desc">Real-time telemetry from the Z87-Linux node. Power profiles, thermal metrics, and interleaved system logs.</div>
                 </div>
             </a>
+
+            <a href="https://notes.jason-lab.dev/research.html" class="trailer-card">
+                <img src="assets/trailers/research_trailer.jpg" class="trailer-img" alt="Research Pipeline">
+                <div class="trailer-info">
+                    <div class="trailer-title">Research Pipeline</div>
+                    <div class="trailer-desc">Mapping academic research to local silicon. The intellectual pedigree of the Acme Lab Bicameral Mind.</div>
+                </div>
+            </a>
+
+            <a href="https://notes.jason-lab.dev/intercom.html" class="trailer-card">
+                <img src="assets/trailers/intercom_trailer.jpg" class="trailer-img" alt="AI Lab Intercom">
+                <div class="trailer-info">
+                    <div class="trailer-title">AI Lab Intercom</div>
+                    <div class="trailer-desc">Direct interface to the Right Hemisphere (Pinky). Voice-enabled command and control for the Acme Lab environment.</div>
+                </div>
+            </a>
         </div>
 
-        <div style="margin-top: 60px; text-align: center;">
-            <a href="https://github.com/kEnder242" style="color: var(--accent); text-decoration: none; font-weight: bold; border: 1px solid var(--accent); padding: 10px 25px; border-radius: 4px;">VIEW GITHUB REPOSITORY</a>
+        <div style="margin-top: 80px; text-align: center;">
+            <a href="https://github.com/kEnder242" style="color: var(--accent); text-decoration: none; font-weight: bold; border: 1px solid var(--accent); padding: 12px 35px; border-radius: 4px; letter-spacing: 1px;">VIEW GITHUB REPOSITORY</a>
         </div>
     </div>
 
@@ -180,7 +199,6 @@
 
         async function checkStatus() {
             try {
-                // Probing the notes server
                 const r = await fetch(TARGET_URL, { mode: 'no-cors' });
                 dot.className = 'dot online';
                 text.innerText = 'LAB UPLINK NOMINAL';
