@@ -3,131 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason Allred | Lab</title>
+    <title>Jason Allred | Acme Lab</title>
     <style>
         :root {
             --bg: #0a0e14;
             --card: #11161d;
             --text: #e6edf3;
-            --accent: #2f81f7;
+            --accent: #4daafc;
             --sub: #8b949e;
             --success: #3fb950;
             --error: #f85149;
-            --pending: #d29922;
+            --border: #30363d;
         }
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .monolith {
-            background-color: var(--card);
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 40px;
-            width: 300px;
+        header {
+            width: 100%;
+            padding: 40px 0;
             text-align: center;
+            background: linear-gradient(180deg, #11161d 0%, #0a0e14 100%);
+            border-bottom: 1px solid var(--border);
+        }
+        h1 { font-size: 28px; margin: 0; font-weight: 600; letter-spacing: 1px; }
+        .subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; margin-top: 5px; font-weight: bold; }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            padding: 40px 0;
+        }
+
+        .trailer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .trailer-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .trailer-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { font-size: 24px; margin-bottom: 8px; font-weight: 600; }
-        p { color: var(--sub); font-size: 14px; margin-bottom: 30px; }
-        
-        .links { display: flex; flex-direction: column; gap: 12px; }
-        a {
-            text-decoration: none;
-            color: var(--text);
-            border: 1px solid #30363d;
-            padding: 12px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            font-size: 14px;
-        }
-        a:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background: rgba(47, 129, 247, 0.05);
-        }
-        .status {
-            margin-top: 30px;
-            font-size: 11px;
-            color: var(--sub);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+
+        .trailer-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
             opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .trailer-card:hover .trailer-img { opacity: 1; }
+
+        .trailer-info {
+            padding: 20px;
+        }
+        .trailer-title { font-size: 18px; font-weight: bold; color: var(--accent); margin-bottom: 5px; }
+        .trailer-desc { font-size: 14px; color: var(--sub); line-height: 1.4; }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--sub);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            padding: 6px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
         }
         .dot { 
             width: 8px; height: 8px; 
-            background: var(--pending); 
+            background: #d29922; 
             border-radius: 50%; 
-            box-shadow: 0 0 5px var(--pending);
-            transition: background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 5px #d29922;
         }
         .dot.online { background: var(--success); box-shadow: 0 0 5px var(--success); }
         .dot.offline { background: var(--error); box-shadow: 0 0 5px var(--error); }
+
+        @media (max-width: 600px) {
+            .trailer-grid { grid-template-columns: 1fr; }
+            .trailer-img { height: 180px; }
+        }
     </style>
 </head>
 <body>
-    <div class="monolith">
-        <h1>Jason Allred</h1>
-        <p>Home Laboratory</p>
-        
-        <div class="links">
-            <a href="https://notes.jason-lab.dev/stories.html">📂 Stories</a>
-            <a href="https://github.com/kEnder242">🐙 GitHub</a>
-            <a href="https://notes.jason-lab.dev/intercom/">📡 Intercom</a>
+    <header>
+        <h1>JASON ALLRED</h1>
+        <div class="subtitle">Acme Laboratory | Silicon Validation</div>
+    </header>
+
+    <div class="container">
+        <div style="text-align: center;">
+            <div class="status-pill">
+                <div class="dot" id="statusDot"></div>
+                <span id="statusText">PROBING UPLINK...</span>
+            </div>
         </div>
 
-        <div class="status" id="statusBox">
-            <div class="dot" id="statusDot"></div>
-            <span id="statusText">Ping...</span>
+        <div class="trailer-grid">
+            <a href="https://notes.jason-lab.dev/stories.html" class="trailer-card">
+                <img src="assets/trailers/stories_trailer.jpg" class="trailer-img" alt="Work Stories">
+                <div class="trailer-info">
+                    <div class="trailer-title">Work Stories</div>
+                    <div class="trailer-desc">High-density engineering narratives from the Intel Xeon and Knight's Landing eras. Focus on systems architecture and architectural scars.</div>
+                </div>
+            </a>
+
+            <a href="https://notes.jason-lab.dev/timeline.html" class="trailer-card">
+                <img src="assets/trailers/timeline_trailer.jpg" class="trailer-img" alt="Work Notes">
+                <div class="trailer-info">
+                    <div class="trailer-title">Work Notes</div>
+                    <div class="trailer-desc">The 18-year archive of daily tactical logs, autonomously synthesized and ranked by local AI reasoning loops.</div>
+                </div>
+            </a>
+
+            <a href="https://notes.jason-lab.dev/files.html" class="trailer-card">
+                <img src="assets/trailers/files_trailer.jpg" class="trailer-img" alt="Artifact Map">
+                <div class="trailer-info">
+                    <div class="trailer-title">Artifact Map</div>
+                    <div class="trailer-desc">A deep index of released scripts, documents, and technical gems. Direct integration with internal knowledge base repositories.</div>
+                </div>
+            </a>
+
+            <a href="https://notes.jason-lab.dev/status.html" class="trailer-card">
+                <img src="assets/trailers/status_trailer.jpg" class="trailer-img" alt="Lab Status">
+                <div class="trailer-info">
+                    <div class="trailer-title">Lab Status</div>
+                    <div class="trailer-desc">Real-time telemetry from the Z87-Linux node. Power profiles, thermal metrics, and interleaved system logs.</div>
+                </div>
+            </a>
+        </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="https://github.com/kEnder242" style="color: var(--accent); text-decoration: none; font-weight: bold; border: 1px solid var(--accent); padding: 10px 25px; border-radius: 4px;">VIEW GITHUB REPOSITORY</a>
         </div>
     </div>
 
-    <script>
-        // Configuration
-        const TARGET_URL = 'https://notes.jason-lab.dev';
-        const TIMEOUT_MS = 3000;
+    <footer>
+        &copy; 2026 Jason Allred | Acme Lab Bicameral Mind v3.2.4
+    </footer>
 
+    <script>
+        const TARGET_URL = 'https://notes.jason-lab.dev/data/status.json';
         const dot = document.getElementById('statusDot');
         const text = document.getElementById('statusText');
 
         async function checkStatus() {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
             try {
-                // We use mode: 'no-cors' because we don't need the content,
-                // we just need to know if the server accepted the request.
-                // This bypasses CORS errors in the console.
-                await fetch(TARGET_URL, { 
-                    mode: 'no-cors', 
-                    signal: controller.signal 
-                });
-                
-                // If fetch doesn't throw, the network path is open.
+                // Probing the notes server
+                const r = await fetch(TARGET_URL, { mode: 'no-cors' });
                 dot.className = 'dot online';
-                text.innerText = 'Systems Nominal';
+                text.innerText = 'LAB UPLINK NOMINAL';
             } catch (error) {
-                // If fetch throws, it's likely a network error (DNS, Timeout, Down).
-                console.error("Status Check Failed:", error);
                 dot.className = 'dot offline';
-                text.innerText = 'Uplink Offline';
-            } finally {
-                clearTimeout(timeoutId);
+                text.innerText = 'LAB UPLINK OFFLINE';
             }
         }
-
-        // Run check immediately
         checkStatus();
-        
-        // Optional: Re-check every 30 seconds
         setInterval(checkStatus, 30000);
     </script>
 </body>
