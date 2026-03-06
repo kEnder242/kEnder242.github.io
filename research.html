@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Pipeline | Jason Allred</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+        }
+        main { max-width: 1000px; margin: 0 auto; }
+        .section-title { color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        .disclaimer-box { background: rgba(88, 166, 255, 0.1); border: 1px solid var(--accent-color); padding: 15px; border-radius: 6px; margin-bottom: 20px; font-size: 0.9rem; }
+        
+        /* High-Density Table Styling */
+        .ledger-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .ledger-table th {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .ledger-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #222;
+            vertical-align: top;
+            line-height: 1.4;
+        }
+        .anchor-link { color: #fff; text-decoration: none; font-weight: bold; border-bottom: 1px dashed #444; }
+        .anchor-link:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+
+        .impact-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .impact-live { background: #238636; color: #fff; }
+        .impact-design { background: #1f6feb; color: #fff; }
+        .impact-stable { background: #6e7681; color: #fff; }
+        
+        .nav-home { margin-bottom: 20px; }
+        .nav-home a { color: var(--accent-color); text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="nav-home">
+            <a href="index.html">← Return to Airlock</a>
+        </div>
+
+        <section id="ledger">
+            <h2 class="section-title">The Researcher's Ledger</h2>
+            <div class="disclaimer-box">
+                <span style="color: var(--accent-color); font-weight: bold;">[PHILOSOPHY]</span> 
+                This ledger tracks the transition of technical theory into local silicon. 
+                Each implementation is grounded in peer-reviewed research or documented validation scars.
+            </div>
+
+            <table class="ledger-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Research Anchor</th>
+                        <th style="width: 30%;">Theoretical Logic</th>
+                        <th style="width: 30%;">Acme Implementation</th>
+                        <th style="width: 15%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Foundational Scaling -->
+                    <tr>
+                        <td><a href="https://arxiv.org/abs/2602.01566" target="_blank" class="anchor-link">FS-Researcher [FEAT-095]</a></td>
+                        <td>Dual-Agent: Context Builder + Report Writer scaling for long-horizon memory.</td>
+                        <td>Semantic Mapping (Layered RAG) utilizing ChromaDB for strategic anchors.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://arxiv.org/abs/2601.22628" target="_blank" class="anchor-link">TTCS / Curriculum [FEAT-114]</a></td>
+                        <td>Test-Time Curriculum: Synthesize-then-Solve loops for higher reasoning quality.</td>
+                        <td>Designed to process 18 years of technical history via <code>ai_engine_v2.py</code>.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>Apple CLaRa [FEAT-073]</td>
+                        <td>Semantic Compression: 16x-128x density for long-term retention.</td>
+                        <td><code>SemanticCondenser</code> for log-to-insight synthesis during Dreaming.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>Agentic-R [FEAT-080]</td>
+                        <td>Learning to Retrieve: Utility-based ranking for autonomous memory lookup.</td>
+                        <td>Dynamically re-ranking historical context based on reasoning utility.</td>
+                        <td><span class="impact-badge impact-live">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Semantic Career Recall [FEAT-088]</td>
+                        <td>Vector-based Historical Grounding: Querying 18 years of truth via natural language.</td>
+                        <td>Bridging 18 years of technical scars with strategic Focal goals.</td>
+                        <td><span class="impact-badge impact-live">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Internal Debate [FEAT-071]</td>
+                        <td>Moderated Consensus: Dueling independent reasoning paths to reduce hallucinations.</td>
+                        <td>Multi-agent collaboration for high-stakes architectural decision making.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>Resonant Chamber [FEAT-153]</td>
+                        <td>Multi-Agent Coordination: Overhearing strategic intent to improve grounding.</td>
+                        <td>Hub-level context injection between Pinky and Brain during derivation.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <!-- Bicameral Evolution Milestone (March 2026) -->
+                    <tr>
+                        <td>Bicameral Evolution</td>
+                        <td>Hybrid Scaling: Transition to Bilingual Attendant (V2) and Qwen 27B Ultra tier.</td>
+                        <td>Resident 3B Foil (Pinky) grounded by Sovereign 27B Architect (Brain).</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dreaming Cycle [FEAT-067]</td>
+                        <td>Subconscious Consolidation: Multi-host batch processing during idle cycles.</td>
+                        <td>Automated movement of chat logs to Long-Term Wisdom (Linux -> 4090).</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>Liger-Kernel [FEAT-031]</td>
+                        <td>VRAM Optimization: Fused kernels for efficient inference on consumer hardware.</td>
+                        <td>Maximizing 8B residency and enabling 14B testing on 11GB silicon.</td>
+                        <td><span class="impact-badge impact-stable">Stable</span></td>
+                    </tr>
+                    <tr>
+                        <td>Unified Diffs [FEAT-115]</td>
+                        <td>Robust Agentic Editing: Moving away from string-replacement collisions.</td>
+                        <td><code>patch_file</code> tool in Archive Node for granular workspace updates.</td>
+                        <td><span class="impact-badge impact-live">Live</span></td>
+                    </tr>
+                    <tr>
+                        <td>SML Alignment [FEAT-083]</td>
+                        <td>Standard Model Labeling: Cross-platform model resolution and host-affinity.</td>
+                        <td>Fixed KENDER resolution logic to prioritize 8B Sovereign models over Linux tiers.</td>
+                        <td><span class="impact-badge impact-stable">Final</span></td>
+                    </tr>
+                    <!-- Overarching Sprint Goals -->
+                    <tr>
+                        <td>Observational Memory</td>
+                        <td>State-Based RAG: Transitioning from lookup to persistent "World Model".</td>
+                        <td>Incorporating real-time Lab state into the reasoning context.</td>
+                        <td><span class="impact-badge impact-design">Sprint Goal</span></td>
+                    </tr>
+                    <tr>
+                        <td>TTT-Discover</td>
+                        <td>RL-based Autonomous Validation: Finding shortest paths to silicon failure.</td>
+                        <td>Implementing reinforcement loops for autonomous discovery in the archive.</td>
+                        <td><span class="impact-badge impact-design">Sprint Goal</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
