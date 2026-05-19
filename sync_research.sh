@@ -40,11 +40,10 @@ cp "$INTERNAL_RESEARCH" "$PUBLIC_RESEARCH"
 
 # Use Python for a cleaner multiline replacement of the head/nav section
 python3 -c "
-import sys
+import sys, re
 content = open('$PUBLIC_RESEARCH').read()
-# Replace Head
-head_search = '<link rel=\"stylesheet\" href=\"style.css?v=d3756599\">'
-content = content.replace(head_search, sys.argv[1])
+# Replace Head with a generic regex for the hash
+content = re.sub(r'<link rel="stylesheet" href="style.css\?v=[a-f0-9]+">', sys.argv[1], content)
 # Remove Zero Trust Nav
 nav_search = '<nav id=\"sidebar\">\n        <mission-control></mission-control>\n    </nav>'
 content = content.replace(nav_search, '<div class=\"nav-home\"><a href=\"index.html\">← Return to Airlock</a></div>')
