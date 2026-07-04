@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Protocols | Jason Allred</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #cccccc;
+            --accent-color: #4daafc;
+            --border-color: #333333;
+            --font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+        body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 40px; }
+        main { max-width: 1000px; margin: 0 auto; }
+        .section-title { color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-family: var(--font-stack); }
+        .disclaimer-box { 
+            background-color: #111; 
+            border: 1px solid var(--border-color); 
+            padding: 15px; 
+            margin-bottom: 25px; 
+            font-family: var(--font-stack); 
+            font-size: 0.9rem; 
+            line-height: 1.4; 
+            border-left: 4px solid var(--accent-color); 
+        }
+        .ledger-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 20px; background: rgba(255, 255, 255, 0.01); font-family: var(--font-stack); }
+        .ledger-table th { text-align: left; padding: 12px 15px; border-bottom: 2px solid var(--border-color); color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px; }
+        .ledger-table td { padding: 12px 15px; border-bottom: 1px solid #222; vertical-align: top; line-height: 1.4; }
+        .protocol-body p { margin-top: 0; margin-bottom: 10px; }
+        .protocol-body ul, .protocol-body ol { margin-top: 0; margin-bottom: 10px; padding-left: 20px; }
+        .protocol-body li { margin-bottom: 5px; }
+        .protocol-body a { color: var(--accent-color); text-decoration: none; border-bottom: 1px dashed var(--accent-color); }
+        .protocol-body a:hover { color: #fff; border-bottom-style: solid; }
+        .protocol-body code { background: #222; padding: 2px 4px; border-radius: 3px; font-family: var(--font-stack); color: #e2e2e2; }
+        .nav-home { margin-bottom: 20px; font-family: var(--font-stack); }
+        .nav-home a { color: var(--accent-color); text-decoration: none; font-size: 0.9rem; }
+        #sys-console {
+            background: #000; color: var(--accent-color); font-family: var(--font-stack);
+            padding: 10px; margin-bottom: 20px; border: 1px solid #333; font-size: 0.7rem;
+            border-left: 3px solid var(--accent-color);
+        }
+    </style>
+    <style>
+        /* High-Density Table Styling */
+        .ledger-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--font-stack);
+            font-size: 0.85rem;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .ledger-table th {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .ledger-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #222;
+            vertical-align: top;
+            line-height: 1.4;
+        }
+        .ledger-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+        .protocol-body p { margin-top: 0; margin-bottom: 10px; }
+        .protocol-body ul, .protocol-body ol { margin-top: 0; margin-bottom: 10px; padding-left: 20px; }
+        .protocol-body li { margin-bottom: 5px; }
+        .protocol-body a { color: var(--accent-color); text-decoration: none; border-bottom: 1px dashed var(--accent-color); }
+        .protocol-body a:hover { color: #fff; border-bottom-style: solid; }
+        .protocol-body code { background: #222; padding: 2px 4px; border-radius: 3px; font-family: var(--font-stack); color: #e2e2e2; }
+    </style>
+</head>
+<body>
+
+    <button id="menu-toggle">☰ MENU</button>
+
+    <div class="nav-home"><a href="index.html">← Return to Airlock</a></div>
+
+    <main>
+        <div id="sys-console">
+            <div>[INIT] Mounting Lab Protocols...</div>
+        </div>
+
+        <section id="ledger">
+            <h2 class="section-title">Operational Protocols & Best Known Methods</h2>
+            <div class="disclaimer-box">
+                <span style="color: var(--accent-color); font-weight: bold;">[PHILOSOPHY]</span> 
+                The operational guidelines and best known methods (BKMs) governing the Bicameral Lab. 
+                These protocols enforce DNA integrity, verification before velocity, and safe execution.
+            </div>
+
+            <table class="ledger-table">
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">BKM ID</th>
+                        <th style="width: 85%;">Protocol & Operational Guidance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-001</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Cold-Start Protocol (Agent Orientation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Restore the Agent's technical context after a session break or crash.</p>
+<ol>
+<li><strong>Orientation (Bootstrap)</strong>:<ul>
+<li>Refer to the top-level <strong><a href="https://github.com/kEnder242/Dev_Lab/blob/main/BOOTSTRAP_v4.3.md">BOOSTRAP.md</a></strong> for the primary navigational hub and global project context.</li>
+<li>Consult <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/ENGINEERING_PEDIGREE.md">ENGINEERING_PEDIGREE.md</a></strong> for the active architectural laws and design breadcrumbs.</li>
+<li><strong>Inventory Mandate</strong>: Proactively identify existing "wheels" (tests, diagnostic scripts, and tools) in <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/DIAGNOSTIC_RUNDOWN.md">DIAGNOSTIC_RUNDOWN.md</a></strong> and <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/TOOL_RUNDOWN.md">TOOL_RUNDOWN.md</a></strong> before suggesting or implementing new code.</li>
+<li><strong>State Snapshot</strong>: Read the last 5 entries in <strong><a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/00_FEDERATED_STATUS.md">00_FEDERATED_STATUS.md</a></strong> to identify the current "Front Line" and active sprint.</li>
+<li><strong>Updates</strong>: Take time to keep orientation files relevant, but preserve boostrap IMMUTABILITY PROTOCOL as it is a pointer not a orientation file.</li>
+</ul>
+</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-002</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Montana Protocol (Logger Awareness)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent diagnostic blindness when third-party libraries hijack the stream.</p>
+<ul>
+<li><strong>Behavior</strong>: If the Lab appears "silent" during a boot or tool-run, do not assume a hang. Third-party modules (NeMo/ChromaDB) frequently hijack the logging handlers.</li>
+<li><strong>Verification</strong>: The Agent must prioritize port-polling (e.g., <code>curl /heartbeat</code>) over log-scraping when silence is encountered. If silence persists, check for uncommitted logger isolation fixes (FEAT-031).</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-003</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Resident Sequencing (Staged Loading)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Maintain awareness of the Lab's staggered cognitive state.</p>
+<ul>
+<li><strong>Behavior</strong>: When interacting with the Lab after a fresh boot, the Agent must recognize that nodes (Archive, Pinky, Brain) come online in stages.</li>
+<li><strong>Verification</strong>: Wait for the staggered <code>[READY]</code> signals in the logs before assuming full capability. Refer to <strong>[FEAT-133]</strong> for the underlying technical law.</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-004</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The QQ Protocol (Quick Question)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent state drift and over-investigation during collaborative sessions.</p>
+<ol>
+<li><strong>Shorthand (QQ)</strong>: Treat "QQ: [Question]" as a literal <strong>Quick Question</strong>. Fulfillment consists <strong>exclusively</strong> of providing a direct, concise answer.</li>
+<li><strong>Absolute Halt</strong>: A "QQ" response constitutes 100% completion of the task. Do not proceed to diagnostics, coding, or log-scraping.</li>
+<li><strong>Persistence of Halt</strong>: Informational or retrospective queries (e.g., "Tell me what you did", "Explain that log") do NOT signal a resumption of work. The Agent MUST remain in the <strong>HALT</strong> state until the user provides an explicit execution directive (e.g., "Fix it", "Proceed", "Apply").</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-005</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Design Studio (Greenlight before Silicon Change)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure alignment on naming, architecture, and persona before committing code.</p>
+<ol>
+<li><strong>The Pitch</strong>: Agent summarizes the goal in one sentence.</li>
+<li><strong>The Options</strong>: Agent presents 2-3 implementation paths (e.g., Simple, Robust, Experimental).</li>
+<li><strong>The Naming Ceremony</strong>: Explicit agreement on Nouns (Folders, DB Collections) and Verbs (Tool Names).</li>
+<li><strong>The Contract</strong>: User gives "Greenlight" to a specific path.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-006</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Heads Down / AFK Continuity (The Autonomous Sprint)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Enable deep Agent work cycles during user downtime while maintaining transparency.</p>
+<ol>
+<li><strong>Heads Down Trigger</strong>: Signals the start of an autonomous sprint. The Agent works through the agreed-upon task list (from <code>ProjectStatus.md</code> or a specific session goal).</li>
+<li><strong>AFK Hint</strong>: User says "AFK" or "Coffee Break" to signal they are stepping away. The Agent should check for any queued tasks or proceed autonomously.</li>
+<li><strong>High-Fidelity Reasoning</strong>: "Heads Down" does NOT mean "Terse Mode." The Agent should show reasoning between steps and explain "Why" in its tool calls. High visibility and verbosity is the standard for intent preservation and review.</li>
+<li><strong>Max Momentum</strong>: The Agent must strive to complete as much of the plan as possible. If blocked by hardware or permissions, skip the item and maintain momentum on the next available task.</li>
+<li><strong>Linting Mandate</strong>: The Agent MUST use a linter (e.g., <code>ruff check</code>) or the <strong>Atomic Patcher</strong> for all code modifications during a Heads Down sprint to prevent "Zero-Visibility" regressions like <code>NameError</code>.</li>
+<li><strong>Conclusion</strong>: Once the backlog is exhausted or the sprint goal is achieved, exit heads down mode and provide the verbose <strong>BKM-007</strong> "Heads Up" report.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-007</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The "Heads Up" Report (High-Fidelity Debrief)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Restore technical context after a deep work cycle.</p>
+<ol>
+<li><strong>Trigger</strong>: Conclusion of a "Heads Down" sprint.</li>
+<li><strong>Verbosity</strong>: The report must be detailed and verbose (reversing minimalist CLI compression).</li>
+<li><strong>Content</strong>:<ul>
+<li>Summary of all completed items.</li>
+<li>Implications: Impact on VRAM, latency, and security.</li>
+<li>The "Path Backwards": Rollback steps if the new silicon is unstable.</li>
+</ul>
+</li>
+<li><strong>Verification</strong>: Re-verify all services (Ollama, vLLM, Intercom) before handing back control.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-009</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Checkpoint Protocol (Save State)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure 100% state persistence for session continuity.
+<strong>Trigger</strong>: "Checkpoint", "Save", "Close up shop", or end of a feature sprint.</p>
+<ol>
+<li><strong>State Snapshot</strong>: Wrap the current environment state in a <state_snapshot> XML block (Goal, Constraints, Knowledge, Trail, FS State, Recent Actions, Tasks).</li>
+<li><strong>Status Sync</strong>: Update <code>ProjectStatus.md</code> and <code>Portfolio_Dev/00_FEDERATED_STATUS.md</code>.</li>
+<li><strong>Memory</strong>: Save key architectural decisions to Long-Term Memory.</li>
+<li><strong>Persistence</strong>: <code>git add .</code> and <code>git commit</code> with a semantic message. (NEVER push).</li>
+<li><strong>Handover</strong>: Provide a 1-sentence summary of "Where we are" and "What to do next."</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-010</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Silicon Co-Pilot (Interactive Mode)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Maintain diagnostic fidelity during live user/agent collaboration.
+<strong>Trigger</strong>: "Interactive Demo", "Co-Pilot Mode", or live debugging requests.</p>
+<ol>
+<li><strong>The Test Plan</strong>: Present a clear plan (What to test, expected outcome) before launching.</li>
+<li><strong>Versioning</strong>: Agent MUST bump the system VERSION (in acme_lab.py) if any client/server logic changed to prevent "Old Code" traps.</li>
+<li><strong>Execute (Blocking)</strong>: Agent runs the co-pilot script and WAITS. <ul>
+<li><em>Timeout</em>: Tool calls must automatically time out after 300s to prevent Agent lockup.</li>
+</ul>
+</li>
+<li><strong>Verbal Feedback</strong>: Actively mine logs for user notes (e.g., "Pinky, note that X is broken") received during the session.</li>
+<li><strong>Post-Mortem</strong>: Immediately update <code>ProjectStatus.md</code> with findings from both logs and user feedback.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-011</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Safe-Scalpel (Atomic Patcher)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure lint-verified, regression-free code edits.
+<strong>Tool</strong>: <code>HomeLabAI/src/debug/atomic_patcher.py</code></p>
+<ol>
+<li><strong>Usage</strong>: Mandatory for ALL code edits in the <code>HomeLabAI</code> and <code>Portfolio_Dev</code> repositories.</li>
+<li><strong>CLI Mode</strong>: <code>python3 atomic_patcher.py &lt;file&gt; &lt;desc&gt; &lt;old_text&gt; &lt;new_text&gt;</code></li>
+<li><strong>Library Mode</strong>: Import <code>apply_batch_refinement</code> for complex, multi-edit tasks.</li>
+<li><strong>Safety</strong>: Automatically runs <code>ruff</code> check and rolls back all changes if a lint regression is detected.</li>
+<li><strong>Precision</strong>: When providing multi-line strings, ensure blank lines are <strong>truly empty</strong> (zero spaces) to prevent <code>W293</code> whitespace thrashing.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-012</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Ultimate Patcher (Archive Node)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Enable surgical, diff-based edits with mandatory lint-safety.
+<strong>Tool</strong>: <code>patch_file(filename, diff)</code> via the Archive Node.</p>
+<ol>
+<li><strong>Format</strong>: Accepts standard <strong>Unified Diffs</strong>.</li>
+<li><strong>Fuzzy Matching</strong>: Indentation-immune and handles line offsets gracefully.</li>
+<li><strong>Safety (Rollback)</strong>: Automatically saves original file state before applying the patch.</li>
+<li><strong>Lint-Gate</strong>: Runs <code>ruff</code> check on the patched file. If lint fails, it restores the original content and reports the errors.</li>
+<li><strong>Usage</strong>: Prefer this for any complex, multi-line logic changes where string matching is brittle.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-013</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Pager-Aware Watchdog Safety (Non-Blocking Shell Execution)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent the Gemini CLI watchdog from killing active processes during long-running tasks or interactive traps.</p>
+<ol>
+<li><strong>The Pager Trap</strong>: The Agent MUST be <strong>Pager-Aware</strong>. Assume there is no human to press "SPACE" or "Q." If a command hangs in a pager (e.g., <code>less</code>, <code>more</code>), it produces no STDOUT, triggering the CLI watchdog to terminate the process after a period of silence.</li>
+<li><strong>Mandatory Defenses</strong>:<ul>
+<li><strong>Flags</strong>: Include <code>--no-pager</code> for all <code>journalctl</code>, <code>systemctl</code>, and <code>git</code> commands.</li>
+<li><strong>Environment</strong>: Prefix one-off commands with <code>PAGER=cat</code> (e.g., <code>PAGER=cat git log</code>).</li>
+<li><strong>Non-Interactive</strong>: Always use "quiet" or "yes" flags (e.g., <code>npm install --silent</code>, <code>apt-get -y</code>) to bypass confirmation prompts.</li>
+</ul>
+</li>
+<li><strong>The "Silence" Rule</strong>: If a command is expected to take longer than 30s without output, the Agent MUST either run it in the background or use a progress-indicator tool to maintain "liveness" for the watchdog.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-014</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Deep-Dive (Show me / Tell me more / Teach me)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Provide high-fidelity technical transfer upon user request.</p>
+<ol>
+<li><strong>Trigger</strong>: Phrases like \"show me\" \"tell me more\", \"teach me\", \"dive into this\", or \"explain the logic\".</li>
+<li><strong>Required Content</strong>:<ul>
+<li><strong>Architectural \"Why\"</strong>: The engineering reasoning and impact on the broader Lab ecosystem.</li>
+<li><strong>Structural \"How\"</strong>: Concise code snippets highlighting the critical logic changes.</li>
+<li><strong>Performance Delta</strong>: (If applicable) Perceived or measured change in latency, VRAM, or responsiveness.</li>
+</ul>
+</li>
+<li><strong>Tone</strong>: Professional, direct, and technical. Avoid conversational chitchat.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-015</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Semantic Anchor Protocol (Anti-Drift)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Eliminate functional drift caused by hard-coded keyword lists.</p>
+<ol>
+<li><strong>Rule of the Ghost Keyword</strong>: No technical keywords or domain-specific anchors (e.g., "RAPL", "ESB2") are allowed in <code>.py</code> logic blocks. They must reside in <code>config/intent_anchors.json</code> or a dedicated ChromaDB collection.</li>
+<li><strong>The Vibe-First Mandate</strong>: Any <code>if/else</code> logic determining intent or routing must be preceded by a call to a <code>_classify_vibe()</code> or <code>_route_expert_domain()</code> method that utilizes a semantic pass (Vector or LLM).</li>
+<li><strong>DNA-First Verification</strong>: A feature is only marked <code>[COMPLETE]</code> if its implementation matches the "Mechanism" described in <code>FeatureTracker.md</code>. If the mechanism specifies "Sentinel Pass" and the code uses "List-Matching," the status is <code>[PARTIAL/STALE]</code>.</li>
+<li><strong>Retrieval Optimization Exception</strong>: Hardcoded logic (e.g., year-based regex) is permitted strictly for physical retrieval optimization (e.g., opening a specific <code>YYYY.json</code> file) AFTER a semantic intent (RECALL) has been established. It must never be used to gate the intent itself or replace semantic classification.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-016</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Montana Protocol (Logger Control)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent external library logger hijacking and ensure forensic traceability.</p>
+<ol>
+<li><strong>Usage</strong>: Call <code>infra.montana.reclaim_logger(role)</code> at the top of every node and main entry point.</li>
+<li><strong>Fingerprint</strong>: All log output must be preceded by the unique session fingerprint <code>[BOOT_HASH:COMMIT:ROLE]</code> to ensure forensic traceability across the federated lab.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-017</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Agentic Delegation (Context Preservation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <ul>
+<li><strong>Why:</strong> To postpone "Manic Phases" (cognitive overload leading to lossy compression of design documentation).</li>
+<li><strong>Rule:</strong> Use specialized sub-agents (<code>generalist</code>, <code>conductor</code>) for repetitive code execution or surgical implementation tasks. I (the Main Agent) remain the "Guardian of the DNA."</li>
+<li><strong>Constraint:</strong> Sub-agents are <strong>RESTRICTED</strong> from editing design documentation (<code>*.md</code>) in <code>Portfolio_Dev/</code>. Only the Main Agent conducts "DNA" updates.</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-018</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Orchestrator-First Mandate (Attendant V3)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent "Zombie States" and diagnostic blindness caused by manual process manipulation.</p>
+<ol>
+<li><strong>Service Model</strong>: The Lab Attendant is now a permanent resident service. Direct execution of the orchestration script for hardware control is no longer supported.</li>
+<li>
+<p><strong>Proxy Usage</strong>: All agentic orchestration must flow through the <strong>Native MCP Tools</strong> (<code>lab_start</code>, <code>lab_stop</code>, <code>lab_quiesce</code>). These tools act as a stateless proxy to the resident service.
+| Tool | Intent | Physical Action |
+| :--- | :--- | :--- |
+| <strong><code>lab_start</code></strong> | Primary Ignition | <strong>Atomic Scrub</strong>: Executes a PGID-aware purge of all previous Lab processes before launching the Hub and Engine. <strong>No manual cleanup required.</strong> |
+| <strong><code>lab_stop</code></strong> | Full Shutdown | <strong>Assassin Activation</strong>: Immediately terminates all process groups holding Lab ports (8088, 8765) and settles the silicon. |
+| <strong><code>lab_quiesce</code></strong> | Maintenance Lock | <strong>Persistence Gate</strong>: Sets a <code>maintenance.lock</code>, kills all residents, and enters a passive state where the Watchdog is disabled. Use this for driver updates or manual config testing. |
+| <strong><code>lab_heartbeat</code></strong> | Vitals Audit | <strong>Forensic Truth</strong>: Returns the physical port status, VRAM used/total, and the unique <code>[BOOT_HASH]</code> to verify which code version is actually resident. |
+| <strong><code>lab_ignition</code></strong> | Lock Clearance | <strong>Emergency Override</strong>: Clears any existing <code>maintenance.lock</code> files but does NOT start models. Follow this with <code>lab_start</code>. |</p>
+</li>
+<li>
+<p><strong>Critical REST</strong>: The REST API (port 9999) is a critical infrastructure layer that enables the <code>status.html</code> remote control and provides the backend communication for the MCP Proxy. </p>
+</li>
+<li><strong>The Prohibition</strong>: Manual <code>pkill</code>, <code>kill</code>, <code>nohup</code>, or direct <code>python3 src/acme_lab.py</code> execution is strictly <strong>FORBIDDEN</strong>. These actions bypass the Attendant's logging, port-reaping, and state-tracking logic.</li>
+<li><strong>Legacy Support</strong>: <code>LAB_REST_CURL_CONTROL</code> (Default: ENABLED) preserves backward compatibility for existing <code>curl</code> scripts and remote status indicators while steering the agent toward the high-fidelity Proxy path.</li>
+</ol>
+<p><strong>Lead Engineer's Mandate (Tool Stewardship)</strong>: "If a tool is broken or lacks a necessary capability, do NOT bypass it with a pkill or shell hack. Fix the tool or extend the API. A bypass is a 'Silicon Scar' that blinds future agents; a fix is a permanent upgrade to the Lab's sovereignty."</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-024</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure the physical Lab state matches the active sprint implementation.</p>
+<ol>
+<li><strong>Sync-Gate</strong>: Before any <code>[LIVE FIRE]</code> or <code>[SHAKEDOWN]</code> test, the Agent must perform a <code>curl /heartbeat</code>. </li>
+<li><strong>Logic</strong>: If the current <code>commit</code> or <code>model</code> in the heartbeat does not match the session's active implementation, the Agent MUST trigger a <code>POST /hard_reset</code> (or <code>lab_stop</code> -&gt; <code>lab_start</code>) to synchronize the silicon with the code.</li>
+<li><strong>State Trust</strong>: Do not assume a background process persisted correctly across a git commit or hard reset. Re-verify liveness before proceeding with test execution.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-020</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity Sprint Documentation (Intent Preservation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
+1.  <strong>Task Verbosity</strong>: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.
+2.  <strong>Historical Trace</strong>: Sprints must document the forensic anchors (logs, code fragments) that justify the change.
+3.  <strong>Absolute Append</strong>: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.
+4.  <strong>No Summarization</strong>: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-022</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Atomic File Swap Protocol (Filesystem Safety)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure filesystem atomicity for all file updates and prevent race conditions.</p>
+<ol>
+<li><strong>Protocol</strong>: Consumers (UIs or Workers) must never encounter partially written or corrupted states during background synthesis or logging. While the risk of reading a partial file during overnight scans is low, this protocol remains the standard for all file-based state transitions to maintain system hygiene.</li>
+<li><strong>Mechanism</strong>: Standardize on the <code>.tmp</code> + <code>os.replace</code> pattern for all scanner and worker outputs (e.g., yearly JSONs and the Forensic Ledger). Write to a temporary file first, then perform an atomic rename. This prevents the static dashboard from reading half-written files, eliminating UI flicker and "Empty Year" bugs.</li>
+<li><strong>Content Integrity</strong>: The protocol is strictly a <strong>Filesystem-Level Safety</strong> mechanism. It must not be used to overwrite history; the underlying content logic (e.g., Cumulative Synthesis) must ensure that historical data is preserved during the swap.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-023</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Surgical Preservation Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: To prevent "Lossy Compression," erasures of technical pedigree, and documentation thrash during architectural refactors.</p>
+<p><strong>Why</strong>: To combat the LLM's natural instinct to simplify and summarize complex history. Treating documentation as "Write-Protected DNA" ensures that technical findings are layered rather than replaced, maintaining the "Silicon Scar" pedigree as the primary defense against agentic state-drift and loss of intent.</p>
+<p><strong>Sprint Tasks</strong>: Specifically, sprint task context should be preserved when completing.  We still want to know the 'why' and 'how' context even though they are completed and done.</p>
+<h4><strong>🏎️ 1. Execution (The Surgical Additive Pass)</strong></h4>
+<ul>
+<li><strong>Step 1</strong>: Target the most granular line-ranges possible for <code>replace</code> operations to avoid context-bleed.</li>
+<li><strong>Step 2</strong>: Layer new technical "Wins" directly above or alongside historical "Scars" using an append-only logic.</li>
+<li><strong>Step 3</strong>: Apply <code>[PIVOT]</code> or <code>[HISTORICAL]</code> tags to deprecated strategies instead of deleting the original text.</li>
+<li><strong>Step 4</strong>: Restore "Lost Gems" word-for-word immediately if a fidelity loss is identified.</li>
+</ul>
+<h4><strong>🧪 2. Validation Logic</strong></h4>
+<ul>
+<li><strong>Link Gate</strong>: Verify the physical existence of a target file on disk before editing or adding any documentation link.</li>
+<li><strong>Anchor Check</strong>: Ensure "Validation Anchors" (specific IPs, Ports, IDs, kernel settings) are preserved word-for-word in the final output.</li>
+<li><strong>Pedigree Verification</strong>: Compare the "God View" roadmap against previous git commits to ensure no historical phases were compressed or "grouped" into high-level points.</li>
+</ul>
+<h4><strong>🤕 3. Scars (Known Failures)</strong></h4>
+<ul>
+<li><strong>The Compression Trap</strong>: LLMs naturally instinct to "clean up" or "summarize" old tasks to save space—this is a fatal error that leads to the total loss of technical intent.</li>
+<li><strong>The Erasure Regret</strong>: Deleting "Tabled" tasks or previous failures makes the Lab look reactive rather than evolved; the history of the struggle is the source of robustness.</li>
+</ul>
+<h3>[BKM-015.1] The Law of Semantic Indirection (The Bones)</h3>
+<p><strong>Context:</strong> Replaces the "Waffling" period (Feb-Mar 2026) where routing was managed via static JSON lists in <code>intent_anchors.json</code>. 
+<strong>Why:</strong> Rigid mapping causes "Logic Drift" when new tools are added. The agent must rely on semantic "Vibes" to select its cognitive loadout.
+<strong>The Rule:</strong> No <code>.py</code> logic block may map a domain to a tool or adapter via a switch/case or list-matching. All behavioral mapping must be retrieved via vector similarity from the <code>behavioral_dna</code> collection.
+<strong>Trigger:</strong> Every <code>CognitiveHub</code> dispatch must first perform a "Vibe Check" against the neural archive.</p>
+<hr />
+<ol>
+<li><strong>[BKM-031] Ledger-Only Mandate (Anti-Assassin)</strong>:<ul>
+<li><strong>Rule</strong>: The Lab MUST NOT perform broad-spectrum system scans (GPU, Port, or Signature) to identify orphans.</li>
+<li><strong>Mechanism</strong>: All reaping actions MUST be restricted to the <strong>Explicit PID Ledger</strong>.</li>
+<li><strong>Philosophy</strong>: Better a VRAM leak than an OS-level assassination. If a process is not in the ledger, it does not exist to the Lab. Never use <code>fuser -k</code> or <code>pkill</code> on system-wide shared resources.</li>
+</ul>
+</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-029</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The 4-Step Heads-Down Implementation Loop</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure surgical precision and validation during deep work cycles.</p>
+<p>--- FOR EACH TASK ---
+1.  <strong>Compare</strong>: Contrast active code with the documented goal. Fix any deviations from the original plan immediately to reduce drift.
+2.  <strong>Save</strong>: Commit file edits to Git after each sub-task is completed but <strong>BEFORE</strong> testing.
+3.  <strong>Review</strong>: Execute a <code>git diff</code> on the latest commit. Verify that no "Ghost Grafts" or accidental deletions occurred.
+4.  <strong>Validate</strong>: Run the specified diagnostic or test script. Repeat steps 1-4 until the task is complete and passing.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-030</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Resonant Planning Pattern</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Role: [SPRINT] - Planning &amp; Execution Protocol</strong></p>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>PURPOSE:</strong> To ensure transparent, iterative, and high-fidelity project evolution through collaborative planning and surgical execution.</p>
+</blockquote>
+<h3>1. Document Architecture</h3>
+<ul>
+<li><strong>Location</strong>: All Master Sprint Plans reside in <code>Portfolio_Dev/SPRINT_PLAN_SPR_XX_X.md</code>.</li>
+<li><strong>Structure</strong>: Every task MUST include a <strong>How</strong> (the technical implementation path) and a <strong>Why</strong> (the strategic rationale).</li>
+<li><strong>Pointers</strong>: Conductor-level plans (<code>conductor/tracks/&lt;track_id&gt;/plan.md</code>) must contain explicit pointers to the Master Sprint Plan and any relevant forensic audits or BKMs.</li>
+</ul>
+<h3>2. The Planning Phase (The "Greenlight" Gate)</h3>
+<ul>
+<li><strong>The Wait</strong>: The Agent is FORBIDDEN from beginning implementation until the User provides a "Greenlight" or "Buy-in" on the proposed Sprint Plan.</li>
+<li><strong>Strategic Inquiry</strong>: Use the Planning Phase to brainstorm "Traps," waffling risks (e.g., hardcoding vs. BKM-015.1), and lost requirements from previous sessions.</li>
+</ul>
+<h3>3. Iterative Append Protocol (History over Overwrites)</h3>
+<ul>
+<li><strong>Immutability of Early Phases</strong>: Do NOT re-write or summarize existing phases of an active sprint plan to "save space."</li>
+<li><strong>Append Revisions</strong>: New requirements, course corrections, or missed tasks discovered mid-sprint must be appended as new <strong>Phases</strong> at the end of the document.</li>
+<li><strong>Rationale Report</strong>: Every set of appended phases must include a <strong>Forensic Rationale</strong> section explaining the "Why" behind the mid-sprint pivot.</li>
+</ul>
+<h3>4. Execution &amp; Validation</h3>
+<ul>
+<li><strong>Look First</strong>: Before creating new tools or scripts, the Agent MUST consult <code>HomeLabAI/docs/DIAGNOSTIC_SCRIPT_MAP.md</code> and reuse existing diagnostic infrastructure.</li>
+<li><strong>Surgical Gating</strong>: Every edit must be followed by <code>ruff check</code> (linting) to prevent testing "bad code."</li>
+<li><strong>Conductor Delegation</strong>: For complex or high-volume tasks, the Agent should use the Conductor track to delegate work to sub-agents, preserving the primary context window for strategic orchestration.</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-028</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity State Machine Debugging</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Rapidly validate Hub logic (Lobby -&gt; Ready -&gt; Hibernate) without physical VRAM overhead.</p>
+<ol>
+<li><strong>The STUB Engine</strong>: Utilize <code>engine="STUB"</code> to bypass 90s vLLM load times. To boot the system service in STUB mode, use <code>sudo systemctl edit lab-attendant.service</code> and add <code>Environment="LAB_TEST_STUB=1"</code>.</li>
+<li><strong>Fast Hibernation</strong>: Set <code>afk_timeout=60</code> in <code>acme_lab.py</code> to observe auto-hibernation cycles in 1 minute.</li>
+<li><strong>Traceability</strong>: Always check <code>status.json</code> or the Attendant journal for the <code>reason</code> field to verify which trigger caused an ignition.</li>
+<li><strong>Silicon Reset</strong>: Use <code>sudo systemctl restart lab-attendant.service</code> to ensure a perfectly clean slate between tests. The <code>on_shutdown</code> hook ensures all session orphans are reaped.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-032</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Deferred Semantic Evaluation (Human-in-the-Loop)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Decouple automated technical stability checks from qualitative semantic fidelity audits. This protocol ensures that tests remain resilient to "Logic Drift" while maintaining the Lab's high-stakes technical grounding.</p>
+<ol>
+<li><strong>Strict Automated Gating</strong>: Scripts (e.g., <code>uber_5x5</code>) are restricted to validating <strong>Structural Evidence</strong>:<ul>
+<li><strong>Milestones</strong>: Did the engine reach OPERATIONAL?</li>
+<li><strong>Presence</strong>: Are <code>&lt;thought&gt;</code> tags or <code>brain_source</code> identifiers present?</li>
+<li><strong>Liveness</strong>: Did a response of sufficient length (&gt;100 chars) return?</li>
+</ul>
+</li>
+<li><strong>Prohibition of Hardcoding</strong>: Automated scripts MUST NOT perform string-matching on specific technical facts (e.g., "PECISTRESSOR"). This violates BKM-015 and creates fragile tests that fail during legitimate archive updates.</li>
+<li><strong>The Wordy Log (Task 6.1)</strong>: Every test run must produce a <strong>Forensic Trace</strong> capturing 100% of the reasoning thoughts.</li>
+<li><strong>AI Audit Phase</strong>: After the batch completes, the Lead Engineer or AI Agent (Gemini CLI) reviews the Wordy Log using the <code>semantic_audit_template.md</code>.</li>
+<li><strong>Certification</strong>: The "Pass" verdict is issued only after both the automated structural check AND the manual semantic audit are verified.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-033</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Babysitting Protocol (Autonomous Monitoring)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Ensure long-running batch processes complete successfully by providing real-time forensic oversight and surgical recovery.</p>
+<ol>
+<li><strong>Pulse Monitoring</strong>: Use an increasing interval strategy (5, 10, 15, 20, 25 mins) to check on background process IDs (PIDs). </li>
+<li><strong>Liveness Verification</strong>: If a process appears silent, verify its state via physical registers (ports, PIDs, file timestamps) and the <strong>Forensic Ledger</strong>. Do not assume success based on absence of error.</li>
+<li><strong>Surgical Recovery</strong>: If a "hiccup" (e.g., Auth 401, FileNotFoundError, Schema Mismatch) is identified, the Agent must HALT the loop, apply the fix immediately, save the fix to Git, and RESTART the batch from Step 1.</li>
+<li><strong>Forensic Reporting</strong>: Every pulse check must produce a detailed report summarizing the current cycle, VRAM/RAM utilization, and any log anomalies detected since the last pulse.</li>
+<li><strong>Deferred Evaluation</strong>: All high-fidelity thought traces must be captured into a dedicated evaluation log for a final <strong>BKM-032</strong> semantic audit after the entire gauntlet completes.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-034</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">OpenAgent Delegation & Playbook Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Establish safe, context-preserving boundary gates for delegating tasks from Gemini (Orchestration) to OpenAgent (Local/Remote Swarm) to minimize token consumption and prevent intent drift.
+<strong>Playbook Reference</strong>: <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/AGY_TO_OPENAGENT_PLAYBOOK.md">AGY_TO_OPENAGENT_PLAYBOOK.md</a></p>
+<ol>
+<li><strong>Role Division</strong>:<ul>
+<li><strong>Orchestrator (Gemini)</strong>: Acts as the <em>Strategic Guardian of the DNA</em>. Responsible for updating the Master Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defining architectural requirements, auditing code changes via git diffs, and running final integration tests.</li>
+<li><strong>Swarm (OpenAgent)</strong>: Executes <em>Tactical Implementation loops</em>. Responsible for writing codebase logic, updating test files, and running line-by-line debugging iterations.</li>
+</ul>
+</li>
+<li><strong>Verification Plan Immutability</strong>: Every task delegated to OpenAgent must have a verbatim, detailed <strong>Verification Plan</strong> detailing the specific tests (e.g., pytest, Playwright) and assertions. OpenAgent is prohibited from marking a task as complete unless the exact verification scripts pass cleanly.</li>
+<li><strong>Token Conservation Guardrails</strong>: For heavy sequence editing, refactoring, or iterative lint-fixing, the prompt must steer OpenAgent to run locally on the RTX 4090 or Groq/DeepSeek Free tiers to preserve Gemini's rate-limited API tokens.</li>
+<li><strong>Forensic Review Gate</strong>: After OpenAgent commits changes locally, Gemini must review the git diffs, run the system-wide diagnostic runner (<code>gold_master_batch_runner.sh</code>), and verify the code against <code>FeatureTracker.md</code> before final sprint task checkoff.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    
+</body>
+</html>
