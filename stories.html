@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Work Stories | Jason Allred</title>
+<style>
+        :root {
+            --bg-color: #0a0e14;
+            --text-color: #e6edf3;
+            --accent-color: #4daafc;
+            --border-color: #30363d;
+            --card-color: #11161d;
+            --sub-color: #8b949e;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --mono-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+        body { background: var(--bg-color); color: var(--text-color); font-family: var(--font-stack); line-height: 1.6; margin: 0; padding: 0; }
+        #sidebar {
+            width: 260px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: var(--card-color);
+            border-right: 1px solid var(--border-color);
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+        #sidebar h2 { font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color); margin-top: 25px; letter-spacing: 1px; font-weight: bold; }
+        #sidebar ul { list-style: none; padding: 0; margin: 10px 0 0 0; }
+        #sidebar li { margin-bottom: 10px; font-size: 0.85rem; }
+        #sidebar a { color: var(--sub-color); text-decoration: none; transition: color 0.2s ease; }
+        #sidebar a:hover { color: var(--text-color); }
+        #nav-filter {
+            width: 100%;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+        .nav-home { margin-bottom: 25px; font-family: var(--mono-stack); font-size: 0.85rem; }
+        .nav-home a { color: var(--accent-color); text-decoration: none; }
+        main { margin-left: 300px; max-width: 800px; padding: 40px; }
+        article { margin-bottom: 50px; border-bottom: 1px solid var(--border-color); padding-bottom: 40px; }
+        article h3 { font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #fff; }
+        .meta { font-size: 0.75rem; color: var(--accent-color); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+        article p { color: var(--text-color); font-size: 0.95rem; margin-bottom: 15px; }
+        #menu-toggle { display: none; }
+        @media (max-width: 768px) {
+            #sidebar { display: none; }
+            main { margin-left: 0; padding: 20px; }
+            #menu-toggle { display: block; background: var(--card-color); color: var(--text-color); border: 1px solid var(--border-color); padding: 10px 20px; margin-bottom: 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        }
+    </style>
+</head>
+<body>
+<button id="menu-toggle">☰ MENU</button>
+<nav id="sidebar"><div class="nav-home"><a href="index.html">← Return to Front Page</a></div>
+
+<input aria-label="Filter navigation" id="nav-filter" placeholder="Filter nodes..." type="text"/>
+<div id="searchable-content">
+<h2>Systems Architecture</h2>
+<ul>
+<li><a href="#visa-tool">The VISA Tool Engine</a></li>
+<li><a href="#xslt-parsing">Automated Parsing (XSLT)</a></li>
+<li><a href="#config-file">A Simple Config File</a></li>
+<li><a href="#fleet-scale">Flashing 100 Nodes</a></li>
+<li><a href="#cygwin-wall">The Cygwin Wall</a></li>
+<li><a href="#ti-basic">Reinventing TI Basic</a></li>
+<li><a href="#quakecon">The QuakeCon Hot Swap</a></li>
+</ul>
+<h2>Validation Methodology</h2>
+<ul>
+<li><a href="#reading-robot">Reading Like a Robot</a></li>
+<li><a href="#rapl-matplotlib">RAPL &amp; Matplotlib</a></li>
+<li><a href="#grok-code">How to Grok Code</a></li>
+<li><a href="#beating-heart">The Beating Heart</a></li>
+<li><a href="#serial-fragments">Expect Fragments (Serial)</a></li>
+<li><a href="#crazy-callbacks">Crazy Callbacks</a></li>
+<li><a href="#throughput-gotchas">Throughput Gotchas</a></li>
+<li><a href="#curl-postman">Curl over Postman</a></li>
+<li><a href="#venv-glue">Venv is like Hot Glue</a></li>
+</ul>
+<h2>Security &amp; Yield</h2>
+<ul>
+<li><a href="#rakp-security">The RAKP Security Catch</a></li>
+<li><a href="#kernel-patch">The Kernel Patch</a></li>
+<li><a href="#negative-testing">Negative Testing (Yield)</a></li>
+<li><a href="#texas-power-on">The Texas Power-On</a></li>
+<li><a href="#failed-demo">The Failed Microsoft Demo</a></li>
+<li><a href="#rmcp-optimization">RMCP+ Socket Optimization</a></li>
+</ul>
+<h2>Engineering Leadership</h2>
+<ul>
+<li><a href="#scm-integration">To SCM or Not to SCM</a></li>
+<li><a href="#estimates">Estimates: High vs. Low</a></li>
+<li><a href="#pythonsv-thrash">The PythonSV API Thrash</a></li>
+<li><a href="#synergy">Synergy of Validation</a></li>
+<li><a href="#first-error">Always Fix the First Error</a></li>
+<li><a href="#count-oks">Count the Ok's</a></li>
+<li><a href="#conflict-management">The Conflict Management Lesson</a></li>
+<li><a href="#general-thoughts">General Thoughts &amp; Philosophy</a></li>
+</ul>
+<h2>Future Work</h2>
+<ul>
+<li><a href="#future-work">WIP Items</a></li>
+</ul>
+</div>
+</nav>
+<main>
+<!-- SYSTEMS ARCHITECTURE -->
+<section id="architecture">
+<h2 class="section-title">Systems Architecture &amp; Scale</h2>
+<article id="visa-tool">
+<h3>The VISA Tool Engine (Metadata-Driven Design)</h3>
+<div class="meta">Tag: Architecture | Impact: Maintenance Reduction</div>
+<p>I took over a complex debug tool where the logic for different CPU cores and steppings was becoming unmanageable through traditional hard-coding. By "grokking" the code to find its "beating heart," I realized the project could be re-architected as a metadata-driven engine centered on XML.</p>
+<p>I shifted the design so that the XML schema defined the GUI and silicon features—such as a checkbox to forward VISA signals over JTAG—allowing the tool to auto-detect and deploy functionality without any further code changes. <strong>This "Configuration as Code" approach allowed me to support years of new hardware iterations by simply updating XML definitions scraped directly from RTL.</strong></p>
+</article>
+<article id="xslt-parsing">
+<h3>Automated Parsing - The XSLT Experience</h3>
+<div class="meta">Tag: Automation | Impact: Efficiency</div>
+<p>Part of maintaining the VISA tool involved manually stitching together different silicon code blocks with their corresponding RTL flow so the signals would be available to the whole engine. The tool would allow you to select signal sources in the silicon and spit out JTAG commands to enable a direct connection to LA pins or the on-chip LA (OCLA).</p>
+<p>I developed an engine to directly convert RTL into XML compatible with the tool. This saved tremendous time and allowed a quick turnaround for new steppings and layouts. I also got some experience outside of linear code with XSLT.</p>
+</article>
+<article id="config-file">
+<h3>A Simple Config File</h3>
+<div class="meta">Tag: Quality of Life | Impact: Usability</div>
+<p>The VISA tool was also highly dependent on the stepping and family of a processor. Each new power-on of new silicon required me to re-compile the project and update the source code. Wary of this extra maintenance step I added a config file. It was a simple two-day fix that saved me about 2 hours per month, but also enabled anyone to add a project without my express involvement.</p>
+<p>My manager quietly wrote it down and later surprised me by praising me for forward thinking in my yearly focal. Since then I’ve learned value does not always correspond to effort, and gave me respect for simple QOL improvements.</p>
+</article>
+<article id="fleet-scale">
+<h3>Flashing 100 Nodes (Fleet Scale Operations)</h3>
+<div class="meta">Tag: Operations | Impact: Scale</div>
+<p>While in my PAE role, I maintained roughly 100 Knights Landing nodes that allowed us to reproduce issues with OEMs. Stuff you’d only see once in a million happened regularly when you start doing a million things quickly and in parallel. We used pdsh regularly. You think very differently about manually flashing BIOS when it needs to be done 100 times with a tough-to-reach harness.</p>
+<p>I helped execute and collect data for a heat experiment. We visualized nodes getting hotter at the tops of racks, experimented with the rack doors open. The results of the experiments were somewhat of a moot, the minor heat differences didn’t affect performance. Notably, cables got in the way of airflow, but the connections were mandatory. So many loose connections. Each node had its own personality, and some were very stubborn.</p>
+</article>
+<article id="cygwin-wall">
+<h3>The Cygwin Wall (Environment Parity)</h3>
+<div class="meta">Tag: Debugging | Impact: Environment Setup</div>
+<p>We had an old internal patch for ipmitool to enable parsing of some extra return codes bytes for automation. To set up the build environment I downloaded the source over git and followed the steps to compile in Cygwin. The build script would fail, I’d fix the failure, then it would crash somewhere else. I wasted a week just trying to get the thing to compile.</p>
+<p>It turned out that I had downloaded using Windows git rather than Cygwin git. This was a major issue because line endings were unix style. Once I re-downloaded the source everything compiled perfectly. Always be wary of line endings. Take a step back when you run into a wall.</p>
+</article>
+<article id="ti-basic">
+<h3>Reinventing TI Basic</h3>
+<div class="meta">Tag: Learning | Impact: Fundamentals</div>
+<p>When I was in Junior High I learned basic programming on my TI-85. I was particularly proud of a program that would comb through possible numerator/denominator combinations to convert a ‘float’ into a fraction. I had a bad backup coin battery so my file system would get wiped pretty regularly, so I got good at rewriting that converter.</p>
+<p>Then one day I was looking through the list of commands and noticed an internal -&gt;Frac function that had already implemented what I wanted. Two things stuck in my mind after that: (1) You get good at doing things by doing it again and again, (2) look for things you assume are not there.</p>
+</article>
+<article id="quakecon">
+<h3>The QuakeCon Hot Swap</h3>
+<div class="meta">Tag: Hardware | Impact: Recovery</div>
+<p>The year was 2001, just before 9/11. I flew my PC to a LAN party in Texas. I was using a cheap IDE raid controller at the time. It had a bad eprom after a failed firmware update. Thinking quickly, I ordered another controller. Booted with the good firmware so I could get to a flash point, then hot-swapped the eprom to flash the bad. Was able to recover and even return the controller.</p>
+</article>
+</section>
+<!-- VALIDATION METHODOLOGY -->
+<section id="validation">
+<h2 class="section-title">Validation Methodology</h2>
+<article id="reading-robot">
+<h3>Reading Like a Robot (Deep Log Debugging)</h3>
+<div class="meta">Tag: Debugging | Impact: Root Cause Analysis</div>
+<p>When assisting a colleague with stubborn system failures, I found that standard keyword searching through logs was failing to find the root cause. I applied a systematic methodology I call "Reading like a robot," where I refuse to skip any part of a stack trace or log file, even the unrecognized or "noisy" lines.</p>
+<p>By meticulously connecting every word and mapping the execution flow sequentially, I was able to identify a specific logic deviation hidden in the background noise that others had scrolled past. This brute-force attention to detail proved that even the most "messy" telemetry can be solved if you check your assumptions at the door and follow the machine's actual path.</p>
+</article>
+<article id="rapl-matplotlib">
+<h3>RAPL &amp; Matplotlib (Telemetry Visualization)</h3>
+<div class="meta">Tag: Data Science | Impact: Visualization</div>
+<p>In early 2019 I took a machine learning course. Jupiter notebook and time series db exercises. A few python libraries stuck out at me as very useful at work: pandas and matplotlib. I had a decent amount of data collection when stressing Running average Power Limiting functionality. Reports would spit out but it was really hard to get a good picture on what was going on.</p>
+<p>With the new tools in hand I was able to scrape current runs, even old logs, and bug reports, to provide clear graphs sweeping through request or expected vs actual power limiting results. An esoteric ‘10% below expected’ would turn into a graph that would cap out at 500W like a truncated pyramid - a clear indication that the part (or benchmark) wasn’t able to cause the system to draw that much power.</p>
+</article>
+<article id="grok-code">
+<h3>How to Grok Code</h3>
+<div class="meta">Tag: Learning | Impact: Understanding</div>
+<p>A senior dev was mentoring two of us while looking through a rather large code base. She took out some paper and wrote down how the program was structured in a kind of shorthand. By the time we were finished we had a map and a clear understanding of the flow. Since then I’ve developed my own shorthand to systematically map out unfamiliar code. I know I’m done when I can see the ‘heart’ of the code.</p>
+</article>
+<article id="beating-heart">
+<h3>The Beating Heart</h3>
+<div class="meta">Tag: Insight | Impact: Understanding</div>
+<p>To follow up on code grokking, once I find the ‘beating heart’ in a system I know I’ve found the perspective of the original developer and everything becomes clear. Some of these are straightforward, a loop handling events, a main function that does the heavy work. One particularly difficult ‘heart’ turned out to be outside the code entirely, the main logic was all contained inside an XML file that described RTL pathways to the LA pins. It was a rather elegant solution but a pain to debug until I understood the process.</p>
+</article>
+<article id="serial-fragments">
+<h3>Expect Fragments (Serial Validation)</h3>
+<div class="meta">Tag: Automation | Impact: Reliability</div>
+<p>I wrote an automation harness that allowed me to validate TGUI applications in a OS platform agnostic way. It was rather nifty, using TCL and the expect library to handle reading and writing to the screen. Unfortunately, when I started using expect for serial output (EFI mode) things got dirty. I learned that serial output has no guarantee to preserve words—menu items would often get clipped. I mostly got around this with generous regular expressions. In theory, the flows should have worked, but in the real world, the data was noisy. However, accepting that noise as a constraint paid off. <strong>By building a robust parser that tolerated the fragments, I was able to shift the NIC validation process from 100% manual to 90% automated, saving hours of tedium and proving that even messy interfaces could be tamed.</strong></p>
+</article>
+<article id="crazy-callbacks">
+<h3>Crazy Callbacks</h3>
+<div class="meta">Tag: Code Pattern | Impact: Efficiency | Ref: DTTC</div>
+<p>I used a clever callback pattern when chunking data over PECI - sending multiple read requests and mapping the responses with tailored callback functions to de-serialize the data. This asynchronous approach, detailed in our 2022 DTTC paper "Measuring PECI Performance," <strong>allowed us to chain requests without blocking, improving throughput by nearly 100x (from ~57 to ~5300 commands/sec) and proving the software stack could finally keep up with wire speed.</strong></p>
+</article>
+<article id="throughput-gotchas">
+<h3>Throughput Gotchas</h3>
+<div class="meta">Tag: Measurement | Impact: Accuracy | Ref: DTTC, PECI</div>
+<p>Measuring throughput is a tricky question, especially when data is encapsulated at several levels. This is pretty standard over IP but it’s more ambiguous when counting packets over SMBus or other internal protocols. Our DTTC paper tackled this, but I was never quite satisfied to provide a standard MB/s measurement. <strong>Because the protocol overhead was so heavy, I argued that "Commands per Second" was the only honest metric, even if it wasn't the big megabyte number stakeholders wanted to see.</strong></p>
+</article>
+<article id="curl-postman">
+<h3>Curl over Postman</h3>
+<div class="meta">Tag: Tooling | Impact: Reproducibility</div>
+<p>I prefer Curl over Postman for the same reason I prefer text over screenshots - design tests for reproducibility ease - compartmentalize into a series of batchable steps - essential for bug reports.</p>
+</article>
+<article id="venv-glue">
+<h3>Venv is like Hot Glue</h3>
+<div class="meta">Tag: Tooling | Impact: Standardization</div>
+<p>Venv is like hot glue - a stop gap solution that becomes standard - docker feels the same - has better utility these days.</p>
+</article>
+</section>
+<!-- FUTURE WORK -->
+<section id="future-work">
+<h2 class="section-title">Future Work (WIP)</h2>
+<ul class="tbd-list">
+<li>[WIP] Polling RAPL Telemetry during stress - Defensive coding in recovery scripts</li>
+<li>[WIP] Rolling window diff - Comparing BIOS logs</li>
+<li>[WIP] DRA for enabling power transient measurements without a harness</li>
+<li>[WIP] Meshtastic hobby (LoRa, 3d printing, ESP32 firmware)</li>
+</ul>
+</section>
+<!-- SECURITY & YIELD -->
+<section id="security">
+<h2 class="section-title">Security &amp; Yield</h2>
+<article id="rakp-security">
+<h3>The RAKP Security Catch (CVE-2013-4786)</h3>
+<div class="meta">Tag: Security | Impact: CVE Discovery</div>
+<p>While implementing the RMCP+ protocol stack from scratch in C, I performed a deep dive into the RAKP authentication spec. To properly debug the session negotiation, I had to patch the Wireshark (then Ethereal) source code to correctly parse the custom packet exchanges I was seeing.</p>
+<p>During this process, I identified a fundamental flaw: the BMC would return a salted hash of the user’s password before the client proved their identity, essentially enabling offline dictionary attacks. <strong>Although my concerns were dismissed by senior engineers at the time, this exact vulnerability was later confirmed as industry-wide flaw CVE-2013-4786.</strong> This solidified my conviction to trust technical data over hierarchy and to maintain meticulous documentation for critical findings.</p>
+</article>
+<article id="kernel-patch">
+<h3>The Kernel Patch (Topology &amp; Architecture)</h3>
+<div class="meta">Tag: Kernel | Impact: Fix</div>
+<p>We had a module flooding dmesg on custom silicon due to rigid topology assumptions. I wrote and compiled a kernel patch to add the necessary flexibility. <strong>This eliminated the noise, allowing the team to focus on real bugs.</strong> While the patch couldn't be upstreamed due to red tape, the experience validated that I could dive into kernel code to unblock the validation process.</p>
+</article>
+<article id="negative-testing">
+<h3>Negative Testing (The Yield Use Case)</h3>
+<div class="meta">Tag: Validation | Impact: Execution Speed</div>
+<p>I had a big PECI coverage miss, it was rather embarrassing. Because we had a huge list, I was only checking what I knew existed, not what shouldn’t exist. Well, some unexpected endpoints did surface, more echoes of what they should be, but those endpoints should not have been visible. I needed to pivot away from just reading known devices to scanning and including negative space.</p>
+<p>I recalled a conversation with an expert who had scanned through the BDF region before and adapted that to PECI space. To do that I needed a list of all possible combinations in PCI space - which fit very neatly with a generator pattern. One of the first times I really felt <em>yield</em> improved the readability and reliability of my code.</p>
+<p>After I got it running I still saw ‘extra’ devices popping up, but they turned out to be actual hardware, which was easy to correlate with lspci. It was a huge space to cover, and a full run would have taken almost a week, but <strong>with the combination of the bulk transfer API and fast negative returns the expected execution time went from a few days to under 10 hours.</strong></p>
+</article>
+<article id="texas-power-on">
+<h3>The Texas Power-On (Strategic Career Pivot)</h3>
+<div class="meta">Tag: Security | Impact: Team Leadership</div>
+<p>I went to Texas for a power-on during a transition period where I was doing basic execution work and looking for a long-term technical fit. Since I didn’t have a strict task list, I decided to shadow the experts and jump into the immediate fires on the floor. I ended up peer programming with a group focused on high-level security features like TDX and Secure Boot.</p>
+<p>We clicked so well that when they (also) returned to Oregon, they reached out to pull me into their organization. I wasn't just helping with a bring-up; I was recruited to seed a second team under the Security &amp; Manageability umbrella, which launched my five-year run as the Lead Manageability Validation Automation engineer.</p>
+</article>
+<article id="failed-demo">
+<h3>The Failed Microsoft Demo (Preparation &amp; Redundancy)</h3>
+<div class="meta">Tag: Demo | Impact: Lesson Learned</div>
+<p>I had lightweight RMCP+ library we were going to demo to MS. At the last minute, the firmware developers enabled and enforced encryption, which I had not implemented yet. These days I never trust a demo. Demos are great, but always provide a backup video and slides.</p>
+</article>
+<article id="rmcp-optimization">
+<h3>RMCP+ Socket Optimization</h3>
+<div class="meta">Tag: Stability | Impact: Reliability</div>
+<p>Our dev team was tracking down a problem where RMCP+ sessions were piling up in our validation cycle, overloading the BMC and causing instability. We had a TCL based framework, but the heavy lifting was done inside DLL files. I had been doing some digging and found the source code. When I mentioned this to the dev lead he asked me to look into the source code as a last resort, as far as they could tell their code was clean.</p>
+<p>After a bit of sleuthing I found code responsible for opening and closing the sessions on the client side, there was a return between them, so the socket was never closed. <strong>This one fix gave our test suite the stability to add unattended validation cycles and focus on nightly test reports.</strong> It was a game changer, and the experience taught me a single line could be worth weeks of effort.</p>
+</article>
+</section>
+<!-- ENGINEERING LEADERSHIP -->
+<section id="leadership">
+<h2 class="section-title">Engineering Leadership</h2>
+<article id="scm-integration">
+<h3>To SCM or Not to SCM (Integration Reliability)</h3>
+<div class="meta">Tag: Operations | Impact: Pipeline Integrity</div>
+<p>Early in my career, I was tasked with helping our team transition from SVN to IBM ClearCase during a mandate from our international partners. It was an exercise in pure persistence; while the infrastructure was in flux, I tag-teamed with our resident SCM lead to keep our daily validation builds running. I had to resort to intense "mergify" sessions and manual elbow grease to ensure the transition didn't break the active development pipeline.</p>
+<p>ClearCase has a unique way of mixing software recipes, and I handled several emergency integration sessions to maintain code integrity. While I’ve always enjoyed a good diff, those sessions taught me that the best work is the work you avoid through proper architecture. Since then, I’ve been extremely careful about identifying and preventing the ways teams unintentionally fork code and create technical debt.</p>
+</article>
+<article id="estimates">
+<h3>Estimates: High vs. Low (The Code Archaeologist)</h3>
+<div class="meta">Tag: Planning | Impact: Trust</div>
+<p>I was asked to estimate how long it would take to ramp up and deploy a project that had recently been recovered from an old backup. This was my ‘code archeologist’ time to shine. I recently took an estimation course and learned how setting high and low estimates improved accuracy, but my manager wanted real dates.</p>
+<p>I began execution over several months, with the estimate plan driving me and my contractor while my manager was on sabbatical, we hit our milestones well, and saved the complicated unknowns for last. It was a very smooth execution. On completion and review, I asked for feedback. The only thing I got was “Maybe you could have added a range of estimates” - I don’t expect managers or people to be consistent, but it was a big trust building time when I casually reminded him I was tracking high and low estimates off the side of the spreadsheet.</p>
+</article>
+<article id="pythonsv-thrash">
+<h3>The PythonSV API Thrash</h3>
+<div class="meta">Tag: Ownership | Impact: Code Attribution</div>
+<p>I was leveraging a PythonSV framework (c-scripts) for silicon power-on to improve test coverage. My manager at the time specifically asked me to add API-level tests for visibility. I knew they were technically redundant, but I followed the direction to ensure the team had the completeness they were looking for. A year later, during a review, I was berated for that exact redundancy by the architecture team.</p>
+<p>That "unnecessary thrash" was a huge lesson in code ownership. I learned that just "following orders" isn't enough when you're working in a complex framework. Now, if I’m asked to implement something that creates technical debt or redundancy, I make sure there is a clear "paper trail" or attribution in the code itself. I give proper credit to the source and document why the decision was made, so when the architecture is reviewed a year later, the context isn't lost.</p>
+</article>
+<article id="synergy">
+<h3>Synergy of Validation Working with Architect and Dev</h3>
+<div class="meta">Tag: Collaboration | Impact: Performance | Ref: DTTC, PECI</div>
+<p>I really enjoyed working closely as validation developer with a BMC developer and Architect - We met daily in an informal SCRUM like context. Architect would describe the focus, and we would push back on feasibility and worth. We got a lot of performance out of PECI, creating a bulk transfer API with hooks to prove we were moving at line speed - Restful API extensions to directly compare LAN overhead with PECI ‘wire’ time (DMA was considerably faster than wire) - this resulted in a DTTC paper on measuring the performance of PECI.</p>
+</article>
+<article id="first-error">
+<h3>Always Fix the First Error</h3>
+<div class="meta">Tag: Debugging | Impact: Efficiency</div>
+<p>I stumbled upon a ‘gotcha’ moment very early into learning how to code in school. Everyone gets their first missing semicolon sometime. When compilation errors started piling up, I naively and dutifully started fixing every error before hitting ‘compile’ again. It was infuriating and stressful. I had no idea what was going on, why were there so many errors. That is, until I noticed compilation errors had a waterfall effect. One missing semicolon can mess up the interpretation of the reset of the file. The opposite of reading a stack trace: always fix the first compilation error.</p>
+</article>
+<article id="count-oks">
+<h3>Count the Ok's</h3>
+<div class="meta">Tag: Decision Making | Impact: Consensus</div>
+<p>Whether it’s deciding what restaurant to go to or voting on the best way to execute a plan, voting isn’t the best option, and rather counterintuitively it isn’t the fairest either. Important decisions should be made carefully, and allowing people to weigh in on all the options that are ‘okay’ drastically improves the results.</p>
+</article>
+<article id="conflict-management">
+<h3>The Conflict Management Lesson</h3>
+<div class="meta">Tag: Soft Skills | Impact: Team Alignment</div>
+<p>There have been several times in my career where I’ve been convinced I was right but wasn't in a position to change the direction. I’ve learned to disagree and commit, and in those cases, the results usually went well because the team stayed aligned.</p>
+<p>In fact, I’ve often "embraced the suck" and intentionally became a subject matter expert on the critical things others didn't want to touch—like ClearCase, DTAF, or the complexities of XML and RTL scraping. By mastering those "unpopular" parts of the stack, I was able to bridge the gaps and keep the validation pipeline moving. That said, I still maintain technical boundaries for the sake of the product; for example, I’ll advocate strongly against putting test-level code like Pytest into production logic to keep the architecture clean.</p>
+</article>
+<article id="general-thoughts">
+<h3>General Thoughts &amp; Philosophy</h3>
+<div class="meta">Tag: Philosophy</div>
+<ul>
+<li><strong>The "Class 1" Assumption:</strong> It’s a dangerous assumption to code for an end user—modal dialogue boxes, frameworks—assuming code will remain on top. Frameworks should be viewed as debuggers for internal libraries.</li>
+<li><strong>Content is King:</strong> Automation is Queen but Content is King. This mantra focused our team. Don't let frameworks overshadow actually getting things done.</li>
+<li><strong>Can AI Really Think?</strong> Question needs to shift from 'can it think?' to ‘Can thoughts live on paper?’ Yes. Language is the single most important invention created by humanity.</li>
+<li><strong>2 and 7 Year Cycles:</strong> Roughly every 7 years I reinvent myself. Projects tend to finish by two years.</li>
+<li><strong>Chopstick Coding:</strong> The concept of developing at arms length (i.e. through a serial port, over SSH etc). Doing so is difficult, like typing on a keyboard with chopsticks.</li>
+<li><strong>Meetings:</strong> Inversely proportional to how many people attend.</li>
+<li><strong>Communication:</strong> Don't reply hot, or on mobile, voice is best.</li>
+</ul>
+</article>
+</section>
+</main>
+
+<script src="script.js?v=7704e669"></script>
+</body>
+</html>
