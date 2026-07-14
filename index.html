@@ -114,6 +114,32 @@
         .dot.online { background: var(--success); box-shadow: 0 0 8px var(--success); }
         .dot.offline { background: var(--error); box-shadow: 0 0 8px var(--error); }
 
+        .airlock-divider {
+            margin: 45px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+        }
+        .airlock-line {
+            width: 100%;
+            height: 1px;
+            background-color: var(--border);
+        }
+        .airlock-bubble {
+            border: 1px solid var(--accent);
+            background-color: var(--card);
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--sub);
+            position: absolute;
+            padding: 6px 20px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
         @media (max-width: 800px) {
             .trailer-img { height: 250px; }
         }
@@ -149,6 +175,11 @@
                     <div class="trailer-desc">The operational guidelines and best known methods (BKMs) governing the Bicameral Lab. Enforcing DNA integrity and validation logic. [Public Static Variant]</div>
                 </div>
             </a>
+
+            <div class="airlock-divider">
+                <div class="airlock-line"></div>
+                <div class="airlock-bubble">Airlock</div>
+            </div>
 
             <a href="https://notes.jason-lab.dev/stories.html" class="trailer-card">
                 <img src="assets/trailers/stories_trailer.jpg" class="trailer-img" alt="Work Stories">

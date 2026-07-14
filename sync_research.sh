@@ -61,7 +61,7 @@ content = open('$PUBLIC_RESEARCH').read()
 content = re.sub(r'<link rel=\"stylesheet\" href=\"style.css\?v=[a-f0-9]+\">', sys.argv[1], content)
 # Remove Zero Trust Nav
 nav_search = '<nav id=\"sidebar\">\n        <mission-control></mission-control>\n    </nav>'
-content = content.replace(nav_search, '<div class=\"nav-home\"><a href=\"index.html\">← Return to Airlock</a></div>')
+content = content.replace(nav_search, '<div class=\"nav-home\"><a href=\"index.html\">← Return to Front Page</a></div>')
 # Remove Scripts
 content = content.replace('<script src=\"mission-control.js?v=bd431d08\"></script>', '')
 content = content.replace('<script src=\"script.js?v=7704e669\"></script>', '')
