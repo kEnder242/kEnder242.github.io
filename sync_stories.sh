@@ -107,6 +107,11 @@ for article in soup.find_all("article", attrs={"data-scope": "private"}):
 for script in soup.find_all("script", src=re.compile(r"mission-control\.js")):
     script.decompose()
 
+# 6. Strip menu-toggle button
+toggle = soup.find(id="menu-toggle")
+if toggle:
+    toggle.decompose()
+
 with open(path, "w") as f:
     f.write(str(soup))
 ' "$CSS_BLOCK"

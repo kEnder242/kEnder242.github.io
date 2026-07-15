@@ -61,7 +61,8 @@ content = re.sub(r'<link rel=\"stylesheet\" href=\"style.css\?v=[a-f0-9]+\">', s
 # Remove Zero Trust Sidebar Navigation and replace with return link
 nav_search = '<nav id=\"sidebar\">\n        <mission-control></mission-control>\n    </nav>'
 content = content.replace(nav_search, '<div class=\"nav-home\"><a href=\"index.html\">← Return to Front Page</a></div>')
-# Remove stylesheet style block that was in template if any
+# Remove menu toggle button
+content = content.replace('<button id=\"menu-toggle\">☰ MENU</button>', '')
 # Remove Scripts
 content = re.sub(r'<script src=\"mission-control.js\?v=[a-f0-9]+\"></script>', '', content)
 with open('$PUBLIC_PROTOCOLS', 'w') as f: f.write(content)
