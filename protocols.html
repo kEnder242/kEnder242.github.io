@@ -78,7 +78,7 @@
 </head>
 <body>
 
-    <button id="menu-toggle">☰ MENU</button>
+    
 
     <div class="nav-home"><a href="index.html">← Return to Front Page</a></div>
 
@@ -645,8 +645,19 @@
 *   **The Principle**: Sisyphus must not query ChromaDB with raw, conversational user prompts verbatim (e.g.</code>"I want to edit a file"<code>).
 *   **The Practice**: Sisyphus must translate the user's conversational intent into precise domain-specific search query keywords (e.g.</code>"safe file write"<code>,</code>"atomic file patch"<code>,</code>"lint gate"<code>) before querying the</code>behavioral_dna<code>and</code>feature_dna<code>collections. This ensures maximum retrieval confidence (minimum distance score).
 11. **Explicit Blueprint Prompting (No-Boilerplate Guardrail)**:
-*   **The Principle**: Cloud orchestrators (Gemini) must not delegate open-ended logic or design descriptions to local 14B workers. They must compile exact HTML/CSS blocks, BeautifulSoup scripts, or shell templates directly inside the prompt's</code>[TARGET SPECIFICATION]`.
-*   <strong>The Practice</strong>: This minimizes local token generations, reduces context overhead, avoids structural hallucinations, and allows the user to review the exact code/design inside the Master Sprint Plan prior to execution.</p>
+*   **The Principle**: Cloud orchestrators (Gemini) must not delegate open-ended logic or design descriptions to local 14B workers. They must compile exact HTML/CSS blocks, BeautifulSoup scripts, or shell templates directly inside the prompt's</code>[TARGET SPECIFICATION]<code>.
+*   **The Practice**: This minimizes local token generations, reduces context overhead, avoids structural hallucinations, and allows the user to review the exact code/design inside the Master Sprint Plan prior to execution.
+12. **Mandatory Shell-Based Execution**: All tactical worker delegation must be initiated via the shell-based</code>opencode<code>CLI (Method B) rather than using the built-in</code>invoke_subagent<code>tool (Method A). The built-in tool is reserved for read-only research tasks or meta-analysis. This ensures all developer tasks are properly registered in the OpenAgent session list and visible in the local TUI/dashboard.
+13. **Socket-Activated Server Hibernation &amp; Warm-Up**:
+*   **The Principle**: The OpenAgent server daemon (</code>opencode-core.service<code>) is socket-activated by</code>opencode.socket<code>on port 4096 and configured with</code>StopWhenUnneeded=true<code>. When idle, it shuts down (hibernates) to save memory and GPU resources.
+*   **The Practice**: Before launching a task against the server (via</code>opencode run --attach http://127.0.0.1:4096/<code>), AGY (the parent co-pilot client) must proactively wake the server from hibernation by querying the socket (e.g. running a fast</code>curl -I http://127.0.0.1:4096/<code>or</code>opencode session list | cat<code>) and waiting 1-2 seconds for initialization to complete before sending the task.
+14. **Narrow Scope &amp; On-Demand Reference Pattern (Token &amp; Context Management)**:
+*   **Critical Evaluation of the Dual-Directory Design**: Initializing OpenAgent targeting the parent directory</code>/home/jallred/Dev_Lab<code>(which spans both the</code>HomeLabAI<code>and</code>Portfolio_Dev<code>workspaces) is a major design pitfall. Even with</code>.opencodeignore<code>active, the collective codebase mapping (file hierarchy, git diffs, branch states, and XML schema trees) compiles a massive baseline context (40K+ tokens) on the very first turn, immediately exhausting TPM quotas on cloud API free tiers (e.g. Gemini's 40K TPM or Groq's 12K TPM).
+*   **Subdirectory Ignore Bypass Risk**: Launching an OpenAgent session from a subdirectory (e.g., inside</code>HomeLabAI<code>) without</code>.opencodeignore<code>being present in that specific subdirectory forces the server to traverse and scan unignored virtual environments (like</code>.venv/<code>at 88K+ tokens) and node modules. The root</code>.opencodeignore<code>is *only* parsed if the session is initialized targeting the root or if a local ignore is present in the targeted subdirectory.
+*   **On-Demand Reference Practice**: 
+    1. Always target the narrowest active project folder (e.g.</code>--dir /home/jallred/Dev_Lab/HomeLabAI<code>).
+    2. To reference planning files located outside the workspace boundary, provide a direct link using the</code>file://<code>scheme directly in the prompt (e.g.,</code>file:///home/jallred/Dev_Lab/Portfolio_Dev/SPRINT_PLAN_SPR_39_0.md#Story-1<code>). The server will fetch that file on-demand via its read tools, avoiding the indexing cost of the rest of the portfolio repository.
+*   **Relieving the Coordinator (BKM-020 Integration)**: To prevent multiple tool round-trips (which compound context size by sending the 40K baseline back and forth), the prompt must contain detailed implementation context (aligning with BKM-020's "Task Verbosity" principle). Provide explicit blueprints, exact target file paths, timing assertions, and output JSON structures in the initial dispatch. High-density instructions allow the orchestrator (</code>Sisyphus`) to design, write, and run the worker tests in a single, self-contained turn, preventing multi-turn context inflation.</p>
 </li>
 </ol>
                             </div>
