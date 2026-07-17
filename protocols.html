@@ -180,14 +180,14 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-006</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Heads Down / AFK Continuity (The Autonomous Sprint)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Autonomous Work Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Enable deep Agent work cycles during user downtime while maintaining transparency.</p>
 <ol>
-<li><strong>Heads Down Trigger</strong>: Signals the start of an autonomous sprint. The Agent works through the agreed-upon task list (from <code>ProjectStatus.md</code> or a specific session goal).</li>
+<li><strong>Autonomous Work Trigger</strong>: Initiates an independent work cycle. The Agent works through the agreed-upon task list (from <code>ProjectStatus.md</code> or a specific session goal).</li>
 <li><strong>AFK Hint</strong>: User says "AFK" or "Coffee Break" to signal they are stepping away. The Agent should check for any queued tasks or proceed autonomously.</li>
-<li><strong>High-Fidelity Reasoning</strong>: "Heads Down" does NOT mean "Terse Mode." The Agent should show reasoning between steps and explain "Why" in its tool calls. High visibility and verbosity is the standard for intent preservation and review.</li>
-<li><strong>Max Momentum</strong>: The Agent must strive to complete as much of the plan as possible. If blocked by hardware or permissions, skip the item and maintain momentum on the next available task.</li>
+<li><strong>Detailed Reasoning</strong>: The agent must provide clear reasoning and explanations for each step during autonomous work. High visibility and verbosity is the standard for intent preservation and review.</li>
+<li><strong>Efficiency</strong>: The agent should complete as much of the plan as possible. If blocked by hardware or permissions, skip the item and maintain momentum on the next available task.</li>
 <li><strong>Linting Mandate</strong>: The Agent MUST use a linter (e.g., <code>ruff check</code>) or the <strong>Atomic Patcher</strong> for all code modifications during a Heads Down sprint to prevent "Zero-Visibility" regressions like <code>NameError</code>.</li>
 <li><strong>Conclusion</strong>: Once the backlog is exhausted or the sprint goal is achieved, exit heads down mode and provide the verbose <strong>BKM-007</strong> "Heads Up" report.</li>
 </ol>
@@ -197,16 +197,16 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-007</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The "Heads Up" Report (High-Fidelity Debrief)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Work Completion Report</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Restore technical context after a deep work cycle.</p>
 <ol>
 <li><strong>Trigger</strong>: Conclusion of a "Heads Down" sprint.</li>
-<li><strong>Verbosity</strong>: The report must be detailed and verbose (reversing minimalist CLI compression).</li>
+<li><strong>Detail</strong>: The report must be comprehensive and clear.</li>
 <li><strong>Content</strong>:<ul>
 <li>Summary of all completed items.</li>
 <li>Implications: Impact on VRAM, latency, and security.</li>
-<li>The "Path Backwards": Rollback steps if the new silicon is unstable.</li>
+<li>Rollback Plan: Steps to revert changes if the system becomes unstable.</li>
 </ul>
 </li>
 <li><strong>Verification</strong>: Re-verify all services (Ollama, vLLM, Intercom) before handing back control.</li>
@@ -357,7 +357,7 @@
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Agentic Delegation (Context Preservation)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <ul>
-<li><strong>Why:</strong> To postpone "Manic Phases" (cognitive overload leading to lossy compression of design documentation).</li>
+<li><strong>Why:</strong> To prevent cognitive overload leading to lossy compression of design documentation.</li>
 <li><strong>Rule:</strong> Use specialized sub-agents (<code>generalist</code>, <code>conductor</code>) for repetitive code execution or surgical implementation tasks. I (the Main Agent) remain the "Guardian of the DNA."</li>
 <li><strong>Constraint:</strong> Sub-agents are <strong>RESTRICTED</strong> from editing design documentation (<code>*.md</code>) in <code>Portfolio_Dev/</code>. Only the Main Agent conducts "DNA" updates.</li>
 </ul>
@@ -385,10 +385,11 @@
 <li>
 <p><strong>Critical REST</strong>: The REST API (port 9999) is a critical infrastructure layer that enables the <code>status.html</code> remote control and provides the backend communication for the MCP Proxy. </p>
 </li>
-<li><strong>The Prohibition</strong>: Manual <code>pkill</code>, <code>kill</code>, <code>nohup</code>, or direct <code>python3 src/acme_lab.py</code> execution is strictly <strong>FORBIDDEN</strong>. These actions bypass the Attendant's logging, port-reaping, and state-tracking logic.</li>
+<li><strong>Restriction</strong>: Do not use manual <code>pkill</code>, <code>kill</code>, <code>nohup</code>, or direct execution of <code>python3 src/acme_lab.py</code>. These actions bypass the Attendant's logging, port-reaping, and state-tracking logic.</li>
 <li><strong>Legacy Support</strong>: <code>LAB_REST_CURL_CONTROL</code> (Default: ENABLED) preserves backward compatibility for existing <code>curl</code> scripts and remote status indicators while steering the agent toward the high-fidelity Proxy path.</li>
+<li><strong>Code Reload Mandate</strong>: Any codebase modifications made to Foyer routing (<code>router.py</code>, <code>cognitive_hub.py</code>), node adapters (<code>loader.py</code>), or Attendant services must be followed immediately by <code>sudo systemctl restart lab-attendant.service</code>. Failing to restart the service after file modifications causes the system to run stale memory footprints, leading to false validation passes.</li>
 </ol>
-<p><strong>Lead Engineer's Mandate (Tool Stewardship)</strong>: "If a tool is broken or lacks a necessary capability, do NOT bypass it with a pkill or shell hack. Fix the tool or extend the API. A bypass is a 'Silicon Scar' that blinds future agents; a fix is a permanent upgrade to the Lab"</p>
+<p><strong>Tool Stewardship</strong>: If a tool is broken or lacks functionality, fix or extend it. Avoid temporary workarounds that may cause issues later.</p>
                             </div>
                         </td>
                     </tr>
@@ -439,7 +440,7 @@
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Surgical Preservation Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: To prevent "Lossy Compression," erasures of technical pedigree, and documentation thrash during architectural refactors.</p>
-<p><strong>Why</strong>: To combat the LLM's natural instinct to simplify and summarize complex history. Treating documentation as "Write-Protected DNA" ensures that technical findings are layered rather than replaced, maintaining the "Silicon Scar" pedigree as the primary defense against agentic state-drift and loss of intent.</p>
+<p><strong>Purpose</strong>: To preserve detailed technical history and prevent oversimplification, ensuring accurate documentation and continuity.</p>
 <p><strong>Sprint Tasks</strong>: Specifically, sprint task context should be preserved when completing.  We still want to know the 'why' and 'how' context even though they are completed and done.</p>
 <h4><strong>🏎️ 1. Execution (The Surgical Additive Pass)</strong></h4>
 <ul>
@@ -454,12 +455,12 @@
 <li><strong>Anchor Check</strong>: Ensure "Validation Anchors" (specific IPs, Ports, IDs, kernel settings) are preserved word-for-word in the final output.</li>
 <li><strong>Pedigree Verification</strong>: Compare the "God View" roadmap against previous git commits to ensure no historical phases were compressed or "grouped" into high-level points.</li>
 </ul>
-<h4><strong>🤕 3. Scars (Known Failures)</strong></h4>
+<h4><strong>Known Issues</strong></h4>
 <ul>
 <li><strong>The Compression Trap</strong>: LLMs naturally instinct to "clean up" or "summarize" old tasks to save space—this is a fatal error that leads to the total loss of technical intent.</li>
 <li><strong>The Erasure Regret</strong>: Deleting "Tabled" tasks or previous failures makes the Lab look reactive rather than evolved; the history of the struggle is the source of robustness.</li>
 </ul>
-<h3>[BKM-015.1] The Law of Semantic Indirection (The Bones)</h3>
+<h3>BKM-015.1: Semantic Indirection Guidelines</h3>
 <p><strong>Context:</strong> Replaces the "Waffling" period (Feb-Mar 2026) where routing was managed via static JSON lists in <code>intent_anchors.json</code>. 
 <strong>Why:</strong> Rigid mapping causes "Logic Drift" when new tools are added. The agent must rely on semantic "Vibes" to select its cognitive loadout.
 <strong>The Rule:</strong> No <code>.py</code> logic block may map a domain to a tool or adapter via a switch/case or list-matching. All behavioral mapping must be retrieved via vector similarity from the <code>behavioral_dna</code> collection.
@@ -469,7 +470,7 @@
 <li><strong>[BKM-031] Ledger-Only Mandate (Anti-Assassin)</strong>:<ul>
 <li><strong>Rule</strong>: The Lab MUST NOT perform broad-spectrum system scans (GPU, Port, or Signature) to identify orphans.</li>
 <li><strong>Mechanism</strong>: All reaping actions MUST be restricted to the <strong>Explicit PID Ledger</strong>.</li>
-<li><strong>Philosophy</strong>: Better a VRAM leak than an OS-level assassination. If a process is not in the ledger, it does not exist to the Lab. Never use <code>fuser -k</code> or <code>pkill</code> on system-wide shared resources.</li>
+<li><strong>Principle</strong>: Avoid aggressive process termination to prevent system instability. Only terminate processes listed in the ledger.</li>
 </ul>
 </li>
 </ol>
@@ -498,7 +499,7 @@
                                 <p><strong>Role: [SPRINT] - Planning &amp; Execution Protocol</strong></p>
 <blockquote>
 <p>[!IMPORTANT]
-<strong>PURPOSE:</strong> To ensure transparent, iterative, and high-fidelity project evolution through collaborative planning and surgical execution.</p>
+<strong>Purpose:</strong> To ensure clear, iterative project development through structured planning and execution.</p>
 </blockquote>
 <h3>1. Document Architecture</h3>
 <ul>
@@ -520,7 +521,7 @@
 <h3>4. Execution &amp; Validation</h3>
 <ul>
 <li><strong>Look First</strong>: Before creating new tools or scripts, the Agent MUST consult <code>HomeLabAI/docs/DIAGNOSTIC_SCRIPT_MAP.md</code> and reuse existing diagnostic infrastructure.</li>
-<li><strong>Surgical Gating</strong>: Every edit must be followed by <code>ruff check</code> (linting) to prevent testing "bad code."</li>
+<li><strong>Validation</strong>: Every edit must be followed by <code>ruff check</code> to ensure code quality.</li>
 <li><strong>Conductor Delegation</strong>: For complex or high-volume tasks, the Agent should use the Conductor track to delegate work to sub-agents, preserving the primary context window for strategic orchestration.</li>
 </ul>
                             </div>
@@ -537,6 +538,7 @@
 <li><strong>Fast Hibernation</strong>: Set <code>afk_timeout=60</code> in <code>acme_lab.py</code> to observe auto-hibernation cycles in 1 minute.</li>
 <li><strong>Traceability</strong>: Always check <code>status.json</code> or the Attendant journal for the <code>reason</code> field to verify which trigger caused an ignition.</li>
 <li><strong>Silicon Reset</strong>: Use <code>sudo systemctl restart lab-attendant.service</code> to ensure a perfectly clean slate between tests. The <code>on_shutdown</code> hook ensures all session orphans are reaped.</li>
+<li><strong>Hot-Reload Prevention</strong>: The state machine does not support dynamic code reloading. Always execute <code>sudo systemctl restart lab-attendant.service</code> after editing files before running any inject verification scripts.</li>
 </ol>
                             </div>
                         </td>
@@ -609,8 +611,10 @@
 <ul>
 <li>BKM query:  'how to safely patch files atomically'   → retrieves BKM-011, BKM-012</li>
 <li>FEAT query: 'RAPL telemetry silicon validation'       → retrieves FEAT-098, FEAT-115</li>
-<li>Active Task: SPRINT_PLAN_SPR_37_0.md#Task-<id>        ← direct pointer (not DNA-managed)</li>
+<li>Active Task: SPRINT_PLAN_SPR_40_0.md#Task-<id>        ← direct pointer</li>
 </ul>
+<p>[COORDINATION &amp; DELEGATION MANDATE]
+- You NEVER work alone when specialists are available. Delegate the raw code edits and CLI verification checks of this task to sisyphus-junior (running locally on KENDER's 4090) to conserve cloud tokens. Focus strictly on plan coordination and diff auditing.</p>
 <p>[TARGET SPECIFICATION]
 - File: <absolute_path_to_target_file>
 - Target Lines/Functions: <target_lines_or_functions>
