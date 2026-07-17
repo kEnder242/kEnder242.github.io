@@ -80,11 +80,6 @@ function initResizer() {
 function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat') {
     const target = channel === 'insight' ? insightConsole : chatConsole;
     
-    if (channel === 'whiteboard' || channel === 'workspace') {
-        if (editor) editor.value(text);
-        return;
-    }
-
     const msg = document.createElement('div');
     const msgType = (source && source.toLowerCase() === "system") ? "system-msg" : type;
     msg.className = `message ${msgType}`;
