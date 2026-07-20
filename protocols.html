@@ -326,14 +326,14 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-015</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Semantic Anchor Protocol (Anti-Drift)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Semantic Anchor Protocol (Anti-Drift & Indirection)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Eliminate functional drift caused by hard-coded keyword lists.</p>
+                                <p><strong>Objective</strong>: Eliminate functional drift and rigid logic failures caused by hardcoded keywords or static list-matching.</p>
 <ol>
-<li><strong>Rule of the Ghost Keyword</strong>: No technical keywords or domain-specific anchors (e.g., "RAPL", "ESB2") are allowed in <code>.py</code> logic blocks. They must reside in <code>config/intent_anchors.json</code> or a dedicated ChromaDB collection.</li>
-<li><strong>The Vibe-First Mandate</strong>: Any <code>if/else</code> logic determining intent or routing must be preceded by a call to a <code>_classify_vibe()</code> or <code>_route_expert_domain()</code> method that utilizes a semantic pass (Vector or LLM).</li>
-<li><strong>DNA-First Verification</strong>: A feature is only marked <code>[COMPLETE]</code> if its implementation matches the "Mechanism" described in <code>FeatureTracker.md</code>. If the mechanism specifies "Sentinel Pass" and the code uses "List-Matching," the status is <code>[PARTIAL/STALE]</code>.</li>
-<li><strong>Retrieval Optimization Exception</strong>: Hardcoded logic (e.g., year-based regex) is permitted strictly for physical retrieval optimization (e.g., opening a specific <code>YYYY.json</code> file) AFTER a semantic intent (RECALL) has been established. It must never be used to gate the intent itself or replace semantic classification.</li>
+<li><strong>Prohibition of Hardcoding (Ghost Keywords)</strong>: No domain keywords, rigid string lists, or static <code>switch/case</code> tool-mappings are permitted in <code>.py</code> logic blocks. All intent routing and behavioral mappings must be retrieved dynamically via vector similarity from ChromaDB (<code>behavioral_dna</code> collection). Static JSON anchor lists (<code>intent_anchors.json</code>) are deprecated legacy artifacts.</li>
+<li><strong>The Vibe-First Mandate</strong>: Every <code>CognitiveHub</code> dispatch or intent-routing check must perform a semantic "Vibe Check" (Vector or LLM classifier) before selecting tools, adapters, or cognitive loadouts.</li>
+<li><strong>DNA-First Verification</strong>: A feature is only certified <code>[COMPLETE]</code> if its implementation matches the "Mechanism" described in <code>FeatureTracker.md</code>. If the mechanism specifies "Sentinel Pass" and the code uses "List-Matching," the status is <code>[PARTIAL/STALE]</code>.</li>
+<li><strong>Physical Retrieval Exception</strong>: Hardcoded regex (e.g. 4-digit year extraction for <code>YYYY.json</code> file loading) is permitted strictly for physical disk retrieval <em>after</em> semantic intent has been established. It must never be used to gate intent or replace semantic classification.</li>
 </ol>
                             </div>
                         </td>
@@ -456,15 +456,6 @@
 <li><strong>Pedigree Verification</strong>: Compare the "God View" roadmap against previous git commits to ensure no historical phases were compressed or "grouped" into high-level points.</li>
 </ul>
 <h4><strong>Known Issues</strong></h4>
-<ul>
-<li><strong>The Compression Trap</strong>: LLMs naturally instinct to "clean up" or "summarize" old tasks to save space—this is a fatal error that leads to the total loss of technical intent.</li>
-<li><strong>The Erasure Regret</strong>: Deleting "Tabled" tasks or previous failures makes the Lab look reactive rather than evolved; the history of the struggle is the source of robustness.</li>
-</ul>
-<h3>BKM-015.1: Semantic Indirection Guidelines</h3>
-<p><strong>Context:</strong> Replaces the "Waffling" period (Feb-Mar 2026) where routing was managed via static JSON lists in <code>intent_anchors.json</code>. 
-<strong>Why:</strong> Rigid mapping causes "Logic Drift" when new tools are added. The agent must rely on semantic "Vibes" to select its cognitive loadout.
-<strong>The Rule:</strong> No <code>.py</code> logic block may map a domain to a tool or adapter via a switch/case or list-matching. All behavioral mapping must be retrieved via vector similarity from the <code>behavioral_dna</code> collection.
-<strong>Trigger:</strong> Every <code>CognitiveHub</code> dispatch must first perform a "Vibe Check" against the neural archive.</p>
 <hr />
 <ol>
 <li><strong>[BKM-031] Ledger-Only Mandate (Anti-Assassin)</strong>:<ul>
@@ -510,7 +501,7 @@
 <h3>2. The Planning Phase (The "Greenlight" Gate)</h3>
 <ul>
 <li><strong>The Wait</strong>: The Agent is FORBIDDEN from beginning implementation until the User provides a "Greenlight" or "Buy-in" on the proposed Sprint Plan.</li>
-<li><strong>Strategic Inquiry</strong>: Use the Planning Phase to brainstorm "Traps," waffling risks (e.g., hardcoding vs. BKM-015.1), and lost requirements from previous sessions.</li>
+<li><strong>Strategic Inquiry</strong>: Use the Planning Phase to brainstorm "Traps," waffling risks (e.g., hardcoding vs. BKM-015), and lost requirements from previous sessions.</li>
 </ul>
 <h3>3. Iterative Append Protocol (History over Overwrites)</h3>
 <ul>
@@ -585,83 +576,48 @@
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">OpenAgent Delegation & Playbook Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Establish safe, context-preserving boundary gates for delegating tasks from Gemini (Orchestration) to OpenAgent (Local/Remote Swarm) to minimize token consumption and prevent intent drift.
-<strong>Playbook Reference</strong>: <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/AGY_TO_OPENAGENT_PLAYBOOK.md">AGY_TO_OPENAGENT_PLAYBOOK.md</a></p>
+                                <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between the strategic co-pilot (<strong>Antigravity / Gemini</strong>) and the tactical developer swarm (<strong>OpenAgent</strong>).</p>
 <ol>
 <li><strong>Role Division</strong>:<ul>
-<li><strong>Orchestrator (Gemini/Claude)</strong>: Acts as the <em>Strategic Guardian of the DNA</em>. Responsible for updating the Master Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defining architectural requirements, auditing code changes via git diffs, and running final integration tests.</li>
-<li><strong>Swarm (OpenAgent)</strong>: Executes <em>Tactical Implementation loops</em>. Responsible for writing codebase logic, updating test files, and running line-by-line debugging iterations.</li>
+<li><strong>Strategic Guardian (Antigravity / Gemini)</strong>: Maintains the Master Sprint Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defines architecture, conducts post-implementation git diff reviews, and runs system integration tests.</li>
+<li><strong>Tactical Swarm (OpenAgent)</strong>: Executes code modifications, runs unit test iterations (<code>pytest</code>), and handles line-by-line file updates.</li>
 </ul>
 </li>
-<li><strong>Swarm Agent Category Mapping</strong>:<ul>
-<li><strong>Sisyphus-Junior (quick, visual-engineering, writing)</strong>: Spawned automatically via category overrides. Do <strong>NOT</strong> specify <code>subagent_type: "Sisyphus-Junior"</code> directly in task tool parameters as it will error.</li>
-<li><strong>Plan-Family Restriction</strong>: Plan-family agents (<code>plan</code>, <code>prometheus</code>) cannot delegate tasks to other plan-family agents via <code>task()</code>.</li>
-<li><strong>Coordinator Restriction</strong>: Coordinator agents (e.g., <code>prometheus</code>) own their orchestration loops and are forbidden from being called as subagents. Select worker agents or categories instead.</li>
+<li><strong>Mandatory Shell-Based Execution (Point 12)</strong>:<ul>
+<li>All developer/implementation tasks delegated to OpenAgent must be launched via the shell-based <code>opencode</code> CLI attached to port 4096:
+    <code>bash
+    /home/jallred/.opencode/bin/opencode run --dir &lt;target_dir&gt; --attach http://127.0.0.1:4096/ "SESSION: Sprint XX Story YY — &lt;Title&gt;..."</code></li>
+<li><code>invoke_subagent</code> is strictly reserved for read-only research tasks. This guarantees all active worker sessions render live on the local TUI and webview dashboard at <code>http://192.168.1.238:4096/</code>.</li>
 </ul>
 </li>
-<li><strong>Concurrency Deadlock Prevention</strong>: Ollama provider options must set <code>"maxConcurrency": 5</code> (or higher) in <code>opencode.json</code>. If set to <code>1</code> (serialized), the parent orchestrator and child subagent will deadlock when attempting parallel queries to the local model.</li>
-<li><strong>Verification Plan Immutability</strong>: Every task delegated to OpenAgent must have a verbatim, detailed <strong>Verification Plan</strong> detailing the specific tests (e.g., pytest, Playwright) and assertions. OpenAgent is prohibited from marking a task as complete unless the exact verification scripts pass cleanly.</li>
-<li><strong>Token Conservation Guardrails</strong>: For heavy sequence editing, refactoring, or iterative lint-fixing, the prompt must steer OpenAgent to run locally on the RTX 4090 or Groq/DeepSeek Free tiers to preserve Gemini's rate-limited API tokens.</li>
-<li><strong>Forensic Review Gate &amp; Git Ownership</strong>: All git staging, branching, and commits must be handled directly by AGY (cloud orchestrator) as part of the post-implementation review and validation gate, rather than delegating Git operations to local subagent workers. Sisyphus-Junior should focus strictly on local file modifications and test verification. Gemini must review the git diffs, run the system-wide diagnostic runner (<code>gold_master_batch_runner.sh</code>), and verify the code against <code>FeatureTracker.md</code> before final sprint task checkoff.</li>
+<li><strong>Narrow Workspace Scoping &amp; On-Demand Reference</strong>:<ul>
+<li>Target the narrowest active project directory (e.g. <code>--dir /home/jallred/Dev_Lab/HomeLabAI</code>).</li>
+<li>To reference planning files outside the target workspace, pass direct links using the <code>file://</code> scheme in the prompt (e.g. <code>file:///home/jallred/Dev_Lab/Portfolio_Dev/SPRINT_PLAN_SPR_42_0.md#Story-1</code>).</li>
+</ul>
+</li>
+<li><strong>Standardized Prompt Blueprint</strong>:<ul>
 <li>
-<p><strong>Surgical Handover Prompt Template</strong>: All tasks delegated to OpenAgent must utilize the following structured format. BKM and FEAT context is retrieved from ChromaDB (behavioral_dna / feature_dna collections) rather than injected as raw file content, reducing KV cache pressure on small local models:
+<p>Prompts sent to OpenAgent must be explicit and structured, minimizing local model reasoning drift:
     ```markdown
-    opencode run -m <provider/model> "
-    [GROUNDING CONTEXT — loaded from ChromaDB, not raw file injection]</p>
-<ul>
-<li>BKM query:  'how to safely patch files atomically'   → retrieves BKM-011, BKM-012</li>
-<li>FEAT query: 'RAPL telemetry silicon validation'       → retrieves FEAT-098, FEAT-115</li>
-<li>Active Task: SPRINT_PLAN_SPR_40_0.md#Task-<id>        ← direct pointer</li>
-</ul>
-<p>[COORDINATION &amp; DELEGATION MANDATE]
-- You NEVER work alone when specialists are available. Delegate the raw code edits and CLI verification checks of this task to sisyphus-junior (running locally on KENDER's 4090) to conserve cloud tokens. Focus strictly on plan coordination and diff auditing.</p>
+    SESSION: Sprint XX Story YY — <Title></p>
+<p>Read the master plan at file://<path_to_sprint_plan>.md#Story-YY.</p>
 <p>[TARGET SPECIFICATION]
 - File: <absolute_path_to_target_file>
-- Target Lines/Functions: <target_lines_or_functions>
-- Modification Details: <exact_changes_required></p>
+- Task Details: <explicit_code_or_logic_changes></p>
 <p>[VERIFICATION GATE]
-- Test Command: <validation_script_or_pytest_command>
-- Mandate: You are forbidden from committing unless this test passes.
-"
-<code>*   **Note**: Raw file links (`file:///...FeatureTracker.md` and `file:///...Protocols.md`) are now handled via the pre-commit-hook-synced ChromaDB collections (`behavioral_dna`, `feature_dna`). Do not re-inject those full files as context; use targeted semantic queries instead. The sprint plan task pointer remains a direct file link as it is ephemeral and not persisted to DNA.
-8.  **Session Lifecycle Management (sessions vs. run/play)**:
-*   **`opencode run`**: One-shot, ephemeral execution. Appropriate for single atomic tasks with a clear verification gate (e.g., "fix this specific bug and run this test"). Spawns a new session on each invocation.
-*   **`opencode session`** (preferred for sustained phases): Use named, resumable sessions to persist context across multiple related tasks within a phase or sprint.
-*   **Naming a session**: The session title displayed in `opencode session list` is set at creation time from the first user message. To create a distinctly named session, the first message must be an explicit phase declaration:</code>bash
-    # Start a named session for a specific sprint phase
-    opencode run --print-logs "SESSION: Sprint 37 Phase 2 — Persona Polish. Starting task 6.1: IDENTITY_BEDROCK refactor."
-    # The session ID is then captured from the output (ses_XXXX)
-    <code>*   **Resuming a session**: Use `opencode --session &lt;session_id&gt;` or `opencode -c` to resume the most recent session:</code>bash
-    opencode --session ses_0c61ebab0ffeRC23pP7kxbiQjU
-    opencode -c  # shorthand for continue last session
-    <code>*   **Sprint vs. Phase granularity**: Prefer one session per logical phase (Story or Story group) within a sprint. Avoid single-session-per-sprint as context accumulation over many tasks degrades small model performance. Fork with `--fork` when branching from a stable state:</code>bash
-    opencode --session <ses_id> --fork  # branches context at this point
-    <code>``
-*   **Sustained Sprint Sessions (Persistence)**: When the user requests completing the entire sprint in a single session, Sisyphus should reuse the same subagent session ID (</code>ses_...<code>returned by</code>task()<code>) for subsequent tasks in the sprint rather than starting a fresh subagent session on each task. Sisyphus must maintain a persistent task checklist/ledger inside the session context.
-*   **Session list audit**: Before starting a new phase, run</code>opencode session list<code>and identify the last relevant session ID to resume or fork.
-9.  **Playbook Protocol Refinement (Swarm Pain Points)**:
-*   **Strict Verification Gate Enforcement**: Subagents are forbidden from committing code changes if the AST parse (</code>ast.parse<code>) or validation tests fail. Committing syntax errors constitutes a severe protocol violation.
-*   **DNA Grounding Enforcement**: Swarm agents must query the</code>feature_dna<code>collection (grounded in</code>FeatureTracker.md<code>) before making edits to ensure they do not introduce regressional bugs or overwrite active rules.
-*   **Delegation-Guiding Prompts**: Prompts sent to subagents must embed strict boundaries (e.g.,</code>MUST DO<code>/</code>MUST NOT DO<code>rules) to prevent local models from losing context or inventing instructions.
-*   **Named Session Enforcement**: Avoid generating sessions with generic titles (e.g. "Greeting" or "New session"). Always use the</code>SESSION: Sprint XX Story YY<code>format on the first query of a session.
-*   **VRAM Inversion Strategy**: Evaluate if the local 4090 VRAM should be inverted: instead of running heavy orchestrators locally (which suffer high latency and context limits), utilize cloud endpoints for orchestration and reservation, and load local models (like</code>qwen2.5-coder<code>) primarily for *heavy code generation/refactoring*. Evaluate if coding models still require tool usage or if they can rely on unified diff patches.
-10. **DNA Query Translation (Semantic Paraphrasing)**:
-*   **The Principle**: Sisyphus must not query ChromaDB with raw, conversational user prompts verbatim (e.g.</code>"I want to edit a file"<code>).
-*   **The Practice**: Sisyphus must translate the user's conversational intent into precise domain-specific search query keywords (e.g.</code>"safe file write"<code>,</code>"atomic file patch"<code>,</code>"lint gate"<code>) before querying the</code>behavioral_dna<code>and</code>feature_dna<code>collections. This ensures maximum retrieval confidence (minimum distance score).
-11. **Explicit Blueprint Prompting (No-Boilerplate Guardrail)**:
-*   **The Principle**: Cloud orchestrators (Gemini) must not delegate open-ended logic or design descriptions to local 14B workers. They must compile exact HTML/CSS blocks, BeautifulSoup scripts, or shell templates directly inside the prompt's</code>[TARGET SPECIFICATION]<code>.
-*   **The Practice**: This minimizes local token generations, reduces context overhead, avoids structural hallucinations, and allows the user to review the exact code/design inside the Master Sprint Plan prior to execution.
-12. **Mandatory Shell-Based Execution**: All tactical worker delegation must be initiated via the shell-based</code>opencode<code>CLI (Method B) rather than using the built-in</code>invoke_subagent<code>tool (Method A). The built-in tool is reserved for read-only research tasks or meta-analysis. This ensures all developer tasks are properly registered in the OpenAgent session list and visible in the local TUI/dashboard.
-13. **Socket-Activated Server Hibernation &amp; Warm-Up**:
-*   **The Principle**: The OpenAgent server daemon (</code>opencode-core.service<code>) is socket-activated by</code>opencode.socket<code>on port 4096 and configured with</code>StopWhenUnneeded=true<code>. When idle, it shuts down (hibernates) to save memory and GPU resources.
-*   **The Practice**: Before launching a task against the server (via</code>opencode run --attach http://127.0.0.1:4096/<code>), AGY (the parent co-pilot client) must proactively wake the server from hibernation by querying the socket (e.g. running a fast</code>curl -I http://127.0.0.1:4096/<code>or</code>opencode session list | cat<code>) and waiting 1-2 seconds for initialization to complete before sending the task.
-14. **Narrow Scope &amp; On-Demand Reference Pattern (Token &amp; Context Management)**:
-*   **Critical Evaluation of the Dual-Directory Design**: Initializing OpenAgent targeting the parent directory</code>/home/jallred/Dev_Lab<code>(which spans both the</code>HomeLabAI<code>and</code>Portfolio_Dev<code>workspaces) is a major design pitfall. Even with</code>.opencodeignore<code>active, the collective codebase mapping (file hierarchy, git diffs, branch states, and XML schema trees) compiles a massive baseline context (40K+ tokens) on the very first turn, immediately exhausting TPM quotas on cloud API free tiers (e.g. Gemini's 40K TPM or Groq's 12K TPM).
-*   **Subdirectory Ignore Bypass Risk**: Launching an OpenAgent session from a subdirectory (e.g., inside</code>HomeLabAI<code>) without</code>.opencodeignore<code>being present in that specific subdirectory forces the server to traverse and scan unignored virtual environments (like</code>.venv/<code>at 88K+ tokens) and node modules. The root</code>.opencodeignore<code>is *only* parsed if the session is initialized targeting the root or if a local ignore is present in the targeted subdirectory.
-*   **On-Demand Reference Practice**: 
-    1. Always target the narrowest active project folder (e.g.</code>--dir /home/jallred/Dev_Lab/HomeLabAI<code>).
-    2. To reference planning files located outside the workspace boundary, provide a direct link using the</code>file://<code>scheme directly in the prompt (e.g.,</code>file:///home/jallred/Dev_Lab/Portfolio_Dev/SPRINT_PLAN_SPR_39_0.md#Story-1<code>). The server will fetch that file on-demand via its read tools, avoiding the indexing cost of the rest of the portfolio repository.
-*   **Relieving the Coordinator (BKM-020 Integration)**: To prevent multiple tool round-trips (which compound context size by sending the 40K baseline back and forth), the prompt must contain detailed implementation context (aligning with BKM-020's "Task Verbosity" principle). Provide explicit blueprints, exact target file paths, timing assertions, and output JSON structures in the initial dispatch. High-density instructions allow the orchestrator (</code>Sisyphus`) to design, write, and run the worker tests in a single, self-contained turn, preventing multi-turn context inflation.</p>
+- Test Command: <pytest_or_validation_script>
+- Mandate: Do NOT run git commit inside this session. Report completion summary when done.
+<code>``
+5.  **DNA Grounding &amp; Semantic Search**:
+    *   Retrieve BKM and FEAT context via ChromaDB vector collections (</code>behavioral_dna<code>,</code>feature_dna<code>) on port 8001 rather than injecting raw markdown files.
+    *   Translate conversational user prompts into domain keywords (</code>"atomic write"<code>,</code>"safe file patch"<code>) before querying vector collections.
+6.  **Forensic Gatekeeper &amp; Git Ownership**:
+    *   OpenAgent workers edit files and run test suites locally, but are **prohibited from performing</code>git commit<code>**.
+    *   The Strategic Guardian inspects</code>git diff<code>, verifies</code>pytest<code>output, and executes git commits upon task certification.
+7.  **Deep-Dive Playbook Reference**:
+    *   For full model allocation matrices, session persistence mechanics (</code>--session<code>,</code>--fork<code>), and historical troubleshooting ledgers, refer to **[</code>Portfolio_Dev/OPENAGENT_HANDOVER_PLAYBOOK.md`](file:///home/jallred/Dev_Lab/Portfolio_Dev/OPENAGENT_HANDOVER_PLAYBOOK.md)**.</p>
+</li>
+</ul>
 </li>
 </ol>
                             </div>
@@ -719,6 +675,42 @@
 <li>Monitor <code>node_memory_Active_bytes</code> vs. <code>node_memory_MemAvailable_bytes</code> in Grafana.</li>
 <li>Watch <code>node_vmstat_pswpin</code> and <code>node_vmstat_pswpout</code> to detect active paging (swap thrashing) before a lockup occurs.</li>
 <li>Check for high <code>node_cpu_seconds_total{mode="iowait"}</code> as a precursor to SSH timeouts.</li>
+</ul>
+</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-037</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Persistent Memory Efficiency Protocol (Daemon Embedding & Deferred Extraction)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent memory thrashing and CPU starvation during high-density OpenAgent developer subagent runs by decoupling synchronous tool execution from heavy vector embedding generation.</p>
+<ol>
+<li><strong>The Principle</strong>: Swarm subagents executing rapid coding tasks (20–30 tool calls/min) must not spawn cold ONNX/PyTorch vector embedding processes on individual tool turns.</li>
+<li><strong>Execution Rules</strong>:<ul>
+<li><strong>Queue-First Logging</strong>: All OpenAgent tool outputs, shell events, and diff traces must be logged to the lightweight append-only event queue (<code>pending_queue.jsonl</code>) without blocking worker execution.</li>
+<li><strong>Daemon-Only Embeddings</strong>: Vector embedding generation for memory search/ingestion must communicate strictly via HTTP socket to the persistent ChromaDB daemon on port 8000 (or resident FastEmbed service). Cold-starting ONNX models inside CLI hooks is strictly forbidden.</li>
+<li><strong>Deferred Extraction Sweeps</strong>: Execute <code>icm extract-pending</code> at session boundaries, post-sprint reviews, or via background cron tasks to ingest new memory candidates in a single batch.</li>
+</ul>
+</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-038</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Daemon Wrapper Circuit Breaker & Remote Inference Anti-Loop Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent background runner wrappers (<code>headroom</code>, <code>codex</code>, <code>opencode</code>) from entering infinite auto-restart loops that lock up remote compute nodes (Node 'KENDER' / RTX 4090).</p>
+<ol>
+<li><strong>The Principle</strong>: No CLI runner or proxy wrapper may automatically restart an inference process without a hard circuit-breaker ceiling. Unhandled session errors or socket disconnects must fail-fast and yield to the orchestrator rather than retrying in a loop.</li>
+<li><strong>Execution Rules</strong>:<ul>
+<li><strong>Hard Restart Cap</strong>: Systemd services and wrapper scripts (<code>opencode-core.service</code>, <code>headroom</code>) must set <code>Restart=on-failure</code>, <code>StartLimitIntervalSec=60s</code>, and <code>StartLimitBurst=3</code>. Infinite <code>Restart=always</code> without backoff is strictly forbidden.</li>
+<li><strong>Request Timeout Ceilings</strong>: All HTTP clients dispatching LLM queries to KENDER (<code>192.168.1.26:11434</code>) must enforce a strict <code>timeout=60s</code>. A hanging stream must abort the process tree cleanly (<code>SIGTERM</code> -&gt; 2s -&gt; <code>SIGKILL</code>).</li>
+<li><strong>Socket Eviction</strong>: Upon task completion or cancellation, the orchestrator must verify zero established sockets (<code>ss -tp | grep 11434</code>) remain connected to remote compute nodes.</li>
 </ul>
 </li>
 </ol>
