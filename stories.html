@@ -65,7 +65,7 @@
 
 <input aria-label="Filter navigation" id="nav-filter" placeholder="Filter nodes..." type="text"/>
 <div id="searchable-content">
-<h2>Security &amp; Yield</h2>
+<h2>Security &amp; Manageability</h2>
 <ul>
 <li><a href="#rakp-security">The RAKP Security Catch</a></li>
 <li><a href="#kernel-patch">The Kernel Patch</a></li>
@@ -74,7 +74,7 @@
 <li><a href="#failed-demo">The Failed Microsoft Demo</a></li>
 <li><a href="#rmcp-optimization">RMCP+ Socket Optimization</a></li>
 </ul>
-<h2>Systems Architecture</h2>
+<h2>Systems Architecture &amp; Automation</h2>
 <ul>
 <li><a href="#visa-tool">The VISA Tool Engine</a></li>
 <li><a href="#xslt-parsing">Automated Parsing (XSLT)</a></li>
@@ -84,7 +84,7 @@
 <li><a href="#ti-basic">Reinventing TI Basic</a></li>
 <li><a href="#quakecon">The QuakeCon Hot Swap</a></li>
 </ul>
-<h2>Validation Methodology</h2>
+<h2>Silicon Validation Methodology</h2>
 <ul>
 <li><a href="#reading-robot">Reading Like a Robot</a></li>
 <li><a href="#rapl-matplotlib">RAPL &amp; Matplotlib</a></li>
@@ -114,9 +114,48 @@
 </div>
 </nav>
 <main>
+<!-- SECURITY & MANAGEABILITY -->
+<section id="security">
+<h2 class="section-title">Security &amp; Manageability</h2>
+<article id="rakp-security">
+<h3>The RAKP Security Catch (CVE-2013-4786)</h3>
+<div class="meta">Tag: Security | Impact: CVE Discovery</div>
+<p>While implementing the RMCP+ protocol stack from scratch in C, I performed a deep dive into the RAKP authentication spec. To properly debug the session negotiation, I had to patch the Wireshark (then Ethereal) source code to correctly parse the custom packet exchanges I was seeing.</p>
+<p>During this process, I identified a fundamental flaw: the BMC would return a salted hash of the user’s password before the client proved their identity, essentially enabling offline dictionary attacks. <strong>Although my concerns were dismissed by senior engineers at the time, this exact vulnerability was later confirmed as industry-wide flaw CVE-2013-4786.</strong> This solidified my conviction to trust technical data over hierarchy and to maintain meticulous documentation for critical findings.</p>
+</article>
+<article id="kernel-patch">
+<h3>The Kernel Patch (Topology &amp; Architecture)</h3>
+<div class="meta">Tag: Kernel | Impact: Fix</div>
+<p>We had a module flooding dmesg on custom silicon due to rigid topology assumptions. I wrote and compiled a kernel patch to add the necessary flexibility. <strong>This eliminated the noise, allowing the team to focus on real bugs.</strong> While the patch couldn't be upstreamed due to red tape, the experience validated that I could dive into kernel code to unblock the validation process.</p>
+</article>
+<article id="negative-testing">
+<h3>Negative Testing (The Yield Use Case)</h3>
+<div class="meta">Tag: Validation | Impact: Execution Speed</div>
+<p>I had a big PECI coverage miss, it was rather embarrassing. Because we had a huge list, I was only checking what I knew existed, not what shouldn’t exist. Well, some unexpected endpoints did surface, more echoes of what they should be, but those endpoints should not have been visible. I needed to pivot away from just reading known devices to scanning and including negative space.</p>
+<p>I recalled a conversation with an expert who had scanned through the BDF region before and adapted that to PECI space. To do that I needed a list of all possible combinations in PCI space - which fit very neatly with a generator pattern. One of the first times I really felt <em>yield</em> improved the readability and reliability of my code.</p>
+<p>After I got it running I still saw ‘extra’ devices popping up, but they turned out to be actual hardware, which was easy to correlate with lspci. It was a huge space to cover, and a full run would have taken almost a week, but <strong>with the combination of the bulk transfer API and fast negative returns the expected execution time went from a few days to under 10 hours.</strong></p>
+</article>
+<article id="texas-power-on">
+<h3>The Texas Power-On (Strategic Career Pivot)</h3>
+<div class="meta">Tag: Security | Impact: Team Leadership</div>
+<p>I went to Texas for a power-on during a transition period where I was doing basic execution work and looking for a long-term technical fit. Since I didn’t have a strict task list, I decided to shadow the experts and jump into the immediate fires on the floor. I ended up peer programming with a group focused on high-level security features like TDX and Secure Boot.</p>
+<p>We clicked so well that when they (also) returned to Oregon, they reached out to pull me into their organization. I wasn't just helping with a bring-up; I was recruited to seed a second team under the Security &amp; Manageability umbrella, which launched my five-year run as the Lead Manageability Validation Automation engineer.</p>
+</article>
+<article id="failed-demo">
+<h3>The Failed Microsoft Demo (Preparation &amp; Redundancy)</h3>
+<div class="meta">Tag: Demo | Impact: Lesson Learned</div>
+<p>I had lightweight RMCP+ library we were going to demo to MS. At the last minute, the firmware developers enabled and enforced encryption, which I had not implemented yet. These days I never trust a demo. Demos are great, but always provide a backup video and slides.</p>
+</article>
+<article id="rmcp-optimization">
+<h3>RMCP+ Socket Optimization</h3>
+<div class="meta">Tag: Stability | Impact: Reliability</div>
+<p>Our dev team was tracking down a problem where RMCP+ sessions were piling up in our validation cycle, overloading the BMC and causing instability. We had a TCL based framework, but the heavy lifting was done inside DLL files. I had been doing some digging and found the source code. When I mentioned this to the dev lead he asked me to look into the source code as a last resort, as far as they could tell their code was clean.</p>
+<p>After a bit of sleuthing I found code responsible for opening and closing the sessions on the client side, there was a return between them, so the socket was never closed. <strong>This one fix gave our test suite the stability to add unattended validation cycles and focus on nightly test reports.</strong> It was a game changer, and the experience taught me a single line could be worth weeks of effort.</p>
+</article>
+</section>
 <!-- SYSTEMS ARCHITECTURE -->
 <section id="architecture">
-<h2 class="section-title">Systems Architecture &amp; Scale</h2>
+<h2 class="section-title">Systems Architecture &amp; Automation</h2>
 <article id="visa-tool">
 <h3>The VISA Tool Engine (Metadata-Driven Design)</h3>
 <div class="meta">Tag: Architecture | Impact: Maintenance Reduction</div>
@@ -159,9 +198,9 @@
 <p>The year was 2001, just before 9/11. I flew my PC to a LAN party in Texas. I was using a cheap IDE raid controller at the time. It had a bad eprom after a failed firmware update. Thinking quickly, I ordered another controller. Booted with the good firmware so I could get to a flash point, then hot-swapped the eprom to flash the bad. Was able to recover and even return the controller.</p>
 </article>
 </section>
-<!-- VALIDATION METHODOLOGY -->
+<!-- SILICON VALIDATION METHODOLOGY -->
 <section id="validation">
-<h2 class="section-title">Validation Methodology</h2>
+<h2 class="section-title">Silicon Validation Methodology</h2>
 <article id="reading-robot">
 <h3>Reading Like a Robot (Deep Log Debugging)</h3>
 <div class="meta">Tag: Debugging | Impact: Root Cause Analysis</div>
@@ -208,55 +247,6 @@
 <h3>Venv is like Hot Glue</h3>
 <div class="meta">Tag: Tooling | Impact: Standardization</div>
 <p>Venv is like hot glue - a stop gap solution that becomes standard - docker feels the same - has better utility these days.</p>
-</article>
-</section>
-<!-- FUTURE WORK -->
-<section id="future-work">
-<h2 class="section-title">Future Work (WIP)</h2>
-<ul class="tbd-list">
-<li>[WIP] Polling RAPL Telemetry during stress - Defensive coding in recovery scripts</li>
-<li>[WIP] Rolling window diff - Comparing BIOS logs</li>
-<li>[WIP] DRA for enabling power transient measurements without a harness</li>
-<li>[WIP] Meshtastic hobby (LoRa, 3d printing, ESP32 firmware)</li>
-</ul>
-</section>
-<!-- SECURITY & YIELD -->
-<section id="security">
-<h2 class="section-title">Security &amp; Yield</h2>
-<article id="rakp-security">
-<h3>The RAKP Security Catch (CVE-2013-4786)</h3>
-<div class="meta">Tag: Security | Impact: CVE Discovery</div>
-<p>While implementing the RMCP+ protocol stack from scratch in C, I performed a deep dive into the RAKP authentication spec. To properly debug the session negotiation, I had to patch the Wireshark (then Ethereal) source code to correctly parse the custom packet exchanges I was seeing.</p>
-<p>During this process, I identified a fundamental flaw: the BMC would return a salted hash of the user’s password before the client proved their identity, essentially enabling offline dictionary attacks. <strong>Although my concerns were dismissed by senior engineers at the time, this exact vulnerability was later confirmed as industry-wide flaw CVE-2013-4786.</strong> This solidified my conviction to trust technical data over hierarchy and to maintain meticulous documentation for critical findings.</p>
-</article>
-<article id="kernel-patch">
-<h3>The Kernel Patch (Topology &amp; Architecture)</h3>
-<div class="meta">Tag: Kernel | Impact: Fix</div>
-<p>We had a module flooding dmesg on custom silicon due to rigid topology assumptions. I wrote and compiled a kernel patch to add the necessary flexibility. <strong>This eliminated the noise, allowing the team to focus on real bugs.</strong> While the patch couldn't be upstreamed due to red tape, the experience validated that I could dive into kernel code to unblock the validation process.</p>
-</article>
-<article id="negative-testing">
-<h3>Negative Testing (The Yield Use Case)</h3>
-<div class="meta">Tag: Validation | Impact: Execution Speed</div>
-<p>I had a big PECI coverage miss, it was rather embarrassing. Because we had a huge list, I was only checking what I knew existed, not what shouldn’t exist. Well, some unexpected endpoints did surface, more echoes of what they should be, but those endpoints should not have been visible. I needed to pivot away from just reading known devices to scanning and including negative space.</p>
-<p>I recalled a conversation with an expert who had scanned through the BDF region before and adapted that to PECI space. To do that I needed a list of all possible combinations in PCI space - which fit very neatly with a generator pattern. One of the first times I really felt <em>yield</em> improved the readability and reliability of my code.</p>
-<p>After I got it running I still saw ‘extra’ devices popping up, but they turned out to be actual hardware, which was easy to correlate with lspci. It was a huge space to cover, and a full run would have taken almost a week, but <strong>with the combination of the bulk transfer API and fast negative returns the expected execution time went from a few days to under 10 hours.</strong></p>
-</article>
-<article id="texas-power-on">
-<h3>The Texas Power-On (Strategic Career Pivot)</h3>
-<div class="meta">Tag: Security | Impact: Team Leadership</div>
-<p>I went to Texas for a power-on during a transition period where I was doing basic execution work and looking for a long-term technical fit. Since I didn’t have a strict task list, I decided to shadow the experts and jump into the immediate fires on the floor. I ended up peer programming with a group focused on high-level security features like TDX and Secure Boot.</p>
-<p>We clicked so well that when they (also) returned to Oregon, they reached out to pull me into their organization. I wasn't just helping with a bring-up; I was recruited to seed a second team under the Security &amp; Manageability umbrella, which launched my five-year run as the Lead Manageability Validation Automation engineer.</p>
-</article>
-<article id="failed-demo">
-<h3>The Failed Microsoft Demo (Preparation &amp; Redundancy)</h3>
-<div class="meta">Tag: Demo | Impact: Lesson Learned</div>
-<p>I had lightweight RMCP+ library we were going to demo to MS. At the last minute, the firmware developers enabled and enforced encryption, which I had not implemented yet. These days I never trust a demo. Demos are great, but always provide a backup video and slides.</p>
-</article>
-<article id="rmcp-optimization">
-<h3>RMCP+ Socket Optimization</h3>
-<div class="meta">Tag: Stability | Impact: Reliability</div>
-<p>Our dev team was tracking down a problem where RMCP+ sessions were piling up in our validation cycle, overloading the BMC and causing instability. We had a TCL based framework, but the heavy lifting was done inside DLL files. I had been doing some digging and found the source code. When I mentioned this to the dev lead he asked me to look into the source code as a last resort, as far as they could tell their code was clean.</p>
-<p>After a bit of sleuthing I found code responsible for opening and closing the sessions on the client side, there was a return between them, so the socket was never closed. <strong>This one fix gave our test suite the stability to add unattended validation cycles and focus on nightly test reports.</strong> It was a game changer, and the experience taught me a single line could be worth weeks of effort.</p>
 </article>
 </section>
 <!-- ENGINEERING LEADERSHIP -->
@@ -314,6 +304,16 @@
 <li><strong>Communication:</strong> Don't reply hot, or on mobile, voice is best.</li>
 </ul>
 </article>
+</section>
+<!-- FUTURE WORK -->
+<section id="future-work">
+<h2 class="section-title">Future Work (WIP)</h2>
+<ul class="tbd-list">
+<li>[WIP] Polling RAPL Telemetry during stress - Defensive coding in recovery scripts</li>
+<li>[WIP] Rolling window diff - Comparing BIOS logs</li>
+<li>[WIP] DRA for enabling power transient measurements without a harness</li>
+<li>[WIP] Meshtastic hobby (LoRa, 3d printing, ESP32 firmware)</li>
+</ul>
 </section>
 </main>
 
