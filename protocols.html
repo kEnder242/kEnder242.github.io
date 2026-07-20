@@ -595,28 +595,38 @@
 <li>To reference planning files outside the target workspace, pass direct links using the <code>file://</code> scheme in the prompt (e.g. <code>file:///home/jallred/Dev_Lab/Portfolio_Dev/SPRINT_PLAN_SPR_42_0.md#Story-1</code>).</li>
 </ul>
 </li>
-<li><strong>Standardized Prompt Blueprint</strong>:<ul>
 <li>
-<p>Prompts sent to OpenAgent must be explicit and structured, minimizing local model reasoning drift:
-    ```markdown
-    SESSION: Sprint XX Story YY — <Title></p>
-<p>Read the master plan at file://<path_to_sprint_plan>.md#Story-YY.</p>
-<p>[TARGET SPECIFICATION]
-- File: <absolute_path_to_target_file>
-- Task Details: <explicit_code_or_logic_changes></p>
-<p>[VERIFICATION GATE]
-- Test Command: <pytest_or_validation_script>
+<p><strong>Standardized Prompt Blueprint</strong>:</p>
+<ul>
+<li>Prompts sent to OpenAgent must be explicit and structured, minimizing local model reasoning drift:<pre><code>SESSION: Sprint XX Story YY — &lt;Title&gt;
+
+Read the master plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
+
+[TARGET SPECIFICATION]
+- File: &lt;absolute_path_to_target_file&gt;
+- Task Details: &lt;explicit_code_or_logic_changes&gt;
+
+[VERIFICATION GATE]
+- Test Command: &lt;pytest_or_validation_script&gt;
 - Mandate: Do NOT run git commit inside this session. Report completion summary when done.
-<code>``
-5.  **DNA Grounding &amp; Semantic Search**:
-    *   Retrieve BKM and FEAT context via ChromaDB vector collections (</code>behavioral_dna<code>,</code>feature_dna<code>) on port 8001 rather than injecting raw markdown files.
-    *   Translate conversational user prompts into domain keywords (</code>"atomic write"<code>,</code>"safe file patch"<code>) before querying vector collections.
-6.  **Forensic Gatekeeper &amp; Git Ownership**:
-    *   OpenAgent workers edit files and run test suites locally, but are **prohibited from performing</code>git commit<code>**.
-    *   The Strategic Guardian inspects</code>git diff<code>, verifies</code>pytest<code>output, and executes git commits upon task certification.
-7.  **Playbook Reference**:
-    *   For full model allocation matrices, session persistence mechanics (</code>--session<code>,</code>--fork`), and historical troubleshooting ledgers, refer directly to the primary reference playbook: <a href="file:///home/jallred/Dev_Lab/Portfolio_Dev/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</p>
+</code></pre>
 </li>
+</ul>
+</li>
+<li>
+<p><strong>DNA Grounding &amp; Semantic Search</strong>:</p>
+<ul>
+<li>Retrieve BKM and FEAT context via ChromaDB vector collections (<code>behavioral_dna</code>, <code>feature_dna</code>) on port 8001 rather than injecting raw markdown files.</li>
+<li>Translate conversational user prompts into domain keywords (<code>"atomic write"</code>, <code>"safe file patch"</code>) before querying vector collections.</li>
+</ul>
+</li>
+<li><strong>Forensic Gatekeeper &amp; Git Ownership</strong>:<ul>
+<li>OpenAgent workers edit files and run test suites locally, but are <strong>prohibited from performing <code>git commit</code></strong>.</li>
+<li>The Strategic Guardian inspects <code>git diff</code>, verifies <code>pytest</code> output, and executes git commits upon task certification.</li>
+</ul>
+</li>
+<li><strong>Playbook Reference</strong>:<ul>
+<li>For full model allocation matrices, session persistence mechanics (<code>--session</code>, <code>--fork</code>), and historical troubleshooting ledgers, refer directly to the primary reference playbook: <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</li>
 </ul>
 </li>
 </ol>
