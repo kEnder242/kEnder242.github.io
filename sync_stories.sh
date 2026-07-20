@@ -74,6 +74,12 @@ from bs4 import BeautifulSoup
 path = "www_deploy/stories.html"
 soup = BeautifulSoup(open(path).read(), "html.parser")
 
+# 0. Assert required section IDs exist before DOM operations
+required_sections = ["security", "architecture", "validation", "leadership"]
+for sec_id in required_sections:
+    assert soup.find(id=sec_id), f"CRITICAL: Required section #{sec_id} missing from stories.html!"
+
+
 # 1. Replace stylesheet link with inline style block
 style_link = soup.find("link", rel="stylesheet")
 if style_link:
