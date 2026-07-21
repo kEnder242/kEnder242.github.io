@@ -50,75 +50,126 @@ sequenceDiagram
         Tunnel->>Origin: http://127.0.0.1:9001
         Origin-->>Admin: Render Private Field Manual & Live Intercom
     else No Valid Auth Cookie
-        CF-->>Admin: Challenge (One-Time PIN / OAuth Identity Provider)
+        CF-->>Admin: Challenge (One-Time PIN / Identity Provider)
     end
 ```
 
 ---
 
-## 🔒 The "Knock" Protocol (Origin Probing)
+## 📜 Repository Structure
 
-The **Knock Protocol** (Pre-Flight Probing) allows the static public Airlock to display real-time availability of the private home lab hardware without exposing credentials or triggering CORS errors.
+```
+www_deploy/
+├── index.html            # Public Airlock Homepage & Origin Status Probe
+├── protocols.html        # Sanitized Public Operational Protocols
+├── research.html         # Sanitized Public Research Ledger
+├── stories.html          # Sanitized Public Work Stories & Engineering History
+├── sync_protocols.sh     # Airlock Sanitizer & Snapshot Generator for protocols.html
+├── sync_research.sh      # Airlock Sanitizer & Snapshot Generator for research.html
+├── sync_stories.sh       # Airlock Sanitizer & Snapshot Generator for stories.html
+├── assets/               # High-fidelity static trailers & page snapshots
+│   ├── protocols_snapshot.png
+│   ├── research_snapshot.png
+│   └── trailers/
+└── CNAME                 # Custom domain configuration (www.jason-lab.dev)
+```
 
-### Implementation Logic (`index.html`)
+---
+
+## 🔒 The "Knock" Protocol (Cloudflare Zero Trust Access Setup)
+
+The **"Knock" Protocol** defines the Zero Trust access control model protecting the private home lab infrastructure (`notes.jason-lab.dev` and `acme.jason-lab.dev`). Like a secure door knock, visitors crossing the public Airlock boundary must present valid credentials before Cloudflare forwards traffic through the `cloudflared` tunnel.
+
+### 🛡️ Cloudflare Access Configuration (Step-by-Step)
+
+#### 1. Zero Trust Application Setup
+In **Cloudflare Zero Trust Dashboard > Access > Applications**:
+1. Add a **Self-Hosted Application**.
+2. Set **Application Name**: `Acme Lab Private Portfolio`.
+3. Set **Application Domain**: `notes.jason-lab.dev`.
+4. Set **Session Duration**: `24 Hours` (or custom pin duration).
+
+#### 2. Access Policy & Identity Rules
+Define split Access policies governing who is allowed past the gate:
+
+| Policy Name | Action | Rule Criteria | Purpose |
+| :--- | :--- | :--- | :--- |
+| **`Admin Vault`** | `Allow` | `Emails = admin@jason-lab.dev` | Full access to internal notes, vector search, and LLM Intercom. |
+| **`Guest Lobby`** | `Allow` | `Email Domain = panasonic.aero` / Specific Guests | Restrict access to designated recruiters or engineering partners. |
+| **`Status Bypass`** | `Bypass` | `Path = /data/status.json` | Unauthenticated origin probe for the Airlock status pill. |
+
+#### 3. Identity Provider (One-Time PIN / OTP)
+- Enable **One-Time PIN (OTP)** under **Access > Authentication > Identity Providers**.
+- When an unauthenticated user clicks a link to `notes.jason-lab.dev`, Cloudflare Access intercepts the request and emails a 6-digit OTP code.
+- Upon successful authentication, Cloudflare sets a secure JWT cookie (`CF_Authorization`) scoped to `.jason-lab.dev`.
+
+#### 4. Pre-Flight Status Probing (`index.html`)
+To display real-time lab availability on the public airlock without forcing visitors to log in immediately:
 
 ```javascript
 const TARGET_URL = 'https://notes.jason-lab.dev/data/status.json';
-const dot = document.getElementById('statusDot');
-const text = document.getElementById('statusText');
 
 async function checkStatus() {
     try {
-        // Opaque probe request: mode: 'no-cors' prevents CORS failure loops
+        // mode: 'no-cors' allows opaque status probing across domains
         const r = await fetch(TARGET_URL, { mode: 'no-cors' });
-        dot.className = 'dot online';
-        text.innerText = 'LAB UPLINK NOMINAL';
+        document.getElementById('statusDot').className = 'dot online';
+        document.getElementById('statusText').innerText = 'LAB UPLINK NOMINAL';
     } catch (error) {
-        dot.className = 'dot offline';
-        text.innerText = 'LAB UPLINK OFFLINE';
+        document.getElementById('statusDot').className = 'dot offline';
+        document.getElementById('statusText').innerText = 'LAB UPLINK OFFLINE';
     }
 }
-checkStatus();
-setInterval(checkStatus, 30000);
 ```
-
-### Cloudflare Access Configuration for the Probe:
-- **Bypass / Public Endpoint Policy:** Create a specific Cloudflare Access policy rule allowing unauthenticated `GET` requests to `/data/status.json` (or use `no-cors` pre-flight detection) while protecting `/` and all other HTML assets with One-Time PIN / Email domain policies.
 
 ---
 
 ## ⚙️ Compilation & Deployment Pipeline ("Static Synthesis")
 
-Public pages are automatically synthesized from internal Markdown notes, sanitized to strip private tags, and published via a single master command.
+Public pages are automatically synthesized from internal Markdown notes in the private repository, sanitized to strip private tags, and published to GitHub Pages via a single master script.
+
+> [!IMPORTANT]
+> **Master Builder Script:** [`Portfolio_Dev/field_notes/build_site.py`](https://github.com/kEnder242/Dev_Lab/blob/main/Portfolio_Dev/field_notes/build_site.py)
+>
+> The compilation engine resides inside the private repository (`Portfolio_Dev`) so it has full access to raw notes and build tools while outputting clean static assets directly to `www_deploy`.
+
+### Pipeline Data Flow
 
 ```
-┌───────────────────────────────┐
-│ HomeLabAI/docs/Protocols.md   │
-│ Portfolio_Dev/FeatureTracker  │
-└──────────────┬────────────────┘
-               │
-               ▼
-┌───────────────────────────────┐
-│ build_site.py (Master Builder)│ ──► Compiles Markdown -> HTML & injects ?v=md5
-└──────────────┬────────────────┘
-               │
-               ▼
-┌───────────────────────────────┐
-│ www_deploy/sync_*.sh (Guard) │ ──► 1. Strips <mission-control> & data-scope="private"
-└──────────────┬────────────────┘     2. Injects "← Return to Front Page"
-               │                      3. Captures trailers (shot-scraper)
-               ▼
-┌───────────────────────────────┐
-│ GitHub Pages (www_deploy)     │ ──► Atomic push to kEnder242.github.io
-└───────────────────────────────┘
+┌──────────────────────────────────────────┐
+│ Private Notes & Specifications           │
+│  - HomeLabAI/docs/Protocols.md           │
+│  - Portfolio_Dev/FeatureTracker.md       │
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Master Compiler Script                   │
+│  - Portfolio_Dev/field_notes/build_site.py│ ──► Compiles Markdown -> HTML & injects ?v=md5
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Airlock Guard Scripts                    │
+│  - www_deploy/sync_protocols.sh          │ ──► 1. Strips <mission-control> & data-scope="private"
+│  - www_deploy/sync_stories.sh            │     2. Injects "← Return to Front Page"
+│  - www_deploy/sync_research.sh           │     3. Captures static trailers (shot-scraper)
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Public Airlock Repository                │
+│  - www_deploy (kEnder242.github.io)      │ ──► Atomic git push to GitHub Pages
+└──────────────────────────────────────────┘
 ```
 
-### Build & Deploy Execution Command:
+### Build & Deploy Execution Commands
+
 ```bash
-# Run Master Builder (Compiles HTML, hashes assets, runs airlock sanitizers)
-python3 field_notes/build_site.py
+# 1. Run Master Builder (Compiles HTML, hashes assets, runs airlock sanitizers)
+python3 Portfolio_Dev/field_notes/build_site.py
 
-# Perform Git Commit & Push (handled by developer/orchestrator)
+# 2. Deploy sanitized release to GitHub Pages
 cd www_deploy && git add . && git commit -m "build(airlock): deploy static release"
 ```
 
@@ -156,23 +207,3 @@ Follow these steps to replicate this hybrid public/private Zero Trust architectu
    - **App 1: Public Airlock (`www`)**: No Access policies (Public).
    - **App 2: Private Notes (`notes`)**: Policy = `Allow` email domain or specific emails via One-Time PIN (OTP).
    - **App 3: Status Probe (`notes/data/status.json`)**: Policy = `Bypass` / `Allow Everyone` for non-sensitive status pings.
-
----
-
-## 📜 Repository Structure
-
-```
-www_deploy/
-├── index.html            # Public Airlock Homepage & Origin Status Probe
-├── protocols.html        # Sanitized Public Operational Protocols
-├── research.html         # Sanitized Public Research Ledger
-├── stories.html          # Sanitized Public Work Stories & Engineering History
-├── sync_protocols.sh     # Airlock Sanitizer & Snapshot Generator for protocols.html
-├── sync_research.sh      # Airlock Sanitizer & Snapshot Generator for research.html
-├── sync_stories.sh       # Airlock Sanitizer & Snapshot Generator for stories.html
-├── assets/               # High-fidelity static trailers & page snapshots
-│   ├── protocols_snapshot.png
-│   ├── research_snapshot.png
-│   └── trailers/
-└── CNAME                 # Custom domain configuration (www.jason-lab.dev)
-```
