@@ -1,5 +1,23 @@
 [
   {
+    "timestamp": "2026-07-21 15:58:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-21 15:58:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-21 15:56:21",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2214001): GLib-GIO-WARNING **: 15:56:21.468: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
     "timestamp": "2026-07-21 15:56:01",
     "severity": "INFO",
     "source": "systemd",
