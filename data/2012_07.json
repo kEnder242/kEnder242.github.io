@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2012-07-01",
+    "summary": "Exception occurred when submitting job to DAL due to parsing issue with SNL expressions",
+    "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
+    "sensitivity": "Public",
+    "tags": [
+      "parsing issue",
+      "SNL expressions"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2012-07-01",
+    "summary": "Debugging session on Haswell Server using HsxRegisterLib library in C#",
+    "evidence": "[RAW LOGS: mention of HsxRegisterLib library]",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "HsxRegisterLib"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2012-07-01",
+    "summary": "VISA signals programmed to control pattern generators as part of debugging session setup",
+    "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA signals",
+      "pattern generators"
+    ],
+    "rank": 4
+  }
+]

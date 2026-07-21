@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-01-01",
+    "summary": "Measuring internal PECI performance and network timing identified as a TODO or research link.",
+    "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "performance"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-01-15",
+    "summary": "BMC firmware updates with 250ms timeout implemented to improve existing PECI commands checkout.",
+    "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
+    "sensitivity": "Public",
+    "tags": [
+      "firmware",
+      "BMC"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-02-01",
+    "summary": "Potential issues identified with certain PECI commands that may not be implemented on BMC.",
+    "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4
+  }
+]

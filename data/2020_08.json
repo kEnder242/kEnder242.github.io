@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2020-08-27",
+    "summary": "Opcode 0x2E found to be a common prefix for various NM and PLP functions.",
+    "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
+    "sensitivity": "Public",
+    "tags": [
+      "Node Manager",
+      "Power Limiting Policy",
+      "Opcode 0x2E"
+    ],
+    "rank": 4
+  }
+]

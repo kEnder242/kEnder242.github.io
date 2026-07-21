@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2020-12-02",
+    "summary": "Formulas updated to calculate inventory metrics",
+    "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
+    "sensitivity": "Public",
+    "tags": [
+      "inventory metric calculation",
+      "formula update"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-12-02",
+    "summary": "Updated list of inventory requests available at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx in the 'DCG Inventory Alpha' list",
+    "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
+    "sensitivity": "Public",
+    "tags": [
+      "updated list",
+      "inventory requests"
+    ],
+    "rank": 4
+  }
+]

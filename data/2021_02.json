@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2021-02-01",
+    "summary": "PECI commands tested in Base category using peci_checkout",
+    "evidence": "rdpciconfig, rdendpointconfig, mmio (crashdump, protection, uncore_crashdump), 360_sweep",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "testing"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "Issue with PTU calibration identified during test plan execution",
+    "evidence": "PTU not running properly, incorrect power limits",
+    "sensitivity": "Public",
+    "tags": [
+      "issue",
+      "ptu",
+      "calibration"
+    ],
+    "rank": 4
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2019-2024-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
+    "evidence": "MIV Wiki https://wiki.ith.intel.com/display/PlatformTech/Manageability\nManageability Spec Links - https://intel.sharepoint.com/:o:/r/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "MIV Wiki",
+      "Manageability specifications"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2023-02-22",
+    "summary": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
+    "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "Intel MIV",
+      "D-Bus",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2023-02-25",
+    "summary": "Tools used to test manageability features: Simics, DTAF",
+    "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "DTAF",
+      "Simics"
+    ],
+    "rank": 4
+  }
+]

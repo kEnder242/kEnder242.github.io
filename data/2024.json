@@ -1,0 +1,250 @@
+[
+  {
+    "date": "2024-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-ea62"
+  },
+  {
+    "date": "2024-01-01",
+    "summary": "Primary TODO or research link mentioned: MSR write - find list of offsets from FR (Firmware Register) and IMH?",
+    "evidence": "RAW LOGS mention MSR write with uncertainty about IMH",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "rank": 4,
+    "id": "GEM-70a6"
+  },
+  {
+    "date": "2024-01-02",
+    "summary": "Commands implemented by the team to configure endpoint configurations for different interfaces (PCI Local, PCI, and MMIO)",
+    "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
+    "sensitivity": "Public",
+    "tags": [
+      "Configuration",
+      "Endpoints"
+    ],
+    "rank": 4,
+    "id": "GEM-3582"
+  },
+  {
+    "date": "2024-01-03",
+    "summary": "Tool used to interact with MCTP services on the BMC: peci_cmds",
+    "evidence": "RAW LOGS mention peci_cmds and RdEndpointConfigPCILocal",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-ce48"
+  },
+  {
+    "date": "2024-02-27",
+    "summary": "MCTP device discovery and interaction using various tools.",
+    "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "i2cdetect",
+      "busctl",
+      "i2cget"
+    ],
+    "rank": 4,
+    "id": "GEM-a8d4"
+  },
+  {
+    "date": "2024-05-16",
+    "summary": "Executed PECI commands using peci_cmds tool",
+    "evidence": "RdEndpointConfigPCILocal -i 8, RdEndpointConfigPCI -i 8, RdIAMSR 0 23 -i 8",
+    "sensitivity": "Public",
+    "tags": [
+      "RDEndpointConfig",
+      "peci_cmds"
+    ],
+    "id": "GEM-9be0",
+    "rank": 4
+  },
+  {
+    "date": "2024-05-16",
+    "summary": "Failed PECI command execution with error code cc:0x81",
+    "evidence": "RdEndpointConfigMMIO failed with error code cc:0x81",
+    "sensitivity": "Public",
+    "tags": [
+      "error",
+      "peci_cmds"
+    ],
+    "id": "GEM-6dd5",
+    "rank": 4
+  },
+  {
+    "date": "2024-05-22",
+    "summary": "Authentication error encountered when connecting to remote computer JF53SPV0009 via Remote Desktop Connection",
+    "evidence": "Error code 0xcaa20002",
+    "sensitivity": "Public",
+    "tags": [
+      "remote_desktop",
+      "authentication_error"
+    ],
+    "id": "GEM-b6aa",
+    "rank": 4
+  },
+  {
+    "date": "2024-06-13",
+    "summary": "Delivered and executed on Kayak+Montana transition plan",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "Kayak",
+      "Montana"
+    ],
+    "relations": [
+      {
+        "target": "Kayak+Montana transition plan",
+        "type": "milestone_of"
+      }
+    ],
+    "id": "GEM-fca5"
+  },
+  {
+    "date": "2024-06-13",
+    "summary": "Delivered 8 Kayak+Montana test cases definition deltas for DMR",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "DMR"
+    ],
+    "relations": [
+      {
+        "target": "Kayak+Montana transition plan",
+        "type": "milestone_of"
+      }
+    ],
+    "id": "GEM-7994"
+  },
+  {
+    "date": "2024-06-13",
+    "summary": "Supported BA team by enabling Montana for CWF and DMR",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "CWF",
+      "DMR"
+    ],
+    "relations": [
+      {
+        "target": "Montana",
+        "type": "utilizes"
+      }
+    ],
+    "id": "GEM-394f"
+  },
+  {
+    "date": "2024-06-13",
+    "summary": "Defined and executed 2 PPO 0.8 test cases for PECI/MCTP",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "MCTP"
+    ],
+    "relations": [
+      {
+        "target": "PPO 0.8",
+        "type": "utilizes"
+      }
+    ],
+    "id": "GEM-e96d"
+  },
+  {
+    "date": "2024-06-25",
+    "summary": "Connected to target system using IPMI and MTM on DMR-7 platform",
+    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "sensitivity": "Public",
+    "tags": [
+      "MTM",
+      "IPMI"
+    ],
+    "rank": 4,
+    "id": "GEM-721f"
+  },
+  {
+    "date": "2024-06-26",
+    "summary": "Visited Intel's TPMI specification documentation",
+    "evidence": "https://docs.intel.com/documents/pm_doc/src/server/arch_common/TPMI/TPMI.html and https://docs.intel.com/documents/arch_datacenter/DMR/Manageability%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "TPMI"
+    ],
+    "rank": 4,
+    "id": "GEM-c9bc"
+  },
+  {
+    "date": "2024-06-27",
+    "summary": "Ran Python script using access_tpmi_mmio function to access PECI registers",
+    "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "Python"
+    ],
+    "rank": 4,
+    "id": "GEM-75a5"
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Inventory management follow-up on SMNC75000143",
+    "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
+    "sensitivity": "Public",
+    "tags": [
+      "management",
+      "inventory"
+    ],
+    "rank": 4,
+    "id": "GEM-4e2e"
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Simulation targeting Oakstream platform with specific configuration",
+    "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
+    "sensitivity": "Public",
+    "tags": [
+      "Oakstream",
+      "simulation"
+    ],
+    "rank": 4,
+    "id": "GEM-e26d"
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Error code 0014.D.57 encountered during BIOS configuration",
+    "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
+    "sensitivity": "Public",
+    "tags": [
+      "BIOS",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-c240"
+  },
+  {
+    "date": "2024-12-25",
+    "summary": "Set up a testing server for Prometheus metrics and telemetry",
+    "evidence": "used python mock\n\nEvidence 2: added custom rapl metrics",
+    "tags": [
+      "prometheus",
+      "rapl"
+    ],
+    "rank": 4,
+    "id": "GEM-737a"
+  }
+]

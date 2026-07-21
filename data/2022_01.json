@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2022-01-01",
+    "summary": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/18020163210",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
+    "evidence": "/root/tester -y 0x010000C800800D -d 00",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "MCTP"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
+    "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "pmdebug"
+    ],
+    "rank": 4
+  }
+]

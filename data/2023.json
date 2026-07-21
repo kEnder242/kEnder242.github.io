@@ -1,0 +1,479 @@
+[
+  {
+    "date": "2023-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-b0ac"
+  },
+  {
+    "date": "2023-01-01",
+    "summary": "PSU MUX fix needed to allow NM S (NM power limit sweep) to function correctly",
+    "evidence": "TODO: PSU MUX fix",
+    "sensitivity": "Public",
+    "tags": [
+      "NM S",
+      "PSU",
+      "MUX"
+    ],
+    "id": "GEM-307b",
+    "rank": 4
+  },
+  {
+    "date": "2023-01-01",
+    "summary": "Era Registry reference found in ARTIFACT section",
+    "evidence": "see Era Registry for dates under ARTIFACT section",
+    "sensitivity": "Public",
+    "tags": [
+      "ARTIFACT",
+      "EraRegistry"
+    ],
+    "id": "GEM-fe99",
+    "rank": 4
+  },
+  {
+    "date": "2023-01-01",
+    "summary": "Platform Energy Counter (PCS) interaction with BMC and SUT using ipmitool and Redfish API",
+    "evidence": "ipmitool raw 0x30 0xB4 0x3 2, curl -k -u \"debuguser1:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.228.208/redfish/v1/Managers/bmc/MctpService",
+    "sensitivity": "Public",
+    "tags": [
+      "ipmitool",
+      "PCS",
+      "RedfishAPI"
+    ],
+    "id": "GEM-6f4c",
+    "rank": 4
+  },
+  {
+    "date": "2023-01-01",
+    "summary": "EIDs associated with bus owners on SRR4PIVR28B02H2.gar.corp.intel.com",
+    "evidence": "Ignore - BDF: 00:00.130  DATA: {'eid': '29', 'device_name': '00:00.0 System peripheral: Intel Corporation Device 09a2 (rev 20)\\n'}",
+    "sensitivity": "Public",
+    "tags": [
+      "bus owners",
+      "EIDs"
+    ],
+    "id": "GEM-7572",
+    "rank": 4
+  },
+  {
+    "date": "2023-01-02",
+    "summary": "Unexpected PECI return codes observed for various endpoints",
+    "evidence": "Unexpected PECI return codes: DSA, IAX, PF.CPM, VF.CPM, b.PCIEGen5_RP.PI5, d.PCIEGen5_RP.PI5",
+    "sensitivity": "Public",
+    "tags": [
+      "return codes",
+      "PECI"
+    ],
+    "id": "GEM-fcfa",
+    "rank": 4
+  },
+  {
+    "date": "2023-01-03",
+    "summary": "`busctl` commands used to send and receive MCTP payloads, as well as for PCI device scanning and configuration",
+    "evidence": "busctl commands: sending and receiving MCTP payloads, PCI device scanning and configuration",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "busctl",
+      "PCI"
+    ],
+    "id": "GEM-3473",
+    "rank": 4
+  },
+  {
+    "date": "2023-02-06",
+    "summary": "Error codes encountered during device discovery in Montana test suite: discovery error: timeout, missing 0x40 responses in PCIe transactions.",
+    "evidence": "[RAW LOGS] - Error codes mentioned in the text.",
+    "sensitivity": "Public",
+    "tags": [
+      "error_codes",
+      "device_discovery"
+    ],
+    "id": "GEM-dfb1",
+    "rank": 4
+  },
+  {
+    "date": "2023-02-06",
+    "summary": "Team used journalctl to troubleshoot issues with MCTP device discovery and reset functionality.",
+    "evidence": "[SOLUTIONS] - Team's troubleshooting efforts mentioned in the text.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "troubleshooting"
+    ],
+    "id": "GEM-d4eb",
+    "rank": 4
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
+    "evidence": "MIV Wiki https://wiki.ith.intel.com/display/PlatformTech/Manageability\nManageability Spec Links - https://intel.sharepoint.com/:o:/r/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "MIV Wiki",
+      "Manageability specifications"
+    ],
+    "rank": 4,
+    "id": "GEM-11e9"
+  },
+  {
+    "date": "2023-02-22",
+    "summary": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
+    "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "Intel MIV",
+      "D-Bus",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-d149"
+  },
+  {
+    "date": "2023-02-25",
+    "summary": "Tools used to test manageability features: Simics, DTAF",
+    "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "DTAF",
+      "Simics"
+    ],
+    "rank": 4,
+    "id": "GEM-a33d"
+  },
+  {
+    "date": "2023-02-27",
+    "summary": "New test cases implemented, old journal data fixed by scanning in reverse order, and failure action added to abort tests when duplicate EIDs are found.",
+    "evidence": "[SOLUTIONS] - Team's actions mentioned in the text.",
+    "sensitivity": "Public",
+    "tags": [
+      "journal_data",
+      "test_cases"
+    ],
+    "id": "GEM-8f3e",
+    "rank": 4
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Blackbox recorder telemetry software developed to debug RAPL failures",
+    "evidence": "Developed telemetry software 'Blackbox recorder' used to debug RAPL failures...",
+    "sensitivity": "Public",
+    "tags": [
+      "telemetry",
+      "RAPL"
+    ],
+    "rank": 4,
+    "id": "GEM-c26e"
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Delivered negative BDF and MSR scan with refactored code for future testing",
+    "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
+    "sensitivity": "Public",
+    "tags": [
+      "negative testing",
+      "refactored code"
+    ],
+    "rank": 4,
+    "id": "GEM-48b5"
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+    "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+    "sensitivity": "Public",
+    "tags": [
+      "Q1",
+      "exit criteria"
+    ],
+    "rank": 4,
+    "id": "GEM-66c7"
+  },
+  {
+    "date": "2023-06-27",
+    "summary": "Used ipmitool to set and get network management policy settings.",
+    "evidence": "IPMI commands used with ipmitool: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "network_management_policy",
+      "ipmitool"
+    ],
+    "id": "GEM-3804",
+    "rank": 4
+  },
+  {
+    "date": "2023-06-28",
+    "summary": "Retrieved enumerated bus information using pythonsv_loader.",
+    "evidence": "Code snippet dated 6/28/2023: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "pythonsv_loader",
+      "enumerated_bus"
+    ],
+    "id": "GEM-b0af",
+    "rank": 4
+  },
+  {
+    "date": "2023-07-21",
+    "summary": "Implementation of PECI stepping support for SRF/GNR",
+    "evidence": "RAW LOGS: `PECI stepping support for SRF/GNR ~18 test cases`",
+    "sensitivity": "Public",
+    "tags": [
+      "gnr",
+      "peci",
+      "srf"
+    ],
+    "id": "GEM-d596",
+    "rank": 4
+  },
+  {
+    "date": "2023-07-21",
+    "summary": "Adaptation of SPR MCTP reset test automation for GNR",
+    "evidence": "RAW LOGS: `Adapt SPR MCTP reset test automatoin for GNR`",
+    "sensitivity": "Public",
+    "tags": [
+      "spr",
+      "mctp"
+    ],
+    "id": "GEM-294a",
+    "rank": 4
+  },
+  {
+    "date": "2023-07-28",
+    "summary": "CSV file creation and reading using pandas library",
+    "evidence": "RAW LOGS: `file = open(\"../nativemodules/unit/first_df.csv\", 'w')` and `foo = pandas.read_csv('../nativemodules/unit/first_df.csv')`",
+    "sensitivity": "Public",
+    "tags": [
+      "pandas",
+      "csv"
+    ],
+    "id": "GEM-73e8",
+    "rank": 4
+  },
+  {
+    "date": "2023-09-25",
+    "summary": "Sending/receiving MCTP messages using curl and busctl",
+    "evidence": "['curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload -d \"{\\\\\"dstEid\\\\\": 8, \\\\\"payload\\\\\":[10, 4, 0, 129, 3, 0, 100], \\\\\"timeout\\\\\": 1000}\"']\n\nEvidence 2: ['curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload -d \"{\\\\\"dstEid\\\\\": 8, \\\\\"payload\\\\\":[10, 4, 0, 129, 3, 0, 100], \\\\\"timeout\\\\\": 1000}\"']",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "curl",
+      "busctl"
+    ],
+    "id": "GEM-a53c",
+    "rank": 4
+  },
+  {
+    "date": "2023-09-29",
+    "summary": "Compressing CSV files using 7z.exe",
+    "evidence": "C:\\Program Files\\7-Zip\\7z.exe a 705.zip *.csv",
+    "sensitivity": "Public",
+    "tags": [
+      "7z.exe",
+      "compression"
+    ],
+    "id": "GEM-a137",
+    "rank": 4
+  },
+  {
+    "date": "2023-09-30",
+    "summary": "MCTP/BMC remote debugging issues with EIDs 9, 19, 29, 28, 27, and 26",
+    "evidence": "['Failure#1 - Instance 0 - FAIL: Matching EIDs not found in - Redfish: [9, 19]  - Routing Table: [...]', 'Failure#2 - Instance 0 - Unknown network for 9 nan']\n\nEvidence 2: ['Failure#1 - Instance 0 - FAIL: Matching EIDs not found in - Redfish: [9, 19]  - Routing Table: [...]', 'Failure#2 - Instance 0 - Unknown network for 9 nan']",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "debugging",
+      "BMC"
+    ],
+    "id": "GEM-97c0",
+    "rank": 4
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
+    "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
+    "sensitivity": "Public",
+    "tags": [
+      "kayak framework",
+      "Python scripts",
+      "TDF architecture"
+    ],
+    "rank": 4,
+    "id": "GEM-4c34"
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
+    "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP failures",
+      "TDF architecture"
+    ],
+    "rank": 4,
+    "id": "GEM-5cd4"
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Running Python scripts using kayak framework to install and test Montana code updates",
+    "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
+    "sensitivity": "Public",
+    "tags": [
+      "Python scripts",
+      "kayak framework"
+    ],
+    "rank": 4,
+    "id": "GEM-a274"
+  },
+  {
+    "date": "2023-11-02",
+    "summary": "Sending PECI command over network using curl",
+    "evidence": "curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.112.121.142/redfish/v1/Sys",
+    "sensitivity": "Public",
+    "tags": [
+      "curl",
+      "PECI"
+    ],
+    "id": "GEM-05d0",
+    "rank": 4
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Execution of montana.py script with test file mctp_reset_cold.tdf and loop option",
+    "evidence": "py montana.py -f mctp_discovery.tdf\n\nEvidence 2: cmd /c py montana.py -s --loop 100 -f mctp_reset_cold.tdf",
+    "sensitivity": "Public",
+    "tags": [
+      "mctp_discovery.tdf",
+      "montana.py",
+      "mctp_reset_cold.tdf"
+    ],
+    "id": "GEM-653f",
+    "rank": 4
+  },
+  {
+    "date": "2023-12-01",
+    "summary": "System topology discovery using Redfish and MCTP protocols",
+    "evidence": "['discover [1] redifsh topology (Redfish Table)', 'discover [1] journal topology (Console Table)', 'redfish table [1] routing table (Routing Table)', 'routing table [2] MCTP topology DF (MCTP Topology DF)']\n\nEvidence 2: ['discover [1] redifsh topology (Redfish Table)', 'discover [1] journal topology (Console Table)', 'redfish table [1] routing table (Routing Table)', 'routing table [2] MCTP topology DF (MCTP Topology DF)']",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "Redfish",
+      "System Topology"
+    ],
+    "id": "GEM-10bc",
+    "rank": 4
+  },
+  {
+    "date": "2023-12-01",
+    "summary": "Hardware component enumeration using lspci command",
+    "evidence": "['lspci [1] Result']\n\nEvidence 2: ['lspci [1] Result']",
+    "sensitivity": "Public",
+    "tags": [
+      "LSPCI",
+      "Hardware Enumeration"
+    ],
+    "id": "GEM-1354",
+    "rank": 4
+  },
+  {
+    "date": "2023-12-01",
+    "summary": "Potential causality error: Redfish API calls for power management exploration",
+    "evidence": "['communicate [1] GetUUID', 'communicate [1] GetEID', 'communicate [1] PLDM']\n\nEvidence 2: ['communicate [1] GetUUID', 'communicate [1] GetEID', 'communicate [1] PLDM']",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "Power Management"
+    ],
+    "id": "GEM-7504",
+    "rank": 4
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "Driving execution, escalation, debug, and triage of MCTP cycle tests",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP"
+    ],
+    "relations": [
+      {
+        "target": "MCTP cycle tests",
+        "type": "milestone_of"
+      }
+    ],
+    "id": "GEM-bb7f"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "Kickstarted execution and enabling of MCTP tests on SRF-SP",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "SRF-SP"
+    ],
+    "relations": [
+      {
+        "target": "MCTP cycle tests",
+        "type": "milestone_of"
+      }
+    ],
+    "id": "GEM-a7bc"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "BA"
+    ],
+    "relations": [
+      {
+        "target": "MCTP cycle tests",
+        "type": "milestone_of"
+      }
+    ],
+    "id": "GEM-339e"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "Released Montana framework as a python package under XPIV devpi",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana"
+    ],
+    "relations": [
+      {
+        "target": "XPIV devpi",
+        "type": "utilizes"
+      }
+    ],
+    "id": "GEM-2a3d"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "Maintained quality in Montana code base by proactively engaging pull requests & code reviews",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana"
+    ],
+    "relations": [
+      {
+        "target": "Montana",
+        "type": "utilizes"
+      }
+    ],
+    "id": "GEM-1402"
+  }
+]

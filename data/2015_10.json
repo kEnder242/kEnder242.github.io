@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2015-01-01",
+    "summary": "Set up hosts & Targets for PVT validation testing using BXTP, JF5 lab, and DSDJF-H067 tools.",
+    "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
+    "sensitivity": "Public",
+    "tags": [
+      "validation",
+      "testing",
+      "PVT"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-01-15",
+    "summary": "Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+    "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+    "sensitivity": "Public",
+    "tags": [
+      "host interface",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-06-15",
+    "summary": "Installed BXT OEM toolstack to configure system trace.",
+    "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran C:\\Python27\\Scripts\\ipccli.exe with the command import bxt_utils; bxt_utils.th_break()",
+    "sensitivity": "Public",
+    "tags": [
+      "system trace",
+      "BXT OEM toolstack"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-06-15",
+    "summary": "Internal error occurred during session tde_boot due to missing metadata file.",
+    "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
+    "sensitivity": "Public",
+    "tags": [
+      "internal error",
+      "metadata file"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-08-25",
+    "summary": "BXTP target relocation note",
+    "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
+    "sensitivity": "Public",
+    "tags": [
+      "BXTP",
+      "target relocation"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-10-01",
+    "summary": "CAUSALITY ERROR: Tool XMon version 2.7.3 was released in 2015 but used in log entries with later dates (2016).",
+    "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
+    "sensitivity": "Public",
+    "tags": [
+      "tool",
+      "causality error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2016-03-16",
+    "summary": "Mailbox Timeout error occurred after 30 seconds in test run",
+    "evidence": "RAW LOGS: Mailbox Timeout error occurred on March 16, 2016",
+    "sensitivity": "Public",
+    "tags": [
+      "Mailbox Timeout",
+      "error"
+    ]
+  },
+  {
+    "date": "2016-03-16",
+    "summary": "GFXEMU job submission failed due to slot configuration issues",
+    "evidence": "RAW LOGS: GFXEMU job submission failed on March 16, 2016 (slot configuration issues)",
+    "sensitivity": "Public",
+    "tags": [
+      "GFXEMU",
+      "job submission",
+      "error"
+    ]
+  }
+]

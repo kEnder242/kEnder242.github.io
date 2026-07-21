@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2019-10-25",
+    "summary": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy",
+    "evidence": "Line 1315: 03:12.8,INFO,montana.verification.usermsg,set power limit policies on domain 0",
+    "sensitivity": "Public",
+    "tags": [
+      "power management",
+      "policy"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-10-25",
+    "summary": "Kernel panic due to out-of-memory (OOM) condition and subsequent reboot in 10 seconds",
+    "evidence": "Kernel panic - not syncing: Out of memory: system-wide panic_on_oom is enabled",
+    "sensitivity": "Public",
+    "tags": [
+      "kernel panic",
+      "OOM"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-10-30",
+    "summary": "Debugging verifysamepolicy.py script",
+    "evidence": "Jason: debug verifysamepolicy.py",
+    "sensitivity": "Public",
+    "tags": [
+      "debug",
+      "script"
+    ],
+    "rank": 4
+  }
+]

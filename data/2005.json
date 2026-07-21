@@ -1,0 +1,192 @@
+[
+  {
+    "date": "2005-01-01",
+    "summary": "Watchdog timer settings in Harwich BIOS EPS_0.90 need investigation.",
+    "evidence": "RAW LOGS: tracker ID 38099",
+    "sensitivity": "Public",
+    "tags": [
+      "Harwich BIOS",
+      "EPS_0.90",
+      "watchdog timer"
+    ],
+    "id": "GEM-f679"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "QLogic HSC EPS and IPMI return inconsistent results due to error code 0xCE.",
+    "evidence": "RAW LOGS: tracker ID 38099",
+    "sensitivity": "Public",
+    "tags": [
+      "QLogic HSC EPS",
+      "IPMI",
+      "error code 0xCE"
+    ],
+    "id": "GEM-ed4d"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Memory board hot-add failure is likely related to system's handling of memory boards during hot-add operations.",
+    "evidence": "RAW LOGS: tracker ID 41778",
+    "sensitivity": "Public",
+    "tags": [
+      "memory board",
+      "hot-add failure"
+    ],
+    "id": "GEM-f828"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "BMC23 module upgrade and Embedded File System (EFS) update to version 1.15.",
+    "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
+    "sensitivity": "Public",
+    "tags": [
+      "EFS",
+      "upgrade",
+      "BMC23"
+    ],
+    "rank": 4,
+    "id": "GEM-329f"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Addressing data integrity and system stability issues with BMC23 module upgrade and EFS update.",
+    "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
+    "sensitivity": "Public",
+    "tags": [
+      "data_integrity",
+      "issue",
+      "system_stability"
+    ],
+    "rank": 4,
+    "id": "GEM-7509"
+  },
+  {
+    "date": "2005-02-01",
+    "summary": "Evaluation run using EFS1.16 on HW BMC25 shows platform does not matter in terms of performance.",
+    "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
+    "sensitivity": "Public",
+    "tags": [
+      "evaluation",
+      "performance"
+    ],
+    "rank": 4,
+    "id": "GEM-f3eb"
+  },
+  {
+    "date": "2005-02-01",
+    "summary": "Second evaluation run conducted using EFS1.16 due to observation that platform does not affect performance.",
+    "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
+    "sensitivity": "Public",
+    "tags": [
+      "evaluation",
+      "performance"
+    ],
+    "rank": 4,
+    "id": "GEM-3d9c"
+  },
+  {
+    "date": "2005-02-01",
+    "summary": "Initial evaluation run used EFS1.15, leading to decision to conduct second evaluation with EFS1.16.",
+    "evidence": "HW BMC25/EFS1.15   EFS1.16",
+    "sensitivity": "Public",
+    "tags": [
+      "tool_version",
+      "evaluation"
+    ],
+    "rank": 4,
+    "id": "GEM-ac44"
+  },
+  {
+    "date": "2005-03-01",
+    "summary": "Development of FTF library to automate HTTP_MTP tests",
+    "evidence": "Primary TODO or research link mentioned in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "HTTP_MTP",
+      "FTF"
+    ],
+    "id": "GEM-01bb",
+    "rank": 4
+  },
+  {
+    "date": "2005-03-01",
+    "summary": "BMC26 and EFS1.17 issues with SEL pages causing cascading effect on trackers",
+    "evidence": "RAW LOGS mention BMC26 and EFS1.17 issues with SEL pages",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC26",
+      "EFS1.17",
+      "SEL"
+    ],
+    "id": "GEM-9f82",
+    "rank": 4
+  },
+  {
+    "date": "2005-03-01",
+    "summary": "Prefix added to tracker titles for simplification",
+    "evidence": "RAW LOGS mention prefix 'HTTP:' added to tracker titles",
+    "sensitivity": "Public",
+    "tags": [
+      "tracker titles",
+      "prefix"
+    ],
+    "id": "GEM-9830",
+    "rank": 4
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Test run for FTF202",
+    "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
+    "sensitivity": "Public",
+    "tags": [
+      "FTF202",
+      "test_run"
+    ],
+    "rank": 4,
+    "id": "GEM-663b"
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Tool release",
+    "evidence": "RAW LOGS: Mention of FTF_203 and FTF_201, suggesting tool release around 2006-2007.",
+    "sensitivity": "Public",
+    "tags": [
+      "tool_release"
+    ],
+    "rank": 4,
+    "id": "GEM-df21"
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Update to SOL presentation and API documentation",
+    "evidence": "RAW LOGS: TODO item for updating SOL presentation and API documentation with new information on encryption and authentication capabilities.",
+    "sensitivity": "Public",
+    "tags": [
+      "SOL_update"
+    ],
+    "rank": 4,
+    "id": "GEM-5347"
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Fix to variable not found error in testResults_MAP(I2C)",
+    "evidence": "RAW LOGS: Issue resolved by fixing `tolower` function call in `_MAP.tcl` file.",
+    "sensitivity": "Public",
+    "tags": [
+      "bug_fix"
+    ],
+    "rank": 4,
+    "id": "GEM-9222"
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Update to SDK API with new information on escapes and licenses",
+    "evidence": "RAW LOGS: Update to SDK API mentioned.",
+    "sensitivity": "Public",
+    "tags": [
+      "SDK_update"
+    ],
+    "rank": 4,
+    "id": "GEM-abb3"
+  }
+]

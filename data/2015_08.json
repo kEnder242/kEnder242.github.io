@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2015-08-17",
+    "summary": "PVT BXTOEM testing on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400.exe",
+    "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "PVT BXTOEM",
+      "testing",
+      "SV2K8122"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-08-28",
+    "summary": "NPK SDK installation and configuration",
+    "evidence": "The latest nightly build was fetched from https://git-amr-1.devtools.intel.com/gerrit/ecdl_dbg-northpeak-sdk refs/changes/49/63649/2. The build script was run using C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -e and then C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -r -b",
+    "sensitivity": "Public",
+    "tags": [
+      "installation",
+      "NPK SDK",
+      "configuration"
+    ],
+    "rank": 4
+  }
+]

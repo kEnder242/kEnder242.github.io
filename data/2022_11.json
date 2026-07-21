@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2022-11-17",
+    "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+    "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
+    "sensitivity": "Public",
+    "tags": [
+      "unexpected return codes",
+      "MSR register access issues",
+      "PECI tests"
+    ],
+    "rank": 4
+  }
+]

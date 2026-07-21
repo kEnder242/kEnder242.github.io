@@ -1,0 +1,80 @@
+[
+  {
+    "date": "2018-11-01",
+    "summary": "No primary TODO or research link mentioned in the logs.",
+    "evidence": "There is no specific TODO or research link mentioned in the logs.",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "PCIe correctable error injection commands.",
+    "evidence": "echo 0x0 > /sys/kernel/debug/apei/einj/param1, echo 64 > /sys/kernel/debug/apei/einj/error_type, and echo 1 > /sys/kernel/debug/apei/einj/error_inject",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "Configuration options used for error injection in the biosKnobs variable.",
+    "evidence": "WheaErrorInjSupportEn=1, WheaPcieErrInjEn=1, and IioErrorEn=1",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-13",
+    "summary": "biosKnobs variable settings similar to those on 11/15/2018.",
+    "evidence": "The log entry on 11/13/2018 shows the biosKnobs variable being set with similar settings as on 11/15/2018",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "EINJ (Error Injection) used to inject various types of errors into the system for testing purposes.",
+    "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Injection",
+      "Testing"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "[CAUSALITY ERROR]: Tool used (SvBios) was likely released after 2018, as it uses Python 3.x syntax.",
+    "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
+    "sensitivity": "Public",
+    "tags": [
+      "SvBios",
+      "CAUSALITY ERROR"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "biosKnobs variable settings enable specific error injection features.",
+    "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs",
+      "Error Injection"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "System configuration knobs verified to ensure proper error injection feature configuration.",
+    "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Injection",
+      "System Configuration"
+    ],
+    "rank": 4
+  }
+]

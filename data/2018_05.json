@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2018-05-22",
+    "summary": "Install HAMR (no specific version mentioned)",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "HAMR"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-05-23",
+    "summary": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+    "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
+    "sensitivity": "Public",
+    "tags": [
+      "UFM",
+      "shmemcc",
+      "HAMR"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Setup Infiniband port-to-port post-driver using quickstart",
+    "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
+    "sensitivity": "Public",
+    "tags": [
+      "Infiniband",
+      "quickstart"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "AEP",
+      "AppDirect Mode",
+      "PMEM"
+    ],
+    "rank": 4
+  }
+]

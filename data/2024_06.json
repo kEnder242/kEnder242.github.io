@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2024-06-25",
+    "summary": "Connected to target system using IPMI and MTM on DMR-7 platform",
+    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "sensitivity": "Public",
+    "tags": [
+      "MTM",
+      "IPMI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-06-26",
+    "summary": "Visited Intel's TPMI specification documentation",
+    "evidence": "https://docs.intel.com/documents/pm_doc/src/server/arch_common/TPMI/TPMI.html and https://docs.intel.com/documents/arch_datacenter/DMR/Manageability%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "TPMI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-06-27",
+    "summary": "Ran Python script using access_tpmi_mmio function to access PECI registers",
+    "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "Python"
+    ],
+    "rank": 4
+  }
+]

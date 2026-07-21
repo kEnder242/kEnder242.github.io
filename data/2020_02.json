@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-02-01",
+    "summary": "Using futurize tool as a workaround for resolving issues",
+    "evidence": "RAW LOGS: Command 'futurize -w --stage1' used as a workaround",
+    "sensitivity": "Public",
+    "tags": [
+      "futurize"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+    "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "ipmi_host"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+    "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "msr",
+      "crypto",
+      "pyghmi"
+    ],
+    "rank": 4
+  }
+]

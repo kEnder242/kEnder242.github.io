@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2024-08-01",
+    "summary": "Inventory management follow-up on SMNC75000143",
+    "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
+    "sensitivity": "Public",
+    "tags": [
+      "management",
+      "inventory"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Simulation targeting Oakstream platform with specific configuration",
+    "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
+    "sensitivity": "Public",
+    "tags": [
+      "Oakstream",
+      "simulation"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Error code 0014.D.57 encountered during BIOS configuration",
+    "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
+    "sensitivity": "Public",
+    "tags": [
+      "BIOS",
+      "error"
+    ],
+    "rank": 4
+  }
+]

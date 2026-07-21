@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2024-01-01",
+    "summary": "Primary TODO or research link mentioned: MSR write - find list of offsets from FR (Firmware Register) and IMH?",
+    "evidence": "RAW LOGS mention MSR write with uncertainty about IMH",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-01-02",
+    "summary": "Commands implemented by the team to configure endpoint configurations for different interfaces (PCI Local, PCI, and MMIO)",
+    "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
+    "sensitivity": "Public",
+    "tags": [
+      "Configuration",
+      "Endpoints"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2024-01-03",
+    "summary": "Tool used to interact with MCTP services on the BMC: peci_cmds",
+    "evidence": "RAW LOGS mention peci_cmds and RdEndpointConfigPCILocal",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "rank": 4
+  }
+]

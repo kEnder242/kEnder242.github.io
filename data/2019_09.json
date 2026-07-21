@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2019-09-30",
+    "summary": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID.",
+    "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
+    "sensitivity": "Public",
+    "tags": [
+      "power limiting",
+      "IPMI",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-09-30",
+    "summary": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC.",
+    "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
+    "sensitivity": "Public",
+    "tags": [
+      "unknown return code",
+      "PECI",
+      "ipmitool"
+    ],
+    "rank": 4
+  }
+]

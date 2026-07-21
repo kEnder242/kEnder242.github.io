@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2019-01-07",
+    "summary": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout",
+    "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
+    "sensitivity": "Public",
+    "tags": [
+      "pipeline",
+      "jenkins",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-01-07",
+    "summary": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin",
+    "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
+    "sensitivity": "Public",
+    "tags": [
+      "aws-ecr-credential-helper",
+      "docker",
+      "registry"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-01-07",
+    "summary": "Misconfigured docker-compose.yml file causing Docker build process issues",
+    "evidence": "Update of Docker build process to utilize the --build-arg flag.",
+    "sensitivity": "Public",
+    "tags": [
+      "docker",
+      "compose",
+      "build"
+    ],
+    "rank": 4
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2019-06-01",
+    "summary": "Investigation into IPMI commands related to Node Manager",
+    "evidence": "https://hsdes.intel.com/resource/1408873616",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "Node Manager"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-06-01",
+    "summary": "Initial error code received when using `ipmitool` with specific options and parameters",
+    "evidence": "0x80: Unknown",
+    "sensitivity": "Public",
+    "tags": [
+      "error code",
+      "ipmitool"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-06-01",
+    "summary": "Change made to resolve IPMI communication issue between ME and BMC on ICX-HCC",
+    "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
+    "sensitivity": "Public",
+    "tags": [
+      "ME",
+      "ICX-HCC",
+      "IPMI",
+      "BMC"
+    ],
+    "rank": 4
+  }
+]

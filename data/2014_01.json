@@ -1,0 +1,46 @@
+[
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
+    "evidence": "Corrected CT item selection in the VISA panel.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error_code"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
+    "evidence": "Corrected script generated from CEC register programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error_code"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Merged Main Visa with Skylake PO",
+    "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "Skylake"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-01-24",
+    "summary": "Investigating logging for VISA on multiple dates (1/24/2014)",
+    "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "logging"
+    ],
+    "rank": 4
+  }
+]

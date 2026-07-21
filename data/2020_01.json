@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-01-27",
+    "summary": "TODO: Configure maximum non-turbo limit ratio and efficiency ratio for CLX (Cannon Lake-X)",
+    "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX",
+      "MIV software"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-01-27",
+    "summary": "IPMI command failed with error code 'ab' due to wrong command codes and errors reading PCI device space",
+    "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-01-28",
+    "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API",
+    "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX",
+      "MIV software"
+    ],
+    "rank": 4
+  }
+]

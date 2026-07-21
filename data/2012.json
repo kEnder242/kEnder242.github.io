@@ -1,0 +1,63 @@
+[
+  {
+    "date": "2012-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-91b6"
+  },
+  {
+    "date": "2012-07-01",
+    "summary": "Exception occurred when submitting job to DAL due to parsing issue with SNL expressions",
+    "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
+    "sensitivity": "Public",
+    "tags": [
+      "parsing issue",
+      "SNL expressions"
+    ],
+    "rank": 4,
+    "id": "GEM-80ce"
+  },
+  {
+    "date": "2012-07-01",
+    "summary": "Debugging session on Haswell Server using HsxRegisterLib library in C#",
+    "evidence": "[RAW LOGS: mention of HsxRegisterLib library]",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "HsxRegisterLib"
+    ],
+    "rank": 4,
+    "id": "GEM-2255"
+  },
+  {
+    "date": "2012-07-01",
+    "summary": "VISA signals programmed to control pattern generators as part of debugging session setup",
+    "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA signals",
+      "pattern generators"
+    ],
+    "rank": 4,
+    "id": "GEM-76e0"
+  },
+  {
+    "date": "2012-09-27",
+    "summary": "Configured registers in MEM32 space as part of mux programming for SA_IOT_LANE0 and SA_IOT_LANE1.",
+    "evidence": "itp.uncores[0].hooks.Lanes.SA_IOT_LANE0.Clock = 0x4 #DClock\nitp.uncores[0].state.regbus.MEM32.MCDECS_CR_VISA_CTL_MCDECS_0_0_0_MCHBAR_MCMAIN = 0x00000003\nitp.uncores[0].state.regbus.MEM32.MCDFXS_CR_VISA_CTL_MCDFXS_0_0_0_MCHBAR_MCMAIN = 0x00000001",
+    "sensitivity": "Public",
+    "tags": [
+      "mux programming",
+      "SA_IOT_LANE1",
+      "SA_IOT_LANE0"
+    ],
+    "id": "GEM-1fb4",
+    "rank": 4
+  }
+]

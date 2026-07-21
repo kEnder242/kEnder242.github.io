@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-05-15",
+    "summary": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+    "evidence": "[RAW LOGS] - pip install fabric",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV content readiness",
+      "DTAF"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+    "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
+    "sensitivity": "Public",
+    "tags": [
+      "priority execution requests",
+      "PCIE Whitley"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-05-21",
+    "summary": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+    "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
+    "sensitivity": "Public",
+    "tags": [
+      "Crasdump/EINJ knobs",
+      "DTAF"
+    ],
+    "rank": 4
+  }
+]

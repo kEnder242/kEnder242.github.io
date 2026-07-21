@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2015-03-01",
+    "summary": "visa_patgen_manual_stop function failed due to unknown reason.",
+    "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
+    "sensitivity": "Public",
+    "tags": [
+      "visa_patgen_manual_stop",
+      "failure"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-03-01",
+    "summary": "Causality error: conflicting dates between log and tool release.",
+    "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
+    "sensitivity": "Public",
+    "tags": [
+      "causality",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-03-27",
+    "summary": "IPC connection failure prevented target config sequence from starting.",
+    "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
+    "sensitivity": "Public",
+    "tags": [
+      "ipc",
+      "connection",
+      "failure"
+    ],
+    "rank": 4
+  }
+]

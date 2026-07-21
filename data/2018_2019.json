@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2018-2019-01",
+    "summary": "Primary TODO or research link mentioned in the Technical Abstract",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
+    "sensitivity": "Public",
+    "tags": [
+      "APEI/EINJ",
+      "error injection"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+    "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
+    "sensitivity": "Public",
+    "tags": [
+      "IPC",
+      "CLX_LBG_XDPA"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
+    "sensitivity": "Public",
+    "tags": [
+      "APEI/EINJ",
+      "OS log error messages"
+    ],
+    "rank": 4
+  }
+]

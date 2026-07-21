@@ -1,0 +1,164 @@
+[
+  {
+    "date": "2013-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-4a54"
+  },
+  {
+    "date": "2013-01-01",
+    "summary": "Investigate missing micro-code patch causing assembly loading error.",
+    "evidence": "RAW LOGS: 'a micro-code patch may be missing' and 'an assembly loading error occurred while attempting to load Intel.DAL.Builders.Fuse version 1.0.0.2, and a patch was not loaded prior to execution.'",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel.DAL",
+      "Fuse",
+      "micro-code patch"
+    ],
+    "id": "GEM-61a4",
+    "rank": 4
+  },
+  {
+    "date": "2013-01-02",
+    "summary": "Analyze stack trace to identify specific exception causing DAL MasterFrame instantiation failure.",
+    "evidence": "RAW LOGS: 'Intel.DAL.Services.Job.AssertErrorOccuredInJobException' occurred, but underlying exception is not provided.",
+    "sensitivity": "Public",
+    "tags": [
+      "DAL MasterFrame",
+      "Intel.DAL.Services.Job"
+    ],
+    "id": "GEM-cedf",
+    "rank": 4
+  },
+  {
+    "date": "2013-01-03",
+    "summary": "Understand relationship between failed access to processor resources and execution of writeTraceTriggerHook method.",
+    "evidence": "RAW LOGS: 'writeTraceTriggerHook' method in Visa.Orange.Common.VcuHookTraceTriggerWriter class affected by failure to access processor resources.",
+    "sensitivity": "Public",
+    "tags": [
+      "VcuHookTraceTriggerWriter",
+      "Visa.Orange.Common"
+    ],
+    "id": "GEM-385c",
+    "rank": 4
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Register definitions updated for BDW B0, SKL A0, and SKL ULT A0, including fixes for register resource mismatches in DfxProjects.",
+    "evidence": "RAW LOGS: ... (text mentions that register definitions were updated)",
+    "sensitivity": "Public",
+    "tags": [
+      "BDW B0",
+      "SKL A0",
+      "SKL ULT A0",
+      "DfxProjects"
+    ],
+    "id": "GEM-07c6",
+    "rank": 4
+  },
+  {
+    "date": "2013-08-19",
+    "summary": "Visa plugin encountered unrecognized architecture/stepping combination BDW_U_UC B0, requiring manual selection.",
+    "evidence": "RAW LOGS: ... (text states that the Visa plugin encountered an unrecognized architecture/stepping combination)",
+    "sensitivity": "Public",
+    "tags": [
+      "Visa plugin",
+      "BDW_U_UC B0"
+    ],
+    "id": "GEM-95b8",
+    "rank": 4
+  },
+  {
+    "date": "2013-08-19",
+    "summary": "HSD sighting 4723781: issue regarding unselecting signals in the final mux, which cannot be reselected.",
+    "evidence": "RAW LOGS: ... (text mentions HSD sighting 4723781)",
+    "sensitivity": "Public",
+    "tags": [
+      "HSD",
+      "4723781"
+    ],
+    "id": "GEM-0e56",
+    "rank": 4
+  },
+  {
+    "date": "2013-11-22",
+    "summary": "Implemented VISA support for SKL PO and GTPO decoration",
+    "evidence": "RAW LOGS: VISA Support for SKL PO - 2-5pts, GTPO Decoration - online converter - 3pts",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "SKL PO",
+      "GTPO"
+    ],
+    "id": "GEM-4a65",
+    "rank": 4
+  },
+  {
+    "date": "2013-11-22",
+    "summary": "Accessed GTPO register definitions using XML files `visa_custom_rs.xml` and `visa_sig_map.xml`",
+    "evidence": "RAW LOGS: C:\\PDT-P4\\jallred_JALLRED-MOBL2_1836\\PDT\\source\\Plugins\\Visa\\Support\\SkyLake_ULT_A0\\visa_custom_rs.xml, C:\\ProgramData\\Intel\\VisaPanel\\SkyLake_ULT_A0\\visa_sig_map.xml",
+    "sensitivity": "Public",
+    "tags": [
+      "GTPO",
+      "XML"
+    ],
+    "id": "GEM-aeef",
+    "rank": 4
+  },
+  {
+    "date": "2013-11-22",
+    "summary": "Assigned signals to output groups, configured pattern generators, and wrote to decoration hooks in online converter functionality",
+    "evidence": "RAW LOGS: Assigning Signal noa_freq_max_limit[0] to Output Group NOA_PINS_LANE0, write to decoration hooks",
+    "sensitivity": "Public",
+    "tags": [
+      "Signal Assignment",
+      "Online Converter"
+    ],
+    "id": "GEM-ce82",
+    "rank": 4
+  },
+  {
+    "date": "2013-12-02",
+    "summary": "Update visa_legacy_channel.xml to include PDM_Mux between ncnoaupmuxs and noactls",
+    "evidence": "The current visa_legacy_channel.xml relates /sa/msgutils/ncnoaupmuxs/channel1_lane0 like this... There should be a PDM_Mux in between here...",
+    "sensitivity": "Public",
+    "tags": [
+      "PDM_Mux",
+      "visa_legacy_channel.xml"
+    ],
+    "id": "GEM-c2e7",
+    "rank": 4
+  },
+  {
+    "date": "2013-12-05",
+    "summary": "Modify SKL GT architecture registers to enable bypass controls and mux control",
+    "evidence": "SA_TAP_SA_NOAPINSMUXCFG.MUXCTRL_CHANNEL0 = 0x1, IMPH_TAP_IMPH_NOAUPMUXCFG.MUXCTRL_CHANNEL0 = 0x1, CBO_TAP_CBO_NOASLICEMUXCFG.MUXCTRL_CHANNEL0 = 0x1",
+    "sensitivity": "Public",
+    "tags": [
+      "bypass controls",
+      "SKL GT architecture",
+      "mux control"
+    ],
+    "id": "GEM-0b00",
+    "rank": 4
+  },
+  {
+    "date": "2013-12-05",
+    "summary": "Disable PCU DFX IO disconnect control and enable PDM outbound enable in UCRB32 register modification",
+    "evidence": "PDU_CR_PCU_DFX_IO_DISCONNECT_CTRL = 0x00002000, MSGUTILS_CR_PDM_OUTBOUND_ENABLE = 0x00000004",
+    "sensitivity": "Public",
+    "tags": [
+      "PDM outbound enable",
+      "PCU DFX IO disconnect control",
+      "UCRB32"
+    ],
+    "id": "GEM-4600",
+    "rank": 4
+  }
+]

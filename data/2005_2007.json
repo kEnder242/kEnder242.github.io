@@ -1,0 +1,53 @@
+[
+  {
+    "date": "2005-2007-01",
+    "summary": "Test run for FTF202",
+    "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
+    "sensitivity": "Public",
+    "tags": [
+      "FTF202",
+      "test_run"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Tool release",
+    "evidence": "RAW LOGS: Mention of FTF_203 and FTF_201, suggesting tool release around 2006-2007.",
+    "sensitivity": "Public",
+    "tags": [
+      "tool_release"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Update to SOL presentation and API documentation",
+    "evidence": "RAW LOGS: TODO item for updating SOL presentation and API documentation with new information on encryption and authentication capabilities.",
+    "sensitivity": "Public",
+    "tags": [
+      "SOL_update"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Fix to variable not found error in testResults_MAP(I2C)",
+    "evidence": "RAW LOGS: Issue resolved by fixing `tolower` function call in `_MAP.tcl` file.",
+    "sensitivity": "Public",
+    "tags": [
+      "bug_fix"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-2007-01",
+    "summary": "Update to SDK API with new information on escapes and licenses",
+    "evidence": "RAW LOGS: Update to SDK API mentioned.",
+    "sensitivity": "Public",
+    "tags": [
+      "SDK_update"
+    ],
+    "rank": 4
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped man-db.timer - Daily man-db regeneration."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped logrotate.timer - Daily rotation of log files."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped fwupd-refresh.timer - Refresh fwupd metadata regularly."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped fstrim.timer - Discard unused filesystem blocks once a week."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped dpkg-db-backup.timer - Daily dpkg database backup timer."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped apt-daily.timer - Daily apt download activities."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped apt-daily-upgrade.timer - Daily apt upgrade and clean activities."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped apport-autoreport.timer - Process error reports when automatic reporting is enabled (timer based)."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped anacron.timer - Trigger anacron every hour."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target timers.target - Timer Units."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target sound.target - Sound Card."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target getty.target - Login Prompts."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target multi-user.target - Multi-User System."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target graphical.target - Graphical Interface."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target getty-pre.target - Preparation for Logins."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target bluetooth.target - Bluetooth Support."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped xdg-document-portal.service - flatpak document portal service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.Shell.target - GNOME Shell."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session-initialized.target - GNOME Session is initialized."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped org.freedesktop.IBus.session.GNOME.service - IBus Daemon for GNOME."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped appmenu-gtk-module.service - Appmenu GTK Module Environment variables."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-udisks2-volume-monitor.service - Virtual filesystem service - disk device monitor."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.XSettings.target - GNOME XSettings target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Wacom.target - GNOME Wacom tablet support target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Sound.target - GNOME sound sample caching target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Smartcard.target - GNOME smartcard target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Sharing.target - GNOME file sharing target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.ScreensaverProxy.target - GNOME FreeDesktop screensaver target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Rfkill.target - GNOME RFKill support target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.PrintNotifications.target - GNOME printer notifications target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Power.target - GNOME power management target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.MediaKeys.target - GNOME keyboard shortcuts target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Keyboard.target - GNOME keyboard configuration target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Housekeeping.target - GNOME maintenance of expirable data target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Datetime.target - GNOME date & time target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.Color.target - GNOME color management target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target org.gnome.SettingsDaemon.A11ySettings.target - GNOME accessibility target."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session@ubuntu.target - GNOME Session (session: ubuntu)."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session-x11.target - GNOME X11 Session."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session.target - GNOME Session."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped update-notifier-release.path - Path trigger for new release of Ubuntu notifications."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target graphical-session.target - Current graphical user session."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped org.gnome.SettingsDaemon.MediaKeys.service - GNOME keyboard shortcuts service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped xdg-desktop-portal-gnome.service - Portal service (GNOME implementation)."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped xdg-permission-store.service - sandboxed app permission store."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped xdg-desktop-portal.service - Portal service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-metadata.service - Virtual filesystem metadata service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-gphoto2-volume-monitor.service - Virtual filesystem service - digital camera monitor."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-afc-volume-monitor.service - Virtual filesystem service - Apple File Conduit monitor."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-goa-volume-monitor.service - Virtual filesystem service - GNOME Online Accounts monitor."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-mtp-volume-monitor.service - Virtual filesystem service - Media Transfer Protocol monitor."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session-x11-services.target - GNOME session X11 services."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gvfs-daemon.service - Virtual filesystem service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped org.gnome.SettingsDaemon.Wacom.service - GNOME Wacom tablet support service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped org.gnome.SettingsDaemon.XSettings.service - GNOME XSettings service."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gnome-session-manager@ubuntu.service - GNOME Session Manager (session: ubuntu)."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:27",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped target gnome-session-x11@ubuntu.target - GNOME X11 Session (session: ubuntu)."
+  },
+  {
+    "timestamp": "2026-07-02 22:40:13",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-02 22:38:17",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started field-notes-nibble.service - Field Notes Slow Burn Nibbler."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:21",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: stopping update checks"
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started packagekit.service - PackageKit Daemon."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "health(warnable=warming-up): error: Tailscale is starting. Please wait."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: starting update checks"
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started tailscaled.service - Tailscale node agent."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "TPM: error opening: stat /dev/tpmrm0: no such file or directory"
+  },
+  {
+    "timestamp": "2026-07-02 22:37:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped tailscaled.service - Tailscale node agent."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:19",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "TPM: error opening: stat /dev/tpmrm0: no such file or directory"
+  },
+  {
+    "timestamp": "2026-07-02 22:37:19",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-02 22:37:19",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "ipnext: work queue shutdown failed: execqueue shut down"
+  },
+  {
+    "timestamp": "2026-07-02 22:37:17",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pk-debconf-helper.service - debconf communication service."
+  },
+  {
+    "timestamp": "2026-07-02 22:35:13",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2010677): GLib-GIO-WARNING **: 22:35:12.880: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-02 22:34:54",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-02 22:31:31",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-02 22:29:53",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2009688): GLib-GIO-WARNING **: 22:29:53.488: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-02 22:29:34",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-02 22:28:12",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-02 22:28:04",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-02 22:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-02 22:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-02 22:24:33",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2007838): GLib-GIO-WARNING **: 22:24:33.466: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-02 22:24:14",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-02 22:22:59",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started field-notes-nibble.service - Field Notes Slow Burn Nibbler."
+  },
+  {
+    "timestamp": "2026-07-02 22:22:17",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-02 22:21:44",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "Received error: PollNetMap: read tcp 192.168.1.240:35586->192.200.0.101:443: use of closed network connection"
+  },
+  {
+    "timestamp": "2026-07-02 22:21:42",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-02 22:21:42",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "Received error: PollNetMap: read tcp 192.168.1.238:42382->192.200.0.101:443: use of closed network connection"
+  },
+  {
+    "timestamp": "2026-07-02 22:19:14",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2006820): GLib-GIO-WARNING **: 22:19:13.898: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-02 22:18:55",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:57",
+    "severity": "INFO",
+    "source": "update-notifier.desktop",
+    "message": "error: no snap found for \"gnome-3-38-2004\""
+  },
+  {
+    "timestamp": "2026-07-02 22:13:55",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2005606): GLib-GIO-WARNING **: 22:13:55.095: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-02 22:13:47",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started packagekit.service - PackageKit Daemon."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:43",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker.service - Docker Application Container Engine."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:39",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-df5b62efd893618d7809256d91e5f4b42b2b43c82508e0cf3834727771b4e256.scope - libcontainer container df5b62efd893618d7809256d91e5f4b42b2b43c82508e0cf3834727771b4e256."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-f7ff62b751fce07a2ebdb04e0df966eddcc6aa16d4ced71e0c9751e15bc44e9c.scope - libcontainer container f7ff62b751fce07a2ebdb04e0df966eddcc6aa16d4ced71e0c9751e15bc44e9c."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-ed6b0a8eee2ab6d3aba690a31a205c0732ff5de7b43aa205d9b5c4c5321b2db2.scope - libcontainer container ed6b0a8eee2ab6d3aba690a31a205c0732ff5de7b43aa205d9b5c4c5321b2db2."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-94105e10593da88b734fb0c861882d38d6a74836b7a0465118d31bce25cd87da.scope - libcontainer container 94105e10593da88b734fb0c861882d38d6a74836b7a0465118d31bce25cd87da."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-8b24e358c0eba7620947b01d5190ce3459331afff686a8276f8b504433db6651.scope - libcontainer container 8b24e358c0eba7620947b01d5190ce3459331afff686a8276f8b504433db6651."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-85de13a8128e4476e056ab0a68afa7a9c9922b81f5980783272c6042c9bd1909.scope - libcontainer container 85de13a8128e4476e056ab0a68afa7a9c9922b81f5980783272c6042c9bd1909."
+  },
+  {
+    "timestamp": "2026-07-02 22:13:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started docker-822e4a516fb4990076fe244d224810e943277b22739d3b9c3beecd713ec7b358.scope - libcontainer container 822e4a516fb4990076fe244d224810e943277b22739d3b9c3beecd713ec7b358."
+  }
+]

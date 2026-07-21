@@ -1,0 +1,496 @@
+[
+  {
+    "date": "2020-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-3fed"
+  },
+  {
+    "date": "2020-01-01",
+    "summary": "Measuring internal PECI performance and network timing identified as a TODO or research link.",
+    "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "performance"
+    ],
+    "rank": 4,
+    "id": "GEM-dc8d"
+  },
+  {
+    "date": "2020-01-15",
+    "summary": "BMC firmware updates with 250ms timeout implemented to improve existing PECI commands checkout.",
+    "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
+    "sensitivity": "Public",
+    "tags": [
+      "firmware",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-c85e"
+  },
+  {
+    "date": "2020-01-27",
+    "summary": "TODO: Configure maximum non-turbo limit ratio and efficiency ratio for CLX (Cannon Lake-X)",
+    "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX",
+      "MIV software"
+    ],
+    "rank": 4,
+    "id": "GEM-5f87"
+  },
+  {
+    "date": "2020-01-27",
+    "summary": "IPMI command failed with error code 'ab' due to wrong command codes and errors reading PCI device space",
+    "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-53e9"
+  },
+  {
+    "date": "2020-01-28",
+    "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API",
+    "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX",
+      "MIV software"
+    ],
+    "rank": 4,
+    "id": "GEM-c8ba"
+  },
+  {
+    "date": "2020-02-01",
+    "summary": "Using futurize tool as a workaround for resolving issues",
+    "evidence": "RAW LOGS: Command 'futurize -w --stage1' used as a workaround",
+    "sensitivity": "Public",
+    "tags": [
+      "futurize"
+    ],
+    "rank": 4,
+    "id": "GEM-e04e"
+  },
+  {
+    "date": "2020-02-01",
+    "summary": "Potential issues identified with certain PECI commands that may not be implemented on BMC.",
+    "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-5b1f"
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+    "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "ipmi_host"
+    ],
+    "rank": 4,
+    "id": "GEM-de4b"
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+    "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "msr",
+      "crypto",
+      "pyghmi"
+    ],
+    "rank": 4,
+    "id": "GEM-599b"
+  },
+  {
+    "date": "2020-03-23",
+    "summary": "MIV Reset and Recovery issues with Force ME recovery and Get Device ID return codes (CE, 0xc3, and 0xff)",
+    "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "Reset",
+      "MIV",
+      "Recovery"
+    ],
+    "rank": 4,
+    "id": "GEM-959d"
+  },
+  {
+    "date": "2020-03-23",
+    "summary": "PECI commands and BMC PECI master functionality discussions",
+    "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-4808"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "MIV test cases fail strangely after do min_nm_dca test on Dell system",
+    "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "Test"
+    ],
+    "rank": 4,
+    "id": "GEM-c46c"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "ME RAS Force ME recovery issues",
+    "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "Recovery"
+    ],
+    "rank": 4,
+    "id": "GEM-c77d"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "BMC PECI master functionality discussion",
+    "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-70a7"
+  },
+  {
+    "date": "2020-04-22",
+    "summary": "Higher-order PECI test cases were planned",
+    "evidence": "Higher-order PECI test cases were planned",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-ef27"
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "DTAF Core installation guide needs update from Raveendra",
+    "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-ba14"
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+    "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-f17d"
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+    "evidence": "[RAW LOGS] - pip install fabric",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV content readiness",
+      "DTAF"
+    ],
+    "rank": 4,
+    "id": "GEM-0043"
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+    "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
+    "sensitivity": "Public",
+    "tags": [
+      "priority execution requests",
+      "PCIE Whitley"
+    ],
+    "rank": 4,
+    "id": "GEM-cb8e"
+  },
+  {
+    "date": "2020-05-21",
+    "summary": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+    "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
+    "sensitivity": "Public",
+    "tags": [
+      "Crasdump/EINJ knobs",
+      "DTAF"
+    ],
+    "rank": 4,
+    "id": "GEM-059d"
+  },
+  {
+    "date": "2020-06-05",
+    "summary": "Review of NM-4.0 External Interface Spec",
+    "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
+    "sensitivity": "Public",
+    "tags": [
+      "external interface spec",
+      "nm-4.0"
+    ],
+    "rank": 4,
+    "id": "GEM-d939"
+  },
+  {
+    "date": "2020-06-08",
+    "summary": "Update test setup to install at least 4 DIMMs for Domain 2 (memory) power usage above 1W",
+    "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
+    "sensitivity": "Public",
+    "tags": [
+      "test setup",
+      "domain 2"
+    ],
+    "rank": 4,
+    "id": "GEM-756d"
+  },
+  {
+    "date": "2020-06-11",
+    "summary": "Delete (NmPolicy 0x2E 0xC1) Returns 0x80 after disabling existing policy",
+    "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
+    "sensitivity": "Public",
+    "tags": [
+      "nm-policy",
+      "delete failure"
+    ],
+    "rank": 4,
+    "id": "GEM-780e"
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+    "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-d328"
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "validation"
+    ],
+    "rank": 4,
+    "id": "GEM-72d8"
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Commit 1b3f8aefd3f1b01a36094f81259294c0795b712f and merge request 97 addressed a failed Close Session command during MIV recovery.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "recovery"
+    ],
+    "rank": 4,
+    "id": "GEM-7360"
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Code review issue forwarded to Dave/Curtis for investigation",
+    "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
+    "sensitivity": "Public",
+    "tags": [
+      "code review",
+      "issue investigation"
+    ],
+    "rank": 4,
+    "id": "GEM-05d3"
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+    "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "firmware update"
+    ],
+    "rank": 4,
+    "id": "GEM-ee96"
+  },
+  {
+    "date": "2020-07-28",
+    "summary": "IVL crash dump issue addressed",
+    "evidence": "IVL crash dump issue addressed on July 28, 2020",
+    "sensitivity": "Public",
+    "tags": [
+      "crash dump",
+      "IVL"
+    ],
+    "rank": 4,
+    "id": "GEM-cd82"
+  },
+  {
+    "date": "2020-08-27",
+    "summary": "Opcode 0x2E found to be a common prefix for various NM and PLP functions.",
+    "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
+    "sensitivity": "Public",
+    "tags": [
+      "Node Manager",
+      "Power Limiting Policy",
+      "Opcode 0x2E"
+    ],
+    "rank": 4,
+    "id": "GEM-93e8"
+  },
+  {
+    "date": "2020-09-10",
+    "summary": "Manageability Ignition-Redfish Content Plan (pptx) referenced but not directly linked to in abstract.",
+    "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
+    "sensitivity": "Public",
+    "tags": [
+      "pptx",
+      "Manageability Ignition-Redfish Content Plan"
+    ],
+    "rank": 4,
+    "id": "GEM-83e9"
+  },
+  {
+    "date": "2020-09-10",
+    "summary": "PECI commands tested and found to be supported or unsupported.",
+    "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
+    "sensitivity": "Public",
+    "tags": [
+      "commands",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-31ac"
+  },
+  {
+    "date": "2020-09-16",
+    "summary": "Architectural decisions regarding PECI command execution, specifically with regards to the PECI master being set to PCH or BMC for ignition.",
+    "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
+    "sensitivity": "Public",
+    "tags": [
+      "master",
+      "PCH",
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-fbf4"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Primary TODO or research link: Intel Redfish Power Cap OEM Schema",
+    "evidence": "https://docs.intel.com/documents/sms_archspecs/openbmc/nm_supporting_docs/api/Redfish%20Power%20Cap%20OEM%20Schema.html",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "rank": 4,
+    "id": "GEM-ec32"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Unable to determine the tool used based on the provided evidence.",
+    "evidence": null,
+    "sensitivity": "Public",
+    "tags": [
+      "Unknown Tool"
+    ],
+    "rank": 4,
+    "id": "GEM-fba5"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Unable to determine the error codes encountered based on the provided evidence.",
+    "evidence": null,
+    "sensitivity": "Public",
+    "tags": [
+      "Error Codes Unknown"
+    ],
+    "rank": 4,
+    "id": "GEM-a8e1"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Tool or API used to troubleshoot the issue: Era Registry (associated with Cray Schema)",
+    "evidence": null,
+    "sensitivity": "Public",
+    "tags": [
+      "Troubleshooting",
+      "Era Registry"
+    ],
+    "rank": 4,
+    "id": "GEM-943f"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Architectural decisions regarding power management and capacity planning were likely made, but details are lacking",
+    "evidence": null,
+    "sensitivity": "Public",
+    "tags": [
+      "Power Management",
+      "Capacity Planning"
+    ],
+    "rank": 4,
+    "id": "GEM-f12c"
+  },
+  {
+    "date": "2020-12-02",
+    "summary": "Formulas updated to calculate inventory metrics",
+    "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
+    "sensitivity": "Public",
+    "tags": [
+      "inventory metric calculation",
+      "formula update"
+    ],
+    "rank": 4,
+    "id": "GEM-d9c0"
+  },
+  {
+    "date": "2020-12-02",
+    "summary": "Updated list of inventory requests available at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx in the 'DCG Inventory Alpha' list",
+    "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
+    "sensitivity": "Public",
+    "tags": [
+      "updated list",
+      "inventory requests"
+    ],
+    "rank": 4,
+    "id": "GEM-0527"
+  }
+]

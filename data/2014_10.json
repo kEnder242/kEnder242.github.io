@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2014-10-01",
+    "summary": "TODO: Set up BXT FPGA system with NPK SDK using known working NPK_Raw_Tap_only_bxt_image",
+    "evidence": "TODO entry mentioning setup of BXT FPGA system",
+    "sensitivity": "Public",
+    "tags": [
+      "NPK SDK",
+      "BXT FPGA"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-10-31",
+    "summary": "Resolved NullPointerException by changing connection type to LTB",
+    "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
+    "sensitivity": "Public",
+    "tags": [
+      "LTB",
+      "NullPointerException"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-10-31",
+    "summary": "Manually installed IpcApiAccess, ISDBaseWin64, and BXTSupportPkWin64 due to their absence in NPK SDK",
+    "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
+    "sensitivity": "Public",
+    "tags": [
+      "IpcApiAccess",
+      "ISDBaseWin64",
+      "BXTSupportPkWin64"
+    ],
+    "rank": 4
+  }
+]

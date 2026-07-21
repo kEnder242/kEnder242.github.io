@@ -1,0 +1,312 @@
+[
+  {
+    "date": "2014-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-2a70"
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
+    "evidence": "Corrected CT item selection in the VISA panel.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error_code"
+    ],
+    "rank": 4,
+    "id": "GEM-def6"
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
+    "evidence": "Corrected script generated from CEC register programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error_code"
+    ],
+    "rank": 4,
+    "id": "GEM-40bb"
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Merged Main Visa with Skylake PO",
+    "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "Skylake"
+    ],
+    "rank": 4,
+    "id": "GEM-29bc"
+  },
+  {
+    "date": "2014-01-24",
+    "summary": "Investigating logging for VISA on multiple dates (1/24/2014)",
+    "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "logging"
+    ],
+    "rank": 4,
+    "id": "GEM-2f1c"
+  },
+  {
+    "date": "2014-02-01",
+    "summary": "SKL ODLAT enable feature and PEG8 NOA Compression feature relationship unknown",
+    "evidence": "RAW LOGS: no direct evidence linking SKL ODLAT enable feature to PEG8 NOA Compression feature",
+    "sensitivity": "Public",
+    "tags": [
+      "SKL ODLAT",
+      "PEG8 NOA"
+    ],
+    "id": "GEM-341d",
+    "rank": 4
+  },
+  {
+    "date": "2014-02-25",
+    "summary": "Investigate PythonStateDef ReadModifyWrite TODO",
+    "evidence": "RAW LOGS: investigate PythonStateDef ReadModifyWrite",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "PythonStateDef"
+    ],
+    "id": "GEM-3434",
+    "rank": 4
+  },
+  {
+    "date": "2014-02-26",
+    "summary": "HswConverters.cs performs conversion of PythonStateDef ReadModifyWrite operations",
+    "evidence": "RAW LOGS: HswConverters.cs sets registers itp.uncores[0].state.regbus.MEM32.PCIE_CR_DEBUGTLLL1_0_0_0_DMIBAR.CMPRNOALNDAT and itp.uncores[0].state.regbus.CFG32.PCIE_CR_DEBUGTLLL1_0_1_0_PCI.CMPRNOALNDAT to 0x1",
+    "sensitivity": "Public",
+    "tags": [
+      "HswConverters.cs",
+      "PythonStateDef"
+    ],
+    "id": "GEM-cbb8",
+    "rank": 4
+  },
+  {
+    "date": "2014-03-19",
+    "summary": "Compression disabled by default in visa_custom_rs.xml to resolve PEG16.CMPRNOALNDAT issue.",
+    "evidence": "compression was disabled by default in visa_custom_rs.xml",
+    "sensitivity": "Public",
+    "tags": [
+      "PEG16",
+      "CMPRNOALNDAT"
+    ],
+    "id": "GEM-dccf",
+    "rank": 4
+  },
+  {
+    "date": "2014-03-20",
+    "summary": "SKL registers.txt sent to Hernan, potential ongoing work or discussion on Skylake registers.",
+    "evidence": "SKL registers.txt was sent to Hernan",
+    "sensitivity": "Public",
+    "tags": [
+      "registers",
+      "Skylake"
+    ],
+    "id": "GEM-6fc3",
+    "rank": 4
+  },
+  {
+    "date": "2014-03-28",
+    "summary": "/uncore/etrog/edc directory structure updated to reflect EDRAM IOT implementation changes.",
+    "evidence": "/uncore/etrog/edc directory structure was updated",
+    "sensitivity": "Public",
+    "tags": [
+      "EDRAM",
+      "IOT"
+    ],
+    "id": "GEM-3b9c",
+    "rank": 4
+  },
+  {
+    "date": "2014-04-24",
+    "summary": "Exception related to UNSL0_SQIDI_GDTUNIT_0x9840 not found, possibly investigating or debugging ITP Bug [5027277].",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "exception",
+      "ITP Bug"
+    ],
+    "rank": 4,
+    "id": "GEM-6c1c"
+  },
+  {
+    "date": "2014-04-28",
+    "summary": "ITP Bug [5027277] reported for a test case involving BDW (Block Data Width) 0x9840 on C1.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "ITP Bug",
+      "BDW"
+    ],
+    "rank": 4,
+    "id": "GEM-3754"
+  },
+  {
+    "date": "2014-04-30",
+    "summary": "Accessing EDRAMBAR registers at addresses 0x6e_0_0_mem_regs, 0x6f_0_0_mem_regs, and 0x71_0_0_mem_regs for debugging or testing purposes.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "EDRAMBAR",
+      "debugging"
+    ],
+    "rank": 4,
+    "id": "GEM-d19e"
+  },
+  {
+    "date": "2014-04-30",
+    "summary": "Encountering error codes EFALWAYS_CR_VISA_CTL_EFALWAYS (0x3210), EFALWAYS_CR_VISA_SLIDE_EFALWAYS (0x3214), and EFALWAYS_CR_VISA_XBAR_EFALWAYS (0x3218) related to VISA control and configuration.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error codes"
+    ],
+    "rank": 4,
+    "id": "GEM-e827"
+  },
+  {
+    "date": "2014-05-15",
+    "summary": "Role of pci module in accessing and modifying PCI configuration space",
+    "evidence": "pci.ShowPciCfg(0x02, 0x16, 0)\n+-----------------------------------------------------+\n|Bus: 02, device: 16, Function: 00                    |\n|##| x0|x1|x2|x3|x4|x5|x6|x7 | x8|x9|xA|xB|xC|xD|xE|xF|\n|-----------------------------------------------------|\n|... (register values) ...\n+-----------------------------------------------------+\n()\n\npci.WritePciCfg(4,6,1)\n()",
+    "sensitivity": "Public",
+    "tags": [
+      "pci module",
+      "PCI configuration space"
+    ],
+    "rank": 4,
+    "id": "GEM-f9ff"
+  },
+  {
+    "date": "2014-05-29",
+    "summary": "Initialization of Northpeak API using broxton_a0_red.xml configuration file",
+    "evidence": "NorthpeakApi* papi= new NorthpeakApi();\n// initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"/broxton_a0_red.xml\"));",
+    "sensitivity": "Public",
+    "tags": [
+      "configuration file",
+      "Northpeak API"
+    ],
+    "rank": 4,
+    "id": "GEM-6edb"
+  },
+  {
+    "date": "2014-05-29",
+    "summary": "Utilization of IpcApiTargetAccess class to access target devices via OpenIPC API",
+    "evidence": "IpcApiTargetAccess myacess(\"IpcApi_x64\",\"OpenIPC\");\nstring foo = myacess.description();",
+    "sensitivity": "Public",
+    "tags": [
+      "IpcApiTargetAccess",
+      "OpenIPC API"
+    ],
+    "rank": 4,
+    "id": "GEM-810a"
+  },
+  {
+    "date": "2014-07-29",
+    "summary": "TODO: Add PO support for BXT (Broadwell eXtended Thermal)",
+    "evidence": "Future: TODO: add PO support for BXT",
+    "sensitivity": "Public",
+    "tags": [
+      "BXT",
+      "TODO"
+    ],
+    "id": "GEM-a516",
+    "rank": 4
+  },
+  {
+    "date": "2014-07-29",
+    "summary": "Integrated GTEST with TeamCity for continuous integration and testing",
+    "evidence": "Added cfg_apitest64.exe to TeamCity artifacts (bin\\cfg_apitest64.exe) and ran existing API level tests in TeamCity without hardware. Plugged in GTEST XML output into TeamCity using --gtest_output=xml:file_path.xml flag.",
+    "sensitivity": "Public",
+    "tags": [
+      "TeamCity",
+      "GTEST"
+    ],
+    "id": "GEM-f098",
+    "rank": 4
+  },
+  {
+    "date": "2014-07-29",
+    "summary": "Replaced CATCH with GTEST due to significant investment in NPK tools",
+    "evidence": "CATCH was replaced with GTEST due to significant investment in NPK tools.",
+    "sensitivity": "Public",
+    "tags": [
+      "CATCH",
+      "GTEST"
+    ],
+    "id": "GEM-3c8c",
+    "rank": 4
+  },
+  {
+    "date": "2014-10-01",
+    "summary": "TODO: Set up BXT FPGA system with NPK SDK using known working NPK_Raw_Tap_only_bxt_image",
+    "evidence": "TODO entry mentioning setup of BXT FPGA system",
+    "sensitivity": "Public",
+    "tags": [
+      "NPK SDK",
+      "BXT FPGA"
+    ],
+    "rank": 4,
+    "id": "GEM-be04"
+  },
+  {
+    "date": "2014-10-31",
+    "summary": "Resolved NullPointerException by changing connection type to LTB",
+    "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
+    "sensitivity": "Public",
+    "tags": [
+      "LTB",
+      "NullPointerException"
+    ],
+    "rank": 4,
+    "id": "GEM-7e3e"
+  },
+  {
+    "date": "2014-10-31",
+    "summary": "Manually installed IpcApiAccess, ISDBaseWin64, and BXTSupportPkWin64 due to their absence in NPK SDK",
+    "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
+    "sensitivity": "Public",
+    "tags": [
+      "IpcApiAccess",
+      "ISDBaseWin64",
+      "BXTSupportPkWin64"
+    ],
+    "rank": 4,
+    "id": "GEM-c4a0"
+  },
+  {
+    "date": "2014-11-26",
+    "summary": "npk_cfg64.exe used to configure and stop tracing from FPGA",
+    "evidence": "RAW LOGS: npk_cfg64.exe being used to configure and stop tracing on November 26, 2014.",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-6074"
+  },
+  {
+    "date": "2014-12-01",
+    "summary": "Out of Memory error (code 0x80000009) prevented replication of M0 Python CLI GT programming on Jason's system.",
+    "evidence": "M0 Out of Memory (Not able to replicate on Jason's system)",
+    "sensitivity": "Public",
+    "tags": [
+      "memory_error",
+      "m0_python_cli"
+    ],
+    "id": "GEM-15dd",
+    "rank": 4
+  }
+]

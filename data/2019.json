@@ -1,0 +1,328 @@
+[
+  {
+    "date": "2019-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-4489"
+  },
+  {
+    "date": "2019-01-01",
+    "summary": "Montana tool experiencing issues establishing IPMI v2/RMCP+ sessions",
+    "evidence": "['Unable to send RAW command', 'Error: Unable to establish IPMI v2 / RMCP+ session', 'Close Session command failed', 'Get Device ID command failed', 'Set Session Privilege Level to ADMINISTRATOR failed']\n\nEvidence 2: ['Unable to send RAW command', 'Error: Unable to establish IPMI v2 / RMCP+ session', 'Close Session command failed', 'Get Device ID command failed', 'Set Session Privilege Level to ADMINISTRATOR failed']",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana tool",
+      "IPMI v2/RMCP+",
+      "ipmitool"
+    ],
+    "id": "GEM-b406",
+    "rank": 4
+  },
+  {
+    "date": "2019-01-01",
+    "summary": "Maximum number of retries for Get Device ID command not specified",
+    "evidence": "['Multiple attempts to send Get Device ID command']\n\nEvidence 2: ['Multiple attempts to send Get Device ID command']",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana tool",
+      "Get Device ID command",
+      "ipmitool"
+    ],
+    "id": "GEM-c160",
+    "rank": 4
+  },
+  {
+    "date": "2019-01-01",
+    "summary": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces.",
+    "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Code 0xAB",
+      "Error Code 0xAC",
+      "PCI",
+      "IPMI"
+    ],
+    "rank": 4,
+    "id": "GEM-acc9"
+  },
+  {
+    "date": "2019-01-07",
+    "summary": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout",
+    "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
+    "sensitivity": "Public",
+    "tags": [
+      "pipeline",
+      "jenkins",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-4502"
+  },
+  {
+    "date": "2019-01-07",
+    "summary": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin",
+    "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
+    "sensitivity": "Public",
+    "tags": [
+      "aws-ecr-credential-helper",
+      "docker",
+      "registry"
+    ],
+    "rank": 4,
+    "id": "GEM-dd5c"
+  },
+  {
+    "date": "2019-01-07",
+    "summary": "Misconfigured docker-compose.yml file causing Docker build process issues",
+    "evidence": "Update of Docker build process to utilize the --build-arg flag.",
+    "sensitivity": "Public",
+    "tags": [
+      "docker",
+      "compose",
+      "build"
+    ],
+    "rank": 4,
+    "id": "GEM-79a0"
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
+    "evidence": "git clone ssh://git-amr-7.devtools.intel.com/ptv-riv.git",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-77d6"
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Configured local repository with user name and email address.",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-7ce6"
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Retrieved commit-msg hook from remote server via SCP.",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-7b18"
+  },
+  {
+    "date": "2019-06-01",
+    "summary": "Investigation into IPMI commands related to Node Manager",
+    "evidence": "https://hsdes.intel.com/resource/1408873616",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "Node Manager"
+    ],
+    "rank": 4,
+    "id": "GEM-bcd0"
+  },
+  {
+    "date": "2019-06-01",
+    "summary": "Initial error code received when using `ipmitool` with specific options and parameters",
+    "evidence": "0x80: Unknown",
+    "sensitivity": "Public",
+    "tags": [
+      "error code",
+      "ipmitool"
+    ],
+    "rank": 4,
+    "id": "GEM-def6"
+  },
+  {
+    "date": "2019-06-01",
+    "summary": "Change made to resolve IPMI communication issue between ME and BMC on ICX-HCC",
+    "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
+    "sensitivity": "Public",
+    "tags": [
+      "ME",
+      "ICX-HCC",
+      "IPMI",
+      "BMC"
+    ],
+    "rank": 4,
+    "id": "GEM-3f14"
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Power limit accuracy issue across domains reported",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
+    "sensitivity": "Public",
+    "tags": [
+      "domains",
+      "power_limit_accuracy"
+    ],
+    "rank": 4,
+    "id": "GEM-fd78"
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "montana_testing",
+      "bist_errors"
+    ],
+    "rank": 4,
+    "id": "GEM-35de"
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Tool 'montana.nativemodules.pmcapsweep' used to investigate power limit accuracy errors",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "pmcapsweep",
+      "power_limit_accuracy"
+    ],
+    "rank": 4,
+    "id": "GEM-ff25"
+  },
+  {
+    "date": "2019-09-30",
+    "summary": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID.",
+    "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
+    "sensitivity": "Public",
+    "tags": [
+      "power limiting",
+      "IPMI",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-db95"
+  },
+  {
+    "date": "2019-09-30",
+    "summary": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC.",
+    "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
+    "sensitivity": "Public",
+    "tags": [
+      "unknown return code",
+      "PECI",
+      "ipmitool"
+    ],
+    "rank": 4,
+    "id": "GEM-a05c"
+  },
+  {
+    "date": "2019-10-22",
+    "summary": "Policy #231 sets expected average power limit to 312W.",
+    "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
+    "sensitivity": "Public",
+    "tags": [
+      "avgpowercmp",
+      "policy #231"
+    ],
+    "rank": 4,
+    "id": "GEM-5600"
+  },
+  {
+    "date": "2019-10-22",
+    "summary": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range.",
+    "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
+    "sensitivity": "Public",
+    "tags": [
+      "avgpowercmp",
+      "discrepancy detection"
+    ],
+    "rank": 4,
+    "id": "GEM-59a9"
+  },
+  {
+    "date": "2019-10-22",
+    "summary": "avgpowercmp module reports 'Fail!!' when actual value exceeds \u00b15% range.",
+    "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
+    "sensitivity": "Public",
+    "tags": [
+      "avgpowercmp",
+      "error reporting"
+    ],
+    "rank": 4,
+    "id": "GEM-a1ed"
+  },
+  {
+    "date": "2019-10-25",
+    "summary": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy",
+    "evidence": "Line 1315: 03:12.8,INFO,montana.verification.usermsg,set power limit policies on domain 0",
+    "sensitivity": "Public",
+    "tags": [
+      "power management",
+      "policy"
+    ],
+    "rank": 4,
+    "id": "GEM-5206"
+  },
+  {
+    "date": "2019-10-25",
+    "summary": "Kernel panic due to out-of-memory (OOM) condition and subsequent reboot in 10 seconds",
+    "evidence": "Kernel panic - not syncing: Out of memory: system-wide panic_on_oom is enabled",
+    "sensitivity": "Public",
+    "tags": [
+      "kernel panic",
+      "OOM"
+    ],
+    "rank": 4,
+    "id": "GEM-810e"
+  },
+  {
+    "date": "2019-10-30",
+    "summary": "Debugging verifysamepolicy.py script",
+    "evidence": "Jason: debug verifysamepolicy.py",
+    "sensitivity": "Public",
+    "tags": [
+      "debug",
+      "script"
+    ],
+    "rank": 4,
+    "id": "GEM-1ad3"
+  },
+  {
+    "date": "2019-11-19",
+    "summary": "Repeated attempts to send IPMI commands using GetDeviceID and ForceMeRecovery fail with an 'Unable to establish IPMI v2 / RMCP+ session' error.",
+    "evidence": "Error sending request.Get Device ID command failedNo valid response receivedUnable to send RAW command (channel=0x1 netfn=0x2e lun=0x0 cmd=0xdf)Close Session command failed",
+    "sensitivity": "Public",
+    "tags": [
+      "RMCP+",
+      "IPMI"
+    ],
+    "id": "GEM-4889",
+    "rank": 4
+  },
+  {
+    "date": "2019-12-01",
+    "summary": "Causality error: Log entries conflict with the release year of the tool (ipmitool).",
+    "evidence": "Tool name: ipmitoolRelease year: Later than 2019 (not specified)Log entries: 2019",
+    "sensitivity": "Public",
+    "tags": [
+      "ipmitool",
+      "Causality error"
+    ],
+    "id": "GEM-e7d9",
+    "rank": 4
+  },
+  {
+    "date": "2019-12-10",
+    "summary": "Investigate IPMI configuration and ensure ME is properly configured to accept IPMI commands.",
+    "evidence": "#Force PSU to report SMBAlert, e.g. by changing OverTemperature Threshold          0x2C 0x2E 0x00 0xD9 0x57 0x01 0x00 0x88 0xB0 0x00 0x00 0x03 0x00 0x51 0x5C 0xF0",
+    "sensitivity": "Public",
+    "tags": [
+      "ME",
+      "IPMI"
+    ],
+    "id": "GEM-6873",
+    "rank": 4
+  }
+]

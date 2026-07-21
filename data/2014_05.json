@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2014-05-15",
+    "summary": "Role of pci module in accessing and modifying PCI configuration space",
+    "evidence": "pci.ShowPciCfg(0x02, 0x16, 0)\n+-----------------------------------------------------+\n|Bus: 02, device: 16, Function: 00                    |\n|##| x0|x1|x2|x3|x4|x5|x6|x7 | x8|x9|xA|xB|xC|xD|xE|xF|\n|-----------------------------------------------------|\n|... (register values) ...\n+-----------------------------------------------------+\n()\n\npci.WritePciCfg(4,6,1)\n()",
+    "sensitivity": "Public",
+    "tags": [
+      "pci module",
+      "PCI configuration space"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-05-29",
+    "summary": "Initialization of Northpeak API using broxton_a0_red.xml configuration file",
+    "evidence": "NorthpeakApi* papi= new NorthpeakApi();\n// initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"/broxton_a0_red.xml\"));",
+    "sensitivity": "Public",
+    "tags": [
+      "configuration file",
+      "Northpeak API"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-05-29",
+    "summary": "Utilization of IpcApiTargetAccess class to access target devices via OpenIPC API",
+    "evidence": "IpcApiTargetAccess myacess(\"IpcApi_x64\",\"OpenIPC\");\nstring foo = myacess.description();",
+    "sensitivity": "Public",
+    "tags": [
+      "IpcApiTargetAccess",
+      "OpenIPC API"
+    ],
+    "rank": 4
+  }
+]

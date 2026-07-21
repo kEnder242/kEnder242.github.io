@@ -1,0 +1,33 @@
+[
+  {
+    "date": "2023-02-20",
+    "summary": "Updated DSD Tool Stack to version 1.0.30.400 and installed latest Trace Hub SDK (version 0.6.27757) to resolve issues with TPV Orange toolstack.",
+    "evidence": "[RAW LOGS] and [SOLUTIONS]",
+    "sensitivity": "Public",
+    "tags": [
+      "DSD Tool Stack",
+      "Trace Hub SDK",
+      "TPV Orange"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Reverted to version 1518 of LTB software to resolve 'Could not stop the target' error.",
+    "evidence": "[SOLUTIONS]",
+    "sensitivity": "Public",
+    "tags": [
+      "LTB",
+      "Error Resolution"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "TODO: Update DSD Tool Stack to version 1.0.30.400.",
+    "evidence": "[RAW LOGS]",
+    "sensitivity": "Public",
+    "tags": [
+      "DSD Tool Stack",
+      "TODO"
+    ]
+  }
+]

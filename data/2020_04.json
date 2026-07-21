@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-04-22",
+    "summary": "Higher-order PECI test cases were planned",
+    "evidence": "Higher-order PECI test cases were planned",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "DTAF Core installation guide needs update from Raveendra",
+    "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+    "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4
+  }
+]

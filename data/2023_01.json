@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2022-12-21",
+    "summary": "Modification made to code to resolve Power Limit Accuracy feature issue",
+    "evidence": "[{'log_entry': '2022-12-21 15:38:31.713,INFO,montana.nativemodules.pmcapsweep,Setting policy limit to 1975 watts'}, {'tool_used': 'PECI (Power capping and Efficiency Control Interface)'}]\n\nEvidence 2: [{'log_entry': '2022-12-21 15:38:31.713,INFO,montana.nativemodules.pmcapsweep,Setting policy limit to 1975 watts'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "feature_issue",
+      "code_modification",
+      "power_limit_accuracy"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-12-21",
+    "summary": "PECI tool used to diagnose PCS 8 incrementation issue",
+    "evidence": [
+      {
+        "log_entry": "miv peci wrpciconfig https://hsdes.intel.com/appstore/article/#/22016083833"
+      }
+    ],
+    "sensitivity": "Public",
+    "tags": [
+      "peci_tool",
+      "pcs_incrementation"
+    ]
+  }
+]

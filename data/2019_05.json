@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2019-05-07",
+    "summary": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
+    "evidence": "git clone ssh://git-amr-7.devtools.intel.com/ptv-riv.git",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Configured local repository with user name and email address.",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Retrieved commit-msg hook from remote server via SCP.",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "TODO: Research SPS HSD issue with sighting ID 5388174 at https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174.",
+    "evidence": "https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "SPS HSD issue"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Used Postman with IP address 10.23.20.135 and Redfish protocol for API interactions during MIV test cases.",
+    "evidence": "Postman used with IP address 10.23.20.135 and Redfish protocol",
+    "sensitivity": "Public",
+    "tags": [
+      "API interactions",
+      "MIV test cases"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Glasgow ID list on Sharepoint referenced for content readiness, IDs ranging from 58637 to 59211.",
+    "evidence": "Glasgow ID list on Sharepoint with IDs 58637-59211",
+    "sensitivity": "Public",
+    "tags": [
+      "Sharepoint",
+      "content readiness"
+    ]
+  }
+]

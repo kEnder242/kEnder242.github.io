@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2005-02-01",
+    "summary": "Evaluation run using EFS1.16 on HW BMC25 shows platform does not matter in terms of performance.",
+    "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
+    "sensitivity": "Public",
+    "tags": [
+      "evaluation",
+      "performance"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-02-01",
+    "summary": "Second evaluation run conducted using EFS1.16 due to observation that platform does not affect performance.",
+    "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
+    "sensitivity": "Public",
+    "tags": [
+      "evaluation",
+      "performance"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2005-02-01",
+    "summary": "Initial evaluation run used EFS1.15, leading to decision to conduct second evaluation with EFS1.16.",
+    "evidence": "HW BMC25/EFS1.15   EFS1.16",
+    "sensitivity": "Public",
+    "tags": [
+      "tool_version",
+      "evaluation"
+    ],
+    "rank": 4
+  }
+]

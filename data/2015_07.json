@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2015-07-29",
+    "summary": "Modifications to SkyLake_M0 platform's EDRAM signals and VISA panel configuration",
+    "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "EDRAM",
+      "SkyLake_M0"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-07-29",
+    "summary": "Update to visa_custom_rs.xml file affected EDC changes path",
+    "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
+    "sensitivity": "Public",
+    "tags": [
+      "EDC",
+      "visa_custom_rs.xml"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-07-29",
+    "summary": "New programming implemented using Python scripts for VISA signals",
+    "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "Python"
+    ],
+    "rank": 4
+  }
+]

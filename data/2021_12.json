@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2021-12-15",
+    "summary": "Redfish OEM API validation meeting",
+    "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "OEM API"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+    "evidence": "Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Correction",
+      "IEH"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+    "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City",
+      "IFU MCA"
+    ],
+    "rank": 4
+  }
+]

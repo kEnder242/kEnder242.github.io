@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2022-01-01",
+    "summary": "Kernel loaded from FIT Image at 20b00000 using 'conf-aspeed-bmc-intel-ast2600.dtb' configuration.",
+    "evidence": "## Loading kernel from FIT Image at 20b00000 ... Using 'conf-aspeed-bmc-intel-ast2600.dtb' configuration ...",
+    "sensitivity": "Public",
+    "tags": [
+      "kernel",
+      "FIT Image"
+    ]
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Reserved memory pools created for CMA (32 MiB), DMA (64 MiB), and framebuffer (16 MiB).",
+    "evidence": "Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB ... Reserved memory: created DMA memory pool at 0x99000000, size 64 MiB ...",
+    "sensitivity": "Public",
+    "tags": [
+      "memory",
+      "CMA",
+      "DMA"
+    ]
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "U-Boot version 2019.04 (May 17 2022 - 06:03:21 +0000) detected.",
+    "evidence": "... U-Boot 2019.04 (May 17 2022 - 06:03:21 +0000) ...",
+    "sensitivity": "Public",
+    "tags": [
+      "U-Boot"
+    ]
+  }
+]

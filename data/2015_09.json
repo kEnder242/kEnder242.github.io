@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2022-01-01",
+    "summary": "Make visa debug handbook a living document",
+    "evidence": "PDT Visa - Make visa debug handbook a living document",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "visa"
+    ]
+  },
+  {
+    "date": "2022-02-01",
+    "summary": "Troubleshoot BSSB trace problems with no data being recorded",
+    "evidence": "Reworking MIPI60 pins, Connecting system traces using DCI, Streaming decode use cases (Broxton General Decode (BSSB)), Starting the trace twice, Using T32 and typing 'ca' to empty the buffer",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "BSSB"
+    ]
+  },
+  {
+    "date": "2022-03-01",
+    "summary": "Comment out [Sinks.Console] section in logging.ini for collateral loading issues",
+    "evidence": "Commenting out the [Sinks.Console] section in logging.ini resolves issues with collateral loading when NPK_ALL_DEBUG=1",
+    "sensitivity": "Public",
+    "tags": [
+      "logging",
+      "collateral"
+    ]
+  }
+]

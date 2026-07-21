@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2020-09-10",
+    "summary": "Manageability Ignition-Redfish Content Plan (pptx) referenced but not directly linked to in abstract.",
+    "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
+    "sensitivity": "Public",
+    "tags": [
+      "pptx",
+      "Manageability Ignition-Redfish Content Plan"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-09-10",
+    "summary": "PECI commands tested and found to be supported or unsupported.",
+    "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
+    "sensitivity": "Public",
+    "tags": [
+      "commands",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-09-16",
+    "summary": "Architectural decisions regarding PECI command execution, specifically with regards to the PECI master being set to PCH or BMC for ignition.",
+    "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
+    "sensitivity": "Public",
+    "tags": [
+      "master",
+      "PCH",
+      "PECI",
+      "BMC"
+    ],
+    "rank": 4
+  }
+]

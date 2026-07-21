@@ -1,0 +1,372 @@
+[
+  {
+    "date": "2022-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-c228"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Merging Montana into DTAF-content using git-filter-repo to preserve history",
+    "evidence": "git filter-repo --to-subdirectory-filter src/miv",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF-content",
+      "filter-repo",
+      "git"
+    ],
+    "id": "GEM-e8c2",
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Error setting CorrectionInMs property in power limit configuration",
+    "evidence": "The error message indicates that the property is not valid for the resource.",
+    "sensitivity": "Public",
+    "tags": [
+      "power_limit",
+      "configuration_error"
+    ],
+    "id": "GEM-55d8",
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/18020163210",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "rank": 4,
+    "id": "GEM-d98c"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
+    "evidence": "/root/tester -y 0x010000C800800D -d 00",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "MCTP"
+    ],
+    "rank": 4,
+    "id": "GEM-7c0e"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
+    "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "pmdebug"
+    ],
+    "rank": 4,
+    "id": "GEM-e978"
+  },
+  {
+    "date": "2022-01-02",
+    "summary": "Preserving history while merging Montana into DTAF-content using git-filter-repo",
+    "evidence": "git branch montana_merge_v2; git pull old-miv-repo master --allow-unrelated-histories",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF-content",
+      "filter-repo",
+      "git"
+    ],
+    "id": "GEM-b703",
+    "rank": 4
+  },
+  {
+    "date": "2022-01-02",
+    "summary": "PECI commands executed to update TDFs on PCI devices",
+    "evidence": "rdpciconfig 0 1 0 0x3e and rdpciconfig 0x80 1 0 0x3e were executed multiple times with different payloads.",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "tdf_update"
+    ],
+    "id": "GEM-410f",
+    "rank": 4
+  },
+  {
+    "date": "2022-01-03",
+    "summary": "No plans to merge fix for EGS",
+    "evidence": "Actually, there are no plans to merge this fix for EGS.",
+    "sensitivity": "Public",
+    "tags": [
+      "merge",
+      "EGS"
+    ],
+    "id": "GEM-8836",
+    "rank": 4
+  },
+  {
+    "date": "2022-01-03",
+    "summary": "Python scripts executed using OpenPythonSV to unlock and refresh PMC",
+    "evidence": "The text mentions that Python scripts were executed using OpenPythonSV, but does not mention any attempts to read DIMM ECC data.",
+    "sensitivity": "Public",
+    "tags": [
+      "openpythonsv",
+      "python"
+    ],
+    "id": "GEM-7e3b",
+    "rank": 4
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "Hook a Logic Analyzer (LA) to the PECI bus for further investigation.",
+    "evidence": "Best to Hook a LA to the PECI bus and watch things happen",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "Logic Analyzer"
+    ],
+    "id": "GEM-c4f2",
+    "rank": 4
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "Stress test OOBMSM on 10nm architecture using various test files.",
+    "evidence": "peci.bat, py montana.py -f peci_checkout.tdf, py montana.py -f peci_endpoint_localpci.tdf, ...",
+    "sensitivity": "Public",
+    "tags": [
+      "OOBMSM",
+      "10nm architecture"
+    ],
+    "id": "GEM-12a3",
+    "rank": 4
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "Validate Xeon PECI specification on 10nm architecture despite differences.",
+    "evidence": "10nm is different, but we still want capture knowledge from the TSOD PECI issue",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI specification",
+      "Xeon"
+    ],
+    "id": "GEM-cc83",
+    "rank": 4
+  },
+  {
+    "date": "2022-05-01",
+    "summary": "Unexpected PECI return codes during base GPU frequency check",
+    "evidence": "The following components had unexpected PECI return codes: CR0.Punit*, DFX0, DSA, GlobalIEH, IAX, IEH, Link/Phy0, M2UPI, MS2IOSF, MS2MEM, MS2Ubox, MSM_OOB_MSM, NCDECS, NCEVENTS, PCIEGen4_NTB.PI5, PMON_OOB_MSM, RACU, UPI/Phy0, a.PCIEGen4_RP.PI5*",
+    "sensitivity": "Public",
+    "tags": [
+      "GPU",
+      "return codes",
+      "PECI"
+    ],
+    "id": "GEM-31ae",
+    "rank": 4
+  },
+  {
+    "date": "2022-05-01",
+    "summary": "Setting power control policy to limit power consumption to 0W using PATCH method on /redfish/v1/Chassis/Baseboard/Power#/PowerControl/0",
+    "evidence": "The purpose of this action is to set the power control policy to limit power consumption to 0W, which can be used for calibration or testing purposes.",
+    "sensitivity": "Public",
+    "tags": [
+      "power control",
+      "calibration"
+    ],
+    "id": "GEM-25ce",
+    "rank": 4
+  },
+  {
+    "date": "2022-06-30",
+    "summary": "Accessed meeting recording via Intel's SharePoint platform for partner training purposes.",
+    "evidence": "The meeting recording file 'EMR RASP - Partner Training.mp4' was accessed via Nico P. Delange's personal documents folder on Intel's SharePoint platform.",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "Partner Training",
+      "SharePoint"
+    ],
+    "id": "GEM-a7a5",
+    "rank": 4
+  },
+  {
+    "date": "2022-08-24",
+    "summary": "Exploration of new Redfish schema for pmcapsweep script",
+    "evidence": "Log entry from 8/24/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "pmcapsweep",
+      "Redfish"
+    ],
+    "id": "GEM-b4e6",
+    "rank": 4
+  },
+  {
+    "date": "2022-08-30",
+    "summary": "LTM updates to address duplicate endpoints and DMI CSR overlap issues",
+    "evidence": "Log entry from 8/30/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "LTM",
+      "DMI CSR",
+      "duplicate endpoints"
+    ],
+    "id": "GEM-3596",
+    "rank": 4
+  },
+  {
+    "date": "2022-08-30",
+    "summary": "XPIV pecistressor tool used to measure PECI traffic impact on CPU benchmarks",
+    "evidence": "Log entry from 8/30/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "pecistressor",
+      "XPIV",
+      "PECI"
+    ],
+    "id": "GEM-0306",
+    "rank": 4
+  },
+  {
+    "date": "2022-09-29",
+    "summary": "Review PECI-related issues and EGS DRAM ECS info over OOB PECI",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/14017037890",
+    "sensitivity": "Public",
+    "tags": [
+      "EGS DRAM ECS",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-57bc"
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "crdefeature2_bs accessed registers 21850h and 29850h across multiple channels",
+    "evidence": "showsearch method output",
+    "sensitivity": "Public",
+    "tags": [
+      "crdefeature2_bs",
+      "register access"
+    ],
+    "rank": 4,
+    "id": "GEM-8136"
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
+    "evidence": "show_access_info method output",
+    "sensitivity": "Public",
+    "tags": [
+      "crdefeature2_bs",
+      "I/O statistics"
+    ],
+    "rank": 4,
+    "id": "GEM-1914"
+  },
+  {
+    "date": "2022-10-01",
+    "summary": "Functions defined for accessing MMIO registers.",
+    "evidence": "RAW LOGS on 10/24/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "registers",
+      "MMIO"
+    ],
+    "id": "GEM-b0c1",
+    "rank": 4
+  },
+  {
+    "date": "2022-10-24",
+    "summary": "Experiment conducted using Cscripts over BMC to validate changes.",
+    "evidence": "RAW LOGS on 10/24/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "experiment",
+      "Cscripts",
+      "BMC"
+    ],
+    "id": "GEM-350e",
+    "rank": 4
+  },
+  {
+    "date": "2022-10-26",
+    "summary": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function.",
+    "evidence": "RAW LOGS on 10/26/2022",
+    "sensitivity": "Public",
+    "tags": [
+      "CSV",
+      "PCI",
+      "performance"
+    ],
+    "id": "GEM-cfae",
+    "rank": 4
+  },
+  {
+    "date": "2022-11-17",
+    "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+    "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
+    "sensitivity": "Public",
+    "tags": [
+      "unexpected return codes",
+      "MSR register access issues",
+      "PECI tests"
+    ],
+    "rank": 4,
+    "id": "GEM-d90f"
+  },
+  {
+    "date": "2022-12-01",
+    "summary": "PECI framework initialized with BKM and used to configure BMCs via Redfish API.",
+    "evidence": "[{'text': 'peci_cmds rdPkgConfig 0x1a 0', 'source': 'RAW LOGS'}, {'text': 'peciObj = po.peciObj(\"redfish\")', 'source': 'RAW LOGS'}]\n\nEvidence 2: [{'text': 'peci_cmds rdPkgConfig 0x1a 0', 'source': 'RAW LOGS'}, {'text': 'peciObj = po.peciObj(\"redfish\")', 'source': 'RAW LOGS'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "BKM",
+      "PECI",
+      "Redfish"
+    ],
+    "id": "GEM-8141",
+    "rank": 4
+  },
+  {
+    "date": "2022-12-01",
+    "summary": "Several tools used, including pysvtools, ipccli, and peci-obj.",
+    "evidence": "[{'text': 'import pysvtools.scancompiler.shell.System as _System', 'source': 'RAW LOGS'}, {'text': 'scan = _System()', 'source': 'RAW LOGS'}, {'text': \"sv.socket0.pcudata.showsearch('pbm_resolved_cfg')\", 'source': 'RAW LOGS'}, {'text': 'peciObj = po.peciObj(\"redfish\")', 'source': 'RAW LOGS'}]\n\nEvidence 2: [{'text': 'import pysvtools.scancompiler.shell.System as _System', 'source': 'RAW LOGS'}, {'text': 'scan = _System()', 'source': 'RAW LOGS'}, {'text': \"sv.socket0.pcudata.showsearch('pbm_resolved_cfg')\", 'source': 'RAW LOGS'}, {'text': 'peciObj = po.peciObj(\"redfish\")', 'source': 'RAW LOGS'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "peci-obj",
+      "ipccli",
+      "pysvtools"
+    ],
+    "id": "GEM-b656",
+    "rank": 4
+  },
+  {
+    "date": "2022-12-01",
+    "summary": "Causality error: lack of information about tools' release years.",
+    "evidence": "[{'text': 'pysvtools and ipccli used in 2022, but release years not mentioned.', 'source': 'CAUSALITY ERROR'}, {'text': 'peci-obj tool used in 2022, but release year not mentioned.', 'source': 'CAUSALITY ERROR'}]\n\nEvidence 2: [{'text': 'pysvtools and ipccli used in 2022, but release years not mentioned.', 'source': 'CAUSALITY ERROR'}, {'text': 'peci-obj tool used in 2022, but release year not mentioned.', 'source': 'CAUSALITY ERROR'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "Causality Error"
+    ],
+    "id": "GEM-00f8",
+    "rank": 4
+  },
+  {
+    "date": "2022-12-13",
+    "summary": "New Redfish schema 2.0 mentioned, but primary TODO or research link not explicitly stated.",
+    "evidence": "[{'text': 'New NM Redfish schema 2.0 - More compatible with IPMI NM Feature set.', 'source': 'RAW LOGS'}, {'text': 'Need to guide developer to use OOP examples.', 'source': 'RAW LOGS'}]\n\nEvidence 2: [{'text': 'New NM Redfish schema 2.0 - More compatible with IPMI NM Feature set.', 'source': 'RAW LOGS'}, {'text': 'Need to guide developer to use OOP examples.', 'source': 'RAW LOGS'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "IPMI"
+    ],
+    "id": "GEM-ab3d",
+    "rank": 4
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2018-06-01",
+    "summary": "TODO: Investigate 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515)",
+    "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
+    "sensitivity": "Public",
+    "tags": [
+      "bug",
+      "TODO"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-06-01",
+    "summary": "Memory configuration corrected using ixpdimm-cli create -goal persistentmemorytype=appdirect and rebooting the system",
+    "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
+    "sensitivity": "Public",
+    "tags": [
+      "memory",
+      "configuration"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Verification process initiated on Cluster with 0/60397968 error rate (0.000000%)",
+    "evidence": "RAW LOGS: 'The verification process initiated on June 29, 2018, had an error rate of 0/60397968 (0.000000%).'",
+    "sensitivity": "Public",
+    "tags": [
+      "verification",
+      "Cluster"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Configuration setting for SHMEM_SYMMETRIC_HEAP_SIZE set to 4000M",
+    "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
+    "sensitivity": "Public",
+    "tags": [
+      "SHMEM_SYMMETRIC_HEAP_SIZE",
+      "configuration"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "System's memory resources increase after creating a persistent namespace using ixpdimm-cli create -goal persistentmemorytype=appdirect",
+    "evidence": "ixpdimm-cli show -memoryresources",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "persistentmemory"
+    ],
+    "rank": 4
+  }
+]

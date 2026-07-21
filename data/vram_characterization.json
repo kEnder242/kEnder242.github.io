@@ -1,0 +1,73 @@
+{
+    "gpu_total_mib": 11264,
+    "last_updated": "2026-03-13T14:30:00",
+    "vllm_engine_status": "Tier 1 (Unified) - vLLM 0.17.0 Stable",
+    "safe_tiers": {
+        "critical": 11000,
+        "downshift": 9500,
+        "warning": 8000,
+        "nominal": 7000
+    },
+    "model_map": {
+        "UNIFIED": {
+            "vllm": "/speedy/models/llama-3.2-3b-instruct-awq",
+            "ollama": "gemma2:2b",
+            "label": "Llama 3.2 3B AWQ (Unified Base)",
+            "est_vram_mib": 5125,
+            "gpu_memory_utilization": 0.5,
+            "max_model_len": 8192,
+            "attention_backend": "TRITON_ATTN",
+            "lora_modules": [
+                "lab_sentinel_v1=/speedy/models/adapters/lab_sentinel_v1",
+                "cli_voice_v1=/speedy/models/adapters/cli_voice_v1",
+                "shadow_brain_v2=/speedy/models/adapters/shadow_brain_v2",
+                "lab_history_v1=/speedy/models/adapters/lab_history_v1"
+            ]
+        },
+        "LARGE": {
+            "vllm": "/speedy/models/qwen-2.5-1.5b-awq",
+            "ollama": "qwen2.5:1.5b",
+            "label": "Qwen 2.5 1.5B AWQ",
+            "est_vram_mib": 5125,
+            "gpu_memory_utilization": 0.5,
+            "max_model_len": 8192,
+            "attention_backend": "TRITON_ATTN",
+            "lora_modules": [
+                "lab_sentinel_v1=/speedy/models/adapters/lab_sentinel_v1",
+                "cli_voice_v1=/speedy/models/adapters/cli_voice_v1",
+                "shadow_brain_v2=/speedy/models/adapters/shadow_brain_v2",
+                "lab_history_v1=/speedy/models/adapters/lab_history_v1"
+            ]
+        },
+        "MEDIUM": {
+            "vllm": "/speedy/models/llama-3.2-3b-instruct-awq",
+            "ollama": "llama3.2:3b",
+            "label": "Llama 3.2 3B AWQ (Unified Base)",
+            "est_vram_mib": 5125,
+            "gpu_memory_utilization": 0.5,
+            "max_model_len": 8192,
+            "attention_backend": "TRITON_ATTN",
+            "lora_modules": [
+                "lab_sentinel_v1=/speedy/models/adapters/lab_sentinel_v1",
+                "cli_voice_v1=/speedy/models/adapters/cli_voice_v1",
+                "shadow_brain_v2=/speedy/models/adapters/shadow_brain_v2",
+                "lab_history_v1=/speedy/models/adapters/lab_history_v1"
+            ]
+        },
+        "SMALL": {
+            "vllm": "/speedy/models/qwen-2.5-0.5b-awq",
+            "ollama": "qwen2.5:0.5b",
+            "label": "Qwen 2.5 0.5B (Micro)",
+            "est_vram_mib": 4200,
+            "gpu_memory_utilization": 0.5,
+            "max_model_len": 8192,
+            "attention_backend": "TRITON_ATTN",
+            "lora_modules": [
+                "lab_sentinel_v1=/speedy/models/adapters/lab_sentinel_v1",
+                "cli_voice_v1=/speedy/models/adapters/cli_voice_v1",
+                "shadow_brain_v2=/speedy/models/adapters/shadow_brain_v2",
+                "lab_history_v1=/speedy/models/adapters/lab_history_v1"
+            ]
+        }
+    }
+}

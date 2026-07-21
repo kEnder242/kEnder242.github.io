@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2023-02-20",
+    "summary": "Primary TODO or research link mentioned: accessing artifactory repository",
+    "evidence": "https://ubit-artifactory.intel.com/artifactory/owr-repos/submissions/saf_blob/saf_blob_file_ww17-v2/saf_blob_file_ww17-v2.zip",
+    "sensitivity": "Public",
+    "tags": [
+      "artifactory",
+      "repository"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "MSR accesses missing 0x40 responses from all 56 thread IDs: CR3.Punit and NCEVENTS_SCF_UBOX",
+    "evidence": "FAIL: missing 0x40 response from all 56 thread ids for MSR ('rdIaMsr', '0x648', 'CR3.Punit', 0)",
+    "sensitivity": "Public",
+    "tags": [
+      "MSR",
+      "PECI"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Tool used to send raw PECI commands: curl",
+    "evidence": "curl -sku \"admin:initial0\" -H \"Content-Type: application/json\" -X PATCH https://localhost:5443/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci",
+    "sensitivity": "Public",
+    "tags": [
+      "curl",
+      "PECI"
+    ]
+  }
+]

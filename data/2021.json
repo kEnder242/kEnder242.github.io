@@ -1,0 +1,417 @@
+[
+  {
+    "date": "2021-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-f822"
+  },
+  {
+    "date": "2021-01-01",
+    "summary": "BMC for MCTP stack validation link shared",
+    "evidence": "https://wiki.ith.intel.com/pages/viewpage.action?spaceKey=openbmcPmci&title=BMC+for+MCTP+stack+validation",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "id": "GEM-8934",
+    "rank": 4
+  },
+  {
+    "date": "2021-01-01",
+    "summary": "Research link: PythonSV/peciframework to exercise PCS mailbox functionality",
+    "evidence": "PythonSV/peciframework to exercise the PCS mailbox -> Hirnak, Stephanie L",
+    "sensitivity": "Public",
+    "tags": [
+      "research",
+      "peci_framework"
+    ],
+    "id": "GEM-a185",
+    "rank": 4
+  },
+  {
+    "date": "2021-01-02",
+    "summary": "MCTP stack configuration for BMC communication",
+    "evidence": "/dev/peci-mctp and RdEndPointCfg (0xC1)",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "id": "GEM-6283",
+    "rank": 4
+  },
+  {
+    "date": "2021-01-03",
+    "summary": "MCTP BUS Owner Selection configured for OOB MSMS or CSME",
+    "evidence": "ipmitool used to send raw commands",
+    "sensitivity": "Public",
+    "tags": [
+      "CSME",
+      "MSMS",
+      "OOB"
+    ],
+    "id": "GEM-0dca",
+    "rank": 4
+  },
+  {
+    "date": "2021-01-11",
+    "summary": "PECI framework handles connection aborts by res-establishing the connection.",
+    "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
+    "sensitivity": "Public",
+    "tags": [
+      "connection_abort",
+      "PECI"
+    ],
+    "rank": 4,
+    "id": "GEM-d11c"
+  },
+  {
+    "date": "2021-01-15",
+    "summary": "Integration of PECI/i3c/MCTP components into BMC firmware architecture",
+    "evidence": "Retry Get NM Capabilities after 5 seconds; Check MCA Error Source Log via Redfish PECI",
+    "sensitivity": "Public",
+    "tags": [
+      "i3c",
+      "peci",
+      "bmc",
+      "mctp"
+    ],
+    "id": "GEM-a0c7",
+    "rank": 4
+  },
+  {
+    "date": "2021-01-20",
+    "summary": "MIV report Weldon/Hooper/Staff...",
+    "evidence": "...-MIV report Weldon/Hooper/Staff...",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "report"
+    ],
+    "rank": 4,
+    "id": "GEM-2efc"
+  },
+  {
+    "date": "2021-01-26",
+    "summary": "Fuzzing support added for PECI commands.",
+    "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "fuzzing"
+    ],
+    "rank": 4,
+    "id": "GEM-3482"
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "Documentation of error codes and MSR addresses",
+    "evidence": "ERROR: C00000002:V03071008 I0 D6476950-2481-4CBB-8400-442542C766C8 7C9F1418; [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x1; MSR 0x401",
+    "sensitivity": "Public",
+    "tags": [
+      "error_codes",
+      "msr_addresses"
+    ],
+    "id": "GEM-d315",
+    "rank": 4
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "PECI commands tested in Base category using peci_checkout",
+    "evidence": "rdpciconfig, rdendpointconfig, mmio (crashdump, protection, uncore_crashdump), 360_sweep",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "testing"
+    ],
+    "rank": 4,
+    "id": "GEM-8cc4"
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "Issue with PTU calibration identified during test plan execution",
+    "evidence": "PTU not running properly, incorrect power limits",
+    "sensitivity": "Public",
+    "tags": [
+      "issue",
+      "ptu",
+      "calibration"
+    ],
+    "rank": 4,
+    "id": "GEM-aa48"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "Primary TODO or research link mentioned: Archer City Platform Architecture",
+    "evidence": "https://intel.sharepoint.com/sites/archercitypat, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City Platform",
+      "Research Link"
+    ],
+    "rank": 4,
+    "id": "GEM-7ef8"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "peci_flood.tdf test impacts PECI throughput on MSR reads by comparing throughput cmd/sec with a baseline",
+    "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "peci_flood.tdf",
+      "PECI Throughput"
+    ],
+    "rank": 4,
+    "id": "GEM-4906"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths",
+    "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI Command Rejection",
+      "peci_poison.tdf"
+    ],
+    "rank": 4,
+    "id": "GEM-a220"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "No conflicts found in the RAW LOGS regarding tool release years",
+    "evidence": "Tools mentioned are peci_flood.tdf, peci_poison.tdf, and xProd-runs.tdf, but their release years are not explicitly stated in the logs",
+    "sensitivity": "Public",
+    "tags": [
+      "Tool Release Years"
+    ],
+    "rank": 4,
+    "id": "GEM-f536"
+  },
+  {
+    "date": "2021-04-26",
+    "summary": "dumpJournal.py script retrieves journal entries from BMC's LogServices/Journal/Entries endpoint using Redfish API",
+    "evidence": "The log entry on 4/26/2021 mentions: ...",
+    "sensitivity": "Public",
+    "tags": [],
+    "id": "GEM-caf9",
+    "rank": 4
+  },
+  {
+    "date": "2021-04-26",
+    "summary": "MSR whitelisting updated in icx_peci_arrays.py and spr_peci_arrays.py with new functions or methods",
+    "evidence": "The log entry on 4/26/2021 mentions: ...",
+    "sensitivity": "Public",
+    "tags": [],
+    "id": "GEM-1af8",
+    "rank": 4
+  },
+  {
+    "date": "2021-04-27",
+    "summary": "CD Summarizer script may need updates to be compatible with ACD",
+    "evidence": "The log entry on 4/27/2021 mentions: 'Open: The parsing step may need updates - CD Summarizer script may not be compatible with ACD'",
+    "sensitivity": "Public",
+    "tags": [],
+    "id": "GEM-350f",
+    "rank": 4
+  },
+  {
+    "date": "2021-05-01",
+    "summary": "Adapt MIV tests to use spr_peci_arrays and spr_peci_exceptions instead of deprecated pecirand library.",
+    "evidence": "RAW LOGS: TODO or research link mentioned in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV tests adaptation",
+      "PECI framework update"
+    ],
+    "id": "GEM-d5aa",
+    "rank": 4
+  },
+  {
+    "date": "2021-05-01",
+    "summary": "Updated PECI framework handles exceptions and arrays using spr_peci_arrays and spr_peci_exceptions.",
+    "evidence": "RAW LOGS: Updated PECI framework uses spr_peci_arrays and spr_peci_exceptions modules",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI framework update",
+      "Exception handling"
+    ],
+    "id": "GEM-d576",
+    "rank": 4
+  },
+  {
+    "date": "2021-05-01",
+    "summary": "rdEndPointConfig_PCI function modified to use peci_wrapper method considering enumerated bus values in pci_enumerated_bus.",
+    "evidence": "RAW LOGS: rdEndPointConfig_PCI function modification mentioned",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI framework update",
+      "PCI configuration"
+    ],
+    "id": "GEM-3405",
+    "rank": 4
+  },
+  {
+    "date": "2021-06-30",
+    "summary": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities",
+    "evidence": "RAW LOGS on 6/30/2021",
+    "sensitivity": "Public",
+    "tags": [
+      "team structure",
+      "collaboration"
+    ],
+    "rank": 4,
+    "id": "GEM-4aac"
+  },
+  {
+    "date": "2021-08-01",
+    "summary": "Update to LTM specification in SPR+EBG_XCC_LTM_DEF_D0.0x000D.xlsx",
+    "evidence": "update LTM spec to spr+ebg_xcc_ltm_def_d0.0x000d.xlsx",
+    "sensitivity": "Public",
+    "tags": [
+      "LTM",
+      "specification"
+    ],
+    "id": "GEM-e88d",
+    "rank": 4
+  },
+  {
+    "date": "2021-08-01",
+    "summary": "Issue with PCS TMF IB Lock out causing average power consumption not to be limited as expected",
+    "evidence": "PCS TMF IB Lock out - Test the PECI Platform Configuration Space Thermal Monitoring Control mailbox lock out bit",
+    "sensitivity": "Public",
+    "tags": [
+      "TMF",
+      "PCS",
+      "IB Lock out"
+    ],
+    "id": "GEM-6ed1",
+    "rank": 4
+  },
+  {
+    "date": "2021-08-01",
+    "summary": "Power limiting issue on various systems, including Archer City with broken support model",
+    "evidence": "-[[ EGS SPR B0/D0] [Archer City] [MIV][IGN] Domain 0/1/2 Power limiting broken with OpenBMC NM FW]",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City",
+      "power limiting"
+    ],
+    "id": "GEM-96b0",
+    "rank": 4
+  },
+  {
+    "date": "2021-10-27",
+    "summary": "PECI v4.0 Commands Checkout (MCTP) research and development ongoing.",
+    "evidence": "[RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "PECI"
+    ],
+    "id": "GEM-a5e4",
+    "rank": 4
+  },
+  {
+    "date": "2021-10-27",
+    "summary": "Team utilizes MCTP stack for communication with BMC through various commands.",
+    "evidence": "[SOLUTIONS] curl and ipmitool commands used for MCTP communication.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "id": "GEM-71bb",
+    "rank": 4
+  },
+  {
+    "date": "2021-10-27",
+    "summary": "Minimum read time of 6000ms must be set for domain 0 in SetNmPolicy command.",
+    "evidence": "[RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
+    "sensitivity": "Public",
+    "tags": [
+      "SetNmPolicy",
+      "domain 0"
+    ],
+    "id": "GEM-a0d8",
+    "rank": 4
+  },
+  {
+    "date": "2021-11-01",
+    "summary": "Critical issue identified with MIV framework, requires further investigation.",
+    "evidence": "RAW LOGS: A critical issue was identified... The issue is related to the MIV (Manageability Integration & Validation) framework and requires further investigation.",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "framework"
+    ],
+    "id": "GEM-12a5",
+    "rank": 4
+  },
+  {
+    "date": "2021-11-01",
+    "summary": "Error code reported on HSD-ES: 22013940445.",
+    "evidence": "RAW LOGS: The error code reported on HSD-ES is indeed 22013940445.",
+    "sensitivity": "Public",
+    "tags": [
+      "error_code",
+      "HSD-ES"
+    ],
+    "id": "GEM-27ec",
+    "rank": 4
+  },
+  {
+    "date": "2021-11-01",
+    "summary": "ipmitool used to troubleshoot issue, output identical to BMC console raw commands.",
+    "evidence": "RAW LOGS: The text states that ipmitool was used with the following command... The output was identical to the BMC console raw commands.",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC_console",
+      "ipmitool"
+    ],
+    "id": "GEM-2a7d",
+    "rank": 4
+  },
+  {
+    "date": "2021-12-15",
+    "summary": "Redfish OEM API validation meeting",
+    "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "OEM API"
+    ],
+    "rank": 4,
+    "id": "GEM-7ab0"
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+    "evidence": "Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Correction",
+      "IEH"
+    ],
+    "rank": 4,
+    "id": "GEM-103a"
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+    "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City",
+      "IFU MCA"
+    ],
+    "rank": 4,
+    "id": "GEM-9db3"
+  }
+]

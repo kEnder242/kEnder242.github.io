@@ -1,0 +1,68 @@
+[
+  {
+    "date": "2020-07-01",
+    "summary": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+    "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "BMC"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "validation"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Commit 1b3f8aefd3f1b01a36094f81259294c0795b712f and merge request 97 addressed a failed Close Session command during MIV recovery.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "recovery"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Code review issue forwarded to Dave/Curtis for investigation",
+    "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
+    "sensitivity": "Public",
+    "tags": [
+      "code review",
+      "issue investigation"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+    "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "firmware update"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-07-28",
+    "summary": "IVL crash dump issue addressed",
+    "evidence": "IVL crash dump issue addressed on July 28, 2020",
+    "sensitivity": "Public",
+    "tags": [
+      "crash dump",
+      "IVL"
+    ],
+    "rank": 4
+  }
+]

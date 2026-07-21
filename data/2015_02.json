@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2015-02-01",
+    "summary": "Test runs failed due to missing VCDs and incorrect MSR values",
+    "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
+    "sensitivity": "Public",
+    "tags": [
+      "msr_error",
+      "test_failure",
+      "vcd_missing"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-02-01",
+    "summary": "Error code IPC_ErrorCode.IPC_Error MSR_Access_Faulted (0x80090003L) indicates CPU fault while accessing MSR",
+    "evidence": "RAW LOGS: Error message indicating MSR access faulted.",
+    "sensitivity": "Public",
+    "tags": [
+      "cpu_fault",
+      "msr_error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2015-02-01",
+    "summary": "Script failed to recover from 'TRACE32 device already in use' issue",
+    "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
+    "sensitivity": "Public",
+    "tags": [
+      "trace32_error",
+      "recovery_failure"
+    ],
+    "rank": 4
+  }
+]

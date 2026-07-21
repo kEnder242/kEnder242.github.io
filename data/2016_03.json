@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2016-03-01",
+    "summary": "Reverted dc6.bl2 due to outdated bling and pipes B or C compatibility issues.",
+    "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
+    "sensitivity": "Public",
+    "tags": [
+      "bling",
+      "pipes",
+      "dc6"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2016-03-01",
+    "summary": "Updated build process for dc6 to accommodate changes in configuration or settings.",
+    "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
+    "sensitivity": "Public",
+    "tags": [
+      "build process",
+      "dc6"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2016-03-01",
+    "summary": "Used specific version of PlatformConfig.xml for dc6 build.",
+    "evidence": "RAW LOGS: ... (C:\\iag_maestro-content\\PlatformConfig.xml)",
+    "sensitivity": "Public",
+    "tags": [
+      "PlatformConfig.xml",
+      "dc6"
+    ],
+    "rank": 4
+  }
+]

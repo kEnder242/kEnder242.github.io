@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2024-02-27",
+    "summary": "MCTP device discovery and interaction using various tools.",
+    "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "i2cdetect",
+      "busctl",
+      "i2cget"
+    ],
+    "rank": 4
+  }
+]

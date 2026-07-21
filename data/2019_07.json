@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2019-07-01",
+    "summary": "Power limit accuracy issue across domains reported",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
+    "sensitivity": "Public",
+    "tags": [
+      "domains",
+      "power_limit_accuracy"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "montana_testing",
+      "bist_errors"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Tool 'montana.nativemodules.pmcapsweep' used to investigate power limit accuracy errors",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "pmcapsweep",
+      "power_limit_accuracy"
+    ],
+    "rank": 4
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2016-07-22",
+    "summary": "Setup test environment using set_farm.sh and run Maestro tests with specific parameters",
+    "evidence": "/p/ppa/farm/tools/proj_bin/set_farm.sh -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
+    "sensitivity": "Public",
+    "tags": [
+      "Maestro",
+      "test environment"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2016-07-22",
+    "summary": "Nightly build of fulsim includes bug fix for Maestro tests crashing after upgrading fulsim",
+    "evidence": "Nightly build contains unreleased fix for \"HSD GEN10LP [Bug_DE][1946333][Acknowledged (NAB)] Maestro tests crash after upgrading fulsim\"",
+    "sensitivity": "Public",
+    "tags": [
+      "bug fix",
+      "fulsim"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2016-07-22",
+    "summary": "Errors encountered during test related to PCI Cfg writes and executed callbacks",
+    "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
+    "sensitivity": "Public",
+    "tags": [
+      "PCI Cfg writes",
+      "executed callbacks"
+    ],
+    "rank": 4
+  }
+]

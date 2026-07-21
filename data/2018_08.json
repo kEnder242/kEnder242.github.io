@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2018-08-29",
+    "summary": "POST memory test failure with Machine Check Exception (MCE) error code VC30 in HSD-ES case #2204264234",
+    "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
+    "sensitivity": "Public",
+    "tags": [
+      "mce",
+      "vc30",
+      "error"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-08-31",
+    "summary": "ixpdimm-cli help command takes an excessively long time to execute in HSD-ES case #2204553489",
+    "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "performance"
+    ],
+    "rank": 4
+  }
+]

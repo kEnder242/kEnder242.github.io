@@ -1,0 +1,336 @@
+[
+  {
+    "date": "2015-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-abc1"
+  },
+  {
+    "date": "2015-01-01",
+    "summary": "Set up hosts & Targets for PVT validation testing using BXTP, JF5 lab, and DSDJF-H067 tools.",
+    "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
+    "sensitivity": "Public",
+    "tags": [
+      "validation",
+      "testing",
+      "PVT"
+    ],
+    "rank": 4,
+    "id": "GEM-8e79"
+  },
+  {
+    "date": "2015-01-15",
+    "summary": "Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+    "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+    "sensitivity": "Public",
+    "tags": [
+      "host interface",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-abb6"
+  },
+  {
+    "date": "2015-01-28",
+    "summary": "Resolved IPC error code (0x800e0001) and improved FPGAIntegration stability by patching init_soc.cmm",
+    "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
+    "sensitivity": "Public",
+    "tags": [
+      "powercycle.py",
+      "init_soc.cmm",
+      "FPGAIntegration"
+    ],
+    "rank": 4,
+    "id": "GEM-67b1"
+  },
+  {
+    "date": "2015-02-01",
+    "summary": "Test runs failed due to missing VCDs and incorrect MSR values",
+    "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
+    "sensitivity": "Public",
+    "tags": [
+      "msr_error",
+      "test_failure",
+      "vcd_missing"
+    ],
+    "rank": 4,
+    "id": "GEM-2b24"
+  },
+  {
+    "date": "2015-02-01",
+    "summary": "Error code IPC_ErrorCode.IPC_Error MSR_Access_Faulted (0x80090003L) indicates CPU fault while accessing MSR",
+    "evidence": "RAW LOGS: Error message indicating MSR access faulted.",
+    "sensitivity": "Public",
+    "tags": [
+      "cpu_fault",
+      "msr_error"
+    ],
+    "rank": 4,
+    "id": "GEM-7964"
+  },
+  {
+    "date": "2015-02-01",
+    "summary": "Script failed to recover from 'TRACE32 device already in use' issue",
+    "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
+    "sensitivity": "Public",
+    "tags": [
+      "trace32_error",
+      "recovery_failure"
+    ],
+    "rank": 4,
+    "id": "GEM-3f26"
+  },
+  {
+    "date": "2015-03-01",
+    "summary": "visa_patgen_manual_stop function failed due to unknown reason.",
+    "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
+    "sensitivity": "Public",
+    "tags": [
+      "visa_patgen_manual_stop",
+      "failure"
+    ],
+    "rank": 4,
+    "id": "GEM-5861"
+  },
+  {
+    "date": "2015-03-01",
+    "summary": "Causality error: conflicting dates between log and tool release.",
+    "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
+    "sensitivity": "Public",
+    "tags": [
+      "causality",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-e119"
+  },
+  {
+    "date": "2015-03-27",
+    "summary": "IPC connection failure prevented target config sequence from starting.",
+    "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
+    "sensitivity": "Public",
+    "tags": [
+      "ipc",
+      "connection",
+      "failure"
+    ],
+    "rank": 4,
+    "id": "GEM-b175"
+  },
+  {
+    "date": "2015-04-27",
+    "summary": "cfg_apitest64.exe used to run tests in probemode and tap2sb modes",
+    "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
+    "sensitivity": "Public",
+    "tags": [
+      "tap2sb",
+      "probemode",
+      "cfg_apitest64.exe"
+    ],
+    "rank": 4,
+    "id": "GEM-957f"
+  },
+  {
+    "date": "2015-04-27",
+    "summary": "ITP bugs [5661248] and [5659929] reported",
+    "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
+    "sensitivity": "Public",
+    "tags": [
+      "ITP",
+      "bugs"
+    ],
+    "rank": 4,
+    "id": "GEM-dccc"
+  },
+  {
+    "date": "2015-04-27",
+    "summary": "ipccli module failed to import in Python 2.7.9 environment on Windows",
+    "evidence": "RAW LOGS: ImportError: No module named ipccli",
+    "sensitivity": "Public",
+    "tags": [
+      "ipccli",
+      "Python 2.7.9"
+    ],
+    "rank": 4,
+    "id": "GEM-7e50"
+  },
+  {
+    "date": "2015-06-15",
+    "summary": "Installed BXT OEM toolstack to configure system trace.",
+    "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran C:\\Python27\\Scripts\\ipccli.exe with the command import bxt_utils; bxt_utils.th_break()",
+    "sensitivity": "Public",
+    "tags": [
+      "system trace",
+      "BXT OEM toolstack"
+    ],
+    "rank": 4,
+    "id": "GEM-6b2c"
+  },
+  {
+    "date": "2015-06-15",
+    "summary": "Internal error occurred during session tde_boot due to missing metadata file.",
+    "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
+    "sensitivity": "Public",
+    "tags": [
+      "internal error",
+      "metadata file"
+    ],
+    "rank": 4,
+    "id": "GEM-6435"
+  },
+  {
+    "date": "2015-06-25",
+    "summary": "Dockable content 'EDRAMIOT' created with dimensions 383x525.13 pixels and anchored to top of container pane.",
+    "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
+    "sensitivity": "Public",
+    "tags": [
+      "dockable_content",
+      "EDRAMIOT"
+    ],
+    "rank": 4,
+    "id": "GEM-510d"
+  },
+  {
+    "date": "2015-07-29",
+    "summary": "Modifications to SkyLake_M0 platform's EDRAM signals and VISA panel configuration",
+    "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "EDRAM",
+      "SkyLake_M0"
+    ],
+    "rank": 4,
+    "id": "GEM-9feb"
+  },
+  {
+    "date": "2015-07-29",
+    "summary": "Update to visa_custom_rs.xml file affected EDC changes path",
+    "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
+    "sensitivity": "Public",
+    "tags": [
+      "EDC",
+      "visa_custom_rs.xml"
+    ],
+    "rank": 4,
+    "id": "GEM-6e23"
+  },
+  {
+    "date": "2015-07-29",
+    "summary": "New programming implemented using Python scripts for VISA signals",
+    "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "Python"
+    ],
+    "rank": 4,
+    "id": "GEM-6c84"
+  },
+  {
+    "date": "2015-08-17",
+    "summary": "PVT BXTOEM testing on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400.exe",
+    "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "PVT BXTOEM",
+      "testing",
+      "SV2K8122"
+    ],
+    "rank": 4,
+    "id": "GEM-c456"
+  },
+  {
+    "date": "2015-08-25",
+    "summary": "BXTP target relocation note",
+    "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
+    "sensitivity": "Public",
+    "tags": [
+      "BXTP",
+      "target relocation"
+    ],
+    "rank": 4,
+    "id": "GEM-28b7"
+  },
+  {
+    "date": "2015-08-28",
+    "summary": "NPK SDK installation and configuration",
+    "evidence": "The latest nightly build was fetched from https://git-amr-1.devtools.intel.com/gerrit/ecdl_dbg-northpeak-sdk refs/changes/49/63649/2. The build script was run using C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -e and then C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -r -b",
+    "sensitivity": "Public",
+    "tags": [
+      "installation",
+      "NPK SDK",
+      "configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-8ff2"
+  },
+  {
+    "date": "2015-10-01",
+    "summary": "CAUSALITY ERROR: Tool XMon version 2.7.3 was released in 2015 but used in log entries with later dates (2016).",
+    "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
+    "sensitivity": "Public",
+    "tags": [
+      "tool",
+      "causality error"
+    ],
+    "rank": 4,
+    "id": "GEM-8870"
+  },
+  {
+    "date": "2015-11-25",
+    "summary": "HSD update issue: BSSB no data on first trace, need to retry",
+    "evidence": "https://hsdes.intel.com/home/default.html#article?id=1404494581",
+    "sensitivity": "Public",
+    "tags": [
+      "update",
+      "HSD"
+    ],
+    "rank": 4,
+    "id": "GEM-f696"
+  },
+  {
+    "date": "2015-11-30",
+    "summary": "Debug configuration issue: BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
+    "evidence": "BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
+    "sensitivity": "Public",
+    "tags": [
+      "debug",
+      "configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-b2a2"
+  },
+  {
+    "date": "2015-12-15",
+    "summary": "Resolved gt_portid issue in PythonCLI scripts",
+    "evidence": "The log entry on 12/15/2015 mentions an issue with `gt_portid` being dynamic for PythonCLI-based VISA/GTPO programming.",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonCLI",
+      "VISA/GTPO",
+      "gt_portid"
+    ],
+    "id": "GEM-27de",
+    "rank": 4
+  },
+  {
+    "date": "2015-12-17",
+    "summary": "Added DOA tests to TestRunner files and updated TargetConfigurations.xml",
+    "evidence": "The log entry on 12/17/2015 mentions 'OpenIPC DOA' and lists several test cases in the TestRunnerData/TestSuiteList.csv file.",
+    "sensitivity": "Public",
+    "tags": [
+      "TestRunner",
+      "TargetConfigurations.xml",
+      "DOA"
+    ],
+    "id": "GEM-01d7",
+    "rank": 4
+  }
+]

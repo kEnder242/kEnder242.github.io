@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2018-01-01",
+    "summary": "Proton1 and Proton2 platforms tested for App Direct Dependency Failure during Boot (HSD-ES) on Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
+    "sensitivity": "Public",
+    "tags": [
+      "Proton1",
+      "Purley 2S",
+      "Purley 4S",
+      "Proton2"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-01-02",
+    "summary": "Stress testing conducted on Proton2 using stressapptest and FIO to validate DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic - Linux.",
+    "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
+    "sensitivity": "Public",
+    "tags": [
+      "FIO",
+      "stressapptest"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-01-03",
+    "summary": "CScripts version Rev 1.46 Bld 726820 used for Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
+    "sensitivity": "Public",
+    "tags": [
+      "Purley 2S",
+      "CScripts",
+      "Purley 4S"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "App Direct Dependency Failure during Boot and BIOS update to PSE119N",
+    "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
+    "sensitivity": "Public",
+    "tags": [
+      "App Direct Dependency Failure",
+      "BIOS update"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "Configuring grub2-mkconfig settings",
+    "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
+    "sensitivity": "Public",
+    "tags": [
+      "grub2-mkconfig",
+      "configuration"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "Creating persistent memory resources using ipmctl",
+    "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
+    "sensitivity": "Public",
+    "tags": [
+      "persistent memory",
+      "ipmctl"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic",
+    "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
+    "sensitivity": "Public",
+    "tags": [
+      "Cold Reset",
+      "DC Cycling"
+    ],
+    "rank": 4
+  }
+]

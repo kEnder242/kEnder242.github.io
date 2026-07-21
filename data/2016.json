@@ -1,0 +1,448 @@
+[
+  {
+    "date": "2016-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-5594"
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "TODO: Update and share bxt_utils.py code",
+    "evidence": "send updated bxt_utils.py to Jo",
+    "sensitivity": "Public",
+    "tags": [
+      "update",
+      "code"
+    ],
+    "id": "GEM-d24e",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Resolve VISA panel configuration issue on Skylake_RO",
+    "evidence": "Setting MSGUTILS_CR_VISA2OCLA_CFG_0_0_0_GDXCBAR to F would suggest pcu is in the Fclk domain",
+    "sensitivity": "Public",
+    "tags": [
+      "issue",
+      "resolution"
+    ],
+    "id": "GEM-b189",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Discuss Northpeak Break (NPK_BREAK) with Arun and Ilya",
+    "evidence": "discussed NPK_BREAK with Arun and Ilya",
+    "sensitivity": "Public",
+    "tags": [
+      "discussion",
+      "configuration"
+    ],
+    "id": "GEM-4e38",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Ramp up on OSbv tests",
+    "evidence": "-Ramp up on OSbv tests - http://goto/maple3 (Morris)",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Research"
+    ],
+    "id": "GEM-0166"
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Plane processing crashes",
+    "evidence": "[HAS Simics - Bug #22256] (New) Corruption in fulsim planes processing captures when running bare metal maestro test - https://redmine.igk.intel.com/issues/22256 ",
+    "sensitivity": "Public",
+    "tags": [
+      "Bug",
+      "Crash"
+    ],
+    "id": "GEM-27ab"
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "CRC mismatches between Lily and Simics",
+    "evidence": "[HSD-ES][services_sys_val][bug][1208479966][2-high][open_new] Mismatched CRCs when running display tests on Simics VP - https://hsdes.intel.com/home/default.html#article?id=1208479966",
+    "sensitivity": "Public",
+    "tags": [
+      "Bug",
+      "Mismatch"
+    ],
+    "id": "GEM-40ff"
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Graphics FLR feature being worked on",
+    "evidence": "[HSD-ES][presi_platforms][feature][cnl-y/u][1207991796][3-medium][open] Graphics FLR",
+    "sensitivity": "Public",
+    "tags": [
+      "Feature",
+      "Work-in-progress"
+    ],
+    "id": "GEM-19be"
+  },
+  {
+    "date": "2016-01-01",
+    "summary": "Python 2.7 released.",
+    "evidence": "RAW LOGS mention Python version is Python 2.7, which was released in 2008.",
+    "sensitivity": "Public",
+    "tags": [
+      "python"
+    ],
+    "id": "GEM-2c81",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-26",
+    "summary": "ITP Bug [5661723] reported: Installer interrupted when Python is in a corrupt state.",
+    "evidence": "RAW LOGS mention ITP Bug [5661723][New][Medium][jdelsey]",
+    "sensitivity": "Public",
+    "tags": [
+      "bug",
+      "python"
+    ],
+    "id": "GEM-4695",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-26",
+    "summary": "init_soc.cmm script used to fix BSSB4.",
+    "evidence": "RAW LOGS mention init_soc.cmm script was used on January 26, 2016.",
+    "sensitivity": "Public",
+    "tags": [
+      "script",
+      "bssb"
+    ],
+    "id": "GEM-8af7",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-26",
+    "summary": "BSSB tracing issues on BXT E0 reported: BIOS overwrites swdest_0, GetDebugPortPowerStatus failed.",
+    "evidence": "RAW LOGS mention technical issues with BSSB tracing on BXT E0.",
+    "sensitivity": "Public",
+    "tags": [
+      "tracing",
+      "bssb"
+    ],
+    "id": "GEM-e000",
+    "rank": 4
+  },
+  {
+    "date": "2016-01-27",
+    "summary": "VISA patgen tool used to verify BSSB on BXT E0.",
+    "evidence": "RAW LOGS mention VISA patgen tool was used on January 27, 2016.",
+    "sensitivity": "Public",
+    "tags": [
+      "tool",
+      "bssb"
+    ],
+    "id": "GEM-18d7",
+    "rank": 4
+  },
+  {
+    "date": "2016-02-26",
+    "summary": "Resolve 'Can't bind socket to port: Address already in use' error by killing AubLoad process",
+    "evidence": "[Titan]: !Error: !Error: Unable to create IPC server\n[Titan]: !Error: !No connection available to port: 7010\nFIX: killall AubLoad\ncd /proc/<PID>/fd && ls -l | grep 'socket'\nkill <PID>",
+    "sensitivity": "Public",
+    "tags": [
+      "AubLoad",
+      "Simics"
+    ],
+    "id": "GEM-7d5f",
+    "rank": 4
+  },
+  {
+    "date": "2016-02-26",
+    "summary": "Dump and process HAS environment variables",
+    "evidence": "14:55:47. 2 : [Generic ] [Vital   ] : Dump of HAS environment variables completed\n14:55:47. 2 : [Generic ] [Vital   ] : Main thread: 1, wx GUI: 1",
+    "sensitivity": "Public",
+    "tags": [
+      "HAS"
+    ],
+    "id": "GEM-3c3e",
+    "rank": 4
+  },
+  {
+    "date": "2016-02-29",
+    "summary": "Plan relevant Maestro tests for Pipe2d and document test methods",
+    "evidence": "2pt - Plan relevant Maestro tests for Pipe2d - AC: document list of tests and methods for running",
+    "sensitivity": "Public",
+    "tags": [
+      "Maestro",
+      "Pipe2d"
+    ],
+    "id": "GEM-e1e2",
+    "rank": 4
+  },
+  {
+    "date": "2016-02-29",
+    "summary": "Resolve 'Can't bind socket to port: Address already in use' error by killing AubLoad process",
+    "evidence": "killall AubLoad, ps -A | grep AubLoad, kill <PID>",
+    "sensitivity": "Public",
+    "tags": [
+      "AubLoad",
+      "Socket Error"
+    ],
+    "id": "GEM-317c",
+    "rank": 4
+  },
+  {
+    "date": "2016-02-29",
+    "summary": "Fix XML errors due to missing external entities in Simics by editing start_simics_gen10_fulsim.lua script",
+    "evidence": "edit /nfs/fm/disks/fm_cnlgt_00290/jallred/workspace/SimicsProject/genx",
+    "sensitivity": "Public",
+    "tags": [
+      "XML Error",
+      "Simics"
+    ],
+    "id": "GEM-a568",
+    "rank": 4
+  },
+  {
+    "date": "2016-03-01",
+    "summary": "Reverted dc6.bl2 due to outdated bling and pipes B or C compatibility issues.",
+    "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
+    "sensitivity": "Public",
+    "tags": [
+      "bling",
+      "pipes",
+      "dc6"
+    ],
+    "rank": 4,
+    "id": "GEM-5dcf"
+  },
+  {
+    "date": "2016-03-01",
+    "summary": "Updated build process for dc6 to accommodate changes in configuration or settings.",
+    "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
+    "sensitivity": "Public",
+    "tags": [
+      "build process",
+      "dc6"
+    ],
+    "rank": 4,
+    "id": "GEM-0af8"
+  },
+  {
+    "date": "2016-03-01",
+    "summary": "Used specific version of PlatformConfig.xml for dc6 build.",
+    "evidence": "RAW LOGS: ... (C:\\iag_maestro-content\\PlatformConfig.xml)",
+    "sensitivity": "Public",
+    "tags": [
+      "PlatformConfig.xml",
+      "dc6"
+    ],
+    "rank": 4,
+    "id": "GEM-9e2b"
+  },
+  {
+    "date": "2016-04-29",
+    "summary": "Repeated mmio read and write operations on addresses 0x64000 and 0x64050 with potential configuration or architectural issues.",
+    "evidence": "RAW LOGS: repeated warnings about failed reads and writes due to lack of ranges for addresses 0x64000 and 0x64050",
+    "sensitivity": "Public",
+    "tags": [
+      "configuration issue",
+      "mmio",
+      "memory access"
+    ],
+    "id": "GEM-d8ef",
+    "rank": 4
+  },
+  {
+    "date": "2016-04-29",
+    "summary": "Server process creation failed on dc6 due to 'Resource temporarily unavailable' error.",
+    "evidence": "[RAW LOGS] 15:04:57. 3 : [TitanModule]: set_mem_space running> fox2 server process create: Resource temporarily unavailable",
+    "sensitivity": "Public",
+    "tags": [
+      "server_process_creation",
+      "dc6"
+    ],
+    "id": "GEM-f052",
+    "rank": 4
+  },
+  {
+    "date": "2016-04-29",
+    "summary": "MMIO read and write operations failed at addresses 0x0000000000664000 and 0x0000000000664050 due to lack of range.",
+    "evidence": "[RAW LOGS] 14:48:10. 2 : [HW_FW   ] [Warning ] : Write Failed:No range for address 0x0000000000664000",
+    "sensitivity": "Public",
+    "tags": [
+      "read_write_errors",
+      "mmio"
+    ],
+    "id": "GEM-4f49",
+    "rank": 4
+  },
+  {
+    "date": "2016-04-29",
+    "summary": "Display powerup sequence allowed access to regions that are otherwise inaccessible, but subsequent operations still failed with 'no range' errors.",
+    "evidence": "[RAW LOGS] 14:48:10. 2 : [PMBox   ] [Trace   ] : Display powerup -- allow access to 0x00064000",
+    "sensitivity": "Public",
+    "tags": [
+      "display_powerup",
+      "inaccessible_regions"
+    ],
+    "id": "GEM-6b39",
+    "rank": 4
+  },
+  {
+    "date": "2016-05-01",
+    "summary": "Simulation environment setup using Simics 4.8.pre22 and XMON 2.7.3",
+    "evidence": "The simulation environment was set up as follows: ... (see SOLUTIONS for details)",
+    "sensitivity": "Public",
+    "tags": [
+      "Simics",
+      "XMON",
+      "CNL platform"
+    ],
+    "id": "GEM-4b7a",
+    "rank": 4
+  },
+  {
+    "date": "2016-05-01",
+    "summary": "Include files used to set up the simulation environment",
+    "evidence": "The include files used were: ... (see SOLUTIONS for details)",
+    "sensitivity": "Public",
+    "tags": [
+      "cnl-pcxml-pre.include",
+      "cnl-punit-pre.include",
+      "cnl-has-pre.include",
+      "cnl-wb-punit-pre.include"
+    ],
+    "id": "GEM-d5eb",
+    "rank": 4
+  },
+  {
+    "date": "2016-05-01",
+    "summary": "Hint towards further investigation into the tool registry",
+    "evidence": "The text mentions 'see Era Registry for dates' in the context of released tools",
+    "sensitivity": "Public",
+    "tags": [
+      "Era Registry",
+      "tool registry"
+    ],
+    "id": "GEM-8253",
+    "rank": 4
+  },
+  {
+    "date": "2016-05-01",
+    "summary": "Simulation encountered issues with proxy trace and HW_FW warnings, filtered out using `awk` commands.",
+    "evidence": "/nfs/fm/disks/fm_cnlgt_00290/jallred/0x11F2F_BareMetal_REL2142_XML.RVP5_MCPD0.bin",
+    "sensitivity": "Public",
+    "tags": [
+      "proxy trace",
+      "HW_FW warnings",
+      "simulation"
+    ],
+    "id": "GEM-1794",
+    "rank": 4
+  },
+  {
+    "date": "2016-05-01",
+    "summary": "Used `softmon` tool to capture waveforms of DDI_BUF_CTR and display pixel data.",
+    "evidence": "/nfs/fm/disks/fm_cnlgt_00290/jallred/0x11F2F_BareMetal_REL2142_XML.RVP5_MCPD0.bin",
+    "sensitivity": "Public",
+    "tags": [
+      "pixel data",
+      "waveforms",
+      "softmon"
+    ],
+    "id": "GEM-b62d",
+    "rank": 4
+  },
+  {
+    "date": "2016-06-01",
+    "summary": "MAESTRO_GFX variable set to enable GFX modules in build process",
+    "evidence": "make MAESTRO_TAGS=cnl.vp MAESTRO_INSTALL_PATH=c:\\maestro-58.0.0-win64 / ERROR: MAESTRO_GFX is not defined, GFX modules excluded from build! FIX: set MAESTRO_GFX",
+    "sensitivity": "Public",
+    "tags": [
+      "MAESTRO",
+      "GFX"
+    ],
+    "id": "GEM-e27c",
+    "rank": 4
+  },
+  {
+    "date": "2016-06-24",
+    "summary": "Investigate regressions and unit tests for PureVP/Pipe2d/SV stack",
+    "evidence": "6/24/2016 +Story: look into where regressions and unit tests get involved for the PureVP/Pipe2d/SV stack",
+    "sensitivity": "Public",
+    "tags": [
+      "PureVP",
+      "Pipe2d",
+      "SV"
+    ],
+    "id": "GEM-a758",
+    "rank": 4
+  },
+  {
+    "date": "2016-06-29",
+    "summary": "Mismatched CRC issue attributed to outdated Fulsim version",
+    "evidence": "6/29/2016 - Compare with Lily and Simics results / Update - [HSD-ES][services_sys_val][bug][1208479966][3-medium][open_new] Mismatched CRCs when running display tests on Simics VP",
+    "sensitivity": "Public",
+    "tags": [
+      "CRC",
+      "Fulsim"
+    ],
+    "id": "GEM-1d2b",
+    "rank": 4
+  },
+  {
+    "date": "2016-07-22",
+    "summary": "Setup test environment using set_farm.sh and run Maestro tests with specific parameters",
+    "evidence": "/p/ppa/farm/tools/proj_bin/set_farm.sh -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
+    "sensitivity": "Public",
+    "tags": [
+      "Maestro",
+      "test environment"
+    ],
+    "rank": 4,
+    "id": "GEM-07fe"
+  },
+  {
+    "date": "2016-07-22",
+    "summary": "Nightly build of fulsim includes bug fix for Maestro tests crashing after upgrading fulsim",
+    "evidence": "Nightly build contains unreleased fix for \"HSD GEN10LP [Bug_DE][1946333][Acknowledged (NAB)] Maestro tests crash after upgrading fulsim\"",
+    "sensitivity": "Public",
+    "tags": [
+      "bug fix",
+      "fulsim"
+    ],
+    "rank": 4,
+    "id": "GEM-cfe1"
+  },
+  {
+    "date": "2016-07-22",
+    "summary": "Errors encountered during test related to PCI Cfg writes and executed callbacks",
+    "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
+    "sensitivity": "Public",
+    "tags": [
+      "PCI Cfg writes",
+      "executed callbacks"
+    ],
+    "rank": 4,
+    "id": "GEM-b1bc"
+  },
+  {
+    "date": "2016-2019-01",
+    "summary": "Collaboration between development team and Tang Yueping on LCR_Margining project",
+    "evidence": "[LCR_Margining] Meet SCR EVQT Lead - [REDACTED]",
+    "sensitivity": "Public",
+    "tags": [
+      "SCR",
+      "Collaboration"
+    ],
+    "rank": 4,
+    "id": "GEM-cf57"
+  }
+]

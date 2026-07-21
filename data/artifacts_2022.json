@@ -1,0 +1,416 @@
+[
+  {
+    "synopsis": "Concurrent PECI requests supported in a single script.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "Concurrent",
+      "Script"
+    ],
+    "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Intel's power node manager interface specification",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Intel",
+      "Power Management",
+      "Interface Specification"
+    ],
+    "filename": "641273_Intel Intelligent Power Node Manager External Interface Spec_rev1p4.pdf",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Tracks execution of Jason Aurora subsystem components.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Jason Aurora",
+      "Subsystem Execution",
+      "Tracker"
+    ],
+    "filename": "Jason Aurora Subsystem Execution Tracker.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Insight into Jason's work from April to November 2022",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Jason",
+      "Insight",
+      "2022"
+    ],
+    "filename": "Jason Insight April-Nov 2022.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "MIV- Requirements for Automation.xlsx",
+    "synopsis": "Comprehensive requirement matrix for manageability validation automation.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode"
+  },
+  {
+    "synopsis": "Redfish API implementation for network management",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Redfish",
+      "API",
+      "Network Management"
+    ],
+    "filename": "NM Redfish.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Customer issue tracking and resolution for PECI",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "customer issues",
+      "PECI",
+      "resolution"
+    ],
+    "filename": "PECI customer issues.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Script for PECI commands and I/O operations",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "commands",
+      "I/O operations"
+    ],
+    "filename": "PECI_TO_BIOS_BOOT_WW31_2 (1).txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI commands and parameters for automation",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "commands",
+      "parameters",
+      "automation"
+    ],
+    "filename": "PECI_commands.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "U-Boot 2019.04 boot process logs",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "U-Boot",
+      "boot process",
+      "log"
+    ],
+    "filename": "PECI_experiments_WW31.3_1.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Validate Threshold Sensor Severity and LED Status",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "OpenBMC",
+      "Sensor",
+      "Threshold",
+      "Severity",
+      "LED"
+    ],
+    "filename": "SensorSeverityThreshold_OpenBMC_longrun.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Stress testing of PECI system",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "Stress Testing",
+      "System"
+    ],
+    "filename": "_PECI_stress.pptx",
+    "method": "AI"
+  },
+  {
+    "filename": "_Stressing Redfish PECI.pptx",
+    "synopsis": "Presentation on the methodology for high-load Redfish-to-PECI stress testing.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1-BeZ4N7l9ayq4XKZy-CslC3fOwN1V5Dm"
+  },
+  {
+    "filename": "blackbox.py",
+    "synopsis": "System telemetry recorder for capturing post-mortem diagnostic data.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1DVv5BQXU00Jyh22jZLQc6q8mVJCcKTxk"
+  },
+  {
+    "filename": "gethostcpudata.py",
+    "synopsis": "Utility for extracting host CPU telemetry via sideband interfaces.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1IwlHtWG8jVpIACM55hM63C3vQf6xriYk"
+  },
+  {
+    "filename": "makechart.py",
+    "synopsis": "Telemetry visualization tool converting raw PECI/RAPL logs into analytical charts.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1Rr684PJVPrXmIGe5fmmcR4fSUuyk4NHd"
+  },
+  {
+    "filename": "mctp_wrapper.cpp",
+    "synopsis": "C++ packet handling wrapper for low-latency MCTP communication.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1706VmAyfVN-DlZYT8jhagHUJOChFFl5N"
+  },
+  {
+    "synopsis": "Power limit accuracy analysis for a senior engineer's portfolio",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Power",
+      "Accuracy",
+      "Analysis",
+      "Senior Engineer",
+      "Portfolio"
+    ],
+    "filename": "miv_nm_power_limit_accuracy_d0.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Automated power range testing for MIV package",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "MIV",
+      "power range",
+      "testing",
+      "package"
+    ],
+    "filename": "miv_package_power_range_20221106-230850.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "OKRs for Senior Engineer's portfolio",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "OKRs",
+      "Portfolio",
+      "Senior Engineer"
+    ],
+    "filename": "okrs.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Script for analyzing PCU data",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PCU",
+      "data",
+      "analysis"
+    ],
+    "filename": "pcu_notes.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI Xtor implementation in Python",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "Xtor",
+      "Python"
+    ],
+    "filename": "peciXtor.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Verification of MSR values on different threads",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "MSR",
+      "threads",
+      "verification"
+    ],
+    "filename": "peci_check.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "IPMI-based PECI framework example script",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "PECI",
+      "BMC",
+      "Redfish"
+    ],
+    "filename": "peci_framework_ipmi_example.py",
+    "method": "AI"
+  },
+  {
+    "filename": "peci_redfish.py",
+    "synopsis": "Tool for bridging and validating PECI commands through Redfish endpoints.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
+  },
+  {
+    "synopsis": "IPMI command execution and error handling",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "command",
+      "execution",
+      "error"
+    ],
+    "filename": "peci_validation.csv",
+    "method": "AI"
+  },
+  {
+    "filename": "pecistressor.py",
+    "synopsis": "High-throughput PECI command stress tool, capable of ~5300 commands/sec.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1a95TKnx8eODfM5gdCSv6V07i0ZHL_3F1"
+  },
+  {
+    "synopsis": "Redfish API logs and session management",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "Redfish",
+      "API",
+      "Session Management"
+    ],
+    "filename": "pmcapsweep_unit.csv",
+    "method": "AI"
+  },
+  {
+    "filename": "policy.py",
+    "synopsis": "Platform power policy management and validation logic.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1bl8p8sKgvUG3fXVTi2XwHLdzxjprn-eD"
+  },
+  {
+    "synopsis": "IPMI policy management script",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "policy",
+      "management"
+    ],
+    "filename": "policy_jason.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish API logs and session management",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Redfish",
+      "API",
+      "logs",
+      "session management"
+    ],
+    "filename": "policy_unit.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Command matrix for RDiamSR PECI commands",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "RDiamSR",
+      "PECI",
+      "command",
+      "matrix"
+    ],
+    "filename": "rdiamsr_peci_cmd_matrix.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "sensor_validator.py",
+    "synopsis": "Automated validation of OpenBMC sensor thresholds against platform specs.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "17tWU4uGCSCcvyrU825KXm39uDfMg_FlX"
+  },
+  {
+    "synopsis": "PECI exceptions handling in software development",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "exceptions",
+      "software development"
+    ],
+    "filename": "spr_peci_exceptions.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "IPMI statistics script",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "statistics",
+      "script"
+    ],
+    "filename": "statistics.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Power system monitoring and management",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Power",
+      "Monitoring",
+      "Management",
+      "Redfish",
+      "API"
+    ],
+    "filename": "stats_unit.csv",
+    "method": "AI"
+  }
+]

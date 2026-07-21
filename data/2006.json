@@ -1,0 +1,113 @@
+[
+  {
+    "date": "2006-01-01",
+    "summary": "Updated RPC.tcl to reflect MC's verbosity changes",
+    "evidence": "TODO or research link mentioned in [SOLUTIONS] 1.",
+    "sensitivity": "Public",
+    "tags": [
+      "RPC",
+      "verbosity",
+      "MC"
+    ],
+    "id": "GEM-e86a",
+    "rank": 4
+  },
+  {
+    "date": "2006-01-15",
+    "summary": "Resolved xtrans.dll issue by updating IpmiSessionProcessor.cpp and re-compiling the dll",
+    "evidence": "[SOLUTIONS] 2.",
+    "sensitivity": "Public",
+    "tags": [
+      "xtrans",
+      "IpmiSessionProcessor",
+      "dll"
+    ],
+    "id": "GEM-7493",
+    "rank": 4
+  },
+  {
+    "date": "2006-02-01",
+    "summary": "Completed APIRmcpPriv.tcl and updated I2CorSMS in rmcpp_recover with a working proc",
+    "evidence": "[SOLUTIONS] 3.",
+    "sensitivity": "Public",
+    "tags": [
+      "APIRmcpPriv",
+      "I2CorSMS"
+    ],
+    "id": "GEM-7576",
+    "rank": 4
+  },
+  {
+    "date": "2006-08-29",
+    "summary": "SOL MTP was investigated and new cases were identified from escapes.",
+    "evidence": "RAW LOGS: new cases involved verifying console redirection, interrupting BIOS, booting to EFI, comparing 'dir' results, editing files, exiting console mode, and verifying keyboard responsiveness.",
+    "sensitivity": "Public",
+    "tags": [
+      "escapes",
+      "SOL MTP"
+    ],
+    "id": "GEM-3381",
+    "rank": 4
+  },
+  {
+    "date": "2006-08-29",
+    "summary": "Health and Monitoring script (Tao 126579) was executed every 2 hours for 64 hours to establish SOL.",
+    "evidence": "RAW LOGS: the exact purpose of this script is not explicitly stated, but it appears to be related to establishing a connection or session with the SOL.",
+    "sensitivity": "Public",
+    "tags": [
+      "Tao 126579",
+      "Health and Monitoring script"
+    ],
+    "id": "GEM-110a",
+    "rank": 4
+  },
+  {
+    "date": "2006-08-31",
+    "summary": "Changes made to IpmiSessionProcessor.cpp and apiRmcpSeq.tcl related to 'incInbSeqNum' change.",
+    "evidence": "RAW LOGS: changes were made to these files as part of recompiling the xtrans.dll library.",
+    "sensitivity": "Public",
+    "tags": [
+      "apiRmcpSeq.tcl",
+      "IpmiSessionProcessor.cpp"
+    ],
+    "id": "GEM-2aa6",
+    "rank": 4
+  },
+  {
+    "date": "2006-09-01",
+    "summary": "Write SolMsg.tcl based on IPS",
+    "evidence": "RAW LOGS: 'Write SolMsg.tcl based on IPS.'",
+    "sensitivity": "Public",
+    "tags": [
+      "SolMsg.tcl",
+      "IPS"
+    ],
+    "id": "GEM-c895",
+    "rank": 4
+  },
+  {
+    "date": "2006-09-01",
+    "summary": "Issues with NIC differences on 1750s and cygwin requirements for 1850s identified",
+    "evidence": "RAW LOGS: 'Issues with NIC differences on 1750s and cygwin requirements for 1850s were identified.'",
+    "sensitivity": "Public",
+    "tags": [
+      "NIC",
+      "cygwin"
+    ],
+    "id": "GEM-891e",
+    "rank": 4
+  },
+  {
+    "date": "2006-09-01",
+    "summary": "LAN testing on BMC51 encountered map problems; RPC installed in rack, help provided with device manager issues",
+    "evidence": "RAW LOGS: 'LAN testing began on BMC51, but encountered map problems; RPC was installed in the rack, and help was provided with device manager issues.'",
+    "sensitivity": "Public",
+    "tags": [
+      "RPC",
+      "BMC51",
+      "device manager"
+    ],
+    "id": "GEM-4b96",
+    "rank": 4
+  }
+]

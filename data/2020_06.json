@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2020-06-05",
+    "summary": "Review of NM-4.0 External Interface Spec",
+    "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
+    "sensitivity": "Public",
+    "tags": [
+      "external interface spec",
+      "nm-4.0"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-06-08",
+    "summary": "Update test setup to install at least 4 DIMMs for Domain 2 (memory) power usage above 1W",
+    "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
+    "sensitivity": "Public",
+    "tags": [
+      "test setup",
+      "domain 2"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2020-06-11",
+    "summary": "Delete (NmPolicy 0x2E 0xC1) Returns 0x80 after disabling existing policy",
+    "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
+    "sensitivity": "Public",
+    "tags": [
+      "nm-policy",
+      "delete failure"
+    ],
+    "rank": 4
+  }
+]

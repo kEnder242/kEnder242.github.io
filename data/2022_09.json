@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2022-09-29",
+    "summary": "Review PECI-related issues and EGS DRAM ECS info over OOB PECI",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/14017037890",
+    "sensitivity": "Public",
+    "tags": [
+      "EGS DRAM ECS",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "crdefeature2_bs accessed registers 21850h and 29850h across multiple channels",
+    "evidence": "showsearch method output",
+    "sensitivity": "Public",
+    "tags": [
+      "crdefeature2_bs",
+      "register access"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
+    "evidence": "show_access_info method output",
+    "sensitivity": "Public",
+    "tags": [
+      "crdefeature2_bs",
+      "I/O statistics"
+    ],
+    "rank": 4
+  }
+]

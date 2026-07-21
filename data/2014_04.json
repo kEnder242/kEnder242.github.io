@@ -1,0 +1,46 @@
+[
+  {
+    "date": "2014-04-24",
+    "summary": "Exception related to UNSL0_SQIDI_GDTUNIT_0x9840 not found, possibly investigating or debugging ITP Bug [5027277].",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "exception",
+      "ITP Bug"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-04-28",
+    "summary": "ITP Bug [5027277] reported for a test case involving BDW (Block Data Width) 0x9840 on C1.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "ITP Bug",
+      "BDW"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-04-30",
+    "summary": "Accessing EDRAMBAR registers at addresses 0x6e_0_0_mem_regs, 0x6f_0_0_mem_regs, and 0x71_0_0_mem_regs for debugging or testing purposes.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "EDRAMBAR",
+      "debugging"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2014-04-30",
+    "summary": "Encountering error codes EFALWAYS_CR_VISA_CTL_EFALWAYS (0x3210), EFALWAYS_CR_VISA_SLIDE_EFALWAYS (0x3214), and EFALWAYS_CR_VISA_XBAR_EFALWAYS (0x3218) related to VISA control and configuration.",
+    "evidence": "RAW LOGS: ...",
+    "sensitivity": "Public",
+    "tags": [
+      "VISA",
+      "error codes"
+    ],
+    "rank": 4
+  }
+]

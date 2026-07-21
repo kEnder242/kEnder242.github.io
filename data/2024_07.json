@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2023-02-20",
+    "summary": "Authentication method used for Redfish API queries in this system",
+    "evidence": "-sku option used to authenticate as \"debuguser:0penBmc1\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "API",
+      "authentication"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "PECI commands executed and modified on the system using peci_cmds tool",
+    "evidence": "Examples of PECI commands being executed with different options and arguments",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "peci_cmds"
+    ]
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "System architecture mentioned in technical details, including interfaces supported by the system",
+    "evidence": "Intel-based system with MCTP and PECI interfaces",
+    "sensitivity": "Public",
+    "tags": [
+      "system architecture",
+      "MCTP",
+      "PECI"
+    ]
+  }
+]

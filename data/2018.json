@@ -1,0 +1,465 @@
+[
+  {
+    "date": "2018-01-01",
+    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
+    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "sensitivity": "Public",
+    "tags": [
+      "strategy",
+      "anchor"
+    ],
+    "rank": 5,
+    "id": "GEM-13b1"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "INJC-71 einj 02 functional mem/pcie correctable/(+uc)non_fatal/fatal errors on Linux",
+    "evidence": "https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
+    "sensitivity": "Public",
+    "tags": [
+      "Linux",
+      "INJC-71",
+      "einj 02"
+    ],
+    "id": "GEM-a1c9"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "Gap analysis using PyCharm's startCscripts.py script",
+    "evidence": "startCscripts.py with arguments -a ipc and -c CLX_LBG_XDPA",
+    "sensitivity": "Public",
+    "tags": [
+      "PyCharm",
+      "gap analysis"
+    ],
+    "id": "GEM-7b8b"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "Renaming LINUX_RUNNER_EINJ_CE_ERROR_INJECT_CMD to mem_fatal_part2 and updating test names 01-04 for memory correctable CS/OOB errors",
+    "evidence": "Consolidating part1 and part2 with OOB (Out-of-Bounds) error injection commands",
+    "sensitivity": "Public",
+    "tags": [
+      "Linux",
+      "error injection"
+    ],
+    "id": "GEM-d9aa"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "Proton1 and Proton2 platforms tested for App Direct Dependency Failure during Boot (HSD-ES) on Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
+    "sensitivity": "Public",
+    "tags": [
+      "Proton1",
+      "Purley 2S",
+      "Purley 4S",
+      "Proton2"
+    ],
+    "rank": 4,
+    "id": "GEM-c5a2"
+  },
+  {
+    "date": "2018-01-02",
+    "summary": "Stress testing conducted on Proton2 using stressapptest and FIO to validate DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic - Linux.",
+    "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
+    "sensitivity": "Public",
+    "tags": [
+      "FIO",
+      "stressapptest"
+    ],
+    "rank": 4,
+    "id": "GEM-dec7"
+  },
+  {
+    "date": "2018-01-03",
+    "summary": "CScripts version Rev 1.46 Bld 726820 used for Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
+    "sensitivity": "Public",
+    "tags": [
+      "Purley 2S",
+      "CScripts",
+      "Purley 4S"
+    ],
+    "rank": 4,
+    "id": "GEM-9713"
+  },
+  {
+    "date": "2018-05-22",
+    "summary": "Install HAMR (no specific version mentioned)",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "HAMR"
+    ],
+    "rank": 4,
+    "id": "GEM-14e3"
+  },
+  {
+    "date": "2018-05-23",
+    "summary": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+    "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
+    "sensitivity": "Public",
+    "tags": [
+      "UFM",
+      "shmemcc",
+      "HAMR"
+    ],
+    "rank": 4,
+    "id": "GEM-a8b2"
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Setup Infiniband port-to-port post-driver using quickstart",
+    "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
+    "sensitivity": "Public",
+    "tags": [
+      "Infiniband",
+      "quickstart"
+    ],
+    "rank": 4,
+    "id": "GEM-946a"
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "AEP",
+      "AppDirect Mode",
+      "PMEM"
+    ],
+    "rank": 4,
+    "id": "GEM-a50c"
+  },
+  {
+    "date": "2018-06-01",
+    "summary": "TODO: Investigate 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515)",
+    "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
+    "sensitivity": "Public",
+    "tags": [
+      "bug",
+      "TODO"
+    ],
+    "rank": 4,
+    "id": "GEM-1c6b"
+  },
+  {
+    "date": "2018-06-01",
+    "summary": "Memory configuration corrected using ixpdimm-cli create -goal persistentmemorytype=appdirect and rebooting the system",
+    "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
+    "sensitivity": "Public",
+    "tags": [
+      "memory",
+      "configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-3a33"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Verification process initiated on Cluster with 0/60397968 error rate (0.000000%)",
+    "evidence": "RAW LOGS: 'The verification process initiated on June 29, 2018, had an error rate of 0/60397968 (0.000000%).'",
+    "sensitivity": "Public",
+    "tags": [
+      "verification",
+      "Cluster"
+    ],
+    "rank": 4,
+    "id": "GEM-0119"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Configuration setting for SHMEM_SYMMETRIC_HEAP_SIZE set to 4000M",
+    "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
+    "sensitivity": "Public",
+    "tags": [
+      "SHMEM_SYMMETRIC_HEAP_SIZE",
+      "configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-dd14"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "System's memory resources increase after creating a persistent namespace using ixpdimm-cli create -goal persistentmemorytype=appdirect",
+    "evidence": "ixpdimm-cli show -memoryresources",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "persistentmemory"
+    ],
+    "rank": 4,
+    "id": "GEM-d369"
+  },
+  {
+    "date": "2018-07-27",
+    "summary": "Accessed lanconf script at http://andante.intel.com/scripts/swview.pl?view=/LAN_EEPROM/Purley/Wolf_Pass/Current",
+    "evidence": "http://andante.intel.com/scripts/swview.pl?view=/LAN_EEPROM/Purley/Wolf_Pass/Current",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "lanconf"
+    ],
+    "id": "GEM-0f37",
+    "rank": 4
+  },
+  {
+    "date": "2018-07-31",
+    "summary": "Mounted PMEM device with dax option in /etc/fstab",
+    "evidence": "/dev/pmem48, /mnt/pmem48, /etc/fstab (dax,nofail)",
+    "sensitivity": "Public",
+    "tags": [
+      "PMEM",
+      "dax"
+    ],
+    "id": "GEM-3be5",
+    "rank": 4
+  },
+  {
+    "date": "2018-07-31",
+    "summary": "Partitioned and formatted PMEM devices using parted and mkfs.ext4",
+    "evidence": "/dev/pmem48, parted (GPT label), mkfs.ext4",
+    "sensitivity": "Public",
+    "tags": [
+      "mkfs.ext4",
+      "parted"
+    ],
+    "id": "GEM-995f",
+    "rank": 4
+  },
+  {
+    "date": "2018-08-29",
+    "summary": "POST memory test failure with Machine Check Exception (MCE) error code VC30 in HSD-ES case #2204264234",
+    "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
+    "sensitivity": "Public",
+    "tags": [
+      "mce",
+      "vc30",
+      "error"
+    ],
+    "rank": 4,
+    "id": "GEM-a522"
+  },
+  {
+    "date": "2018-08-31",
+    "summary": "ixpdimm-cli help command takes an excessively long time to execute in HSD-ES case #2204553489",
+    "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "performance"
+    ],
+    "rank": 4,
+    "id": "GEM-ee1f"
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "App Direct Dependency Failure during Boot and BIOS update to PSE119N",
+    "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
+    "sensitivity": "Public",
+    "tags": [
+      "App Direct Dependency Failure",
+      "BIOS update"
+    ],
+    "rank": 4,
+    "id": "GEM-fee5"
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "Configuring grub2-mkconfig settings",
+    "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
+    "sensitivity": "Public",
+    "tags": [
+      "grub2-mkconfig",
+      "configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-3d8b"
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "Creating persistent memory resources using ipmctl",
+    "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
+    "sensitivity": "Public",
+    "tags": [
+      "persistent memory",
+      "ipmctl"
+    ],
+    "rank": 4,
+    "id": "GEM-48ad"
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic",
+    "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
+    "sensitivity": "Public",
+    "tags": [
+      "Cold Reset",
+      "DC Cycling"
+    ],
+    "rank": 4,
+    "id": "GEM-f198"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "No primary TODO or research link mentioned in the logs.",
+    "evidence": "There is no specific TODO or research link mentioned in the logs.",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-b073"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "PCIe correctable error injection commands.",
+    "evidence": "echo 0x0 > /sys/kernel/debug/apei/einj/param1, echo 64 > /sys/kernel/debug/apei/einj/error_type, and echo 1 > /sys/kernel/debug/apei/einj/error_inject",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-b390"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "Configuration options used for error injection in the biosKnobs variable.",
+    "evidence": "WheaErrorInjSupportEn=1, WheaPcieErrInjEn=1, and IioErrorEn=1",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-2538"
+  },
+  {
+    "date": "2018-11-13",
+    "summary": "biosKnobs variable settings similar to those on 11/15/2018.",
+    "evidence": "The log entry on 11/13/2018 shows the biosKnobs variable being set with similar settings as on 11/15/2018",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs"
+    ],
+    "rank": 4,
+    "id": "GEM-392e"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "EINJ (Error Injection) used to inject various types of errors into the system for testing purposes.",
+    "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Injection",
+      "Testing"
+    ],
+    "rank": 4,
+    "id": "GEM-74dc"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "[CAUSALITY ERROR]: Tool used (SvBios) was likely released after 2018, as it uses Python 3.x syntax.",
+    "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
+    "sensitivity": "Public",
+    "tags": [
+      "SvBios",
+      "CAUSALITY ERROR"
+    ],
+    "rank": 4,
+    "id": "GEM-7084"
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "biosKnobs variable settings enable specific error injection features.",
+    "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs",
+      "Error Injection"
+    ],
+    "rank": 4,
+    "id": "GEM-2822"
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "System configuration knobs verified to ensure proper error injection feature configuration.",
+    "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Injection",
+      "System Configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-b79d"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Cloned Git repository from remote server to local directory",
+    "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
+    "sensitivity": "Public",
+    "tags": [
+      "repository",
+      "Git",
+      "clone"
+    ],
+    "rank": 4,
+    "id": "GEM-f75c"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Set user configuration for Git repository",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Git",
+      "user configuration"
+    ],
+    "rank": 4,
+    "id": "GEM-e714"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [
+      "commit-msg",
+      "hook",
+      "Git"
+    ],
+    "rank": 4,
+    "id": "GEM-5c81"
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Primary TODO or research link mentioned in the Technical Abstract",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
+    "sensitivity": "Public",
+    "tags": [
+      "APEI/EINJ",
+      "error injection"
+    ],
+    "rank": 4,
+    "id": "GEM-f1ce"
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+    "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
+    "sensitivity": "Public",
+    "tags": [
+      "IPC",
+      "CLX_LBG_XDPA"
+    ],
+    "rank": 4,
+    "id": "GEM-2550"
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
+    "sensitivity": "Public",
+    "tags": [
+      "APEI/EINJ",
+      "OS log error messages"
+    ],
+    "rank": 4,
+    "id": "GEM-4d60"
+  }
+]

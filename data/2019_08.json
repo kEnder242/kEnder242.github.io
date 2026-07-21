@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2019-01-01",
+    "summary": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces.",
+    "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Code 0xAB",
+      "Error Code 0xAC",
+      "PCI",
+      "IPMI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Intel's HSD appstore article released (likely related to tool 'montana').",
+    "evidence": "RAW LOGS: Mention of Intel's HSD appstore article.",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "HSD Appstore"
+    ]
+  }
+]

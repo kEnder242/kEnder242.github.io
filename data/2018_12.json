@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2018-12-06",
+    "summary": "Cloned Git repository from remote server to local directory",
+    "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
+    "sensitivity": "Public",
+    "tags": [
+      "repository",
+      "Git",
+      "clone"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Set user configuration for Git repository",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Git",
+      "user configuration"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [
+      "commit-msg",
+      "hook",
+      "Git"
+    ],
+    "rank": 4
+  }
+]

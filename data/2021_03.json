@@ -1,0 +1,45 @@
+[
+  {
+    "date": "2021-03-01",
+    "summary": "Primary TODO or research link mentioned: Archer City Platform Architecture",
+    "evidence": "https://intel.sharepoint.com/sites/archercitypat, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City Platform",
+      "Research Link"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "peci_flood.tdf test impacts PECI throughput on MSR reads by comparing throughput cmd/sec with a baseline",
+    "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "peci_flood.tdf",
+      "PECI Throughput"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths",
+    "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI Command Rejection",
+      "peci_poison.tdf"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "No conflicts found in the RAW LOGS regarding tool release years",
+    "evidence": "Tools mentioned are peci_flood.tdf, peci_poison.tdf, and xProd-runs.tdf, but their release years are not explicitly stated in the logs",
+    "sensitivity": "Public",
+    "tags": [
+      "Tool Release Years"
+    ],
+    "rank": 4
+  }
+]
