@@ -1,5 +1,35 @@
 [
   {
+    "timestamp": "2026-07-21 08:39:14",
+    "severity": "INFO",
+    "source": "cloudflared",
+    "message": "2026-07-21T15:39:14Z ERR Request failed error=\"Incoming request ended abruptly: context canceled\" connIndex=1 dest=https://monitor.jason-lab.dev/api/prometheus/grafana/api/v1/rules?dashboard_uid=pinky"
+  },
+  {
+    "timestamp": "2026-07-21 08:39:14",
+    "severity": "INFO",
+    "source": "cloudflared",
+    "message": "2026-07-21T15:39:14Z ERR  error=\"Incoming request ended abruptly: context canceled\" connIndex=1 event=1 ingressRule=0 originService=http://localhost:3000"
+  },
+  {
+    "timestamp": "2026-07-21 08:39:14",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3840c555"
+  },
+  {
+    "timestamp": "2026-07-21 08:39:13",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2084134): GLib-GIO-WARNING **: 08:39:12.900: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-21 08:38:52",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
     "timestamp": "2026-07-21 08:33:52",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
