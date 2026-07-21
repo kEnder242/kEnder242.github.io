@@ -1,5 +1,47 @@
 [
   {
+    "timestamp": "2026-07-21 08:32:23",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-21 08:28:31",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:2080825): GLib-GIO-WARNING **: 08:28:30.813: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-21 08:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-21 08:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-21 08:28:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-21 08:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-21 08:25:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
     "timestamp": "2026-07-21 08:23:10",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
