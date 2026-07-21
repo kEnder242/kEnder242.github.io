@@ -2,9 +2,47 @@
 
 > High-density architecture specification and setup guide for a hybrid public/private Zero Trust web infrastructure.
 
+
 ---
 
-## 🏛️ Executive Summary & Topology
+## 🚀 Setup & Replication Guide (Tutorial)
+
+Follow these steps to replicate this hybrid public/private Zero Trust architecture:
+
+### Step 1: GitHub Pages Setup
+1. Create a public repository named `username.github.io` (e.g. `kEnder242.github.io`).
+2. Add your sanitized `index.html` and static assets.
+3. In Repository **Settings > Pages**, set **Source** to `Deploy from a branch` (`main` / root).
+4. Add custom domain (e.g. `www.jason-lab.dev`). GitHub auto-creates a `CNAME` file.
+
+### Step 2: Cloudflare DNS Configuration
+1. Point domain DNS to Cloudflare nameservers.
+2. Add **CNAME** record:
+   - `Type`: `CNAME`
+   - `Name`: `www`
+   - `Target`: `username.github.io`
+   - `Proxy Status`: **Proxied (Orange Cloud)** 🟠
+
+### Step 3: Cloudflare Zero Trust Tunnel (`cloudflared`)
+1. On local host (e.g., Z87-Linux), install `cloudflared`:
+   ```bash
+   sudo cloudflared service install <tunnel-token>
+   ```
+2. In Cloudflare Zero Trust Dashboard > **Access > Tunnels**:
+   - Route `notes.yourdomain.com` -> `http://localhost:9001`
+   - Route `acme.yourdomain.com` -> `http://localhost:8765`
+
+### Step 4: Split Access Policy Configuration
+1. In Cloudflare Zero Trust > **Access > Applications**:
+   - **App 1: Public Airlock (`www`)**: No Access policies (Public).
+   - **App 2: Private Notes (`notes`)**: Policy = `Allow` email domain or specific emails via One-Time PIN (OTP).
+   - **App 3: Status Probe (`notes/data/status.json`)**: Policy = `Bypass` / `Allow Everyone` for non-sensitive status pings.
+
+
+---
+
+
+## 🏛️ jason-lab.dev Summary & Topology
 
 This repository (`kEnder242.github.io`) serves as the **Public Airlock** for the Acme Lab environment. It provides a 100% uptime, zero-attack-surface front door hosted on GitHub Pages, presenting sanitized public work stories, lab protocols, and research ledgers. High-security assets (raw daily notes, vector artifact indexes, live GPU telemetry, and AI Intercom) reside behind a **Cloudflare Zero Trust Access Tunnel** on internal hardware.
 
@@ -72,7 +110,63 @@ www_deploy/
 │   ├── research_snapshot.png
 │   └── trailers/
 └── CNAME                 # Custom domain configuration (www.jason-lab.dev)
+
+(Portfolio_Dev/field_notes/build_site.py)
 ```
+
+
+
+---
+
+## ⚙️ Static Synthesis Deployment Pipeline
+
+Public pages are automatically synthesized from internal Markdown notes in the private repository, sanitized to strip private tags, and published to GitHub Pages via a single master script.
+
+> [!IMPORTANT]
+> **Master Builder Script:** [`Portfolio_Dev/field_notes/build_site.py`](https://github.com/kEnder242/Dev_Lab/blob/main/Portfolio_Dev/field_notes/build_site.py)
+>
+> The compilation engine resides inside the private repository (`Portfolio_Dev`) so it has full access to raw notes and build tools while outputting clean static assets directly to `www_deploy`.
+
+### Pipeline Data Flow
+
+```
+┌──────────────────────────────────────────┐
+│ Private Notes & Specifications           │
+│  - HomeLabAI/docs/Protocols.md           │
+│  - Portfolio_Dev/FeatureTracker.md       │
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Master Compiler Script                   │
+│  - Portfolio_Dev/field_notes/build_site.py│ ──► Compiles Markdown -> HTML & injects ?v=md5
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Airlock Guard Scripts                    │
+│  - www_deploy/sync_protocols.sh          │ ──► 1. Strips <mission-control> & data-scope="private"
+│  - www_deploy/sync_stories.sh            │     2. Injects "← Return to Front Page"
+│  - www_deploy/sync_research.sh           │     3. Captures static trailers (shot-scraper)
+└────────────────────┬─────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────┐
+│ Public Airlock Repository                │
+│  - www_deploy (kEnder242.github.io)      │ ──► Atomic git push to GitHub Pages
+└──────────────────────────────────────────┘
+```
+
+### Build & Deploy Execution Commands
+
+```bash
+# 1. Run Master Builder (Compiles HTML, hashes assets, runs airlock sanitizers)
+python3 Portfolio_Dev/field_notes/build_site.py
+
+# 2. Deploy sanitized release to GitHub Pages
+cd www_deploy && git add . && git commit -m "build(airlock): deploy static release"
+```
+
 
 ---
 
@@ -122,88 +216,4 @@ async function checkStatus() {
 }
 ```
 
----
 
-## ⚙️ Compilation & Deployment Pipeline ("Static Synthesis")
-
-Public pages are automatically synthesized from internal Markdown notes in the private repository, sanitized to strip private tags, and published to GitHub Pages via a single master script.
-
-> [!IMPORTANT]
-> **Master Builder Script:** [`Portfolio_Dev/field_notes/build_site.py`](https://github.com/kEnder242/Dev_Lab/blob/main/Portfolio_Dev/field_notes/build_site.py)
->
-> The compilation engine resides inside the private repository (`Portfolio_Dev`) so it has full access to raw notes and build tools while outputting clean static assets directly to `www_deploy`.
-
-### Pipeline Data Flow
-
-```
-┌──────────────────────────────────────────┐
-│ Private Notes & Specifications           │
-│  - HomeLabAI/docs/Protocols.md           │
-│  - Portfolio_Dev/FeatureTracker.md       │
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│ Master Compiler Script                   │
-│  - Portfolio_Dev/field_notes/build_site.py│ ──► Compiles Markdown -> HTML & injects ?v=md5
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│ Airlock Guard Scripts                    │
-│  - www_deploy/sync_protocols.sh          │ ──► 1. Strips <mission-control> & data-scope="private"
-│  - www_deploy/sync_stories.sh            │     2. Injects "← Return to Front Page"
-│  - www_deploy/sync_research.sh           │     3. Captures static trailers (shot-scraper)
-└────────────────────┬─────────────────────┘
-                     │
-                     ▼
-┌──────────────────────────────────────────┐
-│ Public Airlock Repository                │
-│  - www_deploy (kEnder242.github.io)      │ ──► Atomic git push to GitHub Pages
-└──────────────────────────────────────────┘
-```
-
-### Build & Deploy Execution Commands
-
-```bash
-# 1. Run Master Builder (Compiles HTML, hashes assets, runs airlock sanitizers)
-python3 Portfolio_Dev/field_notes/build_site.py
-
-# 2. Deploy sanitized release to GitHub Pages
-cd www_deploy && git add . && git commit -m "build(airlock): deploy static release"
-```
-
----
-
-## 🚀 Setup & Replication Guide (Tutorial)
-
-Follow these steps to replicate this hybrid public/private Zero Trust architecture:
-
-### Step 1: GitHub Pages Setup
-1. Create a public repository named `username.github.io` (e.g. `kEnder242.github.io`).
-2. Add your sanitized `index.html` and static assets.
-3. In Repository **Settings > Pages**, set **Source** to `Deploy from a branch` (`main` / root).
-4. Add custom domain (e.g. `www.jason-lab.dev`). GitHub auto-creates a `CNAME` file.
-
-### Step 2: Cloudflare DNS Configuration
-1. Point domain DNS to Cloudflare nameservers.
-2. Add **CNAME** record:
-   - `Type`: `CNAME`
-   - `Name`: `www`
-   - `Target`: `username.github.io`
-   - `Proxy Status`: **Proxied (Orange Cloud)** 🟠
-
-### Step 3: Cloudflare Zero Trust Tunnel (`cloudflared`)
-1. On local host (e.g., Z87-Linux), install `cloudflared`:
-   ```bash
-   sudo cloudflared service install <tunnel-token>
-   ```
-2. In Cloudflare Zero Trust Dashboard > **Access > Tunnels**:
-   - Route `notes.yourdomain.com` -> `http://localhost:9001`
-   - Route `acme.yourdomain.com` -> `http://localhost:8765`
-
-### Step 4: Split Access Policy Configuration
-1. In Cloudflare Zero Trust > **Access > Applications**:
-   - **App 1: Public Airlock (`www`)**: No Access policies (Public).
-   - **App 2: Private Notes (`notes`)**: Policy = `Allow` email domain or specific emails via One-Time PIN (OTP).
-   - **App 3: Status Probe (`notes/data/status.json`)**: Policy = `Bypass` / `Allow Everyone` for non-sensitive status pings.
