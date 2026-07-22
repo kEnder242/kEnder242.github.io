@@ -1,5 +1,737 @@
 [
   {
+    "timestamp": "2026-07-21 19:34:53",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'GPU VRAM thermal and power telemetry with RAPL and DCGM monitoring' -> Retrieved 3 anchors from 2 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:52",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'HomeLabAI setup guide and architecture documentation' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:51",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'Forensic analysis of vLLM BF16 crash on Turing architecture' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:50",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM-032 validation procedure for GPU compute benchmarks' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:48",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM for telemetry monitoring with Prometheus and Grafana on RTX 2080 Ti' -> Retrieved 3 anchors from 1 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:21",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'GPU VRAM thermal and power telemetry with RAPL and DCGM monitoring' -> Retrieved 3 anchors from 2 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:20",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'HomeLabAI setup guide and architecture documentation' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:19",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'Forensic analysis of vLLM BF16 crash on Turing architecture' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:18",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM-032 validation procedure for GPU compute benchmarks' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:34:08",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM for telemetry monitoring with Prometheus and Grafana on RTX 2080 Ti' -> Retrieved 3 anchors from 1 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:33:51",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 33b91c32"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c6b89eca"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 5200016a"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: d53dc553"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:46",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3ab202ec"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:46",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: f005e972"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:44",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 141b3361"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:44",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 16476b17"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:43",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 76c691fd"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:42",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 53d3bc00"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:42",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 6546f9eb"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:40",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 9943efb1"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:38",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 6d360960"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:35",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: f0a66d13"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:34",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 808c1564"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:31",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: a41a3815"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:29",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: befbc6f9"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:29",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c51a3656"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:29",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 62bfd352"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:28",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 06f365de"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:27",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 75adc695"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:24",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 00ab9b45"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:14",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 382f6675"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:06",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 30278581"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:04",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 29ca1287"
+  },
+  {
+    "timestamp": "2026-07-21 19:33:01",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 8ef182a1"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:58",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: ec41ff95"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:53",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 7974d294"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:53",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: f80a0dd4"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:52",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 38600756"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:52",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 7c562841"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:50",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 02691411"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:50",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'GPU VRAM thermal and power telemetry with RAPL and DCGM monitoring' -> Retrieved 3 anchors from 2 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:32:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 380e4b2e"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:45",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 45d8f94b"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:44",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 76afae5f"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:43",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 6a75d5e1"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:40",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 39c37f18"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:36",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 383cb067"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:35",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 602ecec1"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:33",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 40f61d91"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:29",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 014d8740"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:28",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 07daa25c"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:28",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 5fbd57e1"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:27",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 5b04a018"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:26",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: d9ab1ad2"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:26",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3e6d7774"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:24",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 9c63ec71"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:21",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 813f600e"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:17",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3dfe691d"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:04",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 7f632e1e"
+  },
+  {
+    "timestamp": "2026-07-21 19:32:01",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 1c6129c4"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:59",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: f6793691"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:53",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: be264f8d"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:52",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 2679f59e"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:51",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 894a5a49"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:49",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'HomeLabAI setup guide and architecture documentation' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:31:47",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: fdf9587f"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:42",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 348f2f05"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:42",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 7bc9bef4"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:41",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: d8ea2f8a"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:34",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 9aec4989"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:33",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 83e56598"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:27",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 5aa90fca"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:23",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: e771eb10"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:17",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 72e793b8"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:11",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 16cb9ac8"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:10",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: eaa03a40"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:07",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c6803287"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:05",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 21e66d73"
+  },
+  {
+    "timestamp": "2026-07-21 19:31:00",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 9d0705e9"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:56",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c7998182"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:51",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: dc0e8094"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:48",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'Forensic analysis of vLLM BF16 crash on Turing architecture' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:30:46",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 627c2bce"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:43",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c8768b19"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:39",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 76d065d8"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:34",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3d93df33"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:23",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: cabacd90"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:19",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c4fe2118"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:13",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: e824f318"
+  },
+  {
+    "timestamp": "2026-07-21 19:30:10",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: defddba3"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:59",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 5b86e063"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:58",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: ba762b8c"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:52",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: c4ff6e00"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 325f065c"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:47",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM-032 validation procedure for GPU compute benchmarks' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:29:35",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: a98b64bd"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:31",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: e3f7f5b5"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:22",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3f064a20"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:09",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 3edff42a"
+  },
+  {
+    "timestamp": "2026-07-21 19:29:05",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: b3748b17"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:57",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 954915a0"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:53",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 217b5d2f"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:46",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM for telemetry monitoring with Prometheus and Grafana on RTX 2080 Ti' -> Retrieved 3 anchors from 1 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:28:44",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: a843e384"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:39",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 6e3b09e3"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:32",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 48683e70"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:29",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 25cffb9f"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:25",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: bd463e44"
+  },
+  {
+    "timestamp": "2026-07-21 19:28:02",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: f1d71c6a"
+  },
+  {
+    "timestamp": "2026-07-21 19:27:38",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'GPU VRAM thermal and power telemetry with RAPL and DCGM monitoring' -> Retrieved 3 anchors from 2 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:27:38",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'HomeLabAI setup guide and architecture documentation' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:27:38",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'Forensic analysis of vLLM BF16 crash on Turing architecture' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:27:38",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM-032 validation procedure for GPU compute benchmarks' -> Retrieved 3 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:27:38",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'BKM for telemetry monitoring with Prometheus and Grafana on RTX 2080 Ti' -> Retrieved 3 anchors from 1 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:27:05",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Query: 'GPU VRAM thermal and power telemetry' -> Retrieved 4 anchors from 3 sources."
+  },
+  {
+    "timestamp": "2026-07-21 19:23:21",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Sync Complete: Synced 0 new items to long_term_wisdom."
+  },
+  {
+    "timestamp": "2026-07-21 19:23:07",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Sync Started: Bridging slow burn artifacts and strategic stories..."
+  },
+  {
+    "timestamp": "2026-07-21 19:22:35",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Sync Complete: Synced 478 new items to long_term_wisdom."
+  },
+  {
+    "timestamp": "2026-07-21 19:21:46",
+    "severity": "INFO",
+    "source": "RAG",
+    "message": "RAG Sync Started: Bridging slow burn artifacts and strategic stories..."
+  },
+  {
+    "timestamp": "2026-07-21 19:12:48",
+    "severity": "INFO",
+    "source": "Foyer",
+    "message": "Client Connected: 62459bb4"
+  },
+  {
     "timestamp": "2026-07-21 18:32:41",
     "severity": "INFO",
     "source": "Foyer",
