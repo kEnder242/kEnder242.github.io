@@ -12,8 +12,24 @@
             --border-color: #333333;
             --font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
-        body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 40px; }
-        main { max-width: 1000px; margin: 0 auto; }
+        body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        #sidebar {
+            width: 260px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: #11161d;
+            border-right: 1px solid var(--border-color);
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+        #sidebar h2 { font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color); margin-top: 25px; letter-spacing: 1px; font-weight: bold; }
+        #sidebar ul { list-style: none; padding: 0; margin: 10px 0 0 0; }
+        #sidebar li { margin-bottom: 10px; font-size: 0.85rem; }
+        #sidebar a { color: #8b949e; text-decoration: none; transition: color 0.2s ease; }
+        #sidebar a:hover { color: #e6edf3; }
+        main { margin-left: 300px; max-width: 900px; padding: 40px; }
         .section-title { color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-family: var(--font-stack); }
         .disclaimer-box { 
             background-color: #111; 
@@ -40,6 +56,12 @@
             background: #000; color: var(--accent-color); font-family: var(--font-stack);
             padding: 10px; margin-bottom: 20px; border: 1px solid #333; font-size: 0.7rem;
             border-left: 3px solid var(--accent-color);
+        }
+        #menu-toggle { display: none; }
+        @media (max-width: 768px) {
+            #sidebar { display: none; }
+            main { margin-left: 0; padding: 20px; }
+            #menu-toggle { display: block; background: #11161d; color: #e6edf3; border: 1px solid var(--border-color); padding: 10px 20px; margin-bottom: 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
         }
     </style>
     <style>
@@ -78,9 +100,11 @@
 </head>
 <body>
 
-    
+    <button id="menu-toggle">☰ MENU</button>
 
-    <div class="nav-home"><a href="index.html">← Return to Front Page</a></div>
+    <nav id="sidebar">
+        <mission-control></mission-control>
+    </nav>
 
     <main>
         <div id="sys-console">
@@ -723,11 +747,26 @@ Read the master plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-035</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Virtual Environment Hygiene & Git Curation</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent virtual environment context-bleeding and indexing bloat across subagent swarms.</p>
+<ol>
+<li><strong>Single Canonical Venv</strong>: The primary canonical Python environment is pre-configured at <code>/home/jallred/Dev_Lab/HomeLabAI/.venv</code>. Always activate or use <code>/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python</code> for all execution. Workspace sub-directories (e.g., <code>Portfolio_Dev</code>) must NOT contain local <code>venv</code> or <code>.venv</code> copies.</li>
+<li><strong>Git Ignore Hardening</strong>: Every workspace repository must explicitly ignore <code>venv/</code>, <code>.venv/</code>, <code>env/</code>, and <code>*.egg-info/</code> in its root <code>.gitignore</code>.</li>
+<li><strong>Agent Indexing Isolation</strong>: Agentic search/scan tools (e.g., <code>opencode</code>, <code>codex</code>, <code>ripgrep</code>) must respect <code>.gitignore</code> to avoid indexing thousands of site-packages files that cause memory ballooning.</li>
+<li><strong>Pre-Commit Verification</strong>: Before staging changes, agents must verify <code>git status --porcelain</code> contains no untracked environment or binary build artifacts.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
             </table>
         </section>
     </main>
 
-    
+    <script src="mission-control.js?v=fbea88d6"></script>
 </body>
 </html>

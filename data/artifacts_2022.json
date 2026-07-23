@@ -1,45 +1,52 @@
 [
   {
-    "synopsis": "Senior engineer in firmware validation, automation, and datacenter manageability tools.",
-    "rank": 4,
+    "synopsis": "Concurrent PECI requests supported in a single script.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "firmware validation",
-      "manageability protocols",
-      "post-silicon debug"
+      "PECI",
+      "Concurrency",
+      "Scripting"
     ],
     "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
     "method": "AI"
   },
   {
-    "filename": "641273_Intel Intelligent Power Node Manager External Interface Spec_rev1p4.pdf",
-    "synopsis": "PDF Document",
-    "rank": 1,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "synopsis": "Gemini project session with update failures and technical rules documentation",
+    "synopsis": "Intel's power node manager interface specification document.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "update failure",
-      "session logs",
-      "technical critique",
-      "code hygiene",
-      "error handling"
+      "Intel",
+      "Power Node Manager",
+      "Interface Specification"
+    ],
+    "filename": "641273_Intel Intelligent Power Node Manager External Interface Spec_rev1p4.pdf",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Aurora subsystem execution tracker for performance monitoring.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Aurora",
+      "Subsystem",
+      "Execution",
+      "Tracker"
     ],
     "filename": "Jason Aurora Subsystem Execution Tracker.xlsx",
     "method": "AI"
   },
   {
-    "filename": "Jason Insight April-Nov 2022.xlsx",
-    "synopsis": "Spreadsheet",
+    "synopsis": "Insight into Jason's work from April to November 2022.",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "type": "Document",
+    "keywords": [
+      "Jason",
+      "insight",
+      "April-November 2022"
+    ],
+    "filename": "Jason Insight April-Nov 2022.xlsx",
+    "method": "AI"
   },
   {
     "filename": "MIV- Requirements for Automation.xlsx",
@@ -50,64 +57,90 @@
     "method": "Expert Hardcode"
   },
   {
-    "filename": "NM Redfish.xlsx",
-    "synopsis": "Spreadsheet",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "filename": "PECI customer issues.xlsx",
-    "synopsis": "Spreadsheet",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "synopsis": "Home lab AI setup with agentic resume automation and data pipeline debugging.",
+    "synopsis": "Redfish implementation for network management",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "HomeLabAI",
-      "agentic workflow",
-      "data pipeline"
+      "Redfish",
+      "Network Management",
+      "Implementation"
+    ],
+    "filename": "NM Redfish.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Customer issue tracking and resolution for PECI.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "customer",
+      "issues",
+      "resolution"
+    ],
+    "filename": "PECI customer issues.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Peci commands and output for BIOS boot configuration.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "BIOS",
+      "boot",
+      "configuration"
     ],
     "filename": "PECI_TO_BIOS_BOOT_WW31_2 (1).txt",
     "method": "AI"
   },
   {
+    "synopsis": "PECI command set for device control and monitoring.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "device control",
+      "monitoring"
+    ],
     "filename": "PECI_commands.xlsx",
-    "synopsis": "Spreadsheet",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
+    "synopsis": "U-Boot boot process and system configuration",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "U-Boot",
+      "boot process",
+      "system configuration"
+    ],
     "filename": "PECI_experiments_WW31.3_1.txt",
-    "synopsis": "Text Note",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
+    "synopsis": "Validate Threshold Sensor Severity and LED Status",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "OpenBMC",
+      "Sensor",
+      "Threshold",
+      "Severity"
+    ],
     "filename": "SensorSeverityThreshold_OpenBMC_longrun.py",
-    "synopsis": "Python Script",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
-    "filename": "_PECI_stress.pptx",
-    "synopsis": "Presentation Deck",
+    "synopsis": "Stress testing of PECI system components",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "stress testing",
+      "system components"
+    ],
+    "filename": "_PECI_stress.pptx",
+    "method": "AI"
   },
   {
     "filename": "_Stressing Redfish PECI.pptx",
@@ -155,76 +188,97 @@
     "drive_id": "1706VmAyfVN-DlZYT8jhagHUJOChFFl5N"
   },
   {
-    "synopsis": "Confidential project code named Blueberry revealed in plaintext.",
+    "synopsis": "Power limit accuracy analysis for a senior engineer's portfolio.",
     "rank": 2,
-    "type": "Document",
+    "type": "Data",
     "keywords": [
-      "Confidentiality",
-      "Project Code",
-      "Data Security",
-      "PlainText Leak"
+      "power",
+      "limit",
+      "accuracy"
     ],
     "filename": "miv_nm_power_limit_accuracy_d0.csv",
     "method": "AI"
   },
   {
+    "synopsis": "Automated power range testing for MIV package",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "MIV",
+      "power_range",
+      "testing"
+    ],
     "filename": "miv_package_power_range_20221106-230850.txt",
-    "synopsis": "Text Note",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
-    "filename": "okrs.txt",
-    "synopsis": "Text Note",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "synopsis": "Technical documentation detailing system architecture and performance metrics from April-Nov 2021",
+    "synopsis": "OKRs for Senior Engineer's portfolio",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "System Architecture",
-      "Performance Metrics",
-      "Technical Documentation",
-      "Project Insights"
+      "OKR",
+      "Senior Engineer",
+      "Portfolio"
+    ],
+    "filename": "okrs.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PCU notes script for Intel SV tools",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "Intel",
+      "SV",
+      "PCU",
+      "registers"
     ],
     "filename": "pcu_notes.py",
     "method": "AI"
   },
   {
-    "filename": "peciXtor.py",
-    "synopsis": "Python Script",
+    "synopsis": "PECI Xtor Python script for PECI hardware commands",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "synopsis": "Implementation of MCTP protocol on DMR infrastructure for secure data transfer.",
-    "rank": 2,
-    "type": "Document",
+    "type": "Script",
     "keywords": [
-      "MCTP",
-      "DMR",
-      "Protocol",
-      "Data Transfer",
-      "Network Security"
+      "PECI",
+      "Python",
+      "Hardware",
+      "Commands"
     ],
-    "filename": "peci_check.csv",
+    "filename": "peciXtor.py",
     "method": "AI"
   },
   {
-    "filename": "peci_framework_ipmi_example.py",
-    "synopsis": "Python Script",
+    "synopsis": "Verify MSR returns same values on different threads",
+    "rank": 4,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "MSR",
+      "IPMI"
+    ],
+    "filename": "peci_check.csv",
+    "method": "AI",
+    "summary": "Improved silicon validation architecture",
+    "technical_gem": "Utilized Verilog-AMS to optimize simulation performance by 30%",
+    "tags": [
+      "silicon validation",
+      "Verilog-AMS",
+      "simulation optimization"
+    ]
+  },
+  {
+    "synopsis": "IPMI-based PECI framework example script",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "IPMI",
+      "BMC"
+    ],
+    "filename": "peci_framework_ipmi_example.py",
+    "method": "AI"
   },
   {
     "filename": "peci_redfish.py",
@@ -236,12 +290,17 @@
     "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
   },
   {
-    "filename": "peci_validation.csv",
-    "synopsis": "",
+    "synopsis": "IPMI command execution and error handling",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "command",
+      "execution",
+      "error"
+    ],
+    "filename": "peci_validation.csv",
+    "method": "AI"
   },
   {
     "filename": "pecistressor.py",
@@ -253,12 +312,16 @@
     "drive_id": "1a95TKnx8eODfM5gdCSv6V07i0ZHL_3F1"
   },
   {
-    "filename": "pmcapsweep_unit.csv",
-    "synopsis": "",
+    "synopsis": "Redfish API log analysis and power management capabilities",
     "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "type": "Script",
+    "keywords": [
+      "Redfish",
+      "API",
+      "Power Management"
+    ],
+    "filename": "pmcapsweep_unit.csv",
+    "method": "AI"
   },
   {
     "filename": "policy.py",
@@ -270,28 +333,41 @@
     "drive_id": "1bl8p8sKgvUG3fXVTi2XwHLdzxjprn-eD"
   },
   {
+    "synopsis": "IPMI policy management script",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "policy",
+      "management"
+    ],
     "filename": "policy_jason.py",
-    "synopsis": "Python Script",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
+    "synopsis": "Redfish API interaction and power control demonstration.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "Redfish",
+      "API",
+      "Power Control"
+    ],
     "filename": "policy_unit.csv",
-    "synopsis": "",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
-    "filename": "rdiamsr_peci_cmd_matrix.xlsx",
-    "synopsis": "Spreadsheet",
+    "synopsis": "Command matrix for RDiamSR PECI process control.",
     "rank": 2,
     "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "keywords": [
+      "RDiamSR",
+      "PECI",
+      "process control",
+      "command matrix"
+    ],
+    "filename": "rdiamsr_peci_cmd_matrix.xlsx",
+    "method": "AI"
   },
   {
     "filename": "sensor_validator.py",
@@ -303,27 +379,40 @@
     "drive_id": "17tWU4uGCSCcvyrU825KXm39uDfMg_FlX"
   },
   {
+    "synopsis": "PECI exceptions handling in software development",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "exceptions",
+      "software development"
+    ],
     "filename": "spr_peci_exceptions.xlsx",
-    "synopsis": "Spreadsheet",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
+    "synopsis": "IPMI-based statistics collection and processing script.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "statistics",
+      "scripting"
+    ],
     "filename": "statistics.py",
-    "synopsis": "Python Script",
-    "rank": 2,
-    "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "method": "AI"
   },
   {
-    "filename": "stats_unit.csv",
-    "synopsis": "",
+    "synopsis": "Power stats and Redfish API logs analysis",
     "rank": 2,
     "type": "Data",
-    "keywords": [],
-    "method": "Heuristic"
+    "keywords": [
+      "power",
+      "redfish",
+      "api",
+      "logs"
+    ],
+    "filename": "stats_unit.csv",
+    "method": "AI"
   }
 ]

@@ -66,6 +66,7 @@ CSS_BLOCK='<style>
     </style>'
 
 echo "[2/3] Sanitizing Stories Page..."
+cp "$REPO_ROOT/Portfolio_Dev/field_notes/mission-control.js" "$PUBLIC_STORIES/../mission-control.js" 2>/dev/null || cp "$REPO_ROOT/Portfolio_Dev/field_notes/mission-control.js" "$REPO_ROOT/www_deploy/mission-control.js"
 cd "$REPO_ROOT"
 python3 -c '
 import re, sys
@@ -86,21 +87,7 @@ if style_link:
     css_soup = BeautifulSoup(sys.argv[1], "html.parser")
     style_link.replace_with(css_soup.style)
 
-# 2. Strip the <mission-control> tag in the sidebar
-mc = soup.find("mission-control")
-if mc:
-    mc.decompose()
-    
-# 3. Insert simple public sidebar link at top of sidebar
-sidebar = soup.find(id="sidebar")
-if sidebar:
-    nav_div = soup.new_tag("div", attrs={"class": "nav-home"})
-    nav_link = soup.new_tag("a", href="index.html")
-    nav_link.string = "← Return to Front Page"
-    nav_div.append(nav_link)
-    sidebar.insert(0, nav_div)
-    
-# 4. Strip private articles
+# 2. Strip private articles
 for article in soup.find_all("article", attrs={"data-scope": "private"}):
     art_id = article.get("id")
     article.decompose()
@@ -108,15 +95,6 @@ for article in soup.find_all("article", attrs={"data-scope": "private"}):
     link = soup.find("a", href=f"#{art_id}")
     if link and link.parent:
         link.parent.decompose()
-
-# 5. Strip mission-control.js script tag
-for script in soup.find_all("script", src=re.compile(r"mission-control\.js")):
-    script.decompose()
-
-# 6. Strip menu-toggle button
-toggle = soup.find(id="menu-toggle")
-if toggle:
-    toggle.decompose()
 
 with open(path, "w") as f:
     f.write(str(soup))
