@@ -18,8 +18,24 @@ CSS_BLOCK='<style>
             --border-color: #333333;
             --font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
-        body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 40px; }
-        main { max-width: 1000px; margin: 0 auto; }
+        body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        #sidebar {
+            width: 260px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: #11161d;
+            border-right: 1px solid var(--border-color);
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+        #sidebar h2 { font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color); margin-top: 25px; letter-spacing: 1px; font-weight: bold; }
+        #sidebar ul { list-style: none; padding: 0; margin: 10px 0 0 0; }
+        #sidebar li { margin-bottom: 10px; font-size: 0.85rem; }
+        #sidebar a { color: #8b949e; text-decoration: none; transition: color 0.2s ease; }
+        #sidebar a:hover { color: #e6edf3; }
+        main { margin-left: 300px; max-width: 900px; padding: 40px; }
         .section-title { color: #fff; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-family: var(--font-stack); }
         .disclaimer-box { 
             background-color: #111; 
@@ -47,24 +63,26 @@ CSS_BLOCK='<style>
             padding: 10px; margin-bottom: 20px; border: 1px solid #333; font-size: 0.7rem;
             border-left: 3px solid var(--accent-color);
         }
+        #menu-toggle { display: none; }
+        @media (max-width: 768px) {
+            #sidebar { display: none; }
+            main { margin-left: 0; padding: 20px; }
+            #menu-toggle { display: block; background: #11161d; color: #e6edf3; border: 1px solid var(--border-color); padding: 10px 20px; margin-bottom: 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        }
     </style>'
 
 # Copy internal page to public airlock path
 cp "$INTERNAL_PROTOCOLS" "$PUBLIC_PROTOCOLS"
 
-# Remove scripts, sidebars, and stylesheet links using Python inline regex replacements
+# Copy mission-control.js to www_deploy
+cp "$REPO_ROOT/Portfolio_Dev/field_notes/mission-control.js" "$PUBLIC_DIR/mission-control.js" 2>/dev/null || cp "$REPO_ROOT/Portfolio_Dev/field_notes/mission-control.js" "$REPO_ROOT/www_deploy/mission-control.js"
+
+# Remove scripts and stylesheet links using Python inline regex replacements
 python3 -c "
 import sys, re
 content = open('$PUBLIC_PROTOCOLS').read()
 # Replace stylesheet link with inline CSS
 content = re.sub(r'<link rel=\"stylesheet\" href=\"style.css\?v=[a-f0-9]+\">', sys.argv[1], content)
-# Remove Zero Trust Sidebar Navigation and replace with return link
-nav_search = '<nav id=\"sidebar\">\n        <mission-control></mission-control>\n    </nav>'
-content = content.replace(nav_search, '<div class=\"nav-home\"><a href=\"index.html\">← Return to Front Page</a></div>')
-# Remove menu toggle button
-content = content.replace('<button id=\"menu-toggle\">☰ MENU</button>', '')
-# Remove Scripts
-content = re.sub(r'<script src=\"mission-control.js\?v=[a-f0-9]+\"></script>', '', content)
 with open('$PUBLIC_PROTOCOLS', 'w') as f: f.write(content)
 " "$CSS_BLOCK"
 
