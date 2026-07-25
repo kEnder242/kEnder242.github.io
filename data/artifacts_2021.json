@@ -13,13 +13,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "BMC presentation on software development best practices.",
+    "synopsis": "File data is absent; analysis cannot be performed.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "software development",
-      "best practices",
-      "BMC"
+      "Missing Data",
+      "Analysis Required"
     ],
     "filename": "BMC presentation.pptx",
     "method": "AI"
@@ -79,26 +78,23 @@
     "drive_id": "1jQfX4aK3yvxzN_WxhPDKvv9QSQigAwc6"
   },
   {
-    "synopsis": "MIV Ignition Redfish validation and backup process",
+    "synopsis": "File content unavailable for analysis; data requires input.",
     "rank": 3,
     "type": "Document",
     "keywords": [
-      "Redfish",
-      "Validation",
-      "Backup"
+      "Missing Data"
     ],
     "filename": "MIV Ignition-Redfish validation-Backup.pptx",
     "method": "AI",
     "drive_id": "1sLjcbrxM3Bi9HMWmkuQPQRTvmSbVmrFJ"
   },
   {
-    "synopsis": "Sprint planning and tracking for MIV project.",
+    "synopsis": "No customer issue data was provided for analysis.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "MIV",
-      "sprint planning",
-      "project management"
+      "data_missing",
+      "analysis_pending"
     ],
     "filename": "MIV_Sprint_Planning.xlsx",
     "method": "AI"
@@ -128,13 +124,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "Migrated test cases from legacy system to new platform.",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "PECI commands executed to query PCIe and IAMSR registers during boot.",
+    "rank": 4,
+    "type": "Data",
     "keywords": [
-      "Migration",
-      "Test Cases",
-      "Legacy System"
+      "PECI",
+      "BIOS",
+      "PCIe",
+      "HardwareTelemetry",
+      "Initialization"
     ],
     "filename": "Migration_TC.xlsx",
     "method": "AI"
@@ -211,13 +209,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "Agile project management methodology presentation",
+    "synopsis": "File content is missing; analysis cannot be performed.",
     "rank": 2,
-    "type": "Document",
+    "type": "Error",
     "keywords": [
-      "Scrum",
-      "Agile",
-      "Project Management"
+      "Missing Data",
+      "Analysis Failed"
     ],
     "filename": "Scrum Done right.pptx",
     "method": "AI"
@@ -272,13 +269,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "IPMI Second Generation Interface Specification v2.1.1",
-    "rank": 2,
+    "synopsis": "U-Boot boot sequence log for an Intel BMC system.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
-      "IPMI",
-      "Interface",
-      "Specification"
+      "U-Boot",
+      "BMC",
+      "FIT Image",
+      "SPI Flash",
+      "ARM"
     ],
     "filename": "ipmi-second-gen-interface-spec-v2-rev1-1_qct.pdf",
     "method": "AI"

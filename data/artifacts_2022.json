@@ -1,12 +1,11 @@
 [
   {
-    "synopsis": "Concurrent PECI requests supported in a single script.",
+    "synopsis": "File content is absent; no analysis can be performed.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "PECI",
-      "Concurrency",
-      "Scripting"
+      "Missing Data",
+      "Analysis Failure"
     ],
     "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
     "method": "AI"
@@ -37,13 +36,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Insight into Jason's work from April to November 2022.",
+    "synopsis": "File sample provided contains heavily obfuscated binary data.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "Jason",
-      "insight",
-      "April-November 2022"
+      "VSDX",
+      "Binary",
+      "Metadata",
+      "Analysis"
     ],
     "filename": "Jason Insight April-Nov 2022.xlsx",
     "method": "AI"
@@ -69,13 +69,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "Customer issue tracking and resolution for PECI.",
+    "synopsis": "File content not provided for analysis; no synopsis generated.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "customer",
-      "issues",
-      "resolution"
+      "Missing Data",
+      "Analysis Required"
     ],
     "filename": "PECI customer issues.xlsx",
     "method": "AI"
@@ -106,13 +105,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "U-Boot boot process and system configuration",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Led MCTP automation, stress testing, and schema development for power limiting systems.",
+    "rank": 4,
+    "type": "Document",
     "keywords": [
-      "U-Boot",
-      "boot process",
-      "system configuration"
+      "MCTP Automation",
+      "Test Strategy",
+      "Telemetry",
+      "Schema Development",
+      "Agile Leadership"
     ],
     "filename": "PECI_experiments_WW31.3_1.txt",
     "method": "AI"
@@ -200,13 +201,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Automated power range testing for MIV package",
+    "synopsis": "MCTP base specification document related to DSP0236 revision 1.3.0.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "MIV",
-      "power_range",
-      "testing"
+      "MCTP",
+      "DSP0236",
+      "Base Spec",
+      "Revision"
     ],
     "filename": "miv_package_power_range_20221106-230850.txt",
     "method": "AI"
@@ -224,14 +226,13 @@
     "method": "AI"
   },
   {
-    "synopsis": "PCU notes script for Intel SV tools",
+    "synopsis": "File content unavailable for analysis; no comparison data present.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "Intel",
-      "SV",
-      "PCU",
-      "registers"
+      "MCTP",
+      "Analysis",
+      "Missing Data"
     ],
     "filename": "pcu_notes.py",
     "method": "AI"
@@ -312,13 +313,13 @@
     "drive_id": "1a95TKnx8eODfM5gdCSv6V07i0ZHL_3F1"
   },
   {
-    "synopsis": "Redfish API log analysis and power management capabilities",
+    "synopsis": "File content unavailable for portfolio ranking analysis.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "Redfish",
-      "API",
-      "Power Management"
+      "Missing Data",
+      "Spec File",
+      "Analysis Error"
     ],
     "filename": "pmcapsweep_unit.csv",
     "method": "AI"
@@ -391,26 +392,28 @@
     "method": "AI"
   },
   {
-    "synopsis": "IPMI-based statistics collection and processing script.",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Documenting support for concurrent PECI requests implementation.",
+    "rank": 4,
+    "type": "Document",
     "keywords": [
-      "IPMI",
-      "statistics",
-      "scripting"
+      "PECI",
+      "Concurrency",
+      "Support",
+      "Specification",
+      "v3"
     ],
     "filename": "statistics.py",
     "method": "AI"
   },
   {
-    "synopsis": "Power stats and Redfish API logs analysis",
-    "rank": 2,
-    "type": "Data",
+    "synopsis": "Specifies external interface for Intel Intelligent Power Node Manager.",
+    "rank": 4,
+    "type": "Document",
     "keywords": [
-      "power",
-      "redfish",
-      "api",
-      "logs"
+      "Intel IPM",
+      "Power Management",
+      "Interface Spec",
+      "Hardware Interface"
     ],
     "filename": "stats_unit.csv",
     "method": "AI"

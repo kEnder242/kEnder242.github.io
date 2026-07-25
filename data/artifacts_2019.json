@@ -12,13 +12,11 @@
     "method": "AI"
   },
   {
-    "synopsis": "Python script for debugging and testing",
+    "synopsis": "Analysis pending; file content is unavailable for evaluation.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "debugging",
-      "testing",
-      "script"
+      "Analysis Required"
     ],
     "filename": "History_PythonSV2-2-19.txt",
     "method": "AI"
@@ -61,13 +59,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "Lenovo HSDES project portfolio for senior engineer",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "Automates CPU performance counter polling and timing using pysvtools.",
+    "rank": 4,
+    "type": "Script",
     "keywords": [
-      "Lenovo",
-      "HSDES",
-      "Portfolio"
+      "Hardware Telemetry",
+      "PCU Access",
+      "Performance Counters",
+      "Pandas",
+      "Timing"
     ],
     "filename": "Lenovo HSDES.xlsx",
     "method": "AI"
@@ -98,13 +98,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "Verify ME FW stability with continuous traffic",
-    "rank": 2,
+    "synopsis": "Developed a Python utility for reading and writing complex PCI Express hardware commands.",
+    "rank": 3,
     "type": "Script",
     "keywords": [
-      "ME",
-      "FW",
-      "Continuous Traffic"
+      "PECI",
+      "Hardware Interface",
+      "Telemetry",
+      "PCIe",
+      "Register Access"
     ],
     "filename": "P12_03.15.02_SPS_PECI_Continuous_Peci_Calls_ReqTest_BMC_NMoff_Ipmi.rtf",
     "method": "AI"
@@ -134,13 +136,15 @@
     "method": "AI"
   },
   {
-    "synopsis": "Identifying and resolving common bug fixing roadblocks.",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "Validated multi-threaded MSR consistency and PECI register access via IPMI telemetry.",
+    "rank": 4,
+    "type": "Data",
     "keywords": [
-      "bug fixing",
-      "stall points",
-      "software development"
+      "PECI",
+      "MSR Validation",
+      "IPMI",
+      "Stress Testing",
+      "Telemetry"
     ],
     "filename": "Stall Points (for bug fixing).pptx",
     "method": "AI"
@@ -158,14 +162,10 @@
     "method": "AI"
   },
   {
-    "synopsis": "Test case summary for RAS validation library",
-    "rank": 2,
+    "synopsis": "No content provided for analysis; file content is unavailable.",
+    "rank": 0,
     "type": "Document",
-    "keywords": [
-      "RAS",
-      "Validation",
-      "Testing"
-    ],
+    "keywords": [],
     "filename": "Test Case Summary of RAS for Test Library on Validation Engineering.docx",
     "method": "AI"
   },
@@ -207,13 +207,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Memory and error handling script for DDRT system.",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Measured Redfish telemetry for chassis power consumption and response times.",
+    "rank": 3,
+    "type": "Data",
     "keywords": [
-      "memory",
-      "error",
-      "DDRT"
+      "Redfish",
+      "Telemetry",
+      "Power Measurement",
+      "Performance Testing"
     ],
     "filename": "history_an04wvaw0716.txt",
     "method": "AI"
@@ -245,24 +246,18 @@
     "method": "AI"
   },
   {
-    "synopsis": "Error injection and debugging for PCIe and memory errors.",
+    "synopsis": "Validated raw Peci command execution and IPMI error handling via native modules.",
     "rank": 4,
-    "type": "Script",
+    "type": "Data",
     "keywords": [
-      "error injection",
-      "PCIe",
-      "memory",
-      "debugging"
+      "IPMI",
+      "Raw Commands",
+      "Hardware Validation",
+      "Error Handling",
+      "Native Modules"
     ],
     "filename": "ras-einj.txt",
-    "method": "AI",
-    "summary": "Improved silicon validation architecture for faster and more accurate testing",
-    "technical_gem": "Utilized Verilog-A to simulate complex logic circuits and reduce simulation time by 30%",
-    "tags": [
-      "silicon validation",
-      "Verilog-A",
-      "simulation"
-    ]
+    "method": "AI"
   },
   {
     "filename": "ras-viral.txt",
