@@ -1,5 +1,41 @@
 [
   {
+    "timestamp": "2026-07-27 14:31:11",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-27 14:29:03",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:744394): GLib-GIO-WARNING **: 14:29:02.702: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 14:28:42",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 14:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 14:28:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 14:26:50",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started packagekit.service - PackageKit Daemon."
+  },
+  {
     "timestamp": "2026-07-27 14:26:12",
     "severity": "INFO",
     "source": "gpg-agent",
