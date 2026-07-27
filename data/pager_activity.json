@@ -1,5 +1,89 @@
 [
   {
+    "timestamp": "2026-07-27 13:58:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 13:58:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 13:57:50",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:57:49,644 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:57:01",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:734128): GLib-GIO-WARNING **: 13:57:01.351: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:56:41",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:55:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 13:55:05",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:55:05,206 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:55:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 13:54:31",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-27 13:54:31",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "health(warnable=login-state): error: You are logged out. The last login error was: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:44470->192.200.0"
+  },
+  {
+    "timestamp": "2026-07-27 13:54:31",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "Received error: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:44470->192.200.0.115:80: use of closed network connection"
+  },
+  {
+    "timestamp": "2026-07-27 13:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: update attempt complete"
+  },
+  {
+    "timestamp": "2026-07-27 13:52:55",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started run-u1183.service - /usr/bin/tailscale update --yes."
+  },
+  {
+    "timestamp": "2026-07-27 13:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: running \"systemd-run --wait --pipe --collect /usr/bin/tailscale update --yes\""
+  },
+  {
     "timestamp": "2026-07-27 13:51:41",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
