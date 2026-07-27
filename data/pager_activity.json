@@ -1,5 +1,215 @@
 [
   {
+    "timestamp": "2026-07-27 13:51:41",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:731971): GLib-GIO-WARNING **: 13:51:41.258: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:51:22",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:47:27",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:47:27,615 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:46:21",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:730820): GLib-GIO-WARNING **: 13:46:21.464: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:46:21",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:46:20,687 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:46:01",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:45:13",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:45:13,516 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:44:06",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:44:06,603 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:43:00",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:42:59,678 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:41:53",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:41:52,715 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:41:01",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:729677): GLib-GIO-WARNING **: 13:41:01.080: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:40:46",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:40:45,830 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:40:42",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:39:30",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-27 13:39:30",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "Received error: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:37284->192.200.0.101:80: use of closed network connection"
+  },
+  {
+    "timestamp": "2026-07-27 13:39:30",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "health(warnable=login-state): error: You are logged out. The last login error was: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:37284->192.200.0"
+  },
+  {
+    "timestamp": "2026-07-27 13:38:01",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:38:00,722 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:36:53",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:36:53,431 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:35:42",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:728470): GLib-GIO-WARNING **: 13:35:41.907: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:35:22",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:34:09",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:34:09,175 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:32:55",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-27 13:31:18",
+    "severity": "INFO",
+    "source": "LabAttendant",
+    "message": "HIBERNATION_START (AFK_TIMEOUT)"
+  },
+  {
+    "timestamp": "2026-07-27 13:30:22",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:727345): GLib-GIO-WARNING **: 13:30:22.265: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:30:03",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:29:30",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-27 13:29:29",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "Received error: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:55442->192.200.0.112:80: use of closed network connection"
+  },
+  {
+    "timestamp": "2026-07-27 13:29:29",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "health(warnable=login-state): error: You are logged out. The last login error was: register request: Post \"https://controlplane.tailscale.com/machine/register\": read tcp 192.168.1.238:55442->192.200.0"
+  },
+  {
+    "timestamp": "2026-07-27 13:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 13:28:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 13:26:33",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:26:32,690 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 13:25:02",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:725954): GLib-GIO-WARNING **: 13:25:02.565: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:25:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 13:24:42",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
     "timestamp": "2026-07-27 13:19:45",
     "severity": "WARNING",
     "source": "VLLM",
