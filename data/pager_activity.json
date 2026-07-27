@@ -1,5 +1,17 @@
 [
   {
+    "timestamp": "2026-07-27 12:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 12:28:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
     "timestamp": "2026-07-27 12:26:13",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
