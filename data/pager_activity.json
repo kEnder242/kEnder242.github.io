@@ -1,5 +1,41 @@
 [
   {
+    "timestamp": "2026-07-27 12:26:13",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:710683): GLib-GIO-WARNING **: 12:26:13.492: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:25:49",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:25:17",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started session-397.scope - Session 397 of User jallred."
+  },
+  {
+    "timestamp": "2026-07-27 12:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 12:25:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 12:24:59",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started session-395.scope - Session 395 of User jallred."
+  },
+  {
     "timestamp": "2026-07-27 12:23:28",
     "severity": "ERROR",
     "source": "VLLM",
