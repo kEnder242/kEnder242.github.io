@@ -1,5 +1,101 @@
 [
   {
+    "timestamp": "2026-07-27 14:45:47",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started opencode-proxy.service - Opencode Socket Proxy (System-Level Scale-to-Zero)."
+  },
+  {
+    "timestamp": "2026-07-27 14:45:44",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started opencode-core.service - Opencode Core Engine (System-Level Daemon)."
+  },
+  {
+    "timestamp": "2026-07-27 14:45:02",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:749960): GLib-GIO-WARNING **: 14:45:02.015: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 14:44:42",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 14:44:36",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 14:44:35,750 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 14:42:33",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped opencode-core.service - Opencode Core Engine (System-Level Daemon)."
+  },
+  {
+    "timestamp": "2026-07-27 14:41:50",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 14:41:50,458 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 14:39:42",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:748509): GLib-GIO-WARNING **: 14:39:41.773: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 14:39:23",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 14:36:40",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped opencode-core.service - Opencode Core Engine (Local)."
+  },
+  {
+    "timestamp": "2026-07-27 14:36:40",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started opencode-core.service - Opencode Core Engine (Local)."
+  },
+  {
+    "timestamp": "2026-07-27 14:34:22",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:746220): GLib-GIO-WARNING **: 14:34:22.649: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 14:34:03",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 14:33:51",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started opencode-proxy.service - Opencode Socket Proxy (System-Level Scale-to-Zero)."
+  },
+  {
+    "timestamp": "2026-07-27 14:33:48",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started opencode-core.service - Opencode Core Engine (System-Level Daemon)."
+  },
+  {
+    "timestamp": "2026-07-27 14:32:56",
+    "severity": "INFO",
+    "source": "gpg-agent",
+    "message": "can't connect to the daemon /usr/lib/gnupg/scdaemon: IPC connect call failed"
+  },
+  {
     "timestamp": "2026-07-27 14:31:11",
     "severity": "INFO",
     "source": "systemd",
