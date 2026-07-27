@@ -1,10 +1,30 @@
 {
-  "status": "YIELD",
-  "message": "Nibbler Yielding (Lock/Load)",
-  "last_items": 0,
-  "total_events": 370,
-  "timestamp": "2026-07-27 14:24:38",
-  "engine": "LOCAL",
-  "progress_pct": 0,
-  "last_file": "notes_2024_PIAV.txt::2021-07"
+  "state": "HIBERNATING",
+  "status": "HIBERNATING (VRAM Free)",
+  "message": "Lab Hibernating",
+  "timestamp": "14:26:23",
+  "version": "5.0.0-foyer",
+  "vram_used": 2443,
+  "vram_total": 11264,
+  "ram_pct": 60.2,
+  "available_ram": 6.17,
+  "engine_up": false,
+  "vocal": false,
+  "engine_vocal": false,
+  "full_lab_ready": false,
+  "nodes": {},
+  "active_intent_id": null,
+  "active_domain": null,
+  "vitals": {
+    "mode": "HIBERNATING",
+    "model": "-",
+    "vram": "21.7%",
+    "ram": "60.2%",
+    "intercom": "OFFLINE",
+    "brain": "OFFLINE",
+    "session": "standby",
+    "style_key": "fece60dc",
+    "recovery_level": 0,
+    "recovery_in_progress": false
+  }
 }

@@ -1,5 +1,23 @@
 [
   {
+    "timestamp": "2026-07-27 14:26:12",
+    "severity": "INFO",
+    "source": "gpg-agent",
+    "message": "can't connect to the daemon /usr/lib/gnupg/scdaemon: IPC connect call failed"
+  },
+  {
+    "timestamp": "2026-07-27 14:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 14:25:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
     "timestamp": "2026-07-27 14:23:42",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
