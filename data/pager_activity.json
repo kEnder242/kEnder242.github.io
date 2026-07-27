@@ -1,5 +1,23 @@
 [
   {
+    "timestamp": "2026-07-26 22:44:37",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:494924): GLib-GIO-WARNING **: 22:44:36.688: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:44:16",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:39:16",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:493307): GLib-GIO-WARNING **: 22:39:16.022: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
     "timestamp": "2026-07-26 22:38:54",
     "severity": "INFO",
     "source": "systemd",
