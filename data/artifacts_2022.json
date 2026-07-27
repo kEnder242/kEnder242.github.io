@@ -1,11 +1,13 @@
 [
   {
-    "synopsis": "File content is absent; no analysis can be performed.",
-    "rank": 2,
+    "synopsis": "Document outlines MCTP implementation concerning DMR protocols.",
+    "rank": 3,
     "type": "Document",
     "keywords": [
-      "Missing Data",
-      "Analysis Failure"
+      "MCTP",
+      "DMR",
+      "Protocol",
+      "Systems"
     ],
     "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
     "method": "AI"
@@ -36,14 +38,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "File sample provided contains heavily obfuscated binary data.",
-    "rank": 2,
+    "synopsis": "Binary data suggests complex network topology modeling structure.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
       "VSDX",
-      "Binary",
-      "Metadata",
-      "Analysis"
+      "Topology",
+      "CAD",
+      "Data_Analysis"
     ],
     "filename": "Jason Insight April-Nov 2022.xlsx",
     "method": "AI"
@@ -57,13 +59,13 @@
     "method": "Expert Hardcode"
   },
   {
-    "synopsis": "Redfish implementation for network management",
+    "synopsis": "Migration plan analysis requires source document content for evaluation.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "Redfish",
-      "Network Management",
-      "Implementation"
+      "migration",
+      "planning",
+      "analysis"
     ],
     "filename": "NM Redfish.xlsx",
     "method": "AI"
@@ -93,13 +95,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "PECI command set for device control and monitoring.",
-    "rank": 2,
-    "type": "Data",
+    "synopsis": "Drove silicon validation, automation, and schema adaptation for power telemetry.",
+    "rank": 4,
+    "type": "Document",
     "keywords": [
-      "PECI",
-      "device control",
-      "monitoring"
+      "MCTP Automation",
+      "Silicon Validation",
+      "Test Strategy",
+      "Schema Adaptation"
     ],
     "filename": "PECI_commands.xlsx",
     "method": "AI"
@@ -132,13 +135,11 @@
     "method": "AI"
   },
   {
-    "synopsis": "Stress testing of PECI system components",
+    "synopsis": "File content not provided for analysis.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "PECI",
-      "stress testing",
-      "system components"
+      "N/A"
     ],
     "filename": "_PECI_stress.pptx",
     "method": "AI"
@@ -201,14 +202,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "MCTP base specification document related to DSP0236 revision 1.3.0.",
+    "synopsis": "Content unavailable; analysis requires file data.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "MCTP",
-      "DSP0236",
-      "Base Spec",
-      "Revision"
+      "Missing Data",
+      "File Unavailable"
     ],
     "filename": "miv_package_power_range_20221106-230850.txt",
     "method": "AI"
@@ -238,36 +237,29 @@
     "method": "AI"
   },
   {
-    "synopsis": "PECI Xtor Python script for PECI hardware commands",
+    "synopsis": "Defines external interface specifications for version 5.0 systems.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "PECI",
-      "Python",
-      "Hardware",
-      "Commands"
+      "Interface Spec",
+      "System Design",
+      "Protocol",
+      "Version Control"
     ],
     "filename": "peciXtor.py",
     "method": "AI"
   },
   {
-    "synopsis": "Verify MSR returns same values on different threads",
-    "rank": 4,
-    "type": "Script",
+    "synopsis": "Senior Engineer's portfolio showcasing expertise in BMC development and automation.",
+    "rank": 3,
+    "type": "Document",
     "keywords": [
-      "PECI",
-      "MSR",
-      "IPMI"
+      "BMC",
+      "Automation",
+      "Development"
     ],
     "filename": "peci_check.csv",
-    "method": "AI",
-    "summary": "Improved silicon validation architecture",
-    "technical_gem": "Utilized Verilog-AMS to optimize simulation performance by 30%",
-    "tags": [
-      "silicon validation",
-      "Verilog-AMS",
-      "simulation optimization"
-    ]
+    "method": "AI"
   },
   {
     "synopsis": "IPMI-based PECI framework example script",
@@ -291,14 +283,14 @@
     "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
   },
   {
-    "synopsis": "IPMI command execution and error handling",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Documenting concurrent PECI request handling for system stability.",
+    "rank": 4,
+    "type": "Document",
     "keywords": [
-      "IPMI",
-      "command",
-      "execution",
-      "error"
+      "PECI",
+      "Concurrency",
+      "Support",
+      "SystemDesign"
     ],
     "filename": "peci_validation.csv",
     "method": "AI"
@@ -346,13 +338,13 @@
     "method": "AI"
   },
   {
-    "synopsis": "Redfish API interaction and power control demonstration.",
+    "synopsis": "File content unavailable for analysis; specification requires source data.",
     "rank": 2,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "Redfish",
-      "API",
-      "Power Control"
+      "Intel",
+      "Power Manager",
+      "Interface Spec"
     ],
     "filename": "policy_unit.csv",
     "method": "AI"
@@ -406,14 +398,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Specifies external interface for Intel Intelligent Power Node Manager.",
-    "rank": 4,
-    "type": "Document",
+    "synopsis": "Tracks execution metrics for the Jason Aurora subsystem operations.",
+    "rank": 3,
+    "type": "Data",
     "keywords": [
-      "Intel IPM",
-      "Power Management",
-      "Interface Spec",
-      "Hardware Interface"
+      "Telemetry",
+      "Execution Tracking",
+      "Subsystem",
+      "Metrics"
     ],
     "filename": "stats_unit.csv",
     "method": "AI"

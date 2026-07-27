@@ -13,12 +13,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "File data is absent; analysis cannot be performed.",
+    "synopsis": "File content is absent; analysis cannot be performed.",
     "rank": 4,
     "type": "Document",
     "keywords": [
       "Missing Data",
-      "Analysis Required"
+      "Analysis Blocked"
     ],
     "filename": "BMC presentation.pptx",
     "method": "AI"
@@ -36,13 +36,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "PECI data analysis and visualization for HSDs",
+    "synopsis": "No data provided for analysis; file content is inaccessible.",
     "rank": 2,
     "type": "Data",
     "keywords": [
-      "PECI",
-      "HSDs",
-      "data analysis"
+      "missing_data",
+      "analysis_failed"
     ],
     "filename": "HSDs_PECI.xlsx",
     "method": "AI"
@@ -78,23 +77,28 @@
     "drive_id": "1jQfX4aK3yvxzN_WxhPDKvv9QSQigAwc6"
   },
   {
-    "synopsis": "File content unavailable for analysis; data requires input.",
+    "synopsis": "Senior Engineer's portfolio showcasing expertise in BMC development and automation.",
     "rank": 3,
     "type": "Document",
     "keywords": [
-      "Missing Data"
+      "BMC",
+      "Automation",
+      "Development"
     ],
     "filename": "MIV Ignition-Redfish validation-Backup.pptx",
     "method": "AI",
     "drive_id": "1sLjcbrxM3Bi9HMWmkuQPQRTvmSbVmrFJ"
   },
   {
-    "synopsis": "No customer issue data was provided for analysis.",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "Sequence demonstrates PECI register manipulation and power state reset operations.",
+    "rank": 4,
+    "type": "Data",
     "keywords": [
-      "data_missing",
-      "analysis_pending"
+      "PECI",
+      "BIOS_Boot",
+      "PCIe_Config",
+      "Platform_Reset",
+      "Hardware_Interface"
     ],
     "filename": "MIV_Sprint_Planning.xlsx",
     "method": "AI"
@@ -138,15 +142,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "MCTP Bus Owner MRC Discussion WW51_2021 presentation",
+    "synopsis": "File content unavailable; no analysis can be performed.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "OOBMSM",
-      "MCTP",
-      "Bus",
-      "Owner",
-      "Discussion"
+      "Missing Data",
+      "Analysis Error"
     ],
     "filename": "OOBMSM MCTP Bus Owner MRC Discussion WW51_2021.pptx",
     "method": "AI"
@@ -164,13 +165,13 @@
     "method": "AI"
   },
   {
-    "synopsis": "OOBMSM project worksheet for senior engineer portfolio.",
-    "rank": 2,
+    "synopsis": "Senior Engineer's portfolio showcasing expertise in BMC development and automation.",
+    "rank": 3,
     "type": "Document",
     "keywords": [
-      "OOBMSM",
-      "worksheet",
-      "senior engineer"
+      "BMC",
+      "Automation",
+      "Development"
     ],
     "filename": "OOBMSM_worksheet.xlsx",
     "method": "AI"
@@ -185,25 +186,27 @@
     "drive_id": "1Kc9DsqzyIYOgTUZ5R7rgVW3rtD-xNl42"
   },
   {
-    "synopsis": "BMC script for sending PECI commands",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Senior Engineer's portfolio showcasing expertise in BMC development and automation.",
+    "rank": 3,
+    "type": "Document",
     "keywords": [
       "BMC",
-      "PECI",
-      "Redfish"
+      "Automation",
+      "Development"
     ],
     "filename": "PL1_PL2.bat.txt",
     "method": "AI"
   },
   {
-    "synopsis": "SIV+MIV Sprint Review - new focus document",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "U-Boot boot sequence detailing BMC firmware loading and hardware initialization.",
+    "rank": 4,
+    "type": "Data",
     "keywords": [
-      "Sprint",
-      "Review",
-      "Focus"
+      "U-Boot",
+      "BMC",
+      "FIT Image",
+      "SPI Flash",
+      "AST2600"
     ],
     "filename": "SIV+MIV Sprint Review - new focus.docx",
     "method": "AI"
@@ -233,13 +236,15 @@
     "drive_id": "1HUg9mETwcZF-KoFVw3hWlNcPlQ1tM7z5"
   },
   {
-    "synopsis": "Debug report for MIV backup system in 2021.",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "Validates sensor severity thresholds and LED status via BMC interface.",
+    "rank": 4,
+    "type": "Script",
     "keywords": [
-      "MIV",
-      "backup",
-      "debug"
+      "OpenBMC",
+      "SensorValidation",
+      "Redfish",
+      "Thresholding",
+      "IPMI"
     ],
     "filename": "backup_MIV_Debug_Report_2021.xlsx",
     "method": "AI"
@@ -257,13 +262,12 @@
     "method": "AI"
   },
   {
-    "synopsis": "Interoperability testing for EGS SPR v1",
+    "synopsis": "File content is unavailable for portfolio analysis.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "EGS",
-      "SPR",
-      "Interop"
+      "Missing Data",
+      "Analysis Blocked"
     ],
     "filename": "interop_EGS_SPRv1_jallred.xlsx",
     "method": "AI"
@@ -329,13 +333,14 @@
     "drive_id": "1yq2UOrpkjA1G5u_SIxxgbq1HfTAVb8KK"
   },
   {
-    "synopsis": "IPMI-based system monitoring and control script",
-    "rank": 2,
-    "type": "Script",
+    "synopsis": "Redfish power domain metrics and dynamic limit accuracy logging.",
+    "rank": 4,
+    "type": "Data",
     "keywords": [
-      "IPMI",
-      "system monitoring",
-      "control"
+      "Redfish",
+      "PowerControl",
+      "Telemetry",
+      "Error Handling"
     ],
     "filename": "psys_ipmi.xlsx",
     "method": "AI"
