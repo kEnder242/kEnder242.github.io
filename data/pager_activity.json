@@ -1,5 +1,269 @@
 [
   {
+    "timestamp": "2026-07-26 22:35:00",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-26 22:35:00,583 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' died with <S"
+  },
+  {
+    "timestamp": "2026-07-26 22:34:21",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-26 22:33:54",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:491143): GLib-GIO-WARNING **: 22:33:54.328: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:33:45",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:33:45",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:33:45",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:33:45:481] [489787:0007793b] [ERROR][com.freerdp.core.peer] - [rdp_set_error_info]: ERRINFO_RPC_INITIATED_DISCONNECT [0x00010001]"
+  },
+  {
+    "timestamp": "2026-07-26 22:33:32",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:33:12",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:33:12:566] [489787:00077c97] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:32:28",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:32:28:666] [489787:0007793b] [ERROR][com.freerdp.core.transport] - [transport_default_write]: BIO_should_retry returned a system error 104: Connection reset by peer"
+  },
+  {
+    "timestamp": "2026-07-26 22:30:28",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:30:28:084] [489787:0007796a] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:30:24",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:30:24:060] [489787:0007793b] [ERROR][com.freerdp.core.transport] - [transport_default_write]: BIO_should_retry returned a system error 9: Bad file descriptor"
+  },
+  {
+    "timestamp": "2026-07-26 22:30:24",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:30:24:060] [489787:00077956] [ERROR][com.freerdp.crypto] - [freerdp_tls_handshake]: BIO_do_handshake failed"
+  },
+  {
+    "timestamp": "2026-07-26 22:30:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:30:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:30:20",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:30:19:813] [486325:00076bb5] [ERROR][com.freerdp.core.peer] - [rdp_set_error_info]: ERRINFO_RPC_INITIATED_DISCONNECT [0x00010001]"
+  },
+  {
+    "timestamp": "2026-07-26 22:30:06",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started packagekit.service - PackageKit Daemon."
+  },
+  {
+    "timestamp": "2026-07-26 22:28:32",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:488457): GLib-GIO-WARNING **: 22:28:31.768: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-26 22:28:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:28:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-26 22:25:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-26 22:25:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-26 22:24:28",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:24:28:704] [486325:00076bde] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:24:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:24:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Stopped gnome-remote-desktop.service - GNOME Remote Desktop."
+  },
+  {
+    "timestamp": "2026-07-26 22:24:20",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:24:20:200] [3782:00000ec6] [ERROR][com.freerdp.core.peer] - [rdp_set_error_info]: ERRINFO_RPC_INITIATED_DISCONNECT [0x00010001]"
+  },
+  {
+    "timestamp": "2026-07-26 22:23:15",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started vte-spawn-5d8b1d95-b970-4088-bf6a-d4f03af5aa3f.scope - VTE child process 485723 launched by gnome-terminal-server process 485706."
+  },
+  {
+    "timestamp": "2026-07-26 22:23:14",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started gnome-terminal-server.service - GNOME Terminal Server."
+  },
+  {
+    "timestamp": "2026-07-26 22:23:14",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started app-gnome-org.gnome.Terminal-485696.scope - Application launched by gnome-shell."
+  },
+  {
+    "timestamp": "2026-07-26 22:23:12",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:23:12:266] [3782:00076933] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:23:10",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:485667): GLib-GIO-WARNING **: 22:23:09.937: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:23:04",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:23:04:270] [3782:00000ec6] [ERROR][com.freerdp.core.transport] - [transport_default_write]: BIO_should_retry returned a system error 104: Connection reset by peer"
+  },
+  {
+    "timestamp": "2026-07-26 22:22:50",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:22:50:688] [3782:0007685c] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:22:50",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:22:42",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:22:41:984] [3782:00000ec6] [ERROR][com.freerdp.core.transport] - [transport_default_write]: BIO_should_retry returned a system error 104: Connection reset by peer"
+  },
+  {
+    "timestamp": "2026-07-26 22:21:11",
+    "severity": "INFO",
+    "source": "gpg-agent",
+    "message": "can't connect to the daemon /usr/lib/gnupg/scdaemon: IPC connect call failed"
+  },
+  {
+    "timestamp": "2026-07-26 22:21:11",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started gpg-agent.service - GnuPG cryptographic agent and passphrase cache."
+  },
+  {
+    "timestamp": "2026-07-26 22:20:31",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started session-286.scope - Session 286 of User jallred."
+  },
+  {
+    "timestamp": "2026-07-26 22:20:14",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started packagekit.service - PackageKit Daemon."
+  },
+  {
+    "timestamp": "2026-07-26 22:17:50",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:482122): GLib-GIO-WARNING **: 22:17:50.195: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:17:30",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:16:53",
+    "severity": "INFO",
+    "source": "gnome-remote-desktop-daemon",
+    "message": "[22:16:52:919] [3782:00073ebe] [ERROR][com.freerdp.channels.cliprdr.server] - [cliprdr_server_thread]: CheckEventHandle failed with error 13!"
+  },
+  {
+    "timestamp": "2026-07-26 22:12:30",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:480536): GLib-GIO-WARNING **: 22:12:29.663: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:12:09",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
     "timestamp": "2026-07-26 22:07:09",
     "severity": "INFO",
     "source": "tracker-miner-fs-3",
