@@ -1,5 +1,449 @@
 [
   {
+    "timestamp": "2026-07-27 13:19:45",
+    "severity": "WARNING",
+    "source": "VLLM",
+    "message": "Context Ceiling Clamp: Clamped max_tokens from 1000 to 500 (Prompt: ~15500 tokens) for 16384 context limit."
+  },
+  {
+    "timestamp": "2026-07-27 13:19:42",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:723964): GLib-GIO-WARNING **: 13:19:42.035: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:19:19",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:18:54",
+    "severity": "INFO",
+    "source": "LabAttendant",
+    "message": "IGNITION_START (INTENT_UI_sntbuc)"
+  },
+  {
+    "timestamp": "2026-07-27 13:18:52",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:18:52,439 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:16:08",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:16:08,555 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:15:02",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:15:01,724 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:14:19",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:722521): GLib-GIO-WARNING **: 13:14:18.676: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:13:59",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:13:55",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:13:54,737 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:12:47",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:12:47,770 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:11:41",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:11:40,927 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:10:34",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:10:33,948 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:09:27",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:09:27,110 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:08:58",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:721358): GLib-GIO-WARNING **: 13:08:58.629: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:08:39",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:08:20",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:08:20,197 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:07:13",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:07:13,203 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:04:29",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:04:29,399 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:03:39",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:720238): GLib-GIO-WARNING **: 13:03:39.381: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 13:03:22",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:03:22,527 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:03:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 13:02:15",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:02:15,609 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:01:09",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:01:08,737 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 13:00:02",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 13:00:01,783 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:58:55",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:58:54,735 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:58:19",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:719091): GLib-GIO-WARNING **: 12:58:19.606: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:58:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 12:58:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 12:58:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:57:48",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:57:47,655 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:56:41",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:56:40,748 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:55:34",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:55:33,755 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:55:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-27 12:55:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-27 12:54:27",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:54:26,773 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:53:20",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:53:19,891 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:53:00",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:717092): GLib-GIO-WARNING **: 12:53:00.033: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: update attempt complete"
+  },
+  {
+    "timestamp": "2026-07-27 12:52:55",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started run-u1161.service - /usr/bin/tailscale update --yes."
+  },
+  {
+    "timestamp": "2026-07-27 12:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: running \"systemd-run --wait --pipe --collect /usr/bin/tailscale update --yes\""
+  },
+  {
+    "timestamp": "2026-07-27 12:52:40",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:52:13",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:52:12,873 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:51:06",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:51:05,962 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:49:59",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:49:59,120 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:48:52",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:48:52,076 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:47:45",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:47:45,161 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:47:40",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:715939): GLib-GIO-WARNING **: 12:47:39.768: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:47:20",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:46:38",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:46:38,174 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:45:31",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:45:31,180 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:44:24",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:44:24,188 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:43:17",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:43:17,239 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:42:19",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:714803): GLib-GIO-WARNING **: 12:42:19.594: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:42:10",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:42:10,340 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:42:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:41:12",
+    "severity": "INFO",
+    "source": "LabAttendant",
+    "message": "HIBERNATION_START (AFK_TIMEOUT)"
+  },
+  {
+    "timestamp": "2026-07-27 12:41:03",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:41:03,264 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:38:19",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:38:19,359 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:37:12",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:37:12,410 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:36:59",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:713639): GLib-GIO-WARNING **: 12:36:59.470: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:36:38",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:34:28",
+    "severity": "INFO",
+    "source": "python",
+    "message": "2026-07-27 12:34:28,436 [MASS SCAN] Task failed: Command '['/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python', '/home/jallred/Dev_Lab/Portfolio_Dev/field_notes/nibble_v2.py', '--hybrid']' returned non"
+  },
+  {
+    "timestamp": "2026-07-27 12:31:37",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:712526): GLib-GIO-WARNING **: 12:31:37.555: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-27 12:31:36",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started anacron.service - Run anacron jobs."
+  },
+  {
+    "timestamp": "2026-07-27 12:31:13",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-27 12:30:23",
+    "severity": "ERROR",
+    "source": "VLLM",
+    "message": "vLLM Stream Error (400): {\"error\":{\"message\":\"This model's maximum context length is 16384 tokens. However, you requested 150 output tokens and your prompt contains at least 16235 input tokens, for a total of at least 16385 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16235)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}"
+  },
+  {
+    "timestamp": "2026-07-27 12:30:23",
+    "severity": "WARNING",
+    "source": "VLLM",
+    "message": "Context Ceiling Clamp: Clamped max_tokens from 1000 to 150 (Prompt: ~63767 tokens) to fit 8192 context limit."
+  },
+  {
+    "timestamp": "2026-07-27 12:30:21",
+    "severity": "ERROR",
+    "source": "VLLM",
+    "message": "vLLM Stream Error (400): {\"error\":{\"message\":\"This model's maximum context length is 16384 tokens. However, you requested 150 output tokens and your prompt contains at least 16235 input tokens, for a total of at least 16385 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16235)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}"
+  },
+  {
+    "timestamp": "2026-07-27 12:30:21",
+    "severity": "WARNING",
+    "source": "VLLM",
+    "message": "Context Ceiling Clamp: Clamped max_tokens from 1000 to 150 (Prompt: ~64707 tokens) to fit 8192 context limit."
+  },
+  {
+    "timestamp": "2026-07-27 12:30:19",
+    "severity": "ERROR",
+    "source": "VLLM",
+    "message": "vLLM Stream Error (400): {\"error\":{\"message\":\"This model's maximum context length is 16384 tokens. However, you requested 150 output tokens and your prompt contains at least 16235 input tokens, for a total of at least 16385 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16235)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}"
+  },
+  {
+    "timestamp": "2026-07-27 12:30:18",
+    "severity": "WARNING",
+    "source": "VLLM",
+    "message": "Context Ceiling Clamp: Clamped max_tokens from 1000 to 150 (Prompt: ~64707 tokens) to fit 8192 context limit."
+  },
+  {
+    "timestamp": "2026-07-27 12:30:16",
+    "severity": "ERROR",
+    "source": "VLLM",
+    "message": "vLLM Stream Error (400): {\"error\":{\"message\":\"This model's maximum context length is 16384 tokens. However, you requested 150 output tokens and your prompt contains at least 16235 input tokens, for a total of at least 16385 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=16235)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}"
+  },
+  {
+    "timestamp": "2026-07-27 12:30:16",
+    "severity": "WARNING",
+    "source": "VLLM",
+    "message": "Context Ceiling Clamp: Clamped max_tokens from 1000 to 150 (Prompt: ~64707 tokens) to fit 8192 context limit."
+  },
+  {
     "timestamp": "2026-07-27 12:28:10",
     "severity": "INFO",
     "source": "systemd",
