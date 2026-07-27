@@ -1,5 +1,83 @@
 [
   {
+    "timestamp": "2026-07-26 22:58:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_farm_check.service - Check and migrate non-primary pmie farm instances."
+  },
+  {
+    "timestamp": "2026-07-26 22:58:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmie_check.service - Check PMIE instances are running."
+  },
+  {
+    "timestamp": "2026-07-26 22:55:20",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:500006): GLib-GIO-WARNING **: 22:55:19.769: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
+    "timestamp": "2026-07-26 22:55:10",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_farm_check.service - Check and migrate non-primary pmlogger farm instances."
+  },
+  {
+    "timestamp": "2026-07-26 22:55:00",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started pmlogger_check.service - Check pmlogger instances are running."
+  },
+  {
+    "timestamp": "2026-07-26 22:54:59",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started media-master-sync.service - Resilient Media Master Sync (Sync + Rename Track + Torrent Shield)."
+  },
+  {
+    "timestamp": "2026-07-26 22:53:18",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started snap.firefox.hook.configure-3fe1cecc-dd8c-4cae-a7e1-5d387c483445.scope."
+  },
+  {
+    "timestamp": "2026-07-26 22:53:16",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started snap.firefox.hook.post-refresh-521836e8-b4b4-4790-91d1-eff8c5ba5f56.scope."
+  },
+  {
+    "timestamp": "2026-07-26 22:52:59",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service."
+  },
+  {
+    "timestamp": "2026-07-26 22:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: update attempt complete"
+  },
+  {
+    "timestamp": "2026-07-26 22:52:55",
+    "severity": "INFO",
+    "source": "systemd",
+    "message": "Started run-u1015.service - /usr/bin/tailscale update --yes."
+  },
+  {
+    "timestamp": "2026-07-26 22:52:55",
+    "severity": "INFO",
+    "source": "tailscaled",
+    "message": "offline auto-update: running \"systemd-run --wait --pipe --collect /usr/bin/tailscale update --yes\""
+  },
+  {
+    "timestamp": "2026-07-26 22:49:59",
+    "severity": "INFO",
+    "source": "tracker-miner-fs-3",
+    "message": "(tracker-extract-3:496893): GLib-GIO-WARNING **: 22:49:59.136: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)"
+  },
+  {
     "timestamp": "2026-07-26 22:49:37",
     "severity": "INFO",
     "source": "systemd",
