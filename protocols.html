@@ -99,6 +99,8 @@
     </style>
 </head>
 <body>
+<!-- [SOURCE_OF_TRUTH] Compiled from: HomeLabAI/docs/Protocols.md. Do NOT edit protocols.html directly! -->
+
 
     <button id="menu-toggle">☰ MENU</button>
 
@@ -610,25 +612,30 @@
 <li><strong>Mandatory Shell-Based Execution (Point 12)</strong>:<ul>
 <li>All developer/implementation tasks delegated to OpenAgent must be launched via the shell-based <code>opencode</code> CLI attached to port 4096:
     <code>bash
-    /home/jallred/.opencode/bin/opencode run --dir &lt;target_dir&gt; --attach http://127.0.0.1:4096/ "SESSION: Sprint XX Story YY — &lt;Title&gt;..."</code></li>
+    opencode run --dir &lt;target_dir&gt; --attach http://127.0.0.1:4096/ "SESSION: Sprint XX Story YY — &lt;Title&gt;..."</code></li>
 <li><code>invoke_subagent</code> is strictly reserved for read-only research tasks. This guarantees all active worker sessions render live on the local TUI and webview dashboard at <code>http://192.168.1.238:4096/</code>.</li>
 </ul>
 </li>
 <li><strong>Narrow Workspace Scoping &amp; On-Demand Reference</strong>:<ul>
-<li>Target the narrowest active project directory (e.g. <code>--dir /home/jallred/Dev_Lab/HomeLabAI</code>).</li>
-<li>To reference planning files outside the target workspace, pass direct links using the <code>file://</code> scheme in the prompt (e.g. <code>file:///home/jallred/Dev_Lab/Portfolio_Dev/SPRINT_PLAN_SPR_42_0.md#Story-1</code>).</li>
+<li>Target the narrowest active project directory (e.g. <code>--dir HomeLabAI</code>).</li>
+<li>To reference planning files outside the target workspace, pass direct links using relative paths or the <code>file://</code> scheme in the prompt (e.g. <code>file://&lt;path_to_workspace&gt;/Portfolio_Dev/SPRINT_PLAN_SPR_42_0.md#Story-1</code>).</li>
 </ul>
 </li>
 <li>
 <p><strong>Standardized Prompt Blueprint</strong>:</p>
 <ul>
-<li>Prompts sent to OpenAgent must be explicit and structured, minimizing local model reasoning drift:<pre><code>SESSION: Sprint XX Story YY — &lt;Title&gt;
+<li>Prompts sent to OpenAgent must follow the Pre-Grounded Blueprint defined in <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md#33-pre-grounded-blueprint--swarm-delegation-prompting"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md Section 3.3</strong></a>:<pre><code>SESSION: Sprint XX Story YY — &lt;Title&gt;
 
-Read the master plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
+[PRE-GROUNDED CONTEXT BRIEFING]
+- Architecture &amp; Planning: Sprint plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
+- Scope Guidance: Pre-grounding complete. Skip broad workspace scans; focus directly on target files.
 
 [TARGET SPECIFICATION]
-- File: &lt;absolute_path_to_target_file&gt;
+- Primary Output Target: &lt;absolute_path_to_target_file&gt;
 - Task Details: &lt;explicit_code_or_logic_changes&gt;
+
+[SWARM DELEGATION DIRECTIVE]
+- You are Sisyphus (Lead Manager). Delegate sub-tasks to specialists (`Prometheus`, `Sisyphus-Junior`, `Hephaestus`).
 
 [VERIFICATION GATE]
 - Test Command: &lt;pytest_or_validation_script&gt;
@@ -647,6 +654,15 @@ Read the master plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
 <li><strong>Forensic Gatekeeper &amp; Git Ownership</strong>:<ul>
 <li>OpenAgent workers edit files and run test suites locally, but are <strong>prohibited from performing <code>git commit</code></strong>.</li>
 <li>The Strategic Guardian inspects <code>git diff</code>, verifies <code>pytest</code> output, and executes git commits upon task certification.</li>
+</ul>
+</li>
+<li><strong>Token Distribution &amp; Swarm Autonomy Guiding Principle</strong>:<ul>
+<li>OpenAgent's primary purpose is to <strong>spread out the cost of tokens</strong>. Node KENDER (<code>192.168.1.26:11434</code>, <code>qwen2.5-coder:14b</code>) is compute-free. Kender cannot delegate, but it CAN write code.</li>
+<li>Delegation is considered a <strong>failure</strong> if any delegation changes neuter the swarm, if orchestration fails, or if KENDER is prevented from being used to create code.</li>
+</ul>
+</li>
+<li><strong>Delegation Script &amp; Pre-Flight Quota Sentinel</strong>:<ul>
+<li>All task dispatches to OpenAgent MUST use <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py"><strong>src/tests/delegate.py</strong></a>, which performs REST session creation on port 4097 (<code>POST http://127.0.0.1:4097/session</code>), checks cloud/local provider quotas via <code>check_cloud_quota()</code>, and attaches <code>opencode run --attach http://127.0.0.1:4097/ --session &lt;id&gt;</code>.</li>
 </ul>
 </li>
 </ol>
@@ -754,7 +770,7 @@ Read the master plan at file://&lt;path_to_sprint_plan&gt;.md#Story-YY.
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent virtual environment context-bleeding and indexing bloat across subagent swarms.</p>
 <ol>
-<li><strong>Single Canonical Venv</strong>: The primary canonical Python environment is pre-configured at <code>/home/jallred/Dev_Lab/HomeLabAI/.venv</code>. Always activate or use <code>/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python</code> for all execution. Workspace sub-directories (e.g., <code>Portfolio_Dev</code>) must NOT contain local <code>venv</code> or <code>.venv</code> copies.</li>
+<li><strong>Single Canonical Venv</strong>: The primary canonical Python environment is pre-configured at <code>HomeLabAI/.venv</code>. Always activate or use <code>HomeLabAI/.venv/bin/python</code> for all execution. Workspace sub-directories (e.g., <code>Portfolio_Dev</code>) must NOT contain local <code>venv</code> or <code>.venv</code> copies.</li>
 <li><strong>Git Ignore Hardening</strong>: Every workspace repository must explicitly ignore <code>venv/</code>, <code>.venv/</code>, <code>env/</code>, and <code>*.egg-info/</code> in its root <code>.gitignore</code>.</li>
 <li><strong>Agent Indexing Isolation</strong>: Agentic search/scan tools (e.g., <code>opencode</code>, <code>codex</code>, <code>ripgrep</code>) must respect <code>.gitignore</code> to avoid indexing thousands of site-packages files that cause memory ballooning.</li>
 <li><strong>Pre-Commit Verification</strong>: Before staging changes, agents must verify <code>git status --porcelain</code> contains no untracked environment or binary build artifacts.</li>
