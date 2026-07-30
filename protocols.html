@@ -137,7 +137,7 @@
                                 <p><strong>Objective</strong>: Restore the Agent's technical context after a session break or crash.</p>
 <ol>
 <li><strong>Orientation (Bootstrap)</strong>:<ul>
-<li>Refer to the top-level <strong><a href="https://github.com/kEnder242/Dev_Lab/blob/main/BOOTSTRAP_v4.3.md">BOOSTRAP.md</a></strong> for the primary navigational hub and global project context.</li>
+<li>Refer to the top-level <strong><a href="https://github.com/kEnder242/Dev_Lab/blob/main/BOOTSTRAP_v4.4.md">BOOTSTRAP.md</a></strong> for the primary navigational hub and global project context.</li>
 <li>Consult <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/ENGINEERING_PEDIGREE.md">ENGINEERING_PEDIGREE.md</a></strong> for the active architectural laws and design breadcrumbs.</li>
 <li><strong>Inventory Mandate</strong>: Proactively identify existing "wheels" (tests, diagnostic scripts, and tools) in <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/DIAGNOSTIC_RUNDOWN.md">DIAGNOSTIC_RUNDOWN.md</a></strong> and <strong><a href="https://github.com/kEnder242/HomeLabAI/blob/main/docs/TOOL_RUNDOWN.md">TOOL_RUNDOWN.md</a></strong> before suggesting or implementing new code.</li>
 <li><strong>State Snapshot</strong>: Read the last 5 entries in <strong><a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/00_FEDERATED_STATUS.md">00_FEDERATED_STATUS.md</a></strong> to identify the current "Front Line" and active sprint.</li>
@@ -393,11 +393,26 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-018</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Orchestrator-First Mandate (Attendant V3)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Orchestrator-First Mandate (Attendant V3 & Live Lab Service Inventory)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Prevent "Zombie States" and diagnostic blindness caused by manual process manipulation.</p>
+                                <p><strong>Objective</strong>: Prevent "Zombie States," stale memory footprints, orphan process collisions, and diagnostic blindness caused by manual process manipulation.</p>
 <ol>
-<li><strong>Service Model</strong>: The Lab Attendant is now a permanent resident service. Direct execution of the orchestration script for hardware control is no longer supported.</li>
+<li><strong>Service Model</strong>: All Lab daemons, proxies, and cognitive engines MUST be managed exclusively as systemd resident services. Direct execution of CLI daemons or background scripts outside of systemd (e.g. <code>nohup</code>, <code>&amp;</code>, or direct <code>codex serve</code> execution) is strictly prohibited.</li>
+<li>
+<p><strong>Systemd Service Inventory &amp; Topology</strong>:
+| Unit Name | Type | Scope | Port / Path | Purpose &amp; Role |
+| :--- | :--- | :--- | :--- | :--- |
+| <strong><code>lab-attendant.service</code></strong> | Service | <code>system</code> | <code>:8000</code> / <code>:9999</code> | Acme Lab Attendant &amp; Cognitive Hub Orchestrator (Foyer, ignition, VRAM manager). |
+| <strong><code>chroma-server.service</code></strong> | Service | <code>user</code> | <code>:8001</code> | Persistent ChromaDB HTTP Vector Database (5 collections). |
+| <strong><code>headroom-proxy.service</code></strong> | Service | <code>user</code> | <code>:8787</code> | Headroom Token Optimization Proxy for subagents. |
+| <strong><code>opencode.socket</code></strong> | Socket | <code>user</code> | <code>0.0.0.0:4096</code> | Public Scale-to-Zero LAN Web UI Gateway (<code>http://192.168.1.238:4096/</code>). |
+| <strong><code>opencode-proxy.service</code></strong> | Service | <code>user</code> | <code>:4096</code> ➔ <code>:4097</code> | Systemd Socket Proxy (<code>StopWhenUnneeded=true</code>, proxies 4096 to 4097). |
+| <strong><code>opencode-core.service</code></strong> | Service | <code>user</code> | <code>127.0.0.1:4097</code> | Core OpenCode/Codex REST engine (<code>Headroom wrap codex serve</code>). |
+| <strong><code>field-notes.service</code></strong> | Service | <code>system</code> | <code>:9001</code> | Python HTTP Server serving the Field Notes static dashboard. |
+| <strong><code>acme-pager.service</code></strong> | Service | <code>system</code> | <code>:8501</code> | Neural Pager Streamlit activity log dashboard. |
+| <strong><code>field-notes-nibbler.service</code></strong> | Service | <code>user</code> | Background | Continuous load-aware note scanner and indexer. |
+| <strong><code>field-notes-nightly.timer</code></strong> | Timer | <code>user</code> | <code>02:00 AM</code> | Nightly 2:00 AM note synthesis &amp; date aggregation sweep. |</p>
+</li>
 <li>
 <p><strong>Proxy Usage</strong>: All agentic orchestration must flow through the <strong>Native MCP Tools</strong> (<code>lab_start</code>, <code>lab_stop</code>, <code>lab_quiesce</code>). These tools act as a stateless proxy to the resident service.
 | Tool | Intent | Physical Action |
@@ -409,26 +424,26 @@
 | <strong><code>lab_ignition</code></strong> | Lock Clearance | <strong>Emergency Override</strong>: Clears any existing <code>maintenance.lock</code> files but does NOT start models. Follow this with <code>lab_start</code>. |</p>
 </li>
 <li>
-<p><strong>Critical REST</strong>: The REST API (port 9999) is a critical infrastructure layer that enables the <code>status.html</code> remote control and provides the backend communication for the MCP Proxy. </p>
+<p><strong>Critical REST</strong>: The REST API (port 9999 / 8000) is a critical infrastructure layer that enables <code>status.html</code> remote control and backend communication for the MCP Proxy.</p>
 </li>
-<li><strong>Restriction</strong>: Do not use manual <code>pkill</code>, <code>kill</code>, <code>nohup</code>, or direct execution of <code>python3 src/acme_lab.py</code>. These actions bypass the Attendant's logging, port-reaping, and state-tracking logic.</li>
-<li><strong>Legacy Support</strong>: <code>LAB_REST_CURL_CONTROL</code> (Default: ENABLED) preserves backward compatibility for existing <code>curl</code> scripts and remote status indicators while steering the agent toward the high-fidelity Proxy path.</li>
-<li><strong>Code Reload Mandate</strong>: Any codebase modifications made to Foyer routing (<code>router.py</code>, <code>cognitive_hub.py</code>), node adapters (<code>loader.py</code>), or Attendant services must be followed immediately by <code>sudo systemctl restart lab-attendant.service</code>. Failing to restart the service after file modifications causes the system to run stale memory footprints, leading to false validation passes.</li>
+<li><strong>Restriction</strong>: Do not use manual <code>pkill</code>, <code>kill</code>, <code>nohup</code>, or direct CLI execution of <code>python3 src/acme_lab.py</code> or <code>codex serve</code>.</li>
+<li><strong>Code Reload &amp; Restart Mandate (CRITICAL)</strong>: Any codebase modifications made to Foyer routing (<code>router.py</code>, <code>cognitive_hub.py</code>), node adapters (<code>loader.py</code>, <code>archive_node.py</code>), or Attendant services MUST be followed immediately by <code>sudo systemctl restart lab-attendant.service</code>. Running integration tests or live queries against a running lab without restarting the service tests stale memory footprints, leading to false validation passes.</li>
+<li><strong>Live Integration Testing Mandate</strong>: All integration test suites (<code>test_integration_*.py</code>, <code>live_fire_integration.py</code>) MUST actively target and validate against the live running lab services (<code>lab-attendant.service</code> on <code>:8000</code>, <code>chroma-server.service</code> on <code>:8001</code>, and Node KENDER on <code>:11434</code>).</li>
+<li><strong>Non-Blocking HyDE Synthesis</strong>: Triage and HyDE vector generation must NEVER block on local VRAM status or output empty filler. When the local engine is warming (<code>not get_vram_status()</code>), <code>cognitive_hub.py</code> must route <code>triage_mode_context</code> immediately to Deep Thought on KENDER (<code>192.168.1.26:11434</code>) for instant 3-part Composite HyDE query synthesis (<code>[VALIDATION] | [STRATEGY] | [SRE]</code>).</li>
 </ol>
-<p><strong>Tool Stewardship</strong>: If a tool is broken or lacks functionality, fix or extend it. Avoid temporary workarounds that may cause issues later.</p>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-024</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization & Live Integration</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Ensure the physical Lab state matches the active sprint implementation.</p>
+                                <p><strong>Objective</strong>: Ensure the physical Lab state and running daemon processes match active sprint code before testing.</p>
 <ol>
-<li><strong>Sync-Gate</strong>: Before any <code>[LIVE FIRE]</code> or <code>[SHAKEDOWN]</code> test, the Agent must perform a <code>curl /heartbeat</code>. </li>
-<li><strong>Logic</strong>: If the current <code>commit</code> or <code>model</code> in the heartbeat does not match the session's active implementation, the Agent MUST trigger a <code>POST /hard_reset</code> (or <code>lab_stop</code> -&gt; <code>lab_start</code>) to synchronize the silicon with the code.</li>
-<li><strong>State Trust</strong>: Do not assume a background process persisted correctly across a git commit or hard reset. Re-verify liveness before proceeding with test execution.</li>
+<li><strong>Sync-Gate</strong>: Before running any <code>[LIVE FIRE]</code>, <code>[SHAKEDOWN]</code>, or integration test (<code>test_integration_*.py</code>), the Agent MUST check service liveness (<code>curl http://127.0.0.1:8000/status</code> or <code>lab_heartbeat</code>).</li>
+<li><strong>Mandatory Service Reload</strong>: If any file in <code>src/logic/</code>, <code>src/nodes/</code>, or <code>src/forge/</code> was edited during the session, the Agent MUST execute <code>sudo systemctl restart lab-attendant.service</code> to flush cached Python processes before executing tests.</li>
+<li><strong>State Trust</strong>: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration tests after every service restart.</li>
 </ol>
                             </div>
                         </td>
@@ -609,11 +624,10 @@
 <li><strong>Tactical Swarm (OpenAgent)</strong>: Executes code modifications, runs unit test iterations (<code>pytest</code>), and handles line-by-line file updates.</li>
 </ul>
 </li>
-<li><strong>Mandatory Shell-Based Execution (Point 12)</strong>:<ul>
-<li>All developer/implementation tasks delegated to OpenAgent must be launched via the shell-based <code>opencode</code> CLI attached to port 4096:
-    <code>bash
-    opencode run --dir &lt;target_dir&gt; --attach http://127.0.0.1:4096/ "SESSION: Sprint XX Story YY — &lt;Title&gt;..."</code></li>
-<li><code>invoke_subagent</code> is strictly reserved for read-only research tasks. This guarantees all active worker sessions render live on the local TUI and webview dashboard at <code>http://192.168.1.238:4096/</code>.</li>
+<li><strong>Mandatory Swarm Delegation via REST Dispatch</strong>:<ul>
+<li>All developer/implementation tasks delegated to OpenAgent must be launched using <code>python3 src/tests/delegate.py</code>.</li>
+<li><code>delegate.py</code> creates a REST session on port 4097 (<code>POST http://127.0.0.1:4097/session</code>), triggers socket warm-up on port 4096 (<code>wake_web_ui()</code>), and dispatches the prompt via <code>POST http://127.0.0.1:4097/session/&lt;id&gt;/message</code>.</li>
+<li><code>invoke_subagent</code> is strictly reserved for read-only research tasks. Using <code>delegate.py</code> guarantees all active worker sessions render live on the local TUI and webview dashboard at <code>http://192.168.1.238:4096/</code>.</li>
 </ul>
 </li>
 <li><strong>Narrow Workspace Scoping &amp; On-Demand Reference</strong>:<ul>
@@ -634,8 +648,24 @@
 - Primary Output Target: &lt;absolute_path_to_target_file&gt;
 - Task Details: &lt;explicit_code_or_logic_changes&gt;
 
-[SWARM DELEGATION DIRECTIVE]
-- You are Sisyphus (Lead Manager). Delegate sub-tasks to specialists (`Prometheus`, `Sisyphus-Junior`, `Hephaestus`).
+[SWARM DELEGATION DIRECTIVE — TASK() CALLS ONLY]
+You are Sisyphus (Lead Orchestrator). You MUST NOT implement code directly.
+Emit task() tool calls to delegate implementation and verification work:
+
+  task(category="quick", run_in_background=false, prompt="""
+    ## 1. TASK
+    &lt;exact implementation task&gt;
+    ## 2. EXPECTED OUTCOME
+    - [ ] File &lt;path&gt; modified
+    - [ ] Verification command exits 0
+    ## 3. MUST DO
+    - READ the target file first
+    - USE the edit/write tool to apply the change
+    - RUN verification check
+    ## 4. MUST NOT DO
+    - Do NOT only read and report — you MUST write the change
+    - Do NOT git commit
+  """)
 
 [VERIFICATION GATE]
 - Test Command: &lt;pytest_or_validation_script&gt;
@@ -661,8 +691,53 @@
 <li>Delegation is considered a <strong>failure</strong> if any delegation changes neuter the swarm, if orchestration fails, or if KENDER is prevented from being used to create code.</li>
 </ul>
 </li>
-<li><strong>Delegation Script &amp; Pre-Flight Quota Sentinel</strong>:<ul>
-<li>All task dispatches to OpenAgent MUST use <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py"><strong>src/tests/delegate.py</strong></a>, which performs REST session creation on port 4097 (<code>POST http://127.0.0.1:4097/session</code>), checks cloud/local provider quotas via <code>check_cloud_quota()</code>, and attaches <code>opencode run --attach http://127.0.0.1:4097/ --session &lt;id&gt;</code>.</li>
+<li>
+<p><strong>Delegation Script &amp; Pre-Flight Quota Sentinel</strong>:</p>
+<ul>
+<li>All task dispatches to OpenAgent MUST use <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py"><strong>src/tests/delegate.py</strong></a>, which performs REST session creation on port 4097 (<code>POST http://127.0.0.1:4097/session</code>), checks cloud/local provider quotas via <code>check_cloud_quota()</code>, and dispatches prompts via <code>POST http://127.0.0.1:4097/session/&lt;id&gt;/message</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>OmO <code>task()</code> Delegation Mechanics (CRITICAL — Sprint 48 Scar)</strong>:</p>
+<ul>
+<li><strong>The Fundamental Model</strong>: <code>oh-my-openagent</code> (OmO) defines agents in <code>~/.config/opencode/oh-my-openagent.json</code>. Each named agent (<code>sisyphus-junior</code>, <code>prometheus</code>, <code>hephaestus</code>) maps to a specific provider/model. <code>sisyphus-junior</code> is bound to <code>my-windows-4090/qwen2.5-coder:14b</code> (KENDER, free local inference).</li>
+<li><strong>All OmO categories already route to KENDER</strong>: <code>~/.config/opencode/oh-my-openagent.json</code> maps every category (<code>quick</code>, <code>deep</code>, <code>ultrabrain</code>, <code>visual-engineering</code>, etc.) to <code>my-windows-4090/qwen2.5-coder:14b</code>. No config change needed — KENDER is the default ground-worker for all delegated <code>task()</code> calls.</li>
+<li><strong>Delegation requires a <code>task()</code> tool call — narration is NOT delegation</strong>: Sisyphus only routes work to KENDER when it emits a <code>task(category="quick", ...)</code> tool call. Prose instructions ("delegate to Sisyphus-Junior") without a <code>task()</code> tool call result in Sisyphus doing all work itself.</li>
+<li><strong>Sprint 48 Scar — Underspecified task() prompts cause read-only subagents</strong>: When <code>task()</code> is called but the prompt inside doesn't explicitly mandate a write/edit tool action, KENDER's subagent will read the target file and report findings without modifying it. Sisyphus then falls back to applying the edit itself via its own <code>edit</code> tool — KENDER was technically invoked but performed no write. Fix: every <code>task()</code> prompt destined for code edits MUST include <code>## MUST DO: Use the edit/write tool to apply the change to &lt;path&gt;</code> as a mandatory section.</li>
+<li><strong>Correct task() prompt structure for write tasks</strong>:
+    ```
+    task(category="quick", run_in_background=false, prompt=\"\"\"
+    ## 1. TASK
+    Edit <exact file path> — replace <target string> with <replacement>
+    ## 2. EXPECTED OUTCOME<ul>
+<li>[ ] File <path> modified on disk</li>
+<li>[ ] grep '<pattern>' <path> exits 0</li>
+</ul>
+<h2>3. MUST DO</h2>
+<ul>
+<li>READ the file first to confirm the target string</li>
+<li>USE the edit/write tool to apply the change</li>
+<li>RUN the grep to verify</li>
+</ul>
+<h2>4. MUST NOT DO</h2>
+<ul>
+<li>Do NOT only read the file and report — you MUST write the change</li>
+<li>Do NOT git commit
+\"\"\")
+```</li>
+</ul>
+</li>
+<li><strong>Audit gate</strong>: After each story, AGY inspects <code>GET /session/&lt;id&gt;/message</code> and checks that <code>tool</code> parts include <code>edit</code> or <code>write</code> invocations from the subagent. If only <code>read</code>/<code>grep</code> tools appear from the delegated turn, the subagent read-only looped — Sisyphus self-corrected but KENDER did no useful work.</li>
+</ul>
+</li>
+<li>
+<p><strong>Port Separation &amp; Socket Wakeup (Sprint 48 Scar)</strong>:</p>
+<ul>
+<li><strong>Port 4097</strong> = <code>codex</code> REST API backend (system-level systemd service, always running).</li>
+<li><strong>Port 4096</strong> = OmO web UI proxy (user-level <code>opencode.socket</code> + <code>opencode-proxy.service</code>, socket-activated with <code>StopWhenUnneeded=true</code>). Stops when idle; restarts on first TCP connection.</li>
+<li><strong>Wakeup</strong>: <code>delegate.py</code> calls <code>wake_web_ui()</code> which HTTP-GETs <code>http://127.0.0.1:4096/</code> before session creation. This triggers <code>opencode.socket</code> → <code>opencode-proxy.service</code> activation chain.</li>
+<li><strong>Socket Rate-Limit Hardening</strong>: Set <code>TriggerLimitIntervalSec=0</code> under <code>[Socket]</code> in <code>~/.config/systemd/user/opencode.socket</code>. This prevents systemd from marking <code>opencode.socket</code> as <code>failed (trigger-limit-hit)</code> during rapid reconnect or wake sequences.</li>
+<li><strong>Headless REST dispatch</strong>: <code>opencode run --attach</code> is a <strong>blocking foreground TUI</strong> requiring an active browser session on port 4096. When the webview is down, <code>subprocess.run(opencode run --attach)</code> hangs indefinitely. The correct headless pattern bypasses <code>opencode run</code> entirely: <code>POST http://127.0.0.1:4097/session/&lt;id&gt;/message</code> with <code>{"parts":[{"type":"text","text":"&lt;prompt&gt;"}]}</code>.</li>
 </ul>
 </li>
 </ol>
@@ -774,6 +849,23 @@
 <li><strong>Git Ignore Hardening</strong>: Every workspace repository must explicitly ignore <code>venv/</code>, <code>.venv/</code>, <code>env/</code>, and <code>*.egg-info/</code> in its root <code>.gitignore</code>.</li>
 <li><strong>Agent Indexing Isolation</strong>: Agentic search/scan tools (e.g., <code>opencode</code>, <code>codex</code>, <code>ripgrep</code>) must respect <code>.gitignore</code> to avoid indexing thousands of site-packages files that cause memory ballooning.</li>
 <li><strong>Pre-Commit Verification</strong>: Before staging changes, agents must verify <code>git status --porcelain</code> contains no untracked environment or binary build artifacts.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-039</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">RAG Taxonomy Separation & HyDE LoRA Tabling Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective:</strong> Maintain strict separation between Agent Behavioral DNA and User Work History while standardizing prompt synthesis over fine-tuning.</p>
+<ol>
+<li><strong>Taxonomy Boundary</strong>:</li>
+<li><strong>Agent DNA (<code>behavioral_dna</code>, <code>feature_dna</code>)</strong>: System operational instructions, BKM protocols, feature mechanisms.</li>
+<li><strong>User Work History (<code>career_ledger</code>, <code>artifact_vault</code>, <code>lab_journal</code>)</strong>: 18-year technical career history, resume ground truth, hardware validation logs, field notes.</li>
+<li><strong>LoRA Fine-Tuning Tabling Decision</strong>:</li>
+<li>HyDE synthesis relies on structured prompt templates (Unified Intent-HyDE) rather than custom LoRA weights.</li>
+<li>Prompt-based multi-voice synthesis maintains 100% adaptability without model quantization drift or LoRA reloading overhead.</li>
 </ol>
                             </div>
                         </td>
