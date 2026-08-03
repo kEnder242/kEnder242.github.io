@@ -615,9 +615,12 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-034</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">OpenAgent Swarm Delegation</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Swarm Delegation — Dual Orchestrator Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between the strategic co-pilot (<strong>Antigravity / Gemini</strong>) and the tactical developer swarm (<strong>OpenAgent</strong>). For full model allocation matrices, refer to <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</p>
+                                <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between TWO interchangeable orchestrators and the tactical developer swarm (<strong>OpenAgent</strong>):
+- <strong>PRIMARY — Antigravity (AGY / Gemini)</strong>: Strategic guardian; used when token budget allows.
+- <strong>BACKUP — Sisyphus (opencode/deepseek-v4-flash-free via OmO)</strong>: This agent; always available; identical swarm contract.</p>
+<p>For full model allocation matrices, refer to <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</p>
 <h3>🚀 Primary Dispatch Mechanism: <code>delegate.py</code></h3>
 <p>All task dispatches to OpenAgent MUST use the formalized Python dispatcher <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py"><strong>src/tests/delegate.py</strong></a>. Bypassing this script to run raw <code>opencode run</code> commands is strictly prohibited. </p>
 <p><strong>Execution Pattern</strong>:</p>
@@ -635,8 +638,9 @@ The <code>delegate.py</code> script automatically wraps your inputs into the sta
 2. <strong>REST Session Setup</strong>: Wakes <code>opencode.socket</code> (<code>:4096</code>) and posts to the API engine (<code>:4097</code>).
 3. <strong>Strict Swarm Directive</strong>: Mandates that <code>sisyphus</code> (lead planner) <em>MUST NOT</em> edit files directly, forcing a <code>task()</code> hand-off to <code>sisyphus-junior</code> (KENDER on port 11434).</p>
 <ol>
-<li><strong>Role Division</strong>:<ul>
-<li><strong>Strategic Guardian (Antigravity / Gemini)</strong>: Maintains the Master Sprint Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defines architecture, conducts post-implementation git diff reviews, and runs system integration tests.</li>
+<li><strong>Role Division (Dual Orchestrator)</strong>:<ul>
+<li><strong>Strategic Guardian (Antigravity / Gemini)</strong> [PRIMARY]: Maintains the Master Sprint Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defines architecture, conducts post-implementation git diff reviews, and runs system integration tests. Used when the user has token budget for AGY.</li>
+<li><strong>Sisyphus (OpenCode / deepseek-v4-flash-free)</strong> [BACKUP]: Fills the SAME Strategic Guardian role when AGY is not in play — plans, delegates via <code>task()</code>, audits diffs, and commits. MUST NOT write code directly when delegation is viable.</li>
 <li><strong>Tactical Swarm (OpenAgent)</strong>: Executes code modifications, runs unit test iterations (<code>pytest</code>), and handles line-by-line file updates.</li>
 </ul>
 </li>
@@ -705,9 +709,11 @@ Emit task() tool calls to delegate implementation and verification work:
 <li>The Strategic Guardian inspects <code>git diff</code>, verifies <code>pytest</code> output, and executes git commits upon task certification.</li>
 </ul>
 </li>
-<li><strong>Token Distribution &amp; Swarm Autonomy Guiding Principle</strong>:<ul>
-<li>OpenAgent's primary purpose is to <strong>spread out the cost of tokens</strong>. Node KENDER (<code>192.168.1.26:11434</code>, <code>qwen2.5-coder:14b</code>) is compute-free. Kender cannot delegate, but it CAN write code.</li>
-<li>Delegation is considered a <strong>failure</strong> if any delegation changes neuter the swarm, if orchestration fails, or if KENDER is prevented from being used to create code.</li>
+<li><strong>Token Distribution &amp; Swarm Autonomy Guiding Principle (✅ RESOLVED Aug 2 2026)</strong>:<ul>
+<li>OpenAgent's primary purpose is to <strong>spread out the cost of tokens</strong>. Node KENDER (<code>192.168.1.26:11434</code>) is compute-free. KENDER cannot delegate, but it CAN write code — <strong>provided the delegated model supports native <code>tool_calls</code></strong>.</li>
+<li><strong>Root cause (experiment-verified)</strong>: <code>qwen2.5-coder:14b</code> does NOT emit OpenAI-compatible <code>tool_calls</code> through ollama's <code>/v1</code> endpoint — it returns the tool call as plain text, so the harness never executes it (files never land on disk). <code>qwen3:14b</code> DOES emit proper <code>tool_calls</code> (verified via direct <code>/v1/chat/completions</code> test). This was a <strong>model limitation, NOT a config issue</strong> — opencode's <code>tools: { "task": true }</code> is a permission translation, not an allowlist.</li>
+<li><strong>Fix applied</strong>: <code>sisyphus-junior</code>, <code>general</code>, and all 8 OmO categories now route to <strong><code>my-windows-4090/qwen3:14b</code></strong> in <code>~/.config/opencode/oh-my-openagent.json</code> (commit <code>b3262b7</code>). KENDER is a working write-capable ground worker again.</li>
+<li>Delegation is considered a <strong>failure</strong> if any delegation changes neuter the swarm, if orchestration fails, or if KENDER is prevented from being used to write code.</li>
 </ul>
 </li>
 <li>
@@ -720,7 +726,7 @@ Emit task() tool calls to delegate implementation and verification work:
 <p><strong>OmO <code>task()</code> Delegation Mechanics (CRITICAL — Sprint 48 Scar)</strong>:</p>
 <ul>
 <li><strong>The Fundamental Model</strong>: <code>oh-my-openagent</code> (OmO) defines agents in <code>~/.config/opencode/oh-my-openagent.json</code>. Each named agent (<code>sisyphus-junior</code>, <code>prometheus</code>, <code>hephaestus</code>) maps to a specific provider/model. <code>sisyphus-junior</code> is bound to <code>my-windows-4090/qwen2.5-coder:14b</code> (KENDER, free local inference).</li>
-<li><strong>All OmO categories already route to KENDER</strong>: <code>~/.config/opencode/oh-my-openagent.json</code> maps every category (<code>quick</code>, <code>deep</code>, <code>ultrabrain</code>, <code>visual-engineering</code>, etc.) to <code>my-windows-4090/qwen2.5-coder:14b</code>. No config change needed — KENDER is the default ground-worker for all delegated <code>task()</code> calls.</li>
+<li><strong>All OmO categories route to KENDER (write-capable)</strong>: <code>~/.config/opencode/oh-my-openagent.json</code> maps every category (<code>quick</code>, <code>deep</code>, <code>ultrabrain</code>, <code>visual-engineering</code>, etc.) to <code>my-windows-4090/qwen3:14b</code>. KENDER is the default ground-worker for all delegated <code>task()</code> calls and CAN write files to disk (native <code>tool_calls</code>, see Point 7).</li>
 <li><strong>Delegation requires a <code>task()</code> tool call — narration is NOT delegation</strong>: Sisyphus only routes work to KENDER when it emits a <code>task(category="quick", ...)</code> tool call. Prose instructions ("delegate to Sisyphus-Junior") without a <code>task()</code> tool call result in Sisyphus doing all work itself.</li>
 <li><strong>Sprint 48 Scar — Underspecified task() prompts cause read-only subagents</strong>: When <code>task()</code> is called but the prompt inside doesn't explicitly mandate a write/edit tool action, KENDER's subagent will read the target file and report findings without modifying it. Sisyphus then falls back to applying the edit itself via its own <code>edit</code> tool — KENDER was technically invoked but performed no write. Fix: every <code>task()</code> prompt destined for code edits MUST include <code>## MUST DO: Use the edit/write tool to apply the change to &lt;path&gt;</code> as a mandatory section.</li>
 <li><strong>Correct task() prompt structure for write tasks</strong>:
@@ -746,13 +752,22 @@ Emit task() tool calls to delegate implementation and verification work:
 ```</li>
 </ul>
 </li>
-<li><strong>Audit gate</strong>: After each story, AGY inspects <code>GET /session/&lt;id&gt;/message</code> and checks that <code>tool</code> parts include <code>edit</code> or <code>write</code> invocations from the subagent. If only <code>read</code>/<code>grep</code> tools appear from the delegated turn, the subagent read-only looped — Sisyphus self-corrected but KENDER did no useful work.</li>
+<li><strong>Audit gate</strong>: After each story, the acting orchestrator (AGY or Sisyphus) inspects <code>GET /session/&lt;id&gt;/message</code> and checks that <code>tool</code> parts include <code>edit</code> or <code>write</code> invocations from the subagent. If only <code>read</code>/<code>grep</code> tools appear from the delegated turn, the subagent read-only looped — Sisyphus self-corrected but KENDER did no useful work.</li>
+</ul>
+</li>
+<li>
+<p><strong>Known Delegation Failure Modes (Upstream — Aug 2 2026 Discovery)</strong>:</p>
+<ul>
+<li><strong>Delegation is prompt-directed, not enforced</strong> (upstream #3231): The OmO default install injects "You NEVER work alone when specialists are available" into Sisyphus, but some models still self-execute. Recommended fix: <code>agents.sisyphus.prompt_append</code> with an explicit local delegation policy.</li>
+<li><strong><code>task</code> tool can be deferred behind ToolSearch</strong> (upstream #3592): With many MCP servers connected, OpenCode may hide the <code>task</code> tool, silently disabling delegation. Upstream gap — no <code>toolSearch.alwaysLoad</code>; <code>experimental.primary_tools</code> is NOT the fix. Our install currently keeps <code>task</code> visible, but adding MCP servers risks this.</li>
+<li><strong>Empty delegation table</strong> (upstream #2386): <code>customAgentSummaries</code> type mismatch can leave Sisyphus with zero agent awareness, preventing <code>task(subagent_type=...)</code> routing. Verify the installed plugin version includes the PR #414 fix.</li>
+<li><strong>Full investigation</strong>: <code>docs/forensics/DELEGATION_DISCOVERY_LEDGER_2026-08-02.md</code>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Port Separation &amp; Socket Wakeup (Sprint 48 Scar)</strong>:</p>
 <ul>
-<li><strong>Port 4097</strong> = <code>codex</code> REST API backend (system-level systemd service, always running).</li>
+<li><strong>Port 4097</strong> = <code>opencode serve</code> REST API backend (system-level <code>opencode-core.service</code>, always running; the <code>/usr/local/bin/codex</code> binary is a symlink to opencode).</li>
 <li><strong>Port 4096</strong> = OmO web UI proxy (user-level <code>opencode.socket</code> + <code>opencode-proxy.service</code>, socket-activated with <code>StopWhenUnneeded=true</code>). Stops when idle; restarts on first TCP connection.</li>
 <li><strong>Wakeup</strong>: <code>delegate.py</code> calls <code>wake_web_ui()</code> which HTTP-GETs <code>http://127.0.0.1:4096/</code> before session creation. This triggers <code>opencode.socket</code> → <code>opencode-proxy.service</code> activation chain.</li>
 <li><strong>Socket Rate-Limit Hardening</strong>: Set <code>TriggerLimitIntervalSec=0</code> under <code>[Socket]</code> in <code>~/.config/systemd/user/opencode.socket</code>. This prevents systemd from marking <code>opencode.socket</code> as <code>failed (trigger-limit-hit)</code> during rapid reconnect or wake sequences.</li>
@@ -858,7 +873,7 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-035</td>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-040</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Virtual Environment Hygiene & Git Curation</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
