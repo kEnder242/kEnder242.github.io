@@ -86,7 +86,11 @@ content = re.sub(r'<link rel=\"stylesheet\" href=\"style.css\?v=[a-f0-9]+\">', s
 with open('$PUBLIC_PROTOCOLS', 'w') as f: f.write(content)
 " "$CSS_BLOCK"
 
-echo "[2/3] Generating High-Fidelity Snapshot..."
-$SHOT_SCRAPER shot "$PUBLIC_PROTOCOLS" -o "$REPO_ROOT/www_deploy/assets/protocols_snapshot.png" -w 1920 -h 800 --wait 2000
+if [ "$ENABLE_SNAPSHOTS" = "1" ]; then
+    echo "[2/3] Generating High-Fidelity Snapshot..."
+    $SHOT_SCRAPER shot "$PUBLIC_PROTOCOLS" -o "$REPO_ROOT/www_deploy/assets/protocols_snapshot.png" -w 1920 -h 800 --wait 2000
+else
+    echo "[2/3] Skipping Snapshot Generation (Pass --snapshots to enable)..."
+fi
 
 echo "[3/3] Deployment Integrity Verified."
