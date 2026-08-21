@@ -74,7 +74,7 @@
             font-family: var(--font-stack);
             font-size: 0.85rem;
             margin-top: 20px;
-            background: rgba(255, 255, 255, 0.01);
+            background: transparent;
         }
         .ledger-table th {
             text-align: left;
@@ -86,7 +86,7 @@
         }
         .ledger-table td {
             padding: 12px 15px;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid var(--border-color);
             vertical-align: top;
             line-height: 1.4;
         }
@@ -97,7 +97,7 @@
         .protocol-body li { margin-bottom: 5px; }
         .protocol-body a { color: var(--accent-color); text-decoration: none; border-bottom: 1px dashed var(--accent-color); }
         .protocol-body a:hover { color: #fff; border-bottom-style: solid; }
-        .protocol-body code { background: #222; padding: 2px 4px; border-radius: 3px; font-family: var(--font-stack); color: #e2e2e2; }
+        .protocol-body code { background: var(--code-bg); border: 1px solid var(--border-color); padding: 2px 4px; border-radius: 3px; font-family: var(--font-stack); color: #e2e2e2; }
     </style>
 </head>
 <body>
@@ -132,8 +132,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-001</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-001</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Cold-Start Protocol (Agent Orientation)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Restore the Agent's technical context after a session break or crash.</p>
@@ -151,8 +151,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-002</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-002</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Montana Protocol (Logger Awareness)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent diagnostic blindness when third-party libraries hijack the stream.</p>
@@ -164,8 +164,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-003</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-003</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Resident Sequencing (Staged Loading)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Maintain awareness of the Lab's staggered cognitive state.</p>
@@ -177,8 +177,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-004</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-004</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The QQ Protocol (Quick Question)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent state drift and over-investigation during collaborative sessions.</p>
@@ -191,8 +191,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-005</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-005</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Design Studio (Greenlight before Silicon Change)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure alignment on naming, architecture, and persona before committing code.</p>
@@ -206,8 +206,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-006</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-006</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Autonomous Work Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Enable deep Agent work cycles during user downtime while maintaining transparency.</p>
@@ -223,8 +223,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-007</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-007</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Work Completion Report</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Restore technical context after a deep work cycle.</p>
@@ -243,8 +243,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-009</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-009</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Checkpoint Protocol (Save State)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure 100% state persistence for session continuity.
@@ -260,8 +260,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-010</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-010</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Silicon Co-Pilot (Interactive Mode)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Maintain diagnostic fidelity during live user/agent collaboration.
@@ -280,8 +280,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-011</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-011</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Safe-Scalpel (Atomic Patcher)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure lint-verified, regression-free code edits.
@@ -297,8 +297,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-012</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-012</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Ultimate Patcher (Archive Node)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Enable surgical, diff-based edits with mandatory lint-safety.
@@ -314,8 +314,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-013</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-013</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Pager-Aware Watchdog Safety (Non-Blocking Shell Execution)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent the Gemini CLI watchdog from killing active processes during long-running tasks or interactive traps.</p>
@@ -333,8 +333,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-014</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-014</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Deep-Dive (Show me / Tell me more / Teach me)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Provide high-fidelity technical transfer upon user request.</p>
@@ -352,8 +352,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-015</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-015</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Semantic Anchor Protocol (Anti-Drift & Indirection)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Eliminate functional drift and rigid logic failures caused by hardcoded keywords or static list-matching.</p>
@@ -367,8 +367,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-016</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-016</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Montana Protocol (Logger Control)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent external library logger hijacking and ensure forensic traceability.</p>
@@ -380,8 +380,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-017</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-017</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Agentic Delegation (Context Preservation)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <ul>
@@ -393,8 +393,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-018</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-018</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Orchestrator-First Mandate (Attendant V3 & Live Lab Service Inventory)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent "Zombie States," stale memory footprints, orphan process collisions, and diagnostic blindness caused by manual process manipulation.</p>
@@ -437,8 +437,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-024</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-024</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization & Live Integration</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure the physical Lab state and running daemon processes match active sprint code before testing.</p>
@@ -451,8 +451,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-020</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-020</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity Sprint Documentation (Intent Preservation)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
@@ -464,8 +464,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-022</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-022</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Atomic File Swap Protocol (Filesystem Safety)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure filesystem atomicity for all file updates and prevent race conditions.</p>
@@ -478,8 +478,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-023</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-023</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Surgical Preservation Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: To prevent "Lossy Compression," erasures of technical pedigree, and documentation thrash during architectural refactors.</p>
@@ -512,8 +512,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-029</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-029</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The 4-Step Heads-Down Implementation Loop</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure surgical precision and validation during deep work cycles.</p>
@@ -526,8 +526,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-030</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-030</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Resonant Planning Pattern</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Role: [SPRINT] - Planning &amp; Execution Protocol</strong></p>
@@ -562,8 +562,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-028</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-028</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity State Machine Debugging</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Rapidly validate Hub logic (Lobby -&gt; Ready -&gt; Hibernate) without physical VRAM overhead.</p>
@@ -578,8 +578,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-032</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-032</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Deferred Semantic Evaluation (Human-in-the-Loop)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Decouple automated technical stability checks from qualitative semantic fidelity audits. This protocol ensures that tests remain resilient to "Logic Drift" while maintaining the Lab's high-stakes technical grounding.</p>
@@ -599,8 +599,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-033</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-033</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Babysitting Protocol (Autonomous Monitoring)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure long-running batch processes complete successfully by providing real-time forensic oversight and surgical recovery.</p>
@@ -615,8 +615,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-034</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-034</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Swarm Delegation — Dual Orchestrator Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between TWO interchangeable strategic orchestrators and the tactical developer swarm (<strong>OpenAgent</strong>):
@@ -796,8 +796,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-035</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-035</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Lab/Feature Taxonomy Separation Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Maintain a clear boundary between the Lab Infrastructure (management systems) and Resident Features (domain business logic) to prevent naming collisions and design confusion.</p>
@@ -825,8 +825,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-036</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-036</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Resource Capping and Memory Ceilings for Codex/OpenCode Daemons</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent background development daemons and their spawned child processes from exhausting host memory (swap-thrashing) and locking up interactive sessions (SSH/RDP).</p>
@@ -854,8 +854,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-037</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-037</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Persistent Memory Efficiency Protocol (Daemon Embedding & Deferred Extraction)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent memory thrashing and CPU starvation during high-density OpenAgent developer subagent runs by decoupling synchronous tool execution from heavy vector embedding generation.</p>
@@ -872,8 +872,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-038</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-038</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Daemon Wrapper Circuit Breaker & Remote Inference Anti-Loop Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent background runner wrappers (<code>headroom</code>, <code>codex</code>, <code>opencode</code>) from entering infinite auto-restart loops that lock up remote compute nodes (Node 'KENDER' / RTX 4090).</p>
@@ -890,8 +890,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-040</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-040</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Virtual Environment Hygiene & Git Curation</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Prevent virtual environment context-bleeding and indexing bloat across subagent swarms.</p>
@@ -905,8 +905,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-039</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-039</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">RAG Taxonomy Separation & HyDE LoRA Tabling Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective:</strong> Maintain strict separation between Agent Behavioral DNA and User Work History while standardizing prompt synthesis over fine-tuning.</p>
@@ -922,8 +922,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-041</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-041</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Automagic DNA Injection & CLaRa MCP Bridge (The Agent Context Architecture)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Guarantee that builder agents (AGY, OpenAgent) automagically receive grounded FEAT specs, BKM protocols, and architectural laws in their prompt context before every turn — while providing on-demand tool access for deep exact-ID lookups — at zero VRAM/GPU cost.</p>
@@ -977,8 +977,8 @@ Emit task() tool calls to delegate implementation and verification work:
                         </td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-042</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-042</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero-Thrash Delegation Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Date:</strong> August 7, 2026<br />
@@ -997,6 +997,6 @@ Emit task() tool calls to delegate implementation and verification work:
         </section>
     </main>
 
-    <script src="mission-control.js?v=fbea88d6"></script>
+    <script src="mission-control.js?v=fce9fbc6"></script>
 </body>
 </html>
