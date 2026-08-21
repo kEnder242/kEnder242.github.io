@@ -13,10 +13,12 @@ echo "[1/3] Sanitizing Research Ledger..."
 # Read the standalone CSS we generated earlier
 CSS_BLOCK='<style>
         :root {
-            --bg-color: #1a1a1a;
-            --text-color: #cccccc;
+            --bg-color: #0a0e14;
+            --card-color: #11161d;
+            --text-color: #e6edf3;
             --accent-color: #4daafc;
-            --border-color: #333333;
+            --border-color: #30363d;
+            --sub-color: #8b949e;
             --font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
         body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
@@ -26,7 +28,7 @@ CSS_BLOCK='<style>
             top: 0;
             left: 0;
             bottom: 0;
-            background: #11161d;
+            background: var(--card-color);
             border-right: 1px solid var(--border-color);
             padding: 30px 20px;
             overflow-y: auto;

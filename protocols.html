@@ -6,10 +6,12 @@
     <title>Lab Protocols | Jason Allred</title>
     <style>
         :root {
-            --bg-color: #1a1a1a;
-            --text-color: #cccccc;
+            --bg-color: #0a0e14;
+            --card-color: #11161d;
+            --text-color: #e6edf3;
             --accent-color: #4daafc;
-            --border-color: #333333;
+            --border-color: #30363d;
+            --sub-color: #8b949e;
             --font-stack: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
         }
         body { background: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
@@ -19,7 +21,7 @@
             top: 0;
             left: 0;
             bottom: 0;
-            background: #11161d;
+            background: var(--card-color);
             border-right: 1px solid var(--border-color);
             padding: 30px 20px;
             overflow-y: auto;
@@ -617,20 +619,23 @@
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Swarm Delegation — Dual Orchestrator Protocol</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between TWO interchangeable orchestrators and the tactical developer swarm (<strong>OpenAgent</strong>):
-- <strong>PRIMARY — Antigravity (AGY / Gemini)</strong>: Strategic guardian; used when token budget allows.
-- <strong>BACKUP — Sisyphus (opencode/deepseek-v4-flash-free via OmO)</strong>: This agent; always available; identical swarm contract.</p>
-<p>For full model allocation matrices, refer to <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</p>
+                                <p><strong>Objective</strong>: Establish a high-efficiency, token-optimized delegation workflow between TWO interchangeable strategic orchestrators and the tactical developer swarm (<strong>OpenAgent</strong>):
+- <strong>PRIMARY — Antigravity (AGY / Gemini)</strong>: Strategic guardian &amp; master planner.
+- <strong>TASK ORCHESTRATOR — Atlas (Plan Executor &amp; Task Orchestrator)</strong>: Primary OpenAgent Task Orchestrator for <code>delegate.py</code> story dispatches; emits <code>task()</code> calls to sub-agents.
+- <strong>DIAGNOSTIC PLANNER — Prometheus</strong>: Read-only strategic planner and diagnostic investigator (<code>delegate.py --mode plan/investigate</code>).</p>
+<p>For full model allocation matrices and fallback chains, refer to <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/OPENAGENT_HANDOVER_PLAYBOOK.md"><strong>OPENAGENT_HANDOVER_PLAYBOOK.md</strong></a>.</p>
 <h3>🚀 Primary Dispatch Mechanism: <code>delegate.py</code></h3>
 <p>All task dispatches to OpenAgent MUST use the formalized Python dispatcher <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py"><strong>src/tests/delegate.py</strong></a>. Bypassing this script to run raw <code>opencode run</code> commands is strictly prohibited. </p>
 <p><strong>Execution Pattern</strong>:</p>
 <pre><code class="language-bash">python3 src/tests/delegate.py \
   --story &lt;story_num&gt; \
   --title &quot;&lt;title&gt;&quot; \
-  --file &quot;&lt;target_file&gt;&quot; \
+  --reference &quot;&lt;sprint_plan_path&gt;&quot; \
+  --target &quot;&lt;target_file_path&gt;&quot; \
   --details &quot;&lt;specification_details&gt;&quot; \
   --verification &quot;&lt;verification_command&gt;&quot; \
-  --dir &quot;&lt;working_directory&gt;&quot;
+  --dir &quot;&lt;working_directory&gt;&quot; \
+  --mode execute
 </code></pre>
 <p><strong>Baked-in Boilerplate (No Prompt Clutter Needed)</strong>:
 The <code>delegate.py</code> script automatically wraps your inputs into the standard BKM-034 prompt blueprint, injecting:
@@ -638,17 +643,23 @@ The <code>delegate.py</code> script automatically wraps your inputs into the sta
 2. <strong>REST Session Setup</strong>: Wakes <code>opencode.socket</code> (<code>:4096</code>) and posts to the API engine (<code>:4097</code>).
 3. <strong>Strict Swarm Directive</strong>: Mandates that <code>sisyphus</code> (lead planner) <em>MUST NOT</em> edit files directly, forcing a <code>task()</code> hand-off to <code>sisyphus-junior</code> (KENDER on port 11434).</p>
 <ol>
-<li><strong>Role Division (Dual Orchestrator)</strong>:<ul>
-<li><strong>Strategic Guardian (Antigravity / Gemini)</strong> [PRIMARY]: Maintains the Master Sprint Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defines architecture, conducts post-implementation git diff reviews, and runs system integration tests. Used when the user has token budget for AGY.</li>
-<li><strong>Sisyphus (OpenCode / deepseek-v4-flash-free)</strong> [BACKUP]: Fills the SAME Strategic Guardian role when AGY is not in play — plans, delegates via <code>task()</code>, audits diffs, and commits. MUST NOT write code directly when delegation is viable.</li>
-<li><strong>Tactical Swarm (OpenAgent)</strong>: Executes code modifications, runs unit test iterations (<code>pytest</code>), and handles line-by-line file updates.</li>
+<li><strong>Role Division (Swarm Topology &amp; Dual Orchestrator)</strong>:<ul>
+<li><strong>Strategic Guardian (Antigravity / Gemini)</strong> [PRIMARY]: Maintains the Master Sprint Plan (<code>SPRINT_PLAN_SPR_XX_X.md</code>), defines architecture, conducts post-implementation git diff reviews, and runs system integration tests.</li>
+<li><strong>Atlas (Plan Executor &amp; Swarm Conductor)</strong> [<code>openrouter/nvidia/nemotron-3.5-lightning:free</code>]: Designated OpenAgent Swarm Conductor for <code>delegate.py</code> execution dispatches. Evaluates the <code>[IDENTITY ASSERTION &amp; HARD-STOP GUARD]</code>, confirms its persona, manages the execution lifecycle, and emits <code>task()</code> calls to delegate file modifications to sub-agents (<code>hephaestus</code> / <code>sisyphus-junior</code>).</li>
+<li><strong>Prometheus (Plan Builder &amp; Diagnostic Investigator)</strong> [<code>openrouter/nvidia/nemotron-3.5-lightning:free</code>]: Read-only strategic planner and diagnostic investigator (<code>delegate.py --mode plan/investigate</code>). Blocked from direct file edits (<code>disabled_tools</code>).</li>
+<li><strong>Sisyphus (Ultraworker &amp; Fallback Worker)</strong> [<code>openrouter/nvidia/nemotron-3.5-lightning:free</code>]: Standalone ultraworker. When invoked directly or handed an Atlas task via identity mismatch, Sisyphus detects <code>[IDENTITY ASSERTION &amp; HARD-STOP GUARD]</code>, halts execution with 0 file edits, and outputs a <code>[HANDOVER REFLECTION]</code>.</li>
+<li><strong>Sisyphus-Junior / Hephaestus (Ground Workers)</strong> [<code>my-m5-air</code> / <code>my-windows-4090</code>]: Local MLX/Ollama ground workers executing line-by-line file modifications and unit tests.</li>
 </ul>
 </li>
 <li>
-<p><strong>REST Socket Architecture</strong>:</p>
+<p><strong>REST Socket Architecture &amp; Persona Binding</strong>:</p>
 <ul>
-<li><code>delegate.py</code> creates a REST session on port 4097 (<code>POST http://127.0.0.1:4097/session</code>), triggers socket warm-up on port 4096 (<code>wake_web_ui()</code>), and dispatches the prompt via <code>POST http://127.0.0.1:4097/session/&lt;id&gt;/message</code>.</li>
+<li><code>delegate.py</code> creates a REST session on port 4097 (<code>POST http://127.0.0.1:4097/session</code>) and dispatches the prompt via <code>POST http://127.0.0.1:4097/session/&lt;id&gt;/message</code>.</li>
+<li><strong>CRITICAL REST BINDING RULE</strong>: Both <code>POST /session</code> AND <code>POST /session/&lt;id&gt;/message</code> MUST explicitly include <code>"agent": "Atlas - Plan Executor"</code> (or exact registered display name). Omitting <code>"agent"</code> from the message payload causes OpenCode to fall back to <code>Sisyphus - Ultraworker</code>, triggering the Hard-Stop Guard.</li>
+<li>Pre-flight health probes issue <code>DELETE /session/&lt;temp_id&gt;</code> to purge temporary probe sessions, keeping the OpenCode web UI dashboard clean.</li>
+<li>Session titles are formatted as <code>Sprint XX Story N — [EXECUTE:ATLAS] &lt;Title&gt;</code>.</li>
 <li>Using <code>delegate.py</code> guarantees all active worker sessions render live on the local TUI and webview dashboard at <code>http://192.168.1.238:4096/</code>.</li>
+<li><em>Retrospective Reference</em>: See <code>HISTORICAL_VERIFICATION_SPR50_53.md</code> and ICM entry <code>01M00WJ8W33ET7ZCD3VWMGNDNR</code> for full diagnostic resolution on OpenCode REST persona binding.</li>
 </ul>
 </li>
 <li>
@@ -658,6 +669,9 @@ The <code>delegate.py</code> script automatically wraps your inputs into the sta
 <li>To reference planning files outside the target workspace, pass direct links using relative paths or the <code>file://</code> scheme in the prompt (e.g. <code>file://&lt;path_to_workspace&gt;/Portfolio_Dev/SPRINT_PLAN_SPR_42_0.md#Story-1</code>).</li>
 </ul>
 </li>
+</ol>
+<hr />
+<ol>
 <li>
 <p><strong>Standardized Prompt Blueprint</strong>:</p>
 <ul>
@@ -670,6 +684,9 @@ The <code>delegate.py</code> script automatically wraps your inputs into the sta
 [TARGET SPECIFICATION]
 - Primary Output Target: &lt;absolute_path_to_target_file&gt;
 - Task Details: &lt;explicit_code_or_logic_changes&gt;
+
+[HANDOVER REFLECTION]
+As an execution peer, reflect candidly on how this task was handed over to you. In 2-3 natural sentences, tell me: What tripped you up, what turned out to be inaccurate or missing in the instructions, and what single change to the prompt would have made this execution faster?
 
 [SWARM DELEGATION DIRECTIVE — TASK() CALLS ONLY]
 You are Sisyphus (Lead Orchestrator). You MUST NOT implement code directly.
@@ -900,6 +917,77 @@ Emit task() tool calls to delegate implementation and verification work:
 <li><strong>LoRA Fine-Tuning Tabling Decision</strong>:</li>
 <li>HyDE synthesis relies on structured prompt templates (Unified Intent-HyDE) rather than custom LoRA weights.</li>
 <li>Prompt-based multi-voice synthesis maintains 100% adaptability without model quantization drift or LoRA reloading overhead.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-041</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Automagic DNA Injection & CLaRa MCP Bridge (The Agent Context Architecture)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Guarantee that builder agents (AGY, OpenAgent) automagically receive grounded FEAT specs, BKM protocols, and architectural laws in their prompt context before every turn — while providing on-demand tool access for deep exact-ID lookups — at zero VRAM/GPU cost.</p>
+<ol>
+<li><strong>The Architecture (Dual-Channel Context Grounding)</strong>:
+   Agent context grounding relies on two complementary channels working together:</li>
+</ol>
+<p><code>[Upstream Sources]
+   FeatureTracker.md (FEATs) + Protocols.md (BKMs) + LAB_INFRASTRUCTURE.md
+          │
+          ▼ (git pre-commit hook: sync_chroma_dna.py)
+   [ChromaDB Vector Server] (port 8001, chroma-server.service)
+          │
+          ├───► CHANNEL 1: AUTOMAGIC INJECTION (ICM + BeforeAgent Hook)
+          │     `~/.config/icm/config.toml` (provider="chroma", chroma_url="http://localhost:8001")
+          │     `settings.json` ("BeforeAgent": icm hook prompt)
+          │     ==&gt; Automagically injects top vector matches into system prompt BEFORE turn 1.
+          │
+          └───► CHANNEL 2: ON-DEMAND MCP BRIDGE (clara-dna MCP Server)
+                `AcmeLab/src/clara_dna_mcp_server.py` (chromadb.HttpClient -&gt; :8001)
+                `~/.gemini/config/mcp_config.json` (AGY) / `.opencode.json` (OpenAgent)
+                ==&gt; Exposes query_dna(), get_protocol(), list_collections() for exact lookups.</code></p>
+<ol>
+<li><strong>Channel 1: Automagic Context Injection (ICM Hook)</strong>:</li>
+<li><strong>Turnkey Engine</strong>: ICM (<code>/home/jallred/.local/bin/icm</code>) acts as the native prompt-injection plugin.</li>
+<li><strong>Configuration</strong>: <code>~/.config/icm/config.toml</code> sets <code>provider = "chroma"</code> and <code>chroma_url = "http://localhost:8001"</code>. </li>
+<li><strong>Port Law</strong>: <strong>Port 8001 is ChromaDB.</strong> (Port 8000 is Prometheus RAPL Exporter — pointing ICM to 8000 breaks vector retrieval).</li>
+<li>
+<p><strong>Hook Registration</strong>: <code>settings.json</code> registers <code>icm hook prompt</code> under <code>BeforeAgent</code>. On every prompt, ICM queries ChromaDB <code>:8001</code> via vector similarity and automagically prepends relevant context to the prompt before the LLM generates a response.</p>
+</li>
+<li>
+<p><strong>Channel 2: On-Demand Tool Bridge (<code>clara-dna</code> MCP Server)</strong>:</p>
+</li>
+<li><strong>Purpose</strong>: Allows agents to run surgical, targeted lookups during execution (e.g. <code>get_protocol("BKM-015")</code> or <code>query_dna("feature_dna", "Unity Pattern")</code>).</li>
+<li><strong>Zero Overhead</strong>: Uses <code>chromadb.HttpClient</code> to talk to port 8001 over HTTP. Zero VRAM, zero GPU, &lt;1MB RAM.</li>
+<li>
+<p><strong>Registration</strong>:</p>
+<ul>
+<li><strong>AGY (Antigravity CLI v1.1.10)</strong>: Registered in <code>~/.gemini/config/mcp_config.json</code> under <code>mcpServers.clara-dna</code>.</li>
+<li><strong>OpenAgent (OpenCode)</strong>: Registered in <code>HomeLabAI/.opencode.json</code> under <code>mcp.clara-dna</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Relationship &amp; Identity Boundaries</strong>:</p>
+</li>
+<li><strong>AGY Identity</strong>: AGY is Antigravity CLI (binary: <code>~/.local/bin/agy</code>). Config files live at <code>~/.gemini/antigravity-cli/settings.json</code> for settings/hooks and <code>~/.gemini/config/mcp_config.json</code> for MCP servers.</li>
+<li><strong>ICM vs. CLaRa DNA</strong>: ICM remembers <em>what happened</em> across sessions; CLaRa DNA knows <em>what the architectural rules are</em> from ChromaDB <code>:8001</code>.</li>
+<li><strong>Lab HyDE vs. Agent Injection</strong>: Cognitive Hub HyDE ([FEAT-436]) handles <em>user-facing</em> RAG for the lab runtime; ICM + CLaRa DNA handles <em>agent-facing</em> grounding for code builders.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">BKM-042</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid #222;">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero-Thrash Delegation Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Date:</strong> August 7, 2026<br />
+<strong>Objective:</strong> Mandate 4 strict prompt construction rules when dispatching tasks via <code>delegate.py</code> to eliminate OpenAgent subagent search loops, path retries, and context thrash.</p>
+<ol>
+<li><strong>Path Pre-Verification</strong>: Always run <code>find</code> or <code>view_file</code> to confirm exact file paths before passing <code>--reference</code>, <code>--target</code>, and details to <code>delegate.py</code>. Never guess directory structures.</li>
+<li><strong>Atomic Story Scoping</strong>: Keep stories strictly atomic to 1 feature / 1 core target component per story. Never bundle host OS hardening with application code features in a single prompt.</li>
+<li><strong>Explicit SystemD &amp; OS Scope</strong>: Explicitly state in the task details whether a service is system-level (<code>/etc/systemd/system/</code> requiring <code>sudo</code>) or userland (<code>systemctl --user</code>).</li>
+<li><strong>Function Anchor Targeting</strong>: Include exact function names (e.g. <code>startMic()</code>) and line range anchors in the prompt details so sub-agents skip whole-file scan passes.</li>
 </ol>
                             </div>
                         </td>
