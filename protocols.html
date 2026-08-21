@@ -193,7 +193,7 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-005</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Design Studio (Greenlight before Silicon Change)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Design Studio (Greenlight before Code Change)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Ensure alignment on naming, architecture, and persona before committing code.</p>
 <ol>
@@ -262,7 +262,7 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-010</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Silicon Co-Pilot (Interactive Mode)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Debug Co-Pilot (Interactive Mode)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Objective</strong>: Maintain diagnostic fidelity during live user/agent collaboration.
 <strong>Trigger</strong>: "Interactive Demo", "Co-Pilot Mode", or live debugging requests.</p>
@@ -571,7 +571,7 @@
 <li><strong>The STUB Engine</strong>: Utilize <code>engine="STUB"</code> to bypass 90s vLLM load times. To boot the system service in STUB mode, use <code>sudo systemctl edit lab-attendant.service</code> and add <code>Environment="LAB_TEST_STUB=1"</code>.</li>
 <li><strong>Fast Hibernation</strong>: Set <code>afk_timeout=60</code> in <code>acme_lab.py</code> to observe auto-hibernation cycles in 1 minute.</li>
 <li><strong>Traceability</strong>: Always check <code>status.json</code> or the Attendant journal for the <code>reason</code> field to verify which trigger caused an ignition.</li>
-<li><strong>Silicon Reset</strong>: Use <code>sudo systemctl restart lab-attendant.service</code> to ensure a perfectly clean slate between tests. The <code>on_shutdown</code> hook ensures all session orphans are reaped.</li>
+<li><strong>Server Reset</strong>: Use <code>sudo systemctl restart lab-attendant.service</code> to ensure a perfectly clean slate between tests. The <code>on_shutdown</code> hook ensures all session orphans are reaped.</li>
 <li><strong>Hot-Reload Prevention</strong>: The state machine does not support dynamic code reloading. Always execute <code>sudo systemctl restart lab-attendant.service</code> after editing files before running any inject verification scripts.</li>
 </ol>
                             </div>
@@ -997,6 +997,6 @@ Emit task() tool calls to delegate implementation and verification work:
         </section>
     </main>
 
-    <script src="mission-control.js?v=fce9fbc6"></script>
+    <script src="mission-control.js?v=5b5bae4f"></script>
 </body>
 </html>
