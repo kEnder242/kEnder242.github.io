@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "performance"
+      "performance",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-dc8d"
@@ -29,8 +29,8 @@
     "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
     "sensitivity": "Public",
     "tags": [
-      "firmware",
-      "BMC"
+      "BMC",
+      "firmware"
     ],
     "rank": 4,
     "id": "GEM-c85e"
@@ -53,8 +53,8 @@
     "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "error"
+      "error",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-53e9"
@@ -88,8 +88,8 @@
     "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-5b1f"
@@ -100,8 +100,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "peci",
-      "ipmi_host"
+      "ipmi_host",
+      "peci"
     ],
     "rank": 4,
     "id": "GEM-de4b"
@@ -125,9 +125,9 @@
     "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "Reset",
       "MIV",
-      "Recovery"
+      "Recovery",
+      "Reset"
     ],
     "rank": 4,
     "id": "GEM-959d"
@@ -138,8 +138,8 @@
     "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-4808"
@@ -150,8 +150,8 @@
     "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "Test"
+      "Test",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-c46c"
@@ -174,8 +174,8 @@
     "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-70a7"
@@ -210,8 +210,8 @@
     "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-f17d"
@@ -222,8 +222,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "MIV content readiness",
-      "DTAF"
+      "DTAF",
+      "MIV content readiness"
     ],
     "rank": 4,
     "id": "GEM-0043"
@@ -258,8 +258,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "external interface spec",
-      "nm-4.0"
+      "nm-4.0",
+      "external interface spec"
     ],
     "rank": 4,
     "id": "GEM-d939"
@@ -270,8 +270,8 @@
     "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
     "sensitivity": "Public",
     "tags": [
-      "test setup",
-      "domain 2"
+      "domain 2",
+      "test setup"
     ],
     "rank": 4,
     "id": "GEM-756d"
@@ -282,8 +282,8 @@
     "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
     "sensitivity": "Public",
     "tags": [
-      "nm-policy",
-      "delete failure"
+      "delete failure",
+      "nm-policy"
     ],
     "rank": 4,
     "id": "GEM-780e"
@@ -294,8 +294,8 @@
     "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
     "sensitivity": "Public",
     "tags": [
-      "L-BMC",
-      "BMC"
+      "BMC",
+      "L-BMC"
     ],
     "rank": 4,
     "id": "GEM-d328"
@@ -330,8 +330,8 @@
     "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
     "sensitivity": "Public",
     "tags": [
-      "code review",
-      "issue investigation"
+      "issue investigation",
+      "code review"
     ],
     "rank": 4,
     "id": "GEM-05d3"
@@ -342,8 +342,8 @@
     "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
     "sensitivity": "Public",
     "tags": [
-      "L-BMC",
-      "firmware update"
+      "firmware update",
+      "L-BMC"
     ],
     "rank": 4,
     "id": "GEM-ee96"
@@ -366,9 +366,9 @@
     "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
     "sensitivity": "Public",
     "tags": [
+      "Opcode 0x2E",
       "Node Manager",
-      "Power Limiting Policy",
-      "Opcode 0x2E"
+      "Power Limiting Policy"
     ],
     "rank": 4,
     "id": "GEM-93e8"
@@ -379,8 +379,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "pptx",
-      "Manageability Ignition-Redfish Content Plan"
+      "Manageability Ignition-Redfish Content Plan",
+      "pptx"
     ],
     "rank": 4,
     "id": "GEM-83e9"
@@ -403,10 +403,10 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
-      "master",
-      "PCH",
       "PECI",
-      "BMC"
+      "BMC",
+      "master",
+      "PCH"
     ],
     "rank": 4,
     "id": "GEM-fbf4"
@@ -417,8 +417,8 @@
     "evidence": "https://docs.intel.com/documents/sms_archspecs/openbmc/nm_supporting_docs/api/Redfish%20Power%20Cap%20OEM%20Schema.html",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "Research"
+      "Research",
+      "TODO"
     ],
     "rank": 4,
     "id": "GEM-ec32"
@@ -463,8 +463,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Power Management",
-      "Capacity Planning"
+      "Capacity Planning",
+      "Power Management"
     ],
     "rank": 4,
     "id": "GEM-f12c"
@@ -475,8 +475,8 @@
     "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
     "sensitivity": "Public",
     "tags": [
-      "inventory metric calculation",
-      "formula update"
+      "formula update",
+      "inventory metric calculation"
     ],
     "rank": 4,
     "id": "GEM-d9c0"

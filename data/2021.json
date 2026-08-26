@@ -104,8 +104,8 @@
     "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "fuzzing"
+      "fuzzing",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-3482"
@@ -140,9 +140,9 @@
     "evidence": "PTU not running properly, incorrect power limits",
     "sensitivity": "Public",
     "tags": [
-      "issue",
       "ptu",
-      "calibration"
+      "calibration",
+      "issue"
     ],
     "rank": 4,
     "id": "GEM-aa48"
@@ -165,8 +165,8 @@
     "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "peci_flood.tdf",
-      "PECI Throughput"
+      "PECI Throughput",
+      "peci_flood.tdf"
     ],
     "rank": 4,
     "id": "GEM-4906"
@@ -263,8 +263,8 @@
     "evidence": "RAW LOGS on 6/30/2021",
     "sensitivity": "Public",
     "tags": [
-      "team structure",
-      "collaboration"
+      "collaboration",
+      "team structure"
     ],
     "rank": 4,
     "id": "GEM-4aac"
@@ -408,8 +408,8 @@
     "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
     "sensitivity": "Public",
     "tags": [
-      "Archer City",
-      "IFU MCA"
+      "IFU MCA",
+      "Archer City"
     ],
     "rank": 4,
     "id": "GEM-9db3"

@@ -5,8 +5,8 @@
     "evidence": "https://hsdes.intel.com/resource/1408873616",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "Node Manager"
+      "Node Manager",
+      "IPMI"
     ],
     "rank": 4
   },
@@ -27,10 +27,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
-      "ME",
       "ICX-HCC",
       "IPMI",
-      "BMC"
+      "BMC",
+      "ME"
     ],
     "rank": 4
   }

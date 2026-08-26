@@ -5,8 +5,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "error injection"
+      "error injection",
+      "APEI/EINJ"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
     "sensitivity": "Public",
     "tags": [
-      "IPC",
-      "CLX_LBG_XDPA"
+      "CLX_LBG_XDPA",
+      "IPC"
     ],
     "rank": 4
   },

@@ -5,8 +5,8 @@
     "evidence": "/p/ppa/farm/tools/proj_bin/set_farm.sh -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
     "sensitivity": "Public",
     "tags": [
-      "Maestro",
-      "test environment"
+      "test environment",
+      "Maestro"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "Nightly build contains unreleased fix for \"HSD GEN10LP [Bug_DE][1946333][Acknowledged (NAB)] Maestro tests crash after upgrading fulsim\"",
     "sensitivity": "Public",
     "tags": [
-      "bug fix",
-      "fulsim"
+      "fulsim",
+      "bug fix"
     ],
     "rank": 4
   },

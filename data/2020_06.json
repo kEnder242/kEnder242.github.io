@@ -5,8 +5,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "external interface spec",
-      "nm-4.0"
+      "nm-4.0",
+      "external interface spec"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
     "sensitivity": "Public",
     "tags": [
-      "test setup",
-      "domain 2"
+      "domain 2",
+      "test setup"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
     "sensitivity": "Public",
     "tags": [
-      "nm-policy",
-      "delete failure"
+      "delete failure",
+      "nm-policy"
     ],
     "rank": 4
   }

@@ -17,8 +17,8 @@
     "evidence": "Corrected CT item selection in the VISA panel.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "error_code"
+      "error_code",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-def6"
@@ -29,8 +29,8 @@
     "evidence": "Corrected script generated from CEC register programs.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "error_code"
+      "error_code",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-40bb"
@@ -41,8 +41,8 @@
     "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "Skylake"
+      "Skylake",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-29bc"
@@ -53,8 +53,8 @@
     "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "logging"
+      "logging",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-2f1c"
@@ -149,8 +149,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "ITP Bug",
-      "BDW"
+      "BDW",
+      "ITP Bug"
     ],
     "rank": 4,
     "id": "GEM-3754"
@@ -161,8 +161,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "EDRAMBAR",
-      "debugging"
+      "debugging",
+      "EDRAMBAR"
     ],
     "rank": 4,
     "id": "GEM-d19e"
@@ -257,8 +257,8 @@
     "evidence": "TODO entry mentioning setup of BXT FPGA system",
     "sensitivity": "Public",
     "tags": [
-      "NPK SDK",
-      "BXT FPGA"
+      "BXT FPGA",
+      "NPK SDK"
     ],
     "rank": 4,
     "id": "GEM-be04"
@@ -269,8 +269,8 @@
     "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
     "sensitivity": "Public",
     "tags": [
-      "LTB",
-      "NullPointerException"
+      "NullPointerException",
+      "LTB"
     ],
     "rank": 4,
     "id": "GEM-7e3e"
@@ -281,9 +281,9 @@
     "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
     "sensitivity": "Public",
     "tags": [
-      "IpcApiAccess",
+      "BXTSupportPkWin64",
       "ISDBaseWin64",
-      "BXTSupportPkWin64"
+      "IpcApiAccess"
     ],
     "rank": 4,
     "id": "GEM-c4a0"

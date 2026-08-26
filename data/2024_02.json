@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
     "sensitivity": "Public",
     "tags": [
-      "MCTP",
-      "i2cdetect",
+      "i2cget",
       "busctl",
-      "i2cget"
+      "i2cdetect",
+      "MCTP"
     ],
     "rank": 4
   }

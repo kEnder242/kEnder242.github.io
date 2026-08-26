@@ -44,8 +44,8 @@
     "sensitivity": "Public",
     "tags": [
       "Error Code 0xAB",
-      "Error Code 0xAC",
       "PCI",
+      "Error Code 0xAC",
       "IPMI"
     ],
     "rank": 4,
@@ -58,8 +58,8 @@
     "sensitivity": "Public",
     "tags": [
       "pipeline",
-      "jenkins",
-      "error"
+      "error",
+      "jenkins"
     ],
     "rank": 4,
     "id": "GEM-4502"
@@ -70,8 +70,8 @@
     "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
     "sensitivity": "Public",
     "tags": [
-      "aws-ecr-credential-helper",
       "docker",
+      "aws-ecr-credential-helper",
       "registry"
     ],
     "rank": 4,
@@ -83,9 +83,9 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
+      "build",
       "docker",
-      "compose",
-      "build"
+      "compose"
     ],
     "rank": 4,
     "id": "GEM-79a0"
@@ -123,8 +123,8 @@
     "evidence": "https://hsdes.intel.com/resource/1408873616",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "Node Manager"
+      "Node Manager",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-bcd0"
@@ -147,10 +147,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
-      "ME",
       "ICX-HCC",
       "IPMI",
-      "BMC"
+      "BMC",
+      "ME"
     ],
     "rank": 4,
     "id": "GEM-3f14"
@@ -197,9 +197,9 @@
     "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
     "sensitivity": "Public",
     "tags": [
-      "power limiting",
       "IPMI",
-      "error"
+      "error",
+      "power limiting"
     ],
     "rank": 4,
     "id": "GEM-db95"
@@ -210,9 +210,9 @@
     "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
     "sensitivity": "Public",
     "tags": [
+      "ipmitool",
       "unknown return code",
-      "PECI",
-      "ipmitool"
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-a05c"
@@ -235,8 +235,8 @@
     "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
     "sensitivity": "Public",
     "tags": [
-      "avgpowercmp",
-      "discrepancy detection"
+      "discrepancy detection",
+      "avgpowercmp"
     ],
     "rank": 4,
     "id": "GEM-59a9"
@@ -283,8 +283,8 @@
     "evidence": "Jason: debug verifysamepolicy.py",
     "sensitivity": "Public",
     "tags": [
-      "debug",
-      "script"
+      "script",
+      "debug"
     ],
     "rank": 4,
     "id": "GEM-1ad3"

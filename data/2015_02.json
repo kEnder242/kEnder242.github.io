@@ -6,8 +6,8 @@
     "sensitivity": "Public",
     "tags": [
       "msr_error",
-      "test_failure",
-      "vcd_missing"
+      "vcd_missing",
+      "test_failure"
     ],
     "rank": 4
   },
@@ -28,8 +28,8 @@
     "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
     "sensitivity": "Public",
     "tags": [
-      "trace32_error",
-      "recovery_failure"
+      "recovery_failure",
+      "trace32_error"
     ],
     "rank": 4
   }

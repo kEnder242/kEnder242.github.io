@@ -6,8 +6,8 @@
     "sensitivity": "Public",
     "tags": [
       "pipeline",
-      "jenkins",
-      "error"
+      "error",
+      "jenkins"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
     "sensitivity": "Public",
     "tags": [
-      "aws-ecr-credential-helper",
       "docker",
+      "aws-ecr-credential-helper",
       "registry"
     ],
     "rank": 4
@@ -29,9 +29,9 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
+      "build",
       "docker",
-      "compose",
-      "build"
+      "compose"
     ],
     "rank": 4
   }

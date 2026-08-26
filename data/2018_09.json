@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Proton1",
-      "Purley 2S",
+      "Proton2",
       "Purley 4S",
-      "Proton2"
+      "Proton1",
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
+      "Purley 4S",
       "CScripts",
-      "Purley 4S"
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -41,8 +41,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "App Direct Dependency Failure",
-      "BIOS update"
+      "BIOS update",
+      "App Direct Dependency Failure"
     ],
     "rank": 4
   },
@@ -52,8 +52,8 @@
     "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
     "sensitivity": "Public",
     "tags": [
-      "grub2-mkconfig",
-      "configuration"
+      "configuration",
+      "grub2-mkconfig"
     ],
     "rank": 4
   },

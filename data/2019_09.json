@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
     "sensitivity": "Public",
     "tags": [
-      "power limiting",
       "IPMI",
-      "error"
+      "error",
+      "power limiting"
     ],
     "rank": 4
   },
@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
     "sensitivity": "Public",
     "tags": [
+      "ipmitool",
       "unknown return code",
-      "PECI",
-      "ipmitool"
+      "PECI"
     ],
     "rank": 4
   }

@@ -5,8 +5,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "performance"
+      "performance",
+      "PECI"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
     "sensitivity": "Public",
     "tags": [
-      "firmware",
-      "BMC"
+      "BMC",
+      "firmware"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4
   }

@@ -5,8 +5,8 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "validation",
       "testing",
+      "validation",
       "PVT"
     ],
     "rank": 4
@@ -28,8 +28,8 @@
     "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran C:\\Python27\\Scripts\\ipccli.exe with the command import bxt_utils; bxt_utils.th_break()",
     "sensitivity": "Public",
     "tags": [
-      "system trace",
-      "BXT OEM toolstack"
+      "BXT OEM toolstack",
+      "system trace"
     ],
     "rank": 4
   },
@@ -50,8 +50,8 @@
     "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
     "sensitivity": "Public",
     "tags": [
-      "BXTP",
-      "target relocation"
+      "target relocation",
+      "BXTP"
     ],
     "rank": 4
   },
@@ -61,8 +61,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "tool",
-      "causality error"
+      "causality error",
+      "tool"
     ],
     "rank": 4
   },

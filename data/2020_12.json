@@ -5,8 +5,8 @@
     "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
     "sensitivity": "Public",
     "tags": [
-      "inventory metric calculation",
-      "formula update"
+      "formula update",
+      "inventory metric calculation"
     ],
     "rank": 4
   },

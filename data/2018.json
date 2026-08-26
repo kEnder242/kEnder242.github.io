@@ -51,10 +51,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Proton1",
-      "Purley 2S",
+      "Proton2",
       "Purley 4S",
-      "Proton2"
+      "Proton1",
+      "Purley 2S"
     ],
     "rank": 4,
     "id": "GEM-c5a2"
@@ -77,9 +77,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
+      "Purley 4S",
       "CScripts",
-      "Purley 4S"
+      "Purley 2S"
     ],
     "rank": 4,
     "id": "GEM-9713"
@@ -101,8 +101,8 @@
     "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
     "sensitivity": "Public",
     "tags": [
-      "UFM",
       "shmemcc",
+      "UFM",
       "HAMR"
     ],
     "rank": 4,
@@ -114,8 +114,8 @@
     "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
     "sensitivity": "Public",
     "tags": [
-      "Infiniband",
-      "quickstart"
+      "quickstart",
+      "Infiniband"
     ],
     "rank": 4,
     "id": "GEM-946a"
@@ -151,8 +151,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "memory",
-      "configuration"
+      "configuration",
+      "memory"
     ],
     "rank": 4,
     "id": "GEM-3a33"
@@ -175,8 +175,8 @@
     "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
     "sensitivity": "Public",
     "tags": [
-      "SHMEM_SYMMETRIC_HEAP_SIZE",
-      "configuration"
+      "configuration",
+      "SHMEM_SYMMETRIC_HEAP_SIZE"
     ],
     "rank": 4,
     "id": "GEM-dd14"
@@ -248,8 +248,8 @@
     "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
     "sensitivity": "Public",
     "tags": [
-      "ixpdimm-cli",
-      "performance"
+      "performance",
+      "ixpdimm-cli"
     ],
     "rank": 4,
     "id": "GEM-ee1f"
@@ -260,8 +260,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "App Direct Dependency Failure",
-      "BIOS update"
+      "BIOS update",
+      "App Direct Dependency Failure"
     ],
     "rank": 4,
     "id": "GEM-fee5"
@@ -272,8 +272,8 @@
     "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
     "sensitivity": "Public",
     "tags": [
-      "grub2-mkconfig",
-      "configuration"
+      "configuration",
+      "grub2-mkconfig"
     ],
     "rank": 4,
     "id": "GEM-3d8b"
@@ -358,8 +358,8 @@
     "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
     "sensitivity": "Public",
     "tags": [
-      "SvBios",
-      "CAUSALITY ERROR"
+      "CAUSALITY ERROR",
+      "SvBios"
     ],
     "rank": 4,
     "id": "GEM-7084"
@@ -370,8 +370,8 @@
     "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
     "sensitivity": "Public",
     "tags": [
-      "biosKnobs",
-      "Error Injection"
+      "Error Injection",
+      "biosKnobs"
     ],
     "rank": 4,
     "id": "GEM-2822"
@@ -394,9 +394,9 @@
     "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
     "sensitivity": "Public",
     "tags": [
+      "clone",
       "repository",
-      "Git",
-      "clone"
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-f75c"
@@ -432,8 +432,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "error injection"
+      "error injection",
+      "APEI/EINJ"
     ],
     "rank": 4,
     "id": "GEM-f1ce"
@@ -444,8 +444,8 @@
     "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
     "sensitivity": "Public",
     "tags": [
-      "IPC",
-      "CLX_LBG_XDPA"
+      "CLX_LBG_XDPA",
+      "IPC"
     ],
     "rank": 4,
     "id": "GEM-2550"

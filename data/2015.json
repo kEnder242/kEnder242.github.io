@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "validation",
       "testing",
+      "validation",
       "PVT"
     ],
     "rank": 4,
@@ -56,8 +56,8 @@
     "sensitivity": "Public",
     "tags": [
       "msr_error",
-      "test_failure",
-      "vcd_missing"
+      "vcd_missing",
+      "test_failure"
     ],
     "rank": 4,
     "id": "GEM-2b24"
@@ -80,8 +80,8 @@
     "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
     "sensitivity": "Public",
     "tags": [
-      "trace32_error",
-      "recovery_failure"
+      "recovery_failure",
+      "trace32_error"
     ],
     "rank": 4,
     "id": "GEM-3f26"
@@ -92,8 +92,8 @@
     "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
     "sensitivity": "Public",
     "tags": [
-      "visa_patgen_manual_stop",
-      "failure"
+      "failure",
+      "visa_patgen_manual_stop"
     ],
     "rank": 4,
     "id": "GEM-5861"
@@ -104,8 +104,8 @@
     "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
     "sensitivity": "Public",
     "tags": [
-      "causality",
-      "error"
+      "error",
+      "causality"
     ],
     "rank": 4,
     "id": "GEM-e119"
@@ -117,8 +117,8 @@
     "sensitivity": "Public",
     "tags": [
       "ipc",
-      "connection",
-      "failure"
+      "failure",
+      "connection"
     ],
     "rank": 4,
     "id": "GEM-b175"
@@ -130,8 +130,8 @@
     "sensitivity": "Public",
     "tags": [
       "tap2sb",
-      "probemode",
-      "cfg_apitest64.exe"
+      "cfg_apitest64.exe",
+      "probemode"
     ],
     "rank": 4,
     "id": "GEM-957f"
@@ -142,8 +142,8 @@
     "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
     "sensitivity": "Public",
     "tags": [
-      "ITP",
-      "bugs"
+      "bugs",
+      "ITP"
     ],
     "rank": 4,
     "id": "GEM-dccc"
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "ipccli",
-      "Python 2.7.9"
+      "Python 2.7.9",
+      "ipccli"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -166,8 +166,8 @@
     "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran C:\\Python27\\Scripts\\ipccli.exe with the command import bxt_utils; bxt_utils.th_break()",
     "sensitivity": "Public",
     "tags": [
-      "system trace",
-      "BXT OEM toolstack"
+      "BXT OEM toolstack",
+      "system trace"
     ],
     "rank": 4,
     "id": "GEM-6b2c"
@@ -190,8 +190,8 @@
     "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
     "sensitivity": "Public",
     "tags": [
-      "dockable_content",
-      "EDRAMIOT"
+      "EDRAMIOT",
+      "dockable_content"
     ],
     "rank": 4,
     "id": "GEM-510d"
@@ -202,9 +202,9 @@
     "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
+      "SkyLake_M0",
       "EDRAM",
-      "SkyLake_M0"
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-9feb"
@@ -215,8 +215,8 @@
     "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
     "sensitivity": "Public",
     "tags": [
-      "EDC",
-      "visa_custom_rs.xml"
+      "visa_custom_rs.xml",
+      "EDC"
     ],
     "rank": 4,
     "id": "GEM-6e23"
@@ -239,9 +239,9 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
-      "PVT BXTOEM",
       "testing",
-      "SV2K8122"
+      "SV2K8122",
+      "PVT BXTOEM"
     ],
     "rank": 4,
     "id": "GEM-c456"
@@ -252,8 +252,8 @@
     "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
     "sensitivity": "Public",
     "tags": [
-      "BXTP",
-      "target relocation"
+      "target relocation",
+      "BXTP"
     ],
     "rank": 4,
     "id": "GEM-28b7"
@@ -264,9 +264,9 @@
     "evidence": "The latest nightly build was fetched from https://git-amr-1.devtools.intel.com/gerrit/ecdl_dbg-northpeak-sdk refs/changes/49/63649/2. The build script was run using C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -e and then C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -r -b",
     "sensitivity": "Public",
     "tags": [
+      "configuration",
       "installation",
-      "NPK SDK",
-      "configuration"
+      "NPK SDK"
     ],
     "rank": 4,
     "id": "GEM-8ff2"
@@ -277,8 +277,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "tool",
-      "causality error"
+      "causality error",
+      "tool"
     ],
     "rank": 4,
     "id": "GEM-8870"
@@ -289,8 +289,8 @@
     "evidence": "https://hsdes.intel.com/home/default.html#article?id=1404494581",
     "sensitivity": "Public",
     "tags": [
-      "update",
-      "HSD"
+      "HSD",
+      "update"
     ],
     "rank": 4,
     "id": "GEM-f696"
@@ -301,8 +301,8 @@
     "evidence": "BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
     "sensitivity": "Public",
     "tags": [
-      "debug",
-      "configuration"
+      "configuration",
+      "debug"
     ],
     "rank": 4,
     "id": "GEM-b2a2"

@@ -117,8 +117,8 @@
     "sensitivity": "Public",
     "tags": [
       "Intel MIV",
-      "MIV Wiki",
-      "Manageability specifications"
+      "Manageability specifications",
+      "MIV Wiki"
     ],
     "rank": 4,
     "id": "GEM-11e9"
@@ -129,10 +129,10 @@
     "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
     "sensitivity": "Public",
     "tags": [
-      "MCTP",
       "Intel MIV",
+      "PECI",
       "D-Bus",
-      "PECI"
+      "MCTP"
     ],
     "rank": 4,
     "id": "GEM-d149"
@@ -144,8 +144,8 @@
     "sensitivity": "Public",
     "tags": [
       "Intel MIV",
-      "DTAF",
-      "Simics"
+      "Simics",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-a33d"
@@ -180,8 +180,8 @@
     "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
     "sensitivity": "Public",
     "tags": [
-      "negative testing",
-      "refactored code"
+      "refactored code",
+      "negative testing"
     ],
     "rank": 4,
     "id": "GEM-48b5"
@@ -303,9 +303,9 @@
     "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
     "sensitivity": "Public",
     "tags": [
-      "kayak framework",
       "Python scripts",
-      "TDF architecture"
+      "TDF architecture",
+      "kayak framework"
     ],
     "rank": 4,
     "id": "GEM-4c34"

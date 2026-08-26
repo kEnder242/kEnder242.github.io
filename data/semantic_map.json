@@ -1,11 +1,251 @@
 {
   "strategic_layer": [
     {
+      "year": "2021_12",
+      "anchor": "Redfish OEM API validation meeting",
+      "gem": ""
+    },
+    {
+      "year": "2021_12",
+      "anchor": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+      "gem": ""
+    },
+    {
+      "year": "2021_12",
+      "anchor": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+      "gem": ""
+    },
+    {
+      "year": "2015_04",
+      "anchor": "cfg_apitest64.exe used to run tests in probemode and tap2sb modes",
+      "gem": ""
+    },
+    {
+      "year": "2015_04",
+      "anchor": "ITP bugs [5661248] and [5659929] reported",
+      "gem": ""
+    },
+    {
+      "year": "2015_04",
+      "anchor": "ipccli module failed to import in Python 2.7.9 environment on Windows",
+      "gem": ""
+    },
+    {
+      "year": "2018_05",
+      "anchor": "Install HAMR (no specific version mentioned)",
+      "gem": ""
+    },
+    {
+      "year": "2018_05",
+      "anchor": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+      "gem": ""
+    },
+    {
+      "year": "2018_05",
+      "anchor": "Setup Infiniband port-to-port post-driver using quickstart",
+      "gem": ""
+    },
+    {
+      "year": "2018_05",
+      "anchor": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+      "gem": ""
+    },
+    {
+      "year": "2022_09",
+      "anchor": "Review PECI-related issues and EGS DRAM ECS info over OOB PECI",
+      "gem": ""
+    },
+    {
+      "year": "2022_09",
+      "anchor": "crdefeature2_bs accessed registers 21850h and 29850h across multiple channels",
+      "gem": ""
+    },
+    {
+      "year": "2022_09",
+      "anchor": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
+      "gem": ""
+    },
+    {
+      "year": "2016_2019",
+      "anchor": "Collaboration between development team and Tang Yueping on LCR_Margining project",
+      "gem": ""
+    },
+    {
+      "year": "2014_05",
+      "anchor": "Role of pci module in accessing and modifying PCI configuration space",
+      "gem": ""
+    },
+    {
+      "year": "2014_05",
+      "anchor": "Initialization of Northpeak API using broxton_a0_red.xml configuration file",
+      "gem": ""
+    },
+    {
+      "year": "2014_05",
+      "anchor": "Utilization of IpcApiTargetAccess class to access target devices via OpenIPC API",
+      "gem": ""
+    },
+    {
+      "year": "2023_10",
+      "anchor": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
+      "gem": ""
+    },
+    {
+      "year": "2023_10",
+      "anchor": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
+      "gem": ""
+    },
+    {
+      "year": "2023_10",
+      "anchor": "Running Python scripts using kayak framework to install and test Montana code updates",
+      "gem": ""
+    },
+    {
+      "year": "2016_07",
+      "anchor": "Setup test environment using set_farm.sh and run Maestro tests with specific parameters",
+      "gem": ""
+    },
+    {
+      "year": "2016_07",
+      "anchor": "Nightly build of fulsim includes bug fix for Maestro tests crashing after upgrading fulsim",
+      "gem": ""
+    },
+    {
+      "year": "2016_07",
+      "anchor": "Errors encountered during test related to PCI Cfg writes and executed callbacks",
+      "gem": ""
+    },
+    {
+      "year": "2012_07",
+      "anchor": "Exception occurred when submitting job to DAL due to parsing issue with SNL expressions",
+      "gem": ""
+    },
+    {
+      "year": "2012_07",
+      "anchor": "Debugging session on Haswell Server using HsxRegisterLib library in C#",
+      "gem": ""
+    },
+    {
+      "year": "2012_07",
+      "anchor": "VISA signals programmed to control pattern generators as part of debugging session setup",
+      "gem": ""
+    },
+    {
+      "year": "2022_11",
+      "anchor": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+      "gem": ""
+    },
+    {
+      "year": "2014_01",
+      "anchor": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
+      "gem": ""
+    },
+    {
+      "year": "2014_01",
+      "anchor": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
+      "gem": ""
+    },
+    {
+      "year": "2014_01",
+      "anchor": "Merged Main Visa with Skylake PO",
+      "gem": ""
+    },
+    {
+      "year": "2014_01",
+      "anchor": "Investigating logging for VISA on multiple dates (1/24/2014)",
+      "gem": ""
+    },
+    {
+      "year": "2016_03",
+      "anchor": "Reverted dc6.bl2 due to outdated bling and pipes B or C compatibility issues.",
+      "gem": ""
+    },
+    {
+      "year": "2016_03",
+      "anchor": "Updated build process for dc6 to accommodate changes in configuration or settings.",
+      "gem": ""
+    },
+    {
+      "year": "2016_03",
+      "anchor": "Used specific version of PlatformConfig.xml for dc6 build.",
+      "gem": ""
+    },
+    {
+      "year": "2021_02",
+      "anchor": "PECI commands tested in Base category using peci_checkout",
+      "gem": ""
+    },
+    {
+      "year": "2021_02",
+      "anchor": "Issue with PTU calibration identified during test plan execution",
+      "gem": ""
+    },
+    {
+      "year": "2005_01",
+      "anchor": "BMC23 module upgrade and Embedded File System (EFS) update to version 1.15.",
+      "gem": ""
+    },
+    {
+      "year": "2005_01",
+      "anchor": "Addressing data integrity and system stability issues with BMC23 module upgrade and EFS update.",
+      "gem": ""
+    },
+    {
       "year": "2017",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
       "gem": ""
     },
     {
+      "year": "2020_03",
+      "anchor": "MIV Reset and Recovery issues with Force ME recovery and Get Device ID return codes (CE, 0xc3, and 0xff)",
+      "gem": ""
+    },
+    {
+      "year": "2020_03",
+      "anchor": "PECI commands and BMC PECI master functionality discussions",
+      "gem": ""
+    },
+    {
+      "year": "2020_03",
+      "anchor": "MIV test cases fail strangely after do min_nm_dca test on Dell system",
+      "gem": ""
+    },
+    {
+      "year": "2020_03",
+      "anchor": "ME RAS Force ME recovery issues",
+      "gem": ""
+    },
+    {
+      "year": "2020_03",
+      "anchor": "BMC PECI master functionality discussion",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
       "year": "artifacts_2021",
       "anchor": "",
       "gem": ""
@@ -38,6 +278,51 @@
     {
       "year": "artifacts_2021",
       "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2005_2007",
+      "anchor": "Test run for FTF202",
+      "gem": ""
+    },
+    {
+      "year": "2005_2007",
+      "anchor": "Tool release",
+      "gem": ""
+    },
+    {
+      "year": "2005_2007",
+      "anchor": "Update to SOL presentation and API documentation",
+      "gem": ""
+    },
+    {
+      "year": "2005_2007",
+      "anchor": "Fix to variable not found error in testResults_MAP(I2C)",
+      "gem": ""
+    },
+    {
+      "year": "2005_2007",
+      "anchor": "Update to SDK API with new information on escapes and licenses",
+      "gem": ""
+    },
+    {
+      "year": "2022_01",
+      "anchor": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
+      "gem": ""
+    },
+    {
+      "year": "2022_01",
+      "anchor": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
+      "gem": ""
+    },
+    {
+      "year": "2022_01",
+      "anchor": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
       "gem": ""
     },
     {
@@ -53,6 +338,26 @@
     {
       "year": "artifacts_EXPERTISE",
       "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2019_10",
+      "anchor": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy",
+      "gem": ""
+    },
+    {
+      "year": "2019_10",
+      "anchor": "Kernel panic due to out-of-memory (OOM) condition and subsequent reboot in 10 seconds",
+      "gem": ""
+    },
+    {
+      "year": "2019_10",
+      "anchor": "Debugging verifysamepolicy.py script",
+      "gem": ""
+    },
+    {
+      "year": "2014_11",
+      "anchor": "npk_cfg64.exe used to configure and stop tracing from FPGA",
       "gem": ""
     },
     {
@@ -61,8 +366,403 @@
       "gem": ""
     },
     {
+      "year": "2013",
+      "anchor": "Investigate missing micro-code patch causing assembly loading error.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Analyze stack trace to identify specific exception causing DAL MasterFrame instantiation failure.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Understand relationship between failed access to processor resources and execution of writeTraceTriggerHook method.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Register definitions updated for BDW B0, SKL A0, and SKL ULT A0, including fixes for register resource mismatches in DfxProjects.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Visa plugin encountered unrecognized architecture/stepping combination BDW_U_UC B0, requiring manual selection.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "HSD sighting 4723781: issue regarding unselecting signals in the final mux, which cannot be reselected.",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Implemented VISA support for SKL PO and GTPO decoration",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Accessed GTPO register definitions using XML files `visa_custom_rs.xml` and `visa_sig_map.xml`",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Assigned signals to output groups, configured pattern generators, and wrote to decoration hooks in online converter functionality",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Update visa_legacy_channel.xml to include PDM_Mux between ncnoaupmuxs and noactls",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Modify SKL GT architecture registers to enable bypass controls and mux control",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "Disable PCU DFX IO disconnect control and enable PDM outbound enable in UCRB32 register modification",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "Commit 1b3f8aefd3f1b01a36094f81259294c0795b712f and merge request 97 addressed a failed Close Session command during MIV recovery.",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "Code review issue forwarded to Dave/Curtis for investigation",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+      "gem": ""
+    },
+    {
+      "year": "2020_07",
+      "anchor": "IVL crash dump issue addressed",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "Set up hosts & Targets for PVT validation testing using BXTP, JF5 lab, and DSDJF-H067 tools.",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "Installed BXT OEM toolstack to configure system trace.",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "Internal error occurred during session tde_boot due to missing metadata file.",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "BXTP target relocation note",
+      "gem": ""
+    },
+    {
+      "year": "2015_10",
+      "anchor": "CAUSALITY ERROR: Tool XMon version 2.7.3 was released in 2015 but used in log entries with later dates (2016).",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "No primary TODO or research link mentioned in the logs.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "PCIe correctable error injection commands.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "Configuration options used for error injection in the biosKnobs variable.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "biosKnobs variable settings similar to those on 11/15/2018.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "EINJ (Error Injection) used to inject various types of errors into the system for testing purposes.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "[CAUSALITY ERROR]: Tool used (SvBios) was likely released after 2018, as it uses Python 3.x syntax.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "biosKnobs variable settings enable specific error injection features.",
+      "gem": ""
+    },
+    {
+      "year": "2018_11",
+      "anchor": "System configuration knobs verified to ensure proper error injection feature configuration.",
+      "gem": ""
+    },
+    {
+      "year": "2021_06",
+      "anchor": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities",
+      "gem": ""
+    },
+    {
       "year": "2022",
       "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Merging Montana into DTAF-content using git-filter-repo to preserve history",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Error setting CorrectionInMs property in power limit configuration",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Preserving history while merging Montana into DTAF-content using git-filter-repo",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "PECI commands executed to update TDFs on PCI devices",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "No plans to merge fix for EGS",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Python scripts executed using OpenPythonSV to unlock and refresh PMC",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Hook a Logic Analyzer (LA) to the PECI bus for further investigation.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Stress test OOBMSM on 10nm architecture using various test files.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Validate Xeon PECI specification on 10nm architecture despite differences.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Unexpected PECI return codes during base GPU frequency check",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Setting power control policy to limit power consumption to 0W using PATCH method on /redfish/v1/Chassis/Baseboard/Power#/PowerControl/0",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Accessed meeting recording via Intel's SharePoint platform for partner training purposes.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Exploration of new Redfish schema for pmcapsweep script",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "LTM updates to address duplicate endpoints and DMI CSR overlap issues",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "XPIV pecistressor tool used to measure PECI traffic impact on CPU benchmarks",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Review PECI-related issues and EGS DRAM ECS info over OOB PECI",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "crdefeature2_bs accessed registers 21850h and 29850h across multiple channels",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Functions defined for accessing MMIO registers.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Experiment conducted using Cscripts over BMC to validate changes.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "PECI framework initialized with BKM and used to configure BMCs via Redfish API.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Several tools used, including pysvtools, ipccli, and peci-obj.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "Causality error: lack of information about tools' release years.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "New Redfish schema 2.0 mentioned, but primary TODO or research link not explicitly stated.",
+      "gem": ""
+    },
+    {
+      "year": "2019_08",
+      "anchor": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces.",
+      "gem": ""
+    },
+    {
+      "year": "2023_04",
+      "anchor": "Blackbox recorder telemetry software developed to debug RAPL failures",
+      "gem": ""
+    },
+    {
+      "year": "2023_04",
+      "anchor": "Delivered negative BDF and MSR scan with refactored code for future testing",
+      "gem": ""
+    },
+    {
+      "year": "2023_04",
+      "anchor": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "Proton1 and Proton2 platforms tested for App Direct Dependency Failure during Boot (HSD-ES) on Purley 2S and 4S Platforms.",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "Stress testing conducted on Proton2 using stressapptest and FIO to validate DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic - Linux",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "CScripts version Rev 1.46 Bld 726820 used for Purley 2S and 4S Platforms.",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "App Direct Dependency Failure during Boot and BIOS update to PSE119N",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "Configuring grub2-mkconfig settings",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "Creating persistent memory resources using ipmctl",
+      "gem": ""
+    },
+    {
+      "year": "2018_09",
+      "anchor": "DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic",
+      "gem": ""
+    },
+    {
+      "year": "2015_08",
+      "anchor": "PVT BXTOEM testing on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400.exe",
+      "gem": ""
+    },
+    {
+      "year": "2015_08",
+      "anchor": "NPK SDK installation and configuration",
+      "gem": ""
+    },
+    {
+      "year": "2021_03",
+      "anchor": "Primary TODO or research link mentioned: Archer City Platform Architecture",
+      "gem": ""
+    },
+    {
+      "year": "2021_03",
+      "anchor": "peci_flood.tdf test impacts PECI throughput on MSR reads by comparing throughput cmd/sec with a baseline",
+      "gem": ""
+    },
+    {
+      "year": "2021_03",
+      "anchor": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths",
+      "gem": ""
+    },
+    {
+      "year": "2021_03",
+      "anchor": "No conflicts found in the RAW LOGS regarding tool release years",
       "gem": ""
     },
     {
@@ -71,13 +771,283 @@
       "gem": ""
     },
     {
+      "year": "2016",
+      "anchor": "TODO: Update and share bxt_utils.py code",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Resolve VISA panel configuration issue on Skylake_RO",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Discuss Northpeak Break (NPK_BREAK) with Arun and Ilya",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Python 2.7 released.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "ITP Bug [5661723] reported: Installer interrupted when Python is in a corrupt state.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "init_soc.cmm script used to fix BSSB4.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "BSSB tracing issues on BXT E0 reported: BIOS overwrites swdest_0, GetDebugPortPowerStatus failed.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "VISA patgen tool used to verify BSSB on BXT E0.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Resolve 'Can't bind socket to port: Address already in use' error by killing AubLoad process",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Dump and process HAS environment variables",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Plan relevant Maestro tests for Pipe2d and document test methods",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Resolve 'Can't bind socket to port: Address already in use' error by killing AubLoad process",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Fix XML errors due to missing external entities in Simics by editing start_simics_gen10_fulsim.lua script",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Reverted dc6.bl2 due to outdated bling and pipes B or C compatibility issues.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Updated build process for dc6 to accommodate changes in configuration or settings.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Used specific version of PlatformConfig.xml for dc6 build.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Repeated mmio read and write operations on addresses 0x64000 and 0x64050 with potential configuration or architectural issues.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Server process creation failed on dc6 due to 'Resource temporarily unavailable' error.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "MMIO read and write operations failed at addresses 0x0000000000664000 and 0x0000000000664050 due to lack of range.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Display powerup sequence allowed access to regions that are otherwise inaccessible, but subsequent operations still failed with 'no range' errors.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Simulation environment setup using Simics 4.8.pre22 and XMON 2.7.3",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Include files used to set up the simulation environment",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Hint towards further investigation into the tool registry",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Simulation encountered issues with proxy trace and HW_FW warnings, filtered out using `awk` commands.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Used `softmon` tool to capture waveforms of DDI_BUF_CTR and display pixel data.",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "MAESTRO_GFX variable set to enable GFX modules in build process",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Investigate regressions and unit tests for PureVP/Pipe2d/SV stack",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Mismatched CRC issue attributed to outdated Fulsim version",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Setup test environment using set_farm.sh and run Maestro tests with specific parameters",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Nightly build of fulsim includes bug fix for Maestro tests crashing after upgrading fulsim",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Errors encountered during test related to PCI Cfg writes and executed callbacks",
+      "gem": ""
+    },
+    {
+      "year": "2016",
+      "anchor": "Collaboration between development team and Tang Yueping on LCR_Margining project",
+      "gem": ""
+    },
+    {
+      "year": "2024_02",
+      "anchor": "MCTP device discovery and interaction using various tools.",
+      "gem": ""
+    },
+    {
+      "year": "2020_02",
+      "anchor": "Using futurize tool as a workaround for resolving issues",
+      "gem": ""
+    },
+    {
+      "year": "2020_02",
+      "anchor": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+      "gem": ""
+    },
+    {
+      "year": "2020_02",
+      "anchor": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2020",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2023_01",
+      "anchor": "Modification made to code to resolve Power Limit Accuracy feature issue",
+      "gem": ""
+    },
+    {
       "year": "2019_2024",
       "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
       "gem": ""
     },
     {
+      "year": "2019_2024",
+      "anchor": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024",
+      "anchor": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024",
+      "anchor": "Tools used to test manageability features: Simics, DTAF",
+      "gem": ""
+    },
+    {
+      "year": "2024_06",
+      "anchor": "Connected to target system using IPMI and MTM on DMR-7 platform",
+      "gem": ""
+    },
+    {
+      "year": "2024_06",
+      "anchor": "Visited Intel's TPMI specification documentation",
+      "gem": ""
+    },
+    {
+      "year": "2024_06",
+      "anchor": "Ran Python script using access_tpmi_mmio function to access PECI registers",
+      "gem": ""
+    },
+    {
       "year": "2012",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "Exception occurred when submitting job to DAL due to parsing issue with SNL expressions",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "Debugging session on Haswell Server using HsxRegisterLib library in C#",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "VISA signals programmed to control pattern generators as part of debugging session setup",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "Configured registers in MEM32 space as part of mux programming for SA_IOT_LANE0 and SA_IOT_LANE1.",
+      "gem": ""
+    },
+    {
+      "year": "2019_11",
+      "anchor": "Policy #231 sets expected average power limit to 312W.",
+      "gem": ""
+    },
+    {
+      "year": "2019_11",
+      "anchor": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range.",
+      "gem": ""
+    },
+    {
+      "year": "2019_11",
+      "anchor": "avgpowercmp module reports 'Fail!!' when actual value exceeds \u00b15% range.",
+      "gem": ""
+    },
+    {
+      "year": "2014_10",
+      "anchor": "TODO: Set up BXT FPGA system with NPK SDK using known working NPK_Raw_Tap_only_bxt_image",
+      "gem": ""
+    },
+    {
+      "year": "2014_10",
+      "anchor": "Resolved NullPointerException by changing connection type to LTB",
+      "gem": ""
+    },
+    {
+      "year": "2014_10",
+      "anchor": "Manually installed IpcApiAccess, ISDBaseWin64, and BXTSupportPkWin64 due to their absence in NPK SDK",
       "gem": ""
     },
     {
@@ -132,6 +1102,11 @@
     },
     {
       "year": "Unknown",
+      "anchor": "Proposed approach for the technical details part of SIV+MIV Sprint Review.",
+      "gem": ""
+    },
+    {
+      "year": "Unknown",
       "anchor": "Software Engineer Grade 5",
       "gem": "Quote"
     },
@@ -167,11 +1142,6 @@
     },
     {
       "year": "Unknown",
-      "anchor": "[STRATEGIC_ANCHOR] Embracing AI-driven workflows and leveraging language-model coding assistance to transform engineering work.",
-      "gem": ""
-    },
-    {
-      "year": "Unknown",
       "anchor": "[STRATEGIC_ANCHOR] Successfully transitioned from firmware development to software development, leveraging prior experience and expertise in network s",
       "gem": ""
     },
@@ -196,11 +1166,331 @@
       "gem": "Note on code review process improvements"
     },
     {
+      "year": "2020_06",
+      "anchor": "Review of NM-4.0 External Interface Spec",
+      "gem": ""
+    },
+    {
+      "year": "2020_06",
+      "anchor": "Update test setup to install at least 4 DIMMs for Domain 2 (memory) power usage above 1W",
+      "gem": ""
+    },
+    {
+      "year": "2020_06",
+      "anchor": "Delete (NmPolicy 0x2E 0xC1) Returns 0x80 after disabling existing policy",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2024",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2024",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2015_11",
+      "anchor": "HSD update issue: BSSB no data on first trace, need to retry",
+      "gem": ""
+    },
+    {
+      "year": "2015_11",
+      "anchor": "Debug configuration issue: BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
+      "gem": ""
+    },
+    {
       "year": "2023",
       "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
       "gem": ""
     },
     {
+      "year": "2023",
+      "anchor": "PSU MUX fix needed to allow NM S (NM power limit sweep) to function correctly",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Era Registry reference found in ARTIFACT section",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Platform Energy Counter (PCS) interaction with BMC and SUT using ipmitool and Redfish API",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "EIDs associated with bus owners on SRR4PIVR28B02H2.gar.corp.intel.com",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Unexpected PECI return codes observed for various endpoints",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "`busctl` commands used to send and receive MCTP payloads, as well as for PCI device scanning and configuration",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Error codes encountered during device discovery in Montana test suite: discovery error: timeout, missing 0x40 responses in PCIe transactions.",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Team used journalctl to troubleshoot issues with MCTP device discovery and reset functionality.",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Tools used to test manageability features: Simics, DTAF",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "New test cases implemented, old journal data fixed by scanning in reverse order, and failure action added to abort tests when duplicate EIDs are found",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Blackbox recorder telemetry software developed to debug RAPL failures",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Delivered negative BDF and MSR scan with refactored code for future testing",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Used ipmitool to set and get network management policy settings.",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Retrieved enumerated bus information using pythonsv_loader.",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Implementation of PECI stepping support for SRF/GNR",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Adaptation of SPR MCTP reset test automation for GNR",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "CSV file creation and reading using pandas library",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Sending/receiving MCTP messages using curl and busctl",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Compressing CSV files using 7z.exe",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "MCTP/BMC remote debugging issues with EIDs 9, 19, 29, 28, 27, and 26",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Running Python scripts using kayak framework to install and test Montana code updates",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Sending PECI command over network using curl",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Execution of montana.py script with test file mctp_reset_cold.tdf and loop option",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "System topology discovery using Redfish and MCTP protocols",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Hardware component enumeration using lspci command",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "Potential causality error: Redfish API calls for power management exploration",
+      "gem": ""
+    },
+    {
+      "year": "2019_09",
+      "anchor": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID.",
+      "gem": ""
+    },
+    {
+      "year": "2019_09",
+      "anchor": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC.",
+      "gem": ""
+    },
+    {
+      "year": "2018_08",
+      "anchor": "POST memory test failure with Machine Check Exception (MCE) error code VC30 in HSD-ES case #2204264234",
+      "gem": ""
+    },
+    {
+      "year": "2018_08",
+      "anchor": "ixpdimm-cli help command takes an excessively long time to execute in HSD-ES case #2204553489",
+      "gem": ""
+    },
+    {
+      "year": "2020_12",
+      "anchor": "Formulas updated to calculate inventory metrics",
+      "gem": ""
+    },
+    {
+      "year": "2020_12",
+      "anchor": "Updated list of inventory requests available at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Request",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Updated RPC.tcl to reflect MC's verbosity changes",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Resolved xtrans.dll issue by updating IpmiSessionProcessor.cpp and re-compiling the dll",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Completed APIRmcpPriv.tcl and updated I2CorSMS in rmcpp_recover with a working proc",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "SOL MTP was investigated and new cases were identified from escapes.",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Health and Monitoring script (Tao 126579) was executed every 2 hours for 64 hours to establish SOL.",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Changes made to IpmiSessionProcessor.cpp and apiRmcpSeq.tcl related to 'incInbSeqNum' change.",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Write SolMsg.tcl based on IPS",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "Issues with NIC differences on 1750s and cygwin requirements for 1850s identified",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "LAN testing on BMC51 encountered map problems; RPC installed in rack, help provided with device manager issues",
+      "gem": ""
+    },
+    {
+      "year": "2019_05",
+      "anchor": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
+      "gem": ""
+    },
+    {
+      "year": "2019_05",
+      "anchor": "Configured local repository with user name and email address.",
+      "gem": ""
+    },
+    {
+      "year": "2019_05",
+      "anchor": "Retrieved commit-msg hook from remote server via SCP.",
+      "gem": ""
+    },
+    {
+      "year": "2014_04",
+      "anchor": "Exception related to UNSL0_SQIDI_GDTUNIT_0x9840 not found, possibly investigating or debugging ITP Bug [5027277].",
+      "gem": ""
+    },
+    {
+      "year": "2014_04",
+      "anchor": "ITP Bug [5027277] reported for a test case involving BDW (Block Data Width) 0x9840 on C1.",
+      "gem": ""
+    },
+    {
+      "year": "2014_04",
+      "anchor": "Accessing EDRAMBAR registers at addresses 0x6e_0_0_mem_regs, 0x6f_0_0_mem_regs, and 0x71_0_0_mem_regs for debugging or testing purposes.",
+      "gem": ""
+    },
+    {
+      "year": "2014_04",
+      "anchor": "Encountering error codes EFALWAYS_CR_VISA_CTL_EFALWAYS (0x3210), EFALWAYS_CR_VISA_SLIDE_EFALWAYS (0x3214), and EFALWAYS_CR_VISA_XBAR_EFALWAYS (0x3218)",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
       "year": "artifacts_2019",
       "anchor": "",
       "gem": ""
@@ -226,8 +1516,68 @@
       "gem": ""
     },
     {
-      "year": "artifacts_2022",
+      "year": "artifacts_2019",
       "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2019_01",
+      "anchor": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout",
+      "gem": ""
+    },
+    {
+      "year": "2019_01",
+      "anchor": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin",
+      "gem": ""
+    },
+    {
+      "year": "2019_01",
+      "anchor": "Misconfigured docker-compose.yml file causing Docker build process issues",
+      "gem": ""
+    },
+    {
+      "year": "2015_01",
+      "anchor": "Resolved IPC error code (0x800e0001) and improved FPGAIntegration stability by patching init_soc.cmm",
+      "gem": ""
+    },
+    {
+      "year": "2018_2019",
+      "anchor": "Primary TODO or research link mentioned in the Technical Abstract",
+      "gem": ""
+    },
+    {
+      "year": "2018_2019",
+      "anchor": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+      "gem": ""
+    },
+    {
+      "year": "2018_2019",
+      "anchor": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
+      "gem": ""
+    },
+    {
+      "year": "2021_01",
+      "anchor": "PECI framework handles connection aborts by res-establishing the connection.",
+      "gem": ""
+    },
+    {
+      "year": "2021_01",
+      "anchor": "MIV report Weldon/Hooper/Staff...",
+      "gem": ""
+    },
+    {
+      "year": "2021_01",
+      "anchor": "Fuzzing support added for PECI commands.",
       "gem": ""
     },
     {
@@ -273,11 +1623,216 @@
     {
       "year": "artifacts_2022",
       "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2005_02",
+      "anchor": "Evaluation run using EFS1.16 on HW BMC25 shows platform does not matter in terms of performance.",
+      "gem": ""
+    },
+    {
+      "year": "2005_02",
+      "anchor": "Second evaluation run conducted using EFS1.16 due to observation that platform does not affect performance.",
+      "gem": ""
+    },
+    {
+      "year": "2005_02",
+      "anchor": "Initial evaluation run used EFS1.15, leading to decision to conduct second evaluation with EFS1.16.",
       "gem": ""
     },
     {
       "year": "2014",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Merged Main Visa with Skylake PO",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Investigating logging for VISA on multiple dates (1/24/2014)",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "SKL ODLAT enable feature and PEG8 NOA Compression feature relationship unknown",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Investigate PythonStateDef ReadModifyWrite TODO",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "HswConverters.cs performs conversion of PythonStateDef ReadModifyWrite operations",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Compression disabled by default in visa_custom_rs.xml to resolve PEG16.CMPRNOALNDAT issue.",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "SKL registers.txt sent to Hernan, potential ongoing work or discussion on Skylake registers.",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "/uncore/etrog/edc directory structure updated to reflect EDRAM IOT implementation changes.",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Exception related to UNSL0_SQIDI_GDTUNIT_0x9840 not found, possibly investigating or debugging ITP Bug [5027277].",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "ITP Bug [5027277] reported for a test case involving BDW (Block Data Width) 0x9840 on C1.",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Accessing EDRAMBAR registers at addresses 0x6e_0_0_mem_regs, 0x6f_0_0_mem_regs, and 0x71_0_0_mem_regs for debugging or testing purposes.",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Encountering error codes EFALWAYS_CR_VISA_CTL_EFALWAYS (0x3210), EFALWAYS_CR_VISA_SLIDE_EFALWAYS (0x3214), and EFALWAYS_CR_VISA_XBAR_EFALWAYS (0x3218)",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Role of pci module in accessing and modifying PCI configuration space",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Initialization of Northpeak API using broxton_a0_red.xml configuration file",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Utilization of IpcApiTargetAccess class to access target devices via OpenIPC API",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "TODO: Add PO support for BXT (Broadwell eXtended Thermal)",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Integrated GTEST with TeamCity for continuous integration and testing",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Replaced CATCH with GTEST due to significant investment in NPK tools",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "TODO: Set up BXT FPGA system with NPK SDK using known working NPK_Raw_Tap_only_bxt_image",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Resolved NullPointerException by changing connection type to LTB",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Manually installed IpcApiAccess, ISDBaseWin64, and BXTSupportPkWin64 due to their absence in NPK SDK",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "npk_cfg64.exe used to configure and stop tracing from FPGA",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "Out of Memory error (code 0x80000009) prevented replication of M0 Python CLI GT programming on Jason's system.",
+      "gem": ""
+    },
+    {
+      "year": "2020_04",
+      "anchor": "Higher-order PECI test cases were planned",
+      "gem": ""
+    },
+    {
+      "year": "2020_04",
+      "anchor": "DTAF Core installation guide needs update from Raveendra",
+      "gem": ""
+    },
+    {
+      "year": "2020_04",
+      "anchor": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+      "gem": ""
+    },
+    {
+      "year": "2024_04",
+      "anchor": "Primary TODO or research link mentioned: MSR write - find list of offsets from FR (Firmware Register) and IMH?",
+      "gem": ""
+    },
+    {
+      "year": "2024_04",
+      "anchor": "Commands implemented by the team to configure endpoint configurations for different interfaces (PCI Local, PCI, and MMIO)",
+      "gem": ""
+    },
+    {
+      "year": "2024_04",
+      "anchor": "Tool used to interact with MCTP services on the BMC: peci_cmds",
       "gem": ""
     },
     {
@@ -291,8 +1846,308 @@
       "gem": ""
     },
     {
+      "year": "2021",
+      "anchor": "BMC for MCTP stack validation link shared",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Research link: PythonSV/peciframework to exercise PCS mailbox functionality",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "MCTP stack configuration for BMC communication",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "MCTP BUS Owner Selection configured for OOB MSMS or CSME",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "PECI framework handles connection aborts by res-establishing the connection.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Integration of PECI/i3c/MCTP components into BMC firmware architecture",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "MIV report Weldon/Hooper/Staff...",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Fuzzing support added for PECI commands.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Documentation of error codes and MSR addresses",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "PECI commands tested in Base category using peci_checkout",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Issue with PTU calibration identified during test plan execution",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Primary TODO or research link mentioned: Archer City Platform Architecture",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "peci_flood.tdf test impacts PECI throughput on MSR reads by comparing throughput cmd/sec with a baseline",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "No conflicts found in the RAW LOGS regarding tool release years",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "dumpJournal.py script retrieves journal entries from BMC's LogServices/Journal/Entries endpoint using Redfish API",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "MSR whitelisting updated in icx_peci_arrays.py and spr_peci_arrays.py with new functions or methods",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "CD Summarizer script may need updates to be compatible with ACD",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Adapt MIV tests to use spr_peci_arrays and spr_peci_exceptions instead of deprecated pecirand library.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Updated PECI framework handles exceptions and arrays using spr_peci_arrays and spr_peci_exceptions.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "rdEndPointConfig_PCI function modified to use peci_wrapper method considering enumerated bus values in pci_enumerated_bus.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Update to LTM specification in SPR+EBG_XCC_LTM_DEF_D0.0x000D.xlsx",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Issue with PCS TMF IB Lock out causing average power consumption not to be limited as expected",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Power limiting issue on various systems, including Archer City with broken support model",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "PECI v4.0 Commands Checkout (MCTP) research and development ongoing.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Team utilizes MCTP stack for communication with BMC through various commands.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Minimum read time of 6000ms must be set for domain 0 in SetNmPolicy command.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Critical issue identified with MIV framework, requires further investigation.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Error code reported on HSD-ES: 22013940445.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "ipmitool used to troubleshoot issue, output identical to BMC console raw commands.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "Redfish OEM API validation meeting",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+      "gem": ""
+    },
+    {
+      "year": "2018_12",
+      "anchor": "Cloned Git repository from remote server to local directory",
+      "gem": ""
+    },
+    {
+      "year": "2018_12",
+      "anchor": "Set user configuration for Git repository",
+      "gem": ""
+    },
+    {
+      "year": "2018_12",
+      "anchor": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+      "gem": ""
+    },
+    {
       "year": "2008",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "gem": ""
+    },
+    {
+      "year": "2015_07",
+      "anchor": "Modifications to SkyLake_M0 platform's EDRAM signals and VISA panel configuration",
+      "gem": ""
+    },
+    {
+      "year": "2015_07",
+      "anchor": "Update to visa_custom_rs.xml file affected EDC changes path",
+      "gem": ""
+    },
+    {
+      "year": "2015_07",
+      "anchor": "New programming implemented using Python scripts for VISA signals",
+      "gem": ""
+    },
+    {
+      "year": "2018_06",
+      "anchor": "TODO: Investigate 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515)",
+      "gem": ""
+    },
+    {
+      "year": "2018_06",
+      "anchor": "Memory configuration corrected using ixpdimm-cli create -goal persistentmemorytype=appdirect and rebooting the system",
+      "gem": ""
+    },
+    {
+      "year": "2018_06",
+      "anchor": "Verification process initiated on Cluster with 0/60397968 error rate (0.000000%)",
+      "gem": ""
+    },
+    {
+      "year": "2018_06",
+      "anchor": "Configuration setting for SHMEM_SYMMETRIC_HEAP_SIZE set to 4000M",
+      "gem": ""
+    },
+    {
+      "year": "2018_06",
+      "anchor": "System's memory resources increase after creating a persistent namespace using ixpdimm-cli create -goal persistentmemorytype=appdirect",
+      "gem": ""
+    },
+    {
+      "year": "2019_07",
+      "anchor": "Power limit accuracy issue across domains reported",
+      "gem": ""
+    },
+    {
+      "year": "2019_07",
+      "anchor": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
+      "gem": ""
+    },
+    {
+      "year": "2019_07",
+      "anchor": "Tool 'montana.nativemodules.pmcapsweep' used to investigate power limit accuracy errors",
+      "gem": ""
+    },
+    {
+      "year": "2020_10",
+      "anchor": "Primary TODO or research link: Intel Redfish Power Cap OEM Schema",
+      "gem": ""
+    },
+    {
+      "year": "2020_10",
+      "anchor": "Unable to determine the tool used based on the provided evidence.",
+      "gem": ""
+    },
+    {
+      "year": "2020_10",
+      "anchor": "Unable to determine the error codes encountered based on the provided evidence.",
+      "gem": ""
+    },
+    {
+      "year": "2020_10",
+      "anchor": "Tool or API used to troubleshoot the issue: Era Registry (associated with Cray Schema)",
+      "gem": ""
+    },
+    {
+      "year": "2020_10",
+      "anchor": "Architectural decisions regarding power management and capacity planning were likely made, but details are lacking",
+      "gem": ""
+    },
+    {
+      "year": "2020_08",
+      "anchor": "Opcode 0x2E found to be a common prefix for various NM and PLP functions.",
+      "gem": ""
+    },
+    {
+      "year": "2024_08",
+      "anchor": "Inventory management follow-up on SMNC75000143",
+      "gem": ""
+    },
+    {
+      "year": "2024_08",
+      "anchor": "Simulation targeting Oakstream platform with specific configuration",
+      "gem": ""
+    },
+    {
+      "year": "2024_08",
+      "anchor": "Error code 0014.D.57 encountered during BIOS configuration",
+      "gem": ""
+    },
+    {
+      "year": "2015_03",
+      "anchor": "visa_patgen_manual_stop function failed due to unknown reason.",
+      "gem": ""
+    },
+    {
+      "year": "2015_03",
+      "anchor": "Causality error: conflicting dates between log and tool release.",
+      "gem": ""
+    },
+    {
+      "year": "2015_03",
+      "anchor": "IPC connection failure prevented target config sequence from starting.",
       "gem": ""
     },
     {
@@ -301,13 +2156,543 @@
       "gem": ""
     },
     {
+      "year": "2018",
+      "anchor": "Proton1 and Proton2 platforms tested for App Direct Dependency Failure during Boot (HSD-ES) on Purley 2S and 4S Platforms.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Stress testing conducted on Proton2 using stressapptest and FIO to validate DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic - Linux",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "CScripts version Rev 1.46 Bld 726820 used for Purley 2S and 4S Platforms.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Install HAMR (no specific version mentioned)",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Setup Infiniband port-to-port post-driver using quickstart",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "TODO: Investigate 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515)",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Memory configuration corrected using ixpdimm-cli create -goal persistentmemorytype=appdirect and rebooting the system",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Verification process initiated on Cluster with 0/60397968 error rate (0.000000%)",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Configuration setting for SHMEM_SYMMETRIC_HEAP_SIZE set to 4000M",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "System's memory resources increase after creating a persistent namespace using ixpdimm-cli create -goal persistentmemorytype=appdirect",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Accessed lanconf script at http://andante.intel.com/scripts/swview.pl?view=/LAN_EEPROM/Purley/Wolf_Pass/Current",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Mounted PMEM device with dax option in /etc/fstab",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Partitioned and formatted PMEM devices using parted and mkfs.ext4",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "POST memory test failure with Machine Check Exception (MCE) error code VC30 in HSD-ES case #2204264234",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "ixpdimm-cli help command takes an excessively long time to execute in HSD-ES case #2204553489",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "App Direct Dependency Failure during Boot and BIOS update to PSE119N",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Configuring grub2-mkconfig settings",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Creating persistent memory resources using ipmctl",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "No primary TODO or research link mentioned in the logs.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "PCIe correctable error injection commands.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Configuration options used for error injection in the biosKnobs variable.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "biosKnobs variable settings similar to those on 11/15/2018.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "EINJ (Error Injection) used to inject various types of errors into the system for testing purposes.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[CAUSALITY ERROR]: Tool used (SvBios) was likely released after 2018, as it uses Python 3.x syntax.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "biosKnobs variable settings enable specific error injection features.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "System configuration knobs verified to ensure proper error injection feature configuration.",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Cloned Git repository from remote server to local directory",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Set user configuration for Git repository",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Primary TODO or research link mentioned in the Technical Abstract",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
+      "gem": ""
+    },
+    {
+      "year": "2015_06",
+      "anchor": "Dockable content 'EDRAMIOT' created with dimensions 383x525.13 pixels and anchored to top of container pane.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "BMC23 module upgrade and Embedded File System (EFS) update to version 1.15.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Addressing data integrity and system stability issues with BMC23 module upgrade and EFS update.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Evaluation run using EFS1.16 on HW BMC25 shows platform does not matter in terms of performance.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Second evaluation run conducted using EFS1.16 due to observation that platform does not affect performance.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Initial evaluation run used EFS1.15, leading to decision to conduct second evaluation with EFS1.16.",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Development of FTF library to automate HTTP_MTP tests",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "BMC26 and EFS1.17 issues with SEL pages causing cascading effect on trackers",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Prefix added to tracker titles for simplification",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Test run for FTF202",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Tool release",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Update to SOL presentation and API documentation",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Fix to variable not found error in testResults_MAP(I2C)",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "Update to SDK API with new information on escapes and licenses",
+      "gem": ""
+    },
+    {
+      "year": "2019_06",
+      "anchor": "Investigation into IPMI commands related to Node Manager",
+      "gem": ""
+    },
+    {
+      "year": "2019_06",
+      "anchor": "Initial error code received when using `ipmitool` with specific options and parameters",
+      "gem": ""
+    },
+    {
+      "year": "2019_06",
+      "anchor": "Change made to resolve IPMI communication issue between ME and BMC on ICX-HCC",
+      "gem": ""
+    },
+    {
+      "year": "2020_11",
+      "anchor": "Measuring internal PECI performance and network timing identified as a TODO or research link.",
+      "gem": ""
+    },
+    {
+      "year": "2020_11",
+      "anchor": "BMC firmware updates with 250ms timeout implemented to improve existing PECI commands checkout.",
+      "gem": ""
+    },
+    {
+      "year": "2020_11",
+      "anchor": "Potential issues identified with certain PECI commands that may not be implemented on BMC.",
+      "gem": ""
+    },
+    {
+      "year": "2020_09",
+      "anchor": "Manageability Ignition-Redfish Content Plan (pptx) referenced but not directly linked to in abstract.",
+      "gem": ""
+    },
+    {
+      "year": "2020_09",
+      "anchor": "PECI commands tested and found to be supported or unsupported.",
+      "gem": ""
+    },
+    {
+      "year": "2020_09",
+      "anchor": "Architectural decisions regarding PECI command execution, specifically with regards to the PECI master being set to PCH or BMC for ignition.",
+      "gem": ""
+    },
+    {
+      "year": "2015_02",
+      "anchor": "Test runs failed due to missing VCDs and incorrect MSR values",
+      "gem": ""
+    },
+    {
+      "year": "2015_02",
+      "anchor": "Error code IPC_ErrorCode.IPC_Error MSR_Access_Faulted (0x80090003L) indicates CPU fault while accessing MSR",
+      "gem": ""
+    },
+    {
+      "year": "2015_02",
+      "anchor": "Script failed to recover from 'TRACE32 device already in use' issue",
+      "gem": ""
+    },
+    {
       "year": "2019",
       "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
       "gem": ""
     },
     {
+      "year": "2019",
+      "anchor": "Montana tool experiencing issues establishing IPMI v2/RMCP+ sessions",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Maximum number of retries for Get Device ID command not specified",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Misconfigured docker-compose.yml file causing Docker build process issues",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Configured local repository with user name and email address.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Retrieved commit-msg hook from remote server via SCP.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Investigation into IPMI commands related to Node Manager",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Initial error code received when using `ipmitool` with specific options and parameters",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Change made to resolve IPMI communication issue between ME and BMC on ICX-HCC",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Power limit accuracy issue across domains reported",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Tool 'montana.nativemodules.pmcapsweep' used to investigate power limit accuracy errors",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Policy #231 sets expected average power limit to 312W.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "avgpowercmp module reports 'Fail!!' when actual value exceeds \u00b15% range.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Kernel panic due to out-of-memory (OOM) condition and subsequent reboot in 10 seconds",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Debugging verifysamepolicy.py script",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Repeated attempts to send IPMI commands using GetDeviceID and ForceMeRecovery fail with an 'Unable to establish IPMI v2 / RMCP+ session' error.",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Causality error: Log entries conflict with the release year of the tool (ipmitool).",
+      "gem": ""
+    },
+    {
+      "year": "2019",
+      "anchor": "Investigate IPMI configuration and ensure ME is properly configured to accept IPMI commands.",
+      "gem": ""
+    },
+    {
       "year": "2024",
       "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Primary TODO or research link mentioned: MSR write - find list of offsets from FR (Firmware Register) and IMH?",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Commands implemented by the team to configure endpoint configurations for different interfaces (PCI Local, PCI, and MMIO)",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Tool used to interact with MCTP services on the BMC: peci_cmds",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "MCTP device discovery and interaction using various tools.",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Executed PECI commands using peci_cmds tool",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Failed PECI command execution with error code cc:0x81",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Authentication error encountered when connecting to remote computer JF53SPV0009 via Remote Desktop Connection",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Connected to target system using IPMI and MTM on DMR-7 platform",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Visited Intel's TPMI specification documentation",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Ran Python script using access_tpmi_mmio function to access PECI registers",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Inventory management follow-up on SMNC75000143",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Simulation targeting Oakstream platform with specific configuration",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Error code 0014.D.57 encountered during BIOS configuration",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "Set up a testing server for Prometheus metrics and telemetry",
+      "gem": ""
+    },
+    {
+      "year": "2020_01",
+      "anchor": "TODO: Configure maximum non-turbo limit ratio and efficiency ratio for CLX (Cannon Lake-X)",
+      "gem": ""
+    },
+    {
+      "year": "2020_01",
+      "anchor": "IPMI command failed with error code 'ab' due to wrong command codes and errors reading PCI device space",
+      "gem": ""
+    },
+    {
+      "year": "2020_01",
+      "anchor": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2023",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2023",
+      "anchor": "",
       "gem": ""
     },
     {
@@ -326,6 +2711,151 @@
       "gem": ""
     },
     {
+      "year": "2015",
+      "anchor": "Set up hosts & Targets for PVT validation testing using BXTP, JF5 lab, and DSDJF-H067 tools.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Resolved IPC error code (0x800e0001) and improved FPGAIntegration stability by patching init_soc.cmm",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Test runs failed due to missing VCDs and incorrect MSR values",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Error code IPC_ErrorCode.IPC_Error MSR_Access_Faulted (0x80090003L) indicates CPU fault while accessing MSR",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Script failed to recover from 'TRACE32 device already in use' issue",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "visa_patgen_manual_stop function failed due to unknown reason.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Causality error: conflicting dates between log and tool release.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "IPC connection failure prevented target config sequence from starting.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "cfg_apitest64.exe used to run tests in probemode and tap2sb modes",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "ITP bugs [5661248] and [5659929] reported",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "ipccli module failed to import in Python 2.7.9 environment on Windows",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Installed BXT OEM toolstack to configure system trace.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Internal error occurred during session tde_boot due to missing metadata file.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Dockable content 'EDRAMIOT' created with dimensions 383x525.13 pixels and anchored to top of container pane.",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Modifications to SkyLake_M0 platform's EDRAM signals and VISA panel configuration",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Update to visa_custom_rs.xml file affected EDC changes path",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "New programming implemented using Python scripts for VISA signals",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "PVT BXTOEM testing on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400.exe",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "BXTP target relocation note",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "NPK SDK installation and configuration",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "CAUSALITY ERROR: Tool XMon version 2.7.3 was released in 2015 but used in log entries with later dates (2016).",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "HSD update issue: BSSB no data on first trace, need to retry",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Debug configuration issue: BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Resolved gt_portid issue in PythonCLI scripts",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "Added DOA tests to TestRunner files and updated TargetConfigurations.xml",
+      "gem": ""
+    },
+    {
+      "year": "2020_05",
+      "anchor": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+      "gem": ""
+    },
+    {
+      "year": "2020_05",
+      "anchor": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+      "gem": ""
+    },
+    {
+      "year": "2020_05",
+      "anchor": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+      "gem": ""
+    },
+    {
       "year": "2011",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
       "gem": ""
@@ -341,8 +2871,233 @@
       "gem": ""
     },
     {
+      "year": "2020",
+      "anchor": "Measuring internal PECI performance and network timing identified as a TODO or research link.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "BMC firmware updates with 250ms timeout implemented to improve existing PECI commands checkout.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "TODO: Configure maximum non-turbo limit ratio and efficiency ratio for CLX (Cannon Lake-X)",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "IPMI command failed with error code 'ab' due to wrong command codes and errors reading PCI device space",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Using futurize tool as a workaround for resolving issues",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Potential issues identified with certain PECI commands that may not be implemented on BMC.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "MIV Reset and Recovery issues with Force ME recovery and Get Device ID return codes (CE, 0xc3, and 0xff)",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "PECI commands and BMC PECI master functionality discussions",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "MIV test cases fail strangely after do min_nm_dca test on Dell system",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "ME RAS Force ME recovery issues",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "BMC PECI master functionality discussion",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Higher-order PECI test cases were planned",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "DTAF Core installation guide needs update from Raveendra",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Review of NM-4.0 External Interface Spec",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Update test setup to install at least 4 DIMMs for Domain 2 (memory) power usage above 1W",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Delete (NmPolicy 0x2E 0xC1) Returns 0x80 after disabling existing policy",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Commit 1b3f8aefd3f1b01a36094f81259294c0795b712f and merge request 97 addressed a failed Close Session command during MIV recovery.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Code review issue forwarded to Dave/Curtis for investigation",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "IVL crash dump issue addressed",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Opcode 0x2E found to be a common prefix for various NM and PLP functions.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Manageability Ignition-Redfish Content Plan (pptx) referenced but not directly linked to in abstract.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "PECI commands tested and found to be supported or unsupported.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Architectural decisions regarding PECI command execution, specifically with regards to the PECI master being set to PCH or BMC for ignition.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Primary TODO or research link: Intel Redfish Power Cap OEM Schema",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Unable to determine the tool used based on the provided evidence.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Unable to determine the error codes encountered based on the provided evidence.",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Tool or API used to troubleshoot the issue: Era Registry (associated with Cray Schema)",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Architectural decisions regarding power management and capacity planning were likely made, but details are lacking",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Formulas updated to calculate inventory metrics",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "Updated list of inventory requests available at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Request",
+      "gem": ""
+    },
+    {
       "year": "2009",
       "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_DOCS",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_DOCS",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_DOCS",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_DOCS",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_DOCS",
+      "anchor": "",
       "gem": ""
     },
     {
@@ -681,11 +3436,6 @@
       {
         "year": "2016",
         "gem": "",
-        "summary": "Plan and document Maestro tests for Pipe2d contact"
-      },
-      {
-        "year": "2016",
-        "gem": "",
         "summary": "Investigate regressions and unit tests for PureVP/Pipe2d/SV stack"
       },
       {
@@ -751,7 +3501,7 @@
       {
         "year": "Unknown",
         "gem": "",
-        "summary": "Proposed approach for the larger group part of SIV+MIV Sprint Review."
+        "summary": "Proposed approach for the technical details part of SIV+MIV Sprint Review."
       },
       {
         "year": "Unknown",
@@ -831,12 +3581,17 @@
       {
         "year": "2023",
         "gem": "",
-        "summary": "Execution of montana.py script with test file mctp_discovery.tdf"
+        "summary": "Execution of montana.py script with test file mctp_reset_cold.tdf and loop option"
       },
       {
         "year": "2023",
         "gem": "",
-        "summary": "Execution of montana.py script with test file mctp_reset_cold.tdf and loop option"
+        "summary": "Driving execution, escalation, debug, and triage of MCTP cycle tests"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Kickstarted execution and enabling of MCTP tests on SRF-SP"
       },
       {
         "year": "2019_09",
@@ -1019,6 +3774,21 @@
         "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
       },
       {
+        "year": "2024",
+        "gem": "",
+        "summary": "Delivered 8 Kayak+Montana test cases definition deltas for DMR"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Defined and executed 2 PPO 0.8 test cases for PECI/MCTP"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Set up a testing server for Prometheus metrics and telemetry"
+      },
+      {
         "year": "2020_01",
         "gem": "",
         "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API"
@@ -1027,11 +3797,6 @@
         "year": "2015",
         "gem": "",
         "summary": "Added DOA tests to TestRunner files and updated TargetConfigurations.xml"
-      },
-      {
-        "year": "2023_02",
-        "gem": "",
-        "summary": "New test cases implemented, old journal data fixed by scanning in reverse order, and failure action added to abort tests when duplicate EIDs are found"
       },
       {
         "year": "2020",
@@ -1134,11 +3899,6 @@
         "year": "2015_10",
         "gem": "",
         "summary": "Installed BXT OEM toolstack to configure system trace."
-      },
-      {
-        "year": "2015_10",
-        "gem": "",
-        "summary": "Configured system trace using BXT OEM toolstack."
       },
       {
         "year": "2015_10",
@@ -1248,7 +4008,7 @@
       {
         "year": "2023_01",
         "gem": "",
-        "summary": "Power Limit Accuracy feature issue identified and resolved"
+        "summary": "Modification made to code to resolve Power Limit Accuracy feature issue"
       },
       {
         "year": "2023_01",
@@ -1323,7 +4083,7 @@
       {
         "year": "Unknown",
         "gem": "",
-        "summary": "Proposed approach for the larger group part of SIV+MIV Sprint Review."
+        "summary": "Proposed approach for the technical details part of SIV+MIV Sprint Review."
       },
       {
         "year": "Unknown",
@@ -1383,11 +4143,6 @@
       {
         "year": "Unknown",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Embracing AI-driven workflows and leveraging language-model coding assistance to transform engineering work."
-      },
-      {
-        "year": "Unknown",
-        "gem": "",
         "summary": "Investigate release dates of certain tools mentioned in Era Registry."
       },
       {
@@ -1404,11 +4159,6 @@
         "year": "2023",
         "gem": "",
         "summary": "Adaptation of SPR MCTP reset test automation for GNR"
-      },
-      {
-        "year": "2023",
-        "gem": "",
-        "summary": "Execution of montana.py script with test file mctp_discovery.tdf"
       },
       {
         "year": "2023",
@@ -1711,11 +4461,6 @@
         "year": "2019_08",
         "gem": "",
         "summary": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces."
-      },
-      {
-        "year": "2019_08",
-        "gem": "",
-        "summary": "Error code 0xAC when attempting to read data from specific PCI device spaces."
       },
       {
         "year": "2018_09",
@@ -2082,11 +4827,6 @@
       {
         "year": "2023_01",
         "gem": "",
-        "summary": "Power Limit Accuracy feature issue identified and resolved"
-      },
-      {
-        "year": "2023_01",
-        "gem": "",
         "summary": "Modification made to code to resolve Power Limit Accuracy feature issue"
       },
       {
@@ -2340,6 +5080,11 @@
         "summary": "Executed PECI commands using peci_cmds tool"
       },
       {
+        "year": "2024",
+        "gem": "",
+        "summary": "Set up a testing server for Prometheus metrics and telemetry"
+      },
+      {
         "year": "2020_01",
         "gem": "",
         "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API"
@@ -2352,7 +5097,7 @@
     ]
   },
   "tactical_layer": {
-    "total_events": 1037,
+    "total_events": 829,
     "year_distribution": {
       "2021_12": 3,
       "2023_08": 0,
@@ -2382,137 +5127,139 @@
       "2013": 13,
       "2024_07": 3,
       "2020_07": 6,
-      "2015_10": 9,
+      "2015_10": 8,
       "2018_11": 8,
       "2021_06": 1,
       "2022": 30,
-      "2022_05": 2,
+      "2022_05": 0,
       "2014_09": 1,
-      "2019_08": 3,
+      "2019_08": 2,
       "2023_04": 3,
-      "2013_12": 3,
+      "2013_12": 0,
       "2018_09": 7,
       "2015_08": 2,
-      "pager_activity": 100,
+      "pager_activity": 21,
       "2021_03": 4,
-      "2016": 38,
+      "2016": 37,
       "2024_02": 1,
       "2020_02": 3,
       "artifacts_2020": 1,
-      "2023_01": 3,
+      "2023_01": 2,
       "2019_2024": 4,
       "2024_06": 3,
       "2012": 5,
       "2019_11": 3,
       "2014_10": 3,
-      "Unknown": 70,
+      "Unknown": 67,
       "2020_06": 3,
       "artifacts_2024": 4,
       "2015_11": 2,
       "2018_10": 0,
-      "2023": 33,
-      "2022_04": 3,
+      "2023": 37,
+      "2022_04": 0,
       "2014_08": 0,
       "2019_09": 2,
-      "2023_05": 3,
+      "2023_05": 0,
       "2018_08": 2,
       "2015_09": 3,
-      "2023_09": 3,
+      "2023_09": 0,
       "2015_05": 3,
       "2020_12": 2,
-      "2022_08": 3,
+      "2022_08": 0,
       "2006": 9,
       "2019_05": 6,
       "2014_04": 4,
       "artifacts_2019": 24,
-      "2023_11": 3,
-      "2016_06": 3,
-      "2022_10": 3,
+      "2023_11": 0,
+      "2016_06": 0,
+      "2022_10": 0,
       "2019_01": 3,
       "2015_01": 1,
-      "2016_02": 6,
+      "2016_02": 0,
       "2018_2019": 3,
       "2021_01": 3,
+      "2025": 1,
       "artifacts_2022": 36,
       "2005_02": 3,
       "2014": 26,
-      "2023_03": 3,
-      "2022_02": 3,
+      "2023_03": 0,
+      "2022_02": 0,
       "2020_04": 3,
       "2012_08": 0,
-      "2014_12": 1,
+      "2014_12": 0,
+      "graph_relations": 10,
       "2024_04": 3,
       "2010": 1,
       "2021": 35,
-      "2021_05": 3,
+      "2021_05": 0,
       "2018_12": 3,
       "2008": 1,
-      "2022_06": 1,
-      "2023_07": 3,
-      "2013_11": 3,
-      "2006_09": 3,
+      "2022_06": 0,
+      "2023_07": 0,
+      "2013_11": 0,
+      "2006_09": 0,
       "2015_07": 3,
       "2018_06": 5,
-      "2021_11": 3,
+      "2021_11": 0,
       "2019_07": 3,
       "2014_06": 0,
       "2011_2016": 0,
       "2020_10": 5,
-      "2021_09": 3,
+      "2021_09": 0,
       "2020_08": 1,
-      "2022_12": 4,
+      "2022_12": 0,
       "2024_08": 3,
-      "2016_04": 4,
-      "2014_02": 3,
+      "2016_04": 0,
+      "2014_02": 0,
       "1970": 3,
       "2015_03": 3,
       "2018": 39,
-      "2013_01": 3,
+      "2013_01": 0,
       "2015_06": 1,
-      "2018_07": 3,
-      "2006_08": 3,
-      "2021_10": 6,
+      "2018_07": 0,
+      "2006_08": 0,
+      "2021_10": 0,
       "2005": 16,
       "2019_06": 3,
-      "2014_07": 3,
+      "2014_07": 0,
       "2020_11": 3,
-      "2021_08": 3,
-      "2023_12": 3,
-      "2006_10": 3,
+      "2021_08": 0,
+      "2023_12": 0,
+      "2006_10": 0,
       "2020_09": 3,
-      "2016_05": 5,
-      "2014_03": 3,
+      "2016_05": 0,
+      "2014_03": 0,
       "2015_02": 3,
-      "2016_01": 8,
-      "2019": 28,
-      "2024": 14,
+      "2016_01": 0,
+      "2019": 27,
+      "2024": 19,
       "2020_01": 3,
       "artifacts_2023": 6,
       "2024_01": 0,
-      "2005_03": 3,
-      "2015": 28,
-      "2023_02": 3,
-      "2022_03": 3,
-      "2012_09": 1,
+      "2005_03": 0,
+      "2015": 27,
+      "2023_02": 0,
+      "2022_03": 0,
+      "2012_09": 0,
       "2020_05": 3,
       "2011": 1,
-      "2024_05": 3,
+      "2024_05": 0,
       "2008_2018": 1,
-      "2019_12": 5,
-      "2021_04": 3,
+      "2019_12": 0,
+      "2021_04": 0,
       "2020": 41,
-      "2013_08": 3,
-      "2015_12": 2,
+      "2013_08": 0,
+      "2015_12": 0,
       "2009": 1,
       "2022_07": 3,
       "artifacts_DOCS": 37,
-      "2023_06": 2
+      "2023_06": 0
     },
     "description": "Raw chronological technical evidence."
   },
   "meta_layer": {
     "resonance_score": 0.0,
     "active_themes": [],
-    "last_refactor": "2026-06-25T10:42:50.813238"
+    "last_refactor": "2026-08-23T02:06:06.397749"
   }
 }

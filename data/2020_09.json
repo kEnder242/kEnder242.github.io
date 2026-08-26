@@ -5,8 +5,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "pptx",
-      "Manageability Ignition-Redfish Content Plan"
+      "Manageability Ignition-Redfish Content Plan",
+      "pptx"
     ],
     "rank": 4
   },
@@ -27,10 +27,10 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
-      "master",
-      "PCH",
       "PECI",
-      "BMC"
+      "BMC",
+      "master",
+      "PCH"
     ],
     "rank": 4
   }

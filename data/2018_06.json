@@ -16,8 +16,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "memory",
-      "configuration"
+      "configuration",
+      "memory"
     ],
     "rank": 4
   },
@@ -38,8 +38,8 @@
     "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
     "sensitivity": "Public",
     "tags": [
-      "SHMEM_SYMMETRIC_HEAP_SIZE",
-      "configuration"
+      "configuration",
+      "SHMEM_SYMMETRIC_HEAP_SIZE"
     ],
     "rank": 4
   },

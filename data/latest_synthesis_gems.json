@@ -1,0 +1,55 @@
+{
+  "source_file": "notes_2024_PIAV.txt",
+  "year": "2024",
+  "total_gems_extracted": 4,
+  "gems": [
+    {
+      "id": "GEM-ea62",
+      "rank": 5,
+      "date": "2024-01-01",
+      "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
+      "evidence": "",
+      "tags": [
+        "strategy",
+        "anchor"
+      ],
+      "source_file": "notes_2024_PIAV.txt"
+    },
+    {
+      "id": "GEM-737a",
+      "rank": 4,
+      "date": "2024-12-25",
+      "summary": "Set up a testing server for Prometheus metrics and telemetry",
+      "evidence": "used python mock\n\nEvidence 2: added custom rapl metrics",
+      "tags": [
+        "prometheus",
+        "rapl"
+      ],
+      "source_file": "notes_2024_PIAV.txt"
+    },
+    {
+      "id": "GEM-4e2e",
+      "rank": 4,
+      "date": "2024-08-01",
+      "summary": "Inventory management follow-up on SMNC75000143",
+      "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
+      "tags": [
+        "management",
+        "inventory"
+      ],
+      "source_file": "notes_2024_PIAV.txt"
+    },
+    {
+      "id": "GEM-e26d",
+      "rank": 4,
+      "date": "2024-08-01",
+      "summary": "Simulation targeting Oakstream platform with specific configuration",
+      "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
+      "tags": [
+        "Oakstream",
+        "simulation"
+      ],
+      "source_file": "notes_2024_PIAV.txt"
+    }
+  ]
+}

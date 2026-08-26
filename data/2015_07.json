@@ -5,9 +5,9 @@
     "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
+      "SkyLake_M0",
       "EDRAM",
-      "SkyLake_M0"
+      "VISA"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
     "sensitivity": "Public",
     "tags": [
-      "EDC",
-      "visa_custom_rs.xml"
+      "visa_custom_rs.xml",
+      "EDC"
     ],
     "rank": 4
   },
