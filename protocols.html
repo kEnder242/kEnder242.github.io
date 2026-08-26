@@ -934,6 +934,35 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-044</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Lab Attendant Ignition & Quiescence Law (Zero Direct Hardware Bypassing)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <pre><code>┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                         BKM-044: LAB ATTENDANT IGNITION STANDARD                         │
+├──────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                          │
+│  ❌ FORBIDDEN: Direct manual shell execution of start_vllm.sh, python router.py,        │
+│                or backgrounding unmanaged engine daemons.                                │
+│                                                                                          │
+│  ✅ MANDATORY: All engine state transitions (Wake/Sleep/Ignite) MUST be dispatched       │
+│                exclusively through the Lab Attendant REST API (Port 8765):               │
+│                                                                                          │
+│    1. Wake / Ignite:     curl -X POST http://127.0.0.1:8765/wake                         │
+│    2. Sleep / Free VRAM: curl -X POST http://127.0.0.1:8765/sleep                        │
+│    3. State Poll:        curl -s http://127.0.0.1:8765/status | jq .state                │
+│                                                                                          │
+│  SILICON RULES:                                                                          │
+│  - Respect the 60s Quiescence Window [FEAT-136] between state transitions.               │
+│  - VRAM Utilization floor is capped at 0.55 (8k context) to protect the physical Xorg   │
+│    display server running on the primary RTX 2080 Ti adapter.                            │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
             </table>
         </section>
