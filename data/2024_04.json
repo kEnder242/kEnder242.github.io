@@ -16,8 +16,8 @@
     "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
     "sensitivity": "Public",
     "tags": [
-      "Configuration",
-      "Endpoints"
+      "Endpoints",
+      "Configuration"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "RAW LOGS mention peci_cmds and RdEndpointConfigPCILocal",
     "sensitivity": "Public",
     "tags": [
-      "MCTP",
-      "BMC"
+      "BMC",
+      "MCTP"
     ],
     "rank": 4
   }

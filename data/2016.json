@@ -215,9 +215,9 @@
     "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
     "sensitivity": "Public",
     "tags": [
+      "pipes",
       "bling",
-      "dc6",
-      "pipes"
+      "dc6"
     ],
     "rank": 4,
     "id": "GEM-5dcf"
@@ -228,8 +228,8 @@
     "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
     "sensitivity": "Public",
     "tags": [
-      "build process",
-      "dc6"
+      "dc6",
+      "build process"
     ],
     "rank": 4,
     "id": "GEM-0af8"
@@ -240,8 +240,8 @@
     "evidence": "RAW LOGS: ... (C:\\iag_maestro-content\\PlatformConfig.xml)",
     "sensitivity": "Public",
     "tags": [
-      "PlatformConfig.xml",
-      "dc6"
+      "dc6",
+      "PlatformConfig.xml"
     ],
     "rank": 4,
     "id": "GEM-9e2b"
@@ -427,8 +427,8 @@
     "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
     "sensitivity": "Public",
     "tags": [
-      "PCI Cfg writes",
-      "executed callbacks"
+      "executed callbacks",
+      "PCI Cfg writes"
     ],
     "rank": 4,
     "id": "GEM-b1bc"
@@ -439,8 +439,8 @@
     "evidence": "[LCR_Margining] Meet SCR EVQT Lead - [REDACTED]",
     "sensitivity": "Public",
     "tags": [
-      "Collaboration",
-      "SCR"
+      "SCR",
+      "Collaboration"
     ],
     "rank": 4,
     "id": "GEM-cf57"

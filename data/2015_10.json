@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "testing",
       "validation",
-      "PVT"
+      "PVT",
+      "testing"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
     "sensitivity": "Public",
     "tags": [
-      "host interface",
-      "error"
+      "error",
+      "host interface"
     ],
     "rank": 4
   },
@@ -39,8 +39,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "internal error",
-      "metadata file"
+      "metadata file",
+      "internal error"
     ],
     "rank": 4
   },

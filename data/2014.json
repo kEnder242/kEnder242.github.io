@@ -17,8 +17,8 @@
     "evidence": "Corrected CT item selection in the VISA panel.",
     "sensitivity": "Public",
     "tags": [
-      "error_code",
-      "VISA"
+      "VISA",
+      "error_code"
     ],
     "rank": 4,
     "id": "GEM-def6"
@@ -29,8 +29,8 @@
     "evidence": "Corrected script generated from CEC register programs.",
     "sensitivity": "Public",
     "tags": [
-      "error_code",
-      "VISA"
+      "VISA",
+      "error_code"
     ],
     "rank": 4,
     "id": "GEM-40bb"
@@ -41,8 +41,8 @@
     "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
     "sensitivity": "Public",
     "tags": [
-      "Skylake",
-      "VISA"
+      "VISA",
+      "Skylake"
     ],
     "rank": 4,
     "id": "GEM-29bc"
@@ -53,8 +53,8 @@
     "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
     "sensitivity": "Public",
     "tags": [
-      "logging",
-      "VISA"
+      "VISA",
+      "logging"
     ],
     "rank": 4,
     "id": "GEM-2f1c"
@@ -149,8 +149,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "BDW",
-      "ITP Bug"
+      "ITP Bug",
+      "BDW"
     ],
     "rank": 4,
     "id": "GEM-3754"
@@ -173,8 +173,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "error codes"
+      "error codes",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-e827"
@@ -185,8 +185,8 @@
     "evidence": "pci.ShowPciCfg(0x02, 0x16, 0)\n+-----------------------------------------------------+\n|Bus: 02, device: 16, Function: 00                    |\n|##| x0|x1|x2|x3|x4|x5|x6|x7 | x8|x9|xA|xB|xC|xD|xE|xF|\n|-----------------------------------------------------|\n|... (register values) ...\n+-----------------------------------------------------+\n()\n\npci.WritePciCfg(4,6,1)\n()",
     "sensitivity": "Public",
     "tags": [
-      "pci module",
-      "PCI configuration space"
+      "PCI configuration space",
+      "pci module"
     ],
     "rank": 4,
     "id": "GEM-f9ff"
@@ -197,8 +197,8 @@
     "evidence": "NorthpeakApi* papi= new NorthpeakApi();\n// initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"/broxton_a0_red.xml\"));",
     "sensitivity": "Public",
     "tags": [
-      "configuration file",
-      "Northpeak API"
+      "Northpeak API",
+      "configuration file"
     ],
     "rank": 4,
     "id": "GEM-6edb"
@@ -269,8 +269,8 @@
     "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
     "sensitivity": "Public",
     "tags": [
-      "NullPointerException",
-      "LTB"
+      "LTB",
+      "NullPointerException"
     ],
     "rank": 4,
     "id": "GEM-7e3e"
@@ -281,9 +281,9 @@
     "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
     "sensitivity": "Public",
     "tags": [
-      "BXTSupportPkWin64",
+      "IpcApiAccess",
       "ISDBaseWin64",
-      "IpcApiAccess"
+      "BXTSupportPkWin64"
     ],
     "rank": 4,
     "id": "GEM-c4a0"

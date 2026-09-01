@@ -5,8 +5,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "MIV content readiness"
+      "MIV content readiness",
+      "DTAF"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
     "sensitivity": "Public",
     "tags": [
-      "priority execution requests",
-      "PCIE Whitley"
+      "PCIE Whitley",
+      "priority execution requests"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
     "sensitivity": "Public",
     "tags": [
-      "Crasdump/EINJ knobs",
-      "DTAF"
+      "DTAF",
+      "Crasdump/EINJ knobs"
     ],
     "rank": 4
   }

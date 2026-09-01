@@ -5,8 +5,8 @@
     "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
     "sensitivity": "Public",
     "tags": [
-      "connection_abort",
-      "PECI"
+      "PECI",
+      "connection_abort"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "report"
+      "report",
+      "MIV"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
     "sensitivity": "Public",
     "tags": [
-      "fuzzing",
-      "PECI"
+      "PECI",
+      "fuzzing"
     ],
     "rank": 4
   }

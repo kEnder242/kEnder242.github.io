@@ -5,8 +5,8 @@
     "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
     "sensitivity": "Public",
     "tags": [
-      "bug",
-      "TODO"
+      "TODO",
+      "bug"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
-      "memory"
+      "memory",
+      "configuration"
     ],
     "rank": 4
   },

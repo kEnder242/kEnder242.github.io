@@ -116,9 +116,9 @@
     "evidence": "MIV Wiki https://wiki.ith.intel.com/display/PlatformTech/Manageability\nManageability Spec Links - https://intel.sharepoint.com/:o:/r/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
     "sensitivity": "Public",
     "tags": [
-      "Intel MIV",
+      "MIV Wiki",
       "Manageability specifications",
-      "MIV Wiki"
+      "Intel MIV"
     ],
     "rank": 4,
     "id": "GEM-11e9"
@@ -129,9 +129,9 @@
     "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
     "sensitivity": "Public",
     "tags": [
-      "Intel MIV",
-      "PECI",
       "D-Bus",
+      "PECI",
+      "Intel MIV",
       "MCTP"
     ],
     "rank": 4,
@@ -143,9 +143,9 @@
     "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
     "sensitivity": "Public",
     "tags": [
+      "DTAF",
       "Intel MIV",
-      "Simics",
-      "DTAF"
+      "Simics"
     ],
     "rank": 4,
     "id": "GEM-a33d"
@@ -303,9 +303,9 @@
     "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
     "sensitivity": "Public",
     "tags": [
-      "Python scripts",
+      "kayak framework",
       "TDF architecture",
-      "kayak framework"
+      "Python scripts"
     ],
     "rank": 4,
     "id": "GEM-4c34"
@@ -316,8 +316,8 @@
     "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
     "sensitivity": "Public",
     "tags": [
-      "MCTP failures",
-      "TDF architecture"
+      "TDF architecture",
+      "MCTP failures"
     ],
     "rank": 4,
     "id": "GEM-5cd4"
@@ -328,8 +328,8 @@
     "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
     "sensitivity": "Public",
     "tags": [
-      "Python scripts",
-      "kayak framework"
+      "kayak framework",
+      "Python scripts"
     ],
     "rank": 4,
     "id": "GEM-a274"

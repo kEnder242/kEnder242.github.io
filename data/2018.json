@@ -51,10 +51,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Proton2",
-      "Purley 4S",
+      "Purley 2S",
       "Proton1",
-      "Purley 2S"
+      "Proton2",
+      "Purley 4S"
     ],
     "rank": 4,
     "id": "GEM-c5a2"
@@ -65,8 +65,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "FIO",
-      "stressapptest"
+      "stressapptest",
+      "FIO"
     ],
     "rank": 4,
     "id": "GEM-dec7"
@@ -77,9 +77,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 4S",
+      "Purley 2S",
       "CScripts",
-      "Purley 2S"
+      "Purley 4S"
     ],
     "rank": 4,
     "id": "GEM-9713"
@@ -101,9 +101,9 @@
     "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
     "sensitivity": "Public",
     "tags": [
-      "shmemcc",
+      "HAMR",
       "UFM",
-      "HAMR"
+      "shmemcc"
     ],
     "rank": 4,
     "id": "GEM-a8b2"
@@ -114,8 +114,8 @@
     "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
     "sensitivity": "Public",
     "tags": [
-      "quickstart",
-      "Infiniband"
+      "Infiniband",
+      "quickstart"
     ],
     "rank": 4,
     "id": "GEM-946a"
@@ -126,9 +126,9 @@
     "evidence": "",
     "sensitivity": "Public",
     "tags": [
+      "PMEM",
       "AEP",
-      "AppDirect Mode",
-      "PMEM"
+      "AppDirect Mode"
     ],
     "rank": 4,
     "id": "GEM-a50c"
@@ -139,8 +139,8 @@
     "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
     "sensitivity": "Public",
     "tags": [
-      "bug",
-      "TODO"
+      "TODO",
+      "bug"
     ],
     "rank": 4,
     "id": "GEM-1c6b"
@@ -151,8 +151,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
-      "memory"
+      "memory",
+      "configuration"
     ],
     "rank": 4,
     "id": "GEM-3a33"
@@ -235,9 +235,9 @@
     "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
     "sensitivity": "Public",
     "tags": [
-      "mce",
+      "error",
       "vc30",
-      "error"
+      "mce"
     ],
     "rank": 4,
     "id": "GEM-a522"
@@ -260,8 +260,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "BIOS update",
-      "App Direct Dependency Failure"
+      "App Direct Dependency Failure",
+      "BIOS update"
     ],
     "rank": 4,
     "id": "GEM-fee5"
@@ -284,8 +284,8 @@
     "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
     "sensitivity": "Public",
     "tags": [
-      "persistent memory",
-      "ipmctl"
+      "ipmctl",
+      "persistent memory"
     ],
     "rank": 4,
     "id": "GEM-48ad"
@@ -370,8 +370,8 @@
     "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
     "sensitivity": "Public",
     "tags": [
-      "Error Injection",
-      "biosKnobs"
+      "biosKnobs",
+      "Error Injection"
     ],
     "rank": 4,
     "id": "GEM-2822"
@@ -394,9 +394,9 @@
     "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
     "sensitivity": "Public",
     "tags": [
-      "clone",
+      "Git",
       "repository",
-      "Git"
+      "clone"
     ],
     "rank": 4,
     "id": "GEM-f75c"
@@ -407,8 +407,8 @@
     "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
     "sensitivity": "Public",
     "tags": [
-      "Git",
-      "user configuration"
+      "user configuration",
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-e714"
@@ -419,9 +419,9 @@
     "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
     "sensitivity": "Public",
     "tags": [
+      "Git",
       "commit-msg",
-      "hook",
-      "Git"
+      "hook"
     ],
     "rank": 4,
     "id": "GEM-5c81"
@@ -432,8 +432,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "error injection",
-      "APEI/EINJ"
+      "APEI/EINJ",
+      "error injection"
     ],
     "rank": 4,
     "id": "GEM-f1ce"

@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "PECI"
+      "PECI",
+      "performance"
     ],
     "rank": 4,
     "id": "GEM-dc8d"
@@ -41,8 +41,8 @@
     "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "CLX",
-      "MIV software"
+      "MIV software",
+      "CLX"
     ],
     "rank": 4,
     "id": "GEM-5f87"
@@ -53,8 +53,8 @@
     "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "error",
-      "IPMI"
+      "IPMI",
+      "error"
     ],
     "rank": 4,
     "id": "GEM-53e9"
@@ -65,8 +65,8 @@
     "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "CLX",
-      "MIV software"
+      "MIV software",
+      "CLX"
     ],
     "rank": 4,
     "id": "GEM-c8ba"
@@ -88,8 +88,8 @@
     "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "PECI"
+      "PECI",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-5b1f"
@@ -100,8 +100,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "ipmi_host",
-      "peci"
+      "peci",
+      "ipmi_host"
     ],
     "rank": 4,
     "id": "GEM-de4b"
@@ -112,9 +112,9 @@
     "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
     "sensitivity": "Public",
     "tags": [
+      "pyghmi",
       "msr",
-      "crypto",
-      "pyghmi"
+      "crypto"
     ],
     "rank": 4,
     "id": "GEM-599b"
@@ -138,8 +138,8 @@
     "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "PECI"
+      "PECI",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-4808"
@@ -162,8 +162,8 @@
     "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "Recovery"
+      "Recovery",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-c77d"
@@ -174,8 +174,8 @@
     "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "PECI"
+      "PECI",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-70a7"
@@ -186,8 +186,8 @@
     "evidence": "Higher-order PECI test cases were planned",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "PECI"
+      "PECI",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-ef27"
@@ -198,8 +198,8 @@
     "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "PECI"
+      "PECI",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-ba14"
@@ -210,8 +210,8 @@
     "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "PECI"
+      "PECI",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-f17d"
@@ -222,8 +222,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "MIV content readiness"
+      "MIV content readiness",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-0043"
@@ -234,8 +234,8 @@
     "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
     "sensitivity": "Public",
     "tags": [
-      "priority execution requests",
-      "PCIE Whitley"
+      "PCIE Whitley",
+      "priority execution requests"
     ],
     "rank": 4,
     "id": "GEM-cb8e"
@@ -246,8 +246,8 @@
     "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
     "sensitivity": "Public",
     "tags": [
-      "Crasdump/EINJ knobs",
-      "DTAF"
+      "DTAF",
+      "Crasdump/EINJ knobs"
     ],
     "rank": 4,
     "id": "GEM-059d"
@@ -258,8 +258,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "nm-4.0",
-      "external interface spec"
+      "external interface spec",
+      "nm-4.0"
     ],
     "rank": 4,
     "id": "GEM-d939"
@@ -306,8 +306,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "validation"
+      "validation",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-72d8"
@@ -318,8 +318,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "recovery"
+      "recovery",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-7360"
@@ -330,8 +330,8 @@
     "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
     "sensitivity": "Public",
     "tags": [
-      "issue investigation",
-      "code review"
+      "code review",
+      "issue investigation"
     ],
     "rank": 4,
     "id": "GEM-05d3"
@@ -379,8 +379,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "Manageability Ignition-Redfish Content Plan",
-      "pptx"
+      "pptx",
+      "Manageability Ignition-Redfish Content Plan"
     ],
     "rank": 4,
     "id": "GEM-83e9"
@@ -391,8 +391,8 @@
     "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
     "sensitivity": "Public",
     "tags": [
-      "commands",
-      "PECI"
+      "PECI",
+      "commands"
     ],
     "rank": 4,
     "id": "GEM-31ac"
@@ -404,8 +404,8 @@
     "sensitivity": "Public",
     "tags": [
       "PECI",
-      "BMC",
       "master",
+      "BMC",
       "PCH"
     ],
     "rank": 4,
@@ -463,8 +463,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Capacity Planning",
-      "Power Management"
+      "Power Management",
+      "Capacity Planning"
     ],
     "rank": 4,
     "id": "GEM-f12c"
@@ -475,8 +475,8 @@
     "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
     "sensitivity": "Public",
     "tags": [
-      "formula update",
-      "inventory metric calculation"
+      "inventory metric calculation",
+      "formula update"
     ],
     "rank": 4,
     "id": "GEM-d9c0"
@@ -487,8 +487,8 @@
     "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
     "sensitivity": "Public",
     "tags": [
-      "updated list",
-      "inventory requests"
+      "inventory requests",
+      "updated list"
     ],
     "rank": 4,
     "id": "GEM-0527"

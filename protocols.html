@@ -269,12 +269,35 @@
 <ol>
 <li><strong>The Test Plan</strong>: Present a clear plan (What to test, expected outcome) before launching.</li>
 <li><strong>Versioning</strong>: Agent MUST bump the system VERSION (in acme_lab.py) if any client/server logic changed to prevent "Old Code" traps.</li>
-<li><strong>Execute (Blocking)</strong>: Agent runs the co-pilot script and WAITS. <ul>
+<li><strong>Execute (Blocking)</strong>: Agent runs the co-pilot script and WAITS.<ul>
 <li><em>Timeout</em>: Tool calls must automatically time out after 300s to prevent Agent lockup.</li>
 </ul>
 </li>
 <li><strong>Verbal Feedback</strong>: Actively mine logs for user notes (e.g., "Pinky, note that X is broken") received during the session.</li>
 <li><strong>Post-Mortem</strong>: Immediately update <code>ProjectStatus.md</code> with findings from both logs and user feedback.</li>
+</ol>
+<h3>Canonical Log Black Box Path</h3>
+<p>All diagnostic forensics MUST reference the canonical black box log:</p>
+<pre><code>/home/jallred/Dev_Lab/HomeLabAI/src/server.log
+</code></pre>
+<h3>FEAT-505: 75-Minute 5x5 Endurance Gauntlet Rule</h3>
+<p><strong>Objective</strong>: Ensure engine stability validation across sustained operational intervals.
+<strong>Trigger</strong>: Cloud Swarm Run validation, production deployment gates, or long-duration stability certification.</p>
+<ol>
+<li>
+<p><strong>The 5x5 Mandate</strong>: The engine MUST survive a 75-minute endurance gauntlet with pulse checks at fixed intervals:</p>
+<ul>
+<li><strong>Interval 0 min</strong>: Initial ignition verification</li>
+<li><strong>Interval 5 min</strong>: First stability pulse</li>
+<li><strong>Interval 10 min</strong>: Second stability pulse</li>
+<li><strong>Interval 20 min</strong>: Third stability pulse</li>
+<li><strong>Interval 40 min</strong>: Final stability pulse</li>
+<li><strong>Total Duration</strong>: 75 minutes cumulative</li>
+</ul>
+</li>
+<li>
+<p><strong>Pass Criteria</strong>: Engine remains OPERATIONAL at all intervals without crash, stall, or memory leak degradation.</p>
+</li>
 </ol>
                             </div>
                         </td>
@@ -447,19 +470,19 @@
 <li><strong>Mandatory Service Reload</strong>: If any file in <code>src/logic/</code>, <code>src/nodes/</code>, or <code>src/forge/</code> was edited during the session, the Agent MUST execute <code>sudo systemctl restart lab-attendant.service</code> to flush cached Python processes before executing tests.</li>
 <li><strong>State Trust</strong>: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration tests after every service restart.</li>
 </ol>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-020</td>
-                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity Sprint Documentation (Intent Preservation)</div>
-                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
+<h3>BKM-020: High-Fidelity Sprint Documentation (Intent Preservation)</h3>
+<p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
 1.  <strong>Task Verbosity</strong>: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.
 2.  <strong>Historical Trace</strong>: Sprints must document the forensic anchors (logs, code fragments) that justify the change.
 3.  <strong>Absolute Append</strong>: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.
-4.  <strong>No Summarization</strong>: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.</p>
+4.  <strong>No Summarization</strong>: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.
+5.  <strong>The Pre-Lock Forensic Gap Audit (Doc vs. Discussion Review)</strong>:
+    Before requesting user Greenlight or finalizing any Sprint Plan, the orchestrator MUST perform a forensic comparison between the conversational design session and the draft markdown document across 5 mandatory verification gates:
+    * 🔍 <strong>Localized Root Causes</strong>: Does every individual story contain a "Why It Broke &amp; Root Cause" callout box? (Subagents dispatched via <code>delegate.py</code> see only their story in isolation; root cause context prevents blind patching).
+    * 📌 <strong>Buried Code Pointers</strong>: Are exact filenames and line numbers cited for existing/reusable utilities (e.g., test probes, socket checkers, helper classes) to prevent reinventing the wheel?
+    * 🧪 <strong>Literal Test Batteries</strong>: Are concrete test input strings, phrases, and assertions printed verbatim in the story specification (never summarized as "test edge cases")?
+    * 🏛️ <strong>Persona &amp; Prompt Pillars</strong>: Are shared bedrock environment prompts, interest levels, and turn-stage tags explicitly anchored in the prompt requirements?
+    * 📡 <strong>Telemetry &amp; Routing Contracts</strong>: Are exact WebSocket packet types, channel names, and UI console targets defined?</p>
                             </div>
                         </td>
                     </tr>
@@ -630,14 +653,13 @@
      python3 src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title "&lt;Title&gt;" --reference "&lt;plan_path&gt;" --target "&lt;file_paths&gt;" --details "&lt;spec&gt;" --dir "&lt;workspace_dir&gt;" --mode execute</code></p>
 </li>
 <li>
-<p><strong>The 4-Anchor Prompt Standard ([BKM-043])</strong>:
-   Every delegation prompt passed in <code>--details</code> MUST explicitly specify:</p>
+<p><strong>The Two-Tier Payload Standard ([BKM-043])</strong>:
+   Every delegation prompt dispatched to OpenAgent MUST be structured in two tiers to provide maximum architectural coherence with zero prompt wandering:</p>
 </li>
-<li><strong>Grep-Stable Code Anchor</strong>: Exact target file, target function/class, and approximate line number with a grep fallback string (e.g. <code>"In field_notes/evaluate_rag.py, edit inside def main() starting around line 260; grep 'async def main' if lines shifted"</code>).</li>
-<li><strong>Import Anchor</strong>: Root namespace convention (<code>"PYTHONPATH=src: use 'from logic.x import y'"</code>).</li>
-<li><strong>Path Anchor</strong>: Directory resilience (<code>"Use Path(__file__).resolve().parent... fallback for configs"</code>).</li>
+<li><strong>Tier 1 (Global Situational Awareness)</strong>: The overarching Sprint Theme, Executive Summary, and Story Matrix (~20–30 lines). Tells the agent where its piece fits in the machine.</li>
+<li><strong>Tier 2 (Bounded Story Contract)</strong>: The 4-Anchor Prompt Standard (<code>Grep-Stable Code Anchor</code>, <code>Import Anchor</code>, <code>Path Anchor</code>, <code>Surgical Delta &amp; Concrete Test Assertions</code>). Strictly binds the agent's write tools to assigned target files.</li>
 <li>
-<p><strong>Surgical Delta &amp; Output Template</strong>: Exact signatures and concrete return dict/dataclass examples to eliminate design-by-inference.</p>
+<p><strong>Sprint Doc Pointer</strong>: Pointers to the active sprint plan on disk (e.g. <code>Portfolio_Dev/SPRINT_PLAN_SPR_65_0.md</code>) for deep context lookups without copy-paste truncation.</p>
 </li>
 <li>
 <p><strong>Git Forensic Ownership Gate</strong>:</p>
@@ -650,7 +672,26 @@
 <p><strong>In-Flight Handover Reflection &amp; ICM Auto-Capture</strong>:</p>
 </li>
 <li><code>delegate.py</code> automatically extracts the subagent's <code>[HANDOVER REFLECTION]</code> directly from the in-memory completion chunk and prints it front-and-center in the terminal output.</li>
-<li><code>delegate.py</code> automatically executes <code>icm store -t errors-resolved</code> to index prompt friction and linter feedback without manual orchestrator double-back.</li>
+<li>
+<p><code>delegate.py</code> automatically executes <code>icm store -t errors-resolved</code> to index prompt friction and linter feedback without manual orchestrator double-back.</p>
+</li>
+<li>
+<p><strong>Session Continuity &amp; Context Re-use (<code>--session-id</code>)</strong>:</p>
+</li>
+<li>For related stories within the same sprint phase (e.g., Phase 1: Stories 65.1 &amp; 65.2), orchestrators should reuse persistent session IDs (<code>--session-id sprint-65</code>) to preserve warmed repo file trees, terminal test execution history, and recent diffs in OpenCode's working context.</li>
+<li>
+<p><strong>Circuit Breaker</strong>: If a session exceeds 30+ tool calls or shows signs of hallucination/looping, the orchestrator terminates the session and creates a fresh session ID (<code>--session-id sprint-65-phase2</code>).</p>
+</li>
+<li>
+<p><strong>The Mandatory Post-Delegation Intent &amp; Omissions Audit</strong>:</p>
+</li>
+<li>Before staging and committing any delegated story, the Strategic Orchestrator MUST conduct an explicit <strong>Intent &amp; Omissions Audit</strong> beyond the literal <code>git diff</code>:<ol>
+<li><strong>Contract Completeness</strong>: Were all functional requirements in <code>--details</code> implemented, or did the subagent silently skip a secondary sub-clause?</li>
+<li><strong>Dead-Code &amp; Inert Artifacts</strong>: Did the code change leave inert variables or orphaned functions? Are they safely documented per minimal-edit discipline?</li>
+<li><strong>Boundary Integrity</strong>: Did the subagent create or modify any files outside the assigned <code>--target</code> list?</li>
+<li><strong>Test Realism &amp; Coverage</strong>: Do the new tests genuinely assert the behavioral contract rather than mocking out the core logic?</li>
+</ol>
+</li>
 </ol>
 <blockquote>
 <p>[!NOTE]
@@ -957,6 +998,43 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
 │  - Respect the 60s Quiescence Window [FEAT-136] between state transitions.               │
 │  - VRAM Utilization floor is capped at 0.55 (8k context) to protect the physical Xorg   │
 │    display server running on the primary RTX 2080 Ti adapter.                            │
+│  - SELF-SYNCHRONIZING RESTART: Lab restart/wake operations handle completion internally  │
+│    and return when finished. Agents must NEVER poll in a loop or schedule poll timers.   │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-045</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Removable USB FOB Kernel BDI Isolation & Unmounted-at-Rest Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <pre><code>┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                   BKM-045: REMOVABLE USB FOB HARDENING STANDARD                          │
+├──────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                          │
+│  ❌ FORBIDDEN: Auto-mounting offline hardware recovery USBs (e.g. ASUS BIOS Flashback)    │
+│                in Linux runtime userspace (/etc/fstab with 'auto' or desktop udisks2).   │
+│                                                                                          │
+│  ✅ MANDATORY FOUR-LAYER DEFENSE:                                                        │
+│                                                                                          │
+│    1. Unmounted-at-Rest (/etc/fstab):                                                    │
+│       LABEL=Z87P_FLBK /media/jallred/Z87P_FLBK1 vfat noauto,user,rw,noatime,umask=000   │
+│       (Drive physically remains plugged in rear BIOS Flashback port, unmounted in OS).   │
+│                                                                                          │
+│    2. Desktop Auto-Mount Suppression (/etc/udev/rules.d/99-bios-flashback-ignore.rules): │
+│       ENV{ID_FS_LABEL}==&quot;Z87P_FLBK&quot;, ENV{UDISKS_IGNORE}=&quot;1&quot;                             │
+│       ENV{ID_FS_UUID}==&quot;2FDD-8136&quot;, ENV{UDISKS_IGNORE}=&quot;1&quot;                              │
+│                                                                                          │
+│    3. Kernel BDI Writeback Throttling (/etc/udev/rules.d/90-usb-bdi-throttle.rules):     │
+│       SUBSYSTEM==&quot;block&quot;, ENV{DEVTYPE}==&quot;disk&quot;, ENV{ID_BUS}==&quot;usb&quot;,                      │
+│       ATTR{bdi/strict_limit}=&quot;1&quot;, ATTR{bdi/max_ratio}=&quot;1&quot;                                │
+│       (Caps USB dirty RAM cache to 1%, preventing global sync() stalls in D-State).      │
+│                                                                                          │
+│    4. Locate Search Exclusion (/etc/updatedb.conf):                                      │
+│       PRUNEPATHS contains /media/jallred/Z87P_FLBK1 to prevent background indexer locks. │
 │                                                                                          │
 └──────────────────────────────────────────────────────────────────────────────────────────┘
 </code></pre>

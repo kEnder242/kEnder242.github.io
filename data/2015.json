@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "testing",
       "validation",
-      "PVT"
+      "PVT",
+      "testing"
     ],
     "rank": 4,
     "id": "GEM-8e79"
@@ -30,8 +30,8 @@
     "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
     "sensitivity": "Public",
     "tags": [
-      "host interface",
-      "error"
+      "error",
+      "host interface"
     ],
     "rank": 4,
     "id": "GEM-abb6"
@@ -55,9 +55,9 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "msr_error",
       "vcd_missing",
-      "test_failure"
+      "test_failure",
+      "msr_error"
     ],
     "rank": 4,
     "id": "GEM-2b24"
@@ -80,8 +80,8 @@
     "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
     "sensitivity": "Public",
     "tags": [
-      "recovery_failure",
-      "trace32_error"
+      "trace32_error",
+      "recovery_failure"
     ],
     "rank": 4,
     "id": "GEM-3f26"
@@ -116,9 +116,9 @@
     "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
     "sensitivity": "Public",
     "tags": [
-      "ipc",
       "failure",
-      "connection"
+      "connection",
+      "ipc"
     ],
     "rank": 4,
     "id": "GEM-b175"
@@ -142,8 +142,8 @@
     "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
     "sensitivity": "Public",
     "tags": [
-      "bugs",
-      "ITP"
+      "ITP",
+      "bugs"
     ],
     "rank": 4,
     "id": "GEM-dccc"
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "Python 2.7.9",
-      "ipccli"
+      "ipccli",
+      "Python 2.7.9"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -178,8 +178,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "internal error",
-      "metadata file"
+      "metadata file",
+      "internal error"
     ],
     "rank": 4,
     "id": "GEM-6435"
@@ -203,8 +203,8 @@
     "sensitivity": "Public",
     "tags": [
       "SkyLake_M0",
-      "EDRAM",
-      "VISA"
+      "VISA",
+      "EDRAM"
     ],
     "rank": 4,
     "id": "GEM-9feb"
@@ -215,8 +215,8 @@
     "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
     "sensitivity": "Public",
     "tags": [
-      "visa_custom_rs.xml",
-      "EDC"
+      "EDC",
+      "visa_custom_rs.xml"
     ],
     "rank": 4,
     "id": "GEM-6e23"
@@ -227,8 +227,8 @@
     "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "Python"
+      "Python",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-6c84"
@@ -239,9 +239,9 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
+      "PVT BXTOEM",
       "testing",
-      "SV2K8122",
-      "PVT BXTOEM"
+      "SV2K8122"
     ],
     "rank": 4,
     "id": "GEM-c456"
@@ -264,9 +264,9 @@
     "evidence": "The latest nightly build was fetched from https://git-amr-1.devtools.intel.com/gerrit/ecdl_dbg-northpeak-sdk refs/changes/49/63649/2. The build script was run using C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -e and then C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -r -b",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
+      "NPK SDK",
       "installation",
-      "NPK SDK"
+      "configuration"
     ],
     "rank": 4,
     "id": "GEM-8ff2"
@@ -289,8 +289,8 @@
     "evidence": "https://hsdes.intel.com/home/default.html#article?id=1404494581",
     "sensitivity": "Public",
     "tags": [
-      "HSD",
-      "update"
+      "update",
+      "HSD"
     ],
     "rank": 4,
     "id": "GEM-f696"
@@ -301,8 +301,8 @@
     "evidence": "BLUE - C:\\Users\\lab_vtglab1\\Documents\\APL IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
-      "debug"
+      "debug",
+      "configuration"
     ],
     "rank": 4,
     "id": "GEM-b2a2"

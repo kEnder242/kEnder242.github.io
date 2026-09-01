@@ -66,8 +66,8 @@
     "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
     "sensitivity": "Public",
     "tags": [
-      "PythonSV",
-      "pmdebug"
+      "pmdebug",
+      "PythonSV"
     ],
     "rank": 4,
     "id": "GEM-e978"
@@ -313,9 +313,9 @@
     "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
     "sensitivity": "Public",
     "tags": [
+      "PECI tests",
       "unexpected return codes",
-      "MSR register access issues",
-      "PECI tests"
+      "MSR register access issues"
     ],
     "rank": 4,
     "id": "GEM-d90f"

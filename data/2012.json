@@ -17,8 +17,8 @@
     "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
     "sensitivity": "Public",
     "tags": [
-      "parsing issue",
-      "SNL expressions"
+      "SNL expressions",
+      "parsing issue"
     ],
     "rank": 4,
     "id": "GEM-80ce"
@@ -29,8 +29,8 @@
     "evidence": "[RAW LOGS: mention of HsxRegisterLib library]",
     "sensitivity": "Public",
     "tags": [
-      "debugging",
-      "HsxRegisterLib"
+      "HsxRegisterLib",
+      "debugging"
     ],
     "rank": 4,
     "id": "GEM-2255"
@@ -41,8 +41,8 @@
     "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
     "sensitivity": "Public",
     "tags": [
-      "pattern generators",
-      "VISA signals"
+      "VISA signals",
+      "pattern generators"
     ],
     "rank": 4,
     "id": "GEM-76e0"

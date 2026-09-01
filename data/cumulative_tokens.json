@@ -1,0 +1,35 @@
+{
+  "last_updated": "2026-09-01 00:03:45",
+  "lifetime_tokens_generated": 922,
+  "lifetime_kwh_consumed": 5e-05,
+  "commercial_api_cost_usd": 0.0018,
+  "actual_electricity_cost_usd": 0.0,
+  "net_dollars_saved_usd": 0.0018,
+  "percent_saved": 100.0,
+  "sources": {
+    "swarm_delegations": {
+      "tokens": 922,
+      "runs": 3
+    },
+    "web_intercom": {
+      "tokens": 0,
+      "runs": 0
+    },
+    "nightly_forge": {
+      "tokens": 0,
+      "runs": 0
+    }
+  },
+  "tiers": {
+    "sovereign_local": {
+      "tokens": 150,
+      "runs": 1
+    },
+    "cloud_swarm": {
+      "tokens": 320,
+      "runs": 1
+    }
+  },
+  "sovereign_tokens_generated": 602,
+  "cloud_tokens_generated": 320
+}

@@ -16,8 +16,8 @@
     "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
     "sensitivity": "Public",
     "tags": [
-      "Oakstream",
-      "simulation"
+      "simulation",
+      "Oakstream"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
     "sensitivity": "Public",
     "tags": [
-      "BIOS",
-      "error"
+      "error",
+      "BIOS"
     ],
     "rank": 4
   }

@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Proton2",
-      "Purley 4S",
+      "Purley 2S",
       "Proton1",
-      "Purley 2S"
+      "Proton2",
+      "Purley 4S"
     ],
     "rank": 4
   },
@@ -18,8 +18,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "FIO",
-      "stressapptest"
+      "stressapptest",
+      "FIO"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 4S",
+      "Purley 2S",
       "CScripts",
-      "Purley 2S"
+      "Purley 4S"
     ],
     "rank": 4
   },
@@ -41,8 +41,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "BIOS update",
-      "App Direct Dependency Failure"
+      "App Direct Dependency Failure",
+      "BIOS update"
     ],
     "rank": 4
   },
@@ -63,8 +63,8 @@
     "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
     "sensitivity": "Public",
     "tags": [
-      "persistent memory",
-      "ipmctl"
+      "ipmctl",
+      "persistent memory"
     ],
     "rank": 4
   },

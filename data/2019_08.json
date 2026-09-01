@@ -5,8 +5,8 @@
     "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
     "sensitivity": "Public",
     "tags": [
-      "Error Code 0xAB",
       "PCI",
+      "Error Code 0xAB",
       "Error Code 0xAC",
       "IPMI"
     ],

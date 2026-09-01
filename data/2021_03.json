@@ -5,8 +5,8 @@
     "evidence": "https://intel.sharepoint.com/sites/archercitypat, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
     "sensitivity": "Public",
     "tags": [
-      "Archer City Platform",
-      "Research Link"
+      "Research Link",
+      "Archer City Platform"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
     "sensitivity": "Public",
     "tags": [
-      "PECI Command Rejection",
-      "peci_poison.tdf"
+      "peci_poison.tdf",
+      "PECI Command Rejection"
     ],
     "rank": 4
   },

@@ -40,9 +40,9 @@
     "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
     "sensitivity": "Public",
     "tags": [
-      "EFS",
       "BMC23",
-      "upgrade"
+      "upgrade",
+      "EFS"
     ],
     "rank": 4,
     "id": "GEM-329f"
@@ -53,9 +53,9 @@
     "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
     "sensitivity": "Public",
     "tags": [
-      "data_integrity",
       "system_stability",
-      "issue"
+      "issue",
+      "data_integrity"
     ],
     "rank": 4,
     "id": "GEM-7509"
@@ -66,8 +66,8 @@
     "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "evaluation"
+      "evaluation",
+      "performance"
     ],
     "rank": 4,
     "id": "GEM-f3eb"
@@ -78,8 +78,8 @@
     "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "evaluation"
+      "evaluation",
+      "performance"
     ],
     "rank": 4,
     "id": "GEM-3d9c"
@@ -90,8 +90,8 @@
     "evidence": "HW BMC25/EFS1.15   EFS1.16",
     "sensitivity": "Public",
     "tags": [
-      "tool_version",
-      "evaluation"
+      "evaluation",
+      "tool_version"
     ],
     "rank": 4,
     "id": "GEM-ac44"
@@ -139,8 +139,8 @@
     "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
     "sensitivity": "Public",
     "tags": [
-      "test_run",
-      "FTF202"
+      "FTF202",
+      "test_run"
     ],
     "rank": 4,
     "id": "GEM-663b"

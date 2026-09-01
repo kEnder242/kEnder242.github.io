@@ -27,8 +27,8 @@
     "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
     "sensitivity": "Public",
     "tags": [
-      "PCI Cfg writes",
-      "executed callbacks"
+      "executed callbacks",
+      "PCI Cfg writes"
     ],
     "rank": 4
   }

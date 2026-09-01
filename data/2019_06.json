@@ -5,8 +5,8 @@
     "evidence": "https://hsdes.intel.com/resource/1408873616",
     "sensitivity": "Public",
     "tags": [
-      "Node Manager",
-      "IPMI"
+      "IPMI",
+      "Node Manager"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "0x80: Unknown",
     "sensitivity": "Public",
     "tags": [
-      "error code",
-      "ipmitool"
+      "ipmitool",
+      "error code"
     ],
     "rank": 4
   },
@@ -27,9 +27,9 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
+      "BMC",
       "ICX-HCC",
       "IPMI",
-      "BMC",
       "ME"
     ],
     "rank": 4
