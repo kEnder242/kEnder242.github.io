@@ -184,7 +184,7 @@
             border-radius: 2px;
         }
         .bar-value {
-            width: 110px;
+            width: 140px;
             flex-shrink: 0;
             text-align: right;
             font-weight: 700;
@@ -311,7 +311,7 @@
             </div>
         </div>
 
-        <!-- Comparative Performance Arena -->
+        <!-- 1. Execution Throughput Comparison -->
         <div class="chart-card">
             <div class="chart-title">🏎️ Execution Throughput Comparison (Tokens / Second)</div>
             <div class="bar-row">
@@ -336,9 +336,84 @@
             </div>
         </div>
 
+        <!-- 2. Reasoning Depth (CoT Thinking Token Ratio) -->
+        <div class="chart-card">
+            <div class="chart-title">🧠 Reasoning CoT Depth Ratio (Test-Time Compute Scaling)</div>
+            <div class="bar-row">
+                <div class="bar-label">Apple M5 Air (Qwen 27B)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 85%; background: #bc8cff;"></div></div>
+                <div class="bar-value" style="color: #d2a8ff;">85% CoT Depth</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Windows 4090 (Qwen 14B)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 65%; background: #bc8cff;"></div></div>
+                <div class="bar-value" style="color: #d2a8ff;">65% CoT Depth</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Cloud Swarm (DeepSeek R1)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 40%; background: #bc8cff;"></div></div>
+                <div class="bar-value" style="color: #d2a8ff;">40% CoT Depth</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Linux 2080 Ti (Llama 3B)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 10%; background: #bc8cff;"></div></div>
+                <div class="bar-value" style="color: #d2a8ff;">10% CoT Depth</div>
+            </div>
+        </div>
+
+        <!-- 3. Silicon Energy Efficiency (Tokens per Joule) -->
+        <div class="chart-card">
+            <div class="chart-title">⚡ Silicon Energy Efficiency (Tokens per Joule = tok_s / Watts)</div>
+            <div class="bar-row">
+                <div class="bar-label">Apple M5 Air (18W draw)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 100%; background: #238636;"></div></div>
+                <div class="bar-value" style="color: #3fb950;">1.770 Tok/J</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Linux 2080 Ti (160W draw)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 17.5%; background: #58a6ff;"></div></div>
+                <div class="bar-value" style="color: #58a6ff;">0.310 Tok/J</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Windows 4090 (280W draw)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 15.2%; background: #e3b341;"></div></div>
+                <div class="bar-value" style="color: #e3b341;">0.269 Tok/J</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Cloud Swarm (Hosted)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 2%; background: #30363d;"></div></div>
+                <div class="bar-value" style="color: #8b949e;">N/A (Offloaded)</div>
+            </div>
+        </div>
+
+        <!-- 4. Electricity Cost per 1M Tokens & Savings Multiplier -->
+        <div class="chart-card">
+            <div class="chart-title">💰 Electricity Cost per 1M Tokens vs Commercial Cloud ($3.00/1M Baseline)</div>
+            <div class="bar-row">
+                <div class="bar-label">Apple M5 Air ($0.13/kWh)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 100%; background: #238636;"></div></div>
+                <div class="bar-value" style="color: #3fb950;">$0.0482 (62.2x)</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Linux RTX 2080 Ti</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 57.2%; background: #238636;"></div></div>
+                <div class="bar-value" style="color: #3fb950;">$0.0843 (35.6x)</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Windows RTX 4090</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 31.2%; background: #58a6ff;"></div></div>
+                <div class="bar-value" style="color: #58a6ff;">$0.1549 (19.4x)</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Cloud API Baseline</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 1.6%; background: #30363d;"></div></div>
+                <div class="bar-value" style="color: #f78166;">$3.0000 (1.0x)</div>
+            </div>
+        </div>
+
         <!-- Energy Efficiency & ROI Calculator -->
         <div class="chart-card">
-            <div class="chart-title">🌱 Energy Efficiency & Economic ROI Model</div>
+            <div class="chart-title">🌱 Interactive Economic ROI Calculator</div>
             <div style="font-size: 0.8rem; color: var(--sub-color); margin-bottom: 15px; font-family: var(--mono-stack);">
                 Interactive calculation based on 25M monthly token volume at $0.13/kWh electricity vs $3.00/1M API token cost.
             </div>
