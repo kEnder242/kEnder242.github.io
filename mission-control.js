@@ -16,6 +16,7 @@ class MissionControl extends HTMLElement {
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/stories.html" class="mission-link ${activePage === 'stories.html' ? 'active' : ''}">Work Stories</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/protocols.html" class="mission-link ${activePage === 'protocols.html' ? 'active' : ''}">Lab Protocols</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/research.html" class="mission-link ${activePage === 'research.html' ? 'active' : ''}">Research Pipeline</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/public_benchmarks.html" class="mission-link ${activePage === 'public_benchmarks.html' ? 'active' : ''}">Public Benchmarks</a></li>
                 </ul>
             </section>
 
