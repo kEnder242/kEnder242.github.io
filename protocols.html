@@ -669,11 +669,16 @@
 <p>The Strategic Orchestrator audits <code>git diff</code>, verifies <code>pytest</code> output, and performs all git commits.</p>
 </li>
 <li>
-<p><strong>In-Flight Handover Reflection &amp; ICM Auto-Capture</strong>:</p>
+<p><strong>The Tri-Loop Feedback &amp; Remediation Engine</strong>:</p>
 </li>
-<li><code>delegate.py</code> automatically extracts the subagent's <code>[HANDOVER REFLECTION]</code> directly from the in-memory completion chunk and prints it front-and-center in the terminal output.</li>
+<li><strong>In-Flight Handover Reflection</strong>: <code>delegate.py</code> automatically extracts the subagent's <code>[HANDOVER REFLECTION]</code> directly from the in-memory completion chunk and prints it front-and-center in the terminal output, auto-storing friction in ICM (<code>errors-resolved</code>).</li>
 <li>
-<p><code>delegate.py</code> automatically executes <code>icm store -t errors-resolved</code> to index prompt friction and linter feedback without manual orchestrator double-back.</p>
+<p><strong>The Tri-Loop Remediation Ladder</strong>:</p>
+<ul>
+<li><strong>Loop A (Fast In-Session Re-fire / Test Trace Remediation)</strong>: If <code>pytest</code> or compiler execution fails, re-fire into the <em>same persistent session</em> (<code>--session-id</code>) passing the exact traceback snippet without cold-starting daemons.</li>
+<li><strong>Loop B (Anti-Drift / Stub-Tightening Re-fire)</strong>: If a subagent drifts into repository exploration or edits unassigned files, re-fire with an explicit line-range diff anchor and tightened scope.</li>
+<li><strong>Loop C (Hard Blocker &amp; Harness Escalation)</strong>: If a subagent emits <code>[BLOCKER REPORT: &lt;CATEGORY&gt;]</code> or halts on an interactive popup / silent finish (<code>finish=unknown</code>), <code>delegate.py</code> immediately breaks out (Exit Code 2: <code>AWAITING_INPUT</code>), logs to <code>delegation_failures.log</code>, and yields to the Strategic Orchestrator / Human Driver via <code>--resume &lt;session_id&gt; --answer &lt;choice&gt;</code>. Never bypass a delegation harness failure to finish a sprint manually.</li>
+</ul>
 </li>
 <li>
 <p><strong>Session Continuity &amp; Context Re-use (<code>--session-id</code>)</strong>:</p>
@@ -708,7 +713,7 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
                                 <p><strong>Objective</strong>: Maintain a clear boundary between the Lab Infrastructure (management systems) and Resident Features (domain business logic) to prevent naming collisions and design confusion.</p>
 <ol>
 <li><strong>Scope Division</strong>:<ul>
-<li><strong><code>[LAB_INFRA]</code> (Infrastructure)</strong>: Pertains to Foyer, Attendant, WebSockets, IPC/Intercom, agent cognitive engines (Dreaming, Coherence Critic), and daemon management. Documented under <code>HomeLabAI/docs/Protocols.md</code>.</li>
+<li><strong><code>[LAB_INFRA]</code> (Infrastructure)</strong>: Pertains to Foyer, Attendant, WebSockets, IPC/Intercom, agent cognitive engines (Dreaming, Coherence Critic), and daemon management. Documented under <code>HomeLabAI/docs/LAB_INFRASTRUCTURE.md</code>.</li>
 <li><strong><code>[RESIDENT_FEAT]</code> (Features)</strong>: Pertains to validation scripts, benchmarks, telemetry pipelines (RAPL, DCGM, Prometheus metrics), status templates, and user-facing dashboards. Documented under <code>Portfolio_Dev/FeatureTracker.md</code>.</li>
 </ul>
 </li>
@@ -940,10 +945,11 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-043</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Master 4-Anchor Prompt Standard (Surgical Code Anchoring)</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Master 4-Anchor Prompt Standard (Surgical Code Anchoring & Story Template)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Date:</strong> August 25, 2026<br />
-<strong>Objective</strong>: Eliminate subagent design-by-inference, whole-file re-scan thrash, and import/path errors by enforcing 4 mandatory, grep-resilient anchors in every delegation payload.</p>
+                                <p><strong>Date:</strong> August 25, 2026 (Updated September 2, 2026)<br />
+<strong>Objective</strong>: Eliminate subagent design-by-inference, whole-file re-scan thrash, and import/path errors by baking 4 mandatory, grep-resilient anchors and explicit tool contracts directly into every sprint story specification.</p>
+<h3>1. The 4 Concrete Anchors (Baked Directly Into Story Text)</h3>
 <ol>
 <li><strong>Anchor 1: Grep-Stable Code Anchor</strong>:</li>
 <li>Must specify exact target file, target function/class, and approximate line number with a grep fallback string.</li>
@@ -972,6 +978,29 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
 <li>Must provide concrete dataclass, dictionary schema, and return type examples rather than abstract prose instructions.</li>
 <li><em>Purpose</em>: Completely eliminates "design-by-inference" where subagents invent incompatible dictionary keys.</li>
 </ol>
+<h3>2. Mandatory Sprint Story Markdown Template</h3>
+<p>Every story in a sprint plan MUST be authored using this exact self-contained template so Layer 3 workers have all tool and code requirements baked directly at their fingertips:</p>
+<pre><code class="language-markdown">### 📊 Story XX.Y: &lt;Title&gt; (`[FEAT-XXX]`)
+* **Status:** `[PENDING DELEGATION]`
+* **Assigned Execution Mode:** `[SWARM DELEGATION: ATLAS + JUNIOR]` (via `delegate.py` on REST port 4097)
+* **Objective:** &lt;1-2 sentence concise goal&gt;
+* **Target Files:**
+  * `&lt;path/to/target_file&gt;`
+  * `&lt;path/to/test_file&gt;`
+* **4-Anchor Specification (BKM-043):**
+  * **Anchor 1 (Symbol Anchor):** In `&lt;target_file&gt;`, edit inside `&lt;class/func&gt;` (around line N, grep: '&lt;signature&gt;').
+  * **Anchor 2 (Data Flow / Root Imports):** `PYTHONPATH=src: use 'from logic.x import y'`.
+  * **Anchor 3 (Schema / Code Stub):** Exact dataclass, dictionary keys, or literal code diff.
+  * **Anchor 4 (Path Resilience):** Mandate `Path(__file__).resolve().parent` fallbacks.
+* **Tool Invocation Law:**
+  * Modifying Existing Files: Use `clara-dna_safe_patch` with exact `old_pattern` and `new_pattern`.
+  * Creating New Files: Use standard `write` tool.
+  * Anti-Exploratory: Research is done. Never run repo-wide search or grep.
+* **Acceptance Criteria:**
+  1. &lt;criterion 1&gt;
+  2. &lt;criterion 2&gt;
+* **Verification Command:** `pytest &lt;path/to/test_file&gt; -v`
+</code></pre>
                             </div>
                         </td>
                     </tr>
@@ -1041,11 +1070,226 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-047</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Local Silicon Memory Ceilings & Bicameral Swarm Topology</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <pre><code>┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                   BKM-047: LOCAL SILICON MEMORY CEILINGS &amp; BICAMERAL SWARM TOPOLOGY      │
+├──────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                          │
+│  THE HARDWARE ASYMMETRY REALITY:                                                         │
+│  Federated bicameral swarms pair distinct silicon architectures with competing memory    │
+│  profiles. Inverting their operational roles causes instant thrashing or OOM crashes.    │
+│                                                                                          │
+│  1. Node Kender (Windows RTX 4090 24GB VRAM / Ollama):                                  │
+│     - Model: hf.co/unsloth/Qwen3-14B-GGUF:UD-Q4_K_XL (9.16 GB resident).                │
+│     - Headroom: ~14.8 GB dedicated VRAM for KV cache + dynamic host RAM paging.          │
+│     - Swarm Role: Layer 2 Orchestrator (Atlas) — absorbs broad sprint plans, global      │
+│       state, and sequences task dependencies. Pure routing (NO CODE EDITS).              │
+│                                                                                          │
+│  2. Node Brain (Apple M5 Air 32GB Unified Memory / oMLX dflash):                         │
+│     - Model: mlx-community--Qwen3.8-27B-4bit (15.2 GB resident).                         │
+│     - Metal Memory Ceiling: iogpu.wired_limit_mb caps wired GPU memory at ~24.46 GB.     │
+│       A 27B model prefilling &gt; 4k tokens triggers immediate Metal allocation panic.      │
+│     - Swarm Role: Layer 3 Fast Worker (Sisyphus-Junior) — bounded (&lt; 1.5k tok) code     │
+│       stub fill via clara-dna_safe_patch. Heavy search/tools disabled.                   │
+│                                                                                          │
+│  SWARM TOPOLOGY INVERSION LAW:                                                           │
+│  - Broad Context (Tier 1 Sprint) MUST flow into 4090 Atlas (Flexible RAM ceiling).       │
+│  - Narrow Contracts (Tier 2 AST Stubs) MUST flow into M5 Air Junior (Fast, strict cap).  │
+│  - Violating this hierarchy by feeding 10k token plans to M5 Air blows the Metal limit;  │
+│    forcing 4090 to execute code edits ties up the orchestrator on low-tier syntax.       │
+│                                                                                          │
+│  SCARS RETROSPECTIVE:                                                                    │
+│  - Scar #1: Feeding broad sprint context directly to M5 Air 27B caused silent kernel     │
+│    hangs when Metal prefill activation buffers exceeded wired unified memory limits.     │
+│  - Scar #2: Atlas attempting direct file editing caused hallucinated imports; resolved   │
+│    by hard-pinning Atlas permissions to edit:deny and task(category=&quot;unspecified-low&quot;).  │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-048</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Just-in-Time (JIT) Context Interleaving & The "Fingertips" Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-515]</code> / <code>[BKM-048]</code><br />
+<strong>Domain:</strong> Layered Swarm Delegation, Token Budget Optimization, and On-Disk JIT Execution<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Core Law: Bake Context In (Do Not Require Search Lookups)</h3>
+<ul>
+<li><strong>❌ FORBIDDEN:</strong> Telling a local 14B/27B worker to "Go query ChromaDB", "Go look up BKM-043", or "Explore the codebase for imports". Local attention spans dilute instantly across multi-step research turns, causing memory ceilings and hallucinations.</li>
+<li><strong>✅ THE "FINGERTIPS" LAW:</strong> All necessary context, symbol anchors, import paths, code stubs, and tool schemas MUST be <strong>baked directly into the sprint story on disk</strong>.</li>
+<li><strong>POINTER-BASED DELEGATION:</strong> </li>
+<li><strong>Layer 1 (AGY)</strong> writes the complete self-contained 4-anchor story block into the sprint document.</li>
+<li><strong>Layer 2 (Atlas)</strong> routes a lean pointer (<code>&lt; 300</code> tokens) via <code>task(category="...", prompt="Execute Story X in &lt;sprint_doc&gt; (Section: Story X)...")</code>.</li>
+<li><strong>Layer 3 (Junior)</strong> reads its specific story section on disk. Everything it needs is directly at its fingertips in that section—zero search, zero tool exploration required.</li>
+</ul>
+<h3>2. Three-Layer JIT Authoring &amp; Execution Architecture</h3>
+<ul>
+<li><strong>Layer 1: Strategic Guardian (AGY / Gemini)</strong> → Guides: <code>[BKM-030]</code> &amp; <code>[BKM-043]</code></li>
+<li>Authors the Sprint Plan as the canonical on-disk "JIT Container" using clean Markdown (no ASCII art boxes).</li>
+<li>Bakes the 4 anchors, tool laws, and pytest commands directly into every story section.</li>
+<li><strong>Layer 2: Tactical Router (Atlas on Windows RTX 4090 / Ollama)</strong> → Guide: <code>[BKM-034]</code></li>
+<li>Absorbs broad sprint context (14.8 GB KV cache headroom).</li>
+<li>Strict L2 Invariants: Pure router. NEVER writes code or edits files.</li>
+<li>Emits exactly ONE pointer dispatch per turn. Never serializes large code blocks across <code>task()</code> parameters.</li>
+<li>Relays Junior's blockers straight up to AGY; provides a 2-sentence handover reflection on instruction clarity.</li>
+<li><strong>Layer 3: Fast Surgical Worker (Sisyphus-Junior on KENDER 4090 / M5 Air)</strong> → Guide: <code>[BKM-048]</code></li>
+<li>Reads its exact 4-anchor section on disk (&lt; 1,500 tokens).</li>
+<li>Strict L3 Invariants: Anti-exploratory. Heavy tools (<code>icm_*</code>, <code>websearch_*</code>, <code>codegraph_*</code>) denied via <code>[BKM-051]</code>.</li>
+<li>Executes edits via <code>clara-dna_safe_patch</code> (or <code>write</code> for new files) and runs assigned <code>pytest</code>.</li>
+<li>Halts immediately on missing types; emits <code>[BLOCKER REPORT: &lt;CATEGORY&gt;] &lt;details&gt;</code> upward.</li>
+</ul>
+<h3>3. Harness Resilience &amp; Escalation Protocol</h3>
+<ul>
+<li>If a subagent terminates on an interactive popup or silent finish (<code>finish=unknown</code>), <code>delegate.py</code> breaks out with code 2 (<code>AWAITING_INPUT</code>) and provides a resume command.</li>
+<li><em>"When delegation stumbles, we halt the sprint to fix the harness; we never manually bypass the failure to finish the sprint."</em></li>
+</ul>
+<hr />
+<h3>[BKM-051] Subagent MCP Tool Scoping &amp; Context Ballast Protocol</h3>
+<p><strong>Feature Anchor:</strong> <code>[FEAT-526]</code> / <code>[BKM-051]</code><br />
+<strong>Domain:</strong> OpenAgent Swarm Topology, MCP Overhead Mitigation &amp; Subagent Prompt Budget<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Tool Schema Overhead Problem</h4>
+<p>When an MCP server exposes many tools (e.g. ICM with 31 tools, LSP with 15 tools), OpenCode injects the full JSON Schema for every single tool into the system prompt of every agent. For child workers, this creates <strong>24,488 tokens of static tool ballast</strong> before reading any code, causing:
+1. Massive prefill dead-air (90+ seconds on unified memory hosts).
+2. Metal VRAM exhaustion (<code>AI_APICallError: oMLX prefill memory guard rejected this prompt</code>).
+3. Diluted model attention across dozens of irrelevant tools.</p>
+<h4>2. The Tool Scoping Law</h4>
+<ol>
+<li><strong>Architect Nodes (Atlas / Sisyphus):</strong> Granted full access to <code>icm_*</code>, <code>clara-dna_*</code>, and research tools to formulate structured plans and recall historical context.</li>
+<li><strong>Worker Nodes (Sisyphus-Junior / Hephaestus):</strong> MUST have heavy and unused MCP tools denied in <code>oh-my-openagent.json</code>:
+   <code>json
+   "permission": {
+     "edit": "allow",
+     "icm_*": "deny",
+     "websearch_*": "deny",
+     "codegraph_*": "deny",
+     "question": "deny"
+   }</code></li>
+<li><strong>Target Worker Input Ceiling:</strong> A worker subagent's initial prompt MUST stay below <strong>1,500 tokens</strong>.</li>
+</ol>
+<pre><code>
+---
+
+### [BKM-049] Tri-Loop Story Delegation &amp; Diagnostic Protocol
+**Feature Anchor:** `[FEAT-522]` / `[BKM-049]`  
+**Domain:** Swarm Delegation, Autonomous Subagent Execution &amp; Harness Diagnostics  
+**Status:** ACTIVE / MANDATORY  
+
+#### 1. The Tri-Loop Law
+1. **Three-Tier Escalation Ladder:** A story assigned to delegation executes through a strictly structured 3-tier escalation ladder:
+   * **Attempt 1: Sovereign Local Silicon (`[SWARM:LOCAL]`)** — Windows RTX 4090 (Atlas) + macOS M5 Air (Junior). 100% private, sovereign execution.
+   * **Attempt 2: Cloud Swarm (`[SWARM:CLOUD]`)** — OpenCode Cloud / OpenRouter / DeepSeek / Cohere. Burst capacity for complex reasoning when local models hit context or syntax boundaries.
+   * **Attempt 3: Primary Agent (`[AGY:TAKEOVER]`)** — AGY executes direct AST implementation and architectural certification, preserving primary tokens.
+2. **Never Blindly Retry:** A retry between tiers is strictly defined as an execution attempt preceded by root-cause diagnosis. Simply tweaking prompt wording without fixing underlying tool/permission mismatch is an invariant violation.
+3. **Safe-Patch Mandate (Anti-Bash-Clobber):** Subagents MUST NOT use destructive bash file writes (`cat &lt;&lt; 'EOF' &gt;` or `echo &gt;`) on existing codebase files. Subagents must invoke `clara-dna_safe_patch` (or atomic patchers) for existing files, reserving `write` strictly for new standalone files.
+
+#### 2. Mandatory Diagnostics Between Retries
+Before initiating a retry for a stalled, failed, or timed-out subagent, the orchestrator MUST perform three diagnostic probes:
+1. **Server &amp; Silicon State:**
+   - Probe inference endpoints (`curl http://192.168.1.46:8000/v1/models`, `nvidia-smi`).
+   - Check socket states (`ss -tulpn | grep 4097` or target port) to ensure child connections are not hanging.
+2. **Session Transcripts &amp; Logs:**
+   - Inspect OpenCode / subagent transcripts for syntax loops, compaction triggers, or unhandled tool rejections.
+   - Verify whether OpenCode auto-compaction hijacked the context window.
+3. **Harness &amp; Configuration Audit:**
+   - Audit `delegate.py` and `opencode.json` for prompt contradictions (e.g. Single Task Law vs. micro-patterns).
+   - Verify file permissions, diff patch formats, and linting constraints.
+
+#### 3. Root Cause Escalation Matrix
+| Failure Symptom | Diagnostic Finding | Remediation Required Before Retry |
+| :--- | :--- | :--- |
+| `&quot;Model is busy&quot;` / 503 | Parallel requests exceeded single-stream ceiling | Enforce Single Task Law; serialize dispatches. |
+| Subagent freezes mid-read | Auto-compaction agent spawned | Set `&quot;compaction&quot;: {&quot;auto&quot;: false}` in `opencode.json`. |
+| Ruff / Syntax loop | Indentation or multiline whitespace slip | Provide explicit AST line anchors or simplify patch scope. |
+| Bash clobber attempt | Subagent attempted `echo &gt;` on existing file | Inject explicit `clara-dna_safe_patch` JSON tool call schema into prompt. |
+| Code 3: Silent Failure | 0 text tokens streamed; session deadlocked | Check inference server health; escalate to Attempt 2 (Cloud Swarm). |
+
+#### 4. The 5-Minute Watchdog &amp; Inspection Gate Law
+1. **Inspection Gate, Not an Automatic Kill:** The 5-minute watchdog ceiling is an **Inspection Gate**, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.
+2. **Active Progress Probe:** At the 5-minute mark, the orchestrator must inspect the live session:
+   - Query `GET /session/{id}` or `GET /session/{id}/message` to inspect token generation and tool calls.
+   - **Progressing:** If tokens are actively flowing and constructive work is progressing, extend the timer window.
+   - **Stalled:** If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.
+3. **Mandatory Zombie Cleanup:** When an attempt is halted, timed out, or interrupted, the harness (`delegate.py`) and orchestrator MUST issue an explicit `POST /session/{id}/abort` frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.
+
+---
+
+### [BKM-052] Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)
+**Feature Anchor:** `[FEAT-530]` / `[BKM-052]`  
+**Domain:** External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch  
+**Status:** ACTIVE / MANDATORY  
+
+#### 1. The Principle
+When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts **strictly as a headless execution sequencer** for `delegate.py`.
+
+#### 2. The Invariant Rules
+1. **No Direct Code Generation:** The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.
+2. **No Human Docs:** Treat sprint documents on disk as executable instruction sets.
+3. **Serialized Dispatch Only:** Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until `delegate.py` exits.
+4. **Zero Self-Correction Loops:** If `delegate.py` returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (`--local-only` $\rightarrow$ `--cloud-only` $\rightarrow$ surface blocker to user).
+
+#### 3. The 3-Step Driver Execution Loop
+
+</code></pre>
+<p>┌────────────────────────────────────────────────────────────┐
+│ Step 1: Ingest Sprint Document Pointer                     │
+│ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────┐
+│ Step 2: Execute Headless Delegation via Bash               │
+│ Invoke delegate.py for Story N:                            │
+│   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
+│     --sprint <S> --story <N> --title "<Title>"             │
+│     --reference <sprint_plan_path>                         │
+│     --target <target_file> --mode execute                  │
+│     --details "Execute Story N in <sprint_plan_path>..."   │
+│     --local-only                                           │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                ┌─────────────┴─────────────┐
+                ▼                           ▼
+      [Exit Code 0 (PASS)]        [Exit Code != 0 (FAIL)]
+                │                           │
+                ▼                           ▼
+┌───────────────────────────┐   ┌───────────────────────────┐
+│ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
+│ • git add <target_files>  │   │ Retry once with           │
+│ • git commit -m "..."     │   │ <code>--cloud-only</code>. If fail,  │
+│ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
+└───────────────────────────┘   └───────────────────────────┘</p>
+<pre><code>
+#### 4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)
+When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:
+
+```text
+You are the Federated Lab Delegation Driver (BKM-052).
+Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
+DO NOT write code or generate file diffs yourself.
+
+For each story:
+1. Run:
+   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot; --reference Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md --target &lt;target_path&gt; --mode execute --details &quot;Execute Story &lt;N&gt; in Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md (Section: Story &lt;N&gt;). Follow the 4-anchor specification in that section to modify target file using clara-dna_safe_patch. Verify with pytest.&quot; --local-only
+2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
+3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
             </table>
         </section>
     </main>
 
-    <script src="mission-control.js?v=5b5bae4f"></script>
+    <script src="mission-control.js?v=d9995719"></script>
 </body>
 </html>
