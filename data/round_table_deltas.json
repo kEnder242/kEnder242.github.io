@@ -1,0 +1,48 @@
+[
+  {
+    "turn": 1,
+    "timestamp": 1788491985,
+    "time_str": "20:19:45",
+    "topic": "LAB_HISTORY",
+    "scope": "CONTEXT_SCOPE_LONG",
+    "turn_mode": "FULL_ROUND_TABLE",
+    "is_full_round_table": true,
+    "checkpoints_elapsed_s": {
+      "triage": 13.907,
+      "pinky_stance": 25.787,
+      "brain_arch": 57.4,
+      "oracle": 125.872,
+      "pinky_judgment": 125.873
+    },
+    "deltas_elapsed_s": {
+      "triage": 13.907,
+      "pinky_stance": 11.88,
+      "brain_arch": 31.613,
+      "oracle": 68.472,
+      "pinky_judgment": 0.001
+    },
+    "cumulative": {
+      "triage": 13.907,
+      "pinky_stance": 25.787,
+      "brain_arch": 57.4,
+      "oracle": 125.872,
+      "pinky_judgment": 125.873
+    },
+    "deltas": {
+      "triage": 13.907,
+      "pinky_stance": 11.88,
+      "brain_arch": 31.613,
+      "oracle": 68.472,
+      "pinky_judgment": 0.001
+    },
+    "total_elapsed_s": 125.873,
+    "total_s": 125.873,
+    "distillation_bullets": [
+      "LAB: { \n  \"inferred_intent\": \"struggle_with_2015\",\n  \"addressed_to\": \"SYSTEM\",\n  \"vibe\": \"HISTORICAL\",\n  \"domain\": \"lab_history\",\n  \"casual\": 0.0,\n  \"intri",
+      "PINKY: {  \"score\"                                                                                                                                            ",
+      "BRAIN: Based on the provided historical record, it seems that in 2015, you struggled with validating the following two topics:\n\n1. **Platform RAS mechanism v",
+      "CRITIQUE: { \"score\""
+    ],
+    "consensus_1liner": "{ \"score\""
+  }
+]
