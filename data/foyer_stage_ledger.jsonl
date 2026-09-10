@@ -1433,3 +1433,11 @@
 {"ts": 1788885935.9974465, "request_id": "ef3f570d", "stage": "stage1_kender_triage", "node": "stage1_kender_triage", "purpose": "", "status": "COMPLETED", "detail": "kender_online"}
 {"ts": 1788886176.0001628, "request_id": "ef3f570d", "stage": "stage4_dt_synthesis", "node": "Deep Thought (M5 Air / Sovereign)", "purpose": "Strategic Synthesis (importance >= 0.7)", "status": "FAILED", "detail": "total_timeout"}
 {"ts": 1788886208.7520435, "request_id": "ef3f570d", "stage": "stage5_pinky_review", "node": "Pinky (Sanity / Vibe Check)", "purpose": "Out-Loud Delivery -> Waterfall Drainer", "status": "COMPLETED", "detail": ""}
+{"ts": 1789055852.6362343, "request_id": "UI_zr4slg", "stage": "stage1_deep_thought_triage", "node": "Deep Thought / Lab Node (Sovereign Silicon)", "purpose": "Preamble & Triage", "status": "STARTED", "detail": "unified_llm_synthesis"}
+{"ts": 1789055852.987126, "request_id": "UI_zr4slg", "stage": "stage1_kender_triage", "node": "stage1_kender_triage", "purpose": "", "status": "STARTED", "detail": ""}
+{"ts": 1789055853.5774755, "request_id": "UI_zr4slg", "stage": "stage1_kender_triage", "node": "stage1_kender_triage", "purpose": "", "status": "COMPLETED", "detail": "local_fallback"}
+{"ts": 1789056093.5803807, "request_id": "UI_zr4slg", "stage": "stage4_dt_synthesis", "node": "Deep Thought (M5 Air / Sovereign)", "purpose": "Strategic Synthesis (importance >= 0.7)", "status": "FAILED", "detail": "total_timeout"}
+{"ts": 1789056394.8600821, "request_id": "UI_fplr73", "stage": "stage1_deep_thought_triage", "node": "Deep Thought / Lab Node (Sovereign Silicon)", "purpose": "Preamble & Triage", "status": "STARTED", "detail": "unified_llm_synthesis"}
+{"ts": 1789056395.1229022, "request_id": "UI_fplr73", "stage": "stage1_kender_triage", "node": "stage1_kender_triage", "purpose": "", "status": "STARTED", "detail": ""}
+{"ts": 1789056395.1969523, "request_id": "UI_fplr73", "stage": "stage1_kender_triage", "node": "stage1_kender_triage", "purpose": "", "status": "COMPLETED", "detail": "local_fallback"}
+{"ts": 1789056635.2003677, "request_id": "UI_fplr73", "stage": "stage4_dt_synthesis", "node": "Deep Thought (M5 Air / Sovereign)", "purpose": "Strategic Synthesis (importance >= 0.7)", "status": "FAILED", "detail": "total_timeout"}
