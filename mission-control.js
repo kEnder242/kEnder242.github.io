@@ -2,10 +2,12 @@ class MissionControl extends HTMLElement {
     connectedCallback() {
         const currentPath = window.location.pathname;
         const activePage = currentPath.split('/').pop() || 'stories.html';
+        const hostname = window.location.hostname;
+        const isPublicAirlock = hostname === 'www.jason-lab.dev' || hostname === 'jason-lab.dev' || (!hostname.includes('notes.jason-lab.dev') && (activePage === 'stories.html' || activePage === 'protocols.html' || activePage === 'research.html' || activePage === 'public_benchmarks.html' || activePage === 'index.html'));
 
-        console.log(`[MISSION CONTROL] Component connected (v2.0). Active page: ${activePage}`);
+        console.log(`[MISSION CONTROL] Component connected (v2.1). Active page: ${activePage}, isPublic: ${isPublicAirlock}`);
 
-        this.innerHTML = `
+        const publicSection = `
             <div class="nav-home" style="margin-bottom: 20px; font-family: var(--mono-stack, monospace); font-size: 0.85rem;">
                 <a href="https://www.jason-lab.dev/index.html" style="color: var(--accent-color, #4daafc); text-decoration: none;">← Front Page</a>
             </div>
@@ -19,7 +21,9 @@ class MissionControl extends HTMLElement {
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/public_benchmarks.html" class="mission-link ${activePage === 'public_benchmarks.html' ? 'active' : ''}">Public Benchmarks</a></li>
                 </ul>
             </section>
+        `;
 
+        const internalSections = `
             <section id="mission-control">
                 <h2 style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color, #4daafc); margin-top: 25px; letter-spacing: 1px; font-weight: bold; border-top: 1px solid var(--border-color, #30363d); padding-top: 15px;">Mission Control</h2>
                 <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
@@ -30,11 +34,19 @@ class MissionControl extends HTMLElement {
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/features.html" class="mission-link ${activePage === 'features.html' ? 'active' : ''}">Feature Tracker</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/benchmarks.html" class="mission-link ${activePage === 'benchmarks.html' ? 'active' : ''}">Model Benchmarks</a></li>
                 </ul>
+
+                <h2 style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color, #4daafc); margin-top: 20px; letter-spacing: 1px; font-weight: bold; border-top: 1px solid var(--border-color, #30363d); padding-top: 15px;">Publications & Wisdom</h2>
+                <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
+                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/wisdom.html" class="mission-link ${activePage === 'wisdom.html' ? 'active' : ''}">Wisdom Studio</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/paper.html" class="mission-link ${activePage === 'paper.html' ? 'active' : ''}">Paper Studio</a></li>
+                </ul>
                 <div style="font-size: 0.6rem; color: #444; margin-top: 20px; border-top: 1px solid #222; padding-top: 5px;">
                     DEPLOYMENT: [FEDERATED_V2.0]
                 </div>
             </section>
         `;
+
+        this.innerHTML = isPublicAirlock ? publicSection : (publicSection + internalSections);
 
         setTimeout(() => this.initToggle(), 50);
     }
