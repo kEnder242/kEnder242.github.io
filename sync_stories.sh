@@ -33,6 +33,9 @@ CSS_BLOCK='<style>
             border-right: 1px solid var(--border-color);
             padding: 30px 20px;
             overflow-y: auto;
+            transition: left 0.3s ease;
+            box-sizing: border-box;
+            z-index: 1000;
         }
         #sidebar h2 { font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color); margin-top: 25px; letter-spacing: 1px; font-weight: bold; }
         #sidebar ul { list-style: none; padding: 0; margin: 10px 0 0 0; }
@@ -57,11 +60,26 @@ CSS_BLOCK='<style>
         article h3 { font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #fff; }
         .meta { font-size: 0.75rem; color: var(--accent-color); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
         article p { color: var(--text-color); font-size: 0.95rem; margin-bottom: 15px; }
-        #menu-toggle { display: none; }
-        @media (max-width: 768px) {
-            #sidebar { display: none; }
-            main { margin-left: 0; padding: 20px; }
-            #menu-toggle { display: block; background: var(--card-color); color: var(--text-color); border: 1px solid var(--border-color); padding: 10px 20px; margin-bottom: 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        #menu-toggle {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 2000;
+            background: #000;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: var(--mono-stack);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 1024px) {
+            #sidebar { left: -320px; }
+            #sidebar.active { left: 0; }
+            main { margin-left: 0; padding: 80px 20px 40px 20px; }
+            #menu-toggle { display: block; }
         }
     </style>'
 
