@@ -462,13 +462,17 @@
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-024</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
-                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization & Live Integration</div>
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Validation-Aware Synchronization & Live Verification</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Objective</strong>: Ensure the physical Lab state and running daemon processes match active sprint code before testing.</p>
+                                <p><strong>Objective</strong>: Maintain continuous lab liveness and ensure physical daemon processes and silicon endpoints match active sprint code before task certification.</p>
 <ol>
-<li><strong>Sync-Gate</strong>: Before running any <code>[LIVE FIRE]</code>, <code>[SHAKEDOWN]</code>, or integration test (<code>test_integration_*.py</code>), the Agent MUST check service liveness (<code>curl http://127.0.0.1:8000/status</code> or <code>lab_heartbeat</code>).</li>
-<li><strong>Mandatory Service Reload</strong>: If any file in <code>src/logic/</code>, <code>src/nodes/</code>, or <code>src/forge/</code> was edited during the session, the Agent MUST execute <code>sudo systemctl restart lab-attendant.service</code> to flush cached Python processes before executing tests.</li>
-<li><strong>State Trust</strong>: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration tests after every service restart.</li>
+<li><strong>Two-Tier Verification Standard</strong>:<ul>
+<li><strong>Tier 1 (Fast Mock Isolation)</strong>: Unit tests and mocked suites are encouraged for rapid iteration during local coding.</li>
+<li><strong>Tier 2 (Mandatory Live Certification)</strong>: No task or bugfix may be marked complete based on mock tests alone. The Agent must verify against the active running daemon (<code>http://127.0.0.1:8765/status</code> matching local Git HEAD) and reachable hardware silicon seats.</li>
+</ul>
+</li>
+<li><strong>Sync-Gate &amp; Fresh Bytecode</strong>: Pytest automatically checks local Git HEAD against the served boot commit. If a mismatch is detected, the Agent must trigger a daemon restart/reload rather than ignoring the stale state.</li>
+<li><strong>State Trust</strong>: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration queries after every service restart.</li>
 </ol>
 <h3>BKM-020: High-Fidelity Sprint Documentation (Intent Preservation)</h3>
 <p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
@@ -1086,27 +1090,37 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
 │  1. Node Kender (Windows RTX 4090 24GB VRAM / Ollama):                                  │
 │     - Model: hf.co/unsloth/Qwen3-14B-GGUF:UD-Q4_K_XL (9.16 GB resident).                │
 │     - Headroom: ~14.8 GB dedicated VRAM for KV cache + dynamic host RAM paging.          │
-│     - Swarm Role: Layer 2 Orchestrator (Atlas) — absorbs broad sprint plans, global      │
-│       state, and sequences task dependencies. Pure routing (NO CODE EDITS).              │
+│     - Swarm Roles:                                                                       │
+│       * Layer 2 Conductor (Atlas): Absorbs sprint plan, sequences cascade dependencies.  │
+│       * Stage 2 Scout (Librarian): Read/grep anchor discovery (NO file edits, NO bash).  │
+│       * Stage 4 Verifier (Momus): Bash/pytest runner &amp; traceback parser (NO code edits). │
 │                                                                                          │
-│  2. Node Brain (Apple M5 Air 32GB Unified Memory / oMLX dflash):                         │
+│  2. Node Brain (Apple M5 Air 32GB Unified Memory / oMLX via Headroom :8002):              │
 │     - Model: mlx-community--Qwen3.8-27B-4bit (15.2 GB resident).                         │
+│     - Headroom Proxy (:8002): Compresses prompt prefill KV caches to prevent Metal OOM.  │
 │     - Metal Memory Ceiling: iogpu.wired_limit_mb caps wired GPU memory at ~24.46 GB.     │
-│       A 27B model prefilling &gt; 4k tokens triggers immediate Metal allocation panic.      │
-│     - Swarm Role: Layer 3 Fast Worker (Sisyphus-Junior) — bounded (&lt; 1.5k tok) code     │
-│       stub fill via clara-dna_safe_patch. Heavy search/tools disabled.                   │
+│     - Swarm Roles:                                                                       │
+│       * Stage 3 Surgical Worker (Sisyphus-Junior): Bounded (&lt;1.5k tok) code patching.    │
+│       * Blocker Surgeon (Daedalus): 27B deep-reasoning AST/syntax solver summoned ONLY   │
+│         when Junior or verification fails. Bounded context (&lt;1.5k tok), no bash.         │
 │                                                                                          │
-│  SWARM TOPOLOGY INVERSION LAW:                                                           │
-│  - Broad Context (Tier 1 Sprint) MUST flow into 4090 Atlas (Flexible RAM ceiling).       │
-│  - Narrow Contracts (Tier 2 AST Stubs) MUST flow into M5 Air Junior (Fast, strict cap).  │
-│  - Violating this hierarchy by feeding 10k token plans to M5 Air blows the Metal limit;  │
-│    forcing 4090 to execute code edits ties up the orchestrator on low-tier syntax.       │
+│  THE 4-STAGE AGENT CASCADE (AUTONOMOUS SWARM FLOW):                                      │
+│  To prevent Layer 1 (AGY) from excessive &quot;spoon-feeding&quot; token traps while protecting    │
+│  small local model contexts, Atlas drives a 4-stage sequential subagent cascade:         │
+│  1. Stage 1 (Atlas): Ingest sprint plan on disk, establish task sequence.                │
+│  2. Stage 2 (Librarian): Inspect target code &amp; extract exact incumbent anchors/imports.  │
+│  3. Stage 3 (Sisyphus-Junior): Apply surgical diff via clara-dna_safe_patch.            │
+│  4. Stage 4 (Momus): Execute verification command via bash, parse and digest tracebacks. │
+│  * Escalation Gate: If Momus fails, Atlas summons Daedalus on M5 Air 27B to resolve it. │
+│  * Ephemeral Context Rule: Each stage runs via task(), auto-flushing context on exit.    │
 │                                                                                          │
 │  SCARS RETROSPECTIVE:                                                                    │
 │  - Scar #1: Feeding broad sprint context directly to M5 Air 27B caused silent kernel     │
 │    hangs when Metal prefill activation buffers exceeded wired unified memory limits.     │
 │  - Scar #2: Atlas attempting direct file editing caused hallucinated imports; resolved   │
-│    by hard-pinning Atlas permissions to edit:deny and task(category=&quot;unspecified-low&quot;).  │
+│    by hard-pinning Atlas permissions to edit:deny and delegating via task().             │
+│  - Scar #3: Junior running tests polluted its context with verbose traceback dumps;     │
+│    resolved by isolating test execution and linting to Momus (Stage 4).                  │
 │                                                                                          │
 └──────────────────────────────────────────────────────────────────────────────────────────┘
 </code></pre>
@@ -1282,6 +1296,19 @@ For each story:
 2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
 3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
 </code></pre>
+<hr />
+<h2>[BKM-053] Multi-Remote Secondary Git Mirror &amp; Cloud Redundancy Protocol</h2>
+<p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+<strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
+<strong>Status:</strong> DESIGN / BACKLOG  </p>
+<h3>1. Operational Mandate</h3>
+<p>To protect the 18-year engineering archive, systemd operational ledgers, and agentic codebases against single-platform outages, credential suspensions, or cloud service revocations, all federated lab repositories (<code>Dev_Lab</code>, <code>Portfolio_Dev</code>, <code>HomeLabAI</code>) MUST maintain dual-push secondary Git transport remotes alongside primary origins (GitLab/GitHub).</p>
+<h3>2. Implementation Mechanism</h3>
+<p>Configure dual-push Git remote targets via Git configuration:</p>
+<pre><code class="language-bash">git remote set-url --add --push origin &lt;primary-origin-url&gt;
+git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
+</code></pre>
+<p>When manual syncs or authorized replication scripts execute <code>git push origin &lt;branch&gt;</code>, Git automatically distributes commits synchronously to both hosting endpoints without introducing manual workflow steps.</p>
                             </div>
                         </td>
                     </tr>
@@ -1290,6 +1317,6 @@ For each story:
         </section>
     </main>
 
-    <script src="mission-control.js?v=d9995719"></script>
+    <script src="mission-control.js?v=d864d11c"></script>
 </body>
 </html>
