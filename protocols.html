@@ -1381,6 +1381,122 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-054</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero In-Process PyTorch on Orchestrator Host (Precomputed & Offloaded Embeddings Law)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-567]</code> / <code>[BKM-054]</code><br />
+<strong>Domain:</strong> Memory Guard, System Stability &amp; Zero-Torch Orchestration Architecture<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>The orchestrator host (<code>z87-Linux</code>) has a strict 16GB physical RAM ceiling shared with running browser sessions, Xorg, VS Code / Antigravity CLI, system daemons, and background monitors. Loading PyTorch (<code>import torch</code>), CUDA libraries, or <code>SentenceTransformer</code> directly inside the orchestrator's Python process consumes 2.5GB to 4.5GB of unpageable RSS, rapidly triggering Linux OOM killer reboots or silent Xorg desktop session resets during active sprints.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero In-Process PyTorch:</strong> All orchestrator Python scripts (including fast test suites, CLI tools, and background sync workers) are STRICTLY FORBIDDEN from importing <code>torch</code>, <code>torchvision</code>, or <code>sentence_transformers</code> in-process on <code>z87-Linux</code>.</li>
+<li><strong>Dual Path for Embeddings:</strong></li>
+<li><strong>Path A (Remote Offload):</strong> Query silicon endpoints (e.g. M5 Air via REST on port 8000 or local vLLM on port 8088) to generate dense embeddings.</li>
+<li><strong>Path B (Precomputed Embeddings):</strong> Use pre-generated vector caches (<code>.npy</code> or <code>.json</code> fixtures) stored in the repo or ChromaDB collections for similarity lookups and dedup testing.</li>
+<li><strong>AST Lint Guard:</strong> Automated linters and pre-commit hooks (<code>FEAT-567</code>) must actively audit orchestrator code to reject any PR or commit introducing direct <code>torch</code> imports.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+</table>
+<h4>4. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
+<ol>
+<li><strong>Inspection Gate, Not an Automatic Kill:</strong> The 5-minute watchdog ceiling is an <strong>Inspection Gate</strong>, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.</li>
+<li><strong>Active Progress Probe:</strong> At the 5-minute mark, the orchestrator must inspect the live session:</li>
+<li>Query <code>GET /session/{id}</code> or <code>GET /session/{id}/message</code> to inspect token generation and tool calls.</li>
+<li><strong>Progressing:</strong> If tokens are actively flowing and constructive work is progressing, extend the timer window.</li>
+<li><strong>Stalled:</strong> If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.</li>
+<li><strong>Mandatory Zombie Cleanup:</strong> When an attempt is halted, timed out, or interrupted, the harness (<code>delegate.py</code>) and orchestrator MUST issue an explicit <code>POST /session/{id}/abort</code> frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-052</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-530]</code> / <code>[BKM-052]</code><br />
+<strong>Domain:</strong> External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Principle</h4>
+<p>When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts <strong>strictly as a headless execution sequencer</strong> for <code>delegate.py</code>.</p>
+<h4>2. The Invariant Rules</h4>
+<ol>
+<li><strong>No Direct Code Generation:</strong> The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.</li>
+<li><strong>No Human Docs:</strong> Treat sprint documents on disk as executable instruction sets.</li>
+<li><strong>Serialized Dispatch Only:</strong> Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until <code>delegate.py</code> exits.</li>
+<li><strong>Zero Self-Correction Loops:</strong> If <code>delegate.py</code> returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (<code>--local-only</code> $\rightarrow$ <code>--cloud-only</code> $\rightarrow$ surface blocker to user).</li>
+</ol>
+<h4>3. The 3-Step Driver Execution Loop</h4>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│ Step 1: Ingest Sprint Document Pointer                     │
+│ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────┐
+│ Step 2: Execute Headless Delegation via Bash               │
+│ Invoke delegate.py for Story N:                            │
+│   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
+│     --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot;             │
+│     --reference &lt;sprint_plan_path&gt;                         │
+│     --target &lt;target_file&gt; --mode execute                  │
+│     --details &quot;Execute Story N in &lt;sprint_plan_path&gt;...&quot;   │
+│     --local-only                                           │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                ┌─────────────┴─────────────┐
+                ▼                           ▼
+      [Exit Code 0 (PASS)]        [Exit Code != 0 (FAIL)]
+                │                           │
+                ▼                           ▼
+┌───────────────────────────┐   ┌───────────────────────────┐
+│ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
+│ • git add &lt;target_files&gt;  │   │ Retry once with           │
+│ • git commit -m &quot;...&quot;     │   │ `--cloud-only`. If fail,  │
+│ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
+└───────────────────────────┘   └───────────────────────────┘
+</code></pre>
+<h4>4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)</h4>
+<p>When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:</p>
+<pre><code class="language-text">You are the Federated Lab Delegation Driver (BKM-052).
+Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
+DO NOT write code or generate file diffs yourself.
+
+For each story:
+1. Run:
+   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot; --reference Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md --target &lt;target_path&gt; --mode execute --details &quot;Execute Story &lt;N&gt; in Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md (Section: Story &lt;N&gt;). Follow the 4-anchor specification in that section to modify target file using clara-dna_safe_patch. Verify with pytest.&quot; --local-only
+2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
+3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-053</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Remote Secondary Git Mirror & Cloud Redundancy Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+<strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
+<strong>Status:</strong> DESIGN / BACKLOG  </p>
+<h3>1. Operational Mandate</h3>
+<p>To protect the 18-year engineering archive, systemd operational ledgers, and agentic codebases against single-platform outages, credential suspensions, or cloud service revocations, all federated lab repositories (<code>Dev_Lab</code>, <code>Portfolio_Dev</code>, <code>HomeLabAI</code>) MUST maintain dual-push secondary Git transport remotes alongside primary origins (GitLab/GitHub).</p>
+<h3>2. Implementation Mechanism</h3>
+<p>Configure dual-push Git remote targets via Git configuration:</p>
+<pre><code class="language-bash">git remote set-url --add --push origin &lt;primary-origin-url&gt;
+git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
+</code></pre>
+<p>When manual syncs or authorized replication scripts execute <code>git push origin &lt;branch&gt;</code>, Git automatically distributes commits synchronously to both hosting endpoints without introducing manual workflow steps.</p>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
             </table>
         </section>
