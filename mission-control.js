@@ -3,9 +3,9 @@ class MissionControl extends HTMLElement {
         const currentPath = window.location.pathname;
         const activePage = currentPath.split('/').pop() || 'stories.html';
         const hostname = window.location.hostname;
-        const isPublicAirlock = hostname === 'www.jason-lab.dev' || hostname === 'jason-lab.dev' || (!hostname.includes('notes.jason-lab.dev') && (activePage === 'stories.html' || activePage === 'protocols.html' || activePage === 'research.html' || activePage === 'public_benchmarks.html' || activePage === 'timeline.html' || activePage === 'index.html'));
+        const isPublicAirlock = hostname === 'www.jason-lab.dev' || hostname === 'jason-lab.dev' || (!hostname.includes('notes.jason-lab.dev') && (activePage === 'stories.html' || activePage === 'protocols.html' || activePage === 'research.html' || activePage === 'public_benchmarks.html' || activePage === 'index.html'));
 
-        console.log(`[MISSION CONTROL] Component connected (v2.2). Active page: ${activePage}, isPublic: ${isPublicAirlock}`);
+        console.log(`[MISSION CONTROL] Component connected (v2.3). Active page: ${activePage}, isPublic: ${isPublicAirlock}`);
 
         const publicSection = `
             <div class="nav-home" style="margin-bottom: 20px; font-family: var(--mono-stack, monospace); font-size: 0.85rem;">
@@ -18,17 +18,15 @@ class MissionControl extends HTMLElement {
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/stories.html" class="mission-link ${activePage === 'stories.html' ? 'active' : ''}">Work Stories</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/protocols.html" class="mission-link ${activePage === 'protocols.html' ? 'active' : ''}">Lab Protocols</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/research.html" class="mission-link ${activePage === 'research.html' ? 'active' : ''}">Research Pipeline</a></li>
-                    <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/timeline.html" class="mission-link ${activePage === 'timeline.html' ? 'active' : ''}">Novel Ideas Timeline</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://www.jason-lab.dev/public_benchmarks.html" class="mission-link ${activePage === 'public_benchmarks.html' ? 'active' : ''}">Public Benchmarks</a></li>
                 </ul>
             </section>
         `;
 
-        const internalSections = `
+        const missionControlSection = `
             <section id="mission-control">
                 <h2 style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color, #4daafc); margin-top: 25px; letter-spacing: 1px; font-weight: bold; border-top: 1px solid var(--border-color, #30363d); padding-top: 15px;">Mission Control</h2>
                 <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
-                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/timeline.html" class="mission-link ${activePage === 'timeline.html' ? 'active' : ''}">Novel Ideas Timeline</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/career_notes.html" class="mission-link ${activePage === 'career_notes.html' ? 'active' : ''}">Career Logs</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/files.html" class="mission-link ${activePage === 'files.html' ? 'active' : ''}">Artifact Files</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/status.html" class="mission-link ${activePage === 'status.html' ? 'active' : ''}">Lab Status</a></li>
@@ -36,9 +34,14 @@ class MissionControl extends HTMLElement {
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/features.html" class="mission-link ${activePage === 'features.html' ? 'active' : ''}">Feature Tracker</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/benchmarks.html" class="mission-link ${activePage === 'benchmarks.html' ? 'active' : ''}">Model Benchmarks</a></li>
                 </ul>
+            </section>
+        `;
 
+        const publicationsSection = `
+            <section id="publications-wisdom">
                 <h2 style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color, #4daafc); margin-top: 20px; letter-spacing: 1px; font-weight: bold; border-top: 1px solid var(--border-color, #30363d); padding-top: 15px;">Publications & Wisdom</h2>
                 <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
+                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/timeline.html" class="mission-link ${activePage === 'timeline.html' ? 'active' : ''}">Novel Ideas Timeline</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/wisdom.html" class="mission-link ${activePage === 'wisdom.html' ? 'active' : ''}">Wisdom Studio</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/writer.html" class="mission-link ${activePage === 'writer.html' ? 'active' : ''}">Writer Studio</a></li>
                 </ul>
@@ -48,7 +51,7 @@ class MissionControl extends HTMLElement {
             </section>
         `;
 
-        this.innerHTML = isPublicAirlock ? publicSection : (publicSection + internalSections);
+        this.innerHTML = publicSection + missionControlSection + (isPublicAirlock ? '' : publicationsSection);
 
         setTimeout(() => this.initToggle(), 50);
     }

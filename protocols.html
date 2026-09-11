@@ -492,8 +492,15 @@
 <li><strong>Sync-Gate &amp; Fresh Bytecode</strong>: Pytest automatically checks local Git HEAD against the served boot commit. If a mismatch is detected, the Agent must trigger a daemon restart/reload rather than ignoring the stale state.</li>
 <li><strong>State Trust</strong>: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration queries after every service restart.</li>
 </ol>
-<h3>BKM-020: High-Fidelity Sprint Documentation (Intent Preservation)</h3>
-<p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-020</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">High-Fidelity Sprint Documentation (Intent Preservation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Objective</strong>: Prevent 'Loss of Intent' during context-window shifts or session restores.
 1.  <strong>Task Verbosity</strong>: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.
 2.  <strong>Historical Trace</strong>: Sprints must document the forensic anchors (logs, code fragments) that justify the change.
 3.  <strong>Absolute Append</strong>: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.
@@ -1183,9 +1190,15 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
 <li>If a subagent terminates on an interactive popup or silent finish (<code>finish=unknown</code>), <code>delegate.py</code> breaks out with code 2 (<code>AWAITING_INPUT</code>) and provides a resume command.</li>
 <li><em>"When delegation stumbles, we halt the sprint to fix the harness; we never manually bypass the failure to finish the sprint."</em></li>
 </ul>
-<hr />
-<h3>[BKM-051] Subagent MCP Tool Scoping &amp; Context Ballast Protocol</h3>
-<p><strong>Feature Anchor:</strong> <code>[FEAT-526]</code> / <code>[BKM-051]</code><br />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-051</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Subagent MCP Tool Scoping & Context Ballast Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-526]</code> / <code>[BKM-051]</code><br />
 <strong>Domain:</strong> OpenAgent Swarm Topology, MCP Overhead Mitigation &amp; Subagent Prompt Budget<br />
 <strong>Status:</strong> ACTIVE / MANDATORY  </p>
 <h4>1. The Tool Schema Overhead Problem</h4>
@@ -1207,71 +1220,105 @@ For internal swarm topology, model tool-calling constraints (KENDER/Qwen3), OmO 
    }</code></li>
 <li><strong>Target Worker Input Ceiling:</strong> A worker subagent's initial prompt MUST stay below <strong>1,500 tokens</strong>.</li>
 </ol>
-<pre><code>
----
-
-### [BKM-049] Tri-Loop Story Delegation &amp; Diagnostic Protocol
-**Feature Anchor:** `[FEAT-522]` / `[BKM-049]`  
-**Domain:** Swarm Delegation, Autonomous Subagent Execution &amp; Harness Diagnostics  
-**Status:** ACTIVE / MANDATORY  
-
-#### 1. The Tri-Loop Law
-1. **Three-Tier Escalation Ladder:** A story assigned to delegation executes through a strictly structured 3-tier escalation ladder:
-   * **Attempt 1: Sovereign Local Silicon (`[SWARM:LOCAL]`)** — Windows RTX 4090 (Atlas) + macOS M5 Air (Junior). 100% private, sovereign execution.
-   * **Attempt 2: Cloud Swarm (`[SWARM:CLOUD]`)** — OpenCode Cloud / OpenRouter / DeepSeek / Cohere. Burst capacity for complex reasoning when local models hit context or syntax boundaries.
-   * **Attempt 3: Primary Agent (`[AGY:TAKEOVER]`)** — AGY executes direct AST implementation and architectural certification, preserving primary tokens.
-2. **Never Blindly Retry:** A retry between tiers is strictly defined as an execution attempt preceded by root-cause diagnosis. Simply tweaking prompt wording without fixing underlying tool/permission mismatch is an invariant violation.
-3. **Safe-Patch Mandate (Anti-Bash-Clobber):** Subagents MUST NOT use destructive bash file writes (`cat &lt;&lt; 'EOF' &gt;` or `echo &gt;`) on existing codebase files. Subagents must invoke `clara-dna_safe_patch` (or atomic patchers) for existing files, reserving `write` strictly for new standalone files.
-
-#### 2. Mandatory Diagnostics Between Retries
-Before initiating a retry for a stalled, failed, or timed-out subagent, the orchestrator MUST perform three diagnostic probes:
-1. **Server &amp; Silicon State:**
-   - Probe inference endpoints (`curl http://192.168.1.46:8000/v1/models`, `nvidia-smi`).
-   - Check socket states (`ss -tulpn | grep 4097` or target port) to ensure child connections are not hanging.
-2. **Session Transcripts &amp; Logs:**
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-049</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Tri-Loop Story Delegation & Diagnostic Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-522]</code> / <code>[BKM-049]</code><br />
+<strong>Domain:</strong> Swarm Delegation, Autonomous Subagent Execution &amp; Harness Diagnostics<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Tri-Loop Law</h4>
+<ol>
+<li><strong>Three-Tier Escalation Ladder:</strong> A story assigned to delegation executes through a strictly structured 3-tier escalation ladder:</li>
+<li><strong>Attempt 1: Sovereign Local Silicon (<code>[SWARM:LOCAL]</code>)</strong> — Windows RTX 4090 (Atlas) + macOS M5 Air (Junior). 100% private, sovereign execution.</li>
+<li><strong>Attempt 2: Cloud Swarm (<code>[SWARM:CLOUD]</code>)</strong> — OpenCode Cloud / OpenRouter / DeepSeek / Cohere. Burst capacity for complex reasoning when local models hit context or syntax boundaries.</li>
+<li><strong>Attempt 3: Primary Agent (<code>[AGY:TAKEOVER]</code>)</strong> — AGY executes direct AST implementation and architectural certification, preserving primary tokens.</li>
+<li><strong>Never Blindly Retry:</strong> A retry between tiers is strictly defined as an execution attempt preceded by root-cause diagnosis. Simply tweaking prompt wording without fixing underlying tool/permission mismatch is an invariant violation.</li>
+<li><strong>Safe-Patch Mandate (Anti-Bash-Clobber):</strong> Subagents MUST NOT use destructive bash file writes (<code>cat &lt;&lt; 'EOF' &gt;</code> or <code>echo &gt;</code>) on existing codebase files. Subagents must invoke <code>clara-dna_safe_patch</code> (or atomic patchers) for existing files, reserving <code>write</code> strictly for new standalone files.</li>
+</ol>
+<h4>2. Mandatory Diagnostics Between Retries</h4>
+<p>Before initiating a retry for a stalled, failed, or timed-out subagent, the orchestrator MUST perform three diagnostic probes:
+1. <strong>Server &amp; Silicon State:</strong>
+   - Probe inference endpoints (<code>curl http://192.168.1.46:8000/v1/models</code>, <code>nvidia-smi</code>).
+   - Check socket states (<code>ss -tulpn | grep 4097</code> or target port) to ensure child connections are not hanging.
+2. <strong>Session Transcripts &amp; Logs:</strong>
    - Inspect OpenCode / subagent transcripts for syntax loops, compaction triggers, or unhandled tool rejections.
    - Verify whether OpenCode auto-compaction hijacked the context window.
-3. **Harness &amp; Configuration Audit:**
-   - Audit `delegate.py` and `opencode.json` for prompt contradictions (e.g. Single Task Law vs. micro-patterns).
-   - Verify file permissions, diff patch formats, and linting constraints.
-
-#### 3. Root Cause Escalation Matrix
-| Failure Symptom | Diagnostic Finding | Remediation Required Before Retry |
-| :--- | :--- | :--- |
-| `&quot;Model is busy&quot;` / 503 | Parallel requests exceeded single-stream ceiling | Enforce Single Task Law; serialize dispatches. |
-| Subagent freezes mid-read | Auto-compaction agent spawned | Set `&quot;compaction&quot;: {&quot;auto&quot;: false}` in `opencode.json`. |
-| Ruff / Syntax loop | Indentation or multiline whitespace slip | Provide explicit AST line anchors or simplify patch scope. |
-| Bash clobber attempt | Subagent attempted `echo &gt;` on existing file | Inject explicit `clara-dna_safe_patch` JSON tool call schema into prompt. |
-| Code 3: Silent Failure | 0 text tokens streamed; session deadlocked | Check inference server health; escalate to Attempt 2 (Cloud Swarm). |
-
-#### 4. The 5-Minute Watchdog &amp; Inspection Gate Law
-1. **Inspection Gate, Not an Automatic Kill:** The 5-minute watchdog ceiling is an **Inspection Gate**, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.
-2. **Active Progress Probe:** At the 5-minute mark, the orchestrator must inspect the live session:
-   - Query `GET /session/{id}` or `GET /session/{id}/message` to inspect token generation and tool calls.
-   - **Progressing:** If tokens are actively flowing and constructive work is progressing, extend the timer window.
-   - **Stalled:** If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.
-3. **Mandatory Zombie Cleanup:** When an attempt is halted, timed out, or interrupted, the harness (`delegate.py`) and orchestrator MUST issue an explicit `POST /session/{id}/abort` frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.
-
----
-
-### [BKM-052] Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)
-**Feature Anchor:** `[FEAT-530]` / `[BKM-052]`  
-**Domain:** External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch  
-**Status:** ACTIVE / MANDATORY  
-
-#### 1. The Principle
-When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts **strictly as a headless execution sequencer** for `delegate.py`.
-
-#### 2. The Invariant Rules
-1. **No Direct Code Generation:** The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.
-2. **No Human Docs:** Treat sprint documents on disk as executable instruction sets.
-3. **Serialized Dispatch Only:** Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until `delegate.py` exits.
-4. **Zero Self-Correction Loops:** If `delegate.py` returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (`--local-only` $\rightarrow$ `--cloud-only` $\rightarrow$ surface blocker to user).
-
-#### 3. The 3-Step Driver Execution Loop
-
-</code></pre>
-<p>┌────────────────────────────────────────────────────────────┐
+3. <strong>Harness &amp; Configuration Audit:</strong>
+   - Audit <code>delegate.py</code> and <code>opencode.json</code> for prompt contradictions (e.g. Single Task Law vs. micro-patterns).
+   - Verify file permissions, diff patch formats, and linting constraints.</p>
+<h4>3. Root Cause Escalation Matrix</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Failure Symptom</th>
+<th style="text-align: left;">Diagnostic Finding</th>
+<th style="text-align: left;">Remediation Required Before Retry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>"Model is busy"</code> / 503</td>
+<td style="text-align: left;">Parallel requests exceeded single-stream ceiling</td>
+<td style="text-align: left;">Enforce Single Task Law; serialize dispatches.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Subagent freezes mid-read</td>
+<td style="text-align: left;">Auto-compaction agent spawned</td>
+<td style="text-align: left;">Set <code>"compaction": {"auto": false}</code> in <code>opencode.json</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ruff / Syntax loop</td>
+<td style="text-align: left;">Indentation or multiline whitespace slip</td>
+<td style="text-align: left;">Provide explicit AST line anchors or simplify patch scope.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bash clobber attempt</td>
+<td style="text-align: left;">Subagent attempted <code>echo &gt;</code> on existing file</td>
+<td style="text-align: left;">Inject explicit <code>clara-dna_safe_patch</code> JSON tool call schema into prompt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Code 3: Silent Failure</td>
+<td style="text-align: left;">0 text tokens streamed; session deadlocked</td>
+<td style="text-align: left;">Check inference server health; escalate to Attempt 2 (Cloud Swarm).</td>
+</tr>
+</tbody>
+</table>
+<h4>4. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
+<ol>
+<li><strong>Inspection Gate, Not an Automatic Kill:</strong> The 5-minute watchdog ceiling is an <strong>Inspection Gate</strong>, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.</li>
+<li><strong>Active Progress Probe:</strong> At the 5-minute mark, the orchestrator must inspect the live session:</li>
+<li>Query <code>GET /session/{id}</code> or <code>GET /session/{id}/message</code> to inspect token generation and tool calls.</li>
+<li><strong>Progressing:</strong> If tokens are actively flowing and constructive work is progressing, extend the timer window.</li>
+<li><strong>Stalled:</strong> If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.</li>
+<li><strong>Mandatory Zombie Cleanup:</strong> When an attempt is halted, timed out, or interrupted, the harness (<code>delegate.py</code>) and orchestrator MUST issue an explicit <code>POST /session/{id}/abort</code> frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-052</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-530]</code> / <code>[BKM-052]</code><br />
+<strong>Domain:</strong> External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Principle</h4>
+<p>When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts <strong>strictly as a headless execution sequencer</strong> for <code>delegate.py</code>.</p>
+<h4>2. The Invariant Rules</h4>
+<ol>
+<li><strong>No Direct Code Generation:</strong> The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.</li>
+<li><strong>No Human Docs:</strong> Treat sprint documents on disk as executable instruction sets.</li>
+<li><strong>Serialized Dispatch Only:</strong> Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until <code>delegate.py</code> exits.</li>
+<li><strong>Zero Self-Correction Loops:</strong> If <code>delegate.py</code> returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (<code>--local-only</code> $\rightarrow$ <code>--cloud-only</code> $\rightarrow$ surface blocker to user).</li>
+</ol>
+<h4>3. The 3-Step Driver Execution Loop</h4>
+<pre><code>┌────────────────────────────────────────────────────────────┐
 │ Step 1: Ingest Sprint Document Pointer                     │
 │ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
 └─────────────────────────────┬──────────────────────────────┘
@@ -1281,10 +1328,10 @@ When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or enc
 │ Step 2: Execute Headless Delegation via Bash               │
 │ Invoke delegate.py for Story N:                            │
 │   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
-│     --sprint <S> --story <N> --title "<Title>"             │
-│     --reference <sprint_plan_path>                         │
-│     --target <target_file> --mode execute                  │
-│     --details "Execute Story N in <sprint_plan_path>..."   │
+│     --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot;             │
+│     --reference &lt;sprint_plan_path&gt;                         │
+│     --target &lt;target_file&gt; --mode execute                  │
+│     --details &quot;Execute Story N in &lt;sprint_plan_path&gt;...&quot;   │
 │     --local-only                                           │
 └─────────────────────────────┬──────────────────────────────┘
                               │
@@ -1295,16 +1342,14 @@ When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or enc
                 ▼                           ▼
 ┌───────────────────────────┐   ┌───────────────────────────┐
 │ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
-│ • git add <target_files>  │   │ Retry once with           │
-│ • git commit -m "..."     │   │ <code>--cloud-only</code>. If fail,  │
+│ • git add &lt;target_files&gt;  │   │ Retry once with           │
+│ • git commit -m &quot;...&quot;     │   │ `--cloud-only`. If fail,  │
 │ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
-└───────────────────────────┘   └───────────────────────────┘</p>
-<pre><code>
-#### 4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)
-When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:
-
-```text
-You are the Federated Lab Delegation Driver (BKM-052).
+└───────────────────────────┘   └───────────────────────────┘
+</code></pre>
+<h4>4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)</h4>
+<p>When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:</p>
+<pre><code class="language-text">You are the Federated Lab Delegation Driver (BKM-052).
 Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
 DO NOT write code or generate file diffs yourself.
 
@@ -1314,9 +1359,15 @@ For each story:
 2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
 3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
 </code></pre>
-<hr />
-<h2>[BKM-053] Multi-Remote Secondary Git Mirror &amp; Cloud Redundancy Protocol</h2>
-<p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-053</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Remote Secondary Git Mirror & Cloud Redundancy Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
 <strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
 <strong>Status:</strong> DESIGN / BACKLOG  </p>
 <h3>1. Operational Mandate</h3>
@@ -1335,6 +1386,6 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
         </section>
     </main>
 
-    <script src="mission-control.js?v=93fc2cec"></script>
+    <script src="mission-control.js?v=888b46e6"></script>
 </body>
 </html>
