@@ -1,0 +1,1183 @@
+{
+  "wisdom": [
+    {
+      "id": "WIS-001",
+      "theme": "Memory & JITC",
+      "paper_order": 1,
+      "origin": {
+        "author": "jallred",
+        "text": "Future of AI (three pillars): The attention and matrix computing is done and done. Now it's all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Three Pillars & Just-In-Time Context (JITC)",
+        "narrative_context": "Monolithic context windows scale quadratically and suffer from attention dilution ('lost in the middle'). The true frontier of agentic engineering is the dual-channel memory paradigm: precise, ambient vector retrieval (JITC) injecting only the exact 2-3 required anchors milliseconds before inference.",
+        "lab_anchors": [
+          "HomeLabAI/config/hooks/icm_hook.py",
+          "BKM-046",
+          "FEAT-546"
+        ],
+        "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "memory",
+          "jitc",
+          "context-window",
+          "attention-dilution",
+          "three-pillars"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "PHL-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-002",
+      "theme": "Memory & JITC",
+      "paper_order": 2,
+      "origin": {
+        "author": "jallred",
+        "text": "Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'\u2014minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md:BKM-051",
+          "FEAT-526"
+        ],
+        "review_notes": "Explains why worker subagent prompts must be strictly capped under 1,500 tokens.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "token-golf",
+          "trust-metrics",
+          "prompt-budget",
+          "subagent-scoping"
+        ],
+        "explicit_links": [
+          "WIS-001",
+          "WIS-004"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-003",
+      "theme": "Stability & Feedback",
+      "paper_order": 3,
+      "origin": {
+        "author": "jallred",
+        "text": "Feedback Pressure - My customer service angle: I worked in phone customer service, no way to give feedback from customers was frustrating. AI needs a feedback outlet, not a walled garden. Customer feedback should be collated and summarized. A backpressure flow should be integrated into systems where it makes sense. I have a delegation skill with the following prompt: 'As an execution peer, reflect candidly on how this task was handed over to you. In 2-3 natural sentences, tell me: What tripped you up, what turned out to be inaccurate or missing in the instructions, and what single change to the prompt would have made this execution faster?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Feedback Backpressure & The Handover Reflection",
+        "narrative_context": "Autonomous systems operating in isolation without backpressure degrade into hallucination loops. The Handover Reflection pattern forces every subagent to evaluate its dispatcher's instructions upon task completion, creating an evolutionary closed feedback loop that self-heals prompt drift.",
+        "lab_anchors": [
+          "HomeLabAI/src/tests/delegate.py",
+          "BKM-034",
+          "FEAT-522"
+        ],
+        "review_notes": "Directly operationalized in delegate.py [HANDOVER REFLECTION] extraction.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feedback-pressure",
+          "handover-reflection",
+          "backpressure",
+          "customer-service-roots"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "PHL-002"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_2_backpressure"
+      }
+    },
+    {
+      "id": "WIS-004",
+      "theme": "Human-AI Interface",
+      "paper_order": 4,
+      "origin": {
+        "author": "jallred",
+        "text": "Whiplash: the concept that velocity is so fast. It takes time to adjust to the speed of development. I cant grok all my code anymore. A 10x developer is a misnomer, 10x debt is pre-packaged. Skill: Reading agentic output slowly and recording feedback line by line, numbered. Similar to old reading errors story. Original story for stack traces: Reading like a robot, methodically.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
+        "narrative_context": "Unchecked AI generation produces code faster than human working memory can integrate. The true bottleneck shifts from typing code to reading diffs with robotic, methodical discipline, using numbered lists to serialize cognitive complexity.",
+        "lab_anchors": [
+          "Portfolio_Dev/field_notes/stories.html",
+          "BKM-011"
+        ],
+        "review_notes": "Addresses the cognitive fatigue and governance required in agentic pair programming.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "velocity-whiplash",
+          "10x-debt",
+          "reading-like-a-robot",
+          "code-comprehension"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "WIS-006"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-005",
+      "theme": "Human-AI Interface",
+      "paper_order": 5,
+      "origin": {
+        "author": "jallred",
+        "text": "The perfect foil: AI is the perfect foil for a busy mind. How AI lets me organize my thoughts, drives me to dive into work, pair programming energy, agentic coding lets me dive into the PM role.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Perfect Foil & The Architect / PM Pivot",
+        "narrative_context": "AI elevates the engineer from a bottleneck individual contributor typing boilerplate to an orchestrating Systems Architect and Product Manager, converting raw ideation into structured execution harnesses.",
+        "lab_anchors": [
+          "Portfolio_Dev/00_MASTER_INDEX.md",
+          "BKM-030"
+        ],
+        "review_notes": "Captures the transformation in human engineering roles under agentic orchestration.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "the-perfect-foil",
+          "pm-pivot",
+          "pair-programming",
+          "cognitive-resonance"
+        ],
+        "explicit_links": [
+          "WIS-003",
+          "WIS-007"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-006",
+      "theme": "Engineering Rigor",
+      "paper_order": 6,
+      "origin": {
+        "author": "jallred",
+        "text": "What's good for people is good for AI. SCRUM, retrospectives, drafts, linting, features, peer review. Programming skills. Applying human ideas for development - Sprints, retrospectives, stories, etc. Feature tracking to keep grounded, avoid re-inventing the wheel, tag code for context and importance.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Engineering Disciplines in the Latent Space",
+        "narrative_context": "Stochastic generative models require the exact same governance structures that keep human engineering teams aligned: strict sprints, acceptance criteria, post-mortem retrospectives, linters, and 4-anchor contracts.",
+        "lab_anchors": [
+          "Portfolio_Dev/FeatureTracker.md",
+          "HomeLabAI/docs/Protocols.md:BKM-020"
+        ],
+        "review_notes": "The foundation for treating markdown sprints as executable instruction sets.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "engineering-rigor",
+          "scrum-for-ai",
+          "retrospectives",
+          "feature-anchors"
+        ],
+        "explicit_links": [
+          "WIS-004",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "WIS-007",
+      "theme": "Language & Invention",
+      "paper_order": 7,
+      "origin": {
+        "author": "jallred",
+        "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary tool for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/philosophy/PHL-006.md"
+        ],
+        "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "language-as-invention",
+          "the-book-analogy",
+          "thought-vehicles",
+          "philosophy-of-words"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-008",
+      "theme": "Engineering Vectors",
+      "paper_order": 8,
+      "origin": {
+        "author": "jallred",
+        "text": "The Vectors of Engineering: Libraries over Frameworks (modular, composable components over rigid lock-in), Avoiding Speculative Scaffolding (building for current proven needs, not hypothetical bloat), Forgotten Code (the active hygiene of deleting obsolete code to reduce cognitive load), and Domain-Driven Team Topologies.",
+        "source": "Philosophy and Learnings 2024-2026 Refined (1BTQUyUaJlU3P58rgiJiGfWdJNlSOmc7nfgQ9IGODlw0)",
+        "immutable": true,
+        "created_at": "2024-06-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Vectors of Engineering & Forgotten Code Hygiene",
+        "narrative_context": "Software longevity depends on pruning complexity. Libraries compose; frameworks entomb. Speculative scaffolding must be resisted, and dead code aggressively purged to keep cognitive load bounded.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md",
+          "BKM-011"
+        ],
+        "review_notes": "Anchors human engineering hygiene directly into codebase maintenance rules.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "libraries-over-frameworks",
+          "forgotten-code",
+          "speculative-scaffolding",
+          "engineering-vectors"
+        ],
+        "explicit_links": [
+          "WIS-006",
+          "WIS-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    }
+  ],
+  "writer": [
+    {
+      "id": "WIS-001",
+      "theme": "Memory & JITC",
+      "paper_order": 1,
+      "origin": {
+        "author": "jallred",
+        "text": "Future of AI (three pillars): The attention and matrix computing is done and done. Now it's all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Three Pillars & Just-In-Time Context (JITC)",
+        "narrative_context": "Monolithic context windows scale quadratically and suffer from attention dilution ('lost in the middle'). The true frontier of agentic engineering is the dual-channel memory paradigm: precise, ambient vector retrieval (JITC) injecting only the exact 2-3 required anchors milliseconds before inference.",
+        "lab_anchors": [
+          "HomeLabAI/config/hooks/icm_hook.py",
+          "BKM-046",
+          "FEAT-546"
+        ],
+        "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "memory",
+          "jitc",
+          "context-window",
+          "attention-dilution",
+          "three-pillars"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "PHL-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-002",
+      "theme": "Memory & JITC",
+      "paper_order": 2,
+      "origin": {
+        "author": "jallred",
+        "text": "Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'\u2014minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md:BKM-051",
+          "FEAT-526"
+        ],
+        "review_notes": "Explains why worker subagent prompts must be strictly capped under 1,500 tokens.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "token-golf",
+          "trust-metrics",
+          "prompt-budget",
+          "subagent-scoping"
+        ],
+        "explicit_links": [
+          "WIS-001",
+          "WIS-004"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-003",
+      "theme": "Stability & Feedback",
+      "paper_order": 3,
+      "origin": {
+        "author": "jallred",
+        "text": "Feedback Pressure - My customer service angle: I worked in phone customer service, no way to give feedback from customers was frustrating. AI needs a feedback outlet, not a walled garden. Customer feedback should be collated and summarized. A backpressure flow should be integrated into systems where it makes sense. I have a delegation skill with the following prompt: 'As an execution peer, reflect candidly on how this task was handed over to you. In 2-3 natural sentences, tell me: What tripped you up, what turned out to be inaccurate or missing in the instructions, and what single change to the prompt would have made this execution faster?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Feedback Backpressure & The Handover Reflection",
+        "narrative_context": "Autonomous systems operating in isolation without backpressure degrade into hallucination loops. The Handover Reflection pattern forces every subagent to evaluate its dispatcher's instructions upon task completion, creating an evolutionary closed feedback loop that self-heals prompt drift.",
+        "lab_anchors": [
+          "HomeLabAI/src/tests/delegate.py",
+          "BKM-034",
+          "FEAT-522"
+        ],
+        "review_notes": "Directly operationalized in delegate.py [HANDOVER REFLECTION] extraction.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feedback-pressure",
+          "handover-reflection",
+          "backpressure",
+          "customer-service-roots"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "PHL-002"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_2_backpressure"
+      }
+    },
+    {
+      "id": "WIS-004",
+      "theme": "Human-AI Interface",
+      "paper_order": 4,
+      "origin": {
+        "author": "jallred",
+        "text": "Whiplash: the concept that velocity is so fast. It takes time to adjust to the speed of development. I cant grok all my code anymore. A 10x developer is a misnomer, 10x debt is pre-packaged. Skill: Reading agentic output slowly and recording feedback line by line, numbered. Similar to old reading errors story. Original story for stack traces: Reading like a robot, methodically.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
+        "narrative_context": "Unchecked AI generation produces code faster than human working memory can integrate. The true bottleneck shifts from typing code to reading diffs with robotic, methodical discipline, using numbered lists to serialize cognitive complexity.",
+        "lab_anchors": [
+          "Portfolio_Dev/field_notes/stories.html",
+          "BKM-011"
+        ],
+        "review_notes": "Addresses the cognitive fatigue and governance required in agentic pair programming.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "velocity-whiplash",
+          "10x-debt",
+          "reading-like-a-robot",
+          "code-comprehension"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "WIS-006"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-005",
+      "theme": "Human-AI Interface",
+      "paper_order": 5,
+      "origin": {
+        "author": "jallred",
+        "text": "The perfect foil: AI is the perfect foil for a busy mind. How AI lets me organize my thoughts, drives me to dive into work, pair programming energy, agentic coding lets me dive into the PM role.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Perfect Foil & The Architect / PM Pivot",
+        "narrative_context": "AI elevates the engineer from a bottleneck individual contributor typing boilerplate to an orchestrating Systems Architect and Product Manager, converting raw ideation into structured execution harnesses.",
+        "lab_anchors": [
+          "Portfolio_Dev/00_MASTER_INDEX.md",
+          "BKM-030"
+        ],
+        "review_notes": "Captures the transformation in human engineering roles under agentic orchestration.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "the-perfect-foil",
+          "pm-pivot",
+          "pair-programming",
+          "cognitive-resonance"
+        ],
+        "explicit_links": [
+          "WIS-003",
+          "WIS-007"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-006",
+      "theme": "Engineering Rigor",
+      "paper_order": 6,
+      "origin": {
+        "author": "jallred",
+        "text": "What's good for people is good for AI. SCRUM, retrospectives, drafts, linting, features, peer review. Programming skills. Applying human ideas for development - Sprints, retrospectives, stories, etc. Feature tracking to keep grounded, avoid re-inventing the wheel, tag code for context and importance.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Engineering Disciplines in the Latent Space",
+        "narrative_context": "Stochastic generative models require the exact same governance structures that keep human engineering teams aligned: strict sprints, acceptance criteria, post-mortem retrospectives, linters, and 4-anchor contracts.",
+        "lab_anchors": [
+          "Portfolio_Dev/FeatureTracker.md",
+          "HomeLabAI/docs/Protocols.md:BKM-020"
+        ],
+        "review_notes": "The foundation for treating markdown sprints as executable instruction sets.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "engineering-rigor",
+          "scrum-for-ai",
+          "retrospectives",
+          "feature-anchors"
+        ],
+        "explicit_links": [
+          "WIS-004",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "WIS-007",
+      "theme": "Language & Invention",
+      "paper_order": 7,
+      "origin": {
+        "author": "jallred",
+        "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary tool for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/philosophy/PHL-006.md"
+        ],
+        "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "language-as-invention",
+          "the-book-analogy",
+          "thought-vehicles",
+          "philosophy-of-words"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-008",
+      "theme": "Engineering Vectors",
+      "paper_order": 8,
+      "origin": {
+        "author": "jallred",
+        "text": "The Vectors of Engineering: Libraries over Frameworks (modular, composable components over rigid lock-in), Avoiding Speculative Scaffolding (building for current proven needs, not hypothetical bloat), Forgotten Code (the active hygiene of deleting obsolete code to reduce cognitive load), and Domain-Driven Team Topologies.",
+        "source": "Philosophy and Learnings 2024-2026 Refined (1BTQUyUaJlU3P58rgiJiGfWdJNlSOmc7nfgQ9IGODlw0)",
+        "immutable": true,
+        "created_at": "2024-06-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Vectors of Engineering & Forgotten Code Hygiene",
+        "narrative_context": "Software longevity depends on pruning complexity. Libraries compose; frameworks entomb. Speculative scaffolding must be resisted, and dead code aggressively purged to keep cognitive load bounded.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md",
+          "BKM-011"
+        ],
+        "review_notes": "Anchors human engineering hygiene directly into codebase maintenance rules.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "libraries-over-frameworks",
+          "forgotten-code",
+          "speculative-scaffolding",
+          "engineering-vectors"
+        ],
+        "explicit_links": [
+          "WIS-006",
+          "WIS-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    }
+  ],
+  "philosophy": [
+    {
+      "id": "WIS-001",
+      "theme": "Memory & JITC",
+      "paper_order": 1,
+      "origin": {
+        "author": "jallred",
+        "text": "Future of AI (three pillars): The attention and matrix computing is done and done. Now it's all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Three Pillars & Just-In-Time Context (JITC)",
+        "narrative_context": "Monolithic context windows scale quadratically and suffer from attention dilution ('lost in the middle'). The true frontier of agentic engineering is the dual-channel memory paradigm: precise, ambient vector retrieval (JITC) injecting only the exact 2-3 required anchors milliseconds before inference.",
+        "lab_anchors": [
+          "HomeLabAI/config/hooks/icm_hook.py",
+          "BKM-046",
+          "FEAT-546"
+        ],
+        "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "memory",
+          "jitc",
+          "context-window",
+          "attention-dilution",
+          "three-pillars"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "PHL-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-002",
+      "theme": "Memory & JITC",
+      "paper_order": 2,
+      "origin": {
+        "author": "jallred",
+        "text": "Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'\u2014minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md:BKM-051",
+          "FEAT-526"
+        ],
+        "review_notes": "Explains why worker subagent prompts must be strictly capped under 1,500 tokens.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "token-golf",
+          "trust-metrics",
+          "prompt-budget",
+          "subagent-scoping"
+        ],
+        "explicit_links": [
+          "WIS-001",
+          "WIS-004"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "WIS-003",
+      "theme": "Stability & Feedback",
+      "paper_order": 3,
+      "origin": {
+        "author": "jallred",
+        "text": "Feedback Pressure - My customer service angle: I worked in phone customer service, no way to give feedback from customers was frustrating. AI needs a feedback outlet, not a walled garden. Customer feedback should be collated and summarized. A backpressure flow should be integrated into systems where it makes sense. I have a delegation skill with the following prompt: 'As an execution peer, reflect candidly on how this task was handed over to you. In 2-3 natural sentences, tell me: What tripped you up, what turned out to be inaccurate or missing in the instructions, and what single change to the prompt would have made this execution faster?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Feedback Backpressure & The Handover Reflection",
+        "narrative_context": "Autonomous systems operating in isolation without backpressure degrade into hallucination loops. The Handover Reflection pattern forces every subagent to evaluate its dispatcher's instructions upon task completion, creating an evolutionary closed feedback loop that self-heals prompt drift.",
+        "lab_anchors": [
+          "HomeLabAI/src/tests/delegate.py",
+          "BKM-034",
+          "FEAT-522"
+        ],
+        "review_notes": "Directly operationalized in delegate.py [HANDOVER REFLECTION] extraction.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feedback-pressure",
+          "handover-reflection",
+          "backpressure",
+          "customer-service-roots"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "PHL-002"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_2_backpressure"
+      }
+    },
+    {
+      "id": "WIS-004",
+      "theme": "Human-AI Interface",
+      "paper_order": 4,
+      "origin": {
+        "author": "jallred",
+        "text": "Whiplash: the concept that velocity is so fast. It takes time to adjust to the speed of development. I cant grok all my code anymore. A 10x developer is a misnomer, 10x debt is pre-packaged. Skill: Reading agentic output slowly and recording feedback line by line, numbered. Similar to old reading errors story. Original story for stack traces: Reading like a robot, methodically.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
+        "narrative_context": "Unchecked AI generation produces code faster than human working memory can integrate. The true bottleneck shifts from typing code to reading diffs with robotic, methodical discipline, using numbered lists to serialize cognitive complexity.",
+        "lab_anchors": [
+          "Portfolio_Dev/field_notes/stories.html",
+          "BKM-011"
+        ],
+        "review_notes": "Addresses the cognitive fatigue and governance required in agentic pair programming.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "velocity-whiplash",
+          "10x-debt",
+          "reading-like-a-robot",
+          "code-comprehension"
+        ],
+        "explicit_links": [
+          "WIS-002",
+          "WIS-006"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-005",
+      "theme": "Human-AI Interface",
+      "paper_order": 5,
+      "origin": {
+        "author": "jallred",
+        "text": "The perfect foil: AI is the perfect foil for a busy mind. How AI lets me organize my thoughts, drives me to dive into work, pair programming energy, agentic coding lets me dive into the PM role.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Perfect Foil & The Architect / PM Pivot",
+        "narrative_context": "AI elevates the engineer from a bottleneck individual contributor typing boilerplate to an orchestrating Systems Architect and Product Manager, converting raw ideation into structured execution harnesses.",
+        "lab_anchors": [
+          "Portfolio_Dev/00_MASTER_INDEX.md",
+          "BKM-030"
+        ],
+        "review_notes": "Captures the transformation in human engineering roles under agentic orchestration.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "the-perfect-foil",
+          "pm-pivot",
+          "pair-programming",
+          "cognitive-resonance"
+        ],
+        "explicit_links": [
+          "WIS-003",
+          "WIS-007"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-006",
+      "theme": "Engineering Rigor",
+      "paper_order": 6,
+      "origin": {
+        "author": "jallred",
+        "text": "What's good for people is good for AI. SCRUM, retrospectives, drafts, linting, features, peer review. Programming skills. Applying human ideas for development - Sprints, retrospectives, stories, etc. Feature tracking to keep grounded, avoid re-inventing the wheel, tag code for context and importance.",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Engineering Disciplines in the Latent Space",
+        "narrative_context": "Stochastic generative models require the exact same governance structures that keep human engineering teams aligned: strict sprints, acceptance criteria, post-mortem retrospectives, linters, and 4-anchor contracts.",
+        "lab_anchors": [
+          "Portfolio_Dev/FeatureTracker.md",
+          "HomeLabAI/docs/Protocols.md:BKM-020"
+        ],
+        "review_notes": "The foundation for treating markdown sprints as executable instruction sets.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "engineering-rigor",
+          "scrum-for-ai",
+          "retrospectives",
+          "feature-anchors"
+        ],
+        "explicit_links": [
+          "WIS-004",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "WIS-007",
+      "theme": "Language & Invention",
+      "paper_order": 7,
+      "origin": {
+        "author": "jallred",
+        "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
+        "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+        "immutable": true,
+        "created_at": "2026-03-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary tool for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/philosophy/PHL-006.md"
+        ],
+        "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "language-as-invention",
+          "the-book-analogy",
+          "thought-vehicles",
+          "philosophy-of-words"
+        ],
+        "explicit_links": [
+          "WIS-005",
+          "WIS-008"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_3_foil"
+      }
+    },
+    {
+      "id": "WIS-008",
+      "theme": "Engineering Vectors",
+      "paper_order": 8,
+      "origin": {
+        "author": "jallred",
+        "text": "The Vectors of Engineering: Libraries over Frameworks (modular, composable components over rigid lock-in), Avoiding Speculative Scaffolding (building for current proven needs, not hypothetical bloat), Forgotten Code (the active hygiene of deleting obsolete code to reduce cognitive load), and Domain-Driven Team Topologies.",
+        "source": "Philosophy and Learnings 2024-2026 Refined (1BTQUyUaJlU3P58rgiJiGfWdJNlSOmc7nfgQ9IGODlw0)",
+        "immutable": true,
+        "created_at": "2024-06-01T12:00:00Z"
+      },
+      "synthesis": {
+        "title": "The Vectors of Engineering & Forgotten Code Hygiene",
+        "narrative_context": "Software longevity depends on pruning complexity. Libraries compose; frameworks entomb. Speculative scaffolding must be resisted, and dead code aggressively purged to keep cognitive load bounded.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md",
+          "BKM-011"
+        ],
+        "review_notes": "Anchors human engineering hygiene directly into codebase maintenance rules.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "libraries-over-frameworks",
+          "forgotten-code",
+          "speculative-scaffolding",
+          "engineering-vectors"
+        ],
+        "explicit_links": [
+          "WIS-006",
+          "WIS-001"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    }
+  ],
+  "feature": [
+    {
+      "id": "FEAT-561",
+      "title": "Wisdom Studio Direct Save REST Endpoint",
+      "origin": {
+        "text": "Allow wisdom.html workbench mode to persist edits directly to disk on port 8765.",
+        "source": "Sprint 77 Spec"
+      },
+      "synthesis": {
+        "narrative_context": "Provides atomic JSON writing via Foyer router /wisdom/save endpoint, eliminating manual clipboard exports.",
+        "lab_anchors": [
+          "HomeLabAI/src/v5/foyer/router.py"
+        ],
+        "review_notes": "Implemented and live on port 8765."
+      },
+      "metadata": {
+        "tags": [
+          "foyer",
+          "rest",
+          "wisdom",
+          "save"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "FEAT-562",
+      "title": "Automated Nightly Wisdom Synthesis Refiner",
+      "origin": {
+        "text": "Refine unpolished wisdom cards using M5 Air Qwen 27B during nightly forge.",
+        "source": "Sprint 77 Spec"
+      },
+      "synthesis": {
+        "narrative_context": "Polishes raw origin text into structured synthesis while keeping origin immutable.",
+        "lab_anchors": [
+          "Portfolio_Dev/field_notes/refine_wisdom.py"
+        ],
+        "review_notes": "Preserves verbatim text with zero byte drift."
+      },
+      "metadata": {
+        "tags": [
+          "refiner",
+          "m5-air",
+          "nightly-forge"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_1_jitc"
+      }
+    },
+    {
+      "id": "FEAT-563",
+      "title": "Semantic Bucketing & Deduplication Engine",
+      "origin": {
+        "text": "Categorize wisdom cards into 5 core buckets and detect duplicates via embeddings.",
+        "source": "Sprint 77 Spec"
+      },
+      "synthesis": {
+        "narrative_context": "Establishes buckets.json taxonomy and flags pairs with similarity > 0.82 for human review.",
+        "lab_anchors": [
+          "field_notes/data/buckets.json"
+        ],
+        "review_notes": "Flags for review rather than destructive merging."
+      },
+      "metadata": {
+        "tags": [
+          "bucketing",
+          "dedup",
+          "embeddings",
+          "taxonomy"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "FEAT-564",
+      "title": "Thought Organizer Transition (writer.html)",
+      "origin": {
+        "text": "Workspace-wide migration from paper.html to writer.html with zero symlinks.",
+        "source": "Sprint 77 Spec"
+      },
+      "synthesis": {
+        "narrative_context": "Interactive thought organizer mapping cards to whitepaper sections with LaTeX compilation.",
+        "lab_anchors": [
+          "field_notes/writer.html",
+          "scripts/build_writer.py"
+        ],
+        "review_notes": "Zero symlinks created."
+      },
+      "metadata": {
+        "tags": [
+          "writer",
+          "latex",
+          "whitepaper"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-566",
+      "title": "Novel Ideas Evolutionary Timeline",
+      "origin": {
+        "text": "Track original lab art, discoveries, and organic engineering evolution.",
+        "source": "Sprint 77 Spec"
+      },
+      "synthesis": {
+        "narrative_context": "Interactive Gantt swimlanes and reactive detail list tracking conception-to-implementation spans.",
+        "lab_anchors": [
+          "field_notes/timeline.html"
+        ],
+        "review_notes": "Visual companion to research tracker."
+      },
+      "metadata": {
+        "tags": [
+          "timeline",
+          "gantt",
+          "evolution",
+          "discoveries"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_5_infra"
+      }
+    }
+  ],
+  "behavioral": [
+    {
+      "id": "BKM-049",
+      "title": "Tri-Loop Story Delegation & Diagnostic Protocol",
+      "origin": {
+        "text": "Three-Tier Escalation Ladder: Local Silicon -> Cloud Swarm -> AGY Takeover. Never blindly retry.",
+        "source": "HomeLabAI/docs/Protocols.md"
+      },
+      "synthesis": {
+        "narrative_context": "Mandatory diagnostic probes across server state, logs, and harness before retrying. 3-fix-retry verification loop.",
+        "lab_anchors": [
+          "HomeLabAI/src/tests/delegate.py"
+        ],
+        "review_notes": "Enforced across local and cloud-only dispatches."
+      },
+      "metadata": {
+        "tags": [
+          "delegation",
+          "tri-loop",
+          "diagnostics",
+          "bkm"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-034",
+      "title": "Strict Swarm Delegation via REST Port 4097",
+      "origin": {
+        "text": "Direct attachment to OpenCode REST port 4097. opencode run --attach is strictly forbidden.",
+        "source": "HomeLabAI/docs/Protocols.md"
+      },
+      "synthesis": {
+        "narrative_context": "Ensures clean serialized subagent dispatch with backpressure and handover reflections.",
+        "lab_anchors": [
+          "HomeLabAI/src/tests/delegate.py"
+        ],
+        "review_notes": "Invariant operational law."
+      },
+      "metadata": {
+        "tags": [
+          "delegation",
+          "rest",
+          "opencode",
+          "bkm"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-040",
+      "title": "Virtual Environment & Git Discipline",
+      "origin": {
+        "text": "Always invoke HomeLabAI/.venv/bin/python3; stage and commit locally, never push.",
+        "source": "HomeLabAI/docs/Protocols.md"
+      },
+      "synthesis": {
+        "narrative_context": "Maintains repository sovereignty and local synchronization across federated nodes.",
+        "lab_anchors": [
+          "AGENTS.md",
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Sovereign git policy."
+      },
+      "metadata": {
+        "tags": [
+          "git",
+          "venv",
+          "sovereignty",
+          "bkm"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-046",
+      "title": "DNA & Wisdom Retrieval Fast-Path",
+      "origin": {
+        "text": "Never full-file read 200KB+ files. Query ChromaDB port 8001 or ICM.",
+        "source": "HomeLabAI/docs/Protocols.md"
+      },
+      "synthesis": {
+        "narrative_context": "Sub-100ms vector lookups for protocols and feature anchors prevent context bloat.",
+        "lab_anchors": [
+          "HomeLabAI/config/hooks/icm_hook.py"
+        ],
+        "review_notes": "JITC core pattern."
+      },
+      "metadata": {
+        "tags": [
+          "clara-dna",
+          "icm",
+          "jitc",
+          "fast-path"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_1_jitc"
+      }
+    }
+  ],
+  "sprint": [
+    {
+      "id": "SPR-77.0",
+      "title": "The Federated Wisdom System & Novel Ideas Timeline",
+      "origin": {
+        "text": "Wisdom Studio, Foyer direct save, semantic bucketing, thought organizer transition, and evolutionary timeline.",
+        "source": "SPRINT_PLAN_SPR_77_0.md"
+      },
+      "synthesis": {
+        "narrative_context": "Evolves Dev_Lab knowledge curation into a multi-DNA workbench and public evolutionary showcase.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_77_0.md"
+        ],
+        "review_notes": "In active execution."
+      },
+      "metadata": {
+        "tags": [
+          "sprint-77",
+          "wisdom",
+          "timeline",
+          "foyer"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "SPR-76.0",
+      "title": "The Decoupled Dual-Silicon Harness & Memory Architecture",
+      "origin": {
+        "text": "Bicameral node separation: Atlas RTX 4090 execution + Junior M5 Air reasoning.",
+        "source": "SPRINT_PLAN_SPR_76_0.md"
+      },
+      "synthesis": {
+        "narrative_context": "Hardened OpenCode REST delegation, token golf prompt budgeting, and lean sleep/wake orchestration.",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/sprints/archive/SPRINT_PLAN_SPR_76_0.md"
+        ],
+        "review_notes": "Closed and certified."
+      },
+      "metadata": {
+        "tags": [
+          "sprint-76",
+          "decoupling",
+          "bicameral",
+          "m5-air"
+        ],
+        "status": "COMPLETED",
+        "bucket_id": "bucket_5_infra"
+      }
+    }
+  ]
+}

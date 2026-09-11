@@ -1,11 +1,16 @@
 {
-  "pending_action": "SOFT_RELOAD",
-  "action_level": 1,
-  "timer_expiry_ts": 1789156479,
-  "triggered_at_ts": 1789155879,
-  "last_commit": "92d5dd6",
-  "repo": "HomeLabAI",
+  "pending_action": "DEEP_RESET",
+  "action_level": 2,
+  "timer_expiry_ts": 1789165099,
+  "triggered_at_ts": 1789163299,
+  "last_commit": "8327bb1",
+  "repo": "Portfolio_Dev",
   "reasons": [
-    "src/tests/delegate.py (Active Module)"
+    "field_notes/refine_wisdom.py (Portfolio Active Code)",
+    "src/attendant_liveliness.py (Active Module)",
+    "src/attendant_liveliness.py (Attendant Core)",
+    "src/infra/git_reset_hook.py (Deep Core/Infra Architecture)",
+    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)",
+    "field_notes/wisdom_build.py (Portfolio Active Code)"
   ]
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "OUT-001",
+    "title": "Natural Language Audio Intercom Feedback Protocol",
+    "conception_date": "2026-02-18",
+    "implementation_date": "2026-02-27",
+    "candidate_bucket": "human_ai_interface",
+    "similarity_score": 0.582,
+    "source": "SPR-50 Audio Stream Experiments",
+    "summary": "Full-duplex low-latency audio stream with PCM buffer sentinel; falls between JITC context scoping and sensory human-AI interface.",
+    "operator_status": "PENDING_REVIEW",
+    "recommended_action": "Evaluate declaring new Sensory Stream lane or assign to Human-AI Foil."
+  }
+]

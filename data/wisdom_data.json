@@ -13,15 +13,29 @@
     "synthesis": {
       "title": "The Three Pillars & Just-In-Time Context (JITC)",
       "narrative_context": "Monolithic context windows scale quadratically and suffer from attention dilution ('lost in the middle'). The true frontier of agentic engineering is the dual-channel memory paradigm: precise, ambient vector retrieval (JITC) injecting only the exact 2-3 required anchors milliseconds before inference.",
-      "lab_anchors": ["HomeLabAI/config/hooks/icm_hook.py", "BKM-046", "FEAT-546"],
+      "lab_anchors": [
+        "HomeLabAI/config/hooks/icm_hook.py",
+        "BKM-046",
+        "FEAT-546"
+      ],
       "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["memory", "jitc", "context-window", "attention-dilution", "three-pillars"],
-      "explicit_links": ["WIS-002", "PHL-001"],
-      "status": "APPROVED"
+      "tags": [
+        "memory",
+        "jitc",
+        "context-window",
+        "attention-dilution",
+        "three-pillars"
+      ],
+      "explicit_links": [
+        "WIS-002",
+        "PHL-001"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_1_jitc"
     }
   },
   {
@@ -37,16 +51,28 @@
     },
     "synthesis": {
       "title": "Token Golf over Token Maxing & Trust Ceilings",
-      "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'—minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
-      "lab_anchors": ["HomeLabAI/docs/Protocols.md:BKM-051", "FEAT-526"],
+      "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'\u2014minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
+      "lab_anchors": [
+        "HomeLabAI/docs/Protocols.md:BKM-051",
+        "FEAT-526"
+      ],
       "review_notes": "Explains why worker subagent prompts must be strictly capped under 1,500 tokens.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["token-golf", "trust-metrics", "prompt-budget", "subagent-scoping"],
-      "explicit_links": ["WIS-001", "WIS-004"],
-      "status": "APPROVED"
+      "tags": [
+        "token-golf",
+        "trust-metrics",
+        "prompt-budget",
+        "subagent-scoping"
+      ],
+      "explicit_links": [
+        "WIS-001",
+        "WIS-004"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_1_jitc"
     }
   },
   {
@@ -63,15 +89,28 @@
     "synthesis": {
       "title": "Feedback Backpressure & The Handover Reflection",
       "narrative_context": "Autonomous systems operating in isolation without backpressure degrade into hallucination loops. The Handover Reflection pattern forces every subagent to evaluate its dispatcher's instructions upon task completion, creating an evolutionary closed feedback loop that self-heals prompt drift.",
-      "lab_anchors": ["HomeLabAI/src/tests/delegate.py", "BKM-034", "FEAT-522"],
+      "lab_anchors": [
+        "HomeLabAI/src/tests/delegate.py",
+        "BKM-034",
+        "FEAT-522"
+      ],
       "review_notes": "Directly operationalized in delegate.py [HANDOVER REFLECTION] extraction.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["feedback-pressure", "handover-reflection", "backpressure", "customer-service-roots"],
-      "explicit_links": ["WIS-005", "PHL-002"],
-      "status": "APPROVED"
+      "tags": [
+        "feedback-pressure",
+        "handover-reflection",
+        "backpressure",
+        "customer-service-roots"
+      ],
+      "explicit_links": [
+        "WIS-005",
+        "PHL-002"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_2_backpressure"
     }
   },
   {
@@ -88,15 +127,27 @@
     "synthesis": {
       "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
       "narrative_context": "Unchecked AI generation produces code faster than human working memory can integrate. The true bottleneck shifts from typing code to reading diffs with robotic, methodical discipline, using numbered lists to serialize cognitive complexity.",
-      "lab_anchors": ["Portfolio_Dev/field_notes/stories.html", "BKM-011"],
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/stories.html",
+        "BKM-011"
+      ],
       "review_notes": "Addresses the cognitive fatigue and governance required in agentic pair programming.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["velocity-whiplash", "10x-debt", "reading-like-a-robot", "code-comprehension"],
-      "explicit_links": ["WIS-002", "WIS-006"],
-      "status": "APPROVED"
+      "tags": [
+        "velocity-whiplash",
+        "10x-debt",
+        "reading-like-a-robot",
+        "code-comprehension"
+      ],
+      "explicit_links": [
+        "WIS-002",
+        "WIS-006"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_3_foil"
     }
   },
   {
@@ -113,15 +164,27 @@
     "synthesis": {
       "title": "The Perfect Foil & The Architect / PM Pivot",
       "narrative_context": "AI elevates the engineer from a bottleneck individual contributor typing boilerplate to an orchestrating Systems Architect and Product Manager, converting raw ideation into structured execution harnesses.",
-      "lab_anchors": ["Portfolio_Dev/00_MASTER_INDEX.md", "BKM-030"],
+      "lab_anchors": [
+        "Portfolio_Dev/00_MASTER_INDEX.md",
+        "BKM-030"
+      ],
       "review_notes": "Captures the transformation in human engineering roles under agentic orchestration.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["the-perfect-foil", "pm-pivot", "pair-programming", "cognitive-resonance"],
-      "explicit_links": ["WIS-003", "WIS-007"],
-      "status": "APPROVED"
+      "tags": [
+        "the-perfect-foil",
+        "pm-pivot",
+        "pair-programming",
+        "cognitive-resonance"
+      ],
+      "explicit_links": [
+        "WIS-003",
+        "WIS-007"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_3_foil"
     }
   },
   {
@@ -138,15 +201,27 @@
     "synthesis": {
       "title": "Engineering Disciplines in the Latent Space",
       "narrative_context": "Stochastic generative models require the exact same governance structures that keep human engineering teams aligned: strict sprints, acceptance criteria, post-mortem retrospectives, linters, and 4-anchor contracts.",
-      "lab_anchors": ["Portfolio_Dev/FeatureTracker.md", "HomeLabAI/docs/Protocols.md:BKM-020"],
+      "lab_anchors": [
+        "Portfolio_Dev/FeatureTracker.md",
+        "HomeLabAI/docs/Protocols.md:BKM-020"
+      ],
       "review_notes": "The foundation for treating markdown sprints as executable instruction sets.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["engineering-rigor", "scrum-for-ai", "retrospectives", "feature-anchors"],
-      "explicit_links": ["WIS-004", "WIS-008"],
-      "status": "APPROVED"
+      "tags": [
+        "engineering-rigor",
+        "scrum-for-ai",
+        "retrospectives",
+        "feature-anchors"
+      ],
+      "explicit_links": [
+        "WIS-004",
+        "WIS-008"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_4_rigor"
     }
   },
   {
@@ -163,15 +238,26 @@
     "synthesis": {
       "title": "Language as Humanity's Best Invention & The Book Analogy",
       "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary tool for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
-      "lab_anchors": ["Portfolio_Dev/docs/philosophy/PHL-006.md"],
+      "lab_anchors": [
+        "Portfolio_Dev/docs/philosophy/PHL-006.md"
+      ],
       "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["language-as-invention", "the-book-analogy", "thought-vehicles", "philosophy-of-words"],
-      "explicit_links": ["WIS-005", "WIS-008"],
-      "status": "APPROVED"
+      "tags": [
+        "language-as-invention",
+        "the-book-analogy",
+        "thought-vehicles",
+        "philosophy-of-words"
+      ],
+      "explicit_links": [
+        "WIS-005",
+        "WIS-008"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_3_foil"
     }
   },
   {
@@ -188,15 +274,27 @@
     "synthesis": {
       "title": "The Vectors of Engineering & Forgotten Code Hygiene",
       "narrative_context": "Software longevity depends on pruning complexity. Libraries compose; frameworks entomb. Speculative scaffolding must be resisted, and dead code aggressively purged to keep cognitive load bounded.",
-      "lab_anchors": ["Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md", "BKM-011"],
+      "lab_anchors": [
+        "Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md",
+        "BKM-011"
+      ],
       "review_notes": "Anchors human engineering hygiene directly into codebase maintenance rules.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
-      "tags": ["libraries-over-frameworks", "forgotten-code", "speculative-scaffolding", "engineering-vectors"],
-      "explicit_links": ["WIS-006", "WIS-001"],
-      "status": "APPROVED"
+      "tags": [
+        "libraries-over-frameworks",
+        "forgotten-code",
+        "speculative-scaffolding",
+        "engineering-vectors"
+      ],
+      "explicit_links": [
+        "WIS-006",
+        "WIS-001"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_4_rigor"
     }
   }
 ]
