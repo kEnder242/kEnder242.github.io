@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Notes | Jason Allred</title>
+    <link rel="stylesheet" href="style.css?v=826dbad3">
+    <style>
+        .safe-nav-bar { margin-bottom: 20px; }
+        .safe-btn { color: #888; text-decoration: none; border: 1px solid #444; padding: 5px 10px; font-size: 0.8rem; }
+        .inline-terminal { white-space: pre-wrap !important; font-family: 'Courier New', Courier, monospace; line-height: 1.4; }
+    </style>
+</head>
+<body>
+
+    <button id="menu-toggle">☰ MENU</button>
+
+    <nav id="sidebar">
+        <mission-control></mission-control>
+        <h2>Timeline Index</h2>
+        <ul id="timeline-nav"></ul>
+    </nav>
+
+    <main>
+        <div id="sys-console">
+            <div>[INIT] System bootstrap...</div>
+        </div>
+
+        <section>
+            <h2 style="color: var(--heading-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">/home/jason/career_history</h2>
+            
+            <div class="disclaimer-box">
+                <span style="color: var(--accent-color); font-weight: bold;">[DATA ORIGIN]</span> 18 years of raw engineering logs, synthesized by local AI (Llama-3.2-3B). 
+                <br><span style="color: #888; font-size: 0.8em;">Note: Automated classification may contain artifacts. Reviewing logs via the terminal interface below.</span>
+                <div id="pinky-status" style="margin-top: 10px; font-size: 0.85em; color: #aaa; border-top: 1px solid #333; padding-top: 10px; line-height: 1.4;">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div><span style="color: #4daafc; font-weight: bold;">[SYSTEM]</span> <span id="status-text">Uplink Nominal</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[EVENTS]</span> <span id="event-count">---</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[LAST SCAN]</span> <span id="last-file">None</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[LOAD]</span> <span id="sys-load">0.00</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-container" id="tree-root">
+                <div style="color: #666; padding: 20px;">[WAIT] Loading archives...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="mission-control.js?v=16cf2268"></script>
+    <script>
+        const root = document.getElementById('tree-root');
+        const consoleEl = document.getElementById('sys-console');
+        const yearCache = {};
+        let activeInterval = null;
+
+        function log(msg, type='info') {
+            const div = document.createElement('div');
+            div.className = type;
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            consoleEl.appendChild(div);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+
+        const FALLBACK_THEMES = {
+            "2024": { "strategic_theme": "Implementing manageability features." },
+            "2018": { "strategic_theme": "Hardware validation." },
+            "2016": { "strategic_theme": "Fulsim debugging." },
+            "2006": { "strategic_theme": "Firmware validation." }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            log("DOM Ready.");
+            
+            // Mobile Menu
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            if (menuToggle && sidebar) {
+                menuToggle.onclick = (e) => { sidebar.classList.toggle('active'); e.stopPropagation(); };
+                document.querySelector('main').onclick = () => sidebar.classList.remove('active');
+            }
+
+            // Fetch Status & Telemetry
+            fetch('data/status.json?t=' + new Date().getTime())
+                .then(r => r.json())
+                .then(status => {
+                    const statusText = document.getElementById('status-text');
+                    const eventCount = document.getElementById('event-count');
+                    const lastFile = document.getElementById('last-file');
+                    
+                    if (status.status === "ONLINE") statusText.style.color = "#4cd964";
+                    if (status.status === "IDLE") statusText.style.color = "#4daafc";
+                    statusText.textContent = status.status || "UNKNOWN";
+                    
+                    eventCount.textContent = status.total_events || "---";
+                    
+                    // Narrative: "riv_common.py 2h ago"
+                    if (status.timestamp && status.last_file) {
+                        const lastTime = new Date(status.timestamp);
+                        const now = new Date();
+                        const diffMs = now - lastTime;
+                        const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+                        const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                        
+                        let timeStr = "just now";
+                        if (diffHrs > 0) timeStr = `${diffHrs}h ago`;
+                        else if (diffMins > 0) timeStr = `${diffMins}m ago`;
+                        
+                        lastFile.textContent = `${status.last_file} (${timeStr})`;
+                    } else {
+                        lastFile.textContent = status.message ? status.message.replace("Processed ", "") : "---";
+                    }
+                    
+                    log("Neural uplink connected.");
+                })
+                .catch(() => log("Neural uplink offline.", 'warn'));
+
+            // Fetch Live Load
+            fetch('http://localhost:9090/api/v1/query?query=node_load1')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.status === 'success' && data.data.result.length > 0) {
+                        const load = parseFloat(data.data.result[0].value[1]).toFixed(2);
+                        document.getElementById('sys-load').textContent = load;
+                    }
+                })
+                .catch(() => { document.getElementById('sys-load').textContent = "OFFLINE"; });
+
+            // Fetch Data with Fail-Safe
+            let fetched = false;
+            log("Mounting archives...");
+            
+            fetch('data/themes.json?t=' + new Date().getTime())
+                .then(r => {
+                    if (!r.ok) throw new Error("HTTP " + r.status);
+                    return r.json();
+                })
+                .then(data => { 
+                    fetched = true; 
+                    log(`Archive mounted. Found ${Object.keys(data).length} nodes.`); 
+                    renderYears(data); 
+                })
+                .catch(err => { 
+                    log(`Mount failed (${err.message}). Using cache.`, 'err');
+                    if(!fetched) renderYears(FALLBACK_THEMES); 
+                });
+
+            setTimeout(() => { 
+                if(!fetched) { 
+                    log("Mount timeout. Forcing local cache.", 'warn'); 
+                    renderYears(FALLBACK_THEMES); 
+                } 
+            }, 2100);
+        });
+
+        function renderYears(themes) {
+            root.innerHTML = "";
+            const sortedYears = Object.keys(themes).sort((a, b) => b - a);
+
+            if (sortedYears.length === 0) {
+                root.innerHTML = "<div style='color:red'>Archive Empty.</div>";
+                return;
+            }
+
+            sortedYears.forEach(year => {
+                const item = themes[year];
+                const desc = item.strategic_theme || "Archive active.";
+                const yearNode = document.createElement('div');
+                yearNode.className = 'tree-year';
+                yearNode.id = `year-${year}`;
+                
+                yearNode.innerHTML = `
+                    <div class="year-label" onclick="window.toggleYear('${year}')">
+                        ${year}
+                    </div>
+                    <div class="year-content" id="content-${year}">
+                        <div class="strategy-block">
+                            <span style="color: #4daafc; font-weight: bold;">STRATEGY:</span> ${desc}
+                        </div>
+                        <ul class="file-list" id="files-${year}">
+                            <li style="color: #555; padding-left: 20px;">Scanning...</li>
+                        </ul>
+                    </div>
+                `;
+                root.appendChild(yearNode);
+            });
+            log("Directory tree rendered.");
+        }
+
+        window.toggleYear = function(year) {
+            log(`Expanding node: ${year}`);
+            const node = document.getElementById(`year-${year}`);
+            if (node.classList.contains('open')) {
+                node.classList.remove('open');
+                return;
+            }
+            node.classList.add('open');
+
+            if (!yearCache[year]) {
+                fetch(`data/${year}.json?t=${new Date().getTime()}`)
+                    .then(r => r.json())
+                    .then(events => {
+                        yearCache[year] = events;
+                        renderFileList(year, events);
+                        log(`Loaded ${events.length} records.`);
+                    })
+                    .catch(() => {
+                        log(`Error reading ${year}.json`, 'err');
+                        document.getElementById(`files-${year}`).innerHTML = `<li style="color: #d55; padding-left: 20px;">Log Missing</li>`;
+                    });
+            } else {
+                renderFileList(year, yearCache[year]);
+            }
+        };
+
+        function renderFileList(year, events) {
+            const list = document.getElementById(`files-${year}`);
+            list.innerHTML = ""; 
+            const groups = {};
+            
+            // Detect Rank 5 Anchors for a special "Strategy Sector" entry
+            const anchors = events.filter(e => e.rank === 5 || (e.summary && e.summary.includes("[STRATEGIC_ANCHOR]")));
+            if (anchors.length > 0) {
+                groups["STRATEGY"] = anchors;
+            }
+
+            events.forEach(e => {
+                if (e.rank === 5) return; // Already in anchors
+                let dateDisplay = e.date || "Unknown";
+                if (dateDisplay.includes("Unknown") || dateDisplay.startsWith("1970")) {
+                    dateDisplay = "LOG";
+                }
+                const month = dateDisplay.substring(0, 7); 
+                if (!groups[month]) groups[month] = [];
+                groups[month].push(e);
+            });
+
+            Object.keys(groups).sort().reverse().forEach(month => {
+                const monthData = groups[month];
+                const li = document.createElement('li');
+                li.className = 'file-item';
+                
+                // NEW: Detect if this month has a Diamond or Strategic artifact
+                const hasAnchor = month === "STRATEGY";
+                const hasDiamond = monthData.some(e => e.rank >= 4);
+                
+                let colorStyle = 'color: var(--accent-color);';
+                if (hasAnchor) colorStyle = 'color: #00f2ff; text-shadow: 0 0 8px rgba(0,242,255,0.4); font-weight: bold;';
+                else if (hasDiamond) colorStyle = 'color: #ffd700; text-shadow: 0 0 5px rgba(255,215,0,0.3);';
+
+                let filename = "misc.log";
+                
+                if (month === "STRATEGY") {
+                    filename = "career_strategy.sector";
+                }
+                // Case 1: Standard YYYY-MM
+                else if (month.match(/^\d{4}-\d{2}$/)) {
+                    const parts = month.split('-');
+                    let mName = "misc";
+                    try { mName = new Date(2000, parseInt(parts[1])-1, 1).toLocaleString('default', {month:'short'}).toLowerCase(); } catch(e){}
+                    filename = `${mName}_${parts[0]}.log`;
+                } 
+                // Case 2: Known Garbage
+                else if (month.includes("invalid") || month.includes("Unknown")) {
+                    filename = "system_dump.log";
+                }
+                else {
+                    filename = month.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase() + ".log";
+                }
+
+                // Inline Terminal Structure
+                const row = document.createElement('div');
+                row.className = 'file-row';
+                row.innerHTML = `<strong style="${colorStyle}">${filename}</strong> (${monthData.length})`;
+                
+                const term = document.createElement('div');
+                term.className = 'inline-terminal';
+                
+                li.appendChild(row);
+                li.appendChild(term);
+                
+                row.onclick = () => toggleTerminal(term, filename, monthData);
+                list.appendChild(li);
+            });
+        }
+
+        function toggleTerminal(termElement, title, events) {
+            if (termElement.style.display === 'block') {
+                termElement.style.display = 'none';
+                return;
+            }
+            if (activeInterval) clearInterval(activeInterval);
+
+            termElement.style.display = 'block';
+            termElement.innerHTML = `<span style="color: #4daafc;">> ACCESSING ${title.toUpperCase()}...</span>`;
+            
+            log(`Reading ${title}`);
+
+            let buffer = `\n`;
+            let lastDate = null;
+
+            events.forEach((e, idx) => {
+                let dateDisplay = e.date;
+                if (!dateDisplay || !dateDisplay.match(/^\d{4}-\d{2}-\d{2}$/)) {
+                    dateDisplay = "LOG";
+                }
+                
+                const isAnchor = e.rank === 5 || (e.summary && e.summary.includes("[STRATEGIC_ANCHOR]"));
+                const isDiamond = e.rank === 4;
+                const prefix = isAnchor ? "🎯 [STRATEGIC] " : "";
+                const summary = (e.summary || "").replace("[STRATEGIC_ANCHOR]", "").replace(/\s+/g, " ").trim();
+                
+                // Add a blank separator line between events
+                if (idx > 0) {
+                    buffer += `\n`;
+                }
+
+                if (dateDisplay !== lastDate) {
+                    buffer += `[${dateDisplay}] ${prefix}${summary}\n`;
+                    lastDate = dateDisplay;
+                } else {
+                    buffer += `  ↳ ${prefix}${summary}\n`;
+                }
+
+                if (e.evidence) {
+                    let cleanEv = e.evidence.replace(/\s+/g, " ").trim();
+                    // If evidence contains raw dict/list string representation, extract readable text
+                    if (cleanEv.includes("'text':")) {
+                        const texts = [];
+                        const re = /'text':\s*'([^']*)'/g;
+                        let match;
+                        while ((match = re.exec(cleanEv)) !== null) {
+                            if (match[1] && match[1].trim()) texts.push(match[1].trim());
+                        }
+                        if (texts.length > 0) {
+                            cleanEv = texts.join(" | ");
+                        }
+                    }
+                    buffer += `    EVIDENCE: ${cleanEv}\n`;
+                }
+                if (isDiamond && e.technical_gem) {
+                    const cleanGem = e.technical_gem.replace(/\s+/g, " ").trim();
+                    buffer += `    GEM: ${cleanGem}\n`;
+                }
+            });
+
+            let i = 0;
+            const textNode = document.createTextNode("");
+            termElement.appendChild(textNode);
+
+            activeInterval = setInterval(() => {
+                const chunk = buffer.substring(i, i + 15); // Increased speed slightly for better UX
+                textNode.appendData(chunk);
+                i += 15;
+                
+                if (i >= buffer.length) {
+                    clearInterval(activeInterval);
+                    const cursor = document.createElement('span');
+                    cursor.className = 'cursor';
+                    termElement.appendChild(cursor);
+                }
+            }, 2);
+        }
+    </script>
+</body>
+</html>
