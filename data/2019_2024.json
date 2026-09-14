@@ -17,8 +17,8 @@
     "sensitivity": "Public",
     "tags": [
       "MIV Wiki",
-      "Manageability specifications",
-      "Intel MIV"
+      "Intel MIV",
+      "Manageability specifications"
     ],
     "rank": 4
   },
@@ -28,9 +28,9 @@
     "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
     "sensitivity": "Public",
     "tags": [
-      "D-Bus",
       "PECI",
       "Intel MIV",
+      "D-Bus",
       "MCTP"
     ],
     "rank": 4
@@ -41,8 +41,8 @@
     "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
       "Intel MIV",
+      "DTAF",
       "Simics"
     ],
     "rank": 4

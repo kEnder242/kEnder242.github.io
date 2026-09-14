@@ -5,9 +5,9 @@
     "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
     "sensitivity": "Public",
     "tags": [
-      "error",
       "jenkins",
-      "pipeline"
+      "pipeline",
+      "error"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
+      "compose",
       "docker",
-      "build",
-      "compose"
+      "build"
     ],
     "rank": 4
   }

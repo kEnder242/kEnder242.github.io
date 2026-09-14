@@ -54,8 +54,8 @@
     "evidence": "/root/tester -y 0x010000C800800D -d 00",
     "sensitivity": "Public",
     "tags": [
-      "MCTP",
-      "PythonSV"
+      "PythonSV",
+      "MCTP"
     ],
     "rank": 4,
     "id": "GEM-7c0e"
@@ -66,8 +66,8 @@
     "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
     "sensitivity": "Public",
     "tags": [
-      "pmdebug",
-      "PythonSV"
+      "PythonSV",
+      "pmdebug"
     ],
     "rank": 4,
     "id": "GEM-e978"
@@ -251,8 +251,8 @@
     "evidence": "showsearch method output",
     "sensitivity": "Public",
     "tags": [
-      "register access",
-      "crdefeature2_bs"
+      "crdefeature2_bs",
+      "register access"
     ],
     "rank": 4,
     "id": "GEM-8136"
@@ -263,8 +263,8 @@
     "evidence": "show_access_info method output",
     "sensitivity": "Public",
     "tags": [
-      "I/O statistics",
-      "crdefeature2_bs"
+      "crdefeature2_bs",
+      "I/O statistics"
     ],
     "rank": 4,
     "id": "GEM-1914"
@@ -313,8 +313,8 @@
     "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
     "sensitivity": "Public",
     "tags": [
-      "PECI tests",
       "unexpected return codes",
+      "PECI tests",
       "MSR register access issues"
     ],
     "rank": 4,

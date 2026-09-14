@@ -92,8 +92,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "report",
-      "MIV"
+      "MIV",
+      "report"
     ],
     "rank": 4,
     "id": "GEM-2efc"
@@ -140,9 +140,9 @@
     "evidence": "PTU not running properly, incorrect power limits",
     "sensitivity": "Public",
     "tags": [
+      "calibration",
       "ptu",
-      "issue",
-      "calibration"
+      "issue"
     ],
     "rank": 4,
     "id": "GEM-aa48"
@@ -165,8 +165,8 @@
     "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "PECI Throughput",
-      "peci_flood.tdf"
+      "peci_flood.tdf",
+      "PECI Throughput"
     ],
     "rank": 4,
     "id": "GEM-4906"
@@ -177,8 +177,8 @@
     "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
     "sensitivity": "Public",
     "tags": [
-      "peci_poison.tdf",
-      "PECI Command Rejection"
+      "PECI Command Rejection",
+      "peci_poison.tdf"
     ],
     "rank": 4,
     "id": "GEM-a220"
@@ -263,8 +263,8 @@
     "evidence": "RAW LOGS on 6/30/2021",
     "sensitivity": "Public",
     "tags": [
-      "team structure",
-      "collaboration"
+      "collaboration",
+      "team structure"
     ],
     "rank": 4,
     "id": "GEM-4aac"
@@ -384,8 +384,8 @@
     "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
     "sensitivity": "Public",
     "tags": [
-      "Redfish",
-      "OEM API"
+      "OEM API",
+      "Redfish"
     ],
     "rank": 4,
     "id": "GEM-7ab0"
@@ -408,8 +408,8 @@
     "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
     "sensitivity": "Public",
     "tags": [
-      "Archer City",
-      "IFU MCA"
+      "IFU MCA",
+      "Archer City"
     ],
     "rank": 4,
     "id": "GEM-9db3"

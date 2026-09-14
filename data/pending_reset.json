@@ -1,20 +1,12 @@
 {
-  "pending_action": "DEEP_RESET",
-  "action_level": 2,
-  "timer_expiry_ts": 1789168639,
-  "triggered_at_ts": 1789166839,
-  "last_commit": "51d359c",
+  "pending_action": "SOFT_RELOAD",
+  "action_level": 1,
+  "timer_expiry_ts": 1789419380,
+  "triggered_at_ts": 1789417580,
+  "last_commit": "396ad58",
   "repo": "Portfolio_Dev",
   "reasons": [
-    "field_notes/mission-control.js (Portfolio Active Code)",
-    "field_notes/refine_wisdom.py (Portfolio Active Code)",
-    "field_notes/protocols_build.py (Portfolio Active Code)",
-    "field_notes/timeline_build.py (Portfolio Active Code)",
-    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)",
-    "src/attendant_liveliness.py (Active Module)",
-    "field_notes/wisdom_build.py (Portfolio Active Code)",
-    "field_notes/build_site.py (Portfolio Active Code)",
-    "src/infra/git_reset_hook.py (Deep Core/Infra Architecture)",
-    "src/attendant_liveliness.py (Attendant Core)"
+    "src/v5/foyer/router.py (Deep Core/Infra Architecture)",
+    "scripts/build_writer.py (Portfolio Active Code)"
   ]
 }

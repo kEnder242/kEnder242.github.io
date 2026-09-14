@@ -1,4 +1,117 @@
 {
-  "semantic_dedup_candidates": [],
-  "last_dedup_scan_ts": 1789163240
+  "semantic_dedup_candidates": [
+    {
+      "card_a": {
+        "id": "WIS-001",
+        "title": "Dual-Channel Memory: JITC and Feedback",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-001",
+        "title": "The Three Pillars & Just-In-Time Context (JITC)",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-002",
+        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-005",
+        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-003",
+        "title": "Feedback Backpressure & The Handover Reflection",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-009",
+        "title": "The Handover Reflection Protocol",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 0.8397,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-004",
+        "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-014",
+        "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-005",
+        "title": "The Perfect Foil & The Architect / PM Pivot",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-013",
+        "title": "The Perfect Foil & The Architect / PM Pivot",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-006",
+        "title": "Engineering Disciplines in the Latent Space",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-020",
+        "title": "Engineering Disciplines in the Latent Space",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-007",
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-017",
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-008",
+        "title": "The Vectors of Engineering & Forgotten Code Hygiene",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-021",
+        "title": "The Vectors of Engineering: Libraries over Frameworks",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-14T12:01:16Z"
+    }
+  ],
+  "last_dedup_scan_ts": 1789387276
 }

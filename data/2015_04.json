@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
     "sensitivity": "Public",
     "tags": [
-      "tap2sb",
       "cfg_apitest64.exe",
-      "probemode"
+      "probemode",
+      "tap2sb"
     ],
     "rank": 4
   },
@@ -28,8 +28,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "ipccli",
-      "Python 2.7.9"
+      "Python 2.7.9",
+      "ipccli"
     ],
     "rank": 4
   }

@@ -51,10 +51,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
-      "Proton1",
       "Proton2",
-      "Purley 4S"
+      "Proton1",
+      "Purley 4S",
+      "Purley 2S"
     ],
     "rank": 4,
     "id": "GEM-c5a2"
@@ -77,9 +77,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
+      "Purley 4S",
       "Purley 2S",
-      "CScripts",
-      "Purley 4S"
+      "CScripts"
     ],
     "rank": 4,
     "id": "GEM-9713"
@@ -101,9 +101,9 @@
     "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
     "sensitivity": "Public",
     "tags": [
+      "shmemcc",
       "HAMR",
-      "UFM",
-      "shmemcc"
+      "UFM"
     ],
     "rank": 4,
     "id": "GEM-a8b2"
@@ -114,8 +114,8 @@
     "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
     "sensitivity": "Public",
     "tags": [
-      "Infiniband",
-      "quickstart"
+      "quickstart",
+      "Infiniband"
     ],
     "rank": 4,
     "id": "GEM-946a"
@@ -126,9 +126,9 @@
     "evidence": "",
     "sensitivity": "Public",
     "tags": [
+      "AppDirect Mode",
       "PMEM",
-      "AEP",
-      "AppDirect Mode"
+      "AEP"
     ],
     "rank": 4,
     "id": "GEM-a50c"
@@ -139,8 +139,8 @@
     "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "bug"
+      "bug",
+      "TODO"
     ],
     "rank": 4,
     "id": "GEM-1c6b"
@@ -151,8 +151,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "memory",
-      "configuration"
+      "configuration",
+      "memory"
     ],
     "rank": 4,
     "id": "GEM-3a33"
@@ -163,8 +163,8 @@
     "evidence": "RAW LOGS: 'The verification process initiated on June 29, 2018, had an error rate of 0/60397968 (0.000000%).'",
     "sensitivity": "Public",
     "tags": [
-      "verification",
-      "Cluster"
+      "Cluster",
+      "verification"
     ],
     "rank": 4,
     "id": "GEM-0119"
@@ -235,9 +235,9 @@
     "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
     "sensitivity": "Public",
     "tags": [
-      "error",
+      "mce",
       "vc30",
-      "mce"
+      "error"
     ],
     "rank": 4,
     "id": "GEM-a522"
@@ -296,8 +296,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "Cold Reset",
-      "DC Cycling"
+      "DC Cycling",
+      "Cold Reset"
     ],
     "rank": 4,
     "id": "GEM-f198"
@@ -358,8 +358,8 @@
     "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
     "sensitivity": "Public",
     "tags": [
-      "CAUSALITY ERROR",
-      "SvBios"
+      "SvBios",
+      "CAUSALITY ERROR"
     ],
     "rank": 4,
     "id": "GEM-7084"
@@ -370,8 +370,8 @@
     "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
     "sensitivity": "Public",
     "tags": [
-      "biosKnobs",
-      "Error Injection"
+      "Error Injection",
+      "biosKnobs"
     ],
     "rank": 4,
     "id": "GEM-2822"
@@ -382,8 +382,8 @@
     "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
     "sensitivity": "Public",
     "tags": [
-      "Error Injection",
-      "System Configuration"
+      "System Configuration",
+      "Error Injection"
     ],
     "rank": 4,
     "id": "GEM-b79d"
@@ -394,8 +394,8 @@
     "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
     "sensitivity": "Public",
     "tags": [
-      "Git",
       "repository",
+      "Git",
       "clone"
     ],
     "rank": 4,
@@ -419,9 +419,9 @@
     "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
     "sensitivity": "Public",
     "tags": [
-      "Git",
+      "hook",
       "commit-msg",
-      "hook"
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-5c81"

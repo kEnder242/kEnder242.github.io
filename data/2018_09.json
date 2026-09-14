@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
-      "Proton1",
       "Proton2",
-      "Purley 4S"
+      "Proton1",
+      "Purley 4S",
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
+      "Purley 4S",
       "Purley 2S",
-      "CScripts",
-      "Purley 4S"
+      "CScripts"
     ],
     "rank": 4
   },
@@ -74,8 +74,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "Cold Reset",
-      "DC Cycling"
+      "DC Cycling",
+      "Cold Reset"
     ],
     "rank": 4
   }

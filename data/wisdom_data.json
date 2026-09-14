@@ -11,24 +11,24 @@
       "created_at": "2026-03-01T12:00:00Z"
     },
     "synthesis": {
-      "title": "The Three Pillars & Just-In-Time Context (JITC)",
-      "narrative_context": "Monolithic context windows scale quadratically and suffer from attention dilution ('lost in the middle'). The true frontier of agentic engineering is the dual-channel memory paradigm: precise, ambient vector retrieval (JITC) injecting only the exact 2-3 required anchors milliseconds before inference.",
+      "title": "Dual-Channel Memory: JITC and Feedback",
+      "narrative_context": "Monolithic context windows suffer from quadratic scaling and attention dilution, causing critical information loss. The architectural solution is a dual-channel paradigm combining precise, ambient vector retrieval (JITC) for immediate inference with layered feedback loops for long-term database distillation. This prevents the failure mode of memorizing the entire dictionary by floating up only the necessary anchors.",
       "lab_anchors": [
         "HomeLabAI/config/hooks/icm_hook.py",
         "BKM-046",
         "FEAT-546"
       ],
       "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
-      "last_refined_by": "AGY",
-      "refinement_version": 1
+      "last_refined_by": "M5_AIR",
+      "refinement_version": 2
     },
     "metadata": {
       "tags": [
-        "memory",
         "jitc",
-        "context-window",
-        "attention-dilution",
-        "three-pillars"
+        "memory-architecture",
+        "feedback-loops",
+        "vector-retrieval",
+        "context-management"
       ],
       "explicit_links": [
         "WIS-002",
@@ -50,22 +50,24 @@
       "created_at": "2026-03-01T12:00:00Z"
     },
     "synthesis": {
-      "title": "Token Golf over Token Maxing & Trust Ceilings",
-      "narrative_context": "A model's reliability drops exponentially as prompt context balloons. Rather than celebrating 1M token windows, rigorous engineering practices 'Token Golf'\u2014minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp.",
+      "title": "Trust Quantified as Context Precision",
+      "narrative_context": "Model reliability decays exponentially as context size increases, making 'token maxing' a critical failure mode. This axiom mandates 'token golf'\u2014minimizing input payloads to preserve attentional fidelity\u2014thereby defining trust strictly by the model's effective memory scope rather than its theoretical window.",
       "lab_anchors": [
         "HomeLabAI/docs/Protocols.md:BKM-051",
-        "FEAT-526"
+        "FEAT-526",
+        "HomeLabAI/src/tests/delegate.py"
       ],
-      "review_notes": "Explains why worker subagent prompts must be strictly capped under 1,500 tokens.",
-      "last_refined_by": "AGY",
-      "refinement_version": 1
+      "review_notes": "Grounds the strict 1,500-token cap for worker subagent prompts to prevent attention dilution.",
+      "last_refined_by": "M5_AIR",
+      "refinement_version": 2
     },
     "metadata": {
       "tags": [
         "token-golf",
-        "trust-metrics",
-        "prompt-budget",
-        "subagent-scoping"
+        "context-window",
+        "trust-ceiling",
+        "prompt-engineering",
+        "attention-mechanism"
       ],
       "explicit_links": [
         "WIS-001",
@@ -295,6 +297,81 @@
       ],
       "status": "APPROVED",
       "bucket_id": "bucket_4_rigor"
+    }
+  },
+  {
+    "id": "PHL-029",
+    "theme": "Language & Invention",
+    "paper_order": 29,
+    "origin": {
+      "author": "jallred",
+      "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
+      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "immutable": true,
+      "created_at": "2026-03-01T12:00:00Z"
+    },
+    "synthesis": {
+      "title": "Language as Humanity's Supreme Invention & The Book Analogy",
+      "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary technology for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
+      "lab_anchors": [
+        "Portfolio_Dev/docs/philosophy/PHL-006.md",
+        "FEAT-582"
+      ],
+      "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "language-as-invention",
+        "the-book-analogy",
+        "thought-vehicles",
+        "philosophy-of-words"
+      ],
+      "explicit_links": [
+        "PHL-011",
+        "PHL-013"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_3_foil"
+    }
+  },
+  {
+    "id": "PHL-030",
+    "theme": "Applied Philosophy",
+    "paper_order": 30,
+    "origin": {
+      "author": "jallred",
+      "text": "The invention of AI has enabled us to not only just talk about philosophy but actually apply it to machines with actual results.",
+      "source": "Insight paper follow up ideas (1rjtaMPnjo6rrS6adhhtyo2hw6BwwEIQyWC9ut0d6m7s)",
+      "immutable": true,
+      "created_at": "2026-09-14T10:39:00Z"
+    },
+    "synthesis": {
+      "title": "Applied Armchair Philosophy: Executing Epistemology on Silicon",
+      "narrative_context": "For centuries, epistemology, theory of mind, and cognitive heuristics were speculative armchair philosophy without runtime feedback. Sovereign multi-agent architectures transform classical philosophy into executable systems engineering: epistemological priors become retrieval filters, heuristics become backpressure gates, and intuition becomes just-in-time vector retrieval verified against real silicon telemetry.",
+      "lab_anchors": [
+        "Portfolio_Dev/papers/manifest.json",
+        "FEAT-581",
+        "BKM-046"
+      ],
+      "review_notes": "The philosophical bedrock for the JITC Intuition manuscript and the Federated Lab itself.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "applied-philosophy",
+        "epistemology-on-silicon",
+        "armchair-philosophy",
+        "runtime-feedback"
+      ],
+      "explicit_links": [
+        "PHL-001",
+        "PHL-029"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_1_jitc"
     }
   }
 ]

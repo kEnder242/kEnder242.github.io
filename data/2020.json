@@ -41,8 +41,8 @@
     "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "MIV software",
-      "CLX"
+      "CLX",
+      "MIV software"
     ],
     "rank": 4,
     "id": "GEM-5f87"
@@ -65,8 +65,8 @@
     "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "MIV software",
-      "CLX"
+      "CLX",
+      "MIV software"
     ],
     "rank": 4,
     "id": "GEM-c8ba"
@@ -100,8 +100,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "peci",
-      "ipmi_host"
+      "ipmi_host",
+      "peci"
     ],
     "rank": 4,
     "id": "GEM-de4b"
@@ -113,8 +113,8 @@
     "sensitivity": "Public",
     "tags": [
       "pyghmi",
-      "msr",
-      "crypto"
+      "crypto",
+      "msr"
     ],
     "rank": 4,
     "id": "GEM-599b"
@@ -126,8 +126,8 @@
     "sensitivity": "Public",
     "tags": [
       "MIV",
-      "Recovery",
-      "Reset"
+      "Reset",
+      "Recovery"
     ],
     "rank": 4,
     "id": "GEM-959d"
@@ -150,8 +150,8 @@
     "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "Test",
-      "MIV"
+      "MIV",
+      "Test"
     ],
     "rank": 4,
     "id": "GEM-c46c"
@@ -162,8 +162,8 @@
     "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "Recovery",
-      "MIV"
+      "MIV",
+      "Recovery"
     ],
     "rank": 4,
     "id": "GEM-c77d"
@@ -222,8 +222,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "MIV content readiness",
-      "DTAF"
+      "DTAF",
+      "MIV content readiness"
     ],
     "rank": 4,
     "id": "GEM-0043"
@@ -234,8 +234,8 @@
     "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
     "sensitivity": "Public",
     "tags": [
-      "PCIE Whitley",
-      "priority execution requests"
+      "priority execution requests",
+      "PCIE Whitley"
     ],
     "rank": 4,
     "id": "GEM-cb8e"
@@ -246,8 +246,8 @@
     "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "Crasdump/EINJ knobs"
+      "Crasdump/EINJ knobs",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-059d"
@@ -258,8 +258,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "external interface spec",
-      "nm-4.0"
+      "nm-4.0",
+      "external interface spec"
     ],
     "rank": 4,
     "id": "GEM-d939"
@@ -270,8 +270,8 @@
     "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
     "sensitivity": "Public",
     "tags": [
-      "domain 2",
-      "test setup"
+      "test setup",
+      "domain 2"
     ],
     "rank": 4,
     "id": "GEM-756d"
@@ -282,8 +282,8 @@
     "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
     "sensitivity": "Public",
     "tags": [
-      "delete failure",
-      "nm-policy"
+      "nm-policy",
+      "delete failure"
     ],
     "rank": 4,
     "id": "GEM-780e"
@@ -294,8 +294,8 @@
     "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "L-BMC"
+      "L-BMC",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-d328"
@@ -306,8 +306,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "validation",
-      "BMC"
+      "BMC",
+      "validation"
     ],
     "rank": 4,
     "id": "GEM-72d8"
@@ -318,8 +318,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "recovery",
-      "MIV"
+      "MIV",
+      "recovery"
     ],
     "rank": 4,
     "id": "GEM-7360"
@@ -342,8 +342,8 @@
     "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
     "sensitivity": "Public",
     "tags": [
-      "firmware update",
-      "L-BMC"
+      "L-BMC",
+      "firmware update"
     ],
     "rank": 4,
     "id": "GEM-ee96"
@@ -354,8 +354,8 @@
     "evidence": "IVL crash dump issue addressed on July 28, 2020",
     "sensitivity": "Public",
     "tags": [
-      "crash dump",
-      "IVL"
+      "IVL",
+      "crash dump"
     ],
     "rank": 4,
     "id": "GEM-cd82"
@@ -366,8 +366,8 @@
     "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
     "sensitivity": "Public",
     "tags": [
-      "Opcode 0x2E",
       "Node Manager",
+      "Opcode 0x2E",
       "Power Limiting Policy"
     ],
     "rank": 4,
@@ -379,8 +379,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "pptx",
-      "Manageability Ignition-Redfish Content Plan"
+      "Manageability Ignition-Redfish Content Plan",
+      "pptx"
     ],
     "rank": 4,
     "id": "GEM-83e9"
@@ -405,8 +405,8 @@
     "tags": [
       "PECI",
       "master",
-      "BMC",
-      "PCH"
+      "PCH",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-fbf4"
@@ -451,8 +451,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Troubleshooting",
-      "Era Registry"
+      "Era Registry",
+      "Troubleshooting"
     ],
     "rank": 4,
     "id": "GEM-943f"

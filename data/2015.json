@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "validation",
       "PVT",
+      "validation",
       "testing"
     ],
     "rank": 4,
@@ -55,8 +55,8 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "vcd_missing",
       "test_failure",
+      "vcd_missing",
       "msr_error"
     ],
     "rank": 4,
@@ -92,8 +92,8 @@
     "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
     "sensitivity": "Public",
     "tags": [
-      "failure",
-      "visa_patgen_manual_stop"
+      "visa_patgen_manual_stop",
+      "failure"
     ],
     "rank": 4,
     "id": "GEM-5861"
@@ -104,8 +104,8 @@
     "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
     "sensitivity": "Public",
     "tags": [
-      "error",
-      "causality"
+      "causality",
+      "error"
     ],
     "rank": 4,
     "id": "GEM-e119"
@@ -117,8 +117,8 @@
     "sensitivity": "Public",
     "tags": [
       "failure",
-      "connection",
-      "ipc"
+      "ipc",
+      "connection"
     ],
     "rank": 4,
     "id": "GEM-b175"
@@ -129,9 +129,9 @@
     "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
     "sensitivity": "Public",
     "tags": [
-      "tap2sb",
       "cfg_apitest64.exe",
-      "probemode"
+      "probemode",
+      "tap2sb"
     ],
     "rank": 4,
     "id": "GEM-957f"
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "ipccli",
-      "Python 2.7.9"
+      "Python 2.7.9",
+      "ipccli"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -190,8 +190,8 @@
     "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
     "sensitivity": "Public",
     "tags": [
-      "EDRAMIOT",
-      "dockable_content"
+      "dockable_content",
+      "EDRAMIOT"
     ],
     "rank": 4,
     "id": "GEM-510d"
@@ -202,8 +202,8 @@
     "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
     "sensitivity": "Public",
     "tags": [
-      "SkyLake_M0",
       "VISA",
+      "SkyLake_M0",
       "EDRAM"
     ],
     "rank": 4,
@@ -215,8 +215,8 @@
     "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
     "sensitivity": "Public",
     "tags": [
-      "EDC",
-      "visa_custom_rs.xml"
+      "visa_custom_rs.xml",
+      "EDC"
     ],
     "rank": 4,
     "id": "GEM-6e23"
@@ -239,9 +239,9 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
+      "SV2K8122",
       "PVT BXTOEM",
-      "testing",
-      "SV2K8122"
+      "testing"
     ],
     "rank": 4,
     "id": "GEM-c456"
@@ -252,8 +252,8 @@
     "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
     "sensitivity": "Public",
     "tags": [
-      "target relocation",
-      "BXTP"
+      "BXTP",
+      "target relocation"
     ],
     "rank": 4,
     "id": "GEM-28b7"
@@ -277,8 +277,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "causality error",
-      "tool"
+      "tool",
+      "causality error"
     ],
     "rank": 4,
     "id": "GEM-8870"

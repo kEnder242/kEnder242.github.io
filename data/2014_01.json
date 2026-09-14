@@ -5,8 +5,8 @@
     "evidence": "Corrected CT item selection in the VISA panel.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "error_code"
+      "error_code",
+      "VISA"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "Corrected script generated from CEC register programs.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "error_code"
+      "error_code",
+      "VISA"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "Skylake"
+      "Skylake",
+      "VISA"
     ],
     "rank": 4
   },
@@ -38,8 +38,8 @@
     "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "logging"
+      "logging",
+      "VISA"
     ],
     "rank": 4
   }

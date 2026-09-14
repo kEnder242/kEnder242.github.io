@@ -16,8 +16,8 @@
     "evidence": "0x80: Unknown",
     "sensitivity": "Public",
     "tags": [
-      "ipmitool",
-      "error code"
+      "error code",
+      "ipmitool"
     ],
     "rank": 4
   },
@@ -27,10 +27,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "ICX-HCC",
+      "ME",
       "IPMI",
-      "ME"
+      "ICX-HCC",
+      "BMC"
     ],
     "rank": 4
   }
