@@ -15,8 +15,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "ipmi_host",
-      "peci"
+      "peci",
+      "ipmi_host"
     ],
     "rank": 4
   },
@@ -26,8 +26,8 @@
     "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "pyghmi",
       "crypto",
+      "pyghmi",
       "msr"
     ],
     "rank": 4

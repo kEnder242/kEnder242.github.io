@@ -66,8 +66,8 @@
     "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "connection_abort"
+      "connection_abort",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-d11c"
@@ -92,8 +92,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "report"
+      "report",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-2efc"
@@ -104,8 +104,8 @@
     "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "fuzzing"
+      "fuzzing",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-3482"
@@ -140,8 +140,8 @@
     "evidence": "PTU not running properly, incorrect power limits",
     "sensitivity": "Public",
     "tags": [
-      "calibration",
       "ptu",
+      "calibration",
       "issue"
     ],
     "rank": 4,
@@ -165,8 +165,8 @@
     "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "peci_flood.tdf",
-      "PECI Throughput"
+      "PECI Throughput",
+      "peci_flood.tdf"
     ],
     "rank": 4,
     "id": "GEM-4906"
@@ -177,8 +177,8 @@
     "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
     "sensitivity": "Public",
     "tags": [
-      "PECI Command Rejection",
-      "peci_poison.tdf"
+      "peci_poison.tdf",
+      "PECI Command Rejection"
     ],
     "rank": 4,
     "id": "GEM-a220"
@@ -263,8 +263,8 @@
     "evidence": "RAW LOGS on 6/30/2021",
     "sensitivity": "Public",
     "tags": [
-      "collaboration",
-      "team structure"
+      "team structure",
+      "collaboration"
     ],
     "rank": 4,
     "id": "GEM-4aac"
@@ -384,8 +384,8 @@
     "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
     "sensitivity": "Public",
     "tags": [
-      "OEM API",
-      "Redfish"
+      "Redfish",
+      "OEM API"
     ],
     "rank": 4,
     "id": "GEM-7ab0"

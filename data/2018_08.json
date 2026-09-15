@@ -5,8 +5,8 @@
     "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
     "sensitivity": "Public",
     "tags": [
-      "mce",
       "vc30",
+      "mce",
       "error"
     ],
     "rank": 4
@@ -17,8 +17,8 @@
     "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "ixpdimm-cli"
+      "ixpdimm-cli",
+      "performance"
     ],
     "rank": 4
   }

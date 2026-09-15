@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "performance"
+      "performance",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-dc8d"
@@ -88,8 +88,8 @@
     "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-5b1f"
@@ -100,8 +100,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "ipmi_host",
-      "peci"
+      "peci",
+      "ipmi_host"
     ],
     "rank": 4,
     "id": "GEM-de4b"
@@ -112,8 +112,8 @@
     "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "pyghmi",
       "crypto",
+      "pyghmi",
       "msr"
     ],
     "rank": 4,
@@ -125,9 +125,9 @@
     "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
+      "Recovery",
       "MIV",
-      "Reset",
-      "Recovery"
+      "Reset"
     ],
     "rank": 4,
     "id": "GEM-959d"
@@ -138,8 +138,8 @@
     "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-4808"
@@ -162,8 +162,8 @@
     "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "Recovery"
+      "Recovery",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-c77d"
@@ -174,8 +174,8 @@
     "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-70a7"
@@ -186,8 +186,8 @@
     "evidence": "Higher-order PECI test cases were planned",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "DTAF"
+      "DTAF",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-ef27"
@@ -198,8 +198,8 @@
     "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "DTAF"
+      "DTAF",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-ba14"
@@ -210,8 +210,8 @@
     "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "BMC"
+      "BMC",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-f17d"
@@ -222,8 +222,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
-      "MIV content readiness"
+      "MIV content readiness",
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-0043"
@@ -246,8 +246,8 @@
     "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
     "sensitivity": "Public",
     "tags": [
-      "Crasdump/EINJ knobs",
-      "DTAF"
+      "DTAF",
+      "Crasdump/EINJ knobs"
     ],
     "rank": 4,
     "id": "GEM-059d"
@@ -258,8 +258,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "nm-4.0",
-      "external interface spec"
+      "external interface spec",
+      "nm-4.0"
     ],
     "rank": 4,
     "id": "GEM-d939"
@@ -270,8 +270,8 @@
     "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
     "sensitivity": "Public",
     "tags": [
-      "test setup",
-      "domain 2"
+      "domain 2",
+      "test setup"
     ],
     "rank": 4,
     "id": "GEM-756d"
@@ -367,8 +367,8 @@
     "sensitivity": "Public",
     "tags": [
       "Node Manager",
-      "Opcode 0x2E",
-      "Power Limiting Policy"
+      "Power Limiting Policy",
+      "Opcode 0x2E"
     ],
     "rank": 4,
     "id": "GEM-93e8"
@@ -391,8 +391,8 @@
     "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "commands"
+      "commands",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-31ac"
@@ -403,10 +403,10 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
+      "BMC",
       "master",
       "PCH",
-      "BMC"
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-fbf4"
@@ -463,8 +463,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Power Management",
-      "Capacity Planning"
+      "Capacity Planning",
+      "Power Management"
     ],
     "rank": 4,
     "id": "GEM-f12c"
@@ -475,8 +475,8 @@
     "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
     "sensitivity": "Public",
     "tags": [
-      "inventory metric calculation",
-      "formula update"
+      "formula update",
+      "inventory metric calculation"
     ],
     "rank": 4,
     "id": "GEM-d9c0"
@@ -487,8 +487,8 @@
     "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
     "sensitivity": "Public",
     "tags": [
-      "inventory requests",
-      "updated list"
+      "updated list",
+      "inventory requests"
     ],
     "rank": 4,
     "id": "GEM-0527"

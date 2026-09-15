@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "PVT",
       "validation",
-      "testing"
+      "testing",
+      "PVT"
     ],
     "rank": 4,
     "id": "GEM-8e79"
@@ -30,8 +30,8 @@
     "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
     "sensitivity": "Public",
     "tags": [
-      "error",
-      "host interface"
+      "host interface",
+      "error"
     ],
     "rank": 4,
     "id": "GEM-abb6"
@@ -43,8 +43,8 @@
     "sensitivity": "Public",
     "tags": [
       "powercycle.py",
-      "init_soc.cmm",
-      "FPGAIntegration"
+      "FPGAIntegration",
+      "init_soc.cmm"
     ],
     "rank": 4,
     "id": "GEM-67b1"
@@ -55,8 +55,8 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "test_failure",
       "vcd_missing",
+      "test_failure",
       "msr_error"
     ],
     "rank": 4,
@@ -80,8 +80,8 @@
     "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
     "sensitivity": "Public",
     "tags": [
-      "trace32_error",
-      "recovery_failure"
+      "recovery_failure",
+      "trace32_error"
     ],
     "rank": 4,
     "id": "GEM-3f26"
@@ -92,8 +92,8 @@
     "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
     "sensitivity": "Public",
     "tags": [
-      "visa_patgen_manual_stop",
-      "failure"
+      "failure",
+      "visa_patgen_manual_stop"
     ],
     "rank": 4,
     "id": "GEM-5861"
@@ -116,9 +116,9 @@
     "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
     "sensitivity": "Public",
     "tags": [
-      "failure",
       "ipc",
-      "connection"
+      "connection",
+      "failure"
     ],
     "rank": 4,
     "id": "GEM-b175"
@@ -129,8 +129,8 @@
     "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
     "sensitivity": "Public",
     "tags": [
-      "cfg_apitest64.exe",
       "probemode",
+      "cfg_apitest64.exe",
       "tap2sb"
     ],
     "rank": 4,
@@ -142,8 +142,8 @@
     "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
     "sensitivity": "Public",
     "tags": [
-      "ITP",
-      "bugs"
+      "bugs",
+      "ITP"
     ],
     "rank": 4,
     "id": "GEM-dccc"
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "Python 2.7.9",
-      "ipccli"
+      "ipccli",
+      "Python 2.7.9"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -166,8 +166,8 @@
     "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran C:\\Python27\\Scripts\\ipccli.exe with the command import bxt_utils; bxt_utils.th_break()",
     "sensitivity": "Public",
     "tags": [
-      "BXT OEM toolstack",
-      "system trace"
+      "system trace",
+      "BXT OEM toolstack"
     ],
     "rank": 4,
     "id": "GEM-6b2c"
@@ -178,8 +178,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "metadata file",
-      "internal error"
+      "internal error",
+      "metadata file"
     ],
     "rank": 4,
     "id": "GEM-6435"
@@ -203,8 +203,8 @@
     "sensitivity": "Public",
     "tags": [
       "VISA",
-      "SkyLake_M0",
-      "EDRAM"
+      "EDRAM",
+      "SkyLake_M0"
     ],
     "rank": 4,
     "id": "GEM-9feb"
@@ -239,9 +239,9 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
-      "SV2K8122",
       "PVT BXTOEM",
-      "testing"
+      "testing",
+      "SV2K8122"
     ],
     "rank": 4,
     "id": "GEM-c456"
@@ -265,8 +265,8 @@
     "sensitivity": "Public",
     "tags": [
       "NPK SDK",
-      "installation",
-      "configuration"
+      "configuration",
+      "installation"
     ],
     "rank": 4,
     "id": "GEM-8ff2"
@@ -277,8 +277,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "tool",
-      "causality error"
+      "causality error",
+      "tool"
     ],
     "rank": 4,
     "id": "GEM-8870"

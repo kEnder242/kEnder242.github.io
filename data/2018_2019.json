@@ -5,8 +5,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "error injection"
+      "error injection",
+      "APEI/EINJ"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "OS log error messages"
+      "OS log error messages",
+      "APEI/EINJ"
     ],
     "rank": 4
   }

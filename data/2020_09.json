@@ -16,8 +16,8 @@
     "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "commands"
+      "commands",
+      "PECI"
     ],
     "rank": 4
   },
@@ -27,10 +27,10 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
+      "BMC",
       "master",
       "PCH",
-      "BMC"
+      "PECI"
     ],
     "rank": 4
   }

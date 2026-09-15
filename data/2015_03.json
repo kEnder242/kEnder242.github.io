@@ -5,8 +5,8 @@
     "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
     "sensitivity": "Public",
     "tags": [
-      "visa_patgen_manual_stop",
-      "failure"
+      "failure",
+      "visa_patgen_manual_stop"
     ],
     "rank": 4
   },
@@ -27,9 +27,9 @@
     "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
     "sensitivity": "Public",
     "tags": [
-      "failure",
       "ipc",
-      "connection"
+      "connection",
+      "failure"
     ],
     "rank": 4
   }

@@ -215,9 +215,9 @@
     "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
     "sensitivity": "Public",
     "tags": [
-      "pipes",
       "bling",
-      "dc6"
+      "dc6",
+      "pipes"
     ],
     "rank": 4,
     "id": "GEM-5dcf"
@@ -228,8 +228,8 @@
     "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
     "sensitivity": "Public",
     "tags": [
-      "dc6",
-      "build process"
+      "build process",
+      "dc6"
     ],
     "rank": 4,
     "id": "GEM-0af8"
@@ -240,8 +240,8 @@
     "evidence": "RAW LOGS: ... (C:\\iag_maestro-content\\PlatformConfig.xml)",
     "sensitivity": "Public",
     "tags": [
-      "dc6",
-      "PlatformConfig.xml"
+      "PlatformConfig.xml",
+      "dc6"
     ],
     "rank": 4,
     "id": "GEM-9e2b"
@@ -403,8 +403,8 @@
     "evidence": "/p/ppa/farm/tools/proj_bin/set_farm.sh -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
     "sensitivity": "Public",
     "tags": [
-      "Maestro",
-      "test environment"
+      "test environment",
+      "Maestro"
     ],
     "rank": 4,
     "id": "GEM-07fe"
@@ -427,8 +427,8 @@
     "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
     "sensitivity": "Public",
     "tags": [
-      "PCI Cfg writes",
-      "executed callbacks"
+      "executed callbacks",
+      "PCI Cfg writes"
     ],
     "rank": 4,
     "id": "GEM-b1bc"

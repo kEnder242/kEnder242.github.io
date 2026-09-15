@@ -1,9 +1,11 @@
 {
-  "pending_action": "NONE",
-  "action_level": 0,
-  "timer_expiry_ts": 0,
-  "triggered_at_ts": 1789430959,
-  "last_commit": "8c5acd8",
-  "repo": "Portfolio_Dev",
-  "reasons": []
+  "pending_action": "DEEP_RESET",
+  "action_level": 2,
+  "timer_expiry_ts": 1789489151,
+  "triggered_at_ts": 1789487351,
+  "last_commit": "452b7f5",
+  "repo": "HomeLabAI",
+  "reasons": [
+    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)"
+  ]
 }

@@ -12,12 +12,12 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
         "id": "WIS-002",
-        "title": "Token Golf over Token Maxing & Trust Ceilings",
+        "title": "Trust Quantified as Context Precision",
         "source": "wisdom_data.json"
       },
       "card_b": {
@@ -26,21 +26,7 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-003",
-        "title": "Feedback Backpressure & The Handover Reflection",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "PHL-009",
-        "title": "The Handover Reflection Protocol",
-        "source": "philosophy_data.json"
-      },
-      "similarity": 0.8397,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
@@ -54,7 +40,7 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
@@ -68,7 +54,7 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
@@ -82,7 +68,21 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-007",
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-029",
+        "title": "Language as Humanity's Supreme Invention & The Book Analogy",
+        "source": "wisdom_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
@@ -96,7 +96,7 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
     },
     {
       "card_a": {
@@ -110,8 +110,22 @@
         "source": "philosophy_data.json"
       },
       "similarity": 1.0,
-      "flagged_at": "2026-09-14T12:01:16Z"
+      "flagged_at": "2026-09-15T12:02:08Z"
+    },
+    {
+      "card_a": {
+        "id": "PHL-029",
+        "title": "Language as Humanity's Supreme Invention & The Book Analogy",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "PHL-017",
+        "title": "Language as Humanity's Best Invention & The Book Analogy",
+        "source": "philosophy_data.json"
+      },
+      "similarity": 1.0,
+      "flagged_at": "2026-09-15T12:02:08Z"
     }
   ],
-  "last_dedup_scan_ts": 1789387276
+  "last_dedup_scan_ts": 1789473728
 }
