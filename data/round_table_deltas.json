@@ -44,5 +44,93 @@
       "CRITIQUE: { \"score\" : 1, \"reasoning\" : \"Evidence\" , \"slop_found\" :"
     ],
     "consensus_1liner": "{ \"score\" : 1, \"reasoning\" : \"Evidence\" , \"slop_found\" :"
+  },
+  {
+    "turn": 8,
+    "timestamp": 1789453144,
+    "time_str": "23:19:04",
+    "topic": "UNKNOWN",
+    "scope": "CONTEXT_SCOPE_LONG",
+    "turn_mode": "FULL_ROUND_TABLE",
+    "is_full_round_table": true,
+    "checkpoints_elapsed_s": {
+      "triage": 0.863,
+      "pinky_stance": 0.867,
+      "brain_arch": 0.867,
+      "oracle": 178.961,
+      "pinky_judgment": 0.867
+    },
+    "deltas_elapsed_s": {
+      "triage": 0.863,
+      "pinky_stance": 0.004,
+      "brain_arch": 0.001,
+      "oracle": 178.094,
+      "pinky_judgment": 0.001
+    },
+    "cumulative": {
+      "triage": 0.863,
+      "pinky_stance": 0.867,
+      "brain_arch": 0.867,
+      "oracle": 178.961,
+      "pinky_judgment": 0.867
+    },
+    "deltas": {
+      "triage": 0.863,
+      "pinky_stance": 0.004,
+      "brain_arch": 0.001,
+      "oracle": 178.094,
+      "pinky_judgment": 0.001
+    },
+    "total_elapsed_s": 0.867,
+    "total_s": 0.867,
+    "distillation_bullets": [
+      "Live turn registered."
+    ],
+    "consensus_1liner": "Consensus nominal."
+  },
+  {
+    "turn": 9,
+    "timestamp": 1789453425,
+    "time_str": "23:23:45",
+    "topic": "UNKNOWN",
+    "scope": "CONTEXT_SCOPE_LONG",
+    "turn_mode": "FULL_ROUND_TABLE",
+    "is_full_round_table": true,
+    "checkpoints_elapsed_s": {
+      "triage": 10.838,
+      "pinky_stance": 15.389,
+      "brain_arch": 17.867,
+      "oracle": 178.961,
+      "pinky_judgment": 17.867
+    },
+    "deltas_elapsed_s": {
+      "triage": 10.838,
+      "pinky_stance": 4.551,
+      "brain_arch": 2.478,
+      "oracle": 161.094,
+      "pinky_judgment": 0.001
+    },
+    "cumulative": {
+      "triage": 10.838,
+      "pinky_stance": 15.389,
+      "brain_arch": 17.867,
+      "oracle": 178.961,
+      "pinky_judgment": 17.867
+    },
+    "deltas": {
+      "triage": 10.838,
+      "pinky_stance": 4.551,
+      "brain_arch": 2.478,
+      "oracle": 161.094,
+      "pinky_judgment": 0.001
+    },
+    "total_elapsed_s": 17.867,
+    "total_s": 17.867,
+    "distillation_bullets": [
+      "LAB: {   \n    \"inferred_intent\": \"greeting\",\n    \"addressed_to\": \"NONE\",\n    \"vibe\": \"CASUAL\",\n    \"domain\": \"unknown\",\n    \"casual\": 0.8,\n    \"intrigue\": ",
+      "PINKY:  [ [STRategic] [STRATEG ] [ARCHSTR {STRategICAL} [STRategic] [ARCHSTR{STRategical} [STRategically",
+      "BRAIN: *whirrs and hums* Ah, hello there! It's great to see you're up and running today. I've been keeping busy here at Acme Lab"
+    ],
+    "consensus_1liner": "Consensus nominal."
   }
 ]
