@@ -5,8 +5,8 @@
     "evidence": "TODO entry mentioning setup of BXT FPGA system",
     "sensitivity": "Public",
     "tags": [
-      "BXT FPGA",
-      "NPK SDK"
+      "NPK SDK",
+      "BXT FPGA"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
     "sensitivity": "Public",
     "tags": [
-      "NullPointerException",
-      "LTB"
+      "LTB",
+      "NullPointerException"
     ],
     "rank": 4
   },
@@ -27,9 +27,9 @@
     "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
     "sensitivity": "Public",
     "tags": [
-      "BXTSupportPkWin64",
+      "ISDBaseWin64",
       "IpcApiAccess",
-      "ISDBaseWin64"
+      "BXTSupportPkWin64"
     ],
     "rank": 4
   }

@@ -1061,5 +1061,170 @@
       "status": "APPROVED",
       "bucket_id": "bucket_5_infra"
     }
+  },
+  {
+    "id": "PHL-031",
+    "theme": "Systems Architecture & Invariant Records",
+    "paper_order": 31,
+    "origin": {
+      "author": "jallred",
+      "text": "Runtime execution is volatile, noisy, and ephemeral; artifacts of record must remain decoupled, immutable, and self-contained. The AI must judge and connect, not fabricate; the AST must carry its own bones, not tether to live databases.",
+      "source": "Decoupled Architecture Synthesis (Sprint 82/83 Review)",
+      "immutable": true,
+      "created_at": "2026-09-15T11:40:00Z"
+    },
+    "synthesis": {
+      "title": "The Decoupled Determinism Tenet (Artifacts of Record vs. Ephemeral Runtime)",
+      "narrative_context": "Systems degrade when static artifacts of record depend on live, ephemeral runtime execution. True architectural robustness requires two core decouplings: (1) Functional Decoupling: constraining generative models to combinatorial judgment, ranking, and evidence attachment rather than hallucinating text; (2) Data Decoupling: embedding discovered bone collections and candidate pools directly into self-contained ASTs, enabling zero-latency rendering and 100% offline-reproducible builds without live database tethering.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/writer.html",
+        "BKM-055",
+        "WIS-010"
+      ],
+      "review_notes": "The dual-decoupling foundation for the anti-embellishment synthesizer and self-contained document ASTs.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "decoupling",
+        "deterministic-ast",
+        "anti-embellishment",
+        "artifacts-of-record",
+        "offline-portability"
+      ],
+      "explicit_links": [
+        "PHL-001",
+        "PHL-030"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_5_infra"
+    }
+  },
+  {
+    "id": "PHL-032",
+    "theme": "Software Engineering Philosophy & Creative Process",
+    "paper_order": 32,
+    "origin": {
+      "author": "jallred",
+      "text": "How do you develop code? Ideas and vision are critical to refine a design, so this is actually best answered as a creative process question - with passive and active methods: Passive: Refine shower thoughts into (plutonium weapon grade) ideas - connect different domains - brings out mulling over thoughts. Active: Take your time to respond methodically. Stimulates focused ideas.",
+      "source": "Interview Philosophy Dialogue (Sprint 83)",
+      "immutable": true,
+      "created_at": "2026-09-16T11:25:00Z"
+    },
+    "synthesis": {
+      "title": "The Dual-Engine Creative Process: Passive Cross-Domain Synthesis & Active Methodical Execution",
+      "narrative_context": "Software development is fundamentally a creative discipline governed by two complementary cognitive modes. Passive Synthesis operates asynchronously in the background—distilling subconscious 'shower thoughts' into high-impact, cross-domain insights by connecting disparate systems (e.g., hardware validation, distributed systems, vector memory). Active Execution is the deliberate, paced, and structured implementation phase where taking time to respond methodically prevents cognitive thrashing, clarifies interfaces, and translates creative vision into robust, defensive production architectures.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/career_notes.html",
+        "HomeLabAI/docs/Protocols.md:BKM-005",
+        "PHL-001"
+      ],
+      "review_notes": "Bedrock axiom for interview readiness, architectural ideation, and software craft.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "creative-process",
+        "software-development",
+        "passive-synthesis",
+        "active-execution",
+        "cross-domain",
+        "architecture-philosophy"
+      ],
+      "explicit_links": [
+        "PHL-001",
+        "PHL-002",
+        "PHL-031"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_4_leadership"
+    }
+  },
+  {
+    "id": "PHL-033",
+    "theme": "Human-AI Interface & Co-Pilot Architecture",
+    "paper_order": 33,
+    "origin": {
+      "author": "jallred",
+      "text": "Human in the loop is ALSO flagging DNA for review in the forge... flag co-pilot moments when a human disagrees or explicitly gives feedback. The human sovereign remains the voice; the agent is the hands.",
+      "source": "DNA Forge Co-Pilot Dialogue (Sprint 83)",
+      "immutable": true,
+      "created_at": "2026-09-17T11:05:00Z"
+    },
+    "synthesis": {
+      "title": "The Sovereign Human-in-the-Loop: Disagreement Trapping & Active Knowledge Re-Forging",
+      "narrative_context": "Autonomous agents degrade into self-reinforcing hallucination loops when isolated from human correction. The Sovereign Human-in-the-Loop architecture treats human friction, disagreement, and explicit feedback not as execution failures, but as the highest-fidelity evolutionary signal in the system. Disagreements in chat are trapped as active re-forging candidates, ensuring that knowledge bases continuously evolve under human stewardship rather than unanchored autonomous drift.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/dna_forge.html",
+        "HomeLabAI/docs/Protocols.md:BKM-049",
+        "PHL-005",
+        "FEAT-582"
+      ],
+      "review_notes": "Grounds the active human-in-the-loop review drawer and co-pilot disagreement capture in the DNA Forge.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "human-in-the-loop",
+        "co-pilot",
+        "disagreement-trapping",
+        "re-forging",
+        "sovereign-human",
+        "active-feedback"
+      ],
+      "explicit_links": [
+        "PHL-005",
+        "PHL-032",
+        "WIS-002",
+        "WIS-003"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_4_leadership"
+    }
+  },
+  {
+    "id": "PHL-034",
+    "theme": "Federated DNA Architecture & Schema Foundations",
+    "paper_order": 34,
+    "origin": {
+      "author": "jallred",
+      "text": "Every distilled idea in the lab is a first-class DNA citizen living at the same level. Domains (FEAT, BKM, PHL, GEM, WIS, VIBE, DISC, SPRINT) are peer-level buckets, not a hierarchy. Ideas share a polymorphic schema and flow laterally across domains as they mature.",
+      "source": "Federated DNA Architecture Consensus (Sprint 83)",
+      "immutable": true,
+      "created_at": "2026-09-17T14:10:00Z"
+    },
+    "synthesis": {
+      "title": "First-Class DNA Citizens & Polymorphic Idea Representation",
+      "narrative_context": "In a federated cognitive lab, all distilled knowledge artifacts exist as equal, peer-level first-class citizens regardless of whether they represent operational directives (BKM), empirical scars (WIS), or ontological axioms (PHL). Knowledge objects share a common polymorphic base schema (id, domain, title, summary, content, tags, explicit_links, metadata), enabling zero-loss horizontal re-bucketing and automated cross-domain link preservation across vector stores.",
+      "lab_anchors": [
+        "HomeLabAI/docs/Protocols.md:BKM-060",
+        "Portfolio_Dev/field_notes/dna_forge.html",
+        "FEAT-582",
+        "FEAT-585"
+      ],
+      "review_notes": "Establishes the foundational principle that DNA domains are horizontal containers rather than vertical hierarchies.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "dna-taxonomy",
+        "polymorphic-schema",
+        "first-class-citizen",
+        "horizontal-rebucketing",
+        "knowledge-architecture"
+      ],
+      "explicit_links": [
+        "PHL-001",
+        "PHL-003",
+        "PHL-033",
+        "BKM-060"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_1_jitc"
+    }
   }
 ]

@@ -41,8 +41,8 @@
     "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
     "sensitivity": "Public",
     "tags": [
-      "Skylake",
-      "VISA"
+      "VISA",
+      "Skylake"
     ],
     "rank": 4,
     "id": "GEM-29bc"
@@ -53,8 +53,8 @@
     "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "logging"
+      "logging",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-2f1c"
@@ -149,8 +149,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "ITP Bug",
-      "BDW"
+      "BDW",
+      "ITP Bug"
     ],
     "rank": 4,
     "id": "GEM-3754"
@@ -161,8 +161,8 @@
     "evidence": "RAW LOGS: ...",
     "sensitivity": "Public",
     "tags": [
-      "EDRAMBAR",
-      "debugging"
+      "debugging",
+      "EDRAMBAR"
     ],
     "rank": 4,
     "id": "GEM-d19e"
@@ -257,8 +257,8 @@
     "evidence": "TODO entry mentioning setup of BXT FPGA system",
     "sensitivity": "Public",
     "tags": [
-      "BXT FPGA",
-      "NPK SDK"
+      "NPK SDK",
+      "BXT FPGA"
     ],
     "rank": 4,
     "id": "GEM-be04"
@@ -269,8 +269,8 @@
     "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
     "sensitivity": "Public",
     "tags": [
-      "NullPointerException",
-      "LTB"
+      "LTB",
+      "NullPointerException"
     ],
     "rank": 4,
     "id": "GEM-7e3e"
@@ -281,9 +281,9 @@
     "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
     "sensitivity": "Public",
     "tags": [
-      "BXTSupportPkWin64",
+      "ISDBaseWin64",
       "IpcApiAccess",
-      "ISDBaseWin64"
+      "BXTSupportPkWin64"
     ],
     "rank": 4,
     "id": "GEM-c4a0"

@@ -51,10 +51,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 4S",
-      "Purley 2S",
+      "Proton1",
       "Proton2",
-      "Proton1"
+      "Purley 2S",
+      "Purley 4S"
     ],
     "rank": 4,
     "id": "GEM-c5a2"
@@ -65,8 +65,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "FIO",
-      "stressapptest"
+      "stressapptest",
+      "FIO"
     ],
     "rank": 4,
     "id": "GEM-dec7"
@@ -77,9 +77,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 4S",
       "Purley 2S",
-      "CScripts"
+      "CScripts",
+      "Purley 4S"
     ],
     "rank": 4,
     "id": "GEM-9713"
@@ -126,9 +126,9 @@
     "evidence": "",
     "sensitivity": "Public",
     "tags": [
-      "AEP",
+      "PMEM",
       "AppDirect Mode",
-      "PMEM"
+      "AEP"
     ],
     "rank": 4,
     "id": "GEM-a50c"
@@ -139,8 +139,8 @@
     "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
     "sensitivity": "Public",
     "tags": [
-      "bug",
-      "TODO"
+      "TODO",
+      "bug"
     ],
     "rank": 4,
     "id": "GEM-1c6b"
@@ -175,8 +175,8 @@
     "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
     "sensitivity": "Public",
     "tags": [
-      "SHMEM_SYMMETRIC_HEAP_SIZE",
-      "configuration"
+      "configuration",
+      "SHMEM_SYMMETRIC_HEAP_SIZE"
     ],
     "rank": 4,
     "id": "GEM-dd14"
@@ -235,8 +235,8 @@
     "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
     "sensitivity": "Public",
     "tags": [
-      "vc30",
       "mce",
+      "vc30",
       "error"
     ],
     "rank": 4,
@@ -248,8 +248,8 @@
     "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
     "sensitivity": "Public",
     "tags": [
-      "ixpdimm-cli",
-      "performance"
+      "performance",
+      "ixpdimm-cli"
     ],
     "rank": 4,
     "id": "GEM-ee1f"
@@ -260,8 +260,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "App Direct Dependency Failure",
-      "BIOS update"
+      "BIOS update",
+      "App Direct Dependency Failure"
     ],
     "rank": 4,
     "id": "GEM-fee5"
@@ -284,8 +284,8 @@
     "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
     "sensitivity": "Public",
     "tags": [
-      "persistent memory",
-      "ipmctl"
+      "ipmctl",
+      "persistent memory"
     ],
     "rank": 4,
     "id": "GEM-48ad"
@@ -296,8 +296,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "Cold Reset",
-      "DC Cycling"
+      "DC Cycling",
+      "Cold Reset"
     ],
     "rank": 4,
     "id": "GEM-f198"
@@ -346,8 +346,8 @@
     "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt\"",
     "sensitivity": "Public",
     "tags": [
-      "Testing",
-      "Error Injection"
+      "Error Injection",
+      "Testing"
     ],
     "rank": 4,
     "id": "GEM-74dc"
@@ -358,8 +358,8 @@
     "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
     "sensitivity": "Public",
     "tags": [
-      "CAUSALITY ERROR",
-      "SvBios"
+      "SvBios",
+      "CAUSALITY ERROR"
     ],
     "rank": 4,
     "id": "GEM-7084"
@@ -370,8 +370,8 @@
     "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
     "sensitivity": "Public",
     "tags": [
-      "biosKnobs",
-      "Error Injection"
+      "Error Injection",
+      "biosKnobs"
     ],
     "rank": 4,
     "id": "GEM-2822"
@@ -382,8 +382,8 @@
     "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
     "sensitivity": "Public",
     "tags": [
-      "System Configuration",
-      "Error Injection"
+      "Error Injection",
+      "System Configuration"
     ],
     "rank": 4,
     "id": "GEM-b79d"
@@ -394,8 +394,8 @@
     "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
     "sensitivity": "Public",
     "tags": [
-      "Git",
       "repository",
+      "Git",
       "clone"
     ],
     "rank": 4,
@@ -407,8 +407,8 @@
     "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
     "sensitivity": "Public",
     "tags": [
-      "Git",
-      "user configuration"
+      "user configuration",
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-e714"
@@ -419,9 +419,9 @@
     "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
     "sensitivity": "Public",
     "tags": [
-      "Git",
+      "hook",
       "commit-msg",
-      "hook"
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-5c81"
@@ -432,8 +432,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "error injection",
-      "APEI/EINJ"
+      "APEI/EINJ",
+      "error injection"
     ],
     "rank": 4,
     "id": "GEM-f1ce"
@@ -444,8 +444,8 @@
     "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
     "sensitivity": "Public",
     "tags": [
-      "CLX_LBG_XDPA",
-      "IPC"
+      "IPC",
+      "CLX_LBG_XDPA"
     ],
     "rank": 4,
     "id": "GEM-2550"
@@ -456,8 +456,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
     "sensitivity": "Public",
     "tags": [
-      "OS log error messages",
-      "APEI/EINJ"
+      "APEI/EINJ",
+      "OS log error messages"
     ],
     "rank": 4,
     "id": "GEM-4d60"

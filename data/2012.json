@@ -29,8 +29,8 @@
     "evidence": "[RAW LOGS: mention of HsxRegisterLib library]",
     "sensitivity": "Public",
     "tags": [
-      "debugging",
-      "HsxRegisterLib"
+      "HsxRegisterLib",
+      "debugging"
     ],
     "rank": 4,
     "id": "GEM-2255"
@@ -41,8 +41,8 @@
     "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
     "sensitivity": "Public",
     "tags": [
-      "VISA signals",
-      "pattern generators"
+      "pattern generators",
+      "VISA signals"
     ],
     "rank": 4,
     "id": "GEM-76e0"

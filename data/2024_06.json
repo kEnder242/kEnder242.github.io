@@ -5,8 +5,8 @@
     "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "MTM"
+      "MTM",
+      "IPMI"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
     "sensitivity": "Public",
     "tags": [
-      "Python",
-      "PECI"
+      "PECI",
+      "Python"
     ],
     "rank": 4
   }

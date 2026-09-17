@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS mention MSR write with uncertainty about IMH",
     "sensitivity": "Public",
     "tags": [
-      "Research",
-      "TODO"
+      "TODO",
+      "Research"
     ],
     "rank": 4,
     "id": "GEM-70a6"
@@ -53,9 +53,9 @@
     "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
     "sensitivity": "Public",
     "tags": [
-      "busctl",
-      "i2cdetect",
       "i2cget",
+      "i2cdetect",
+      "busctl",
       "MCTP"
     ],
     "rank": 4,
@@ -170,8 +170,8 @@
     "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "MTM"
+      "MTM",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-721f"
@@ -194,8 +194,8 @@
     "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
     "sensitivity": "Public",
     "tags": [
-      "Python",
-      "PECI"
+      "PECI",
+      "Python"
     ],
     "rank": 4,
     "id": "GEM-75a5"
@@ -218,8 +218,8 @@
     "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
     "sensitivity": "Public",
     "tags": [
-      "simulation",
-      "Oakstream"
+      "Oakstream",
+      "simulation"
     ],
     "rank": 4,
     "id": "GEM-e26d"

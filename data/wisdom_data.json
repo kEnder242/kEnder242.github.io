@@ -374,5 +374,86 @@
       "status": "APPROVED",
       "bucket_id": "bucket_1_jitc"
     }
+  },
+  {
+    "id": "WIS-009",
+    "theme": "Software Engineering Philosophy & Creative Process",
+    "paper_order": 31,
+    "origin": {
+      "author": "jallred",
+      "text": "How do you develop code? Ideas and vision are critical to refine a design, so this is actually best answered as a creative process question - with passive and active methods: Passive: Refine shower thoughts into (plutonium weapon grade) ideas - connect different domains - brings out mulling over thoughts. Active: Take your time to respond methodically. Stimulates focused ideas.",
+      "source": "Interview Philosophy Dialogue (Sprint 83)",
+      "immutable": true,
+      "created_at": "2026-09-16T11:25:00Z"
+    },
+    "synthesis": {
+      "title": "The Dual-Engine Creative Process: Passive Cross-Domain Synthesis & Active Methodical Execution",
+      "narrative_context": "Software development is fundamentally a creative discipline governed by two complementary cognitive modes. Passive Synthesis operates asynchronously in the background—distilling subconscious 'shower thoughts' into high-impact, cross-domain insights by connecting disparate systems (e.g., hardware validation, distributed systems, vector memory). Active Execution is the deliberate, paced, and structured implementation phase where taking time to respond methodically prevents cognitive thrashing, clarifies interfaces, and translates creative vision into robust, defensive production architectures.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/career_notes.html",
+        "HomeLabAI/docs/Protocols.md:BKM-005",
+        "WIS-001"
+      ],
+      "review_notes": "Bedrock axiom for interview readiness, architectural ideation, and code craft.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "creative-process",
+        "software-development",
+        "passive-synthesis",
+        "active-execution",
+        "cross-domain",
+        "architecture-philosophy"
+      ],
+      "explicit_links": [
+        "WIS-001",
+        "WIS-002",
+        "WIS-010"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_4_leadership"
+    }
+  },
+  {
+    "id": "WIS-010",
+    "theme": "Systems Architecture & Invariant Records",
+    "paper_order": 31,
+    "origin": {
+      "author": "jallred",
+      "text": "Going back and forth between sprint 82 and 83, did we find in two separate instances that 'decoupling' was a strategic winner? Like wow. Talk about serendipity.",
+      "source": "Architectural Alignment Dialogue (Sprint 82/83 Review)",
+      "immutable": true,
+      "created_at": "2026-09-15T11:40:00Z"
+    },
+    "synthesis": {
+      "title": "The Dual Decoupling Architecture: Anti-Embellishment & Self-Contained ASTs",
+      "narrative_context": "Architectural coupling consistently generates fragility across disparate subsystems. In Sprint 82, decoupling the AI model from generative prose authoring into pure combinatorial selection/ranking eliminated resume hallucinations. In Sprint 83, decoupling interactive document editing and LaTeX builds from live vector database queries via embedded AST bone caching eliminated UI latency and brittle offline builds. Decoupling proves that static artifacts of record must be self-contained rather than tethered to live runtime state.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/writer.html",
+        "HomeLabAI/docs/Protocols.md:BKM-055",
+        "Portfolio_Dev/field_notes/data/philosophy_data.json:PHL-031"
+      ],
+      "review_notes": "Synthesizes the dual-decoupling breakthrough across document synthesis and AST caching.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "decoupling",
+        "dual-decoupling",
+        "anti-embellishment",
+        "self-contained-ast",
+        "architectural-serendipity"
+      ],
+      "explicit_links": [
+        "PHL-031",
+        "WIS-001",
+        "WIS-002"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_5_infra"
+    }
   }
 ]

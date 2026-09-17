@@ -43,10 +43,10 @@
     "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
     "sensitivity": "Public",
     "tags": [
-      "PCI",
+      "Error Code 0xAB",
       "IPMI",
-      "Error Code 0xAC",
-      "Error Code 0xAB"
+      "PCI",
+      "Error Code 0xAC"
     ],
     "rank": 4,
     "id": "GEM-acc9"
@@ -57,9 +57,9 @@
     "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
     "sensitivity": "Public",
     "tags": [
+      "pipeline",
       "jenkins",
-      "error",
-      "pipeline"
+      "error"
     ],
     "rank": 4,
     "id": "GEM-4502"
@@ -83,8 +83,8 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
-      "docker",
       "build",
+      "docker",
       "compose"
     ],
     "rank": 4,
@@ -123,8 +123,8 @@
     "evidence": "https://hsdes.intel.com/resource/1408873616",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "Node Manager"
+      "Node Manager",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-bcd0"
@@ -147,10 +147,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "IPMI",
+      "ICX-HCC",
       "ME",
-      "ICX-HCC"
+      "BMC",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-3f14"
@@ -161,8 +161,8 @@
     "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
     "sensitivity": "Public",
     "tags": [
-      "power_limit_accuracy",
-      "domains"
+      "domains",
+      "power_limit_accuracy"
     ],
     "rank": 4,
     "id": "GEM-fd78"
@@ -185,8 +185,8 @@
     "evidence": "RAW LOGS: ... (see above)",
     "sensitivity": "Public",
     "tags": [
-      "power_limit_accuracy",
-      "pmcapsweep"
+      "pmcapsweep",
+      "power_limit_accuracy"
     ],
     "rank": 4,
     "id": "GEM-ff25"
@@ -197,9 +197,9 @@
     "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
     "sensitivity": "Public",
     "tags": [
+      "power limiting",
       "IPMI",
-      "error",
-      "power limiting"
+      "error"
     ],
     "rank": 4,
     "id": "GEM-db95"
@@ -211,8 +211,8 @@
     "sensitivity": "Public",
     "tags": [
       "PECI",
-      "ipmitool",
-      "unknown return code"
+      "unknown return code",
+      "ipmitool"
     ],
     "rank": 4,
     "id": "GEM-a05c"
@@ -271,8 +271,8 @@
     "evidence": "Kernel panic - not syncing: Out of memory: system-wide panic_on_oom is enabled",
     "sensitivity": "Public",
     "tags": [
-      "OOM",
-      "kernel panic"
+      "kernel panic",
+      "OOM"
     ],
     "rank": 4,
     "id": "GEM-810e"
