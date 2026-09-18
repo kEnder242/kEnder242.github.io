@@ -42,7 +42,7 @@ class MissionControl extends HTMLElement {
                 <h2 style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-color, #4daafc); margin-top: 20px; letter-spacing: 1px; font-weight: bold; border-top: 1px solid var(--border-color, #30363d); padding-top: 15px;">Publications & Wisdom</h2>
                 <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/timeline.html" class="mission-link ${activePage === 'timeline.html' ? 'active' : ''}">Novel Ideas Timeline</a></li>
-                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/wisdom.html" class="mission-link ${activePage === 'wisdom.html' ? 'active' : ''}">Wisdom Studio</a></li>
+                    <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/dna_forge.html" class="mission-link ${(activePage === 'dna_forge.html' || activePage === 'wisdom.html') ? 'active' : ''}">DNA Forge</a></li>
                     <li style="margin-bottom: 8px;"><a href="https://notes.jason-lab.dev/writer.html" class="mission-link ${activePage === 'writer.html' ? 'active' : ''}">Writer Studio</a></li>
                 </ul>
                 <div style="font-size: 0.6rem; color: #444; margin-top: 20px; border-top: 1px solid #222; padding-top: 5px;">

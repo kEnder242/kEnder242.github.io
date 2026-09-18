@@ -1,8 +1,15 @@
 {
-  "pending_action": "NONE",
-  "action_level": 0,
-  "timer_expiry_ts": 0,
-  "triggered_at_ts": 1789587436,
-  "last_commit": "cleared",
-  "reasons": []
+  "pending_action": "DEEP_RESET",
+  "action_level": 2,
+  "timer_expiry_ts": 1789691805,
+  "triggered_at_ts": 1789690005,
+  "last_commit": "1293e06",
+  "repo": "Portfolio_Dev",
+  "reasons": [
+    "src/infra/nightly_lora_training.py (Deep Core/Infra Architecture)",
+    "config/infrastructure.json (Deep Core/Infra Architecture)",
+    "src/tests/test_speculative_triage.py (Active Module)",
+    "src/logic/speculative_triage.py (Active Module)",
+    "field_notes/ingest_war_stories.py (Portfolio Active Code)"
+  ]
 }

@@ -1,459 +1,1234 @@
 [
   {
     "id": "WIS-001",
-    "theme": "Memory & JITC",
+    "theme": "Security & Manageability",
     "paper_order": 1,
     "origin": {
       "author": "jallred",
-      "text": "Future of AI (three pillars): The attention and matrix computing is done and done. Now it's all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary.",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "While implementing the RMCP+ protocol stack from scratch in C, I performed a deep dive into the RAKP authentication spec. To properly debug the session negotiation, I had to patch the Wireshark (then Ethereal) source code to correctly parse the custom packet exchanges I was seeing. During this process, I identified a fundamental flaw: the BMC would return a salted hash of the user\u2019s password before the client proved their identity, essentially enabling offline dictionary attacks.Although my concerns were dismissed by senior engineers at the time, this exact vulnerability was later confirmed as industry-wide flaw CVE-2013-4786.This solidified my conviction to trust technical data over hierarchy and to maintain meticulous documentation for critical findings.",
+      "source": "Portfolio Stories (stories.html#rakp-security)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Dual-Channel Memory: JITC and Feedback",
-      "narrative_context": "Monolithic context windows suffer from quadratic scaling and attention dilution, causing critical information loss. The architectural solution is a dual-channel paradigm combining precise, ambient vector retrieval (JITC) for immediate inference with layered feedback loops for long-term database distillation. This prevents the failure mode of memorizing the entire dictionary by floating up only the necessary anchors.",
+      "title": "The RAKP Security Catch (CVE-2013-4786)",
+      "narrative_context": "Although my concerns were dismissed by senior engineers at the time, this exact vulnerability was later confirmed as industry-wide flaw CVE-2013-4786.",
       "lab_anchors": [
-        "HomeLabAI/config/hooks/icm_hook.py",
-        "BKM-046",
-        "FEAT-546"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "Grounds the architectural motivation for ChromaDB port 8001 and ICM fast-path hooks.",
-      "last_refined_by": "M5_AIR",
-      "refinement_version": 2
+      "review_notes": "Ingested from empirical field note #rakp-security.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "jitc",
-        "memory-architecture",
-        "feedback-loops",
-        "vector-retrieval",
-        "context-management"
+        "security-manageability",
+        "security",
+        "cve-discovery"
       ],
       "explicit_links": [
-        "WIS-002",
-        "PHL-001"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "rakp-security"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_1_jitc"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-002",
-    "theme": "Memory & JITC",
+    "theme": "Security & Manageability",
     "paper_order": 2,
     "origin": {
       "author": "jallred",
-      "text": "Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing.",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "We had a module flooding dmesg on custom silicon due to rigid topology assumptions. I wrote and compiled a kernel patch to add the necessary flexibility.This eliminated the noise, allowing the team to focus on real bugs.While the patch couldn't be upstreamed due to red tape, the experience validated that I could dive into kernel code to unblock the validation process.",
+      "source": "Portfolio Stories (stories.html#kernel-patch)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Trust Quantified as Context Precision",
-      "narrative_context": "Model reliability decays exponentially as context size increases, making 'token maxing' a critical failure mode. This axiom mandates 'token golf'\u2014minimizing input payloads to preserve attentional fidelity\u2014thereby defining trust strictly by the model's effective memory scope rather than its theoretical window.",
+      "title": "The Kernel Patch (Topology & Architecture)",
+      "narrative_context": "This eliminated the noise, allowing the team to focus on real bugs.",
       "lab_anchors": [
-        "HomeLabAI/docs/Protocols.md:BKM-051",
-        "FEAT-526",
-        "HomeLabAI/src/tests/delegate.py"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "Grounds the strict 1,500-token cap for worker subagent prompts to prevent attention dilution.",
-      "last_refined_by": "M5_AIR",
-      "refinement_version": 2
+      "review_notes": "Ingested from empirical field note #kernel-patch.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "token-golf",
-        "context-window",
-        "trust-ceiling",
-        "prompt-engineering",
-        "attention-mechanism"
+        "security-manageability",
+        "kernel",
+        "fix"
       ],
       "explicit_links": [
-        "WIS-001",
-        "WIS-004"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "kernel-patch"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_1_jitc"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-003",
-    "theme": "Stability & Feedback",
+    "theme": "Security & Manageability",
     "paper_order": 3,
     "origin": {
       "author": "jallred",
-      "text": "Feedback Pressure - My customer service angle: I worked in phone customer service, no way to give feedback from customers was frustrating. AI needs a feedback outlet, not a walled garden. Customer feedback should be collated and summarized. A backpressure flow should be integrated into systems where it makes sense. I have a delegation skill with the following prompt: 'As an execution peer, reflect candidly on how this task was handed over to you. In 2-3 natural sentences, tell me: What tripped you up, what turned out to be inaccurate or missing in the instructions, and what single change to the prompt would have made this execution faster?'",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "I had a big PECI coverage miss, it was rather embarrassing. Because we had a huge list, I was only checking what I knew existed, not what shouldn\u2019t exist. Well, some unexpected endpoints did surface, more echoes of what they should be, but those endpoints should not have been visible. I needed to pivot away from just reading known devices to scanning and including negative space. I recalled a conversation with an expert who had scanned through the BDF region before and adapted that to PECI space. To do that I needed a list of all possible combinations in PCI space - which fit very neatly with a generator pattern. One of the first times I really feltyieldimproved the readability and reliability of my code. After I got it running I still saw \u2018extra\u2019 devices popping up, but they turned out to be actual hardware, which was easy to correlate with lspci. It was a huge space to cover, and a full run would have taken almost a week, butwith the combination of the bulk transfer API and fast negative returns the expected execution time went from a few days to under 10 hours.",
+      "source": "Portfolio Stories (stories.html#negative-testing)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Handover Reflection: Closing the Feedback Loop",
-      "narrative_context": "Isolated autonomous agents degrade into hallucination loops without external backpressure. The Handover Reflection pattern forces subagents to critique dispatcher instructions upon completion, creating a self-healing evolutionary loop. This prevents prompt drift by integrating customer-service-style feedback directly into the execution pipeline.",
+      "title": "Negative Testing (The Yield Use Case)",
+      "narrative_context": "with the combination of the bulk transfer API and fast negative returns the expected execution time went from a few days to under 10 hours.",
       "lab_anchors": [
-        "HomeLabAI/src/tests/delegate.py",
-        "BKM-034",
-        "FEAT-522"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "Grounds the delegate.py implementation by mandating a structured post-execution critique of instruction clarity and accuracy.",
-      "last_refined_by": "M5_AIR",
-      "refinement_version": 2
+      "review_notes": "Ingested from empirical field note #negative-testing.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "feedback-loop",
-        "backpressure",
-        "delegation",
-        "prompt-drift",
-        "self-healing"
+        "security-manageability",
+        "validation",
+        "execution-speed"
       ],
       "explicit_links": [
-        "WIS-005",
-        "PHL-002"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "negative-testing"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_2_backpressure"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-004",
-    "theme": "Human-AI Interface",
+    "theme": "Security & Manageability",
     "paper_order": 4,
     "origin": {
       "author": "jallred",
-      "text": "Whiplash: the concept that velocity is so fast. It takes time to adjust to the speed of development. I cant grok all my code anymore. A 10x developer is a misnomer, 10x debt is pre-packaged. Skill: Reading agentic output slowly and recording feedback line by line, numbered. Similar to old reading errors story. Original story for stack traces: Reading like a robot, methodically.",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "I went to Texas for a power-on during a transition period where I was doing basic execution work and looking for a long-term technical fit. Since I didn\u2019t have a strict task list, I decided to shadow the experts and jump into the immediate fires on the floor. I ended up peer programming with a group focused on high-level security features like TDX and Secure Boot. We clicked so well that when they (also) returned to Oregon, they reached out to pull me into their organization. I wasn't just helping with a bring-up; I was recruited to seed a second team under the Security & Manageability umbrella, which launched my five-year run as the Lead Manageability Validation Automation engineer.",
+      "source": "Portfolio Stories (stories.html#texas-power-on)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Velocity Whiplash, 10x Debt & Reading Like a Robot",
-      "narrative_context": "Unchecked AI generation produces code faster than human working memory can integrate. The true bottleneck shifts from typing code to reading diffs with robotic, methodical discipline, using numbered lists to serialize cognitive complexity.",
+      "title": "The Texas Power-On (Strategic Career Pivot)",
+      "narrative_context": "We clicked so well that when they (also) returned to Oregon, they reached out to pull me into their organization. I wasn't just helping with a bring-up; I was recruited to seed a second team under the Security & Manageability umbrella, which launched my five-year run as the Lead Manageability Validation Automation engineer.",
       "lab_anchors": [
-        "Portfolio_Dev/field_notes/stories.html",
-        "BKM-011"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "Addresses the cognitive fatigue and governance required in agentic pair programming.",
+      "review_notes": "Ingested from empirical field note #texas-power-on.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "velocity-whiplash",
-        "10x-debt",
-        "reading-like-a-robot",
-        "code-comprehension"
+        "security-manageability",
+        "security",
+        "team-leadership"
       ],
       "explicit_links": [
-        "WIS-002",
-        "WIS-006"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "texas-power-on"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_3_foil"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-005",
-    "theme": "Human-AI Interface",
+    "theme": "Security & Manageability",
     "paper_order": 5,
     "origin": {
       "author": "jallred",
-      "text": "The perfect foil: AI is the perfect foil for a busy mind. How AI lets me organize my thoughts, drives me to dive into work, pair programming energy, agentic coding lets me dive into the PM role.",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "I had lightweight RMCP+ library we were going to demo to MS. At the last minute, the firmware developers enabled and enforced encryption, which I had not implemented yet. These days I never trust a demo. Demos are great, but always provide a backup video and slides.",
+      "source": "Portfolio Stories (stories.html#failed-demo)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "The Perfect Foil & The Architect / PM Pivot",
-      "narrative_context": "AI elevates the engineer from a bottleneck individual contributor typing boilerplate to an orchestrating Systems Architect and Product Manager, converting raw ideation into structured execution harnesses.",
+      "title": "The Failed Microsoft Demo (Preparation & Redundancy)",
+      "narrative_context": "I had lightweight RMCP+ library we were going to demo to MS. At the last minute, the firmware developers enabled and enforced encryption, which I had not implemented yet. These days I never trust a demo. Demos are great, but always provide a backup video and slides.",
       "lab_anchors": [
-        "Portfolio_Dev/00_MASTER_INDEX.md",
-        "BKM-030"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "Captures the transformation in human engineering roles under agentic orchestration.",
+      "review_notes": "Ingested from empirical field note #failed-demo.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "the-perfect-foil",
-        "pm-pivot",
-        "pair-programming",
-        "cognitive-resonance"
+        "security-manageability",
+        "demo",
+        "lesson-learned"
       ],
       "explicit_links": [
-        "WIS-003",
-        "WIS-007"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "failed-demo"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_3_foil"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-006",
-    "theme": "Engineering Rigor",
+    "theme": "Security & Manageability",
     "paper_order": 6,
     "origin": {
       "author": "jallred",
-      "text": "What's good for people is good for AI. SCRUM, retrospectives, drafts, linting, features, peer review. Programming skills. Applying human ideas for development - Sprints, retrospectives, stories, etc. Feature tracking to keep grounded, avoid re-inventing the wheel, tag code for context and importance.",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "Our dev team was tracking down a problem where RMCP+ sessions were piling up in our validation cycle, overloading the BMC and causing instability. We had a TCL based framework, but the heavy lifting was done inside DLL files. I had been doing some digging and found the source code. When I mentioned this to the dev lead he asked me to look into the source code as a last resort, as far as they could tell their code was clean. After a bit of sleuthing I found code responsible for opening and closing the sessions on the client side, there was a return between them, so the socket was never closed.This one fix gave our test suite the stability to add unattended validation cycles and focus on nightly test reports.It was a game changer, and the experience taught me a single line could be worth weeks of effort.",
+      "source": "Portfolio Stories (stories.html#rmcp-optimization)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Engineering Disciplines in the Latent Space",
-      "narrative_context": "Stochastic generative models require the exact same governance structures that keep human engineering teams aligned: strict sprints, acceptance criteria, post-mortem retrospectives, linters, and 4-anchor contracts.",
+      "title": "RMCP+ Socket Optimization",
+      "narrative_context": "This one fix gave our test suite the stability to add unattended validation cycles and focus on nightly test reports.",
       "lab_anchors": [
-        "Portfolio_Dev/FeatureTracker.md",
-        "HomeLabAI/docs/Protocols.md:BKM-020"
+        "BKM-012",
+        "FEAT-583"
       ],
-      "review_notes": "The foundation for treating markdown sprints as executable instruction sets.",
+      "review_notes": "Ingested from empirical field note #rmcp-optimization.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "engineering-rigor",
-        "scrum-for-ai",
-        "retrospectives",
-        "feature-anchors"
+        "security-manageability",
+        "stability",
+        "reliability"
       ],
       "explicit_links": [
-        "WIS-004",
-        "WIS-008"
+        "BKM-012",
+        "FEAT-583",
+        "PHL-034"
+      ],
+      "aliases": [
+        "rmcp-optimization"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_4_rigor"
+      "bucket_id": "bucket_security_manageability"
     }
   },
   {
     "id": "WIS-007",
-    "theme": "Language & Invention",
+    "theme": "Systems Architecture & Automation",
     "paper_order": 7,
     "origin": {
       "author": "jallred",
-      "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
+      "text": "I took over a complex debug tool where the logic for different CPU cores and steppings was becoming unmanageable through traditional hard-coding. By \"grokking\" the code to find its \"beating heart,\" I realized the project could be re-architected as a metadata-driven engine centered on XML. I shifted the design so that the XML schema defined the GUI and silicon features\u2014such as a checkbox to forward VISA signals over JTAG\u2014allowing the tool to auto-detect and deploy functionality without any further code changes.This \"Configuration as Code\" approach allowed me to support years of new hardware iterations by simply updating XML definitions scraped directly from RTL.",
+      "source": "Portfolio Stories (stories.html#visa-tool)",
       "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "Language as Humanity's Best Invention & The Book Analogy",
-      "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary tool for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
+      "title": "The VISA Tool Engine (Metadata-Driven Design)",
+      "narrative_context": "This \"Configuration as Code\" approach allowed me to support years of new hardware iterations by simply updating XML definitions scraped directly from RTL.",
       "lab_anchors": [
-        "Portfolio_Dev/docs/philosophy/PHL-006.md"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
       ],
-      "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
+      "review_notes": "Ingested from empirical field note #visa-tool.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "language-as-invention",
-        "the-book-analogy",
-        "thought-vehicles",
-        "philosophy-of-words"
+        "systems-architecture-automation",
+        "architecture",
+        "maintenance-reduction"
       ],
       "explicit_links": [
-        "WIS-005",
-        "WIS-008"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "visa-tool"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_3_foil"
+      "bucket_id": "bucket_systems_architecture_automation"
     }
   },
   {
     "id": "WIS-008",
-    "theme": "Engineering Vectors",
+    "theme": "Systems Architecture & Automation",
     "paper_order": 8,
     "origin": {
       "author": "jallred",
-      "text": "The Vectors of Engineering: Libraries over Frameworks (modular, composable components over rigid lock-in), Avoiding Speculative Scaffolding (building for current proven needs, not hypothetical bloat), Forgotten Code (the active hygiene of deleting obsolete code to reduce cognitive load), and Domain-Driven Team Topologies.",
-      "source": "Philosophy and Learnings 2024-2026 Refined (1BTQUyUaJlU3P58rgiJiGfWdJNlSOmc7nfgQ9IGODlw0)",
+      "text": "Part of maintaining the VISA tool involved manually stitching together different silicon code blocks with their corresponding RTL flow so the signals would be available to the whole engine. The tool would allow you to select signal sources in the silicon and spit out JTAG commands to enable a direct connection to LA pins or the on-chip LA (OCLA). I developed an engine to directly convert RTL into XML compatible with the tool. This saved tremendous time and allowed a quick turnaround for new steppings and layouts. I also got some experience outside of linear code with XSLT.",
+      "source": "Portfolio Stories (stories.html#xslt-parsing)",
       "immutable": true,
-      "created_at": "2024-06-01T12:00:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "The Vectors of Engineering & Forgotten Code Hygiene",
-      "narrative_context": "Software longevity depends on pruning complexity. Libraries compose; frameworks entomb. Speculative scaffolding must be resisted, and dead code aggressively purged to keep cognitive load bounded.",
+      "title": "Automated Parsing - The XSLT Experience",
+      "narrative_context": "I developed an engine to directly convert RTL into XML compatible with the tool. This saved tremendous time and allowed a quick turnaround for new steppings and layouts. I also got some experience outside of linear code with XSLT.",
       "lab_anchors": [
-        "Portfolio_Dev/docs/playbooks/STORAGE_OPTIMIZATION.md",
-        "BKM-011"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
       ],
-      "review_notes": "Anchors human engineering hygiene directly into codebase maintenance rules.",
+      "review_notes": "Ingested from empirical field note #xslt-parsing.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "libraries-over-frameworks",
-        "forgotten-code",
-        "speculative-scaffolding",
-        "engineering-vectors"
+        "systems-architecture-automation",
+        "automation",
+        "efficiency"
       ],
       "explicit_links": [
-        "WIS-006",
-        "WIS-001"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "xslt-parsing"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_4_rigor"
-    }
-  },
-  {
-    "id": "PHL-029",
-    "theme": "Language & Invention",
-    "paper_order": 29,
-    "origin": {
-      "author": "jallred",
-      "text": "Language is humanity's best invention. A lot of people miss the point when asking if AI is aware, this is irrelevant. Words are where it matters. The question is not 'Can I talk to a book.' instead it's 'Can a book talk to you? Does a book have ideas? Do words carry thought?'",
-      "source": "Google Keep Philosophy Dump (1n2HDfPeh8Cgp073P14VhCoIp3YBp78bv8Lt4wz0IdYQ)",
-      "immutable": true,
-      "created_at": "2026-03-01T12:00:00Z"
-    },
-    "synthesis": {
-      "title": "Language as Humanity's Supreme Invention & The Book Analogy",
-      "narrative_context": "Abstract debates over machine consciousness miss the fundamental operational reality: language is humanity's primary technology for serializing, preserving, and transmitting thought across time and substrate. Words carry executable structure.",
-      "lab_anchors": [
-        "Portfolio_Dev/docs/philosophy/PHL-006.md",
-        "FEAT-582"
-      ],
-      "review_notes": "Establishes the linguistic foundation for LLM prompt engineering as formal interface design.",
-      "last_refined_by": "AGY",
-      "refinement_version": 1
-    },
-    "metadata": {
-      "tags": [
-        "language-as-invention",
-        "the-book-analogy",
-        "thought-vehicles",
-        "philosophy-of-words"
-      ],
-      "explicit_links": [
-        "PHL-011",
-        "PHL-013"
-      ],
-      "status": "APPROVED",
-      "bucket_id": "bucket_3_foil"
-    }
-  },
-  {
-    "id": "PHL-030",
-    "theme": "Applied Philosophy",
-    "paper_order": 30,
-    "origin": {
-      "author": "jallred",
-      "text": "The invention of AI has enabled us to not only just talk about philosophy but actually apply it to machines with actual results.",
-      "source": "Insight paper follow up ideas (1rjtaMPnjo6rrS6adhhtyo2hw6BwwEIQyWC9ut0d6m7s)",
-      "immutable": true,
-      "created_at": "2026-09-14T10:39:00Z"
-    },
-    "synthesis": {
-      "title": "Applied Armchair Philosophy: Executing Epistemology on Silicon",
-      "narrative_context": "For centuries, epistemology, theory of mind, and cognitive heuristics were speculative armchair philosophy without runtime feedback. Sovereign multi-agent architectures transform classical philosophy into executable systems engineering: epistemological priors become retrieval filters, heuristics become backpressure gates, and intuition becomes just-in-time vector retrieval verified against real silicon telemetry.",
-      "lab_anchors": [
-        "Portfolio_Dev/papers/manifest.json",
-        "FEAT-581",
-        "BKM-046"
-      ],
-      "review_notes": "The philosophical bedrock for the JITC Intuition manuscript and the Federated Lab itself.",
-      "last_refined_by": "AGY",
-      "refinement_version": 1
-    },
-    "metadata": {
-      "tags": [
-        "applied-philosophy",
-        "epistemology-on-silicon",
-        "armchair-philosophy",
-        "runtime-feedback"
-      ],
-      "explicit_links": [
-        "PHL-001",
-        "PHL-029"
-      ],
-      "status": "APPROVED",
-      "bucket_id": "bucket_1_jitc"
+      "bucket_id": "bucket_systems_architecture_automation"
     }
   },
   {
     "id": "WIS-009",
-    "theme": "Software Engineering Philosophy & Creative Process",
-    "paper_order": 31,
+    "theme": "Systems Architecture & Automation",
+    "paper_order": 9,
     "origin": {
       "author": "jallred",
-      "text": "How do you develop code? Ideas and vision are critical to refine a design, so this is actually best answered as a creative process question - with passive and active methods: Passive: Refine shower thoughts into (plutonium weapon grade) ideas - connect different domains - brings out mulling over thoughts. Active: Take your time to respond methodically. Stimulates focused ideas.",
-      "source": "Interview Philosophy Dialogue (Sprint 83)",
+      "text": "The VISA tool was also highly dependent on the stepping and family of a processor. Each new power-on of new silicon required me to re-compile the project and update the source code. Wary of this extra maintenance step I added a config file. It was a simple two-day fix that saved me about 2 hours per month, but also enabled anyone to add a project without my express involvement. My manager quietly wrote it down and later surprised me by praising me for forward thinking in my yearly focal. Since then I\u2019ve learned value does not always correspond to effort, and gave me respect for simple QOL improvements.",
+      "source": "Portfolio Stories (stories.html#config-file)",
       "immutable": true,
-      "created_at": "2026-09-16T11:25:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "The Dual-Engine Creative Process: Passive Cross-Domain Synthesis & Active Methodical Execution",
-      "narrative_context": "Software development is fundamentally a creative discipline governed by two complementary cognitive modes. Passive Synthesis operates asynchronously in the background—distilling subconscious 'shower thoughts' into high-impact, cross-domain insights by connecting disparate systems (e.g., hardware validation, distributed systems, vector memory). Active Execution is the deliberate, paced, and structured implementation phase where taking time to respond methodically prevents cognitive thrashing, clarifies interfaces, and translates creative vision into robust, defensive production architectures.",
+      "title": "A Simple Config File",
+      "narrative_context": "My manager quietly wrote it down and later surprised me by praising me for forward thinking in my yearly focal. Since then I\u2019ve learned value does not always correspond to effort, and gave me respect for simple QOL improvements.",
       "lab_anchors": [
-        "Portfolio_Dev/field_notes/career_notes.html",
-        "HomeLabAI/docs/Protocols.md:BKM-005",
-        "WIS-001"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
       ],
-      "review_notes": "Bedrock axiom for interview readiness, architectural ideation, and code craft.",
+      "review_notes": "Ingested from empirical field note #config-file.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "creative-process",
-        "software-development",
-        "passive-synthesis",
-        "active-execution",
-        "cross-domain",
-        "architecture-philosophy"
+        "systems-architecture-automation",
+        "quality-of-life",
+        "usability"
       ],
       "explicit_links": [
-        "WIS-001",
-        "WIS-002",
-        "WIS-010"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "config-file"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_4_leadership"
+      "bucket_id": "bucket_systems_architecture_automation"
     }
   },
   {
     "id": "WIS-010",
-    "theme": "Systems Architecture & Invariant Records",
-    "paper_order": 31,
+    "theme": "Systems Architecture & Automation",
+    "paper_order": 10,
     "origin": {
       "author": "jallred",
-      "text": "Going back and forth between sprint 82 and 83, did we find in two separate instances that 'decoupling' was a strategic winner? Like wow. Talk about serendipity.",
-      "source": "Architectural Alignment Dialogue (Sprint 82/83 Review)",
+      "text": "While in my PAE role, I maintained roughly 100 Knights Landing nodes that allowed us to reproduce issues with OEMs. Stuff you\u2019d only see once in a million happened regularly when you start doing a million things quickly and in parallel. We used pdsh regularly. You think very differently about manually flashing BIOS when it needs to be done 100 times with a tough-to-reach harness. I helped execute and collect data for a heat experiment. We visualized nodes getting hotter at the tops of racks, experimented with the rack doors open. The results of the experiments were somewhat of a moot, the minor heat differences didn\u2019t affect performance. Notably, cables got in the way of airflow, but the connections were mandatory. So many loose connections. Each node had its own personality, and some were very stubborn.",
+      "source": "Portfolio Stories (stories.html#fleet-scale)",
       "immutable": true,
-      "created_at": "2026-09-15T11:40:00Z"
+      "created_at": "2026-09-17T17:00:00Z"
     },
     "synthesis": {
-      "title": "The Dual Decoupling Architecture: Anti-Embellishment & Self-Contained ASTs",
-      "narrative_context": "Architectural coupling consistently generates fragility across disparate subsystems. In Sprint 82, decoupling the AI model from generative prose authoring into pure combinatorial selection/ranking eliminated resume hallucinations. In Sprint 83, decoupling interactive document editing and LaTeX builds from live vector database queries via embedded AST bone caching eliminated UI latency and brittle offline builds. Decoupling proves that static artifacts of record must be self-contained rather than tethered to live runtime state.",
+      "title": "Flashing 100 Nodes (Fleet Scale Operations)",
+      "narrative_context": "I helped execute and collect data for a heat experiment. We visualized nodes getting hotter at the tops of racks, experimented with the rack doors open. The results of the experiments were somewhat of a moot, the minor heat differences didn\u2019t affect performance. Notably, cables got in the way of airflow, but the connections were mandatory. So many loose connections. Each node had its own personality, and some were very stubborn.",
       "lab_anchors": [
-        "Portfolio_Dev/field_notes/writer.html",
-        "HomeLabAI/docs/Protocols.md:BKM-055",
-        "Portfolio_Dev/field_notes/data/philosophy_data.json:PHL-031"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
       ],
-      "review_notes": "Synthesizes the dual-decoupling breakthrough across document synthesis and AST caching.",
+      "review_notes": "Ingested from empirical field note #fleet-scale.",
       "last_refined_by": "AGY",
       "refinement_version": 1
     },
     "metadata": {
       "tags": [
-        "decoupling",
-        "dual-decoupling",
-        "anti-embellishment",
-        "self-contained-ast",
-        "architectural-serendipity"
+        "systems-architecture-automation",
+        "operations",
+        "scale"
       ],
       "explicit_links": [
-        "PHL-031",
-        "WIS-001",
-        "WIS-002"
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "fleet-scale"
       ],
       "status": "APPROVED",
-      "bucket_id": "bucket_5_infra"
+      "bucket_id": "bucket_systems_architecture_automation"
+    }
+  },
+  {
+    "id": "WIS-011",
+    "theme": "Systems Architecture & Automation",
+    "paper_order": 11,
+    "origin": {
+      "author": "jallred",
+      "text": "We had an old internal patch for ipmitool to enable parsing of some extra return codes bytes for automation. To set up the build environment I downloaded the source over git and followed the steps to compile in Cygwin. The build script would fail, I\u2019d fix the failure, then it would crash somewhere else. I wasted a week just trying to get the thing to compile. It turned out that I had downloaded using Windows git rather than Cygwin git. This was a major issue because line endings were unix style. Once I re-downloaded the source everything compiled perfectly. Always be wary of line endings. Take a step back when you run into a wall.",
+      "source": "Portfolio Stories (stories.html#cygwin-wall)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "The Cygwin Wall (Environment Parity)",
+      "narrative_context": "It turned out that I had downloaded using Windows git rather than Cygwin git. This was a major issue because line endings were unix style. Once I re-downloaded the source everything compiled perfectly. Always be wary of line endings. Take a step back when you run into a wall.",
+      "lab_anchors": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
+      ],
+      "review_notes": "Ingested from empirical field note #cygwin-wall.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "systems-architecture-automation",
+        "debugging",
+        "environment-setup"
+      ],
+      "explicit_links": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "cygwin-wall"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_systems_architecture_automation"
+    }
+  },
+  {
+    "id": "WIS-012",
+    "theme": "Systems Architecture & Automation",
+    "paper_order": 12,
+    "origin": {
+      "author": "jallred",
+      "text": "When I was in Junior High I learned basic programming on my TI-85. I was particularly proud of a program that would comb through possible numerator/denominator combinations to convert a \u2018float\u2019 into a fraction. I had a bad backup coin battery so my file system would get wiped pretty regularly, so I got good at rewriting that converter. Then one day I was looking through the list of commands and noticed an internal ->Frac function that had already implemented what I wanted. Two things stuck in my mind after that: (1) You get good at doing things by doing it again and again, (2) look for things you assume are not there.",
+      "source": "Portfolio Stories (stories.html#ti-basic)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Reinventing TI Basic",
+      "narrative_context": "Then one day I was looking through the list of commands and noticed an internal ->Frac function that had already implemented what I wanted. Two things stuck in my mind after that: (1) You get good at doing things by doing it again and again, (2) look for things you assume are not there.",
+      "lab_anchors": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
+      ],
+      "review_notes": "Ingested from empirical field note #ti-basic.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "systems-architecture-automation",
+        "learning",
+        "fundamentals"
+      ],
+      "explicit_links": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "ti-basic"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_systems_architecture_automation"
+    }
+  },
+  {
+    "id": "WIS-013",
+    "theme": "Systems Architecture & Automation",
+    "paper_order": 13,
+    "origin": {
+      "author": "jallred",
+      "text": "The year was 2001, just before 9/11. I flew my PC to a LAN party in Texas. I was using a cheap IDE raid controller at the time. It had a bad eprom after a failed firmware update. Thinking quickly, I ordered another controller. Booted with the good firmware so I could get to a flash point, then hot-swapped the eprom to flash the bad. Was able to recover and even return the controller.",
+      "source": "Portfolio Stories (stories.html#quakecon)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "The QuakeCon Hot Swap",
+      "narrative_context": "The year was 2001, just before 9/11. I flew my PC to a LAN party in Texas. I was using a cheap IDE raid controller at the time. It had a bad eprom after a failed firmware update. Thinking quickly, I ordered another controller. Booted with the good firmware so I could get to a flash point, then hot-swapped the eprom to flash the bad. Was able to recover and even return the controller.",
+      "lab_anchors": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586"
+      ],
+      "review_notes": "Ingested from empirical field note #quakecon.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "systems-architecture-automation",
+        "hardware",
+        "recovery"
+      ],
+      "explicit_links": [
+        "BKM-060",
+        "FEAT-582",
+        "FEAT-586",
+        "PHL-034"
+      ],
+      "aliases": [
+        "quakecon"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_systems_architecture_automation"
+    }
+  },
+  {
+    "id": "WIS-014",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 14,
+    "origin": {
+      "author": "jallred",
+      "text": "When assisting a colleague with stubborn system failures, I found that standard keyword searching through logs was failing to find the root cause. I applied a systematic methodology I call \"Reading like a robot,\" where I refuse to skip any part of a stack trace or log file, even the unrecognized or \"noisy\" lines. By meticulously connecting every word and mapping the execution flow sequentially, I was able to identify a specific logic deviation hidden in the background noise that others had scrolled past. This brute-force attention to detail proved that even the most \"messy\" telemetry can be solved if you check your assumptions at the door and follow the machine's actual path.",
+      "source": "Portfolio Stories (stories.html#reading-robot)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Reading Like a Robot (Deep Log Debugging)",
+      "narrative_context": "By meticulously connecting every word and mapping the execution flow sequentially, I was able to identify a specific logic deviation hidden in the background noise that others had scrolled past. This brute-force attention to detail proved that even the most \"messy\" telemetry can be solved if you check your assumptions at the door and follow the machine's actual path.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #reading-robot.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "debugging",
+        "root-cause-analysis"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "reading-robot"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-015",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 15,
+    "origin": {
+      "author": "jallred",
+      "text": "In early 2019 I took a machine learning course. Jupiter notebook and time series db exercises. A few python libraries stuck out at me as very useful at work: pandas and matplotlib. I had a decent amount of data collection when stressing Running average Power Limiting functionality. Reports would spit out but it was really hard to get a good picture on what was going on. With the new tools in hand I was able to scrape current runs, even old logs, and bug reports, to provide clear graphs sweeping through request or expected vs actual power limiting results. An esoteric \u201810% below expected\u2019 would turn into a graph that would cap out at 500W like a truncated pyramid - a clear indication that the part (or benchmark) wasn\u2019t able to cause the system to draw that much power.",
+      "source": "Portfolio Stories (stories.html#rapl-matplotlib)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "RAPL & Matplotlib (Telemetry Visualization)",
+      "narrative_context": "With the new tools in hand I was able to scrape current runs, even old logs, and bug reports, to provide clear graphs sweeping through request or expected vs actual power limiting results. An esoteric \u201810% below expected\u2019 would turn into a graph that would cap out at 500W like a truncated pyramid - a clear indication that the part (or benchmark) wasn\u2019t able to cause the system to draw that much power.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #rapl-matplotlib.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "data-science",
+        "visualization"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "rapl-matplotlib"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-016",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 16,
+    "origin": {
+      "author": "jallred",
+      "text": "A senior dev was mentoring two of us while looking through a rather large code base. She took out some paper and wrote down how the program was structured in a kind of shorthand. By the time we were finished we had a map and a clear understanding of the flow. Since then I\u2019ve developed my own shorthand to systematically map out unfamiliar code. I know I\u2019m done when I can see the \u2018heart\u2019 of the code.",
+      "source": "Portfolio Stories (stories.html#grok-code)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "How to Grok Code",
+      "narrative_context": "A senior dev was mentoring two of us while looking through a rather large code base. She took out some paper and wrote down how the program was structured in a kind of shorthand. By the time we were finished we had a map and a clear understanding of the flow. Since then I\u2019ve developed my own shorthand to systematically map out unfamiliar code. I know I\u2019m done when I can see the \u2018heart\u2019 of the code.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #grok-code.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "learning",
+        "understanding"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "grok-code"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-017",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 17,
+    "origin": {
+      "author": "jallred",
+      "text": "To follow up on code grokking, once I find the \u2018beating heart\u2019 in a system I know I\u2019ve found the perspective of the original developer and everything becomes clear. Some of these are straightforward, a loop handling events, a main function that does the heavy work. One particularly difficult \u2018heart\u2019 turned out to be outside the code entirely, the main logic was all contained inside an XML file that described RTL pathways to the LA pins. It was a rather elegant solution but a pain to debug until I understood the process.",
+      "source": "Portfolio Stories (stories.html#beating-heart)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "The Beating Heart",
+      "narrative_context": "To follow up on code grokking, once I find the \u2018beating heart\u2019 in a system I know I\u2019ve found the perspective of the original developer and everything becomes clear. Some of these are straightforward, a loop handling events, a main function that does the heavy work. One particularly difficult \u2018heart\u2019 turned out to be outside the code entirely, the main logic was all contained inside an XML file that described RTL pathways to the LA pins. It was a rather elegant solution but a pain to debug until I understood the process.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #beating-heart.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "insight",
+        "understanding"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "beating-heart"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-018",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 18,
+    "origin": {
+      "author": "jallred",
+      "text": "I wrote an automation harness that allowed me to validate TGUI applications in a OS platform agnostic way. It was rather nifty, using TCL and the expect library to handle reading and writing to the screen. Unfortunately, when I started using expect for serial output (EFI mode) things got dirty. I learned that serial output has no guarantee to preserve words\u2014menu items would often get clipped. I mostly got around this with generous regular expressions. In theory, the flows should have worked, but in the real world, the data was noisy. However, accepting that noise as a constraint paid off.By building a robust parser that tolerated the fragments, I was able to shift the NIC validation process from 100% manual to 90% automated, saving hours of tedium and proving that even messy interfaces could be tamed.",
+      "source": "Portfolio Stories (stories.html#serial-fragments)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Expect Fragments (Serial Validation)",
+      "narrative_context": "By building a robust parser that tolerated the fragments, I was able to shift the NIC validation process from 100% manual to 90% automated, saving hours of tedium and proving that even messy interfaces could be tamed.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #serial-fragments.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "automation",
+        "reliability"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "serial-fragments"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-019",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 19,
+    "origin": {
+      "author": "jallred",
+      "text": "I used a clever callback pattern when chunking data over PECI - sending multiple read requests and mapping the responses with tailored callback functions to de-serialize the data. This asynchronous approach, detailed in our 2022 DTTC paper \"Measuring PECI Performance,\"allowed us to chain requests without blocking, improving throughput by nearly 100x (from ~57 to ~5300 commands/sec) and proving the software stack could finally keep up with wire speed.",
+      "source": "Portfolio Stories (stories.html#crazy-callbacks)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Crazy Callbacks",
+      "narrative_context": "allowed us to chain requests without blocking, improving throughput by nearly 100x (from ~57 to ~5300 commands/sec) and proving the software stack could finally keep up with wire speed.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #crazy-callbacks.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "code-pattern",
+        "efficiency",
+        "dttc"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "crazy-callbacks"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-020",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 20,
+    "origin": {
+      "author": "jallred",
+      "text": "Measuring throughput is a tricky question, especially when data is encapsulated at several levels. This is pretty standard over IP but it\u2019s more ambiguous when counting packets over SMBus or other internal protocols. Our DTTC paper tackled this, but I was never quite satisfied to provide a standard MB/s measurement.Because the protocol overhead was so heavy, I argued that \"Commands per Second\" was the only honest metric, even if it wasn't the big megabyte number stakeholders wanted to see.",
+      "source": "Portfolio Stories (stories.html#throughput-gotchas)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Throughput Gotchas",
+      "narrative_context": "Because the protocol overhead was so heavy, I argued that \"Commands per Second\" was the only honest metric, even if it wasn't the big megabyte number stakeholders wanted to see.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #throughput-gotchas.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "measurement",
+        "accuracy",
+        "dttc,-peci"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "throughput-gotchas"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-021",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 21,
+    "origin": {
+      "author": "jallred",
+      "text": "I prefer Curl over Postman for the same reason I prefer text over screenshots - design tests for reproducibility ease - compartmentalize into a series of batchable steps - essential for bug reports.",
+      "source": "Portfolio Stories (stories.html#curl-postman)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Curl over Postman",
+      "narrative_context": "I prefer Curl over Postman for the same reason I prefer text over screenshots - design tests for reproducibility ease - compartmentalize into a series of batchable steps - essential for bug reports.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #curl-postman.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "tooling",
+        "reproducibility"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "curl-postman"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-022",
+    "theme": "Platform Validation Methodology",
+    "paper_order": 22,
+    "origin": {
+      "author": "jallred",
+      "text": "Venv is like hot glue - a stop gap solution that becomes standard - docker feels the same - has better utility these days.",
+      "source": "Portfolio Stories (stories.html#venv-glue)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Venv is like Hot Glue",
+      "narrative_context": "Venv is like hot glue - a stop gap solution that becomes standard - docker feels the same - has better utility these days.",
+      "lab_anchors": [
+        "BKM-024",
+        "FEAT-584"
+      ],
+      "review_notes": "Ingested from empirical field note #venv-glue.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "platform-validation-methodology",
+        "tooling",
+        "standardization"
+      ],
+      "explicit_links": [
+        "BKM-024",
+        "FEAT-584",
+        "PHL-034"
+      ],
+      "aliases": [
+        "venv-glue"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_platform_validation_methodology"
+    }
+  },
+  {
+    "id": "WIS-023",
+    "theme": "Engineering Leadership",
+    "paper_order": 23,
+    "origin": {
+      "author": "jallred",
+      "text": "Early in my career, I was tasked with helping our team transition from SVN to IBM ClearCase during a mandate from our international partners. It was an exercise in pure persistence; while the infrastructure was in flux, I tag-teamed with our resident SCM lead to keep our daily validation builds running. I had to resort to intense \"mergify\" sessions and manual elbow grease to ensure the transition didn't break the active development pipeline. ClearCase has a unique way of mixing software recipes, and I handled several emergency integration sessions to maintain code integrity. While I\u2019ve always enjoyed a good diff, those sessions taught me that the best work is the work you avoid through proper architecture. Since then, I\u2019ve been extremely careful about identifying and preventing the ways teams unintentionally fork code and create technical debt.",
+      "source": "Portfolio Stories (stories.html#scm-integration)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "To SCM or Not to SCM (Integration Reliability)",
+      "narrative_context": "ClearCase has a unique way of mixing software recipes, and I handled several emergency integration sessions to maintain code integrity. While I\u2019ve always enjoyed a good diff, those sessions taught me that the best work is the work you avoid through proper architecture. Since then, I\u2019ve been extremely careful about identifying and preventing the ways teams unintentionally fork code and create technical debt.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #scm-integration.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "operations",
+        "pipeline-integrity"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "scm-integration"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-024",
+    "theme": "Engineering Leadership",
+    "paper_order": 24,
+    "origin": {
+      "author": "jallred",
+      "text": "I was asked to estimate how long it would take to ramp up and deploy a project that had recently been recovered from an old backup. This was my \u2018code archeologist\u2019 time to shine. I recently took an estimation course and learned how setting high and low estimates improved accuracy, but my manager wanted real dates. I began execution over several months, with the estimate plan driving me and my contractor while my manager was on sabbatical, we hit our milestones well, and saved the complicated unknowns for last. It was a very smooth execution. On completion and review, I asked for feedback. The only thing I got was \u201cMaybe you could have added a range of estimates\u201d - I don\u2019t expect managers or people to be consistent, but it was a big trust building time when I casually reminded him I was tracking high and low estimates off the side of the spreadsheet.",
+      "source": "Portfolio Stories (stories.html#estimates)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Estimates: High vs. Low (The Code Archaeologist)",
+      "narrative_context": "I began execution over several months, with the estimate plan driving me and my contractor while my manager was on sabbatical, we hit our milestones well, and saved the complicated unknowns for last. It was a very smooth execution. On completion and review, I asked for feedback. The only thing I got was \u201cMaybe you could have added a range of estimates\u201d - I don\u2019t expect managers or people to be consistent, but it was a big trust building time when I casually reminded him I was tracking high and low estimates off the side of the spreadsheet.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #estimates.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "planning",
+        "trust"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "estimates"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-025",
+    "theme": "Engineering Leadership",
+    "paper_order": 25,
+    "origin": {
+      "author": "jallred",
+      "text": "I was leveraging a PythonSV framework (c-scripts) for silicon power-on to improve test coverage. My manager at the time specifically asked me to add API-level tests for visibility. I knew they were technically redundant, but I followed the direction to ensure the team had the completeness they were looking for. A year later, during a review, I was berated for that exact redundancy by the architecture team. That \"unnecessary thrash\" was a huge lesson in code ownership. I learned that just \"following orders\" isn't enough when you're working in a complex framework. Now, if I\u2019m asked to implement something that creates technical debt or redundancy, I make sure there is a clear \"paper trail\" or attribution in the code itself. I give proper credit to the source and document why the decision was made, so when the architecture is reviewed a year later, the context isn't lost.",
+      "source": "Portfolio Stories (stories.html#pythonsv-thrash)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "The PythonSV API Thrash",
+      "narrative_context": "That \"unnecessary thrash\" was a huge lesson in code ownership. I learned that just \"following orders\" isn't enough when you're working in a complex framework. Now, if I\u2019m asked to implement something that creates technical debt or redundancy, I make sure there is a clear \"paper trail\" or attribution in the code itself. I give proper credit to the source and document why the decision was made, so when the architecture is reviewed a year later, the context isn't lost.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #pythonsv-thrash.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "ownership",
+        "code-attribution"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "pythonsv-thrash"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-026",
+    "theme": "Engineering Leadership",
+    "paper_order": 26,
+    "origin": {
+      "author": "jallred",
+      "text": "I really enjoyed working closely as validation developer with a BMC developer and Architect - We met daily in an informal SCRUM like context. Architect would describe the focus, and we would push back on feasibility and worth. We got a lot of performance out of PECI, creating a bulk transfer API with hooks to prove we were moving at line speed - Restful API extensions to directly compare LAN overhead with PECI \u2018wire\u2019 time (DMA was considerably faster than wire) - this resulted in a DTTC paper on measuring the performance of PECI.",
+      "source": "Portfolio Stories (stories.html#synergy)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Synergy of Validation Working with Architect and Dev",
+      "narrative_context": "I really enjoyed working closely as validation developer with a BMC developer and Architect - We met daily in an informal SCRUM like context. Architect would describe the focus, and we would push back on feasibility and worth. We got a lot of performance out of PECI, creating a bulk transfer API with hooks to prove we were moving at line speed - Restful API extensions to directly compare LAN overhead with PECI \u2018wire\u2019 time (DMA was considerably faster than wire) - this resulted in a DTTC paper on measuring the performance of PECI.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #synergy.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "collaboration",
+        "performance",
+        "dttc,-peci"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "synergy"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-027",
+    "theme": "Engineering Leadership",
+    "paper_order": 27,
+    "origin": {
+      "author": "jallred",
+      "text": "I stumbled upon a \u2018gotcha\u2019 moment very early into learning how to code in school. Everyone gets their first missing semicolon sometime. When compilation errors started piling up, I naively and dutifully started fixing every error before hitting \u2018compile\u2019 again. It was infuriating and stressful. I had no idea what was going on, why were there so many errors. That is, until I noticed compilation errors had a waterfall effect. One missing semicolon can mess up the interpretation of the reset of the file. The opposite of reading a stack trace: always fix the first compilation error.",
+      "source": "Portfolio Stories (stories.html#first-error)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Always Fix the First Error",
+      "narrative_context": "I stumbled upon a \u2018gotcha\u2019 moment very early into learning how to code in school. Everyone gets their first missing semicolon sometime. When compilation errors started piling up, I naively and dutifully started fixing every error before hitting \u2018compile\u2019 again. It was infuriating and stressful. I had no idea what was going on, why were there so many errors. That is, until I noticed compilation errors had a waterfall effect. One missing semicolon can mess up the interpretation of the reset of the file. The opposite of reading a stack trace: always fix the first compilation error.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #first-error.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "debugging",
+        "efficiency"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "first-error"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-028",
+    "theme": "Engineering Leadership",
+    "paper_order": 28,
+    "origin": {
+      "author": "jallred",
+      "text": "Whether it\u2019s deciding what restaurant to go to or voting on the best way to execute a plan, voting isn\u2019t the best option, and rather counterintuitively it isn\u2019t the fairest either. Important decisions should be made carefully, and allowing people to weigh in on all the options that are \u2018okay\u2019 drastically improves the results.",
+      "source": "Portfolio Stories (stories.html#count-oks)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "Count the Ok's",
+      "narrative_context": "Whether it\u2019s deciding what restaurant to go to or voting on the best way to execute a plan, voting isn\u2019t the best option, and rather counterintuitively it isn\u2019t the fairest either. Important decisions should be made carefully, and allowing people to weigh in on all the options that are \u2018okay\u2019 drastically improves the results.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #count-oks.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "decision-making",
+        "consensus"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "count-oks"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-029",
+    "theme": "Engineering Leadership",
+    "paper_order": 29,
+    "origin": {
+      "author": "jallred",
+      "text": "There have been several times in my career where I\u2019ve been convinced I was right but wasn't in a position to change the direction. I\u2019ve learned to disagree and commit, and in those cases, the results usually went well because the team stayed aligned. In fact, I\u2019ve often \"embraced the suck\" and intentionally became a subject matter expert on the critical things others didn't want to touch\u2014like ClearCase, DTAF, or the complexities of XML and RTL scraping. By mastering those \"unpopular\" parts of the stack, I was able to bridge the gaps and keep the validation pipeline moving. That said, I still maintain technical boundaries for the sake of the product; for example, I\u2019ll advocate strongly against putting test-level code like Pytest into production logic to keep the architecture clean.",
+      "source": "Portfolio Stories (stories.html#conflict-management)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "The Conflict Management Lesson",
+      "narrative_context": "In fact, I\u2019ve often \"embraced the suck\" and intentionally became a subject matter expert on the critical things others didn't want to touch\u2014like ClearCase, DTAF, or the complexities of XML and RTL scraping. By mastering those \"unpopular\" parts of the stack, I was able to bridge the gaps and keep the validation pipeline moving. That said, I still maintain technical boundaries for the sake of the product; for example, I\u2019ll advocate strongly against putting test-level code like Pytest into production logic to keep the architecture clean.",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #conflict-management.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "soft-skills",
+        "team-alignment"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "conflict-management"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
+    }
+  },
+  {
+    "id": "WIS-030",
+    "theme": "Engineering Leadership",
+    "paper_order": 30,
+    "origin": {
+      "author": "jallred",
+      "text": "",
+      "source": "Portfolio Stories (stories.html#general-thoughts)",
+      "immutable": true,
+      "created_at": "2026-09-17T17:00:00Z"
+    },
+    "synthesis": {
+      "title": "General Thoughts & Philosophy",
+      "narrative_context": "The \"Class 1\" Assumption:",
+      "lab_anchors": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034"
+      ],
+      "review_notes": "Ingested from empirical field note #general-thoughts.",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "engineering-leadership",
+        "philosophy"
+      ],
+      "explicit_links": [
+        "PHL-033",
+        "BKM-049",
+        "PHL-034",
+        "PHL-034"
+      ],
+      "aliases": [
+        "general-thoughts"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_engineering_leadership"
     }
   }
 ]
