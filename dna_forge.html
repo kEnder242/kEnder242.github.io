@@ -21,15 +21,22 @@
         .dna-selector-bar {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin: 12px 0 16px 0;
-            padding: 10px 14px;
+            justify-content: space-between;
+            gap: 16px;
+            margin: 14px 0 18px 0;
+            padding: 10px 16px;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
             font-family: var(--font-stack);
             font-size: 0.85rem;
             flex-wrap: wrap;
+        }
+        .dna-select-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
         }
         .dna-select {
             background: var(--code-bg);
@@ -65,20 +72,35 @@
             color: #d29922;
         }
 
+        .search-center-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            min-width: 280px;
+        }
         .search-filter-input {
             background: var(--code-bg);
             border: 1px solid var(--border-color);
             color: var(--text-color);
-            padding: 6px 12px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            border-radius: 6px;
             font-family: var(--font-stack);
-            font-size: 0.85rem;
-            min-width: 220px;
-            margin-left: auto;
+            font-size: 0.92rem;
+            width: 100%;
+            max-width: 480px;
+            transition: all 0.2s ease;
         }
         .search-filter-input:focus {
             border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(56, 139, 253, 0.25);
             outline: none;
+        }
+
+        .dna-actions-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
         }
 
         .wisdom-grid {
@@ -310,31 +332,33 @@
             </div>
 
             <div class="dna-selector-bar">
-                <label for="dna-select"><strong>DNA COLLECTION:</strong></label>
-                <select id="dna-select" class="dna-select">
-                    <option value="all" selected>ALL Collections (Universal Browse &amp; Search)</option>
-                    <option value="philosophy">Philosophy DNA [PHL] (RW)</option>
-                    <option value="wisdom">War Stories &amp; Wisdom [WIS] (RW)</option>
-                    <option value="rdna">Reverse DNA Questions [RDNA] (RW)</option>
-                    <option value="discovery">Innovations Timeline [DISC] (RW)</option>
-                    <option value="feature">Feature DNA [FEAT] (RO)</option>
-                    <option value="behavioral">Behavioral DNA [BKM] (RO)</option>
-                    <option value="sprint">Sprint DNA [SPRINT] (RO)</option>
-                </select>
-                <span id="dna-badge" class="dna-badge rw">[ALL COLLECTIONS]</span>
-                <input type="text" id="dnaSearchInput" class="search-filter-input" placeholder="🔍 Search across ALL DNA (620+ cards)...">
+                <div class="dna-select-group">
+                    <label for="dna-select"><strong>DNA:</strong></label>
+                    <select id="dna-select" class="dna-select">
+                        <option value="all" selected>ALL Collections (Universal Browse &amp; Search)</option>
+                        <option value="philosophy">Philosophy DNA [PHL] (RW)</option>
+                        <option value="wisdom">War Stories &amp; Wisdom [WIS] (RW)</option>
+                        <option value="rdna">Reverse DNA Questions [RDNA] (RW)</option>
+                        <option value="discovery">Innovations Timeline [DISC] (RW)</option>
+                        <option value="feature">Feature DNA [FEAT] (RO)</option>
+                        <option value="behavioral">Behavioral DNA [BKM] (RO)</option>
+                        <option value="sprint">Sprint DNA [SPRINT] (RO)</option>
+                    </select>
+                    <span id="dna-badge" class="dna-badge rw">[ALL COLLECTIONS]</span>
+                </div>
+                <div class="search-center-container">
+                    <input type="text" id="dnaSearchInput" class="search-filter-input" placeholder="🔍 Search across ALL DNA (620+ cards)...">
+                </div>
+                <div class="dna-actions-group">
+                    <button class="studio-btn add-card" id="studio-add-card" style="display:none;">+ New Card</button>
+                    <span id="studio-toolbar-status"></span>
+                </div>
             </div>
 
             <div class="disclaimer-box" style="margin-bottom: 20px;">
                 <span style="color: var(--accent-color); font-weight: bold;">[FIRST-CLASS DNA CITIZEN ARCHITECTURE]</span>
                 All federated knowledge domains (<code>PHL</code>, <code>WIS</code>, <code>RDNA</code>, <code>DISC</code>, <code>FEAT</code>, <code>BKM</code>, <code>SPRINT</code>) share a polymorphic schema.
                 Unlock, edit, laterally re-bucket, and persist cards with atomic REST synchronization on port 8765.
-            </div>
-
-            <div class="studio-toolbar" id="studio-toolbar">
-                <button class="studio-btn add-card" id="studio-add-card" style="display:none;">+ New Card</button>
-                <button class="studio-btn export" id="studio-export">Export JSON</button>
-                <span id="studio-toolbar-status"></span>
             </div>
 
             <div id="wisdom-container" class="wisdom-grid">
@@ -1723,25 +1747,6 @@
                         wireCardActions(container);
                         unlockCard(card);
                         card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    });
-                }
-
-                var exportBtn = document.getElementById('studio-export');
-                if (exportBtn && !exportBtn.dataset.wired) {
-                    exportBtn.dataset.wired = '1';
-                    exportBtn.addEventListener('click', function () {
-                        var cardsData = [];
-                        container.querySelectorAll('.wisdom-card').forEach(function (card) {
-                            cardsData.push(serializeSingleCard(card));
-                        });
-                        var blob = new Blob([JSON.stringify(cardsData, null, 2)], { type: 'application/json' });
-                        var a = document.createElement('a');
-                        a.href = URL.createObjectURL(blob);
-                        a.download = 'dna_forge_export_' + currentCollection + '.json';
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(a.href);
                     });
                 }
 
