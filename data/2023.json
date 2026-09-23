@@ -117,8 +117,8 @@
     "sensitivity": "Public",
     "tags": [
       "MIV Wiki",
-      "Manageability specifications",
-      "Intel MIV"
+      "Intel MIV",
+      "Manageability specifications"
     ],
     "rank": 4,
     "id": "GEM-11e9"
@@ -131,8 +131,8 @@
     "tags": [
       "MCTP",
       "PECI",
-      "D-Bus",
-      "Intel MIV"
+      "Intel MIV",
+      "D-Bus"
     ],
     "rank": 4,
     "id": "GEM-d149"
@@ -143,9 +143,9 @@
     "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
     "sensitivity": "Public",
     "tags": [
-      "DTAF",
+      "Simics",
       "Intel MIV",
-      "Simics"
+      "DTAF"
     ],
     "rank": 4,
     "id": "GEM-a33d"
@@ -192,8 +192,8 @@
     "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
     "sensitivity": "Public",
     "tags": [
-      "Q1",
-      "exit criteria"
+      "exit criteria",
+      "Q1"
     ],
     "rank": 4,
     "id": "GEM-66c7"
@@ -303,9 +303,9 @@
     "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
     "sensitivity": "Public",
     "tags": [
-      "kayak framework",
       "TDF architecture",
-      "Python scripts"
+      "Python scripts",
+      "kayak framework"
     ],
     "rank": 4,
     "id": "GEM-4c34"
@@ -316,8 +316,8 @@
     "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
     "sensitivity": "Public",
     "tags": [
-      "MCTP failures",
-      "TDF architecture"
+      "TDF architecture",
+      "MCTP failures"
     ],
     "rank": 4,
     "id": "GEM-5cd4"
@@ -328,8 +328,8 @@
     "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
     "sensitivity": "Public",
     "tags": [
-      "kayak framework",
-      "Python scripts"
+      "Python scripts",
+      "kayak framework"
     ],
     "rank": 4,
     "id": "GEM-a274"

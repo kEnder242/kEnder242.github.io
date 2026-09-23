@@ -29,8 +29,8 @@
     "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
     "sensitivity": "Public",
     "tags": [
-      "Configuration",
-      "Endpoints"
+      "Endpoints",
+      "Configuration"
     ],
     "rank": 4,
     "id": "GEM-3582"
@@ -53,10 +53,10 @@
     "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
     "sensitivity": "Public",
     "tags": [
-      "i2cget",
       "i2cdetect",
+      "MCTP",
       "busctl",
-      "MCTP"
+      "i2cget"
     ],
     "rank": 4,
     "id": "GEM-a8d4"
@@ -182,8 +182,8 @@
     "evidence": "https://docs.intel.com/documents/pm_doc/src/server/arch_common/TPMI/TPMI.html and https://docs.intel.com/documents/arch_datacenter/DMR/Manageability%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
     "sensitivity": "Public",
     "tags": [
-      "Intel",
-      "TPMI"
+      "TPMI",
+      "Intel"
     ],
     "rank": 4,
     "id": "GEM-c9bc"
@@ -194,8 +194,8 @@
     "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "Python"
+      "Python",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-75a5"
@@ -206,8 +206,8 @@
     "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
     "sensitivity": "Public",
     "tags": [
-      "inventory",
-      "management"
+      "management",
+      "inventory"
     ],
     "rank": 4,
     "id": "GEM-4e2e"
@@ -218,8 +218,8 @@
     "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
     "sensitivity": "Public",
     "tags": [
-      "Oakstream",
-      "simulation"
+      "simulation",
+      "Oakstream"
     ],
     "rank": 4,
     "id": "GEM-e26d"

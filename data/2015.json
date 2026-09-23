@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "validation",
       "PVT",
-      "testing"
+      "testing",
+      "validation"
     ],
     "rank": 4,
     "id": "GEM-8e79"
@@ -30,8 +30,8 @@
     "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
     "sensitivity": "Public",
     "tags": [
-      "host interface",
-      "error"
+      "error",
+      "host interface"
     ],
     "rank": 4,
     "id": "GEM-abb6"
@@ -42,9 +42,9 @@
     "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
     "sensitivity": "Public",
     "tags": [
-      "init_soc.cmm",
+      "powercycle.py",
       "FPGAIntegration",
-      "powercycle.py"
+      "init_soc.cmm"
     ],
     "rank": 4,
     "id": "GEM-67b1"
@@ -55,9 +55,9 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "msr_error",
+      "test_failure",
       "vcd_missing",
-      "test_failure"
+      "msr_error"
     ],
     "rank": 4,
     "id": "GEM-2b24"
@@ -104,8 +104,8 @@
     "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
     "sensitivity": "Public",
     "tags": [
-      "error",
-      "causality"
+      "causality",
+      "error"
     ],
     "rank": 4,
     "id": "GEM-e119"
@@ -117,8 +117,8 @@
     "sensitivity": "Public",
     "tags": [
       "failure",
-      "connection",
-      "ipc"
+      "ipc",
+      "connection"
     ],
     "rank": 4,
     "id": "GEM-b175"
@@ -129,8 +129,8 @@
     "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
     "sensitivity": "Public",
     "tags": [
-      "tap2sb",
       "probemode",
+      "tap2sb",
       "cfg_apitest64.exe"
     ],
     "rank": 4,
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "ipccli",
-      "Python 2.7.9"
+      "Python 2.7.9",
+      "ipccli"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -190,8 +190,8 @@
     "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
     "sensitivity": "Public",
     "tags": [
-      "dockable_content",
-      "EDRAMIOT"
+      "EDRAMIOT",
+      "dockable_content"
     ],
     "rank": 4,
     "id": "GEM-510d"
@@ -202,9 +202,9 @@
     "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
     "sensitivity": "Public",
     "tags": [
-      "SkyLake_M0",
+      "VISA",
       "EDRAM",
-      "VISA"
+      "SkyLake_M0"
     ],
     "rank": 4,
     "id": "GEM-9feb"
@@ -227,8 +227,8 @@
     "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
-      "Python"
+      "Python",
+      "VISA"
     ],
     "rank": 4,
     "id": "GEM-6c84"
@@ -239,9 +239,9 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
-      "SV2K8122",
       "PVT BXTOEM",
-      "testing"
+      "testing",
+      "SV2K8122"
     ],
     "rank": 4,
     "id": "GEM-c456"
@@ -252,8 +252,8 @@
     "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
     "sensitivity": "Public",
     "tags": [
-      "BXTP",
-      "target relocation"
+      "target relocation",
+      "BXTP"
     ],
     "rank": 4,
     "id": "GEM-28b7"
@@ -277,8 +277,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "tool",
-      "causality error"
+      "causality error",
+      "tool"
     ],
     "rank": 4,
     "id": "GEM-8870"
@@ -289,8 +289,8 @@
     "evidence": "https://hsdes.intel.com/home/default.html#article?id=1404494581",
     "sensitivity": "Public",
     "tags": [
-      "HSD",
-      "update"
+      "update",
+      "HSD"
     ],
     "rank": 4,
     "id": "GEM-f696"

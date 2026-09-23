@@ -41,9 +41,9 @@
       "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
       "sensitivity": "Public",
       "tags": [
-        "upgrade",
+        "EFS",
         "BMC23",
-        "EFS"
+        "upgrade"
       ],
       "rank": 4,
       "id": "GEM-329f"
@@ -54,9 +54,9 @@
       "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
       "sensitivity": "Public",
       "tags": [
-        "data_integrity",
         "system_stability",
-        "issue"
+        "issue",
+        "data_integrity"
       ],
       "rank": 4,
       "id": "GEM-7509"
@@ -91,8 +91,8 @@
       "evidence": "HW BMC25/EFS1.15   EFS1.16",
       "sensitivity": "Public",
       "tags": [
-        "tool_version",
-        "evaluation"
+        "evaluation",
+        "tool_version"
       ],
       "rank": 4,
       "id": "GEM-ac44"
@@ -140,8 +140,8 @@
       "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
       "sensitivity": "Public",
       "tags": [
-        "FTF202",
-        "test_run"
+        "test_run",
+        "FTF202"
       ],
       "rank": 4,
       "id": "GEM-663b"
@@ -196,9 +196,9 @@
       "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
       "sensitivity": "Public",
       "tags": [
-        "upgrade",
+        "EFS",
         "BMC23",
-        "EFS"
+        "upgrade"
       ],
       "rank": 4
     },
@@ -208,9 +208,9 @@
       "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
       "sensitivity": "Public",
       "tags": [
-        "data_integrity",
         "system_stability",
-        "issue"
+        "issue",
+        "data_integrity"
       ],
       "rank": 4
     },
@@ -242,8 +242,8 @@
       "evidence": "HW BMC25/EFS1.15   EFS1.16",
       "sensitivity": "Public",
       "tags": [
-        "tool_version",
-        "evaluation"
+        "evaluation",
+        "tool_version"
       ],
       "rank": 4
     },
@@ -253,8 +253,8 @@
       "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
       "sensitivity": "Public",
       "tags": [
-        "FTF202",
-        "test_run"
+        "test_run",
+        "FTF202"
       ],
       "rank": 4
     },
@@ -486,8 +486,8 @@
       "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
       "sensitivity": "Public",
       "tags": [
-        "SNL expressions",
-        "parsing issue"
+        "parsing issue",
+        "SNL expressions"
       ],
       "rank": 4,
       "id": "GEM-80ce"
@@ -535,8 +535,8 @@
       "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
       "sensitivity": "Public",
       "tags": [
-        "SNL expressions",
-        "parsing issue"
+        "parsing issue",
+        "SNL expressions"
       ],
       "rank": 4
     },
@@ -742,8 +742,8 @@
       "evidence": "Corrected CT item selection in the VISA panel.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4,
       "id": "GEM-def6"
@@ -754,8 +754,8 @@
       "evidence": "Corrected script generated from CEC register programs.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4,
       "id": "GEM-40bb"
@@ -778,8 +778,8 @@
       "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
       "sensitivity": "Public",
       "tags": [
-        "logging",
-        "VISA"
+        "VISA",
+        "logging"
       ],
       "rank": 4,
       "id": "GEM-2f1c"
@@ -862,8 +862,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "exception",
-        "ITP Bug"
+        "ITP Bug",
+        "exception"
       ],
       "rank": 4,
       "id": "GEM-6c1c"
@@ -874,8 +874,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "BDW",
-        "ITP Bug"
+        "ITP Bug",
+        "BDW"
       ],
       "rank": 4,
       "id": "GEM-3754"
@@ -886,8 +886,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "debugging",
-        "EDRAMBAR"
+        "EDRAMBAR",
+        "debugging"
       ],
       "rank": 4,
       "id": "GEM-d19e"
@@ -898,8 +898,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "error codes"
+        "error codes",
+        "VISA"
       ],
       "rank": 4,
       "id": "GEM-e827"
@@ -922,8 +922,8 @@
       "evidence": "NorthpeakApi* papi= new NorthpeakApi();\nREDACTED_PATH initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"REDACTED_PATH\"));",
       "sensitivity": "Public",
       "tags": [
-        "Northpeak API",
-        "configuration file"
+        "configuration file",
+        "Northpeak API"
       ],
       "rank": 4,
       "id": "GEM-6edb"
@@ -982,8 +982,8 @@
       "evidence": "TODO entry mentioning setup of BXT FPGA system",
       "sensitivity": "Public",
       "tags": [
-        "NPK SDK",
-        "BXT FPGA"
+        "BXT FPGA",
+        "NPK SDK"
       ],
       "rank": 4,
       "id": "GEM-be04"
@@ -1006,9 +1006,9 @@
       "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
       "sensitivity": "Public",
       "tags": [
+        "BXTSupportPkWin64",
         "ISDBaseWin64",
-        "IpcApiAccess",
-        "BXTSupportPkWin64"
+        "IpcApiAccess"
       ],
       "rank": 4,
       "id": "GEM-c4a0"
@@ -1040,8 +1040,8 @@
       "evidence": "Corrected CT item selection in the VISA panel.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4
     },
@@ -1051,8 +1051,8 @@
       "evidence": "Corrected script generated from CEC register programs.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4
     },
@@ -1073,8 +1073,8 @@
       "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
       "sensitivity": "Public",
       "tags": [
-        "logging",
-        "VISA"
+        "VISA",
+        "logging"
       ],
       "rank": 4
     },
@@ -1084,8 +1084,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "exception",
-        "ITP Bug"
+        "ITP Bug",
+        "exception"
       ],
       "rank": 4
     },
@@ -1095,8 +1095,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "BDW",
-        "ITP Bug"
+        "ITP Bug",
+        "BDW"
       ],
       "rank": 4
     },
@@ -1106,8 +1106,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "debugging",
-        "EDRAMBAR"
+        "EDRAMBAR",
+        "debugging"
       ],
       "rank": 4
     },
@@ -1117,8 +1117,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "error codes"
+        "error codes",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1139,8 +1139,8 @@
       "evidence": "NorthpeakApi* papi= new NorthpeakApi();\nREDACTED_PATH initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"REDACTED_PATH\"));",
       "sensitivity": "Public",
       "tags": [
-        "Northpeak API",
-        "configuration file"
+        "configuration file",
+        "Northpeak API"
       ],
       "rank": 4
     },
@@ -1172,8 +1172,8 @@
       "evidence": "TODO entry mentioning setup of BXT FPGA system",
       "sensitivity": "Public",
       "tags": [
-        "NPK SDK",
-        "BXT FPGA"
+        "BXT FPGA",
+        "NPK SDK"
       ],
       "rank": 4
     },
@@ -1194,9 +1194,9 @@
       "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
       "sensitivity": "Public",
       "tags": [
+        "BXTSupportPkWin64",
         "ISDBaseWin64",
-        "IpcApiAccess",
-        "BXTSupportPkWin64"
+        "IpcApiAccess"
       ],
       "rank": 4
     },
@@ -1226,9 +1226,9 @@
       "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
       "sensitivity": "Public",
       "tags": [
-        "validation",
         "PVT",
-        "testing"
+        "testing",
+        "validation"
       ],
       "rank": 4,
       "id": "GEM-8e79"
@@ -1239,8 +1239,8 @@
       "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
       "sensitivity": "Public",
       "tags": [
-        "host interface",
-        "error"
+        "error",
+        "host interface"
       ],
       "rank": 4,
       "id": "GEM-abb6"
@@ -1251,9 +1251,9 @@
       "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
       "sensitivity": "Public",
       "tags": [
-        "init_soc.cmm",
+        "powercycle.py",
         "FPGAIntegration",
-        "powercycle.py"
+        "init_soc.cmm"
       ],
       "rank": 4,
       "id": "GEM-67b1"
@@ -1264,9 +1264,9 @@
       "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
       "sensitivity": "Public",
       "tags": [
-        "msr_error",
+        "test_failure",
         "vcd_missing",
-        "test_failure"
+        "msr_error"
       ],
       "rank": 4,
       "id": "GEM-2b24"
@@ -1313,8 +1313,8 @@
       "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "causality"
+        "causality",
+        "error"
       ],
       "rank": 4,
       "id": "GEM-e119"
@@ -1326,8 +1326,8 @@
       "sensitivity": "Public",
       "tags": [
         "failure",
-        "connection",
-        "ipc"
+        "ipc",
+        "connection"
       ],
       "rank": 4,
       "id": "GEM-b175"
@@ -1338,8 +1338,8 @@
       "evidence": "RAW LOGS: P REDACTED_PATH --gtest_output=xml:REDACTED_PATH  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
       "sensitivity": "Public",
       "tags": [
-        "tap2sb",
         "probemode",
+        "tap2sb",
         "cfg_apitest64.exe"
       ],
       "rank": 4,
@@ -1363,8 +1363,8 @@
       "evidence": "RAW LOGS: ImportError: No module named ipccli",
       "sensitivity": "Public",
       "tags": [
-        "ipccli",
-        "Python 2.7.9"
+        "Python 2.7.9",
+        "ipccli"
       ],
       "rank": 4,
       "id": "GEM-7e50"
@@ -1399,8 +1399,8 @@
       "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
       "sensitivity": "Public",
       "tags": [
-        "dockable_content",
-        "EDRAMIOT"
+        "EDRAMIOT",
+        "dockable_content"
       ],
       "rank": 4,
       "id": "GEM-510d"
@@ -1411,9 +1411,9 @@
       "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
       "sensitivity": "Public",
       "tags": [
-        "SkyLake_M0",
+        "VISA",
         "EDRAM",
-        "VISA"
+        "SkyLake_M0"
       ],
       "rank": 4,
       "id": "GEM-9feb"
@@ -1436,8 +1436,8 @@
       "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "Python"
+        "Python",
+        "VISA"
       ],
       "rank": 4,
       "id": "GEM-6c84"
@@ -1448,9 +1448,9 @@
       "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
       "sensitivity": "Public",
       "tags": [
-        "SV2K8122",
         "PVT BXTOEM",
-        "testing"
+        "testing",
+        "SV2K8122"
       ],
       "rank": 4,
       "id": "GEM-c456"
@@ -1461,8 +1461,8 @@
       "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
       "sensitivity": "Public",
       "tags": [
-        "BXTP",
-        "target relocation"
+        "target relocation",
+        "BXTP"
       ],
       "rank": 4,
       "id": "GEM-28b7"
@@ -1486,8 +1486,8 @@
       "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
       "sensitivity": "Public",
       "tags": [
-        "tool",
-        "causality error"
+        "causality error",
+        "tool"
       ],
       "rank": 4,
       "id": "GEM-8870"
@@ -1498,8 +1498,8 @@
       "evidence": "https:REDACTED_PATH#article?id=1404494581",
       "sensitivity": "Public",
       "tags": [
-        "HSD",
-        "update"
+        "update",
+        "HSD"
       ],
       "rank": 4,
       "id": "GEM-f696"
@@ -1548,9 +1548,9 @@
       "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
       "sensitivity": "Public",
       "tags": [
-        "init_soc.cmm",
+        "powercycle.py",
         "FPGAIntegration",
-        "powercycle.py"
+        "init_soc.cmm"
       ],
       "rank": 4
     },
@@ -1560,9 +1560,9 @@
       "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
       "sensitivity": "Public",
       "tags": [
-        "msr_error",
+        "test_failure",
         "vcd_missing",
-        "test_failure"
+        "msr_error"
       ],
       "rank": 4
     },
@@ -1605,8 +1605,8 @@
       "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "causality"
+        "causality",
+        "error"
       ],
       "rank": 4
     },
@@ -1617,8 +1617,8 @@
       "sensitivity": "Public",
       "tags": [
         "failure",
-        "connection",
-        "ipc"
+        "ipc",
+        "connection"
       ],
       "rank": 4
     },
@@ -1628,8 +1628,8 @@
       "evidence": "RAW LOGS: P REDACTED_PATH --gtest_output=xml:REDACTED_PATH  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
       "sensitivity": "Public",
       "tags": [
-        "tap2sb",
         "probemode",
+        "tap2sb",
         "cfg_apitest64.exe"
       ],
       "rank": 4
@@ -1651,8 +1651,8 @@
       "evidence": "RAW LOGS: ImportError: No module named ipccli",
       "sensitivity": "Public",
       "tags": [
-        "ipccli",
-        "Python 2.7.9"
+        "Python 2.7.9",
+        "ipccli"
       ],
       "rank": 4
     },
@@ -1693,8 +1693,8 @@
       "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
       "sensitivity": "Public",
       "tags": [
-        "dockable_content",
-        "EDRAMIOT"
+        "EDRAMIOT",
+        "dockable_content"
       ],
       "rank": 4
     },
@@ -1704,9 +1704,9 @@
       "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
       "sensitivity": "Public",
       "tags": [
-        "SkyLake_M0",
+        "VISA",
         "EDRAM",
-        "VISA"
+        "SkyLake_M0"
       ],
       "rank": 4
     },
@@ -1727,8 +1727,8 @@
       "evidence": "Register values set for VISA signals, including `MPMCARB_CR_VISA_CTL_MPMCARBS_D_0_0_0_MCHBAR_IMPH`, `EFALWAYS_CR_VISA_CTL_EFALWAYS`, and `EFSHARECTLS_CR_VISA_CTL_EFSHARECTLS`.",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "Python"
+        "Python",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1738,9 +1738,9 @@
       "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
       "sensitivity": "Public",
       "tags": [
-        "SV2K8122",
         "PVT BXTOEM",
-        "testing"
+        "testing",
+        "SV2K8122"
       ],
       "rank": 4
     },
@@ -1792,9 +1792,9 @@
       "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
       "sensitivity": "Public",
       "tags": [
-        "validation",
         "PVT",
-        "testing"
+        "testing",
+        "validation"
       ],
       "rank": 4
     },
@@ -1804,8 +1804,8 @@
       "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
       "sensitivity": "Public",
       "tags": [
-        "host interface",
-        "error"
+        "error",
+        "host interface"
       ],
       "rank": 4
     },
@@ -1837,8 +1837,8 @@
       "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
       "sensitivity": "Public",
       "tags": [
-        "BXTP",
-        "target relocation"
+        "target relocation",
+        "BXTP"
       ],
       "rank": 4
     },
@@ -1848,8 +1848,8 @@
       "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
       "sensitivity": "Public",
       "tags": [
-        "tool",
-        "causality error"
+        "causality error",
+        "tool"
       ],
       "rank": 4
     },
@@ -1880,8 +1880,8 @@
       "evidence": "https:REDACTED_PATH#article?id=1404494581",
       "sensitivity": "Public",
       "tags": [
-        "HSD",
-        "update"
+        "update",
+        "HSD"
       ],
       "rank": 4
     },
@@ -2112,9 +2112,9 @@
       "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
       "sensitivity": "Public",
       "tags": [
+        "dc6",
         "bling",
-        "pipes",
-        "dc6"
+        "pipes"
       ],
       "rank": 4,
       "id": "GEM-5dcf"
@@ -2125,8 +2125,8 @@
       "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
       "sensitivity": "Public",
       "tags": [
-        "build process",
-        "dc6"
+        "dc6",
+        "build process"
       ],
       "rank": 4,
       "id": "GEM-0af8"
@@ -2137,8 +2137,8 @@
       "evidence": "RAW LOGS: ... (REDACTED_PATH)",
       "sensitivity": "Public",
       "tags": [
-        "PlatformConfig.xml",
-        "dc6"
+        "dc6",
+        "PlatformConfig.xml"
       ],
       "rank": 4,
       "id": "GEM-9e2b"
@@ -2300,8 +2300,8 @@
       "evidence": "REDACTED_PATH -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
       "sensitivity": "Public",
       "tags": [
-        "test environment",
-        "Maestro"
+        "Maestro",
+        "test environment"
       ],
       "rank": 4,
       "id": "GEM-07fe"
@@ -2336,8 +2336,8 @@
       "evidence": "[LCR_Margining] Meet SCR EVQT Lead - [REDACTED]",
       "sensitivity": "Public",
       "tags": [
-        "Collaboration",
-        "SCR"
+        "SCR",
+        "Collaboration"
       ],
       "rank": 4,
       "id": "GEM-cf57"
@@ -2348,9 +2348,9 @@
       "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
       "sensitivity": "Public",
       "tags": [
+        "dc6",
         "bling",
-        "pipes",
-        "dc6"
+        "pipes"
       ],
       "rank": 4
     },
@@ -2360,8 +2360,8 @@
       "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
       "sensitivity": "Public",
       "tags": [
-        "build process",
-        "dc6"
+        "dc6",
+        "build process"
       ],
       "rank": 4
     },
@@ -2371,8 +2371,8 @@
       "evidence": "RAW LOGS: ... (REDACTED_PATH)",
       "sensitivity": "Public",
       "tags": [
-        "PlatformConfig.xml",
-        "dc6"
+        "dc6",
+        "PlatformConfig.xml"
       ],
       "rank": 4
     },
@@ -2382,8 +2382,8 @@
       "evidence": "REDACTED_PATH -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
       "sensitivity": "Public",
       "tags": [
-        "test environment",
-        "Maestro"
+        "Maestro",
+        "test environment"
       ],
       "rank": 4
     },
@@ -2415,8 +2415,8 @@
       "evidence": "[LCR_Margining] Meet SCR EVQT Lead - [REDACTED]",
       "sensitivity": "Public",
       "tags": [
-        "Collaboration",
-        "SCR"
+        "SCR",
+        "Collaboration"
       ],
       "rank": 4
     },
@@ -2504,9 +2504,9 @@
       "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
       "sensitivity": "Public",
       "tags": [
+        "Purley 2S",
         "Proton1",
         "Proton2",
-        "Purley 2S",
         "Purley 4S"
       ],
       "rank": 4,
@@ -2530,8 +2530,8 @@
       "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https:REDACTED_PATH'",
       "sensitivity": "Public",
       "tags": [
-        "Purley 2S",
         "CScripts",
+        "Purley 2S",
         "Purley 4S"
       ],
       "rank": 4,
@@ -2554,9 +2554,9 @@
       "evidence": "http:REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "UFM",
         "shmemcc",
-        "HAMR"
+        "HAMR",
+        "UFM"
       ],
       "rank": 4,
       "id": "GEM-a8b2"
@@ -2579,8 +2579,8 @@
       "evidence": "",
       "sensitivity": "Public",
       "tags": [
-        "PMEM",
         "AppDirect Mode",
+        "PMEM",
         "AEP"
       ],
       "rank": 4,
@@ -2604,8 +2604,8 @@
       "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
       "sensitivity": "Public",
       "tags": [
-        "memory",
-        "configuration"
+        "configuration",
+        "memory"
       ],
       "rank": 4,
       "id": "GEM-3a33"
@@ -2688,8 +2688,8 @@
       "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
       "sensitivity": "Public",
       "tags": [
-        "mce",
         "vc30",
+        "mce",
         "error"
       ],
       "rank": 4,
@@ -2701,8 +2701,8 @@
       "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "ixpdimm-cli"
+        "ixpdimm-cli",
+        "performance"
       ],
       "rank": 4,
       "id": "GEM-ee1f"
@@ -2713,8 +2713,8 @@
       "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
       "sensitivity": "Public",
       "tags": [
-        "BIOS update",
-        "App Direct Dependency Failure"
+        "App Direct Dependency Failure",
+        "BIOS update"
       ],
       "rank": 4,
       "id": "GEM-fee5"
@@ -2725,8 +2725,8 @@
       "evidence": "nano REDACTED_PATH GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "grub2-mkconfig",
-        "configuration"
+        "configuration",
+        "grub2-mkconfig"
       ],
       "rank": 4,
       "id": "GEM-3d8b"
@@ -2737,8 +2737,8 @@
       "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
       "sensitivity": "Public",
       "tags": [
-        "ipmctl",
-        "persistent memory"
+        "persistent memory",
+        "ipmctl"
       ],
       "rank": 4,
       "id": "GEM-48ad"
@@ -2749,8 +2749,8 @@
       "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
       "sensitivity": "Public",
       "tags": [
-        "DC Cycling",
-        "Cold Reset"
+        "Cold Reset",
+        "DC Cycling"
       ],
       "rank": 4,
       "id": "GEM-f198"
@@ -2799,8 +2799,8 @@
       "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https:REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "Testing"
+        "Testing",
+        "Error Injection"
       ],
       "rank": 4,
       "id": "GEM-74dc"
@@ -2811,8 +2811,8 @@
       "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
       "sensitivity": "Public",
       "tags": [
-        "SvBios",
-        "CAUSALITY ERROR"
+        "CAUSALITY ERROR",
+        "SvBios"
       ],
       "rank": 4,
       "id": "GEM-7084"
@@ -2823,8 +2823,8 @@
       "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "biosKnobs"
+        "biosKnobs",
+        "Error Injection"
       ],
       "rank": 4,
       "id": "GEM-2822"
@@ -2835,8 +2835,8 @@
       "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "System Configuration"
+        "System Configuration",
+        "Error Injection"
       ],
       "rank": 4,
       "id": "GEM-b79d"
@@ -2848,8 +2848,8 @@
       "sensitivity": "Public",
       "tags": [
         "repository",
-        "Git",
-        "clone"
+        "clone",
+        "Git"
       ],
       "rank": 4,
       "id": "GEM-f75c"
@@ -2885,8 +2885,8 @@
       "evidence": "-Read https:REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "APEI/EINJ",
-        "error injection"
+        "error injection",
+        "APEI/EINJ"
       ],
       "rank": 4,
       "id": "GEM-f1ce"
@@ -2897,8 +2897,8 @@
       "evidence": "REDACTED_PATH -a ipc -c CLX_LBG_XDPA",
       "sensitivity": "Public",
       "tags": [
-        "IPC",
-        "CLX_LBG_XDPA"
+        "CLX_LBG_XDPA",
+        "IPC"
       ],
       "rank": 4,
       "id": "GEM-2550"
@@ -2909,8 +2909,8 @@
       "evidence": "-Read https:REDACTED_PATH -review - verify_os_log_error_messages",
       "sensitivity": "Public",
       "tags": [
-        "APEI/EINJ",
-        "OS log error messages"
+        "OS log error messages",
+        "APEI/EINJ"
       ],
       "rank": 4,
       "id": "GEM-4d60"
@@ -2931,9 +2931,9 @@
       "evidence": "http:REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "UFM",
         "shmemcc",
-        "HAMR"
+        "HAMR",
+        "UFM"
       ],
       "rank": 4
     },
@@ -2954,8 +2954,8 @@
       "evidence": "",
       "sensitivity": "Public",
       "tags": [
-        "PMEM",
         "AppDirect Mode",
+        "PMEM",
         "AEP"
       ],
       "rank": 4
@@ -2977,8 +2977,8 @@
       "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
       "sensitivity": "Public",
       "tags": [
-        "memory",
-        "configuration"
+        "configuration",
+        "memory"
       ],
       "rank": 4
     },
@@ -3021,8 +3021,8 @@
       "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
       "sensitivity": "Public",
       "tags": [
-        "mce",
         "vc30",
+        "mce",
         "error"
       ],
       "rank": 4
@@ -3033,8 +3033,8 @@
       "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "ixpdimm-cli"
+        "ixpdimm-cli",
+        "performance"
       ],
       "rank": 4
     },
@@ -3044,9 +3044,9 @@
       "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
       "sensitivity": "Public",
       "tags": [
+        "Purley 2S",
         "Proton1",
         "Proton2",
-        "Purley 2S",
         "Purley 4S"
       ],
       "rank": 4
@@ -3068,8 +3068,8 @@
       "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https:REDACTED_PATH'",
       "sensitivity": "Public",
       "tags": [
-        "Purley 2S",
         "CScripts",
+        "Purley 2S",
         "Purley 4S"
       ],
       "rank": 4
@@ -3080,8 +3080,8 @@
       "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
       "sensitivity": "Public",
       "tags": [
-        "BIOS update",
-        "App Direct Dependency Failure"
+        "App Direct Dependency Failure",
+        "BIOS update"
       ],
       "rank": 4
     },
@@ -3091,8 +3091,8 @@
       "evidence": "nano REDACTED_PATH GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "grub2-mkconfig",
-        "configuration"
+        "configuration",
+        "grub2-mkconfig"
       ],
       "rank": 4
     },
@@ -3102,8 +3102,8 @@
       "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
       "sensitivity": "Public",
       "tags": [
-        "ipmctl",
-        "persistent memory"
+        "persistent memory",
+        "ipmctl"
       ],
       "rank": 4
     },
@@ -3113,8 +3113,8 @@
       "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
       "sensitivity": "Public",
       "tags": [
-        "DC Cycling",
-        "Cold Reset"
+        "Cold Reset",
+        "DC Cycling"
       ],
       "rank": 4
     },
@@ -3158,8 +3158,8 @@
       "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https:REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "Testing"
+        "Testing",
+        "Error Injection"
       ],
       "rank": 4
     },
@@ -3169,8 +3169,8 @@
       "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
       "sensitivity": "Public",
       "tags": [
-        "SvBios",
-        "CAUSALITY ERROR"
+        "CAUSALITY ERROR",
+        "SvBios"
       ],
       "rank": 4
     },
@@ -3180,8 +3180,8 @@
       "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "biosKnobs"
+        "biosKnobs",
+        "Error Injection"
       ],
       "rank": 4
     },
@@ -3191,8 +3191,8 @@
       "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "System Configuration"
+        "System Configuration",
+        "Error Injection"
       ],
       "rank": 4
     },
@@ -3203,8 +3203,8 @@
       "sensitivity": "Public",
       "tags": [
         "repository",
-        "Git",
-        "clone"
+        "clone",
+        "Git"
       ],
       "rank": 4
     },
@@ -3237,8 +3237,8 @@
       "evidence": "-Read https:REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "APEI/EINJ",
-        "error injection"
+        "error injection",
+        "APEI/EINJ"
       ],
       "rank": 4
     },
@@ -3248,8 +3248,8 @@
       "evidence": "REDACTED_PATH -a ipc -c CLX_LBG_XDPA",
       "sensitivity": "Public",
       "tags": [
-        "IPC",
-        "CLX_LBG_XDPA"
+        "CLX_LBG_XDPA",
+        "IPC"
       ],
       "rank": 4
     },
@@ -3259,8 +3259,8 @@
       "evidence": "-Read https:REDACTED_PATH -review - verify_os_log_error_messages",
       "sensitivity": "Public",
       "tags": [
-        "APEI/EINJ",
-        "OS log error messages"
+        "OS log error messages",
+        "APEI/EINJ"
       ],
       "rank": 4
     },
@@ -3308,10 +3308,10 @@
       "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
       "sensitivity": "Public",
       "tags": [
-        "Error Code 0xAB",
         "IPMI",
         "PCI",
-        "Error Code 0xAC"
+        "Error Code 0xAC",
+        "Error Code 0xAB"
       ],
       "rank": 4,
       "id": "GEM-acc9"
@@ -3322,9 +3322,9 @@
       "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
       "sensitivity": "Public",
       "tags": [
-        "pipeline",
         "jenkins",
-        "error"
+        "error",
+        "pipeline"
       ],
       "rank": 4,
       "id": "GEM-4502"
@@ -3336,8 +3336,8 @@
       "sensitivity": "Public",
       "tags": [
         "registry",
-        "docker",
-        "aws-ecr-credential-helper"
+        "aws-ecr-credential-helper",
+        "docker"
       ],
       "rank": 4,
       "id": "GEM-dd5c"
@@ -3348,9 +3348,9 @@
       "evidence": "Update of Docker build process to utilize the --build-arg flag.",
       "sensitivity": "Public",
       "tags": [
-        "build",
+        "compose",
         "docker",
-        "compose"
+        "build"
       ],
       "rank": 4,
       "id": "GEM-79a0"
@@ -3400,8 +3400,8 @@
       "evidence": "0x80: Unknown",
       "sensitivity": "Public",
       "tags": [
-        "error code",
-        "ipmitool"
+        "ipmitool",
+        "error code"
       ],
       "rank": 4,
       "id": "GEM-def6"
@@ -3412,10 +3412,10 @@
       "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
       "sensitivity": "Public",
       "tags": [
-        "ICX-HCC",
-        "ME",
+        "IPMI",
         "BMC",
-        "IPMI"
+        "ICX-HCC",
+        "ME"
       ],
       "rank": 4,
       "id": "GEM-3f14"
@@ -3426,8 +3426,8 @@
       "evidence": "https:REDACTED_PATH#REDACTED_PATH [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
       "sensitivity": "Public",
       "tags": [
-        "domains",
-        "power_limit_accuracy"
+        "power_limit_accuracy",
+        "domains"
       ],
       "rank": 4,
       "id": "GEM-fd78"
@@ -3438,8 +3438,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "bist_errors",
-        "montana_testing"
+        "montana_testing",
+        "bist_errors"
       ],
       "rank": 4,
       "id": "GEM-35de"
@@ -3450,8 +3450,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "pmcapsweep",
-        "power_limit_accuracy"
+        "power_limit_accuracy",
+        "pmcapsweep"
       ],
       "rank": 4,
       "id": "GEM-ff25"
@@ -3462,9 +3462,9 @@
       "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
       "sensitivity": "Public",
       "tags": [
-        "power limiting",
         "IPMI",
-        "error"
+        "error",
+        "power limiting"
       ],
       "rank": 4,
       "id": "GEM-db95"
@@ -3476,8 +3476,8 @@
       "sensitivity": "Public",
       "tags": [
         "PECI",
-        "unknown return code",
-        "ipmitool"
+        "ipmitool",
+        "unknown return code"
       ],
       "rank": 4,
       "id": "GEM-a05c"
@@ -3488,8 +3488,8 @@
       "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "policy #231"
+        "policy #231",
+        "avgpowercmp"
       ],
       "rank": 4,
       "id": "GEM-5600"
@@ -3500,8 +3500,8 @@
       "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "discrepancy detection"
+        "discrepancy detection",
+        "avgpowercmp"
       ],
       "rank": 4,
       "id": "GEM-59a9"
@@ -3512,8 +3512,8 @@
       "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "error reporting"
+        "error reporting",
+        "avgpowercmp"
       ],
       "rank": 4,
       "id": "GEM-a1ed"
@@ -3548,8 +3548,8 @@
       "evidence": "Jason: debug verifysamepolicy.py",
       "sensitivity": "Public",
       "tags": [
-        "script",
-        "debug"
+        "debug",
+        "script"
       ],
       "rank": 4,
       "id": "GEM-1ad3"
@@ -3596,9 +3596,9 @@
       "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
       "sensitivity": "Public",
       "tags": [
-        "pipeline",
         "jenkins",
-        "error"
+        "error",
+        "pipeline"
       ],
       "rank": 4
     },
@@ -3609,8 +3609,8 @@
       "sensitivity": "Public",
       "tags": [
         "registry",
-        "docker",
-        "aws-ecr-credential-helper"
+        "aws-ecr-credential-helper",
+        "docker"
       ],
       "rank": 4
     },
@@ -3620,9 +3620,9 @@
       "evidence": "Update of Docker build process to utilize the --build-arg flag.",
       "sensitivity": "Public",
       "tags": [
-        "build",
+        "compose",
         "docker",
-        "compose"
+        "build"
       ],
       "rank": 4
     },
@@ -3697,8 +3697,8 @@
       "evidence": "0x80: Unknown",
       "sensitivity": "Public",
       "tags": [
-        "error code",
-        "ipmitool"
+        "ipmitool",
+        "error code"
       ],
       "rank": 4
     },
@@ -3708,10 +3708,10 @@
       "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
       "sensitivity": "Public",
       "tags": [
-        "ICX-HCC",
-        "ME",
+        "IPMI",
         "BMC",
-        "IPMI"
+        "ICX-HCC",
+        "ME"
       ],
       "rank": 4
     },
@@ -3721,8 +3721,8 @@
       "evidence": "https:REDACTED_PATH#REDACTED_PATH [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
       "sensitivity": "Public",
       "tags": [
-        "domains",
-        "power_limit_accuracy"
+        "power_limit_accuracy",
+        "domains"
       ],
       "rank": 4
     },
@@ -3732,8 +3732,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "bist_errors",
-        "montana_testing"
+        "montana_testing",
+        "bist_errors"
       ],
       "rank": 4
     },
@@ -3743,8 +3743,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "pmcapsweep",
-        "power_limit_accuracy"
+        "power_limit_accuracy",
+        "pmcapsweep"
       ],
       "rank": 4
     },
@@ -3754,10 +3754,10 @@
       "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
       "sensitivity": "Public",
       "tags": [
-        "Error Code 0xAB",
         "IPMI",
         "PCI",
-        "Error Code 0xAC"
+        "Error Code 0xAC",
+        "Error Code 0xAB"
       ],
       "rank": 4
     },
@@ -3777,9 +3777,9 @@
       "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
       "sensitivity": "Public",
       "tags": [
-        "power limiting",
         "IPMI",
-        "error"
+        "error",
+        "power limiting"
       ],
       "rank": 4
     },
@@ -3790,8 +3790,8 @@
       "sensitivity": "Public",
       "tags": [
         "PECI",
-        "unknown return code",
-        "ipmitool"
+        "ipmitool",
+        "unknown return code"
       ],
       "rank": 4
     },
@@ -3823,8 +3823,8 @@
       "evidence": "Jason: debug verifysamepolicy.py",
       "sensitivity": "Public",
       "tags": [
-        "script",
-        "debug"
+        "debug",
+        "script"
       ],
       "rank": 4
     },
@@ -3834,8 +3834,8 @@
       "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "policy #231"
+        "policy #231",
+        "avgpowercmp"
       ],
       "rank": 4
     },
@@ -3845,8 +3845,8 @@
       "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "discrepancy detection"
+        "discrepancy detection",
+        "avgpowercmp"
       ],
       "rank": 4
     },
@@ -3856,8 +3856,8 @@
       "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "error reporting"
+        "error reporting",
+        "avgpowercmp"
       ],
       "rank": 4
     },
@@ -3879,8 +3879,8 @@
       "sensitivity": "Public",
       "tags": [
         "MIV Wiki",
-        "Manageability specifications",
-        "Intel MIV"
+        "Intel MIV",
+        "Manageability specifications"
       ],
       "rank": 4
     },
@@ -3892,8 +3892,8 @@
       "tags": [
         "MCTP",
         "PECI",
-        "D-Bus",
-        "Intel MIV"
+        "Intel MIV",
+        "D-Bus"
       ],
       "rank": 4
     },
@@ -3903,9 +3903,9 @@
       "evidence": "Simics dashboard - https:REDACTED_PATH%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https:REDACTED_PATH+Content+Developer+quick+start+guide",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
+        "Simics",
         "Intel MIV",
-        "Simics"
+        "DTAF"
       ],
       "rank": 4
     },
@@ -3927,8 +3927,8 @@
       "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "PECI"
+        "PECI",
+        "performance"
       ],
       "rank": 4,
       "id": "GEM-dc8d"
@@ -3939,8 +3939,8 @@
       "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "firmware"
+        "firmware",
+        "BMC"
       ],
       "rank": 4,
       "id": "GEM-c85e"
@@ -3951,8 +3951,8 @@
       "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4,
       "id": "GEM-5f87"
@@ -3963,8 +3963,8 @@
       "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "IPMI"
+        "IPMI",
+        "error"
       ],
       "rank": 4,
       "id": "GEM-53e9"
@@ -3975,8 +3975,8 @@
       "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4,
       "id": "GEM-c8ba"
@@ -4022,9 +4022,9 @@
       "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
       "sensitivity": "Public",
       "tags": [
-        "pyghmi",
         "crypto",
-        "msr"
+        "msr",
+        "pyghmi"
       ],
       "rank": 4,
       "id": "GEM-599b"
@@ -4035,9 +4035,9 @@
       "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
       "sensitivity": "Public",
       "tags": [
-        "Recovery",
         "Reset",
-        "MIV"
+        "MIV",
+        "Recovery"
       ],
       "rank": 4,
       "id": "GEM-959d"
@@ -4072,8 +4072,8 @@
       "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "Recovery",
-        "MIV"
+        "MIV",
+        "Recovery"
       ],
       "rank": 4,
       "id": "GEM-c77d"
@@ -4132,8 +4132,8 @@
       "evidence": "[RAW LOGS] - pip install fabric",
       "sensitivity": "Public",
       "tags": [
-        "MIV content readiness",
-        "DTAF"
+        "DTAF",
+        "MIV content readiness"
       ],
       "rank": 4,
       "id": "GEM-0043"
@@ -4144,8 +4144,8 @@
       "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
       "sensitivity": "Public",
       "tags": [
-        "PCIE Whitley",
-        "priority execution requests"
+        "priority execution requests",
+        "PCIE Whitley"
       ],
       "rank": 4,
       "id": "GEM-cb8e"
@@ -4192,8 +4192,8 @@
       "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
       "sensitivity": "Public",
       "tags": [
-        "delete failure",
-        "nm-policy"
+        "nm-policy",
+        "delete failure"
       ],
       "rank": 4,
       "id": "GEM-780e"
@@ -4204,8 +4204,8 @@
       "evidence": "https:REDACTED_PATH Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "L-BMC"
+        "L-BMC",
+        "BMC"
       ],
       "rank": 4,
       "id": "GEM-d328"
@@ -4228,8 +4228,8 @@
       "evidence": "RAW LOGS text",
       "sensitivity": "Public",
       "tags": [
-        "recovery",
-        "MIV"
+        "MIV",
+        "recovery"
       ],
       "rank": 4,
       "id": "GEM-7360"
@@ -4252,8 +4252,8 @@
       "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
       "sensitivity": "Public",
       "tags": [
-        "firmware update",
-        "L-BMC"
+        "L-BMC",
+        "firmware update"
       ],
       "rank": 4,
       "id": "GEM-ee96"
@@ -4276,9 +4276,9 @@
       "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
       "sensitivity": "Public",
       "tags": [
-        "Opcode 0x2E",
+        "Node Manager",
         "Power Limiting Policy",
-        "Node Manager"
+        "Opcode 0x2E"
       ],
       "rank": 4,
       "id": "GEM-93e8"
@@ -4289,8 +4289,8 @@
       "evidence": "https:REDACTED_PATH%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
       "sensitivity": "Public",
       "tags": [
-        "pptx",
-        "Manageability Ignition-Redfish Content Plan"
+        "Manageability Ignition-Redfish Content Plan",
+        "pptx"
       ],
       "rank": 4,
       "id": "GEM-83e9"
@@ -4301,8 +4301,8 @@
       "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
       "sensitivity": "Public",
       "tags": [
-        "commands",
-        "PECI"
+        "PECI",
+        "commands"
       ],
       "rank": 4,
       "id": "GEM-31ac"
@@ -4313,9 +4313,9 @@
       "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
       "sensitivity": "Public",
       "tags": [
-        "PCH",
-        "BMC",
         "PECI",
+        "BMC",
+        "PCH",
         "master"
       ],
       "rank": 4,
@@ -4361,8 +4361,8 @@
       "evidence": null,
       "sensitivity": "Public",
       "tags": [
-        "Troubleshooting",
-        "Era Registry"
+        "Era Registry",
+        "Troubleshooting"
       ],
       "rank": 4,
       "id": "GEM-943f"
@@ -4397,8 +4397,8 @@
       "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https:REDACTED_PATH%20Requests/AllItems.aspx.",
       "sensitivity": "Public",
       "tags": [
-        "updated list",
-        "inventory requests"
+        "inventory requests",
+        "updated list"
       ],
       "rank": 4,
       "id": "GEM-0527"
@@ -4409,8 +4409,8 @@
       "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4
     },
@@ -4420,8 +4420,8 @@
       "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "IPMI"
+        "IPMI",
+        "error"
       ],
       "rank": 4
     },
@@ -4431,8 +4431,8 @@
       "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4
     },
@@ -4463,9 +4463,9 @@
       "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
       "sensitivity": "Public",
       "tags": [
-        "pyghmi",
         "crypto",
-        "msr"
+        "msr",
+        "pyghmi"
       ],
       "rank": 4
     },
@@ -4475,9 +4475,9 @@
       "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
       "sensitivity": "Public",
       "tags": [
-        "Recovery",
         "Reset",
-        "MIV"
+        "MIV",
+        "Recovery"
       ],
       "rank": 4
     },
@@ -4509,8 +4509,8 @@
       "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "Recovery",
-        "MIV"
+        "MIV",
+        "Recovery"
       ],
       "rank": 4
     },
@@ -4564,8 +4564,8 @@
       "evidence": "[RAW LOGS] - pip install fabric",
       "sensitivity": "Public",
       "tags": [
-        "MIV content readiness",
-        "DTAF"
+        "DTAF",
+        "MIV content readiness"
       ],
       "rank": 4
     },
@@ -4575,8 +4575,8 @@
       "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
       "sensitivity": "Public",
       "tags": [
-        "PCIE Whitley",
-        "priority execution requests"
+        "priority execution requests",
+        "PCIE Whitley"
       ],
       "rank": 4
     },
@@ -4619,8 +4619,8 @@
       "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
       "sensitivity": "Public",
       "tags": [
-        "delete failure",
-        "nm-policy"
+        "nm-policy",
+        "delete failure"
       ],
       "rank": 4
     },
@@ -4630,8 +4630,8 @@
       "evidence": "https:REDACTED_PATH Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "L-BMC"
+        "L-BMC",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4652,8 +4652,8 @@
       "evidence": "RAW LOGS text",
       "sensitivity": "Public",
       "tags": [
-        "recovery",
-        "MIV"
+        "MIV",
+        "recovery"
       ],
       "rank": 4
     },
@@ -4674,8 +4674,8 @@
       "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
       "sensitivity": "Public",
       "tags": [
-        "firmware update",
-        "L-BMC"
+        "L-BMC",
+        "firmware update"
       ],
       "rank": 4
     },
@@ -4696,9 +4696,9 @@
       "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
       "sensitivity": "Public",
       "tags": [
-        "Opcode 0x2E",
+        "Node Manager",
         "Power Limiting Policy",
-        "Node Manager"
+        "Opcode 0x2E"
       ],
       "rank": 4
     },
@@ -4708,8 +4708,8 @@
       "evidence": "https:REDACTED_PATH%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
       "sensitivity": "Public",
       "tags": [
-        "pptx",
-        "Manageability Ignition-Redfish Content Plan"
+        "Manageability Ignition-Redfish Content Plan",
+        "pptx"
       ],
       "rank": 4
     },
@@ -4719,8 +4719,8 @@
       "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
       "sensitivity": "Public",
       "tags": [
-        "commands",
-        "PECI"
+        "PECI",
+        "commands"
       ],
       "rank": 4
     },
@@ -4730,9 +4730,9 @@
       "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
       "sensitivity": "Public",
       "tags": [
-        "PCH",
-        "BMC",
         "PECI",
+        "BMC",
+        "PCH",
         "master"
       ],
       "rank": 4
@@ -4774,8 +4774,8 @@
       "evidence": null,
       "sensitivity": "Public",
       "tags": [
-        "Troubleshooting",
-        "Era Registry"
+        "Era Registry",
+        "Troubleshooting"
       ],
       "rank": 4
     },
@@ -4796,8 +4796,8 @@
       "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "PECI"
+        "PECI",
+        "performance"
       ],
       "rank": 4
     },
@@ -4807,8 +4807,8 @@
       "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "firmware"
+        "firmware",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4840,8 +4840,8 @@
       "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https:REDACTED_PATH%20Requests/AllItems.aspx.",
       "sensitivity": "Public",
       "tags": [
-        "updated list",
-        "inventory requests"
+        "inventory requests",
+        "updated list"
       ],
       "rank": 4
     },
@@ -4912,8 +4912,8 @@
       "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
       "sensitivity": "Public",
       "tags": [
-        "connection_abort",
-        "PECI"
+        "PECI",
+        "connection_abort"
       ],
       "rank": 4,
       "id": "GEM-d11c"
@@ -4938,8 +4938,8 @@
       "evidence": "...-MIV report Weldon/Hooper/Staff...",
       "sensitivity": "Public",
       "tags": [
-        "report",
-        "MIV"
+        "MIV",
+        "report"
       ],
       "rank": 4,
       "id": "GEM-2efc"
@@ -5023,8 +5023,8 @@
       "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
       "sensitivity": "Public",
       "tags": [
-        "peci_poison.tdf",
-        "PECI Command Rejection"
+        "PECI Command Rejection",
+        "peci_poison.tdf"
       ],
       "rank": 4,
       "id": "GEM-a220"
@@ -5109,8 +5109,8 @@
       "evidence": "RAW LOGS on 6/30/2021",
       "sensitivity": "Public",
       "tags": [
-        "team structure",
-        "collaboration"
+        "collaboration",
+        "team structure"
       ],
       "rank": 4,
       "id": "GEM-4aac"
@@ -5230,8 +5230,8 @@
       "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https:REDACTED_PATH#REDACTED_PATH)",
       "sensitivity": "Public",
       "tags": [
-        "Redfish",
-        "OEM API"
+        "OEM API",
+        "Redfish"
       ],
       "rank": 4,
       "id": "GEM-7ab0"
@@ -5266,8 +5266,8 @@
       "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
       "sensitivity": "Public",
       "tags": [
-        "connection_abort",
-        "PECI"
+        "PECI",
+        "connection_abort"
       ],
       "rank": 4
     },
@@ -5277,8 +5277,8 @@
       "evidence": "...-MIV report Weldon/Hooper/Staff...",
       "sensitivity": "Public",
       "tags": [
-        "report",
-        "MIV"
+        "MIV",
+        "report"
       ],
       "rank": 4
     },
@@ -5344,8 +5344,8 @@
       "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
       "sensitivity": "Public",
       "tags": [
-        "peci_poison.tdf",
-        "PECI Command Rejection"
+        "PECI Command Rejection",
+        "peci_poison.tdf"
       ],
       "rank": 4
     },
@@ -5365,8 +5365,8 @@
       "evidence": "RAW LOGS on 6/30/2021",
       "sensitivity": "Public",
       "tags": [
-        "team structure",
-        "collaboration"
+        "collaboration",
+        "team structure"
       ],
       "rank": 4
     },
@@ -5376,8 +5376,8 @@
       "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https:REDACTED_PATH#REDACTED_PATH)",
       "sensitivity": "Public",
       "tags": [
-        "Redfish",
-        "OEM API"
+        "OEM API",
+        "Redfish"
       ],
       "rank": 4
     },
@@ -5458,8 +5458,8 @@
       "evidence": "REDACTED_PATH -y 0x010000C800800D -d 00",
       "sensitivity": "Public",
       "tags": [
-        "PythonSV",
-        "MCTP"
+        "MCTP",
+        "PythonSV"
       ],
       "rank": 4,
       "id": "GEM-7c0e"
@@ -5470,8 +5470,8 @@
       "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
       "sensitivity": "Public",
       "tags": [
-        "pmdebug",
-        "PythonSV"
+        "PythonSV",
+        "pmdebug"
       ],
       "rank": 4,
       "id": "GEM-e978"
@@ -5643,8 +5643,8 @@
       "evidence": "https:REDACTED_PATH#REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "EGS DRAM ECS",
-        "PECI"
+        "PECI",
+        "EGS DRAM ECS"
       ],
       "rank": 4,
       "id": "GEM-57bc"
@@ -5717,9 +5717,9 @@
       "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
       "sensitivity": "Public",
       "tags": [
-        "MSR register access issues",
+        "PECI tests",
         "unexpected return codes",
-        "PECI tests"
+        "MSR register access issues"
       ],
       "rank": 4,
       "id": "GEM-d90f"
@@ -5790,8 +5790,8 @@
       "evidence": "REDACTED_PATH -y 0x010000C800800D -d 00",
       "sensitivity": "Public",
       "tags": [
-        "PythonSV",
-        "MCTP"
+        "MCTP",
+        "PythonSV"
       ],
       "rank": 4
     },
@@ -5801,8 +5801,8 @@
       "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
       "sensitivity": "Public",
       "tags": [
-        "pmdebug",
-        "PythonSV"
+        "PythonSV",
+        "pmdebug"
       ],
       "rank": 4
     },
@@ -5842,8 +5842,8 @@
       "evidence": "https:REDACTED_PATH#REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "EGS DRAM ECS",
-        "PECI"
+        "PECI",
+        "EGS DRAM ECS"
       ],
       "rank": 4
     },
@@ -5875,9 +5875,9 @@
       "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
       "sensitivity": "Public",
       "tags": [
-        "MSR register access issues",
+        "PECI tests",
         "unexpected return codes",
-        "PECI tests"
+        "MSR register access issues"
       ],
       "rank": 4
     },
@@ -5999,8 +5999,8 @@
       "sensitivity": "Public",
       "tags": [
         "MIV Wiki",
-        "Manageability specifications",
-        "Intel MIV"
+        "Intel MIV",
+        "Manageability specifications"
       ],
       "rank": 4,
       "id": "GEM-11e9"
@@ -6013,8 +6013,8 @@
       "tags": [
         "MCTP",
         "PECI",
-        "D-Bus",
-        "Intel MIV"
+        "Intel MIV",
+        "D-Bus"
       ],
       "rank": 4,
       "id": "GEM-d149"
@@ -6025,9 +6025,9 @@
       "evidence": "Simics dashboard - https:REDACTED_PATH%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https:REDACTED_PATH+Content+Developer+quick+start+guide",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
+        "Simics",
         "Intel MIV",
-        "Simics"
+        "DTAF"
       ],
       "rank": 4,
       "id": "GEM-a33d"
@@ -6074,8 +6074,8 @@
       "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
       "sensitivity": "Public",
       "tags": [
-        "Q1",
-        "exit criteria"
+        "exit criteria",
+        "Q1"
       ],
       "rank": 4,
       "id": "GEM-66c7"
@@ -6185,9 +6185,9 @@
       "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
       "sensitivity": "Public",
       "tags": [
-        "kayak framework",
         "TDF architecture",
-        "Python scripts"
+        "Python scripts",
+        "kayak framework"
       ],
       "rank": 4,
       "id": "GEM-4c34"
@@ -6198,8 +6198,8 @@
       "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
       "sensitivity": "Public",
       "tags": [
-        "MCTP failures",
-        "TDF architecture"
+        "TDF architecture",
+        "MCTP failures"
       ],
       "rank": 4,
       "id": "GEM-5cd4"
@@ -6210,8 +6210,8 @@
       "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
       "sensitivity": "Public",
       "tags": [
-        "kayak framework",
-        "Python scripts"
+        "Python scripts",
+        "kayak framework"
       ],
       "rank": 4,
       "id": "GEM-a274"
@@ -6412,8 +6412,8 @@
       "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
       "sensitivity": "Public",
       "tags": [
-        "Q1",
-        "exit criteria"
+        "exit criteria",
+        "Q1"
       ],
       "rank": 4
     },
@@ -6423,9 +6423,9 @@
       "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
       "sensitivity": "Public",
       "tags": [
-        "kayak framework",
         "TDF architecture",
-        "Python scripts"
+        "Python scripts",
+        "kayak framework"
       ],
       "rank": 4
     },
@@ -6435,8 +6435,8 @@
       "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
       "sensitivity": "Public",
       "tags": [
-        "MCTP failures",
-        "TDF architecture"
+        "TDF architecture",
+        "MCTP failures"
       ],
       "rank": 4
     },
@@ -6446,8 +6446,8 @@
       "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
       "sensitivity": "Public",
       "tags": [
-        "kayak framework",
-        "Python scripts"
+        "Python scripts",
+        "kayak framework"
       ],
       "rank": 4
     },
@@ -6481,8 +6481,8 @@
       "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
       "sensitivity": "Public",
       "tags": [
-        "Configuration",
-        "Endpoints"
+        "Endpoints",
+        "Configuration"
       ],
       "rank": 4,
       "id": "GEM-3582"
@@ -6505,10 +6505,10 @@
       "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
       "sensitivity": "Public",
       "tags": [
-        "i2cget",
         "i2cdetect",
+        "MCTP",
         "busctl",
-        "MCTP"
+        "i2cget"
       ],
       "rank": 4,
       "id": "GEM-a8d4"
@@ -6634,8 +6634,8 @@
       "evidence": "https:REDACTED_PATH and https:REDACTED_PATH%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
       "sensitivity": "Public",
       "tags": [
-        "Intel",
-        "TPMI"
+        "TPMI",
+        "Intel"
       ],
       "rank": 4,
       "id": "GEM-c9bc"
@@ -6646,8 +6646,8 @@
       "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
       "sensitivity": "Public",
       "tags": [
-        "PECI",
-        "Python"
+        "Python",
+        "PECI"
       ],
       "rank": 4,
       "id": "GEM-75a5"
@@ -6658,8 +6658,8 @@
       "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
       "sensitivity": "Public",
       "tags": [
-        "inventory",
-        "management"
+        "management",
+        "inventory"
       ],
       "rank": 4,
       "id": "GEM-4e2e"
@@ -6670,8 +6670,8 @@
       "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
       "sensitivity": "Public",
       "tags": [
-        "Oakstream",
-        "simulation"
+        "simulation",
+        "Oakstream"
       ],
       "rank": 4,
       "id": "GEM-e26d"
@@ -6705,10 +6705,10 @@
       "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
       "sensitivity": "Public",
       "tags": [
-        "i2cget",
         "i2cdetect",
+        "MCTP",
         "busctl",
-        "MCTP"
+        "i2cget"
       ],
       "rank": 4
     },
@@ -6760,8 +6760,8 @@
       "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
       "sensitivity": "Public",
       "tags": [
-        "Configuration",
-        "Endpoints"
+        "Endpoints",
+        "Configuration"
       ],
       "rank": 4
     },
@@ -6793,8 +6793,8 @@
       "evidence": "https:REDACTED_PATH and https:REDACTED_PATH%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
       "sensitivity": "Public",
       "tags": [
-        "Intel",
-        "TPMI"
+        "TPMI",
+        "Intel"
       ],
       "rank": 4
     },
@@ -6804,8 +6804,8 @@
       "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
       "sensitivity": "Public",
       "tags": [
-        "PECI",
-        "Python"
+        "Python",
+        "PECI"
       ],
       "rank": 4
     },
@@ -6847,8 +6847,8 @@
       "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
       "sensitivity": "Public",
       "tags": [
-        "inventory",
-        "management"
+        "management",
+        "inventory"
       ],
       "rank": 4
     },
@@ -6858,8 +6858,8 @@
       "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
       "sensitivity": "Public",
       "tags": [
-        "Oakstream",
-        "simulation"
+        "simulation",
+        "Oakstream"
       ],
       "rank": 4
     },

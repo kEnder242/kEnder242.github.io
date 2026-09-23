@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "msr_error",
+      "test_failure",
       "vcd_missing",
-      "test_failure"
+      "msr_error"
     ],
     "rank": 4
   },

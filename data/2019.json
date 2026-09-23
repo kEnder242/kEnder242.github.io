@@ -43,10 +43,10 @@
     "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
     "sensitivity": "Public",
     "tags": [
-      "Error Code 0xAB",
       "IPMI",
       "PCI",
-      "Error Code 0xAC"
+      "Error Code 0xAC",
+      "Error Code 0xAB"
     ],
     "rank": 4,
     "id": "GEM-acc9"
@@ -57,9 +57,9 @@
     "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
     "sensitivity": "Public",
     "tags": [
-      "pipeline",
       "jenkins",
-      "error"
+      "error",
+      "pipeline"
     ],
     "rank": 4,
     "id": "GEM-4502"
@@ -71,8 +71,8 @@
     "sensitivity": "Public",
     "tags": [
       "registry",
-      "docker",
-      "aws-ecr-credential-helper"
+      "aws-ecr-credential-helper",
+      "docker"
     ],
     "rank": 4,
     "id": "GEM-dd5c"
@@ -83,9 +83,9 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
-      "build",
+      "compose",
       "docker",
-      "compose"
+      "build"
     ],
     "rank": 4,
     "id": "GEM-79a0"
@@ -135,8 +135,8 @@
     "evidence": "0x80: Unknown",
     "sensitivity": "Public",
     "tags": [
-      "error code",
-      "ipmitool"
+      "ipmitool",
+      "error code"
     ],
     "rank": 4,
     "id": "GEM-def6"
@@ -147,10 +147,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
-      "ICX-HCC",
-      "ME",
+      "IPMI",
       "BMC",
-      "IPMI"
+      "ICX-HCC",
+      "ME"
     ],
     "rank": 4,
     "id": "GEM-3f14"
@@ -161,8 +161,8 @@
     "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
     "sensitivity": "Public",
     "tags": [
-      "domains",
-      "power_limit_accuracy"
+      "power_limit_accuracy",
+      "domains"
     ],
     "rank": 4,
     "id": "GEM-fd78"
@@ -173,8 +173,8 @@
     "evidence": "RAW LOGS: ... (see above)",
     "sensitivity": "Public",
     "tags": [
-      "bist_errors",
-      "montana_testing"
+      "montana_testing",
+      "bist_errors"
     ],
     "rank": 4,
     "id": "GEM-35de"
@@ -185,8 +185,8 @@
     "evidence": "RAW LOGS: ... (see above)",
     "sensitivity": "Public",
     "tags": [
-      "pmcapsweep",
-      "power_limit_accuracy"
+      "power_limit_accuracy",
+      "pmcapsweep"
     ],
     "rank": 4,
     "id": "GEM-ff25"
@@ -197,9 +197,9 @@
     "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
     "sensitivity": "Public",
     "tags": [
-      "power limiting",
       "IPMI",
-      "error"
+      "error",
+      "power limiting"
     ],
     "rank": 4,
     "id": "GEM-db95"
@@ -211,8 +211,8 @@
     "sensitivity": "Public",
     "tags": [
       "PECI",
-      "unknown return code",
-      "ipmitool"
+      "ipmitool",
+      "unknown return code"
     ],
     "rank": 4,
     "id": "GEM-a05c"
@@ -223,8 +223,8 @@
     "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
     "sensitivity": "Public",
     "tags": [
-      "avgpowercmp",
-      "policy #231"
+      "policy #231",
+      "avgpowercmp"
     ],
     "rank": 4,
     "id": "GEM-5600"
@@ -235,8 +235,8 @@
     "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
     "sensitivity": "Public",
     "tags": [
-      "avgpowercmp",
-      "discrepancy detection"
+      "discrepancy detection",
+      "avgpowercmp"
     ],
     "rank": 4,
     "id": "GEM-59a9"
@@ -247,8 +247,8 @@
     "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
     "sensitivity": "Public",
     "tags": [
-      "avgpowercmp",
-      "error reporting"
+      "error reporting",
+      "avgpowercmp"
     ],
     "rank": 4,
     "id": "GEM-a1ed"
@@ -283,8 +283,8 @@
     "evidence": "Jason: debug verifysamepolicy.py",
     "sensitivity": "Public",
     "tags": [
-      "script",
-      "debug"
+      "debug",
+      "script"
     ],
     "rank": 4,
     "id": "GEM-1ad3"

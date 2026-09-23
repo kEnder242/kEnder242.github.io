@@ -66,8 +66,8 @@
     "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
     "sensitivity": "Public",
     "tags": [
-      "connection_abort",
-      "PECI"
+      "PECI",
+      "connection_abort"
     ],
     "rank": 4,
     "id": "GEM-d11c"
@@ -92,8 +92,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "report",
-      "MIV"
+      "MIV",
+      "report"
     ],
     "rank": 4,
     "id": "GEM-2efc"
@@ -177,8 +177,8 @@
     "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
     "sensitivity": "Public",
     "tags": [
-      "peci_poison.tdf",
-      "PECI Command Rejection"
+      "PECI Command Rejection",
+      "peci_poison.tdf"
     ],
     "rank": 4,
     "id": "GEM-a220"
@@ -263,8 +263,8 @@
     "evidence": "RAW LOGS on 6/30/2021",
     "sensitivity": "Public",
     "tags": [
-      "team structure",
-      "collaboration"
+      "collaboration",
+      "team structure"
     ],
     "rank": 4,
     "id": "GEM-4aac"
@@ -384,8 +384,8 @@
     "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
     "sensitivity": "Public",
     "tags": [
-      "Redfish",
-      "OEM API"
+      "OEM API",
+      "Redfish"
     ],
     "rank": 4,
     "id": "GEM-7ab0"

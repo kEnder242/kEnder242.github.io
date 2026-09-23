@@ -16,8 +16,8 @@
     "evidence": "/root/tester -y 0x010000C800800D -d 00",
     "sensitivity": "Public",
     "tags": [
-      "PythonSV",
-      "MCTP"
+      "MCTP",
+      "PythonSV"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
     "sensitivity": "Public",
     "tags": [
-      "pmdebug",
-      "PythonSV"
+      "PythonSV",
+      "pmdebug"
     ],
     "rank": 4
   }

@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "PECI"
+      "PECI",
+      "performance"
     ],
     "rank": 4,
     "id": "GEM-dc8d"
@@ -29,8 +29,8 @@
     "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "firmware"
+      "firmware",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-c85e"
@@ -41,8 +41,8 @@
     "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "CLX",
-      "MIV software"
+      "MIV software",
+      "CLX"
     ],
     "rank": 4,
     "id": "GEM-5f87"
@@ -53,8 +53,8 @@
     "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "error",
-      "IPMI"
+      "IPMI",
+      "error"
     ],
     "rank": 4,
     "id": "GEM-53e9"
@@ -65,8 +65,8 @@
     "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "CLX",
-      "MIV software"
+      "MIV software",
+      "CLX"
     ],
     "rank": 4,
     "id": "GEM-c8ba"
@@ -112,9 +112,9 @@
     "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "pyghmi",
       "crypto",
-      "msr"
+      "msr",
+      "pyghmi"
     ],
     "rank": 4,
     "id": "GEM-599b"
@@ -125,9 +125,9 @@
     "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "Recovery",
       "Reset",
-      "MIV"
+      "MIV",
+      "Recovery"
     ],
     "rank": 4,
     "id": "GEM-959d"
@@ -162,8 +162,8 @@
     "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "Recovery",
-      "MIV"
+      "MIV",
+      "Recovery"
     ],
     "rank": 4,
     "id": "GEM-c77d"
@@ -222,8 +222,8 @@
     "evidence": "[RAW LOGS] - pip install fabric",
     "sensitivity": "Public",
     "tags": [
-      "MIV content readiness",
-      "DTAF"
+      "DTAF",
+      "MIV content readiness"
     ],
     "rank": 4,
     "id": "GEM-0043"
@@ -234,8 +234,8 @@
     "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
     "sensitivity": "Public",
     "tags": [
-      "PCIE Whitley",
-      "priority execution requests"
+      "priority execution requests",
+      "PCIE Whitley"
     ],
     "rank": 4,
     "id": "GEM-cb8e"
@@ -282,8 +282,8 @@
     "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
     "sensitivity": "Public",
     "tags": [
-      "delete failure",
-      "nm-policy"
+      "nm-policy",
+      "delete failure"
     ],
     "rank": 4,
     "id": "GEM-780e"
@@ -294,8 +294,8 @@
     "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "L-BMC"
+      "L-BMC",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-d328"
@@ -318,8 +318,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "recovery",
-      "MIV"
+      "MIV",
+      "recovery"
     ],
     "rank": 4,
     "id": "GEM-7360"
@@ -342,8 +342,8 @@
     "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
     "sensitivity": "Public",
     "tags": [
-      "firmware update",
-      "L-BMC"
+      "L-BMC",
+      "firmware update"
     ],
     "rank": 4,
     "id": "GEM-ee96"
@@ -366,9 +366,9 @@
     "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
     "sensitivity": "Public",
     "tags": [
-      "Opcode 0x2E",
+      "Node Manager",
       "Power Limiting Policy",
-      "Node Manager"
+      "Opcode 0x2E"
     ],
     "rank": 4,
     "id": "GEM-93e8"
@@ -379,8 +379,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "pptx",
-      "Manageability Ignition-Redfish Content Plan"
+      "Manageability Ignition-Redfish Content Plan",
+      "pptx"
     ],
     "rank": 4,
     "id": "GEM-83e9"
@@ -391,8 +391,8 @@
     "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
     "sensitivity": "Public",
     "tags": [
-      "commands",
-      "PECI"
+      "PECI",
+      "commands"
     ],
     "rank": 4,
     "id": "GEM-31ac"
@@ -403,9 +403,9 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
-      "PCH",
-      "BMC",
       "PECI",
+      "BMC",
+      "PCH",
       "master"
     ],
     "rank": 4,
@@ -451,8 +451,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Troubleshooting",
-      "Era Registry"
+      "Era Registry",
+      "Troubleshooting"
     ],
     "rank": 4,
     "id": "GEM-943f"
@@ -487,8 +487,8 @@
     "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
     "sensitivity": "Public",
     "tags": [
-      "updated list",
-      "inventory requests"
+      "inventory requests",
+      "updated list"
     ],
     "rank": 4,
     "id": "GEM-0527"

@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "validation",
       "PVT",
-      "testing"
+      "testing",
+      "validation"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
     "sensitivity": "Public",
     "tags": [
-      "host interface",
-      "error"
+      "error",
+      "host interface"
     ],
     "rank": 4
   },
@@ -50,8 +50,8 @@
     "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
     "sensitivity": "Public",
     "tags": [
-      "BXTP",
-      "target relocation"
+      "target relocation",
+      "BXTP"
     ],
     "rank": 4
   },
@@ -61,8 +61,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "tool",
-      "causality error"
+      "causality error",
+      "tool"
     ],
     "rank": 4
   },

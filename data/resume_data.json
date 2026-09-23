@@ -1,0 +1,509 @@
+[
+  {
+    "id": "RESUME-001",
+    "domain": "RESUME",
+    "title": "Platform Engineering & Telemetry Architecture Career Core",
+    "summary": "15+ years server manageability, firmware integration, and telemetry debug spanning silicon, BIOS, and BMC.",
+    "content": "Platform engineer specializing in server manageability, firmware integration, and system-level debug across enterprise datacenter platforms, with recent focus on AI infrastructure performance, memory-aware systems, and retrieval design. Proven track record delivering automated validation, power/performance telemetry analysis, and cross-functional issue resolution spanning silicon, BIOS, BMC, and hardware teams. Focused on improving platform reliability, observability, and production readiness.",
+    "tags": [
+      "#datacenter",
+      "#manageability",
+      "#telemetry",
+      "#firmware",
+      "#ai_infrastructure"
+    ],
+    "explicit_links": [
+      "FEAT-586",
+      "FEAT-592"
+    ],
+    "metadata": {
+      "type": "summary",
+      "section": "sec_summary"
+    }
+  },
+  {
+    "id": "RESUME-002",
+    "domain": "RESUME",
+    "title": "AI Infrastructure & Telemetry Architect Achievement (Systems Software & AI Infrastructure (Independent Research))",
+    "summary": "Profiling memory-bound constraints and VRAM utilization across consumer/workstation GPUs using vLLM, PyTorch, and LoRA a...",
+    "content": "Profiling memory-bound constraints and VRAM utilization across consumer/workstation GPUs using vLLM, PyTorch, and LoRA adapters.",
+    "tags": [
+      "#resume",
+      "#systems_softwar",
+      "#systems_engineering"
+    ],
+    "explicit_links": [
+      "FEAT-586"
+    ],
+    "metadata": {
+      "company": "Systems Software & AI Infrastructure (Independent Research)",
+      "title": "AI Infrastructure & Telemetry Architect",
+      "period": "2025 \u2013 Present",
+      "node_id": "node_exp_ai_01"
+    }
+  },
+  {
+    "id": "RESUME-003",
+    "domain": "RESUME",
+    "title": "AI Infrastructure & Telemetry Architect Achievement (Systems Software & AI Infrastructure (Independent Research))",
+    "summary": "Engineered efficient multi-tenant LLM inference using Multi-LoRA adapters and deployed a performance-focused observabili...",
+    "content": "Engineered efficient multi-tenant LLM inference using Multi-LoRA adapters and deployed a performance-focused observability stack using Prometheus and Grafana to analyze GPU power draw and VRAM utilization.",
+    "tags": [
+      "#resume",
+      "#systems_softwar",
+      "#systems_engineering"
+    ],
+    "explicit_links": [
+      "FEAT-586",
+      "FEAT-160"
+    ],
+    "metadata": {
+      "company": "Systems Software & AI Infrastructure (Independent Research)",
+      "title": "AI Infrastructure & Telemetry Architect",
+      "period": "2025 \u2013 Present",
+      "node_id": "node_exp_ai_02"
+    }
+  },
+  {
+    "id": "RESUME-004",
+    "domain": "RESUME",
+    "title": "AI Infrastructure & Telemetry Architect Achievement (Systems Software & AI Infrastructure (Independent Research))",
+    "summary": "Developed a Recursive RAG (Retrieval-Augmented Generation) pipeline with iterative context refinement and retrieval disc...",
+    "content": "Developed a Recursive RAG (Retrieval-Augmented Generation) pipeline with iterative context refinement and retrieval discipline to automate the analysis of deep technical archives, bridging 15 years of platform systems expertise with modern generative AI infrastructure.",
+    "tags": [
+      "#resume",
+      "#systems_softwar",
+      "#systems_engineering"
+    ],
+    "explicit_links": [
+      "FEAT-592",
+      "FEAT-583"
+    ],
+    "metadata": {
+      "company": "Systems Software & AI Infrastructure (Independent Research)",
+      "title": "AI Infrastructure & Telemetry Architect",
+      "period": "2025 \u2013 Present",
+      "node_id": "node_exp_ai_03"
+    }
+  },
+  {
+    "id": "RESUME-005",
+    "domain": "RESUME",
+    "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
+    "summary": "Saved the PECI debug interface from deprecation by championing a secure architectural roadmap across cross-functional te...",
+    "content": "Saved the PECI debug interface from deprecation by championing a secure architectural roadmap across cross-functional teams. Led the transition from legacy RMCP+ to Redfish/OOBMSM, architecting a Bulk API and routing traffic via MCTP over PCIe to improve throughput by a factor of nearly 100. Drove firmware architecture changes, including a CCB to enable 'Core Wake on PECI', culminating in a published internal paper on platform reliability.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [
+      "WIS-012"
+    ],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
+      "period": "Oct 2019 \u2013 Oct 2024",
+      "node_id": "node_exp_intel_01"
+    }
+  },
+  {
+    "id": "RESUME-006",
+    "domain": "RESUME",
+    "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
+    "summary": "Architected and maintained a 100% automated Python validation framework for server manageability. Built standardized mod...",
+    "content": "Architected and maintained a 100% automated Python validation framework for server manageability. Built standardized modules enabling 100+ tests for foundational device management protocols (PLDM/MCTP endpoint discovery, Redfish/IPMI telemetry tracking) ensuring consistency across SoC generations and platform resets.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
+      "period": "Oct 2019 \u2013 Oct 2024",
+      "node_id": "node_exp_intel_02"
+    }
+  },
+  {
+    "id": "RESUME-007",
+    "domain": "RESUME",
+    "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
+    "summary": "Engineered high-fidelity telemetry pipelines to debug Intel Node Manager (NM) power-capping logic and RAPL performance e...",
+    "content": "Engineered high-fidelity telemetry pipelines to debug Intel Node Manager (NM) power-capping logic and RAPL performance envelopes, resolving critical sub-second power overshoots through automated diagnostic scripts.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
+      "period": "Oct 2019 \u2013 Oct 2024",
+      "node_id": "node_exp_intel_03"
+    }
+  },
+  {
+    "id": "RESUME-008",
+    "domain": "RESUME",
+    "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
+    "summary": "Partnered across system software, firmware, and architecture teams to implement a shift-left strategy. Validated PCIe, p...",
+    "content": "Partnered across system software, firmware, and architecture teams to implement a shift-left strategy. Validated PCIe, power management, and platform RAS mechanisms during virtual platform integration (Simics), de-risking program execution before physical silicon arrived.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
+      "period": "Oct 2019 \u2013 Oct 2024",
+      "node_id": "node_exp_intel_04"
+    }
+  },
+  {
+    "id": "RESUME-009",
+    "domain": "RESUME",
+    "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
+    "summary": "Mentored engineering teams and domain leads, fostering cross-functional leadership and guiding architectural decisions f...",
+    "content": "Mentored engineering teams and domain leads, fostering cross-functional leadership and guiding architectural decisions for long-term code maintainability.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
+      "period": "Oct 2019 \u2013 Oct 2024",
+      "node_id": "node_exp_intel_05"
+    }
+  },
+  {
+    "id": "RESUME-010",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Debugged BIOS and microcode-related issues during platform bring-up.",
+    "content": "Debugged BIOS and microcode-related issues during platform bring-up.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_01"
+    }
+  },
+  {
+    "id": "RESUME-011",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Deployed customer development environments internally to reproduce and debug issues involving firmware, BIOS, and cluste...",
+    "content": "Deployed customer development environments internally to reproduce and debug issues involving firmware, BIOS, and cluster networking.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_02"
+    }
+  },
+  {
+    "id": "RESUME-012",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Developed C++ and PECI/IPMI-based automation scripts for thermal, power transient, and firmware validation.",
+    "content": "Developed C++ and PECI/IPMI-based automation scripts for thermal, power transient, and firmware validation.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_03"
+    }
+  },
+  {
+    "id": "RESUME-013",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Managed a 100-node KNL Linux cluster to validate high-performance computing (HPC) deployment architectures, datacenter n...",
+    "content": "Managed a 100-node KNL Linux cluster to validate high-performance computing (HPC) deployment architectures, datacenter networking (Mellanox InfiniBand/Ethernet), and system-level stress.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_04"
+    }
+  },
+  {
+    "id": "RESUME-014",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Ramped on early ML hardware architecture alongside the Intel Nervana team, analyzing neural network precision reduction ...",
+    "content": "Ramped on early ML hardware architecture alongside the Intel Nervana team, analyzing neural network precision reduction strategies (quantization) and distributed matrix multiplication for parallel execution.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_05"
+    }
+  },
+  {
+    "id": "RESUME-015",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Validated vendor compatibility with High-performance storage architectures (Optane PMEM).",
+    "content": "Validated vendor compatibility with High-performance storage architectures (Optane PMEM).",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_06"
+    }
+  },
+  {
+    "id": "RESUME-016",
+    "domain": "RESUME",
+    "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
+    "summary": "Shadowed RAS validation group to create automated RAS test libraries, leading to a transition to the Manageability Test ...",
+    "content": "Shadowed RAS validation group to create automated RAS test libraries, leading to a transition to the Manageability Test team lead position.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
+      "period": "Aug 2016 \u2013 Oct 2019",
+      "node_id": "node_exp_pae_07"
+    }
+  },
+  {
+    "id": "RESUME-017",
+    "domain": "RESUME",
+    "title": "Pre-Silicon SIMICS Graphics Modeling Engineer Achievement (Intel Corporation)",
+    "summary": "Developed deep Linux expertise to rapidly integrate, parse logs, and debug across massive, cross-domain codebases (OS ke...",
+    "content": "Developed deep Linux expertise to rapidly integrate, parse logs, and debug across massive, cross-domain codebases (OS kernel, drivers, firmware), utilizing standard CLI toolchains (grep, awk, sed) for deep-stack system troubleshooting.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Pre-Silicon SIMICS Graphics Modeling Engineer",
+      "period": "Jan 2016 \u2013 Jul 2016",
+      "node_id": "node_exp_simics_01"
+    }
+  },
+  {
+    "id": "RESUME-018",
+    "domain": "RESUME",
+    "title": "Post-Silicon Debug Software Developer Achievement (Intel Corporation)",
+    "summary": "Performed SoC subsystem debug using Intel VISA for internal signal tracing and functional analysis.",
+    "content": "Performed SoC subsystem debug using Intel VISA for internal signal tracing and functional analysis.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Post-Silicon Debug Software Developer",
+      "period": "Jan 2011 \u2013 Dec 2015",
+      "node_id": "node_exp_visa_01"
+    }
+  },
+  {
+    "id": "RESUME-019",
+    "domain": "RESUME",
+    "title": "Post-Silicon Debug Software Developer Achievement (Intel Corporation)",
+    "summary": "Automated signal trace visualization and simplified workflow integration across products, CI/CD.",
+    "content": "Automated signal trace visualization and simplified workflow integration across products, CI/CD.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Post-Silicon Debug Software Developer",
+      "period": "Jan 2011 \u2013 Dec 2015",
+      "node_id": "node_exp_visa_02"
+    }
+  },
+  {
+    "id": "RESUME-020",
+    "domain": "RESUME",
+    "title": "Post-Silicon Debug Software Developer Achievement (Intel Corporation)",
+    "summary": "Refactored and optimized core modules for faster turnaround and easier maintenance.",
+    "content": "Refactored and optimized core modules for faster turnaround and easier maintenance.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Post-Silicon Debug Software Developer",
+      "period": "Jan 2011 \u2013 Dec 2015",
+      "node_id": "node_exp_visa_03"
+    }
+  },
+  {
+    "id": "RESUME-021",
+    "domain": "RESUME",
+    "title": "BMC Firmware Engineer Achievement (Intel Corporation)",
+    "summary": "Developed and validated end-to-end management architectures, spanning Out-of-Band (OOB) networking protocols to In-Band ...",
+    "content": "Developed and validated end-to-end management architectures, spanning Out-of-Band (OOB) networking protocols to In-Band OS-level interfaces including KCS, HECI, and ipmitool provisioning.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "BMC Firmware Engineer",
+      "period": "Sep 2008 \u2013 Dec 2010",
+      "node_id": "node_exp_bmc_01"
+    }
+  },
+  {
+    "id": "RESUME-022",
+    "domain": "RESUME",
+    "title": "BMC Firmware Engineer Achievement (Intel Corporation)",
+    "summary": "Implemented DCMI and Serial Over LAN (SOL) protocols in C, and built lightweight RMCP/RAKP socket communication librarie...",
+    "content": "Implemented DCMI and Serial Over LAN (SOL) protocols in C, and built lightweight RMCP/RAKP socket communication libraries.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "BMC Firmware Engineer",
+      "period": "Sep 2008 \u2013 Dec 2010",
+      "node_id": "node_exp_bmc_02"
+    }
+  },
+  {
+    "id": "RESUME-023",
+    "domain": "RESUME",
+    "title": "BMC Firmware Engineer Achievement (Intel Corporation)",
+    "summary": "Identified a fundamental protocol-level vulnerability in IPMI 2.0 RAKP authentication (later classified as industry-wide...",
+    "content": "Identified a fundamental protocol-level vulnerability in IPMI 2.0 RAKP authentication (later classified as industry-wide CVE-2013-4786) by patching Wireshark source code to debug and parse custom session negotiation packets.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "BMC Firmware Engineer",
+      "period": "Sep 2008 \u2013 Dec 2010",
+      "node_id": "node_exp_bmc_03"
+    }
+  },
+  {
+    "id": "RESUME-024",
+    "domain": "RESUME",
+    "title": "Validation Engineer | Firmware Validation (Contract & Internship) Achievement (Intel Corporation)",
+    "summary": "Automated 80% of manual NIC testing using Perl and TCL/Expect.",
+    "content": "Automated 80% of manual NIC testing using Perl and TCL/Expect.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Validation Engineer | Firmware Validation (Contract & Internship)",
+      "period": "Apr 2005 \u2013 Sep 2008",
+      "node_id": "node_exp_val_01"
+    }
+  },
+  {
+    "id": "RESUME-025",
+    "domain": "RESUME",
+    "title": "Validation Engineer | Firmware Validation (Contract & Internship) Achievement (Intel Corporation)",
+    "summary": "Debugged LAN access issues and built automated IPMI recovery tests, cutting validation cycles by half.",
+    "content": "Debugged LAN access issues and built automated IPMI recovery tests, cutting validation cycles by half.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Validation Engineer | Firmware Validation (Contract & Internship)",
+      "period": "Apr 2005 \u2013 Sep 2008",
+      "node_id": "node_exp_val_02"
+    }
+  },
+  {
+    "id": "RESUME-026",
+    "domain": "RESUME",
+    "title": "Validation Engineer | Firmware Validation (Contract & Internship) Achievement (Intel Corporation)",
+    "summary": "Collaborated with BIOS and hardware teams on IA64 and x86 platform validation.",
+    "content": "Collaborated with BIOS and hardware teams on IA64 and x86 platform validation.",
+    "tags": [
+      "#resume",
+      "#intel_corporati",
+      "#systems_engineering"
+    ],
+    "explicit_links": [],
+    "metadata": {
+      "company": "Intel Corporation",
+      "title": "Validation Engineer | Firmware Validation (Contract & Internship)",
+      "period": "Apr 2005 \u2013 Sep 2008",
+      "node_id": "node_exp_val_03"
+    }
+  }
+]

@@ -5,8 +5,8 @@
     "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
     "sensitivity": "Public",
     "tags": [
-      "connection_abort",
-      "PECI"
+      "PECI",
+      "connection_abort"
     ],
     "rank": 4
   },
@@ -16,8 +16,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "report",
-      "MIV"
+      "MIV",
+      "report"
     ],
     "rank": 4
   },

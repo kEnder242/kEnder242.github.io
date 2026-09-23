@@ -1114,7 +1114,7 @@
     },
     "synthesis": {
       "title": "The Dual-Engine Creative Process: Passive Cross-Domain Synthesis & Active Methodical Execution",
-      "narrative_context": "Software development is fundamentally a creative discipline governed by two complementary cognitive modes. Passive Synthesis operates asynchronously in the background—distilling subconscious 'shower thoughts' into high-impact, cross-domain insights by connecting disparate systems (e.g., hardware validation, distributed systems, vector memory). Active Execution is the deliberate, paced, and structured implementation phase where taking time to respond methodically prevents cognitive thrashing, clarifies interfaces, and translates creative vision into robust, defensive production architectures.",
+      "narrative_context": "Software development is fundamentally a creative discipline governed by two complementary cognitive modes. Passive Synthesis operates asynchronously in the background\u2014distilling subconscious 'shower thoughts' into high-impact, cross-domain insights by connecting disparate systems (e.g., hardware validation, distributed systems, vector memory). Active Execution is the deliberate, paced, and structured implementation phase where taking time to respond methodically prevents cognitive thrashing, clarifies interfaces, and translates creative vision into robust, defensive production architectures.",
       "lab_anchors": [
         "Portfolio_Dev/field_notes/career_notes.html",
         "HomeLabAI/docs/Protocols.md:BKM-005",
@@ -1222,6 +1222,48 @@
         "PHL-003",
         "PHL-033",
         "BKM-060"
+      ],
+      "status": "APPROVED",
+      "bucket_id": "bucket_1_jitc"
+    }
+  },
+  {
+    "id": "PHL-035",
+    "theme": "Decoupling & The Voice Vector Space",
+    "paper_order": 35,
+    "origin": {
+      "author": "jallred",
+      "text": "Truth is invariant; Presentation is a fluid projection. Triage space converges inward to classify intent; Expression space diverges outward to project invariant DNA meaning into diverse stylistic registers.",
+      "source": "Semantic Packing & The Voice Vector Space Consensus (Sprint 84)",
+      "immutable": true,
+      "created_at": "2026-09-18T22:00:00Z"
+    },
+    "synthesis": {
+      "title": "The Invariant Truth & Fluid Projection Law (Decoupling Meaning from Presentation)",
+      "narrative_context": "In a federated knowledge ecosystem, declarative empirical truth must be strictly decoupled from stylistic transport and presentation. An immutable DNA core (Domain-Named Automata) represents the invariant noun/verb reality, while adjectives, adverbs, voice, tense, and register form a continuous Voice Vector Space. Rotating the voice vector allows the same immutable truth to be rendered across multiple presentation formats (academic manuscript, executive briefing, ATS resume) with zero factual corruption.",
+      "lab_anchors": [
+        "Portfolio_Dev/field_notes/dna_semantic_packing_and_voice_vector_space.md",
+        "Portfolio_Dev/field_notes/writer.html",
+        "FEAT-594",
+        "FEAT-595"
+      ],
+      "review_notes": "Formalizes the fourth decoupling pillar of the Federated Lab (Presentation vs Meaning).",
+      "last_refined_by": "AGY",
+      "refinement_version": 1
+    },
+    "metadata": {
+      "tags": [
+        "decoupling-law",
+        "invariant-truth",
+        "voice-vector-space",
+        "semantic-packing",
+        "domain-named-automata"
+      ],
+      "explicit_links": [
+        "PHL-034",
+        "PHL-006",
+        "FEAT-594",
+        "FEAT-595"
       ],
       "status": "APPROVED",
       "bucket_id": "bucket_1_jitc"

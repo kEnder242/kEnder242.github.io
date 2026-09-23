@@ -51,9 +51,9 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
+      "Purley 2S",
       "Proton1",
       "Proton2",
-      "Purley 2S",
       "Purley 4S"
     ],
     "rank": 4,
@@ -77,8 +77,8 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
       "CScripts",
+      "Purley 2S",
       "Purley 4S"
     ],
     "rank": 4,
@@ -101,9 +101,9 @@
     "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
     "sensitivity": "Public",
     "tags": [
-      "UFM",
       "shmemcc",
-      "HAMR"
+      "HAMR",
+      "UFM"
     ],
     "rank": 4,
     "id": "GEM-a8b2"
@@ -126,8 +126,8 @@
     "evidence": "",
     "sensitivity": "Public",
     "tags": [
-      "PMEM",
       "AppDirect Mode",
+      "PMEM",
       "AEP"
     ],
     "rank": 4,
@@ -151,8 +151,8 @@
     "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
     "sensitivity": "Public",
     "tags": [
-      "memory",
-      "configuration"
+      "configuration",
+      "memory"
     ],
     "rank": 4,
     "id": "GEM-3a33"
@@ -235,8 +235,8 @@
     "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
     "sensitivity": "Public",
     "tags": [
-      "mce",
       "vc30",
+      "mce",
       "error"
     ],
     "rank": 4,
@@ -248,8 +248,8 @@
     "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
     "sensitivity": "Public",
     "tags": [
-      "performance",
-      "ixpdimm-cli"
+      "ixpdimm-cli",
+      "performance"
     ],
     "rank": 4,
     "id": "GEM-ee1f"
@@ -260,8 +260,8 @@
     "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
     "sensitivity": "Public",
     "tags": [
-      "BIOS update",
-      "App Direct Dependency Failure"
+      "App Direct Dependency Failure",
+      "BIOS update"
     ],
     "rank": 4,
     "id": "GEM-fee5"
@@ -272,8 +272,8 @@
     "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
     "sensitivity": "Public",
     "tags": [
-      "grub2-mkconfig",
-      "configuration"
+      "configuration",
+      "grub2-mkconfig"
     ],
     "rank": 4,
     "id": "GEM-3d8b"
@@ -284,8 +284,8 @@
     "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
     "sensitivity": "Public",
     "tags": [
-      "ipmctl",
-      "persistent memory"
+      "persistent memory",
+      "ipmctl"
     ],
     "rank": 4,
     "id": "GEM-48ad"
@@ -296,8 +296,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "DC Cycling",
-      "Cold Reset"
+      "Cold Reset",
+      "DC Cycling"
     ],
     "rank": 4,
     "id": "GEM-f198"
@@ -346,8 +346,8 @@
     "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt\"",
     "sensitivity": "Public",
     "tags": [
-      "Error Injection",
-      "Testing"
+      "Testing",
+      "Error Injection"
     ],
     "rank": 4,
     "id": "GEM-74dc"
@@ -358,8 +358,8 @@
     "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
     "sensitivity": "Public",
     "tags": [
-      "SvBios",
-      "CAUSALITY ERROR"
+      "CAUSALITY ERROR",
+      "SvBios"
     ],
     "rank": 4,
     "id": "GEM-7084"
@@ -370,8 +370,8 @@
     "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
     "sensitivity": "Public",
     "tags": [
-      "Error Injection",
-      "biosKnobs"
+      "biosKnobs",
+      "Error Injection"
     ],
     "rank": 4,
     "id": "GEM-2822"
@@ -382,8 +382,8 @@
     "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
     "sensitivity": "Public",
     "tags": [
-      "Error Injection",
-      "System Configuration"
+      "System Configuration",
+      "Error Injection"
     ],
     "rank": 4,
     "id": "GEM-b79d"
@@ -395,8 +395,8 @@
     "sensitivity": "Public",
     "tags": [
       "repository",
-      "Git",
-      "clone"
+      "clone",
+      "Git"
     ],
     "rank": 4,
     "id": "GEM-f75c"
@@ -432,8 +432,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "error injection"
+      "error injection",
+      "APEI/EINJ"
     ],
     "rank": 4,
     "id": "GEM-f1ce"
@@ -444,8 +444,8 @@
     "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
     "sensitivity": "Public",
     "tags": [
-      "IPC",
-      "CLX_LBG_XDPA"
+      "CLX_LBG_XDPA",
+      "IPC"
     ],
     "rank": 4,
     "id": "GEM-2550"
@@ -456,8 +456,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
     "sensitivity": "Public",
     "tags": [
-      "APEI/EINJ",
-      "OS log error messages"
+      "OS log error messages",
+      "APEI/EINJ"
     ],
     "rank": 4,
     "id": "GEM-4d60"

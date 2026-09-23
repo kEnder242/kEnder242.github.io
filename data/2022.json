@@ -54,8 +54,8 @@
     "evidence": "/root/tester -y 0x010000C800800D -d 00",
     "sensitivity": "Public",
     "tags": [
-      "PythonSV",
-      "MCTP"
+      "MCTP",
+      "PythonSV"
     ],
     "rank": 4,
     "id": "GEM-7c0e"
@@ -66,8 +66,8 @@
     "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
     "sensitivity": "Public",
     "tags": [
-      "pmdebug",
-      "PythonSV"
+      "PythonSV",
+      "pmdebug"
     ],
     "rank": 4,
     "id": "GEM-e978"
@@ -239,8 +239,8 @@
     "evidence": "https://hsdes.intel.com/appstore/article/#/14017037890",
     "sensitivity": "Public",
     "tags": [
-      "EGS DRAM ECS",
-      "PECI"
+      "PECI",
+      "EGS DRAM ECS"
     ],
     "rank": 4,
     "id": "GEM-57bc"
@@ -313,9 +313,9 @@
     "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
     "sensitivity": "Public",
     "tags": [
-      "MSR register access issues",
+      "PECI tests",
       "unexpected return codes",
-      "PECI tests"
+      "MSR register access issues"
     ],
     "rank": 4,
     "id": "GEM-d90f"
