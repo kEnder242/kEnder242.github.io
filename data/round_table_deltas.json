@@ -46,98 +46,6 @@
     "consensus_1liner": "Hey guys! Let's take a closer look at the PECISTRESSOR validation scar. What are the root causes of this issue and how can we prioritize our efforts to resolve it?\n\nThe PECISTRESSOR validation scar is"
   },
   {
-    "turn": 8,
-    "timestamp": 1789489700,
-    "time_str": "09:28:20",
-    "topic": "EXP_TLM",
-    "scope": "CONTEXT_SCOPE_LONG",
-    "turn_mode": "FULL_ROUND_TABLE",
-    "is_full_round_table": true,
-    "checkpoints_elapsed_s": {
-      "triage": 3.971,
-      "pinky_stance": 3.971,
-      "brain_arch": 57.944,
-      "oracle": 80.823,
-      "pinky_judgment": 80.823
-    },
-    "deltas_elapsed_s": {
-      "triage": 3.971,
-      "pinky_stance": 0.001,
-      "brain_arch": 53.973,
-      "oracle": 22.879,
-      "pinky_judgment": 0.001
-    },
-    "cumulative": {
-      "triage": 3.971,
-      "pinky_stance": 3.971,
-      "brain_arch": 57.944,
-      "oracle": 80.823,
-      "pinky_judgment": 80.823
-    },
-    "deltas": {
-      "triage": 3.971,
-      "pinky_stance": 0.001,
-      "brain_arch": 53.973,
-      "oracle": 22.879,
-      "pinky_judgment": 0.001
-    },
-    "total_elapsed_s": 80.823,
-    "total_s": 80.823,
-    "distillation_bullets": [
-      "LAB: { \n  \"inferred_intent\": \"query_validation\",\n  \"addressed_to\": \"SYSTEM\", \n  \"vibe\": \"TECHNICAL\", \n  \"domain\": \"exp_tlm\", \n  \"casual\": 0.4,\n  \"intrigue\"",
-      "PINKY: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro",
-      "BRAIN: [VISIBLE CONSENSUS]\n<historical_record> **Strategic Brief**\nThe current system design stance is indeed rooted in the Triage Situation outlined in `mct",
-      "CRITIQUE: Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of th"
-    ],
-    "consensus_1liner": "Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of the issue, highlighting the impact on system perform"
-  },
-  {
-    "turn": 9,
-    "timestamp": 1789490973,
-    "time_str": "09:49:33",
-    "topic": "EXP_TLM",
-    "scope": "CONTEXT_SCOPE_LONG",
-    "turn_mode": "FULL_ROUND_TABLE",
-    "is_full_round_table": true,
-    "checkpoints_elapsed_s": {
-      "triage": 3.661,
-      "pinky_stance": 3.661,
-      "brain_arch": 45.768,
-      "oracle": 146.768,
-      "pinky_judgment": 146.768
-    },
-    "deltas_elapsed_s": {
-      "triage": 3.661,
-      "pinky_stance": 0.001,
-      "brain_arch": 42.107,
-      "oracle": 101.0,
-      "pinky_judgment": 0.001
-    },
-    "cumulative": {
-      "triage": 3.661,
-      "pinky_stance": 3.661,
-      "brain_arch": 45.768,
-      "oracle": 146.768,
-      "pinky_judgment": 146.768
-    },
-    "deltas": {
-      "triage": 3.661,
-      "pinky_stance": 0.001,
-      "brain_arch": 42.107,
-      "oracle": 101.0,
-      "pinky_judgment": 0.001
-    },
-    "total_elapsed_s": 146.768,
-    "total_s": 146.768,
-    "distillation_bullets": [
-      "LAB: { \n  \"inferred_intent\": \"query_validation\",\n  \"addressed_to\": \"SYSTEM\", \n  \"vibe\": \"TECHNICAL\", \n  \"domain\": \"exp_tlm\", \n  \"casual\": 0.4,\n  \"intrigue\"",
-      "PINKY: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro",
-      "BRAIN: [VISIBLE CONSENSUS]\n<historical_record> **Strategic Brief**\nThe current system design stance is indeed rooted in the Triage Situation outlined in `mct",
-      "CRITIQUE: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro"
-    ],
-    "consensus_1liner": "{ \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of the issue, highlighting"
-  },
-  {
     "turn": 2,
     "timestamp": 1789488600,
     "time_str": "09:10:00",
@@ -413,6 +321,98 @@
     "consensus_1liner": "{ \"score\": 5, \"reasoning\": \"Pinky's response matches the brain's reflection, providing a clear summary of the PECI/MSR scars and their impact on system performance. The tabled evidence supports the br"
   },
   {
+    "turn": 8,
+    "timestamp": 1789489700,
+    "time_str": "09:28:20",
+    "topic": "EXP_TLM",
+    "scope": "CONTEXT_SCOPE_LONG",
+    "turn_mode": "FULL_ROUND_TABLE",
+    "is_full_round_table": true,
+    "checkpoints_elapsed_s": {
+      "triage": 3.971,
+      "pinky_stance": 3.971,
+      "brain_arch": 57.944,
+      "oracle": 80.823,
+      "pinky_judgment": 80.823
+    },
+    "deltas_elapsed_s": {
+      "triage": 3.971,
+      "pinky_stance": 0.001,
+      "brain_arch": 53.973,
+      "oracle": 22.879,
+      "pinky_judgment": 0.001
+    },
+    "cumulative": {
+      "triage": 3.971,
+      "pinky_stance": 3.971,
+      "brain_arch": 57.944,
+      "oracle": 80.823,
+      "pinky_judgment": 80.823
+    },
+    "deltas": {
+      "triage": 3.971,
+      "pinky_stance": 0.001,
+      "brain_arch": 53.973,
+      "oracle": 22.879,
+      "pinky_judgment": 0.001
+    },
+    "total_elapsed_s": 80.823,
+    "total_s": 80.823,
+    "distillation_bullets": [
+      "LAB: { \n  \"inferred_intent\": \"query_validation\",\n  \"addressed_to\": \"SYSTEM\", \n  \"vibe\": \"TECHNICAL\", \n  \"domain\": \"exp_tlm\", \n  \"casual\": 0.4,\n  \"intrigue\"",
+      "PINKY: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro",
+      "BRAIN: [VISIBLE CONSENSUS]\n<historical_record> **Strategic Brief**\nThe current system design stance is indeed rooted in the Triage Situation outlined in `mct",
+      "CRITIQUE: Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of th"
+    ],
+    "consensus_1liner": "Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of the issue, highlighting the impact on system perform"
+  },
+  {
+    "turn": 9,
+    "timestamp": 1789490973,
+    "time_str": "09:49:33",
+    "topic": "EXP_TLM",
+    "scope": "CONTEXT_SCOPE_LONG",
+    "turn_mode": "FULL_ROUND_TABLE",
+    "is_full_round_table": true,
+    "checkpoints_elapsed_s": {
+      "triage": 3.661,
+      "pinky_stance": 3.661,
+      "brain_arch": 45.768,
+      "oracle": 146.768,
+      "pinky_judgment": 146.768
+    },
+    "deltas_elapsed_s": {
+      "triage": 3.661,
+      "pinky_stance": 0.001,
+      "brain_arch": 42.107,
+      "oracle": 101.0,
+      "pinky_judgment": 0.001
+    },
+    "cumulative": {
+      "triage": 3.661,
+      "pinky_stance": 3.661,
+      "brain_arch": 45.768,
+      "oracle": 146.768,
+      "pinky_judgment": 146.768
+    },
+    "deltas": {
+      "triage": 3.661,
+      "pinky_stance": 0.001,
+      "brain_arch": 42.107,
+      "oracle": 101.0,
+      "pinky_judgment": 0.001
+    },
+    "total_elapsed_s": 146.768,
+    "total_s": 146.768,
+    "distillation_bullets": [
+      "LAB: { \n  \"inferred_intent\": \"query_validation\",\n  \"addressed_to\": \"SYSTEM\", \n  \"vibe\": \"TECHNICAL\", \n  \"domain\": \"exp_tlm\", \n  \"casual\": 0.4,\n  \"intrigue\"",
+      "PINKY: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro",
+      "BRAIN: [VISIBLE CONSENSUS]\n<historical_record> **Strategic Brief**\nThe current system design stance is indeed rooted in the Triage Situation outlined in `mct",
+      "CRITIQUE: { \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection pro"
+    ],
+    "consensus_1liner": "{ \"score\": 5, \"reasoning\": \"Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of the issue, highlighting"
+  },
+  {
     "turn": 10,
     "timestamp": 1789493350,
     "time_str": "10:29:10",
@@ -457,48 +457,5 @@
       "CRITIQUE: Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of th"
     ],
     "consensus_1liner": "Pinky's response accurately summarizes the PECISTRESSOR validation scar and verifies node sync. The brain's reflection provides a clear analysis of the issue, highlighting the impact on system perform"
-  },
-  {
-    "turn": 5,
-    "timestamp": 1789510209,
-    "time_str": "15:10:09",
-    "topic": "TOPIC_TEST",
-    "scope": "TURN",
-    "turn_mode": "FULL_ROUND_TABLE",
-    "is_full_round_table": true,
-    "checkpoints_elapsed_s": {
-      "triage": 0.1,
-      "pinky_stance": 0.5,
-      "brain_arch": 1.0,
-      "oracle": 1.5,
-      "pinky_judgment": 2.0
-    },
-    "deltas_elapsed_s": {
-      "triage": 0.1,
-      "pinky_stance": 0.4,
-      "brain_arch": 0.5,
-      "oracle": 0.5,
-      "pinky_judgment": 0.5
-    },
-    "cumulative": {
-      "triage": 0.1,
-      "pinky_stance": 0.5,
-      "brain_arch": 1.0,
-      "oracle": 1.5,
-      "pinky_judgment": 2.0
-    },
-    "deltas": {
-      "triage": 0.1,
-      "pinky_stance": 0.4,
-      "brain_arch": 0.5,
-      "oracle": 0.5,
-      "pinky_judgment": 0.5
-    },
-    "total_elapsed_s": 2.0,
-    "total_s": 2.0,
-    "distillation_bullets": [
-      "test bullet"
-    ],
-    "consensus_1liner": "test consensus"
   }
 ]
