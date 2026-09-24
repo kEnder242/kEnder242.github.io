@@ -43,10 +43,10 @@
     "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "PCI",
       "Error Code 0xAC",
-      "Error Code 0xAB"
+      "Error Code 0xAB",
+      "IPMI",
+      "PCI"
     ],
     "rank": 4,
     "id": "GEM-acc9"
@@ -70,9 +70,9 @@
     "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
     "sensitivity": "Public",
     "tags": [
-      "registry",
+      "docker",
       "aws-ecr-credential-helper",
-      "docker"
+      "registry"
     ],
     "rank": 4,
     "id": "GEM-dd5c"
@@ -84,8 +84,8 @@
     "sensitivity": "Public",
     "tags": [
       "compose",
-      "docker",
-      "build"
+      "build",
+      "docker"
     ],
     "rank": 4,
     "id": "GEM-79a0"
@@ -147,10 +147,10 @@
     "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
     "sensitivity": "Public",
     "tags": [
+      "ME",
       "IPMI",
-      "BMC",
       "ICX-HCC",
-      "ME"
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-3f14"
@@ -161,8 +161,8 @@
     "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
     "sensitivity": "Public",
     "tags": [
-      "power_limit_accuracy",
-      "domains"
+      "domains",
+      "power_limit_accuracy"
     ],
     "rank": 4,
     "id": "GEM-fd78"
@@ -197,9 +197,9 @@
     "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
+      "power limiting",
       "error",
-      "power limiting"
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-db95"
@@ -210,9 +210,9 @@
     "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
       "ipmitool",
-      "unknown return code"
+      "unknown return code",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-a05c"
@@ -223,8 +223,8 @@
     "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
     "sensitivity": "Public",
     "tags": [
-      "policy #231",
-      "avgpowercmp"
+      "avgpowercmp",
+      "policy #231"
     ],
     "rank": 4,
     "id": "GEM-5600"
@@ -247,8 +247,8 @@
     "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
     "sensitivity": "Public",
     "tags": [
-      "error reporting",
-      "avgpowercmp"
+      "avgpowercmp",
+      "error reporting"
     ],
     "rank": 4,
     "id": "GEM-a1ed"
@@ -271,8 +271,8 @@
     "evidence": "Kernel panic - not syncing: Out of memory: system-wide panic_on_oom is enabled",
     "sensitivity": "Public",
     "tags": [
-      "kernel panic",
-      "OOM"
+      "OOM",
+      "kernel panic"
     ],
     "rank": 4,
     "id": "GEM-810e"
@@ -283,8 +283,8 @@
     "evidence": "Jason: debug verifysamepolicy.py",
     "sensitivity": "Public",
     "tags": [
-      "debug",
-      "script"
+      "script",
+      "debug"
     ],
     "rank": 4,
     "id": "GEM-1ad3"

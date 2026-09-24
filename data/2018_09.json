@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Purley 2S",
       "Proton1",
+      "Purley 4S",
       "Proton2",
-      "Purley 4S"
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -18,8 +18,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "stressapptest",
-      "FIO"
+      "FIO",
+      "stressapptest"
     ],
     "rank": 4
   },
@@ -30,8 +30,8 @@
     "sensitivity": "Public",
     "tags": [
       "CScripts",
-      "Purley 2S",
-      "Purley 4S"
+      "Purley 4S",
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -52,8 +52,8 @@
     "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
-      "grub2-mkconfig"
+      "grub2-mkconfig",
+      "configuration"
     ],
     "rank": 4
   },
@@ -74,8 +74,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "Cold Reset",
-      "DC Cycling"
+      "DC Cycling",
+      "Cold Reset"
     ],
     "rank": 4
   }

@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-09-23T18:02:56.841482",
+  "date": "2026-09-23",
+  "overall_status": "FAIL",
+  "total_checks": 6,
+  "passed_checks": 4,
+  "failed_checks": 2,
+  "checks": [
+    {
+      "name": "GPU Power Clamp (165W)",
+      "passed": true,
+      "detail": "Verified 165W clamp limit"
+    },
+    {
+      "name": "VRAM Quiesce Drain (<250MB)",
+      "passed": true,
+      "detail": "VRAM evicted cleanly before training"
+    },
+    {
+      "name": "LoRA Fine-Tuning Multi-Adapter Pass",
+      "passed": true,
+      "detail": "Status: COMPLETED, Adapters: 4"
+    },
+    {
+      "name": "Foyer Re-Ignition & Hot-Reload",
+      "passed": true,
+      "detail": "Foyer returned to OPERATIONAL"
+    },
+    {
+      "name": "Accountable Subconscious Dreaming",
+      "passed": false,
+      "detail": "Turns: 0, Refined: 0, Status: PASS"
+    },
+    {
+      "name": "Synthetic Morning Round Table Probe",
+      "passed": false,
+      "detail": "Greeting Latency: 0ms, Status: FAIL"
+    }
+  ],
+  "discrepancies": [
+    "Dream cycle completed with zero synthesized turns and zero refined items (Green Lie).",
+    "Round table probe returned FAIL: Triage timeout"
+  ],
+  "raw_telemetry": {
+    "gpu_power_clamped": true,
+    "vram_quiesced": true,
+    "lora_status": "COMPLETED",
+    "adapters_trained": [
+      "cli_voice_v1",
+      "lab_history_v1",
+      "triage_v1",
+      "reviewer_v1"
+    ],
+    "re_ignited": true,
+    "dream_telemetry": {
+      "status": "PASS",
+      "turns_synthesized": 0,
+      "items_refined": 0
+    },
+    "round_table_probe": {
+      "status": "FAIL",
+      "error": "Triage timeout"
+    }
+  }
+}

@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
     "sensitivity": "Public",
     "tags": [
-      "PECI",
-      "performance"
+      "performance",
+      "PECI"
     ],
     "rank": 4,
     "id": "GEM-dc8d"
@@ -53,8 +53,8 @@
     "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
     "sensitivity": "Public",
     "tags": [
-      "IPMI",
-      "error"
+      "error",
+      "IPMI"
     ],
     "rank": 4,
     "id": "GEM-53e9"
@@ -100,8 +100,8 @@
     "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
     "sensitivity": "Public",
     "tags": [
-      "peci",
-      "ipmi_host"
+      "ipmi_host",
+      "peci"
     ],
     "rank": 4,
     "id": "GEM-de4b"
@@ -112,9 +112,9 @@
     "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "crypto",
       "msr",
-      "pyghmi"
+      "pyghmi",
+      "crypto"
     ],
     "rank": 4,
     "id": "GEM-599b"
@@ -125,8 +125,8 @@
     "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
     "sensitivity": "Public",
     "tags": [
-      "Reset",
       "MIV",
+      "Reset",
       "Recovery"
     ],
     "rank": 4,
@@ -150,8 +150,8 @@
     "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
     "sensitivity": "Public",
     "tags": [
-      "Test",
-      "MIV"
+      "MIV",
+      "Test"
     ],
     "rank": 4,
     "id": "GEM-c46c"
@@ -234,8 +234,8 @@
     "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
     "sensitivity": "Public",
     "tags": [
-      "priority execution requests",
-      "PCIE Whitley"
+      "PCIE Whitley",
+      "priority execution requests"
     ],
     "rank": 4,
     "id": "GEM-cb8e"
@@ -246,8 +246,8 @@
     "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
     "sensitivity": "Public",
     "tags": [
-      "Crasdump/EINJ knobs",
-      "DTAF"
+      "DTAF",
+      "Crasdump/EINJ knobs"
     ],
     "rank": 4,
     "id": "GEM-059d"
@@ -258,8 +258,8 @@
     "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
     "sensitivity": "Public",
     "tags": [
-      "nm-4.0",
-      "external interface spec"
+      "external interface spec",
+      "nm-4.0"
     ],
     "rank": 4,
     "id": "GEM-d939"
@@ -294,8 +294,8 @@
     "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
     "sensitivity": "Public",
     "tags": [
-      "L-BMC",
-      "BMC"
+      "BMC",
+      "L-BMC"
     ],
     "rank": 4,
     "id": "GEM-d328"
@@ -318,8 +318,8 @@
     "evidence": "RAW LOGS text",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "recovery"
+      "recovery",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-7360"
@@ -342,8 +342,8 @@
     "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
     "sensitivity": "Public",
     "tags": [
-      "L-BMC",
-      "firmware update"
+      "firmware update",
+      "L-BMC"
     ],
     "rank": 4,
     "id": "GEM-ee96"
@@ -366,9 +366,9 @@
     "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
     "sensitivity": "Public",
     "tags": [
-      "Node Manager",
+      "Opcode 0x2E",
       "Power Limiting Policy",
-      "Opcode 0x2E"
+      "Node Manager"
     ],
     "rank": 4,
     "id": "GEM-93e8"
@@ -379,8 +379,8 @@
     "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
     "sensitivity": "Public",
     "tags": [
-      "Manageability Ignition-Redfish Content Plan",
-      "pptx"
+      "pptx",
+      "Manageability Ignition-Redfish Content Plan"
     ],
     "rank": 4,
     "id": "GEM-83e9"
@@ -403,10 +403,10 @@
     "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
     "sensitivity": "Public",
     "tags": [
+      "master",
       "PECI",
-      "BMC",
       "PCH",
-      "master"
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-fbf4"
@@ -417,8 +417,8 @@
     "evidence": "https://docs.intel.com/documents/sms_archspecs/openbmc/nm_supporting_docs/api/Redfish%20Power%20Cap%20OEM%20Schema.html",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "Research"
+      "Research",
+      "TODO"
     ],
     "rank": 4,
     "id": "GEM-ec32"
@@ -451,8 +451,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Era Registry",
-      "Troubleshooting"
+      "Troubleshooting",
+      "Era Registry"
     ],
     "rank": 4,
     "id": "GEM-943f"
@@ -463,8 +463,8 @@
     "evidence": null,
     "sensitivity": "Public",
     "tags": [
-      "Capacity Planning",
-      "Power Management"
+      "Power Management",
+      "Capacity Planning"
     ],
     "rank": 4,
     "id": "GEM-f12c"
@@ -487,8 +487,8 @@
     "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
     "sensitivity": "Public",
     "tags": [
-      "inventory requests",
-      "updated list"
+      "updated list",
+      "inventory requests"
     ],
     "rank": 4,
     "id": "GEM-0527"

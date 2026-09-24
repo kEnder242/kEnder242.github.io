@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "PVT",
       "testing",
-      "validation"
+      "validation",
+      "PVT"
     ],
     "rank": 4
   },
@@ -39,8 +39,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "internal error",
-      "metadata file"
+      "metadata file",
+      "internal error"
     ],
     "rank": 4
   },
@@ -61,8 +61,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "causality error",
-      "tool"
+      "tool",
+      "causality error"
     ],
     "rank": 4
   },

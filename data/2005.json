@@ -40,9 +40,9 @@
     "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
     "sensitivity": "Public",
     "tags": [
-      "EFS",
+      "upgrade",
       "BMC23",
-      "upgrade"
+      "EFS"
     ],
     "rank": 4,
     "id": "GEM-329f"
@@ -53,9 +53,9 @@
     "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
     "sensitivity": "Public",
     "tags": [
-      "system_stability",
       "issue",
-      "data_integrity"
+      "data_integrity",
+      "system_stability"
     ],
     "rank": 4,
     "id": "GEM-7509"
@@ -66,8 +66,8 @@
     "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
     "sensitivity": "Public",
     "tags": [
-      "evaluation",
-      "performance"
+      "performance",
+      "evaluation"
     ],
     "rank": 4,
     "id": "GEM-f3eb"
@@ -78,8 +78,8 @@
     "evidence": "EFS1.16 (ran 2nd eval with 1.16 after noticing platform did not matter)",
     "sensitivity": "Public",
     "tags": [
-      "evaluation",
-      "performance"
+      "performance",
+      "evaluation"
     ],
     "rank": 4,
     "id": "GEM-3d9c"
@@ -90,8 +90,8 @@
     "evidence": "HW BMC25/EFS1.15   EFS1.16",
     "sensitivity": "Public",
     "tags": [
-      "evaluation",
-      "tool_version"
+      "tool_version",
+      "evaluation"
     ],
     "rank": 4,
     "id": "GEM-ac44"

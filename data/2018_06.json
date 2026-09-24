@@ -5,8 +5,8 @@
     "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "bug"
+      "bug",
+      "TODO"
     ],
     "rank": 4
   },
@@ -38,8 +38,8 @@
     "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
-      "SHMEM_SYMMETRIC_HEAP_SIZE"
+      "SHMEM_SYMMETRIC_HEAP_SIZE",
+      "configuration"
     ],
     "rank": 4
   },
@@ -49,8 +49,8 @@
     "evidence": "ixpdimm-cli show -memoryresources",
     "sensitivity": "Public",
     "tags": [
-      "persistentmemory",
-      "ixpdimm-cli"
+      "ixpdimm-cli",
+      "persistentmemory"
     ],
     "rank": 4
   }

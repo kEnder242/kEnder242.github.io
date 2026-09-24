@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "PVT",
       "testing",
-      "validation"
+      "validation",
+      "PVT"
     ],
     "rank": 4,
     "id": "GEM-8e79"
@@ -42,8 +42,8 @@
     "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
     "sensitivity": "Public",
     "tags": [
-      "powercycle.py",
       "FPGAIntegration",
+      "powercycle.py",
       "init_soc.cmm"
     ],
     "rank": 4,
@@ -55,8 +55,8 @@
     "evidence": "RAW LOGS: `visa_patgen_probemode_manual_stop` and `visa_patgen_probemode_trigger` tests failed with error codes indicating no trace seen and MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "test_failure",
       "vcd_missing",
+      "test_failure",
       "msr_error"
     ],
     "rank": 4,
@@ -80,8 +80,8 @@
     "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
     "sensitivity": "Public",
     "tags": [
-      "trace32_error",
-      "recovery_failure"
+      "recovery_failure",
+      "trace32_error"
     ],
     "rank": 4,
     "id": "GEM-3f26"
@@ -92,8 +92,8 @@
     "evidence": "x:\\bb\\ULWLABSRV002\\northpeak-sdk.0\\cfg\\test\\apiTests\\traceHubWrapTests.cpp:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
     "sensitivity": "Public",
     "tags": [
-      "visa_patgen_manual_stop",
-      "failure"
+      "failure",
+      "visa_patgen_manual_stop"
     ],
     "rank": 4,
     "id": "GEM-5861"
@@ -104,8 +104,8 @@
     "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
     "sensitivity": "Public",
     "tags": [
-      "causality",
-      "error"
+      "error",
+      "causality"
     ],
     "rank": 4,
     "id": "GEM-e119"
@@ -129,9 +129,9 @@
     "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
     "sensitivity": "Public",
     "tags": [
+      "cfg_apitest64.exe",
       "probemode",
-      "tap2sb",
-      "cfg_apitest64.exe"
+      "tap2sb"
     ],
     "rank": 4,
     "id": "GEM-957f"
@@ -154,8 +154,8 @@
     "evidence": "RAW LOGS: ImportError: No module named ipccli",
     "sensitivity": "Public",
     "tags": [
-      "Python 2.7.9",
-      "ipccli"
+      "ipccli",
+      "Python 2.7.9"
     ],
     "rank": 4,
     "id": "GEM-7e50"
@@ -178,8 +178,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "internal error",
-      "metadata file"
+      "metadata file",
+      "internal error"
     ],
     "rank": 4,
     "id": "GEM-6435"
@@ -190,8 +190,8 @@
     "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
     "sensitivity": "Public",
     "tags": [
-      "EDRAMIOT",
-      "dockable_content"
+      "dockable_content",
+      "EDRAMIOT"
     ],
     "rank": 4,
     "id": "GEM-510d"
@@ -202,8 +202,8 @@
     "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
       "EDRAM",
+      "VISA",
       "SkyLake_M0"
     ],
     "rank": 4,
@@ -215,8 +215,8 @@
     "evidence": "Path modified from `/uncore/edctop` to `/uncore/etrog`.",
     "sensitivity": "Public",
     "tags": [
-      "EDC",
-      "visa_custom_rs.xml"
+      "visa_custom_rs.xml",
+      "EDC"
     ],
     "rank": 4,
     "id": "GEM-6e23"
@@ -239,8 +239,8 @@
     "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
     "sensitivity": "Public",
     "tags": [
-      "PVT BXTOEM",
       "testing",
+      "PVT BXTOEM",
       "SV2K8122"
     ],
     "rank": 4,
@@ -264,8 +264,8 @@
     "evidence": "The latest nightly build was fetched from https://git-amr-1.devtools.intel.com/gerrit/ecdl_dbg-northpeak-sdk refs/changes/49/63649/2. The build script was run using C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -e and then C:\\npk_sdk\\scripts\\build-sdk.cmd -64 -r -b",
     "sensitivity": "Public",
     "tags": [
-      "configuration",
       "NPK SDK",
+      "configuration",
       "installation"
     ],
     "rank": 4,
@@ -277,8 +277,8 @@
     "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
     "sensitivity": "Public",
     "tags": [
-      "causality error",
-      "tool"
+      "tool",
+      "causality error"
     ],
     "rank": 4,
     "id": "GEM-8870"

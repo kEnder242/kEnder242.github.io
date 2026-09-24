@@ -42,8 +42,8 @@
     "evidence": "https://hsdes.intel.com/appstore/article/#/18020163210",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "Research"
+      "Research",
+      "TODO"
     ],
     "rank": 4,
     "id": "GEM-d98c"
@@ -251,8 +251,8 @@
     "evidence": "showsearch method output",
     "sensitivity": "Public",
     "tags": [
-      "register access",
-      "crdefeature2_bs"
+      "crdefeature2_bs",
+      "register access"
     ],
     "rank": 4,
     "id": "GEM-8136"
@@ -313,9 +313,9 @@
     "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
     "sensitivity": "Public",
     "tags": [
-      "PECI tests",
+      "MSR register access issues",
       "unexpected return codes",
-      "MSR register access issues"
+      "PECI tests"
     ],
     "rank": 4,
     "id": "GEM-d90f"

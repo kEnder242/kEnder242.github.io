@@ -92,8 +92,8 @@
     "evidence": "...-MIV report Weldon/Hooper/Staff...",
     "sensitivity": "Public",
     "tags": [
-      "MIV",
-      "report"
+      "report",
+      "MIV"
     ],
     "rank": 4,
     "id": "GEM-2efc"
@@ -104,8 +104,8 @@
     "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
     "sensitivity": "Public",
     "tags": [
-      "fuzzing",
-      "PECI"
+      "PECI",
+      "fuzzing"
     ],
     "rank": 4,
     "id": "GEM-3482"
@@ -128,8 +128,8 @@
     "evidence": "rdpciconfig, rdendpointconfig, mmio (crashdump, protection, uncore_crashdump), 360_sweep",
     "sensitivity": "Public",
     "tags": [
-      "peci",
-      "testing"
+      "testing",
+      "peci"
     ],
     "rank": 4,
     "id": "GEM-8cc4"
@@ -141,8 +141,8 @@
     "sensitivity": "Public",
     "tags": [
       "ptu",
-      "calibration",
-      "issue"
+      "issue",
+      "calibration"
     ],
     "rank": 4,
     "id": "GEM-aa48"
@@ -153,8 +153,8 @@
     "evidence": "https://intel.sharepoint.com/sites/archercitypat, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
     "sensitivity": "Public",
     "tags": [
-      "Archer City Platform",
-      "Research Link"
+      "Research Link",
+      "Archer City Platform"
     ],
     "rank": 4,
     "id": "GEM-7ef8"
@@ -165,8 +165,8 @@
     "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
     "sensitivity": "Public",
     "tags": [
-      "peci_flood.tdf",
-      "PECI Throughput"
+      "PECI Throughput",
+      "peci_flood.tdf"
     ],
     "rank": 4,
     "id": "GEM-4906"
@@ -177,8 +177,8 @@
     "evidence": "RAW LOGS mention peci_poison.tdf is used to catch unexpected failures and compare throughput cmd/sec with a baseline",
     "sensitivity": "Public",
     "tags": [
-      "PECI Command Rejection",
-      "peci_poison.tdf"
+      "peci_poison.tdf",
+      "PECI Command Rejection"
     ],
     "rank": 4,
     "id": "GEM-a220"
@@ -384,8 +384,8 @@
     "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
     "sensitivity": "Public",
     "tags": [
-      "OEM API",
-      "Redfish"
+      "Redfish",
+      "OEM API"
     ],
     "rank": 4,
     "id": "GEM-7ab0"
@@ -396,8 +396,8 @@
     "evidence": "Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared",
     "sensitivity": "Public",
     "tags": [
-      "Error Correction",
-      "IEH"
+      "IEH",
+      "Error Correction"
     ],
     "rank": 4,
     "id": "GEM-103a"

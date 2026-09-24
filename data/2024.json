@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS mention MSR write with uncertainty about IMH",
     "sensitivity": "Public",
     "tags": [
-      "TODO",
-      "Research"
+      "Research",
+      "TODO"
     ],
     "rank": 4,
     "id": "GEM-70a6"
@@ -41,8 +41,8 @@
     "evidence": "RAW LOGS mention peci_cmds and RdEndpointConfigPCILocal",
     "sensitivity": "Public",
     "tags": [
-      "BMC",
-      "MCTP"
+      "MCTP",
+      "BMC"
     ],
     "rank": 4,
     "id": "GEM-ce48"
@@ -54,8 +54,8 @@
     "sensitivity": "Public",
     "tags": [
       "i2cdetect",
-      "MCTP",
       "busctl",
+      "MCTP",
       "i2cget"
     ],
     "rank": 4,
@@ -218,8 +218,8 @@
     "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
     "sensitivity": "Public",
     "tags": [
-      "simulation",
-      "Oakstream"
+      "Oakstream",
+      "simulation"
     ],
     "rank": 4,
     "id": "GEM-e26d"
@@ -230,8 +230,8 @@
     "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
     "sensitivity": "Public",
     "tags": [
-      "BIOS",
-      "error"
+      "error",
+      "BIOS"
     ],
     "rank": 4,
     "id": "GEM-c240"

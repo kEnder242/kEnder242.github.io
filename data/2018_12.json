@@ -6,8 +6,8 @@
     "sensitivity": "Public",
     "tags": [
       "repository",
-      "clone",
-      "Git"
+      "Git",
+      "clone"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
     "sensitivity": "Public",
     "tags": [
-      "user configuration",
-      "Git"
+      "Git",
+      "user configuration"
     ],
     "rank": 4
   },
@@ -28,9 +28,9 @@
     "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
     "sensitivity": "Public",
     "tags": [
+      "Git",
       "hook",
-      "commit-msg",
-      "Git"
+      "commit-msg"
     ],
     "rank": 4
   }

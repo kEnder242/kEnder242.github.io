@@ -5,8 +5,8 @@
     "evidence": "rdpciconfig, rdendpointconfig, mmio (crashdump, protection, uncore_crashdump), 360_sweep",
     "sensitivity": "Public",
     "tags": [
-      "peci",
-      "testing"
+      "testing",
+      "peci"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "sensitivity": "Public",
     "tags": [
       "ptu",
-      "calibration",
-      "issue"
+      "issue",
+      "calibration"
     ],
     "rank": 4
   }

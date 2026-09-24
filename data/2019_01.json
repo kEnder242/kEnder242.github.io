@@ -17,9 +17,9 @@
     "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
     "sensitivity": "Public",
     "tags": [
-      "registry",
+      "docker",
       "aws-ecr-credential-helper",
-      "docker"
+      "registry"
     ],
     "rank": 4
   },
@@ -30,8 +30,8 @@
     "sensitivity": "Public",
     "tags": [
       "compose",
-      "docker",
-      "build"
+      "build",
+      "docker"
     ],
     "rank": 4
   }

@@ -16,8 +16,8 @@
     "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
     "sensitivity": "Public",
     "tags": [
-      "CLX_LBG_XDPA",
-      "IPC"
+      "IPC",
+      "CLX_LBG_XDPA"
     ],
     "rank": 4
   },
@@ -27,8 +27,8 @@
     "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
     "sensitivity": "Public",
     "tags": [
-      "OS log error messages",
-      "APEI/EINJ"
+      "APEI/EINJ",
+      "OS log error messages"
     ],
     "rank": 4
   }

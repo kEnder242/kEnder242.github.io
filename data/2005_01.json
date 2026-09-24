@@ -5,9 +5,9 @@
     "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
     "sensitivity": "Public",
     "tags": [
-      "EFS",
+      "upgrade",
       "BMC23",
-      "upgrade"
+      "EFS"
     ],
     "rank": 4
   },
@@ -17,9 +17,9 @@
     "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
     "sensitivity": "Public",
     "tags": [
-      "system_stability",
       "issue",
-      "data_integrity"
+      "data_integrity",
+      "system_stability"
     ],
     "rank": 4
   }
