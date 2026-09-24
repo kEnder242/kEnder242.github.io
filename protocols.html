@@ -5047,6 +5047,1149 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-062</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Fail-Fast & Explicit Failure Propagation Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[FEAT-608]</code> / <code>[LAB-110]</code> / <code>[BKM-062]</code><br />
+<strong>Colloquial Alias:</strong> "Green-Lie Prevention"<br />
+<strong>Domain:</strong> Operational Rigor, Lab Accountability, Telemetry Invariants, Fail-Fast Design Pattern<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>Every telemetry-emitting function MUST produce verifiable, non-zero, live-sourced output — or return an explicit <code>FAIL</code> with a descriptive error. Errors and failures must propagate up through call chains explicitly; they must never be swallowed, absorbed into a silent <code>except</code> block, or replaced with a hardcoded success stub.</p>
+<p><strong>The Fail-Fast Design Pattern Applied:</strong> Surface errors at the earliest possible point. Never recover silently to a plausible-looking success state. A system that lies green while broken is worse than one that fails loudly.</p>
+<p><strong>Colloquial name — "The Green Lie":</strong> A lab status or test step that reports exit code <code>0</code> or <code>ONLINE</code> while doing zero work (0 items processed, 0 tokens generated, 0 mutations certified, or silent exceptions caught and swallowed). Green status is strictly reserved for non-zero verifiable progress.</p>
+<h3>1b. JITC Hook Trigger Phrases (for ambient retrieval)</h3>
+<p>This BKM should be retrieved during coding moments involving:
+- Writing a <code>try/except</code> block in a telemetry or pipeline function
+- Adding a fallback return value in an error branch (e.g. <code>return {"status": "ok"}</code>)
+- Writing any function that emits <code>turns_synthesized</code>, <code>items_refined</code>, <code>status</code>, or health metrics
+- Adding a hardcoded dict as a return value on exception
+- Writing silent exception swallowing (<code>except Exception: pass</code>)
+- Writing health-check probes or nightly sweep stages
+- Adding <code>time.sleep()</code> near subprocess calls without explicit error propagation</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero-Work Exit Is A Fatal Defect:</strong> Any pipeline stage or daemon sweep that completes with exit code 0 but records 0 items, 0 tokens, or 0 steps when work was queued or expected MUST be classified as <code>FAILED</code> (RED).</li>
+<li><strong>Tri-State Quantifiable Accountability:</strong> All automated processes must be evaluated against explicit thresholds loaded from <code>HomeLabAI/config/lab_accountability_thresholds.json</code>:</li>
+<li><code>GREEN (PASS)</code>: Verifiable non-zero progress meeting or exceeding target metrics.</li>
+<li><code>AMBER (DEGRADED)</code>: Partial throughput or elevated latency within acceptable fallback margins.</li>
+<li><code>RED (CRITICAL)</code>: Silent passes, zero items processed, fatal crashes, unhandled timeouts, or persona mute errors.</li>
+<li><strong>The Green-Lie Sentry Mandate:</strong> If individual daemons (e.g., Foyer, vLLM, Deep Thought) report <code>ONLINE</code>, but synthetic morning round table probes or nightly sweeps fail, the dashboard (<code>status.html</code>) MUST display a prominent <code>DISCREPANCY ALERT</code> banner. Never allow green daemon indicators to mask broken conversational circuits.</li>
+<li><strong>Authoritative Nightly Digest:</strong> The 11-stage nightly sweep must emit a consolidated <code>daily_accountability_digest.json</code> and a formatted <code>[+] ACCOUNTABILITY DIGEST</code> entry in the interleaved system log, recording exact per-stage metrics, overall status, and fallback justifications.</li>
+<li><strong>Zero-Mock Policy for Live Validation (BKM-024):</strong> Synthetic morning probes and health checks must run live end-to-end HTTP/REST requests against running silicon engines (Foyer :8765, vLLM :8088, M5 Air :8000). Mocks are strictly forbidden for live certification.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+</table>
+<h4>4. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
+<ol>
+<li><strong>Inspection Gate, Not an Automatic Kill:</strong> The 5-minute watchdog ceiling is an <strong>Inspection Gate</strong>, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.</li>
+<li><strong>Active Progress Probe:</strong> At the 5-minute mark, the orchestrator must inspect the live session:</li>
+<li>Query <code>GET /session/{id}</code> or <code>GET /session/{id}/message</code> to inspect token generation and tool calls.</li>
+<li><strong>Progressing:</strong> If tokens are actively flowing and constructive work is progressing, extend the timer window.</li>
+<li><strong>Stalled:</strong> If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.</li>
+<li><strong>Mandatory Zombie Cleanup:</strong> When an attempt is halted, timed out, or interrupted, the harness (<code>delegate.py</code>) and orchestrator MUST issue an explicit <code>POST /session/{id}/abort</code> frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.</li>
+</ol>
+<h4>5. The Story Owner Tag &amp; Anti-Bypass Guard</h4>
+<ol>
+<li><strong>Mandatory Owner Tag in Sprint Stories:</strong> Every story defined in <code>SPRINT_PLAN_*.md</code> MUST specify an explicit <code>Assigned Owner:</code> tag:</li>
+<li><code>[SWARM:LOCAL]</code>: Story is assigned to local silicon execution via <code>delegate.py</code> with up to 3 diagnostic remediation rounds on local silicon.</li>
+<li><code>[SWARM:CLOUD]</code>: Story is assigned to cloud swarm burst via <code>delegate.py</code> directly, skipping local retries.</li>
+<li><code>[AGY:PRIMARY]</code>: Story is architectural, diagnostic, or governance work reserved for the primary orchestrator.</li>
+<li><strong>Anti-Bypass Invariant:</strong> When a story is tagged <code>[SWARM:*]</code>, the primary agent (AGY) is <strong>strictly forbidden from directly modifying the story's target codebase files</strong> without first executing delegation attempts via <code>delegate.py</code> (including all 3 local diagnostic rounds for <code>[SWARM:LOCAL]</code>).</li>
+<li><strong>Escalation Record Required:</strong> AGY direct code takeover (<code>[AGY:TAKEOVER]</code>) is only permissible after the assigned swarm tier (and its required diagnostic retries) has executed, failed, and logged an explicit diagnostic post-mortem in the sprint report. Direct coding on swarm-tagged stories without prior delegation attempts is a high-severity operational violation.</li>
+</ol>
+<h4>6. Sovereign Local Silicon Topology Invariant (KENDER -&gt; Air)</h4>
+<ol>
+<li><strong>The Sovereign Conductor &amp; Leaf Worker Pattern:</strong>
+   <code>[SWARM:LOCAL]</code> execution MUST strictly adhere to the canonical bicameral silicon topology:</li>
+<li><strong>Conductor (Root Dispatch):</strong> Node KENDER (Windows RTX 4090 Ollama: <code>qwen3-14b-16k:latest</code> / <code>Atlas</code>). Receives the sprint story, conducts the 4-stage cascade, and dispatches bounded leaf tasks.</li>
+<li><strong>Leaf Worker (Surgical Patching):</strong> Node Brain (macOS M5 Air MLX: <code>mlx-community--Qwen3.5-9B-4bit</code> / <code>Sisyphus-Junior</code> or <code>Daedalus</code>). Receives spoon-fed 4-anchor tasks from Atlas, applies atomic <code>clara-dna_safe_patch</code> edits, and is strictly forbidden from delegating further (<code>task: deny</code>).</li>
+<li><strong>Verifier (Execution &amp; Lint Runner):</strong> Node KENDER (Windows RTX 4090 / <code>Momus</code>). Executes verification commands and digests tracebacks back to Atlas.</li>
+<li><strong>Topology Deviation Invariant:</strong> Any inversion or deviation from this pattern (e.g., M5 Air attempting root orchestration, bypassing Node KENDER, or leaf workers spawning child subagents) constitutes an immediate operational failure. <code>delegate.py</code> and diagnostic monitors MUST enforce this check and fail immediately upon deviation.</li>
+</ol>
+<h4>7. Post-Sprint Adversarial Oracle Sweep Gate (BKM-061)</h4>
+<ol>
+<li><strong>Mandatory Post-Sprint Closeout Sweep:</strong> Before any sprint is marked <code>COMPLETED</code> or certified, the orchestrator MUST invoke the <strong>Dual Adversarial Oracle Sweep</strong> defined in <strong>[BKM-061]</strong>:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants.</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+<li><strong>Glaring Issue Remediation Gate:</strong> If oracles discover glaring deficiencies or hidden "Green Lies", the orchestrator MUST fix and certify all glaring issues before publishing the final Work Completion Report ([BKM-007]).</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-052</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-530]</code> / <code>[BKM-052]</code><br />
+<strong>Domain:</strong> External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Principle</h4>
+<p>When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts <strong>strictly as a headless execution sequencer</strong> for <code>delegate.py</code>.</p>
+<h4>2. The Invariant Rules</h4>
+<ol>
+<li><strong>No Direct Code Generation:</strong> The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.</li>
+<li><strong>No Human Docs:</strong> Treat sprint documents on disk as executable instruction sets.</li>
+<li><strong>Serialized Dispatch Only:</strong> Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until <code>delegate.py</code> exits.</li>
+<li><strong>Zero Self-Correction Loops:</strong> If <code>delegate.py</code> returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (<code>--local-only</code> $\rightarrow$ <code>--cloud-only</code> $\rightarrow$ surface blocker to user).</li>
+</ol>
+<h4>3. The 3-Step Driver Execution Loop</h4>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│ Step 1: Ingest Sprint Document Pointer                     │
+│ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────┐
+│ Step 2: Execute Headless Delegation via Bash               │
+│ Invoke delegate.py for Story N:                            │
+│   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
+│     --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot;             │
+│     --reference &lt;sprint_plan_path&gt;                         │
+│     --target &lt;target_file&gt; --mode execute                  │
+│     --details &quot;Execute Story N in &lt;sprint_plan_path&gt;...&quot;   │
+│     --local-only                                           │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                ┌─────────────┴─────────────┐
+                ▼                           ▼
+      [Exit Code 0 (PASS)]        [Exit Code != 0 (FAIL)]
+                │                           │
+                ▼                           ▼
+┌───────────────────────────┐   ┌───────────────────────────┐
+│ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
+│ • git add &lt;target_files&gt;  │   │ Retry once with           │
+│ • git commit -m &quot;...&quot;     │   │ `--cloud-only`. If fail,  │
+│ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
+└───────────────────────────┘   └───────────────────────────┘
+</code></pre>
+<h4>4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)</h4>
+<p>When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:</p>
+<pre><code class="language-text">You are the Federated Lab Delegation Driver (BKM-052).
+Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
+DO NOT write code or generate file diffs yourself.
+
+For each story:
+1. Run:
+   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot; --reference Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md --target &lt;target_path&gt; --mode execute --details &quot;Execute Story &lt;N&gt; in Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md (Section: Story &lt;N&gt;). Follow the 4-anchor specification in that section to modify target file using clara-dna_safe_patch. Verify with pytest.&quot; --local-only
+2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
+3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-053</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Remote Secondary Git Mirror & Cloud Redundancy Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+<strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
+<strong>Status:</strong> DESIGN / BACKLOG  </p>
+<h3>1. Operational Mandate</h3>
+<p>To protect the 18-year engineering archive, systemd operational ledgers, and agentic codebases against single-platform outages, credential suspensions, or cloud service revocations, all federated lab repositories (<code>Dev_Lab</code>, <code>Portfolio_Dev</code>, <code>HomeLabAI</code>) MUST maintain dual-push secondary Git transport remotes alongside primary origins (GitLab/GitHub).</p>
+<h3>2. Implementation Mechanism</h3>
+<p>Configure dual-push Git remote targets via Git configuration:</p>
+<pre><code class="language-bash">git remote set-url --add --push origin &lt;primary-origin-url&gt;
+git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
+</code></pre>
+<p>When manual syncs or authorized replication scripts execute <code>git push origin &lt;branch&gt;</code>, Git automatically distributes commits synchronously to both hosting endpoints without introducing manual workflow steps.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-054</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero In-Process PyTorch on Orchestrator Host (Precomputed & Offloaded Embeddings Law)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-567]</code> / <code>[BKM-054]</code><br />
+<strong>Domain:</strong> Memory Guard, System Stability &amp; Zero-Torch Orchestration Architecture<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>The orchestrator host (<code>z87-Linux</code>) has a strict 16GB physical RAM ceiling shared with running browser sessions, Xorg, VS Code / Antigravity CLI, system daemons, and background monitors. Loading PyTorch (<code>import torch</code>), CUDA libraries, or <code>SentenceTransformer</code> directly inside the orchestrator's Python process consumes 2.5GB to 4.5GB of unpageable RSS, rapidly triggering Linux OOM killer reboots or silent Xorg desktop session resets during active sprints.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero In-Process PyTorch:</strong> All orchestrator Python scripts (including fast test suites, CLI tools, and background sync workers) are STRICTLY FORBIDDEN from importing <code>torch</code>, <code>torchvision</code>, or <code>sentence_transformers</code> in-process on <code>z87-Linux</code>.</li>
+<li><strong>Dual Path for Embeddings:</strong></li>
+<li><strong>Path A (Remote Offload):</strong> Query silicon endpoints (e.g. M5 Air via REST on port 8000 or local vLLM on port 8088) to generate dense embeddings.</li>
+<li><strong>Path B (Precomputed Embeddings):</strong> Use pre-generated vector caches (<code>.npy</code> or <code>.json</code> fixtures) stored in the repo or ChromaDB collections for similarity lookups and dedup testing.</li>
+<li><strong>AST Lint Guard:</strong> Automated linters and pre-commit hooks (<code>FEAT-567</code>) must actively audit orchestrator code to reject any PR or commit introducing direct <code>torch</code> imports.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-055</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Decoupled Artifact Law (Cache-First ASTs & Independent Compilation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-581]</code> / <code>[FEAT-582]</code> / <code>[FEAT-588]</code> / <code>[BKM-055]</code><br />
+<strong>Domain:</strong> Document Architecture, AST Provenance &amp; Deterministic Synthesis<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Runtime execution (such as vector databases, embeddings, and model daemons) is volatile, latency-prone, and ephemeral. Artifacts of record (technical papers, engineering resumes, architectural specs) must remain decoupled, immutable, and self-contained. An interactive document editor or compiler must never stall on network requests or depend on live database daemons to hydrate its view or generate static outputs.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Tri-Phase Document Lifecycle (Discover $\rightarrow$ Curate $\rightarrow$ Generate):</strong></li>
+<li><strong>Phase 1: Discover (On-Demand Vector Query):</strong> ChromaDB lookups across DNA collections (<code>PHL</code>, <code>WIS</code>, <code>FEAT</code>, <code>DISC</code>, <code>paper_dna_&lt;slug&gt;</code>) occur strictly upon explicit user trigger (e.g. document import or objective paste). Discovered matches are deposited directly into the document AST's <code>_candidate_pool[]</code>.</li>
+<li><strong>Phase 2: Curate (Interactive Waterline):</strong> The author or combinatorial optimizer promotes candidates "Above Water" into the tier's <code>bone_collection[]</code> (Root/Section) or <code>citations[]</code> (Paragraph/Bullet). Changes are saved directly into the paper's JSON AST.</li>
+<li><strong>Phase 3: Generate (Deterministic AST Compilation):</strong> Document compilers (<code>build_writer.py</code>, LaTeX engines) assemble outputs strictly from the cached AST <code>bone_collection[]</code> and verbatim text nodes with zero runtime database connectivity.</li>
+<li><strong>Multi-Tier Hierarchical AST Caching:</strong></li>
+<li>Every level of the document AST (Paper Root, Section, Paragraph/Bullet) must maintain its own dedicated <code>bone_collection[]</code> (or <code>citations[]</code>) and <code>_candidate_pool[]</code> arrays.</li>
+<li>Opening, navigating, or collapsing sections in <code>writer.html</code> must operate client-side with 0ms latency without making REST calls to ChromaDB.</li>
+<li><strong>Anti-Embellishment Functional Decoupling:</strong></li>
+<li>Machine intelligence applied to technical resumes or publications is strictly constrained to <strong>combinatorial judgment</strong> (relevance scoring, auto-pruning recommendations, and evidence chip attachment).</li>
+<li>Generative hallucination or prose embellishment is strictly forbidden; all synthesized outputs must assemble verbatim human bullet points and tangible repository citations.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-057</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Config-to-Daemon Freshness Synchronization Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-553]</code> / <code>[BKM-057]</code><br />
+<strong>Domain:</strong> Infrastructure, Service Daemons &amp; Delegation Pre-Flight<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Editing configuration files on disk (<code>opencode.json</code>, <code>infrastructure.json</code>, <code>oh-my-openagent.json</code>) does not alter the in-memory state of running background services. Running workloads against a stale background daemon silently reproduces old bugs, ignores updated context boundaries, and wastes tokens on dead execution paths.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Timestamp Comparison Before Dispatch:</strong> Before executing swarm delegations, the launcher (<code>delegate.py</code>) must inspect the running process start time via systemd (<code>/proc/&lt;pid&gt;</code> start time) and compare it against the latest <code>os.path.getmtime</code> of all active configuration files.</li>
+<li><strong>Automated Zero-Downtime Hot Restart:</strong> If any configuration file is newer than the service start time, <code>delegate.py</code> must automatically trigger a clean service restart (<code>systemctl --user restart opencode-core.service</code>), verify port health, and log <code>[STALE_SERVICE_SYNC]</code> before dispatching.</li>
+<li><strong>No Blind Retries on Unrefreshed Daemons:</strong> Never re-attempt failed delegations after config edits without confirming daemon recreation.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-058</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Communication & User-First Acknowledgment Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-058]</code> / <code>[AGENTS.md Law 6]</code><br />
+<strong>Domain:</strong> Agent Human-Interaction, Operational Transparency<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Autonomous agent speed must never come at the expense of operator transparency. When an operator asks a question, raises a concern, or points out a system discrepancy, executing silent automated fixes behind the scenes creates confusion and prevents the operator from validating their insight.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Acknowledge in Text First:</strong> Always answer, validate, and explain the user's specific observation in the visible text response <em>before</em> executing code fixes or triggering background state transitions.</li>
+<li><strong>Explicit Attribution:</strong> Clearly state the root cause and confirm the validity of the user's insight so the human operator knows their feedback made a concrete difference.</li>
+<li><strong>No Silent Mutations:</strong> Background modifications must be explicitly summarized with actionable rationale.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-060</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Federated DNA Taxonomy & Horizontal Re-Bucketing Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-582]</code> / <code>[FEAT-585]</code> / <code>[BKM-060]</code><br />
+<strong>Domain:</strong> Memory Architecture, DNA Curation, JITC Vector Grounding<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Federated Lab memory is categorized into distinct, peer-level <strong>DNA Buckets</strong> that answer specific cognitive queries. Domains are equal horizontal peers, not a hierarchical ladder. Memory items that drift or are discovered in the wrong container must be horizontally migrated (re-bucketed) to preserve semantic retrieval precision across CLaRaDB port 8001.</p>
+<h3>2. The Universal Taxonomy Matrix (How vs. Why vs. What vs. When)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bucket</th>
+<th style="text-align: left;">Prefix</th>
+<th style="text-align: left;">Cognitive Purpose</th>
+<th style="text-align: left;">Primary Question</th>
+<th style="text-align: left;">Source of Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Philosophy</strong></td>
+<td style="text-align: left;"><code>PHL-xxx</code></td>
+<td style="text-align: left;">Conceptual Worldviews &amp; Invariant Epistemology</td>
+<td style="text-align: left;"><strong>WHY (First Principle)</strong></td>
+<td style="text-align: left;"><code>philosophy_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wisdom</strong></td>
+<td style="text-align: left;"><code>WIS-xxx</code></td>
+<td style="text-align: left;">Practical Lessons, War Stories &amp; Failure Scars</td>
+<td style="text-align: left;"><strong>WHY (Empirical)</strong></td>
+<td style="text-align: left;"><code>stories.html</code> $\rightarrow$ <code>wisdom_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Protocols</strong></td>
+<td style="text-align: left;"><code>BKM-xxx</code></td>
+<td style="text-align: left;">Prescriptive Rules &amp; Actionable Directives</td>
+<td style="text-align: left;"><strong>HOW (Mandate)</strong></td>
+<td style="text-align: left;"><code>Protocols.md</code> $\rightarrow$ <code>behavioral_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Features</strong></td>
+<td style="text-align: left;"><code>FEAT-xxx</code></td>
+<td style="text-align: left;">Registered Capabilities &amp; Architectural Specs</td>
+<td style="text-align: left;"><strong>WHAT (Mechanics)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vibes</strong></td>
+<td style="text-align: left;"><code>VIBE-xxx</code></td>
+<td style="text-align: left;">Behavioral Persona &amp; Conversational Tonality</td>
+<td style="text-align: left;"><strong>WHO (Tone)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Discoveries</strong></td>
+<td style="text-align: left;"><code>DISC-xxx</code></td>
+<td style="text-align: left;">Distillation Insights &amp; Subconscious Epiphanies</td>
+<td style="text-align: left;"><strong>WHAT (Insight)</strong></td>
+<td style="text-align: left;"><code>discovery</code> collection $\rightarrow$ <code>DISC</code> ledger</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sprint DNA</strong></td>
+<td style="text-align: left;"><code>SPR-xxx</code></td>
+<td style="text-align: left;">Active Sprint Plans, Story Cards &amp; Decoupled ASTs</td>
+<td style="text-align: left;"><strong>WHEN (Active)</strong></td>
+<td style="text-align: left;"><code>SPRINT_PLAN_*.md</code> $\rightarrow$ <code>sprint_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reverse DNA</strong></td>
+<td style="text-align: left;"><code>RDNA-xxx</code></td>
+<td style="text-align: left;">Pre-Processed Question Space &amp; HyDE Bypass</td>
+<td style="text-align: left;"><strong>WHEN / ASK</strong></td>
+<td style="text-align: left;"><code>rdna_questions.json</code> $\rightarrow$ <code>rdna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Artifacts</strong></td>
+<td style="text-align: left;"><code>ART-xxx</code></td>
+<td style="text-align: left;">External Google Drive / Doc Links &amp; Assets</td>
+<td style="text-align: left;"><strong>WHERE (Asset)</strong></td>
+<td style="text-align: left;"><code>artifact_vault</code> collection</td>
+</tr>
+</tbody>
+</table>
+<h3>3. The Invariant Rules</h3>
+<ol>
+<li><strong>Separation of Bucket vs. Topic:</strong> Never confuse the <strong>DNA Bucket</strong> (e.g. <code>BKM</code>) with the <strong>Subject Topic Tag</strong> (e.g. <code>#systems_architecture</code>, <code>#security</code>).</li>
+<li><strong>Horizontal Re-Bucketing:</strong> If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional <code>explicit_links</code> preserved.</li>
+<li><strong>JITC Retrieval Law:</strong> Agents must query specific taxonomy buckets on-demand via <code>get_protocol(bkm_id="BKM-xxx")</code> or <code>query_dna(collection="...")</code> rather than loading global taxonomy tables into primary agent prompt context.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-061</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Tier Swarm Audit & Adversarial Oracle Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-477]</code> / <code>[FEAT-582]</code> / <code>[BKM-061]</code><br />
+<strong>Domain:</strong> Codebase Health, Verification Rigor, Pre/Mid/Post-Sprint Oracle Audits<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>A single primary agent or developer working across a large codebase suffers from context dilution, fatigue, and author bias—frequently missing subtle edge-case traps, stale lockouts, hidden zero-work escapes ("Green Lies"), and unhandled error returns. The <strong>Adversarial Oracle</strong> is an independent, highly critical reasoning subagent tasked specifically with finding flaws, side effects, and violations of invariants before changes are certified.</p>
+<h3>2. When to Deploy Oracles (The 3 Oracle Horizons)</h3>
+<ol>
+<li><strong>Pre-Sprint Architecture Oracle:</strong> Invoked during Design Studio ([BKM-005]) to audit proposed sprint plans, schema designs, REST endpoints, and mathematical bounds before code is written.</li>
+<li><strong>Mid-Flight Sanity Oracle:</strong> Invoked after complex refactors or multi-adapter changes to verify memory safety, thread safety, and interface compatibility.</li>
+<li><strong>Post-Sprint Adversarial Sweep ([BKM-049]):</strong> Mandatory closeout audit executed across the full Git diff. The sweep deploys specialized oracles to rigorously probe:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants ([BKM-062]).</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+</ol>
+<h3>3. Oracle Prompting &amp; Anti-Sycophancy Best Practices</h3>
+<ul>
+<li><strong>Explicit Adversarial Mandate:</strong> Never ask an oracle "Does this look good?" or "Is this ready?" Instead, explicitly instruct the oracle: <em>"Your goal is to uncover hidden flaws, failure modes, race conditions, and invariant violations. Assume there are bugs."</em></li>
+<li><strong>Specialized Decoupled Roles:</strong> Spawn discrete oracles with narrow, non-overlapping concerns (e.g. Invariants vs. Blast Radius vs. Failure Modes).</li>
+<li><strong>Model Tiering:</strong> Always select deep reasoning / <code>pro</code> model tiers for Oracles so they can explore wide dependency trees and long context reasoning.</li>
+<li><strong>The Glaring Issues Output Contract:</strong> Require Oracles to categorize findings into <strong>Glaring Issues</strong> (must fix before sprint signoff) vs. <strong>Latent / Backlog Items</strong>.</li>
+</ul>
+<h3>4. The 4-Tier Swarm Audit Anatomy</h3>
+<ol>
+<li><strong>Tier 1 — Parallel Specialized Swarm (4-Way Subagent Dispatches):</strong></li>
+<li><em>Pipeline &amp; Daemon Auditor:</em> Audits background jobs, systemd units, execution order, and stale lockout flags (<code>nightly_forge.py</code>, <code>nightly_lora_training.py</code>).</li>
+<li><em>Backend &amp; Router Auditor:</em> Audits REST endpoints, database atomicity, ID allocation counters, and disk vs. DB serialization (<code>router.py</code>, <code>draft_decomposer.py</code>).</li>
+<li><em>Frontend &amp; UX Flow Auditor:</em> Audits UI event reactivity, DOM pills, client-side data binding, and build script linkages (<code>dna_forge_build.py</code>, <code>writer.html</code>).</li>
+<li><em>Schema &amp; Invariant Auditor:</em> Audits JSON data completeness across legacy and newly added entries, git pre-commit hooks, and vector DB sync idempotency (<code>*.json</code>, <code>.git/hooks/pre-commit</code>).</li>
+<li><strong>Tier 2 — Synthesized Deficiency Matrix:</strong></li>
+<li>Aggregate all subagent findings into a ranked deficiency matrix (<code>CRITICAL_BREAKAGES</code>, <code>ID_COLLISIONS</code>, <code>STALE_LOCKOUTS</code>, <code>ORPHAN_CODE</code>, <code>UX_STALE_STATES</code>).</li>
+<li><strong>Tier 3 — Dual Adversarial Oracle Review:</strong></li>
+<li><em>Architecture &amp; Invariants Oracle:</em> Evaluates mathematical bounds, vector thresholds (e.g. HyDE bypass cosine distance), schema invariants, and graph link integrity.</li>
+<li><em>Side Effects &amp; Blast Radius Oracle:</em> Evaluates operational collisions (e.g. VRAM concurrency, process isolation), backwards compatibility shims, and deprecation blast radii.</li>
+<li><strong>Tier 4 — Live Invariant Certification (BKM-024):</strong></li>
+<li>Execute deterministic roundtrip unit tests (<code>test_dna_roundtrip_consistency.py</code>).</li>
+<li>Verify all active daemons match local Git HEAD.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-062</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Fail-Fast & Explicit Failure Propagation Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[FEAT-608]</code> / <code>[LAB-110]</code> / <code>[BKM-062]</code><br />
+<strong>Colloquial Alias:</strong> "Green-Lie Prevention"<br />
+<strong>Domain:</strong> Operational Rigor, Lab Accountability, Telemetry Invariants, Fail-Fast Design Pattern<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>Every telemetry-emitting function MUST produce verifiable, non-zero, live-sourced output — or return an explicit <code>FAIL</code> with a descriptive error. Errors and failures must propagate up through call chains explicitly; they must never be swallowed, absorbed into a silent <code>except</code> block, or replaced with a hardcoded success stub.</p>
+<p><strong>The Fail-Fast Design Pattern Applied:</strong> Surface errors at the earliest possible point. Never recover silently to a plausible-looking success state. A system that lies green while broken is worse than one that fails loudly.</p>
+<p><strong>Colloquial name — "The Green Lie":</strong> A lab status or test step that reports exit code <code>0</code> or <code>ONLINE</code> while doing zero work (0 items processed, 0 tokens generated, 0 mutations certified, or silent exceptions caught and swallowed). Green status is strictly reserved for non-zero verifiable progress.</p>
+<h3>1b. JITC Hook Trigger Phrases (for ambient retrieval)</h3>
+<p>This BKM should be retrieved during coding moments involving:
+- Writing a <code>try/except</code> block in a telemetry or pipeline function
+- Adding a fallback return value in an error branch (e.g. <code>return {"status": "ok"}</code>)
+- Writing any function that emits <code>turns_synthesized</code>, <code>items_refined</code>, <code>status</code>, or health metrics
+- Adding a hardcoded dict as a return value on exception
+- Writing silent exception swallowing (<code>except Exception: pass</code>)
+- Writing health-check probes or nightly sweep stages
+- Adding <code>time.sleep()</code> near subprocess calls without explicit error propagation</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero-Work Exit Is A Fatal Defect:</strong> Any pipeline stage or daemon sweep that completes with exit code 0 but records 0 items, 0 tokens, or 0 steps when work was queued or expected MUST be classified as <code>FAILED</code> (RED).</li>
+<li><strong>Tri-State Quantifiable Accountability:</strong> All automated processes must be evaluated against explicit thresholds loaded from <code>HomeLabAI/config/lab_accountability_thresholds.json</code>:</li>
+<li><code>GREEN (PASS)</code>: Verifiable non-zero progress meeting or exceeding target metrics.</li>
+<li><code>AMBER (DEGRADED)</code>: Partial throughput or elevated latency within acceptable fallback margins.</li>
+<li><code>RED (CRITICAL)</code>: Silent passes, zero items processed, fatal crashes, unhandled timeouts, or persona mute errors.</li>
+<li><strong>The Green-Lie Sentry Mandate:</strong> If individual daemons (e.g., Foyer, vLLM, Deep Thought) report <code>ONLINE</code>, but synthetic morning round table probes or nightly sweeps fail, the dashboard (<code>status.html</code>) MUST display a prominent <code>DISCREPANCY ALERT</code> banner. Never allow green daemon indicators to mask broken conversational circuits.</li>
+<li><strong>Authoritative Nightly Digest:</strong> The 11-stage nightly sweep must emit a consolidated <code>daily_accountability_digest.json</code> and a formatted <code>[+] ACCOUNTABILITY DIGEST</code> entry in the interleaved system log, recording exact per-stage metrics, overall status, and fallback justifications.</li>
+<li><strong>Zero-Mock Policy for Live Validation (BKM-024):</strong> Synthetic morning probes and health checks must run live end-to-end HTTP/REST requests against running silicon engines (Foyer :8765, vLLM :8088, M5 Air :8000). Mocks are strictly forbidden for live certification.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+</table>
+<h4>4. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
+<ol>
+<li><strong>Inspection Gate, Not an Automatic Kill:</strong> The 5-minute watchdog ceiling is an <strong>Inspection Gate</strong>, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.</li>
+<li><strong>Active Progress Probe:</strong> At the 5-minute mark, the orchestrator must inspect the live session:</li>
+<li>Query <code>GET /session/{id}</code> or <code>GET /session/{id}/message</code> to inspect token generation and tool calls.</li>
+<li><strong>Progressing:</strong> If tokens are actively flowing and constructive work is progressing, extend the timer window.</li>
+<li><strong>Stalled:</strong> If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.</li>
+<li><strong>Mandatory Zombie Cleanup:</strong> When an attempt is halted, timed out, or interrupted, the harness (<code>delegate.py</code>) and orchestrator MUST issue an explicit <code>POST /session/{id}/abort</code> frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.</li>
+</ol>
+<h4>5. The Story Owner Tag &amp; Anti-Bypass Guard</h4>
+<ol>
+<li><strong>Mandatory Owner Tag in Sprint Stories:</strong> Every story defined in <code>SPRINT_PLAN_*.md</code> MUST specify an explicit <code>Assigned Owner:</code> tag:</li>
+<li><code>[SWARM:LOCAL]</code>: Story is assigned to local silicon execution via <code>delegate.py</code> with up to 3 diagnostic remediation rounds on local silicon.</li>
+<li><code>[SWARM:CLOUD]</code>: Story is assigned to cloud swarm burst via <code>delegate.py</code> directly, skipping local retries.</li>
+<li><code>[AGY:PRIMARY]</code>: Story is architectural, diagnostic, or governance work reserved for the primary orchestrator.</li>
+<li><strong>Anti-Bypass Invariant:</strong> When a story is tagged <code>[SWARM:*]</code>, the primary agent (AGY) is <strong>strictly forbidden from directly modifying the story's target codebase files</strong> without first executing delegation attempts via <code>delegate.py</code> (including all 3 local diagnostic rounds for <code>[SWARM:LOCAL]</code>).</li>
+<li><strong>Escalation Record Required:</strong> AGY direct code takeover (<code>[AGY:TAKEOVER]</code>) is only permissible after the assigned swarm tier (and its required diagnostic retries) has executed, failed, and logged an explicit diagnostic post-mortem in the sprint report. Direct coding on swarm-tagged stories without prior delegation attempts is a high-severity operational violation.</li>
+</ol>
+<h4>6. Sovereign Local Silicon Topology Invariant (KENDER -&gt; Air)</h4>
+<ol>
+<li><strong>The Sovereign Conductor &amp; Leaf Worker Pattern:</strong>
+   <code>[SWARM:LOCAL]</code> execution MUST strictly adhere to the canonical bicameral silicon topology:</li>
+<li><strong>Conductor (Root Dispatch):</strong> Node KENDER (Windows RTX 4090 Ollama: <code>qwen3-14b-16k:latest</code> / <code>Atlas</code>). Receives the sprint story, conducts the 4-stage cascade, and dispatches bounded leaf tasks.</li>
+<li><strong>Leaf Worker (Surgical Patching):</strong> Node Brain (macOS M5 Air MLX: <code>mlx-community--Qwen3.5-9B-4bit</code> / <code>Sisyphus-Junior</code> or <code>Daedalus</code>). Receives spoon-fed 4-anchor tasks from Atlas, applies atomic <code>clara-dna_safe_patch</code> edits, and is strictly forbidden from delegating further (<code>task: deny</code>).</li>
+<li><strong>Verifier (Execution &amp; Lint Runner):</strong> Node KENDER (Windows RTX 4090 / <code>Momus</code>). Executes verification commands and digests tracebacks back to Atlas.</li>
+<li><strong>Topology Deviation Invariant:</strong> Any inversion or deviation from this pattern (e.g., M5 Air attempting root orchestration, bypassing Node KENDER, or leaf workers spawning child subagents) constitutes an immediate operational failure. <code>delegate.py</code> and diagnostic monitors MUST enforce this check and fail immediately upon deviation.</li>
+</ol>
+<h4>7. Post-Sprint Adversarial Oracle Sweep Gate (BKM-061)</h4>
+<ol>
+<li><strong>Mandatory Post-Sprint Closeout Sweep:</strong> Before any sprint is marked <code>COMPLETED</code> or certified, the orchestrator MUST invoke the <strong>Dual Adversarial Oracle Sweep</strong> defined in <strong>[BKM-061]</strong>:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants.</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+<li><strong>Glaring Issue Remediation Gate:</strong> If oracles discover glaring deficiencies or hidden "Green Lies", the orchestrator MUST fix and certify all glaring issues before publishing the final Work Completion Report ([BKM-007]).</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-052</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-530]</code> / <code>[BKM-052]</code><br />
+<strong>Domain:</strong> External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Principle</h4>
+<p>When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts <strong>strictly as a headless execution sequencer</strong> for <code>delegate.py</code>.</p>
+<h4>2. The Invariant Rules</h4>
+<ol>
+<li><strong>No Direct Code Generation:</strong> The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.</li>
+<li><strong>No Human Docs:</strong> Treat sprint documents on disk as executable instruction sets.</li>
+<li><strong>Serialized Dispatch Only:</strong> Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until <code>delegate.py</code> exits.</li>
+<li><strong>Zero Self-Correction Loops:</strong> If <code>delegate.py</code> returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (<code>--local-only</code> $\rightarrow$ <code>--cloud-only</code> $\rightarrow$ surface blocker to user).</li>
+</ol>
+<h4>3. The 3-Step Driver Execution Loop</h4>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│ Step 1: Ingest Sprint Document Pointer                     │
+│ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────┐
+│ Step 2: Execute Headless Delegation via Bash               │
+│ Invoke delegate.py for Story N:                            │
+│   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
+│     --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot;             │
+│     --reference &lt;sprint_plan_path&gt;                         │
+│     --target &lt;target_file&gt; --mode execute                  │
+│     --details &quot;Execute Story N in &lt;sprint_plan_path&gt;...&quot;   │
+│     --local-only                                           │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                ┌─────────────┴─────────────┐
+                ▼                           ▼
+      [Exit Code 0 (PASS)]        [Exit Code != 0 (FAIL)]
+                │                           │
+                ▼                           ▼
+┌───────────────────────────┐   ┌───────────────────────────┐
+│ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
+│ • git add &lt;target_files&gt;  │   │ Retry once with           │
+│ • git commit -m &quot;...&quot;     │   │ `--cloud-only`. If fail,  │
+│ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
+└───────────────────────────┘   └───────────────────────────┘
+</code></pre>
+<h4>4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)</h4>
+<p>When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:</p>
+<pre><code class="language-text">You are the Federated Lab Delegation Driver (BKM-052).
+Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
+DO NOT write code or generate file diffs yourself.
+
+For each story:
+1. Run:
+   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot; --reference Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md --target &lt;target_path&gt; --mode execute --details &quot;Execute Story &lt;N&gt; in Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md (Section: Story &lt;N&gt;). Follow the 4-anchor specification in that section to modify target file using clara-dna_safe_patch. Verify with pytest.&quot; --local-only
+2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
+3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-053</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Remote Secondary Git Mirror & Cloud Redundancy Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+<strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
+<strong>Status:</strong> DESIGN / BACKLOG  </p>
+<h3>1. Operational Mandate</h3>
+<p>To protect the 18-year engineering archive, systemd operational ledgers, and agentic codebases against single-platform outages, credential suspensions, or cloud service revocations, all federated lab repositories (<code>Dev_Lab</code>, <code>Portfolio_Dev</code>, <code>HomeLabAI</code>) MUST maintain dual-push secondary Git transport remotes alongside primary origins (GitLab/GitHub).</p>
+<h3>2. Implementation Mechanism</h3>
+<p>Configure dual-push Git remote targets via Git configuration:</p>
+<pre><code class="language-bash">git remote set-url --add --push origin &lt;primary-origin-url&gt;
+git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
+</code></pre>
+<p>When manual syncs or authorized replication scripts execute <code>git push origin &lt;branch&gt;</code>, Git automatically distributes commits synchronously to both hosting endpoints without introducing manual workflow steps.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-054</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero In-Process PyTorch on Orchestrator Host (Precomputed & Offloaded Embeddings Law)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-567]</code> / <code>[BKM-054]</code><br />
+<strong>Domain:</strong> Memory Guard, System Stability &amp; Zero-Torch Orchestration Architecture<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>The orchestrator host (<code>z87-Linux</code>) has a strict 16GB physical RAM ceiling shared with running browser sessions, Xorg, VS Code / Antigravity CLI, system daemons, and background monitors. Loading PyTorch (<code>import torch</code>), CUDA libraries, or <code>SentenceTransformer</code> directly inside the orchestrator's Python process consumes 2.5GB to 4.5GB of unpageable RSS, rapidly triggering Linux OOM killer reboots or silent Xorg desktop session resets during active sprints.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero In-Process PyTorch:</strong> All orchestrator Python scripts (including fast test suites, CLI tools, and background sync workers) are STRICTLY FORBIDDEN from importing <code>torch</code>, <code>torchvision</code>, or <code>sentence_transformers</code> in-process on <code>z87-Linux</code>.</li>
+<li><strong>Dual Path for Embeddings:</strong></li>
+<li><strong>Path A (Remote Offload):</strong> Query silicon endpoints (e.g. M5 Air via REST on port 8000 or local vLLM on port 8088) to generate dense embeddings.</li>
+<li><strong>Path B (Precomputed Embeddings):</strong> Use pre-generated vector caches (<code>.npy</code> or <code>.json</code> fixtures) stored in the repo or ChromaDB collections for similarity lookups and dedup testing.</li>
+<li><strong>AST Lint Guard:</strong> Automated linters and pre-commit hooks (<code>FEAT-567</code>) must actively audit orchestrator code to reject any PR or commit introducing direct <code>torch</code> imports.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-055</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Decoupled Artifact Law (Cache-First ASTs & Independent Compilation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-581]</code> / <code>[FEAT-582]</code> / <code>[FEAT-588]</code> / <code>[BKM-055]</code><br />
+<strong>Domain:</strong> Document Architecture, AST Provenance &amp; Deterministic Synthesis<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Runtime execution (such as vector databases, embeddings, and model daemons) is volatile, latency-prone, and ephemeral. Artifacts of record (technical papers, engineering resumes, architectural specs) must remain decoupled, immutable, and self-contained. An interactive document editor or compiler must never stall on network requests or depend on live database daemons to hydrate its view or generate static outputs.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Tri-Phase Document Lifecycle (Discover $\rightarrow$ Curate $\rightarrow$ Generate):</strong></li>
+<li><strong>Phase 1: Discover (On-Demand Vector Query):</strong> ChromaDB lookups across DNA collections (<code>PHL</code>, <code>WIS</code>, <code>FEAT</code>, <code>DISC</code>, <code>paper_dna_&lt;slug&gt;</code>) occur strictly upon explicit user trigger (e.g. document import or objective paste). Discovered matches are deposited directly into the document AST's <code>_candidate_pool[]</code>.</li>
+<li><strong>Phase 2: Curate (Interactive Waterline):</strong> The author or combinatorial optimizer promotes candidates "Above Water" into the tier's <code>bone_collection[]</code> (Root/Section) or <code>citations[]</code> (Paragraph/Bullet). Changes are saved directly into the paper's JSON AST.</li>
+<li><strong>Phase 3: Generate (Deterministic AST Compilation):</strong> Document compilers (<code>build_writer.py</code>, LaTeX engines) assemble outputs strictly from the cached AST <code>bone_collection[]</code> and verbatim text nodes with zero runtime database connectivity.</li>
+<li><strong>Multi-Tier Hierarchical AST Caching:</strong></li>
+<li>Every level of the document AST (Paper Root, Section, Paragraph/Bullet) must maintain its own dedicated <code>bone_collection[]</code> (or <code>citations[]</code>) and <code>_candidate_pool[]</code> arrays.</li>
+<li>Opening, navigating, or collapsing sections in <code>writer.html</code> must operate client-side with 0ms latency without making REST calls to ChromaDB.</li>
+<li><strong>Anti-Embellishment Functional Decoupling:</strong></li>
+<li>Machine intelligence applied to technical resumes or publications is strictly constrained to <strong>combinatorial judgment</strong> (relevance scoring, auto-pruning recommendations, and evidence chip attachment).</li>
+<li>Generative hallucination or prose embellishment is strictly forbidden; all synthesized outputs must assemble verbatim human bullet points and tangible repository citations.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-057</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Config-to-Daemon Freshness Synchronization Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-553]</code> / <code>[BKM-057]</code><br />
+<strong>Domain:</strong> Infrastructure, Service Daemons &amp; Delegation Pre-Flight<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Editing configuration files on disk (<code>opencode.json</code>, <code>infrastructure.json</code>, <code>oh-my-openagent.json</code>) does not alter the in-memory state of running background services. Running workloads against a stale background daemon silently reproduces old bugs, ignores updated context boundaries, and wastes tokens on dead execution paths.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Timestamp Comparison Before Dispatch:</strong> Before executing swarm delegations, the launcher (<code>delegate.py</code>) must inspect the running process start time via systemd (<code>/proc/&lt;pid&gt;</code> start time) and compare it against the latest <code>os.path.getmtime</code> of all active configuration files.</li>
+<li><strong>Automated Zero-Downtime Hot Restart:</strong> If any configuration file is newer than the service start time, <code>delegate.py</code> must automatically trigger a clean service restart (<code>systemctl --user restart opencode-core.service</code>), verify port health, and log <code>[STALE_SERVICE_SYNC]</code> before dispatching.</li>
+<li><strong>No Blind Retries on Unrefreshed Daemons:</strong> Never re-attempt failed delegations after config edits without confirming daemon recreation.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-058</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Communication & User-First Acknowledgment Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-058]</code> / <code>[AGENTS.md Law 6]</code><br />
+<strong>Domain:</strong> Agent Human-Interaction, Operational Transparency<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Autonomous agent speed must never come at the expense of operator transparency. When an operator asks a question, raises a concern, or points out a system discrepancy, executing silent automated fixes behind the scenes creates confusion and prevents the operator from validating their insight.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Acknowledge in Text First:</strong> Always answer, validate, and explain the user's specific observation in the visible text response <em>before</em> executing code fixes or triggering background state transitions.</li>
+<li><strong>Explicit Attribution:</strong> Clearly state the root cause and confirm the validity of the user's insight so the human operator knows their feedback made a concrete difference.</li>
+<li><strong>No Silent Mutations:</strong> Background modifications must be explicitly summarized with actionable rationale.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-060</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Federated DNA Taxonomy & Horizontal Re-Bucketing Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-582]</code> / <code>[FEAT-585]</code> / <code>[BKM-060]</code><br />
+<strong>Domain:</strong> Memory Architecture, DNA Curation, JITC Vector Grounding<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Federated Lab memory is categorized into distinct, peer-level <strong>DNA Buckets</strong> that answer specific cognitive queries. Domains are equal horizontal peers, not a hierarchical ladder. Memory items that drift or are discovered in the wrong container must be horizontally migrated (re-bucketed) to preserve semantic retrieval precision across CLaRaDB port 8001.</p>
+<h3>2. The Universal Taxonomy Matrix (How vs. Why vs. What vs. When)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bucket</th>
+<th style="text-align: left;">Prefix</th>
+<th style="text-align: left;">Cognitive Purpose</th>
+<th style="text-align: left;">Primary Question</th>
+<th style="text-align: left;">Source of Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Philosophy</strong></td>
+<td style="text-align: left;"><code>PHL-xxx</code></td>
+<td style="text-align: left;">Conceptual Worldviews &amp; Invariant Epistemology</td>
+<td style="text-align: left;"><strong>WHY (First Principle)</strong></td>
+<td style="text-align: left;"><code>philosophy_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wisdom</strong></td>
+<td style="text-align: left;"><code>WIS-xxx</code></td>
+<td style="text-align: left;">Practical Lessons, War Stories &amp; Failure Scars</td>
+<td style="text-align: left;"><strong>WHY (Empirical)</strong></td>
+<td style="text-align: left;"><code>stories.html</code> $\rightarrow$ <code>wisdom_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Protocols</strong></td>
+<td style="text-align: left;"><code>BKM-xxx</code></td>
+<td style="text-align: left;">Prescriptive Rules &amp; Actionable Directives</td>
+<td style="text-align: left;"><strong>HOW (Mandate)</strong></td>
+<td style="text-align: left;"><code>Protocols.md</code> $\rightarrow$ <code>behavioral_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Features</strong></td>
+<td style="text-align: left;"><code>FEAT-xxx</code></td>
+<td style="text-align: left;">Registered Capabilities &amp; Architectural Specs</td>
+<td style="text-align: left;"><strong>WHAT (Mechanics)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vibes</strong></td>
+<td style="text-align: left;"><code>VIBE-xxx</code></td>
+<td style="text-align: left;">Behavioral Persona &amp; Conversational Tonality</td>
+<td style="text-align: left;"><strong>WHO (Tone)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Discoveries</strong></td>
+<td style="text-align: left;"><code>DISC-xxx</code></td>
+<td style="text-align: left;">Distillation Insights &amp; Subconscious Epiphanies</td>
+<td style="text-align: left;"><strong>WHAT (Insight)</strong></td>
+<td style="text-align: left;"><code>discovery</code> collection $\rightarrow$ <code>DISC</code> ledger</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sprint DNA</strong></td>
+<td style="text-align: left;"><code>SPR-xxx</code></td>
+<td style="text-align: left;">Active Sprint Plans, Story Cards &amp; Decoupled ASTs</td>
+<td style="text-align: left;"><strong>WHEN (Active)</strong></td>
+<td style="text-align: left;"><code>SPRINT_PLAN_*.md</code> $\rightarrow$ <code>sprint_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reverse DNA</strong></td>
+<td style="text-align: left;"><code>RDNA-xxx</code></td>
+<td style="text-align: left;">Pre-Processed Question Space &amp; HyDE Bypass</td>
+<td style="text-align: left;"><strong>WHEN / ASK</strong></td>
+<td style="text-align: left;"><code>rdna_questions.json</code> $\rightarrow$ <code>rdna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Artifacts</strong></td>
+<td style="text-align: left;"><code>ART-xxx</code></td>
+<td style="text-align: left;">External Google Drive / Doc Links &amp; Assets</td>
+<td style="text-align: left;"><strong>WHERE (Asset)</strong></td>
+<td style="text-align: left;"><code>artifact_vault</code> collection</td>
+</tr>
+</tbody>
+</table>
+<h3>3. The Invariant Rules</h3>
+<ol>
+<li><strong>Separation of Bucket vs. Topic:</strong> Never confuse the <strong>DNA Bucket</strong> (e.g. <code>BKM</code>) with the <strong>Subject Topic Tag</strong> (e.g. <code>#systems_architecture</code>, <code>#security</code>).</li>
+<li><strong>Horizontal Re-Bucketing:</strong> If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional <code>explicit_links</code> preserved.</li>
+<li><strong>JITC Retrieval Law:</strong> Agents must query specific taxonomy buckets on-demand via <code>get_protocol(bkm_id="BKM-xxx")</code> or <code>query_dna(collection="...")</code> rather than loading global taxonomy tables into primary agent prompt context.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-061</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Tier Swarm Audit & Adversarial Oracle Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-477]</code> / <code>[FEAT-582]</code> / <code>[BKM-061]</code><br />
+<strong>Domain:</strong> Codebase Health, Verification Rigor, Pre/Mid/Post-Sprint Oracle Audits<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>A single primary agent or developer working across a large codebase suffers from context dilution, fatigue, and author bias—frequently missing subtle edge-case traps, stale lockouts, hidden zero-work escapes ("Green Lies"), and unhandled error returns. The <strong>Adversarial Oracle</strong> is an independent, highly critical reasoning subagent tasked specifically with finding flaws, side effects, and violations of invariants before changes are certified.</p>
+<h3>2. When to Deploy Oracles (The 3 Oracle Horizons)</h3>
+<ol>
+<li><strong>Pre-Sprint Architecture Oracle:</strong> Invoked during Design Studio ([BKM-005]) to audit proposed sprint plans, schema designs, REST endpoints, and mathematical bounds before code is written.</li>
+<li><strong>Mid-Flight Sanity Oracle:</strong> Invoked after complex refactors or multi-adapter changes to verify memory safety, thread safety, and interface compatibility.</li>
+<li><strong>Post-Sprint Adversarial Sweep ([BKM-049]):</strong> Mandatory closeout audit executed across the full Git diff. The sweep deploys specialized oracles to rigorously probe:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants ([BKM-062]).</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+</ol>
+<h3>3. Oracle Prompting &amp; Anti-Sycophancy Best Practices</h3>
+<ul>
+<li><strong>Explicit Adversarial Mandate:</strong> Never ask an oracle "Does this look good?" or "Is this ready?" Instead, explicitly instruct the oracle: <em>"Your goal is to uncover hidden flaws, failure modes, race conditions, and invariant violations. Assume there are bugs."</em></li>
+<li><strong>Specialized Decoupled Roles:</strong> Spawn discrete oracles with narrow, non-overlapping concerns (e.g. Invariants vs. Blast Radius vs. Failure Modes).</li>
+<li><strong>Model Tiering:</strong> Always select deep reasoning / <code>pro</code> model tiers for Oracles so they can explore wide dependency trees and long context reasoning.</li>
+<li><strong>The Glaring Issues Output Contract:</strong> Require Oracles to categorize findings into <strong>Glaring Issues</strong> (must fix before sprint signoff) vs. <strong>Latent / Backlog Items</strong>.</li>
+</ul>
+<h3>4. The 4-Tier Swarm Audit Anatomy</h3>
+<ol>
+<li><strong>Tier 1 — Parallel Specialized Swarm (4-Way Subagent Dispatches):</strong></li>
+<li><em>Pipeline &amp; Daemon Auditor:</em> Audits background jobs, systemd units, execution order, and stale lockout flags (<code>nightly_forge.py</code>, <code>nightly_lora_training.py</code>).</li>
+<li><em>Backend &amp; Router Auditor:</em> Audits REST endpoints, database atomicity, ID allocation counters, and disk vs. DB serialization (<code>router.py</code>, <code>draft_decomposer.py</code>).</li>
+<li><em>Frontend &amp; UX Flow Auditor:</em> Audits UI event reactivity, DOM pills, client-side data binding, and build script linkages (<code>dna_forge_build.py</code>, <code>writer.html</code>).</li>
+<li><em>Schema &amp; Invariant Auditor:</em> Audits JSON data completeness across legacy and newly added entries, git pre-commit hooks, and vector DB sync idempotency (<code>*.json</code>, <code>.git/hooks/pre-commit</code>).</li>
+<li><strong>Tier 2 — Synthesized Deficiency Matrix:</strong></li>
+<li>Aggregate all subagent findings into a ranked deficiency matrix (<code>CRITICAL_BREAKAGES</code>, <code>ID_COLLISIONS</code>, <code>STALE_LOCKOUTS</code>, <code>ORPHAN_CODE</code>, <code>UX_STALE_STATES</code>).</li>
+<li><strong>Tier 3 — Dual Adversarial Oracle Review:</strong></li>
+<li><em>Architecture &amp; Invariants Oracle:</em> Evaluates mathematical bounds, vector thresholds (e.g. HyDE bypass cosine distance), schema invariants, and graph link integrity.</li>
+<li><em>Side Effects &amp; Blast Radius Oracle:</em> Evaluates operational collisions (e.g. VRAM concurrency, process isolation), backwards compatibility shims, and deprecation blast radii.</li>
+<li><strong>Tier 4 — Live Invariant Certification (BKM-024):</strong></li>
+<li>Execute deterministic roundtrip unit tests (<code>test_dna_roundtrip_consistency.py</code>).</li>
+<li>Verify all active daemons match local Git HEAD.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-062</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Fail-Fast & Explicit Failure Propagation Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[FEAT-608]</code> / <code>[LAB-110]</code> / <code>[BKM-062]</code><br />
+<strong>Colloquial Alias:</strong> "Green-Lie Prevention"<br />
+<strong>Domain:</strong> Operational Rigor, Lab Accountability, Telemetry Invariants, Fail-Fast Design Pattern<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>Every telemetry-emitting function MUST produce verifiable, non-zero, live-sourced output — or return an explicit <code>FAIL</code> with a descriptive error. Errors and failures must propagate up through call chains explicitly; they must never be swallowed, absorbed into a silent <code>except</code> block, or replaced with a hardcoded success stub.</p>
+<p><strong>The Fail-Fast Design Pattern Applied:</strong> Surface errors at the earliest possible point. Never recover silently to a plausible-looking success state. A system that lies green while broken is worse than one that fails loudly.</p>
+<p><strong>Colloquial name — "The Green Lie":</strong> A lab status or test step that reports exit code <code>0</code> or <code>ONLINE</code> while doing zero work (0 items processed, 0 tokens generated, 0 mutations certified, or silent exceptions caught and swallowed). Green status is strictly reserved for non-zero verifiable progress.</p>
+<h3>1b. JITC Hook Trigger Phrases (for ambient retrieval)</h3>
+<p>This BKM should be retrieved during coding moments involving:
+- Writing a <code>try/except</code> block in a telemetry or pipeline function
+- Adding a fallback return value in an error branch (e.g. <code>return {"status": "ok"}</code>)
+- Writing any function that emits <code>turns_synthesized</code>, <code>items_refined</code>, <code>status</code>, or health metrics
+- Adding a hardcoded dict as a return value on exception
+- Writing silent exception swallowing (<code>except Exception: pass</code>)
+- Writing health-check probes or nightly sweep stages
+- Adding <code>time.sleep()</code> near subprocess calls without explicit error propagation</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero-Work Exit Is A Fatal Defect:</strong> Any pipeline stage or daemon sweep that completes with exit code 0 but records 0 items, 0 tokens, or 0 steps when work was queued or expected MUST be classified as <code>FAILED</code> (RED).</li>
+<li><strong>Tri-State Quantifiable Accountability:</strong> All automated processes must be evaluated against explicit thresholds loaded from <code>HomeLabAI/config/lab_accountability_thresholds.json</code>:</li>
+<li><code>GREEN (PASS)</code>: Verifiable non-zero progress meeting or exceeding target metrics.</li>
+<li><code>AMBER (DEGRADED)</code>: Partial throughput or elevated latency within acceptable fallback margins.</li>
+<li><code>RED (CRITICAL)</code>: Silent passes, zero items processed, fatal crashes, unhandled timeouts, or persona mute errors.</li>
+<li><strong>The Green-Lie Sentry Mandate:</strong> If individual daemons (e.g., Foyer, vLLM, Deep Thought) report <code>ONLINE</code>, but synthetic morning round table probes or nightly sweeps fail, the dashboard (<code>status.html</code>) MUST display a prominent <code>DISCREPANCY ALERT</code> banner. Never allow green daemon indicators to mask broken conversational circuits.</li>
+<li><strong>Authoritative Nightly Digest:</strong> The 11-stage nightly sweep must emit a consolidated <code>daily_accountability_digest.json</code> and a formatted <code>[+] ACCOUNTABILITY DIGEST</code> entry in the interleaved system log, recording exact per-stage metrics, overall status, and fallback justifications.</li>
+<li><strong>Zero-Mock Policy for Live Validation (BKM-024):</strong> Synthetic morning probes and health checks must run live end-to-end HTTP/REST requests against running silicon engines (Foyer :8765, vLLM :8088, M5 Air :8000). Mocks are strictly forbidden for live certification.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+</table>
+<h4>4. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
+<ol>
+<li><strong>Inspection Gate, Not an Automatic Kill:</strong> The 5-minute watchdog ceiling is an <strong>Inspection Gate</strong>, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.</li>
+<li><strong>Active Progress Probe:</strong> At the 5-minute mark, the orchestrator must inspect the live session:</li>
+<li>Query <code>GET /session/{id}</code> or <code>GET /session/{id}/message</code> to inspect token generation and tool calls.</li>
+<li><strong>Progressing:</strong> If tokens are actively flowing and constructive work is progressing, extend the timer window.</li>
+<li><strong>Stalled:</strong> If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.</li>
+<li><strong>Mandatory Zombie Cleanup:</strong> When an attempt is halted, timed out, or interrupted, the harness (<code>delegate.py</code>) and orchestrator MUST issue an explicit <code>POST /session/{id}/abort</code> frame to the OpenCode REST port. Never allow orphaned subagent loops to churn GPU silicon after client disconnects.</li>
+</ol>
+<h4>5. The Story Owner Tag &amp; Anti-Bypass Guard</h4>
+<ol>
+<li><strong>Mandatory Owner Tag in Sprint Stories:</strong> Every story defined in <code>SPRINT_PLAN_*.md</code> MUST specify an explicit <code>Assigned Owner:</code> tag:</li>
+<li><code>[SWARM:LOCAL]</code>: Story is assigned to local silicon execution via <code>delegate.py</code> with up to 3 diagnostic remediation rounds on local silicon.</li>
+<li><code>[SWARM:CLOUD]</code>: Story is assigned to cloud swarm burst via <code>delegate.py</code> directly, skipping local retries.</li>
+<li><code>[AGY:PRIMARY]</code>: Story is architectural, diagnostic, or governance work reserved for the primary orchestrator.</li>
+<li><strong>Anti-Bypass Invariant:</strong> When a story is tagged <code>[SWARM:*]</code>, the primary agent (AGY) is <strong>strictly forbidden from directly modifying the story's target codebase files</strong> without first executing delegation attempts via <code>delegate.py</code> (including all 3 local diagnostic rounds for <code>[SWARM:LOCAL]</code>).</li>
+<li><strong>Escalation Record Required:</strong> AGY direct code takeover (<code>[AGY:TAKEOVER]</code>) is only permissible after the assigned swarm tier (and its required diagnostic retries) has executed, failed, and logged an explicit diagnostic post-mortem in the sprint report. Direct coding on swarm-tagged stories without prior delegation attempts is a high-severity operational violation.</li>
+</ol>
+<h4>6. Sovereign Local Silicon Topology Invariant (KENDER -&gt; Air)</h4>
+<ol>
+<li><strong>The Sovereign Conductor &amp; Leaf Worker Pattern:</strong>
+   <code>[SWARM:LOCAL]</code> execution MUST strictly adhere to the canonical bicameral silicon topology:</li>
+<li><strong>Conductor (Root Dispatch):</strong> Node KENDER (Windows RTX 4090 Ollama: <code>qwen3-14b-16k:latest</code> / <code>Atlas</code>). Receives the sprint story, conducts the 4-stage cascade, and dispatches bounded leaf tasks.</li>
+<li><strong>Leaf Worker (Surgical Patching):</strong> Node Brain (macOS M5 Air MLX: <code>mlx-community--Qwen3.5-9B-4bit</code> / <code>Sisyphus-Junior</code> or <code>Daedalus</code>). Receives spoon-fed 4-anchor tasks from Atlas, applies atomic <code>clara-dna_safe_patch</code> edits, and is strictly forbidden from delegating further (<code>task: deny</code>).</li>
+<li><strong>Verifier (Execution &amp; Lint Runner):</strong> Node KENDER (Windows RTX 4090 / <code>Momus</code>). Executes verification commands and digests tracebacks back to Atlas.</li>
+<li><strong>Topology Deviation Invariant:</strong> Any inversion or deviation from this pattern (e.g., M5 Air attempting root orchestration, bypassing Node KENDER, or leaf workers spawning child subagents) constitutes an immediate operational failure. <code>delegate.py</code> and diagnostic monitors MUST enforce this check and fail immediately upon deviation.</li>
+</ol>
+<h4>7. Post-Sprint Adversarial Oracle Sweep Gate (BKM-061)</h4>
+<ol>
+<li><strong>Mandatory Post-Sprint Closeout Sweep:</strong> Before any sprint is marked <code>COMPLETED</code> or certified, the orchestrator MUST invoke the <strong>Dual Adversarial Oracle Sweep</strong> defined in <strong>[BKM-061]</strong>:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants.</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+<li><strong>Glaring Issue Remediation Gate:</strong> If oracles discover glaring deficiencies or hidden "Green Lies", the orchestrator MUST fix and certify all glaring issues before publishing the final Work Completion Report ([BKM-007]).</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-052</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Driver Protocol (Stateless Serialized Delegation for Fallback LLMs)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-530]</code> / <code>[BKM-052]</code><br />
+<strong>Domain:</strong> External Orchestration Fallback, Token Quota Exhaustion &amp; Headless Dispatch<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h4>1. The Principle</h4>
+<p>When the primary orchestrator (AGY / Gemini CLI) exhausts its token quota or encounters severe rate-limiting, an alternative driver LLM (such as GPT-4o / Claude / DeepSeek via external CLI or Web UI) must be able to drive the sprint pipeline without attempting to manually write code, debug ASTs, or re-architect the system. The driver acts <strong>strictly as a headless execution sequencer</strong> for <code>delegate.py</code>.</p>
+<h4>2. The Invariant Rules</h4>
+<ol>
+<li><strong>No Direct Code Generation:</strong> The fallback driver is FORBIDDEN from generating code diffs or writing implementation files directly.</li>
+<li><strong>No Human Docs:</strong> Treat sprint documents on disk as executable instruction sets.</li>
+<li><strong>Serialized Dispatch Only:</strong> Dispatches MUST be strictly serialized. The driver invokes exactly ONE story at a time and blocks until <code>delegate.py</code> exits.</li>
+<li><strong>Zero Self-Correction Loops:</strong> If <code>delegate.py</code> returns a non-zero exit code (failure, blocker, or timeout), the driver does NOT attempt to rewrite the code. It executes the Tri-Loop remediation ladder (<code>--local-only</code> $\rightarrow$ <code>--cloud-only</code> $\rightarrow$ surface blocker to user).</li>
+</ol>
+<h4>3. The 3-Step Driver Execution Loop</h4>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│ Step 1: Ingest Sprint Document Pointer                     │
+│ Read SPRINT_PLAN_SPR_XX_0.md for story list &amp; targets.     │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                              ▼
+┌────────────────────────────────────────────────────────────┐
+│ Step 2: Execute Headless Delegation via Bash               │
+│ Invoke delegate.py for Story N:                            │
+│   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py \
+│     --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot;             │
+│     --reference &lt;sprint_plan_path&gt;                         │
+│     --target &lt;target_file&gt; --mode execute                  │
+│     --details &quot;Execute Story N in &lt;sprint_plan_path&gt;...&quot;   │
+│     --local-only                                           │
+└─────────────────────────────┬──────────────────────────────┘
+                              │
+                ┌─────────────┴─────────────┐
+                ▼                           ▼
+      [Exit Code 0 (PASS)]        [Exit Code != 0 (FAIL)]
+                │                           │
+                ▼                           ▼
+┌───────────────────────────┐   ┌───────────────────────────┐
+│ Step 3A: Git Commit Story │   │ Step 3B: Cloud Fallback   │
+│ • git add &lt;target_files&gt;  │   │ Retry once with           │
+│ • git commit -m &quot;...&quot;     │   │ `--cloud-only`. If fail,  │
+│ • Proceed to Story N+1    │   │ report blocker &amp; HALT.    │
+└───────────────────────────┘   └───────────────────────────┘
+</code></pre>
+<h4>4. The Minimal Driver Prompt Template (For External GPT / Web Prompts)</h4>
+<p>When pasting instructions into an external LLM (e.g. ChatGPT / Claude) to drive the lab:</p>
+<pre><code class="language-text">You are the Federated Lab Delegation Driver (BKM-052).
+Your ONLY task is to sequentially delegate stories in `Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md` using `delegate.py`.
+DO NOT write code or generate file diffs yourself.
+
+For each story:
+1. Run:
+   HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --sprint &lt;S&gt; --story &lt;N&gt; --title &quot;&lt;Title&gt;&quot; --reference Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md --target &lt;target_path&gt; --mode execute --details &quot;Execute Story &lt;N&gt; in Portfolio_Dev/SPRINT_PLAN_SPR_XX_0.md (Section: Story &lt;N&gt;). Follow the 4-anchor specification in that section to modify target file using clara-dna_safe_patch. Verify with pytest.&quot; --local-only
+2. If exit code is 0: Run `git add &lt;target_files&gt; &amp;&amp; git commit -m &quot;feat: complete Story &lt;N&gt;&quot;` and advance to the next story.
+3. If exit code is non-zero: Re-run with `--cloud-only`. If that fails, HALT and report the blocker.
+</code></pre>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-053</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Remote Secondary Git Mirror & Cloud Redundancy Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-053]</code><br />
+<strong>Domain:</strong> Disaster Recovery, Cloud Redundancy &amp; Sovereign Git Transport<br />
+<strong>Status:</strong> DESIGN / BACKLOG  </p>
+<h3>1. Operational Mandate</h3>
+<p>To protect the 18-year engineering archive, systemd operational ledgers, and agentic codebases against single-platform outages, credential suspensions, or cloud service revocations, all federated lab repositories (<code>Dev_Lab</code>, <code>Portfolio_Dev</code>, <code>HomeLabAI</code>) MUST maintain dual-push secondary Git transport remotes alongside primary origins (GitLab/GitHub).</p>
+<h3>2. Implementation Mechanism</h3>
+<p>Configure dual-push Git remote targets via Git configuration:</p>
+<pre><code class="language-bash">git remote set-url --add --push origin &lt;primary-origin-url&gt;
+git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
+</code></pre>
+<p>When manual syncs or authorized replication scripts execute <code>git push origin &lt;branch&gt;</code>, Git automatically distributes commits synchronously to both hosting endpoints without introducing manual workflow steps.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-054</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Zero In-Process PyTorch on Orchestrator Host (Precomputed & Offloaded Embeddings Law)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-567]</code> / <code>[BKM-054]</code><br />
+<strong>Domain:</strong> Memory Guard, System Stability &amp; Zero-Torch Orchestration Architecture<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>The orchestrator host (<code>z87-Linux</code>) has a strict 16GB physical RAM ceiling shared with running browser sessions, Xorg, VS Code / Antigravity CLI, system daemons, and background monitors. Loading PyTorch (<code>import torch</code>), CUDA libraries, or <code>SentenceTransformer</code> directly inside the orchestrator's Python process consumes 2.5GB to 4.5GB of unpageable RSS, rapidly triggering Linux OOM killer reboots or silent Xorg desktop session resets during active sprints.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero In-Process PyTorch:</strong> All orchestrator Python scripts (including fast test suites, CLI tools, and background sync workers) are STRICTLY FORBIDDEN from importing <code>torch</code>, <code>torchvision</code>, or <code>sentence_transformers</code> in-process on <code>z87-Linux</code>.</li>
+<li><strong>Dual Path for Embeddings:</strong></li>
+<li><strong>Path A (Remote Offload):</strong> Query silicon endpoints (e.g. M5 Air via REST on port 8000 or local vLLM on port 8088) to generate dense embeddings.</li>
+<li><strong>Path B (Precomputed Embeddings):</strong> Use pre-generated vector caches (<code>.npy</code> or <code>.json</code> fixtures) stored in the repo or ChromaDB collections for similarity lookups and dedup testing.</li>
+<li><strong>AST Lint Guard:</strong> Automated linters and pre-commit hooks (<code>FEAT-567</code>) must actively audit orchestrator code to reject any PR or commit introducing direct <code>torch</code> imports.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-055</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Decoupled Artifact Law (Cache-First ASTs & Independent Compilation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-581]</code> / <code>[FEAT-582]</code> / <code>[FEAT-588]</code> / <code>[BKM-055]</code><br />
+<strong>Domain:</strong> Document Architecture, AST Provenance &amp; Deterministic Synthesis<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Runtime execution (such as vector databases, embeddings, and model daemons) is volatile, latency-prone, and ephemeral. Artifacts of record (technical papers, engineering resumes, architectural specs) must remain decoupled, immutable, and self-contained. An interactive document editor or compiler must never stall on network requests or depend on live database daemons to hydrate its view or generate static outputs.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Tri-Phase Document Lifecycle (Discover $\rightarrow$ Curate $\rightarrow$ Generate):</strong></li>
+<li><strong>Phase 1: Discover (On-Demand Vector Query):</strong> ChromaDB lookups across DNA collections (<code>PHL</code>, <code>WIS</code>, <code>FEAT</code>, <code>DISC</code>, <code>paper_dna_&lt;slug&gt;</code>) occur strictly upon explicit user trigger (e.g. document import or objective paste). Discovered matches are deposited directly into the document AST's <code>_candidate_pool[]</code>.</li>
+<li><strong>Phase 2: Curate (Interactive Waterline):</strong> The author or combinatorial optimizer promotes candidates "Above Water" into the tier's <code>bone_collection[]</code> (Root/Section) or <code>citations[]</code> (Paragraph/Bullet). Changes are saved directly into the paper's JSON AST.</li>
+<li><strong>Phase 3: Generate (Deterministic AST Compilation):</strong> Document compilers (<code>build_writer.py</code>, LaTeX engines) assemble outputs strictly from the cached AST <code>bone_collection[]</code> and verbatim text nodes with zero runtime database connectivity.</li>
+<li><strong>Multi-Tier Hierarchical AST Caching:</strong></li>
+<li>Every level of the document AST (Paper Root, Section, Paragraph/Bullet) must maintain its own dedicated <code>bone_collection[]</code> (or <code>citations[]</code>) and <code>_candidate_pool[]</code> arrays.</li>
+<li>Opening, navigating, or collapsing sections in <code>writer.html</code> must operate client-side with 0ms latency without making REST calls to ChromaDB.</li>
+<li><strong>Anti-Embellishment Functional Decoupling:</strong></li>
+<li>Machine intelligence applied to technical resumes or publications is strictly constrained to <strong>combinatorial judgment</strong> (relevance scoring, auto-pruning recommendations, and evidence chip attachment).</li>
+<li>Generative hallucination or prose embellishment is strictly forbidden; all synthesized outputs must assemble verbatim human bullet points and tangible repository citations.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-057</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Config-to-Daemon Freshness Synchronization Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-553]</code> / <code>[BKM-057]</code><br />
+<strong>Domain:</strong> Infrastructure, Service Daemons &amp; Delegation Pre-Flight<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Editing configuration files on disk (<code>opencode.json</code>, <code>infrastructure.json</code>, <code>oh-my-openagent.json</code>) does not alter the in-memory state of running background services. Running workloads against a stale background daemon silently reproduces old bugs, ignores updated context boundaries, and wastes tokens on dead execution paths.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Timestamp Comparison Before Dispatch:</strong> Before executing swarm delegations, the launcher (<code>delegate.py</code>) must inspect the running process start time via systemd (<code>/proc/&lt;pid&gt;</code> start time) and compare it against the latest <code>os.path.getmtime</code> of all active configuration files.</li>
+<li><strong>Automated Zero-Downtime Hot Restart:</strong> If any configuration file is newer than the service start time, <code>delegate.py</code> must automatically trigger a clean service restart (<code>systemctl --user restart opencode-core.service</code>), verify port health, and log <code>[STALE_SERVICE_SYNC]</code> before dispatching.</li>
+<li><strong>No Blind Retries on Unrefreshed Daemons:</strong> Never re-attempt failed delegations after config edits without confirming daemon recreation.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-058</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Communication & User-First Acknowledgment Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-058]</code> / <code>[AGENTS.md Law 6]</code><br />
+<strong>Domain:</strong> Agent Human-Interaction, Operational Transparency<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Autonomous agent speed must never come at the expense of operator transparency. When an operator asks a question, raises a concern, or points out a system discrepancy, executing silent automated fixes behind the scenes creates confusion and prevents the operator from validating their insight.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Acknowledge in Text First:</strong> Always answer, validate, and explain the user's specific observation in the visible text response <em>before</em> executing code fixes or triggering background state transitions.</li>
+<li><strong>Explicit Attribution:</strong> Clearly state the root cause and confirm the validity of the user's insight so the human operator knows their feedback made a concrete difference.</li>
+<li><strong>No Silent Mutations:</strong> Background modifications must be explicitly summarized with actionable rationale.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-060</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Federated DNA Taxonomy & Horizontal Re-Bucketing Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-582]</code> / <code>[FEAT-585]</code> / <code>[BKM-060]</code><br />
+<strong>Domain:</strong> Memory Architecture, DNA Curation, JITC Vector Grounding<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Federated Lab memory is categorized into distinct, peer-level <strong>DNA Buckets</strong> that answer specific cognitive queries. Domains are equal horizontal peers, not a hierarchical ladder. Memory items that drift or are discovered in the wrong container must be horizontally migrated (re-bucketed) to preserve semantic retrieval precision across CLaRaDB port 8001.</p>
+<h3>2. The Universal Taxonomy Matrix (How vs. Why vs. What vs. When)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bucket</th>
+<th style="text-align: left;">Prefix</th>
+<th style="text-align: left;">Cognitive Purpose</th>
+<th style="text-align: left;">Primary Question</th>
+<th style="text-align: left;">Source of Record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Philosophy</strong></td>
+<td style="text-align: left;"><code>PHL-xxx</code></td>
+<td style="text-align: left;">Conceptual Worldviews &amp; Invariant Epistemology</td>
+<td style="text-align: left;"><strong>WHY (First Principle)</strong></td>
+<td style="text-align: left;"><code>philosophy_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wisdom</strong></td>
+<td style="text-align: left;"><code>WIS-xxx</code></td>
+<td style="text-align: left;">Practical Lessons, War Stories &amp; Failure Scars</td>
+<td style="text-align: left;"><strong>WHY (Empirical)</strong></td>
+<td style="text-align: left;"><code>stories.html</code> $\rightarrow$ <code>wisdom_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Protocols</strong></td>
+<td style="text-align: left;"><code>BKM-xxx</code></td>
+<td style="text-align: left;">Prescriptive Rules &amp; Actionable Directives</td>
+<td style="text-align: left;"><strong>HOW (Mandate)</strong></td>
+<td style="text-align: left;"><code>Protocols.md</code> $\rightarrow$ <code>behavioral_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Features</strong></td>
+<td style="text-align: left;"><code>FEAT-xxx</code></td>
+<td style="text-align: left;">Registered Capabilities &amp; Architectural Specs</td>
+<td style="text-align: left;"><strong>WHAT (Mechanics)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vibes</strong></td>
+<td style="text-align: left;"><code>VIBE-xxx</code></td>
+<td style="text-align: left;">Behavioral Persona &amp; Conversational Tonality</td>
+<td style="text-align: left;"><strong>WHO (Tone)</strong></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Discoveries</strong></td>
+<td style="text-align: left;"><code>DISC-xxx</code></td>
+<td style="text-align: left;">Distillation Insights &amp; Subconscious Epiphanies</td>
+<td style="text-align: left;"><strong>WHAT (Insight)</strong></td>
+<td style="text-align: left;"><code>discovery</code> collection $\rightarrow$ <code>DISC</code> ledger</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sprint DNA</strong></td>
+<td style="text-align: left;"><code>SPR-xxx</code></td>
+<td style="text-align: left;">Active Sprint Plans, Story Cards &amp; Decoupled ASTs</td>
+<td style="text-align: left;"><strong>WHEN (Active)</strong></td>
+<td style="text-align: left;"><code>SPRINT_PLAN_*.md</code> $\rightarrow$ <code>sprint_dna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reverse DNA</strong></td>
+<td style="text-align: left;"><code>RDNA-xxx</code></td>
+<td style="text-align: left;">Pre-Processed Question Space &amp; HyDE Bypass</td>
+<td style="text-align: left;"><strong>WHEN / ASK</strong></td>
+<td style="text-align: left;"><code>rdna_questions.json</code> $\rightarrow$ <code>rdna</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Artifacts</strong></td>
+<td style="text-align: left;"><code>ART-xxx</code></td>
+<td style="text-align: left;">External Google Drive / Doc Links &amp; Assets</td>
+<td style="text-align: left;"><strong>WHERE (Asset)</strong></td>
+<td style="text-align: left;"><code>artifact_vault</code> collection</td>
+</tr>
+</tbody>
+</table>
+<h3>3. The Invariant Rules</h3>
+<ol>
+<li><strong>Separation of Bucket vs. Topic:</strong> Never confuse the <strong>DNA Bucket</strong> (e.g. <code>BKM</code>) with the <strong>Subject Topic Tag</strong> (e.g. <code>#systems_architecture</code>, <code>#security</code>).</li>
+<li><strong>Horizontal Re-Bucketing:</strong> If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional <code>explicit_links</code> preserved.</li>
+<li><strong>JITC Retrieval Law:</strong> Agents must query specific taxonomy buckets on-demand via <code>get_protocol(bkm_id="BKM-xxx")</code> or <code>query_dna(collection="...")</code> rather than loading global taxonomy tables into primary agent prompt context.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-061</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Tier Swarm Audit & Adversarial Oracle Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-477]</code> / <code>[FEAT-582]</code> / <code>[BKM-061]</code><br />
+<strong>Domain:</strong> Codebase Health, Verification Rigor, Pre/Mid/Post-Sprint Oracle Audits<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>A single primary agent or developer working across a large codebase suffers from context dilution, fatigue, and author bias—frequently missing subtle edge-case traps, stale lockouts, hidden zero-work escapes ("Green Lies"), and unhandled error returns. The <strong>Adversarial Oracle</strong> is an independent, highly critical reasoning subagent tasked specifically with finding flaws, side effects, and violations of invariants before changes are certified.</p>
+<h3>2. When to Deploy Oracles (The 3 Oracle Horizons)</h3>
+<ol>
+<li><strong>Pre-Sprint Architecture Oracle:</strong> Invoked during Design Studio ([BKM-005]) to audit proposed sprint plans, schema designs, REST endpoints, and mathematical bounds before code is written.</li>
+<li><strong>Mid-Flight Sanity Oracle:</strong> Invoked after complex refactors or multi-adapter changes to verify memory safety, thread safety, and interface compatibility.</li>
+<li><strong>Post-Sprint Adversarial Sweep ([BKM-049]):</strong> Mandatory closeout audit executed across the full Git diff. The sweep deploys specialized oracles to rigorously probe:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants ([BKM-062]).</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+</ol>
+<h3>3. Oracle Prompting &amp; Anti-Sycophancy Best Practices</h3>
+<ul>
+<li><strong>Explicit Adversarial Mandate:</strong> Never ask an oracle "Does this look good?" or "Is this ready?" Instead, explicitly instruct the oracle: <em>"Your goal is to uncover hidden flaws, failure modes, race conditions, and invariant violations. Assume there are bugs."</em></li>
+<li><strong>Specialized Decoupled Roles:</strong> Spawn discrete oracles with narrow, non-overlapping concerns (e.g. Invariants vs. Blast Radius vs. Failure Modes).</li>
+<li><strong>Model Tiering:</strong> Always select deep reasoning / <code>pro</code> model tiers for Oracles so they can explore wide dependency trees and long context reasoning.</li>
+<li><strong>The Glaring Issues Output Contract:</strong> Require Oracles to categorize findings into <strong>Glaring Issues</strong> (must fix before sprint signoff) vs. <strong>Latent / Backlog Items</strong>.</li>
+</ul>
+<h3>4. The 4-Tier Swarm Audit Anatomy</h3>
+<ol>
+<li><strong>Tier 1 — Parallel Specialized Swarm (4-Way Subagent Dispatches):</strong></li>
+<li><em>Pipeline &amp; Daemon Auditor:</em> Audits background jobs, systemd units, execution order, and stale lockout flags (<code>nightly_forge.py</code>, <code>nightly_lora_training.py</code>).</li>
+<li><em>Backend &amp; Router Auditor:</em> Audits REST endpoints, database atomicity, ID allocation counters, and disk vs. DB serialization (<code>router.py</code>, <code>draft_decomposer.py</code>).</li>
+<li><em>Frontend &amp; UX Flow Auditor:</em> Audits UI event reactivity, DOM pills, client-side data binding, and build script linkages (<code>dna_forge_build.py</code>, <code>writer.html</code>).</li>
+<li><em>Schema &amp; Invariant Auditor:</em> Audits JSON data completeness across legacy and newly added entries, git pre-commit hooks, and vector DB sync idempotency (<code>*.json</code>, <code>.git/hooks/pre-commit</code>).</li>
+<li><strong>Tier 2 — Synthesized Deficiency Matrix:</strong></li>
+<li>Aggregate all subagent findings into a ranked deficiency matrix (<code>CRITICAL_BREAKAGES</code>, <code>ID_COLLISIONS</code>, <code>STALE_LOCKOUTS</code>, <code>ORPHAN_CODE</code>, <code>UX_STALE_STATES</code>).</li>
+<li><strong>Tier 3 — Dual Adversarial Oracle Review:</strong></li>
+<li><em>Architecture &amp; Invariants Oracle:</em> Evaluates mathematical bounds, vector thresholds (e.g. HyDE bypass cosine distance), schema invariants, and graph link integrity.</li>
+<li><em>Side Effects &amp; Blast Radius Oracle:</em> Evaluates operational collisions (e.g. VRAM concurrency, process isolation), backwards compatibility shims, and deprecation blast radii.</li>
+<li><strong>Tier 4 — Live Invariant Certification (BKM-024):</strong></li>
+<li>Execute deterministic roundtrip unit tests (<code>test_dna_roundtrip_consistency.py</code>).</li>
+<li>Verify all active daemons match local Git HEAD.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-062</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Green-Lie Prevention & Quantifiable Accountability Mandate</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[FEAT-608]</code> / <code>[LAB-110]</code> / <code>[BKM-062]</code><br />

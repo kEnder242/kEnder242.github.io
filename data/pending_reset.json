@@ -1,14 +1,8 @@
 {
-  "pending_action": "SOFT_RELOAD",
-  "action_level": 1,
-  "timer_expiry_ts": 1790286381,
-  "triggered_at_ts": 1790284581,
-  "last_commit": "261cd39",
-  "repo": "Portfolio_Dev",
-  "reasons": [
-    "src/tests/delegate.py (Active Module)",
-    "field_notes/build_writer.py (Portfolio Active Code)",
-    "field_notes/dna_forge_build.py (Portfolio Active Code)",
-    "src/curator/ambient_recall.py (Active Module)"
-  ]
+  "pending_action": "NONE",
+  "action_level": 0,
+  "timer_expiry_ts": 0,
+  "triggered_at_ts": 1790291611,
+  "last_commit": "cleared",
+  "reasons": []
 }
