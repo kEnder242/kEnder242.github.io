@@ -1,8 +1,13 @@
 {
-  "pending_action": "NONE",
-  "action_level": 0,
-  "timer_expiry_ts": 0,
-  "triggered_at_ts": 1790238009,
-  "last_commit": "cleared",
-  "reasons": []
+  "pending_action": "SOFT_RELOAD",
+  "action_level": 1,
+  "timer_expiry_ts": 1790284894,
+  "triggered_at_ts": 1790283094,
+  "last_commit": "a0f2fac",
+  "repo": "Portfolio_Dev",
+  "reasons": [
+    "src/tests/delegate.py (Active Module)",
+    "src/curator/ambient_recall.py (Active Module)",
+    "field_notes/build_writer.py (Portfolio Active Code)"
+  ]
 }
