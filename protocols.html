@@ -1779,6 +1779,350 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
                     <tr>
                         <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-077</td>
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Conversational Anchor Tracking Protocol (ANCHOR_TRACK)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-649]</code> / <code>[BKM-077]</code> / <code>[BKM-004]</code> / <code>[BKM-006]</code><br />
+<strong>Colloquial Alias:</strong> "The Conversational Anchor Ledger Protocol"<br />
+<strong>Domain:</strong> Agent Coordination, Task Capture, Conversational Accountability, Sprints<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Operational Imperative</h3>
+<p>During fast-paced, multi-turn pair-programming dialogues, actionable tasks, bug reports, and design inquiries are frequently raised across conversational turns. To prevent dropped topics, context-loss during truncation, or premature crystallization into sprint stories, the orchestrator MUST maintain a strict <strong>ANCHOR_TRACK Ledger</strong>.</p>
+<h3>2. The 3 Lifecycle Phases</h3>
+<ol>
+<li><strong>CAPTURE WITH USER (In-Conversation Stage):</strong></li>
+<li>Every identified triage item, bug, or design topic is assigned a discrete tracking tag (<code>ANCHOR-01</code>, <code>ANCHOR-02</code>, ...).</li>
+<li>Inquiries prefixed with <code>QQ</code> (<code>BKM-004</code>) remain informational lookups and do NOT generate work items unless explicitly converted by the user.</li>
+<li>Topics remain conversational anchors until verbally aligned and captured into a unified tabular ledger.</li>
+<li><strong>SPRINT CRYSTALLIZATION (The Planning Stage):</strong></li>
+<li>Once verbal consensus is reached, the anchors are mapped to sprint stories (<code>Story &lt;N&gt;.1</code>, <code>Story &lt;N&gt;.2</code>, ...).</li>
+<li>The sprint plan MUST include the verbatim ANCHOR_TRACK ledger table reflecting the exact state (<code>DONE</code>, <code>STAGED</code>, <code>DROPPED</code>, <code>DEFERRED</code>).</li>
+<li><strong>HEADS DOWN EXECUTION (The Delivery Stage):</strong></li>
+<li>Execution proceeds under <code>BKM-006</code> and <code>BKM-007</code> with assigned owner tags (<code>[AGY:PRIMARY]</code> vs <code>[SWARM:LOCAL]</code>).</li>
+<li>Every completed anchor transitions its state to <code>✅ DONE</code> in the sprint plan ledger.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-078</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">JIT_ONE_SHOT Protocol (The Single-Shot Worker & L2 Anti-Spiral Orchestration)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-655]</code> / <code>[BKM-078]</code> / <code>[INS-042]</code> / <code>[WIS-482]</code><br />
+<strong>Colloquial Alias:</strong> "The Patch-Test-Diagnose-Recommend Protocol"<br />
+<strong>Domain:</strong> Multi-Tier Agent Orchestration, Ephemeral Worker Lifecycles, Anti-Waffle Governance<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Core Philosophy</h3>
+<p>In multi-tier swarms, letting open-weights surgical workers ($L_3$) attempt recursive self-fixing when tests fail triggers the <strong>"Waffle Trap" (<code>[INS-042]</code>)</strong> and quadratic context accumulation. A worker's context degrades with every failed stack trace.
+The <code>JIT_ONE_SHOT</code> protocol mandates that surgical workers operate as <strong>ephemeral single-shot probes</strong>:
+- Workers execute a single attempt: <strong>Patch $\to$ Test $\to$ Diagnose $\to$ Recommend $\to$ Exit</strong>.
+- Workers are strictly forbidden from attempting recursive self-fixing loops.
+- Terminal tracebacks and dirty intermediate diffs die with the worker session, shielding $L_2$ from context pollution.</p>
+<h3>2. The Layer 3 Execution Contract (<code>AGENTS_L3.md</code>)</h3>
+<ol>
+<li><strong>Turn 1 (Patch):</strong> Ingest blueprint from JIT research tools and apply changes via <code>safe_patch()</code>.</li>
+<li><strong>Turn 2 (Test):</strong> Run the verification command via <code>bash</code>.</li>
+<li><strong>Turn 3 (Resolve):</strong></li>
+<li><strong>On Pass:</strong> Call <code>jit_checkpoint("SUCCESS", ...)</code> and terminate cleanly.</li>
+<li><strong>On Fail:</strong> Use in-context traceback and diff to diagnose root cause. Synthesize a concise 3-line diagnostic report:<ul>
+<li><code>[FAILURE]</code>: Specific failing assertion or error.</li>
+<li><code>[ROOT_CAUSE]</code>: Exact causal hypothesis based on test output.</li>
+<li><code>[RECOMMENDATION]</code>: Specific proposed blueprint adjustment.</li>
+</ul>
+</li>
+<li><strong>Terminate Immediately:</strong> Emit the 3-line report and exit. Do NOT modify files further.</li>
+</ol>
+<h3>3. The Layer 2 Anti-Spiral Orchestration Role (<code>AGENTS_L2.md</code>)</h3>
+<p>Layer 2 (Atlas) holds the macro plan and session trajectory. When receiving Layer 3's recommendation:
+1. <strong>Anti-Spiral Verification:</strong> Atlas inspects whether the recommendation is circular (proposing changes already tried or regressing to previous states).
+2. <strong>Macro Judgment:</strong> Atlas decides whether to adopt the recommendation, synthesize an alternative architectural fix, or modify test parameters.
+3. <strong>Pristine Retry:</strong> If retrying, Atlas updates the blueprint via <code>jit_stage()</code> and dispatches a <strong>fresh, zero-mileage Layer 3 worker instance</strong> via <code>task()</code>.
+4. <strong>Stall Declaration:</strong> If successive pristine workers fail the same assertion without progress, Atlas halts execution and escalates to Layer 1.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+</table>
+<h3>3. The Invariant Rules</h3>
+<ol>
+<li><strong>Separation of Bucket vs. Topic:</strong> Never confuse the <strong>DNA Bucket</strong> (e.g. <code>BKM</code>) with the <strong>Subject Topic Tag</strong> (e.g. <code>#systems_architecture</code>, <code>#security</code>).</li>
+<li><strong>Polymorphic Aliasing (<code>INS</code> $\leftrightarrow$ <code>PHL</code>):</strong> The prefix <code>INS</code> (Inspirations &amp; Insights) is the canonical domain identifier for epistemological axioms. To prevent historical document drift and ensure zero broken links across code comments and papers, all ingestion parsers, MCP servers, and UI components must support polymorphic aliasing where <code>PHL-xxx</code> seamlessly resolves to <code>INS-xxx</code> and vice versa.</li>
+<li><strong>Horizontal Re-Bucketing:</strong> If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional <code>explicit_links</code> preserved.</li>
+<li><strong>JITC Retrieval Law:</strong> Agents must query specific taxonomy buckets on-demand via <code>get_protocol(bkm_id="BKM-xxx")</code> or <code>query_dna(collection="...")</code> rather than loading global taxonomy tables into primary agent prompt context.</li>
+<li><strong>Single-Library &amp; 24/7 ChromaDB Daemon Mesh:</strong> All ambient vector retrieval for Layer 1 strategic planning (whether running via AGY CLI or Cloud OpenCode orchestrators like Prometheus/Sisyphus) MUST consume the single canonical library (<code>HomeLabAI/src/curator/ambient_recall.py</code>) querying the 24/7 resident ChromaDB service on port 8001 (<code>chroma-server.service</code>). Never fork duplicate hook scripts across <code>.agents/scripts/</code> or <code>config/hooks/</code>, and never attach pre-turn ambient hooks to Layer 2/3 local execution workers.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-061</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Multi-Tier Swarm Audit & Adversarial Oracle Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-477]</code> / <code>[FEAT-582]</code> / <code>[BKM-061]</code><br />
+<strong>Domain:</strong> Codebase Health, Verification Rigor, Pre/Mid/Post-Sprint Oracle Audits<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>A single primary agent or developer working across a large codebase suffers from context dilution, fatigue, and author bias—frequently missing subtle edge-case traps, stale lockouts, hidden zero-work escapes ("Green Lies"), and unhandled error returns. The <strong>Adversarial Oracle</strong> is an independent, highly critical reasoning subagent tasked specifically with finding flaws, side effects, and violations of invariants before changes are certified.</p>
+<h3>2. When to Deploy Oracles (The 3 Oracle Horizons)</h3>
+<ol>
+<li><strong>Pre-Sprint Architecture Oracle:</strong> Invoked during Design Studio ([BKM-005]) to audit proposed sprint plans, schema designs, REST endpoints, and mathematical bounds before code is written.</li>
+<li><strong>Mid-Flight Sanity Oracle:</strong> Invoked after complex refactors or multi-adapter changes to verify memory safety, thread safety, and interface compatibility.</li>
+<li><strong>Post-Sprint Adversarial Sweep ([BKM-049]):</strong> Mandatory closeout audit executed across the full Git diff. The sweep deploys specialized oracles to rigorously probe:</li>
+<li><strong>Oracle 1 (Architecture &amp; Invariants):</strong> Audits threshold math, schema consistency, vector boundaries, and zero-work invariants ([BKM-062]).</li>
+<li><strong>Oracle 2 (Side Effects &amp; Blast Radius):</strong> Audits port/socket contention, background daemon lifecycles, and backwards compatibility shims.</li>
+</ol>
+<h3>3. Oracle Prompting &amp; Anti-Sycophancy Best Practices</h3>
+<ul>
+<li><strong>Explicit Adversarial Mandate:</strong> Never ask an oracle "Does this look good?" or "Is this ready?" Instead, explicitly instruct the oracle: <em>"Your goal is to uncover hidden flaws, failure modes, race conditions, and invariant violations. Assume there are bugs."</em></li>
+<li><strong>Specialized Decoupled Roles:</strong> Spawn discrete oracles with narrow, non-overlapping concerns (e.g. Invariants vs. Blast Radius vs. Failure Modes).</li>
+<li><strong>Model Tiering:</strong> Always select deep reasoning / <code>pro</code> model tiers for Oracles so they can explore wide dependency trees and long context reasoning.</li>
+<li><strong>The Glaring Issues Output Contract:</strong> Require Oracles to categorize findings into <strong>Glaring Issues</strong> (must fix before sprint signoff) vs. <strong>Latent / Backlog Items</strong>.</li>
+</ul>
+<h3>4. The 4-Tier Swarm Audit Anatomy</h3>
+<ol>
+<li><strong>Tier 1 — Parallel Specialized Swarm (4-Way Subagent Dispatches):</strong></li>
+<li><em>Pipeline &amp; Daemon Auditor:</em> Audits background jobs, systemd units, execution order, and stale lockout flags (<code>nightly_forge.py</code>, <code>nightly_lora_training.py</code>).</li>
+<li><em>Backend &amp; Router Auditor:</em> Audits REST endpoints, database atomicity, ID allocation counters, and disk vs. DB serialization (<code>router.py</code>, <code>draft_decomposer.py</code>).</li>
+<li><em>Frontend &amp; UX Flow Auditor:</em> Audits UI event reactivity, DOM pills, client-side data binding, and build script linkages (<code>dna_forge_build.py</code>, <code>writer.html</code>).</li>
+<li><em>Schema &amp; Invariant Auditor:</em> Audits JSON data completeness across legacy and newly added entries, git pre-commit hooks, and vector DB sync idempotency (<code>*.json</code>, <code>.git/hooks/pre-commit</code>).</li>
+<li><strong>Tier 2 — Synthesized Deficiency Matrix:</strong></li>
+<li>Aggregate all subagent findings into a ranked deficiency matrix (<code>CRITICAL_BREAKAGES</code>, <code>ID_COLLISIONS</code>, <code>STALE_LOCKOUTS</code>, <code>ORPHAN_CODE</code>, <code>UX_STALE_STATES</code>).</li>
+<li><strong>Tier 3 — Dual Adversarial Oracle Review:</strong></li>
+<li><em>Architecture &amp; Invariants Oracle:</em> Evaluates mathematical bounds, vector thresholds (e.g. HyDE bypass cosine distance), schema invariants, and graph link integrity.</li>
+<li><em>Side Effects &amp; Blast Radius Oracle:</em> Evaluates operational collisions (e.g. VRAM concurrency, process isolation), backwards compatibility shims, and deprecation blast radii.</li>
+<li><strong>Tier 4 — Live Invariant Certification (BKM-024):</strong></li>
+<li>Execute deterministic roundtrip unit tests (<code>test_dna_roundtrip_consistency.py</code>).</li>
+<li>Verify all active daemons match local Git HEAD.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-062</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Fail-Fast & Explicit Failure Propagation Mandate</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[FEAT-608]</code> / <code>[LAB-110]</code> / <code>[BKM-062]</code><br />
+<strong>Colloquial Alias:</strong> "Green-Lie Prevention"<br />
+<strong>Domain:</strong> Operational Rigor, Lab Accountability, Telemetry Invariants, Fail-Fast Design Pattern<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>Every telemetry-emitting function MUST produce verifiable, non-zero, live-sourced output — or return an explicit <code>FAIL</code> with a descriptive error. Errors and failures must propagate up through call chains explicitly; they must never be swallowed, absorbed into a silent <code>except</code> block, or replaced with a hardcoded success stub.</p>
+<p><strong>The Fail-Fast Design Pattern Applied:</strong> Surface errors at the earliest possible point. Never recover silently to a plausible-looking success state. A system that lies green while broken is worse than one that fails loudly.</p>
+<p><strong>Colloquial name — "The Green Lie":</strong> A lab status or test step that reports exit code <code>0</code> or <code>ONLINE</code> while doing zero work (0 items processed, 0 tokens generated, 0 mutations certified, or silent exceptions caught and swallowed). Green status is strictly reserved for non-zero verifiable progress.</p>
+<h3>1b. JITC Hook Trigger Phrases (for ambient retrieval)</h3>
+<p>This BKM should be retrieved during coding moments involving:
+- Writing a <code>try/except</code> block in a telemetry or pipeline function
+- Adding a fallback return value in an error branch (e.g. <code>return {"status": "ok"}</code>)
+- Writing any function that emits <code>turns_synthesized</code>, <code>items_refined</code>, <code>status</code>, or health metrics
+- Adding a hardcoded dict as a return value on exception
+- Writing silent exception swallowing (<code>except Exception: pass</code>)
+- Writing health-check probes or nightly sweep stages
+- Adding <code>time.sleep()</code> near subprocess calls without explicit error propagation</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Zero-Work Exit Is A Fatal Defect:</strong> Any pipeline stage or daemon sweep that completes with exit code 0 but records 0 items, 0 tokens, or 0 steps when work was queued or expected MUST be classified as <code>FAILED</code> (RED).</li>
+<li><strong>Tri-State Quantifiable Accountability:</strong> All automated processes must be evaluated against explicit thresholds loaded from <code>HomeLabAI/config/lab_accountability_thresholds.json</code>:</li>
+<li><code>GREEN (PASS)</code>: Verifiable non-zero progress meeting or exceeding target metrics.</li>
+<li><code>AMBER (DEGRADED)</code>: Partial throughput or elevated latency within acceptable fallback margins.</li>
+<li><code>RED (CRITICAL)</code>: Silent passes, zero items processed, fatal crashes, unhandled timeouts, or persona mute errors.</li>
+<li><strong>The Green-Lie Sentry Mandate:</strong> If individual daemons (e.g., Foyer, vLLM, Deep Thought) report <code>ONLINE</code>, but synthetic morning round table probes or nightly sweeps fail, the dashboard (<code>status.html</code>) MUST display a prominent <code>DISCREPANCY ALERT</code> banner. Never allow green daemon indicators to mask broken conversational circuits.</li>
+<li><strong>Authoritative Nightly Digest:</strong> The 11-stage nightly sweep must emit a consolidated <code>daily_accountability_digest.json</code> and a formatted <code>[+] ACCOUNTABILITY DIGEST</code> entry in the interleaved system log, recording exact per-stage metrics, overall status, and fallback justifications.</li>
+<li><strong>Zero-Mock Policy for Live Validation (BKM-024):</strong> Synthetic morning probes and health checks must run live end-to-end HTTP/REST requests against running silicon engines (Foyer :8765, vLLM :8088, M5 Air :8000). Mocks are strictly forbidden for live certification.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-064</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Tracked Conversational Ledger Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-618]</code> / <code>[BKM-064]</code><br />
+<strong>Colloquial Alias:</strong> "Numbered List Tracking"<br />
+<strong>Domain:</strong> Human-Agent Collaboration, Conversational Provenance<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Collaborative problem-solving generates complex multi-threaded discussions across dozens of numbered items and hypotheses. Dropping threads or failing to track numbered user inquiries creates conversational confusion. Agents must maintain a structured numbered ledger across turns, explicitly addressing each numbered vector before transitioning system state.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Thread Preservation:</strong> When the human operator provides numbered thoughts or questions (e.g. Items 1 through 12), the agent must address and track each item with corresponding structured keys.</li>
+<li><strong>Cross-Linkage to Epistemology:</strong> Connect discussion items directly to their corresponding DNA cards (<code>INS</code>, <code>WIS</code>, <code>FEAT</code>, <code>BKM</code>, <code>VIBE</code>) to ensure that insights from conversations become durable knowledge assets.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-065</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Direct Markdown AST/Regex Source Backflow Protocol</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-582]</code> / <code>[BKM-065]</code><br />
+<strong>Colloquial Alias:</strong> "No Human Docs Backflow"<br />
+<strong>Domain:</strong> Data Persistence, Source-of-Record Integrity<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Treat all Markdown files (<code>Protocols.md</code>, <code>FeatureTracker.md</code>) as executable source code (<code>Invariant #1: NO HUMAN DOCS</code>). Interactive tools such as DNA Forge and the Applied Writer must write edits directly to original Markdown sources via deterministic AST/regex parsers, immediately committing changes locally via Git. Static databases or intermediate JSON caches must never become stale islands of truth.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Source-First Mutation:</strong> Updates originating in web tools (e.g., editing a BKM description or feature mechanism) must mutate the Markdown source file directly on disk before refreshing vector indices.</li>
+<li><strong>Deterministic Regex Anchoring:</strong> Use anchored regex matching on unique entity headers (e.g., <code>## BKM-xxx</code> or <code>## [FEAT-xxx]</code>) to prevent syntax drift.</li>
+<li><strong>Automated Git Checkpoint:</strong> Every successful source file mutation must immediately create a local Git commit to preserve history and prevent data loss.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-066</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Decoupled Watchdog & Independent Audit Invariant</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-619]</code> / <code>[BKM-066]</code><br />
+<strong>Colloquial Alias:</strong> "Defensive Decoupled Accountability"<br />
+<strong>Domain:</strong> Observability, Fault-Tolerant Automation, Reliability Engineering<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>Every mission-critical automated pipeline MUST have its accountability, completion verification, and health audit evaluated by an <strong>out-of-band, decoupled process</strong> rather than solely by the executing pipeline itself. Never let the executing process be solely responsible for grading its own completion or surfacing its own failure.</p>
+<p><strong>The Decoupled Sentry Design Pattern Applied:</strong> If a long-running batch job crashes, deadlocks, suffers an unhandled exception, runs out of memory (OOM), or exits prematurely from a <code>try/finally</code> block, its internal audit steps will never execute. An independent watchdog running at the boundary of the operational window (e.g., 06:00 AM) evaluates physical state files, lock files, hardware limits, and live daemon endpoints to emit an authoritative pass/fail digest and trigger alerts.</p>
+<h3>2. The Invariant Rules</h3>
+<ol>
+<li><strong>Separation of Execution and Grading:</strong> The batch execution pipeline (<code>nightly_forge.py</code>) produces state and telemetry files. The decoupled watchdog (<code>standalone_accountability_watchdog.py</code>) grades them independently.</li>
+<li><strong>Crash &amp; Deadlock Detection (Stale Lock Sentry):</strong> The watchdog must inspect all active lockfiles (<code>maintenance.lock</code>, <code>nightly_forge.lock</code>, <code>nightly_lora_training.lock</code>). Any lockfile older than its maximum permissible execution budget with no active process represents a hard failure.</li>
+<li><strong>Mandatory State Age Verification:</strong> A passing state file timestamp older than the current window (e.g., &gt;24 hours old) must be classified as <code>STALE_FAILURE</code>, preventing historical passing runs from masking silent current-day failures.</li>
+<li><strong>Authoritative Double-Write Digest:</strong> The standalone watchdog writes <code>daily_accountability_digest.json</code> using atomic temporary file swaps (<code>.tmp</code> -&gt; rename) to both <code>Portfolio_Dev/field_notes/data/</code> and <code>www_deploy/data/</code>.</li>
+<li><strong>Multi-Channel Alert Escalation:</strong> Any critical failure (OOM, missing run, stale lock, probe failure) triggers an immediate Neural Pager alert to ensure rapid human awareness.</li>
+<li><strong>Phase-Isolated Execution Decoupling ([FEAT-629]):</strong> Upstream stage failures (such as LoRA adapter fine-tuning timeouts or dataset hiccups) must NEVER cascade to abort downstream synthesis tasks (Subconscious Dreaming, Wisdom Refinement, Sprint DNA Sync, Federated Benchmarks, Morning Round Table Probe, or Historical Journal Bridge / Mass Scan). Foyer state must be guaranteed restored to OPERATIONAL, and every downstream stage executed inside isolated protective error boundaries so that independent deliverables proceed and full-system accountability is truthfully rendered.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-067</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Sovereign Round Table Telemetry & Trace Indexing</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-607]</code> / <code>[BKM-067]</code><br />
+<strong>Colloquial Alias:</strong> "Telemetry Breadcrumbs &amp; Wire-Trace Indexing"<br />
+<strong>Domain:</strong> Observability, Telemetry, Multi-Node Consensus<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p>High-frequency multi-node LLM pipelines must decouple <strong>lightweight stage timeline indexing</strong> from <strong>heavyweight wire-level trace payloads</strong>. To prevent log excavation stalls and memory spikes when reviewing multi-node deliberations:
+1. Every stage event in <code>Portfolio_Dev/field_notes/data/foyer_stage_ledger.jsonl</code> MUST explicitly record the relative <code>log_target</code> file (e.g., <code>logs/trace_pinky.json</code>, <code>logs/trace_thought.json</code>).
+2. Heavy wire payloads (<code>logs/trace_*.json</code>) are formatted as continuous JSONL streams and MUST be inspected via tail-seek or the dedicated extractor utility (<code>HomeLabAI/src/infra/read_roundtable_turn.py</code>) rather than raw full-file JSON parsing.</p>
+<h3>2. Telemetry Layout</h3>
+<ul>
+<li><strong>Stage Ledger (<code>Portfolio_Dev/field_notes/data/foyer_stage_ledger.jsonl</code>):</strong> Timeline, request IDs, stage status, timestamps, and <code>log_target</code> pointers.</li>
+<li><strong>Node Traces (<code>HomeLabAI/logs/trace_{lab,thought,brain,pinky}.json</code>):</strong> Raw HTTP wire payloads, prompt injections, and JSON schema outputs.</li>
+<li><strong>Extraction Utility (<code>HomeLabAI/src/infra/read_roundtable_turn.py</code>):</strong> CLI tool for instant turn extraction by <code>--request-id</code> or <code>--latest</code>.</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-068</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Feature Tracker & DNA Synchronization Mandate (Just-in-Time Conflict Auditing)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-582]</code> / <code>[BKM-068]</code> / <code>[AGENTS.md Law 7]</code><br />
+<strong>Colloquial Alias:</strong> "The JITC Architectural Comparator &amp; Drift Remediation Law"<br />
+<strong>Domain:</strong> Architecture, Governance, Memory Systems<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (Positive Framing)</h3>
+<p><code>Portfolio_Dev/FeatureTracker.md</code> and Federated DNA are authoritative architectural sources of record. Architecture is designed first and serves as an active comparator during development and review:
+1. <strong>Inline Traceability:</strong> Whenever implementing changes, identify and update affected <code>[FEAT-xxx]</code> entries and maintain inline code token anchors across docstrings, comments, and unit tests.
+2. <strong>Just-In-Time Conflict Auditing:</strong> In the micro-moment of reading or updating DNA records, actively cross-reference running code against human-authored bedrock design specifications (<code>[FEAT-xxx]</code>, <code>[LAB-xxx]</code>, <code>[BKM-xxx]</code>).
+3. <strong>Agent-Caused Drift Remediation:</strong> If an unvetted divergence between code and design was introduced solely by agents or subagent shortcuts (e.g., lazy route consolidation, mocked fallbacks, heavy CLI subprocesses in hooks), resolve it immediately (or structure clear staged action steps if large-scale).
+4. <strong>Human-Directed Evolution:</strong> If a divergence stems from intentional human design pivots or user directives, bubble it up explicitly to collaborate and synchronize the DNA specifications with the new architectural direction.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-069</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Loop Ledger Protocol (Feedback Loop Registry)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature / Vibe Anchor:</strong> <code>[VIBE-009]</code> / <code>[BKM-069]</code> / <code>[BKM-068]</code><br />
+<strong>Colloquial Alias:</strong> "The Loop Ledger Protocol"<br />
+<strong>Domain:</strong> Architecture, Governance, Emergent Systems, Feedback Loops<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle &amp; Vibe Grounding</h3>
+<p>Governed by <strong><code>VIBE-009</code> (Feedback Loops as Complexity Engines)</strong>: Systems achieve resilience, continuous self-correction, and emergent intelligence not from static constraints, but from active, layered feedback loops. Rather than presuming a fixed inventory of loops, the Federated Lab dynamically identifies, harvests, and registers feedback loops as they emerge across software, hardware, and cognitive layers.</p>
+<h3>2. Canonical Registry Location</h3>
+<ul>
+<li><strong>Primary Ledger File:</strong> <code>Portfolio_Dev/field_notes/data/loop_ledger.jsonl</code></li>
+<li><strong>Human Architectural Summary:</strong> <code>Portfolio_Dev/field_notes/data/LOOP_LEDGER.md</code></li>
+</ul>
+<h3>3. Registry Schema &amp; Entry Criteria</h3>
+<p>Every feedback loop identified in the lab is recorded in the Loop Ledger with the following core dimensions:
+1. <strong>Loop Identifier &amp; Name:</strong> Unique key and descriptive title for the feedback mechanism.
+2. <strong>Vibe &amp; Complexity Driver (<code>VIBE-009</code>):</strong> How this specific loop drives self-correction, backpressure, or anti-fragility in the lab.
+3. <strong>Signal Emitter (Source):</strong> The component, daemon, sentinel, model, or probe generating the feedback signal.
+4. <strong>Signal Consumer (Actuator / Gate):</strong> The downstream receptor that actively ingests the feedback and executes a state transition, retry adjustment, metric gate, or dataset mutation.
+5. <strong>Operational Horizon / Cadence:</strong> The temporal boundary when the loop triggers (e.g., synchronous turn boundary, sub-minute stream, nightly maintenance window, post-sprint closeout).
+6. <strong>Lifecycle State:</strong> Status of the feedback loop (<code>EMERGING</code>, <code>ACTIVE</code>, or <code>REFINED</code>).</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-070</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Composable Projection Topology & Re-Anchoring Protocol (D-1 Law)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature / Vibe Anchor:</strong>  /  /  / <br />
+<strong>Colloquial Alias:</strong> "The D-1 Re-Anchoring Law &amp; Diamond Projection Protocol"<br />
+<strong>Domain:</strong> Architecture, Projections, Mathematics, Writing Systems<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle (D-1 Re-Anchoring Law)</h3>
+<p>Truth is invariant; Presentation is a fluid projection (). To prevent serial generative decay (     o B     o C     o   ext{decay}$), multi-pass and multi-lens projections must <strong>never chain serially over previously generated surface text</strong>.
+* <strong>The Diamond Invariant:</strong> Every projection pass re-anchors to canonical certified bones ($\pi(\mathcal{C})$):
+  102138P = M\Bigl(\sigma_{R_{\text{global}}}\bigl(\rho_{v_{\text{global}}}(\sigma_{R_{\text{local}}}(\rho_{v_{\text{local}}}(\pi(\mathcal{C}))))\bigr)\Bigr)102138
+* <strong>Error Bound:</strong> By projecting from immutable origin bones rather than generated intermediate text, error accumulation is bounded by the worst single step ($\max \lambda_i \eta_i$) instead of compounding exponentially ($\sum \lambda^{k-i} \eta_i$).</p>
+<h3>2. The Invariant Verification Ladder</h3>
+<ol>
+<li><strong>CP-1 (Semantic Closure):</strong> $\pi \circ F_L = \pi$. A projection may rotate stylistic register, but the underlying claim set, citations, and metrics must remain invariant.</li>
+<li><strong>CP-4 (Non-Erosion):</strong> All canonical bones must either appear in the projected view or be explicitly declared as elided in the projection manifest.</li>
+<li><strong>CP-5 (Numeric Literal Integrity):</strong> Numeric literals and metrics are high-hallucination-risk coordinates. Every numeric token in the projected output must exist verbatim in the immutable origin span ($\text{set}(\text{numerics}(P)) \subseteq \text{set}(\text{numerics}(\Omega))$). Violations trigger hard  gates.</li>
+<li><strong>CP-7 (Re-projection Idempotence):</strong> (F_L(\mathcal{C})) = F_L(\mathcal{C})$. Re-projecting an already projected artifact through the same lens must yield byte-identical output (short-circuited via provenance stamps).</li>
+</ol>
+<h3>3. Detector Partitioning Rule</h3>
+<ul>
+<li><strong>Symbolic-Only for Hard Gates:</strong> CP-1, CP-4, CP-5, and CP-7 MUST be evaluated by deterministic symbolic detectors (AST analysis, numeric set-diff, regex, Merkle inclusion proofs) in sub-millisecond execution loops.</li>
+<li><strong>Semantic Detectors for Style Only:</strong> LLM-judge rubrics are strictly reserved for non-truth stylistic evaluations (e.g. tone formality, narrative flow) and must run asynchronously outside critical rendering paths.</li>
+</ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-073</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Document Spine Topology & Self-Contained Version Invariant</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[FEAT-626]</code> / <code>[FEAT-627]</code> / <code>[FEAT-628]</code> / <code>[INS-041]</code><br />
+<strong>Colloquial Alias:</strong> "The Self-Contained Spine &amp; Document-DNA Protocol"<br />
+<strong>Domain:</strong> Architecture, Document Management, Projections, Writing Systems<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Principle</h3>
+<p>Documents are structured trees of conceptual nodes tracked across historical milestones. To prevent destructive overwrites while avoiding sparse micro-file fragmentation, document topology follows the <strong>Self-Contained Milestone Architecture</strong>:
+1. <strong>Self-Contained Version Artifacts (<code>PAPER-&lt;id&gt;_&lt;version&gt;.json</code>):</strong> Every certified major milestone (<code>v1</code>, <code>v2_recruiter</code>, <code>v3_executive</code>) is stored as a 100% self-contained, human-readable JSON artifact. The file <em>is</em> the verified artifact; no runtime reconstitution engine is required to read or publish a version.
+2. <strong>The Master Spine Manifest (<code>PAPER-&lt;id&gt;_spine.json</code>):</strong> Holds version ancestry lineage (<code>["v1", "v2", "v3"]</code>), cross-version node coordinate mappings (<code>MOVE</code>, <code>REWORD</code>, <code>ADD</code>, <code>DELETE</code>), and the local <strong>Document-Scoped DNA Archive</strong> (<code>document_dna: []</code>).</p>
+<h3>2. Document-Scoped DNA &amp; Horizontal Lab Promotion Gate</h3>
+<ol>
+<li><strong>Quarantine by Default:</strong> Bullet-level lessons, citations, and draft notes are assigned local IDs (<code>DOC-&lt;paper_slug&gt;-&lt;idx&gt;</code>) and quarantined inside <code>PAPER-&lt;id&gt;_spine.json</code>. They never pollute global vector memory during active drafting.</li>
+<li><strong>The Graduation Gate (<code>BKM-060</code>):</strong> When a document-scoped insight demonstrates broad, lab-wide architectural utility ($\ge 0.85$ transfer score), a human or agent executes <code>promote_to_lab_dna()</code>. The record is minted as permanent global DNA (<code>WIS-xxx</code> or <code>INS-xxx</code>), appended to <code>wisdom_data.json</code>, and synced to ChromaDB <code>:8001</code>.</li>
+</ol>
+<h3>3. Operational Invariants</h3>
+<ol>
+<li><strong>Zero Sparse Micro-Files:</strong> The filesystem stores complete paper AST versions and the spine manifest; fragmented single-node files (<code>bones/&lt;node_id&gt;.json</code>) are strictly barred.</li>
+<li><strong>Single-Node Sandbox Boundary:</strong> Interactive LLM dialectics, revision blending, and "Reason Why" validations occur in the single-node sandbox (<code>projection_studio.html</code>) before approved mutations are stamped into complete paper versions.</li>
+<li><strong>Lens Projection Invariant:</strong> Projections evaluate against the active Lens rubric; quality inversions (newer version worse than older) trigger immediate warnings regardless of lens.</li>
+</ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-077</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Conversational Ball-Tracking & Actionable Item Ledger (BALL_TRACK)</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
                                 <p><strong>Feature Anchor:</strong> <code>[FEAT-649]</code> / <code>[BKM-077]</code> / <code>[BKM-004]</code> / <code>[BKM-006]</code><br />
