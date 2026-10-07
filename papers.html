@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Published Papers &amp; Projections — Federated Lab</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-color: #c9d1d9;
+            --text-bright: #f0f6fc;
+            --sub-color: #8b949e;
+            --accent-color: #58a6ff;
+            --green-glow: #3fb950;
+            --amber-glow: #d29922;
+            --font-serif: "Merriweather", "Georgia", "Cambria", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .top-nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin-bottom: 24px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+        }
+        .nav-brand a {
+            color: var(--text-bright);
+            text-decoration: none;
+        }
+        .paper-selector-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        .paper-selector-label {
+            color: var(--sub-color);
+            font-weight: 600;
+        }
+        .paper-select {
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            color: var(--text-bright);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+        .paper-select:focus {
+            border-color: var(--accent-color);
+        }
+        .paper-card-container {
+            display: none;
+        }
+        .paper-card-container.active {
+            display: block;
+        }
+        .paper-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+        .paper-main-title {
+            font-size: 2.1rem;
+            color: var(--text-bright);
+            font-family: var(--font-serif);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--sub-color);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: var(--sub-color);
+            flex-wrap: wrap;
+        }
+        .drift-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(63, 185, 80, 0.15);
+            border: 1px solid var(--green-glow);
+            color: var(--green-glow);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        /* View Switcher Tabs */
+        .view-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 28px;
+            background: var(--card-bg);
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+        .view-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--sub-color);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .view-tab-btn.active {
+            background: #21262d;
+            color: var(--text-bright);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            border: 1px solid var(--accent-color);
+        }
+        /* View Containers */
+        .view-content {
+            display: none;
+        }
+        .view-content.active {
+            display: block;
+        }
+        /* Formal View Styling */
+        .formal-view {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            background: #12161c;
+            padding: 36px 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .section-title {
+            font-size: 1.35rem;
+            color: var(--text-bright);
+            margin: 24px 0 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        .formal-p {
+            margin-bottom: 16px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .cite-pill {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            background: rgba(88, 166, 255, 0.12);
+            color: var(--accent-color);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            padding: 1px 5px;
+            border-radius: 4px;
+            margin-left: 4px;
+            cursor: help;
+        }
+        /* Executive View Styling */
+        .exec-view {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .exec-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .exec-heading {
+            font-size: 1.15rem;
+            color: var(--text-bright);
+            margin-bottom: 12px;
+        }
+        .exec-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .exec-list li {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .exec-dim {
+            color: var(--sub-color);
+            font-size: 0.88rem;
+        }
+        /* Story Narrative View Styling */
+        .story-view {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .story-chapter {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+        }
+        .story-title {
+            font-size: 1.25rem;
+            color: var(--amber-glow);
+            margin-bottom: 14px;
+        }
+        .story-par-block {
+            margin-bottom: 16px;
+        }
+        .story-p {
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .narrative-epigraph {
+            background: rgba(210, 153, 34, 0.08);
+            border-left: 3px solid var(--amber-glow);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: var(--sub-color);
+        }
+        .epigraph-anchor {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: var(--amber-glow);
+        }
+        .epigraph-author {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.78rem;
+            color: var(--sub-color);
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--sub-color);
+        }
+    </style>
+    <script src="mission-control.js?v=papers" defer></script>
+</head>
+<body>
+    <mission-control></mission-control>
+    <div class="container">
+        <!-- Top Navigation Bar with Paper Selector -->
+        <nav class="top-nav-bar">
+            <div class="nav-brand">
+                <span>📚 Sovereign Papers Showcase</span>
+            </div>
+            <div class="paper-selector-group">
+                <label for="paper-selector" class="paper-selector-label">Active Document:</label>
+                <select id="paper-selector" class="paper-select">
+                    <option value="paper_jitc" selected>Just in time context retrieval and synthesis</option><option value="paper_semantic_packing" >🧬 Semantic Packing, Ideographic DNA &amp; The Voice Vector Space</option><option value="paper_resume_v1" >Jason Allred - Technical Resume &amp; CV</option><option value="paper_resume_v2" >Jason Allred - Technical Resume &amp; CV</option>
+                </select>
+            </div>
+        </nav>
+
+        <!-- Paper Cards Container -->
+        <div id="papers-deck">
+            
+    <section id="paper-card-paper_jitc" class="paper-card-container" data-paper-id="paper_jitc">
+        <header class="paper-header">
+            <h1 class="paper-main-title">Just in time context retrieval and synthesis</h1>
+            <div class="subtitle">Applied armchair philosophy</div>
+            <div class="meta-bar">
+                <span>✍️ Jason Allred</span>
+                <span>📅 2026-09-05</span>
+                <span class="drift-badge">🛡️ Cross-View Drift: 0.0%</span>
+            </div>
+        </header>
+
+        <!-- View Navigation Tabs -->
+        <nav class="view-switcher" data-paper-target="paper_jitc">
+            <button class="view-tab-btn active" data-view="formal">🔬 Formal Academic View</button>
+            <button class="view-tab-btn" data-view="executive">💼 Executive Summary</button>
+            <button class="view-tab-btn" data-view="story">📖 Narrative &amp; Origins</button>
+        </nav>
+
+        <!-- View 1: Formal Academic -->
+        <div id="view-formal-paper_jitc" class="view-content active">
+            <article class="formal-view">
+                
+        <div class="paper-section">
+            <h2 class="section-title">Section 1 - Introducing the Just in Time Context Loop</h2>
+            <p class="formal-p">Human introduction and ideas: JITC - make it obvious that Section 1 is my side of the collaboration. History: Large context models brute force, RAG, ICM and claude-mem are passive, grep is brittle. <span class="cite-pill" title="Future of AI (three pillars): The attention and matrix computing is done and done. Now it&#x27;s all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary.">PHL-001</span></p><p class="formal-p">“What I have is almost a blog. A collection of ideas that I noticed actually started to work. But measuring is hard. How do I describe a cognitive jump? It&#x27;s more like a strategy guide that worked really well, applied on several levels, and connecting it to a loop allows me to have complex conversations about things only cloud models could talk about. I guess the idea is that cloud models are good like savants with huge memory, but all we need is to design a hippocampus and connect it to a prefontal cortex. What I have are practical notes on building that. <span class="cite-pill" title="LLMs are a prefrontal cortex, cloud models depend on massive short term memory but we don’t need that what we need is to design a Hippocampus and connect it properly, RAG gets us half way there.">PHL-002</span><span class="cite-pill" title="The dual-channel memory architecture replacing monolithic context scaling with runtime dynamic anchor injection, floating up only the exact 2-3 required vectors milliseconds before inference.">DISC-004</span></p><p class="formal-p">LLM’s are a prefrontal cortex, cloud models depend on massive short term memory but we don’t need that what we need is to design a Hippocampus and connect it properly, RAG get’s us half way thare. <span class="cite-pill" title="saving memories-&gt; dreaming (distillation) -&gt; Pearls. Gems (Pearls) of Wisdom - feats, gems, BKM, DNA. Refinement: Refine pearls rather than duplicate ideas. Provide a flow to Blend new ideas together. Building up complex flows with pearls as building blocks - gives bones to give structure and coherence.">PHL-007</span></p><p class="formal-p">Define Intuition as a retrieval problem: unsolicited ideas that bubble up relations and connections. Knowledge -&gt; tagging -&gt; wisdom -&gt; hook/trigger -&gt; intuitive behavior <span class="cite-pill" title="Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing.">PHL-005</span></p><p class="formal-p">Supporting concepts: Like a Last mile math proof - call out unique ideas that connect the dots. Saving memories -&gt; dreaming (distillation) -&gt; Pearls. Gems (Pearls) of Wisdom - feats, gems, BKM, DNA. Tagging Pearls - contextual triggers, comments in code. Tagging: the critical connection. Comments in code serve as flags to references. Automatic indexes. Bringing intuition to the outside world beyond coding would need something similar - something to pop up critical context just in time. Refinement: Refine pearls rather than duplicate ideas. Provide a flow to Blend new ideas together. Providing flows - back pressure feedback loops. Building up complex flows with pearls as building blocks - gives bones to give structure and coherence. JITC is ambient, just in time, and just the relevant information at the right time. Concepts are pre compiled - needs nightly refinement and consolidation. JITC Cycle (Graphic): Describe the JITC Cycle: triage, fingertip context, collection, distillation, classification. <span class="cite-pill" title="Tagging: the critical connection. Comments in code serve as flags to references. Automatic indexes. Bringing intuition to the outside world beyond coding would need something similar - something to pop up critical context just in time.">PHL-006</span><span class="cite-pill" title="">BKM-046</span></p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Section 2 - References &amp; Prior Art</h2>
+            <p class="formal-p">Humble: Standing on the shoulders and all that, this isn&#x27;t a deep math insight, it’s just something that works. Something I built with what is around us, a logical step after integrating papers. <span class="cite-pill" title="">ARXIV:2305.18290</span></p><p class="formal-p">List of supporting documents and arxive links - Prior art etc. - Use AGY to find prior art - specifically leverage and note Research.html. <span class="cite-pill" title="">ARXIV:2401.03462</span></p><p class="formal-p">Feel: AI reply/response and distillation, mirroring a prompt/response flow - this is where I show what AI did to help me write the paper. <span class="cite-pill" title="">PHL-029</span><span class="cite-pill" title="">PHL-030</span></p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Section 3 - Implementations &amp; Empirical Lab Architecture</h2>
+            <p class="formal-p">Demo/Present/Implementation. Describe how ideas work at multiple levels from development to chat. Development hooks, protocols, feature tracker. <span class="cite-pill" title="Guarantees zero downtime and resilient multi-seat speculative triage across heterogeneous APIs (oMLX OpenAI vs Ollama).">FEAT-500</span><span class="cite-pill" title="">FEAT-526</span></p><p class="formal-p">Inside the lab: gems, triage Hyde. Common: JITC - stay positive - fingertips insight for small LLM - DNA scoping - triage classifier &amp; hooks grouping. Decoupling triage and classification. <span class="cite-pill" title="Aligns triage with natural engineer dialogue and prevents feedback from falling into conversational banter.">FEAT-546</span><span class="cite-pill" title="Reduces vector synchronization latency to &lt;15ms, prevents accidental clobbering across unedited cards, and eliminates memory-intensive batch vector re-indexing.">FEAT-568</span></p><p class="formal-p">Idea: tag paper concepts and use JITC Cycle to write this paper - save track refine and mark pearls - throw it in the mixer -&gt; paper. <span class="cite-pill" title="Eliminates concurrent write collisions between human operators and autonomous agents while providing clean git diff tracking for evolving manuscripts.">FEAT-581</span><span class="cite-pill" title="Transitions knowledge management from passive vector lookups to an active, self-healing knowledge foundry.">FEAT-582</span><span class="cite-pill" title="Eliminates LLM latency and hallucination risks during context retrieval by mapping question variants directly to ground-truth wisdom cards.">FEAT-583</span><span class="cite-pill" title="Cuts conversational triage latency by 50% while preventing semantic misalignment across disconnected classification stages.">FEAT-584</span></p>
+        </div>
+        
+            </article>
+        </div>
+
+        <!-- View 2: Executive Brief -->
+        <div id="view-executive-paper_jitc" class="view-content">
+            <div class="exec-view">
+                
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Section 1 - Introducing the Just in Time Context Loop</h3>
+            <ul class="exec-list">
+                <li><strong>Human introduction and ideas: JITC - make it obvious that Section 1 is my side of the collaboration.</strong> <span class="exec-dim">History: Large context models brute force, RAG, ICM and claude-mem are passive, grep is brittle.</span> <span class="cite-pill">PHL-001</span></li><li><strong>“What I have is almost a blog.</strong> <span class="exec-dim">A collection of ideas that I noticed actually started to work. But measuring is hard. How do I describe a cognitive jump? It&#x27;s more like a strategy guide that worked really well, applied on several levels, and connecting it to a loop allows me to have complex conversations about things only cloud models could talk about. I guess the idea is that cloud models are good like savants with huge memory, but all we need is to design a hippocampus and connect it to a prefontal cortex. What I have are practical notes on building that.</span> <span class="cite-pill">PHL-002</span><span class="cite-pill">DISC-004</span></li><li><strong>LLM’s are a prefrontal cortex, cloud models depend on massive short term memory but we don’t need that what we need is to design a Hippocampus and connect it properly, RAG get’s us half way thare.</strong> <span class="exec-dim"></span> <span class="cite-pill">PHL-007</span></li><li><strong>Define Intuition as a retrieval problem: unsolicited ideas that bubble up relations and connections.</strong> <span class="exec-dim">Knowledge -&gt; tagging -&gt; wisdom -&gt; hook/trigger -&gt; intuitive behavior</span> <span class="cite-pill">PHL-005</span></li><li><strong>Supporting concepts: Like a Last mile math proof - call out unique ideas that connect the dots.</strong> <span class="exec-dim">Saving memories -&gt; dreaming (distillation) -&gt; Pearls. Gems (Pearls) of Wisdom - feats, gems, BKM, DNA. Tagging Pearls - contextual triggers, comments in code. Tagging: the critical connection. Comments in code serve as flags to references. Automatic indexes. Bringing intuition to the outside world beyond coding would need something similar - something to pop up critical context just in time. Refinement: Refine pearls rather than duplicate ideas. Provide a flow to Blend new ideas together. Providing flows - back pressure feedback loops. Building up complex flows with pearls as building blocks - gives bones to give structure and coherence. JITC is ambient, just in time, and just the relevant information at the right time. Concepts are pre compiled - needs nightly refinement and consolidation. JITC Cycle (Graphic): Describe the JITC Cycle: triage, fingertip context, collection, distillation, classification.</span> <span class="cite-pill">PHL-006</span><span class="cite-pill">BKM-046</span></li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Section 2 - References &amp; Prior Art</h3>
+            <ul class="exec-list">
+                <li><strong>Humble: Standing on the shoulders and all that, this isn&#x27;t a deep math insight, it’s just something that works.</strong> <span class="exec-dim">Something I built with what is around us, a logical step after integrating papers.</span> <span class="cite-pill">ARXIV:2305.18290</span></li><li><strong>List of supporting documents and arxive links - Prior art etc.</strong> <span class="exec-dim">- Use AGY to find prior art - specifically leverage and note Research.html.</span> <span class="cite-pill">ARXIV:2401.03462</span></li><li><strong>Feel: AI reply/response and distillation, mirroring a prompt/response flow - this is where I show what AI did to help me write the paper.</strong> <span class="exec-dim"></span> <span class="cite-pill">PHL-029</span><span class="cite-pill">PHL-030</span></li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Section 3 - Implementations &amp; Empirical Lab Architecture</h3>
+            <ul class="exec-list">
+                <li><strong>Demo/Present/Implementation.</strong> <span class="exec-dim">Describe how ideas work at multiple levels from development to chat. Development hooks, protocols, feature tracker.</span> <span class="cite-pill">FEAT-500</span><span class="cite-pill">FEAT-526</span></li><li><strong>Inside the lab: gems, triage Hyde.</strong> <span class="exec-dim">Common: JITC - stay positive - fingertips insight for small LLM - DNA scoping - triage classifier &amp; hooks grouping. Decoupling triage and classification.</span> <span class="cite-pill">FEAT-546</span><span class="cite-pill">FEAT-568</span></li><li><strong>Idea: tag paper concepts and use JITC Cycle to write this paper - save track refine and mark pearls - throw it in the mixer -&gt; paper.</strong> <span class="exec-dim"></span> <span class="cite-pill">FEAT-581</span><span class="cite-pill">FEAT-582</span><span class="cite-pill">FEAT-583</span><span class="cite-pill">FEAT-584</span></li>
+            </ul>
+        </div>
+        
+            </div>
+        </div>
+
+        <!-- View 3: Story Narrative -->
+        <div id="view-story-paper_jitc" class="view-content">
+            <div class="story-view">
+                
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Section 1 - Introducing the Just in Time Context Loop</h2>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 PHL-001</span>:
+                        <em>"Future of AI (three pillars): The attention and matrix computing is done and done. Now it&#x27;s all about memory and feedback. Layering feedback loops and back pressure for self correction, and database distilling and just in time context lookup (JITC) (they combine with matrix computing and attention well). Then feeding that all back into the databases. Long term memory, filtering, floating up what you need instead of memorizing the whole dictionary."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                <p class="story-p">Human introduction and ideas: JITC - make it obvious that Section 1 is my side of the collaboration. History: Large context models brute force, RAG, ICM and claude-mem are passive, grep is brittle.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 PHL-002</span>:
+                        <em>"LLMs are a prefrontal cortex, cloud models depend on massive short term memory but we don’t need that what we need is to design a Hippocampus and connect it properly, RAG gets us half way there."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 DISC-004</span>:
+                        <em>"The dual-channel memory architecture replacing monolithic context scaling with runtime dynamic anchor injection, floating up only the exact 2-3 required vectors milliseconds before inference."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                <p class="story-p">“What I have is almost a blog. A collection of ideas that I noticed actually started to work. But measuring is hard. How do I describe a cognitive jump? It&#x27;s more like a strategy guide that worked really well, applied on several levels, and connecting it to a loop allows me to have complex conversations about things only cloud models could talk about. I guess the idea is that cloud models are good like savants with huge memory, but all we need is to design a hippocampus and connect it to a prefontal cortex. What I have are practical notes on building that.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 PHL-007</span>:
+                        <em>"saving memories-&gt; dreaming (distillation) -&gt; Pearls. Gems (Pearls) of Wisdom - feats, gems, BKM, DNA. Refinement: Refine pearls rather than duplicate ideas. Provide a flow to Blend new ideas together. Building up complex flows with pearls as building blocks - gives bones to give structure and coherence."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                <p class="story-p">LLM’s are a prefrontal cortex, cloud models depend on massive short term memory but we don’t need that what we need is to design a Hippocampus and connect it properly, RAG get’s us half way thare.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 PHL-005</span>:
+                        <em>"Trust can be quantified as context size. I only trust a model as much as it can remember. Ways to scope around this: Delegation, scoping, levels of design. Token golf not token maxing."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                <p class="story-p">Define Intuition as a retrieval problem: unsolicited ideas that bubble up relations and connections. Knowledge -&gt; tagging -&gt; wisdom -&gt; hook/trigger -&gt; intuitive behavior</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 PHL-006</span>:
+                        <em>"Tagging: the critical connection. Comments in code serve as flags to references. Automatic indexes. Bringing intuition to the outside world beyond coding would need something similar - something to pop up critical context just in time."</em>
+                        <span class="epigraph-author">--- jallred</span>
+                    </div>
+                    
+                <p class="story-p">Supporting concepts: Like a Last mile math proof - call out unique ideas that connect the dots. Saving memories -&gt; dreaming (distillation) -&gt; Pearls. Gems (Pearls) of Wisdom - feats, gems, BKM, DNA. Tagging Pearls - contextual triggers, comments in code. Tagging: the critical connection. Comments in code serve as flags to references. Automatic indexes. Bringing intuition to the outside world beyond coding would need something similar - something to pop up critical context just in time. Refinement: Refine pearls rather than duplicate ideas. Provide a flow to Blend new ideas together. Providing flows - back pressure feedback loops. Building up complex flows with pearls as building blocks - gives bones to give structure and coherence. JITC is ambient, just in time, and just the relevant information at the right time. Concepts are pre compiled - needs nightly refinement and consolidation. JITC Cycle (Graphic): Describe the JITC Cycle: triage, fingertip context, collection, distillation, classification.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Section 2 - References &amp; Prior Art</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Humble: Standing on the shoulders and all that, this isn&#x27;t a deep math insight, it’s just something that works. Something I built with what is around us, a logical step after integrating papers.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">List of supporting documents and arxive links - Prior art etc. - Use AGY to find prior art - specifically leverage and note Research.html.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Feel: AI reply/response and distillation, mirroring a prompt/response flow - this is where I show what AI did to help me write the paper.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Section 3 - Implementations &amp; Empirical Lab Architecture</h2>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-500</span>:
+                        <em>"Guarantees zero downtime and resilient multi-seat speculative triage across heterogeneous APIs (oMLX OpenAI vs Ollama)."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">Demo/Present/Implementation. Describe how ideas work at multiple levels from development to chat. Development hooks, protocols, feature tracker.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-546</span>:
+                        <em>"Aligns triage with natural engineer dialogue and prevents feedback from falling into conversational banter."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-568</span>:
+                        <em>"Reduces vector synchronization latency to &lt;15ms, prevents accidental clobbering across unedited cards, and eliminates memory-intensive batch vector re-indexing."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">Inside the lab: gems, triage Hyde. Common: JITC - stay positive - fingertips insight for small LLM - DNA scoping - triage classifier &amp; hooks grouping. Decoupling triage and classification.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-581</span>:
+                        <em>"Eliminates concurrent write collisions between human operators and autonomous agents while providing clean git diff tracking for evolving manuscripts."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-582</span>:
+                        <em>"Transitions knowledge management from passive vector lookups to an active, self-healing knowledge foundry."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-583</span>:
+                        <em>"Eliminates LLM latency and hallucination risks during context retrieval by mapping question variants directly to ground-truth wisdom cards."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-584</span>:
+                        <em>"Cuts conversational triage latency by 50% while preventing semantic misalignment across disconnected classification stages."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">Idea: tag paper concepts and use JITC Cycle to write this paper - save track refine and mark pearls - throw it in the mixer -&gt; paper.</p>
+            </div>
+            
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <section id="paper-card-paper_semantic_packing" class="paper-card-container" data-paper-id="paper_semantic_packing">
+        <header class="paper-header">
+            <h1 class="paper-main-title">🧬 Semantic Packing, Ideographic DNA &amp; The Voice Vector Space</h1>
+            <div class="subtitle">Applied Armchair Philosophy &amp; Mathematical Decoupling</div>
+            <div class="meta-bar">
+                <span>✍️ Jason Allred &amp; AGY</span>
+                <span>📅 2026-09-25</span>
+                <span class="drift-badge">🛡️ Cross-View Drift: 0.0%</span>
+            </div>
+        </header>
+
+        <!-- View Navigation Tabs -->
+        <nav class="view-switcher" data-paper-target="paper_semantic_packing">
+            <button class="view-tab-btn active" data-view="formal">🔬 Formal Academic View</button>
+            <button class="view-tab-btn" data-view="executive">💼 Executive Summary</button>
+            <button class="view-tab-btn" data-view="story">📖 Narrative &amp; Origins</button>
+        </nav>
+
+        <!-- View 1: Formal Academic -->
+        <div id="view-formal-paper_semantic_packing" class="view-content active">
+            <article class="formal-view">
+                
+        <div class="paper-section">
+            <h2 class="section-title">🧭 Executive Summary &amp; Core Philosophical Law</h2>
+            <p class="formal-p">Across 84 sprints of the Federated Lab, our knowledge representation has evolved from flat text notes to Rank 4/5 gems, polymorphic DNA collections, and structured document ASTs. </p><p class="formal-p">This document synthesizes our discovery of **Semantic Packing**—the ability of discrete DNA tokens to function like **Kanji ideograms**, packing vast operational and architectural meaning into dense conceptual anchors—and formalizes the **Voice Vector Space**, where stylistic expression (adjectives, adverbs, voice, tense, register) is completely decoupled from invariant semantic truth. </p><p class="formal-p">├────────────────────────────────────────────────────────────────────────────────────────┤ </p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🏛️ 1. Lineage: From The &quot;Wisdom System&quot; to Semantic DNA</h2>
+            <p class="formal-p">In the original *Wisdom System* specification (Google Doc `1waDSq7iZ6XmTyVVYtOxrMgkFA_6vFCopCb77wZy4ZQc`), the fundamental constraints were established: </p><p class="formal-p">&gt; *&quot;Notes/gems should remain static, my history is immutable, but context and review notes are interesting additions... Writer.html (formerly paper.html) is where we can visually organize tags and connections into visual buckets, order paragraphs, re-order DNA inside the paragraphs, and edit non-immutable sentences that sync with DNA.&quot;* </p><p class="formal-p">From this immutable baseline, we stumbled upon a profound realization: **A small `FEAT-xxx`, `WIS-xxx`, or `RESUME-xxx` token is an extreme form of conceptual compression.** </p><p class="formal-p">### The &quot;Kanji&quot; Analogy of DNA: In Japanese/Chinese ideographic writing, a single kanji character (e.g. **創** *creation/origination*, **鬱** *dense complexity*, **機** *inflection/mechanism*) is not an arbitrary string of phonemes; it is an encapsulated conceptual schema containing historical etymology, relational gravity, and operational meaning. </p><p class="formal-p">In the Federated Lab, **DNA tokens (`Domain-Named Artifacts`)** function identically: * When an LLM or operator encounters `[FEAT-586]`, it does not read 8 characters—it unpacks the Jacobson-Karels EWMA speculative lead-time equation, dual-engine racing between local vLLM and M5 Air, and asymmetric head-start logic. * When an LLM encounters `[WIS-001]`, it unpacks the 2008 Wireshark CVE-2013-4786 RAKP authentication vulnerability and the lesson to prioritize empirical data over corporate hierarchy. <span class="cite-pill" title="Gives the lab operator complete control over triage latency versus reasoning depth without code refactoring.">FEAT-586</span><span class="cite-pill" title="">WIS-001</span></p><p class="formal-p">### Why LLMs Excel at Ideographic DNA: When reasoning over dense symbolic DAGs, an LLM avoids context window dilution and hallucination drift. The self-attention heads operate directly on the **topological graph of truth**, dramatically increasing reasoning density and computational efficiency. </p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🌌 2. The Voice Vector Space: Adverbs, Adjectives &amp; Style Modifiers</h2>
+            <p class="formal-p">If a DNA card (`[RESUME-042]` or `[WIS-012]`) represents the **Invariant Semantic Noun/Verb Core** (the empirical fact of what was designed, debugged, or proven), then adjectives, adverbs, and styling represent a continuous **Voice Vector Space** ($\vec{v}_{\text{style}}$). <span class="cite-pill" title="">RESUME-042</span><span class="cite-pill" title="">WIS-012</span></p><p class="formal-p">### The Projection Equation: $$\text{Rendered Text} = \mathcal{P}\left(\text{DNA\_Core}, \vec{v}_{\text{style}}\right)$$ </p><p class="formal-p">Where $\vec{v}_{\text{style}}$ is parameterized across four continuous stylistic axes: </p><p class="formal-p">$$\vec{v}_{\text{style}} = \begin{bmatrix} \mathbf{Voice} \\ \mathbf{Tense} \\ \mathbf{Register} \\ \mathbf{Density} \end{bmatrix} = \begin{bmatrix} \text{Active / Direct Ownership } \longleftrightarrow \text{ Passive / Observational} \\ \text{Past Action (Architected) } \longleftrightarrow \text{ Present Continuous (Leading)} \\ \text{Kernel Silicon Jargon } \longleftrightarrow \text{ Executive C-Suite } \longleftrightarrow \text{ ATS Recruiter} \\ \text{1.5-Line Power Bullet } \longleftrightarrow \text{ Deep Narrative Prose } \longleftrightarrow \text{ Academic Footnote} \end{bmatrix}$$ </p><p class="formal-p">▲ Register: Academic / Scientific Voice: Passive ──────────┼──────────► Voice: Active / Ownership (Assisted / Was responsible)  │           (Architected / Spearheaded) ▼ Register: Recruiter / Operational </p><p class="formal-p">### The Invariant Guarantee: Because the underlying DNA atom is immutable, **we can rotate the Voice Vector ($\vec{v}_{\text{style}}$) arbitrarily without corrupting the historical ground truth.** * The same technical achievement can be rendered as a casual blog post, an IEEE manuscript section, or a high-impact executive resume bullet simply by changing the projection vector. </p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🦴 3. The Anatomical Metaphor: Blobs, Bones, Flesh &amp; Ossification</h2>
+            <p class="formal-p">Ungrounded Prose              The Structural Skeleton             Rendered Reality (The &quot;Blob&quot;)                  (DNA / Bones)                  (Fleshed-out Prose) </p><p class="formal-p">* **The Blob:** Pure generative text without DNA citations. It has no structure, shifts shape across prompts, and collapses under adversarial questioning. * **The Bones (DNA Atoms):** `[WIS-012]`, `[FEAT-586]`, `[RESUME-042]`. Discrete, rigid, non-negotiable structural anchors that cannot be warped or hallucinated. * **The Flesh (Voice Vector):** The connective phrasing, rhetoric, adverbs, and register that wrap around the bones to make them readable for a human audience. <span class="cite-pill" title="">WIS-012</span><span class="cite-pill" title="Gives the lab operator complete control over triage latency versus reasoning depth without code refactoring.">FEAT-586</span><span class="cite-pill" title="">RESUME-042</span></p><p class="formal-p">### Directionality: Bone Cluster vs. The Semantic Spine | Structure | Nature | Directionality | Where It Lives | | :--- | :---: | :---: | :--- | | **Bone Cluster** | Relational / Multi-domain | **Unoriented (Constellation)** | ChromaDB vector space &amp; `bone_collections.json`. Facts are related by proximity, not sequence. | | **The Semantic Spine** | Structural / Narrative | **Directional (Linear DAG)** | Inside a Paragraph or Section AST (`PAPER-RESUME_v1.json`). Ordered along a temporal or causal axis ($A \rightarrow B \rightarrow C$). | </p><p class="formal-p">### &quot;Ossification&quot; (DNA Consolidation &amp; Remodeling): * **The Mechanism:** The automated or human-guided fusion of duplicate, fragmented, or slightly divergent DNA cards into a single, hardened canonical anchor (`[WIS-012]`). * When the nightly engine or operator detects $&gt;0.85$ semantic overlap, it triggers **Ossification**, merging the cards and redirecting all downstream spine references to the canonical bone. <span class="cite-pill" title="">WIS-012</span></p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🦴 4. Bone Collections as Multi-Domain Semantic Spines</h2>
+            <p class="formal-p">A **Bone Collection** (`bone_collections.json`) is the semantic spine that consolidates disparate vector spaces across our 8 polymorphic domains: </p><p class="formal-p">├────────────────────────────────────────────────────────────────────────────────────────┤ </p><p class="formal-p">Rather than executing 5 disconnected vector queries across isolated ChromaDB collections, the **Bone Collection** provides a pre-consolidated, axis-aligned skeleton. A &quot;Semantic Paragraph&quot; in `writer.html` attaches to this bone collection, ensuring every sentence is structurally anchored to empirical findings. </p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🔀 4. Mutation Revisions &amp; Variant Swapping</h2>
+            <p class="formal-p">Within our Paper AST (`PAPER-RESUME_v1.json`), nodes can maintain a discrete set of **approved mutations / variants**: </p><p class="formal-p">{ &quot;node_id&quot;: &quot;node_header_title&quot;, &quot;type&quot;: &quot;title&quot;, &quot;active_key&quot;: &quot;datacenter_platform&quot;, &quot;text&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;variants&quot;: { &quot;datacenter_platform&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;ai_infrastructure&quot;: &quot;Lead AI Infrastructure &amp; Telemetry Architect&quot;, &quot;pre_silicon_validation&quot;: &quot;Principal Pre-Silicon &amp; Manageability Validation Architect&quot; } } </p><p class="formal-p">When an author applies a specific **Synthesis Lens** (`[FEAT-594]`): 1. The Lens Engine computes the alignment between the target Job Description / rubric and the available node variants. 2. The UI renders an inline mutation suggestion: `[🔀 Swap Variant: &quot;Lead AI Infrastructure Architect&quot; (96% Match)]`. 3. A single click applies the approved mutation into a new discrete revision (`v2_graded.json`) without destroying the baseline. <span class="cite-pill" title="Bridges high-level editorial and recruiting rubrics with surgical paragraph-level writing, enabling automated tailoring for specific job requisitions.">FEAT-594</span></p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🔄 5. The Two Sides of the Vector Coin: Triage Space vs. Expression Space</h2>
+            <p class="formal-p">Notice the profound duality across the Federated Lab: </p><p class="formal-p">├───────────────────────────────────────────┬────────────────────────────────────────────┤ ├───────────────────────────────────────────┼────────────────────────────────────────────┤ </p><p class="formal-p">Both systems rely on the same fundamental principle: **Decoupling the message from the transport.** </p>
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">🗺️ 6. Sprint 84 Realignment &amp; Tension Audit</h2>
+            <p class="formal-p">We audited all stories in Sprint 84 against this expanded mental model: </p><p class="formal-p">| Story | Focus | Alignment with Semantic Packing &amp; Voice Vectors | Action | | :--- | :--- | :--- | :---: | | **84.1–84.3** | Resume AST &amp; Round-Trip GDoc Export | **Fully Aligned.** Implemented the AST with `variants: { ... }` and preserved ATS layout schema. | ✅ Complete | | **84.4** | Lens Crafter (`/paper/craft_lens`) | **Clarified.** The Lens Crafter compiles the target Voice Vector ($\vec{v}_{\text{style}}$) and rubric rules from raw advice/JDs. | 🎯 Ready | | **84.5** | Paper Grader (`/paper/grade_paper`) | **Clarified.** Evaluates paragraphs against the target Voice Vector and generates 3-tier Review Flags (`PROSE`, `REFINEMENT`, `CONNECTION`). | 🎯 Ready | | **84.6** | `writer.html` Lens Studio UX | **Clarified.** The Lens Studio is the interactive Voice Vector Switcher (`[Base v1]`, `[v2 - Graded]`). | 🎯 Ready | | **84.7** | Review Flags &amp; Triage | **Clarified.** 1-click apply executes AST node mutations and records human decisions in `paper_decisions.json`. | 🎯 Ready | | **84.8** | `[🧠 Expand / Discover]` Arxiv Pass | **Clarified.** Resolves TODO markers into grounded multi-domain Bone Collections. | 🎯 Ready | | **84.9–84.10**| Add/Split Paragraphs &amp; Tree Badges | **Clarified.** Direct structural canvas controls and sidebar bone previews. | 🎯 Ready | </p><p class="formal-p">**Conclusion:** Zero friction or rework required. The stories in Sprint 84 provide the direct, concrete foundation for this entire architectural paradigm! </p>
+        </div>
+        
+            </article>
+        </div>
+
+        <!-- View 2: Executive Brief -->
+        <div id="view-executive-paper_semantic_packing" class="view-content">
+            <div class="exec-view">
+                
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🧭 Executive Summary &amp; Core Philosophical Law</h3>
+            <ul class="exec-list">
+                <li><strong>Across 84 sprints of the Federated Lab, our knowledge representation has evolved from flat text notes to Rank 4/5 gems, polymorphic DNA collections, and structured document ASTs.</strong> <span class="exec-dim"></span> </li><li><strong>This document synthesizes our discovery of **Semantic Packing**—the ability of discrete DNA tokens to function like **Kanji ideograms**, packing vast operational and architectural meaning into dense conceptual anchors—and formalizes the **Voice Vector Space**, where stylistic expression (adjectives, adverbs, voice, tense, register) is completely decoupled from invariant semantic truth.</strong> <span class="exec-dim"></span> </li><li><strong>├────────────────────────────────────────────────────────────────────────────────────────┤.</strong> <span class="exec-dim"></span> </li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🏛️ 1. Lineage: From The &quot;Wisdom System&quot; to Semantic DNA</h3>
+            <ul class="exec-list">
+                <li><strong>In the original *Wisdom System* specification (Google Doc `1waDSq7iZ6XmTyVVYtOxrMgkFA_6vFCopCb77wZy4ZQc`), the fundamental constraints were established:.</strong> <span class="exec-dim"></span> </li><li><strong>&gt; *&quot;Notes/gems should remain static, my history is immutable, but context and review notes are interesting additions..</strong> <span class="exec-dim">. Writer.html (formerly paper.html) is where we can visually organize tags and connections into visual buckets, order paragraphs, re-order DNA inside the paragraphs, and edit non-immutable sentences that sync with DNA.&quot;*</span> </li><li><strong>From this immutable baseline, we stumbled upon a profound realization: **A small `FEAT-xxx`, `WIS-xxx`, or `RESUME-xxx` token is an extreme form of conceptual compression.**.</strong> <span class="exec-dim"></span> </li><li><strong>### The &quot;Kanji&quot; Analogy of DNA: In Japanese/Chinese ideographic writing, a single kanji character (e.g.</strong> <span class="exec-dim">**創** *creation/origination*, **鬱** *dense complexity*, **機** *inflection/mechanism*) is not an arbitrary string of phonemes; it is an encapsulated conceptual schema containing historical etymology, relational gravity, and operational meaning.</span> </li><li><strong>In the Federated Lab, **DNA tokens (`Domain-Named Artifacts`)** function identically: * When an LLM or operator encounters `[FEAT-586]`, it does not read 8 characters—it unpacks the Jacobson-Karels EWMA speculative lead-time equation, dual-engine racing between local vLLM and M5 Air, and asymmetric head-start logic.</strong> <span class="exec-dim">* When an LLM encounters `[WIS-001]`, it unpacks the 2008 Wireshark CVE-2013-4786 RAKP authentication vulnerability and the lesson to prioritize empirical data over corporate hierarchy.</span> <span class="cite-pill">FEAT-586</span><span class="cite-pill">WIS-001</span></li><li><strong>### Why LLMs Excel at Ideographic DNA: When reasoning over dense symbolic DAGs, an LLM avoids context window dilution and hallucination drift.</strong> <span class="exec-dim">The self-attention heads operate directly on the **topological graph of truth**, dramatically increasing reasoning density and computational efficiency.</span> </li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🌌 2. The Voice Vector Space: Adverbs, Adjectives &amp; Style Modifiers</h3>
+            <ul class="exec-list">
+                <li><strong>If a DNA card (`[RESUME-042]` or `[WIS-012]`) represents the **Invariant Semantic Noun/Verb Core** (the empirical fact of what was designed, debugged, or proven), then adjectives, adverbs, and styling represent a continuous **Voice Vector Space** ($\vec{v}_{\text{style}}$).</strong> <span class="exec-dim"></span> <span class="cite-pill">RESUME-042</span><span class="cite-pill">WIS-012</span></li><li><strong>### The Projection Equation: $$\text{Rendered Text} = \mathcal{P}\left(\text{DNA\_Core}, \vec{v}_{\text{style}}\right)$$.</strong> <span class="exec-dim"></span> </li><li><strong>Where $\vec{v}_{\text{style}}$ is parameterized across four continuous stylistic axes:.</strong> <span class="exec-dim"></span> </li><li><strong>$$\vec{v}_{\text{style}} = \begin{bmatrix} \mathbf{Voice} \\ \mathbf{Tense} \\ \mathbf{Register} \\ \mathbf{Density} \end{bmatrix} = \begin{bmatrix} \text{Active / Direct Ownership } \longleftrightarrow \text{ Passive / Observational} \\ \text{Past Action (Architected) } \longleftrightarrow \text{ Present Continuous (Leading)} \\ \text{Kernel Silicon Jargon } \longleftrightarrow \text{ Executive C-Suite } \longleftrightarrow \text{ ATS Recruiter} \\ \text{1.5-Line Power Bullet } \longleftrightarrow \text{ Deep Narrative Prose } \longleftrightarrow \text{ Academic Footnote} \end{bmatrix}$$.</strong> <span class="exec-dim"></span> </li><li><strong>▲ Register: Academic / Scientific Voice: Passive ──────────┼──────────► Voice: Active / Ownership (Assisted / Was responsible)  │           (Architected / Spearheaded) ▼ Register: Recruiter / Operational.</strong> <span class="exec-dim"></span> </li><li><strong>### The Invariant Guarantee: Because the underlying DNA atom is immutable, **we can rotate the Voice Vector ($\vec{v}_{\text{style}}$) arbitrarily without corrupting the historical ground truth.** * The same technical achievement can be rendered as a casual blog post, an IEEE manuscript section, or a high-impact executive resume bullet simply by changing the projection vector.</strong> <span class="exec-dim"></span> </li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🦴 3. The Anatomical Metaphor: Blobs, Bones, Flesh &amp; Ossification</h3>
+            <ul class="exec-list">
+                <li><strong>Ungrounded Prose              The Structural Skeleton             Rendered Reality (The &quot;Blob&quot;)                  (DNA / Bones)                  (Fleshed-out Prose).</strong> <span class="exec-dim"></span> </li><li><strong>* **The Blob:** Pure generative text without DNA citations.</strong> <span class="exec-dim">It has no structure, shifts shape across prompts, and collapses under adversarial questioning. * **The Bones (DNA Atoms):** `[WIS-012]`, `[FEAT-586]`, `[RESUME-042]`. Discrete, rigid, non-negotiable structural anchors that cannot be warped or hallucinated. * **The Flesh (Voice Vector):** The connective phrasing, rhetoric, adverbs, and register that wrap around the bones to make them readable for a human audience.</span> <span class="cite-pill">WIS-012</span><span class="cite-pill">FEAT-586</span><span class="cite-pill">RESUME-042</span></li><li><strong>### Directionality: Bone Cluster vs.</strong> <span class="exec-dim">The Semantic Spine | Structure | Nature | Directionality | Where It Lives | | :--- | :---: | :---: | :--- | | **Bone Cluster** | Relational / Multi-domain | **Unoriented (Constellation)** | ChromaDB vector space &amp; `bone_collections.json`. Facts are related by proximity, not sequence. | | **The Semantic Spine** | Structural / Narrative | **Directional (Linear DAG)** | Inside a Paragraph or Section AST (`PAPER-RESUME_v1.json`). Ordered along a temporal or causal axis ($A \rightarrow B \rightarrow C$). |</span> </li><li><strong>### &quot;Ossification&quot; (DNA Consolidation &amp; Remodeling): * **The Mechanism:** The automated or human-guided fusion of duplicate, fragmented, or slightly divergent DNA cards into a single, hardened canonical anchor (`[WIS-012]`).</strong> <span class="exec-dim">* When the nightly engine or operator detects $&gt;0.85$ semantic overlap, it triggers **Ossification**, merging the cards and redirecting all downstream spine references to the canonical bone.</span> <span class="cite-pill">WIS-012</span></li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🦴 4. Bone Collections as Multi-Domain Semantic Spines</h3>
+            <ul class="exec-list">
+                <li><strong>A **Bone Collection** (`bone_collections.json`) is the semantic spine that consolidates disparate vector spaces across our 8 polymorphic domains:.</strong> <span class="exec-dim"></span> </li><li><strong>├────────────────────────────────────────────────────────────────────────────────────────┤.</strong> <span class="exec-dim"></span> </li><li><strong>Rather than executing 5 disconnected vector queries across isolated ChromaDB collections, the **Bone Collection** provides a pre-consolidated, axis-aligned skeleton.</strong> <span class="exec-dim">A &quot;Semantic Paragraph&quot; in `writer.html` attaches to this bone collection, ensuring every sentence is structurally anchored to empirical findings.</span> </li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🔀 4. Mutation Revisions &amp; Variant Swapping</h3>
+            <ul class="exec-list">
+                <li><strong>Within our Paper AST (`PAPER-RESUME_v1.json`), nodes can maintain a discrete set of **approved mutations / variants**:.</strong> <span class="exec-dim"></span> </li><li><strong>{ &quot;node_id&quot;: &quot;node_header_title&quot;, &quot;type&quot;: &quot;title&quot;, &quot;active_key&quot;: &quot;datacenter_platform&quot;, &quot;text&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;variants&quot;: { &quot;datacenter_platform&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;ai_infrastructure&quot;: &quot;Lead AI Infrastructure &amp; Telemetry Architect&quot;, &quot;pre_silicon_validation&quot;: &quot;Principal Pre-Silicon &amp; Manageability Validation Architect&quot; } }.</strong> <span class="exec-dim"></span> </li><li><strong>When an author applies a specific **Synthesis Lens** (`[FEAT-594]`): 1.</strong> <span class="exec-dim">The Lens Engine computes the alignment between the target Job Description / rubric and the available node variants. 2. The UI renders an inline mutation suggestion: `[🔀 Swap Variant: &quot;Lead AI Infrastructure Architect&quot; (96% Match)]`. 3. A single click applies the approved mutation into a new discrete revision (`v2_graded.json`) without destroying the baseline.</span> <span class="cite-pill">FEAT-594</span></li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🔄 5. The Two Sides of the Vector Coin: Triage Space vs. Expression Space</h3>
+            <ul class="exec-list">
+                <li><strong>Notice the profound duality across the Federated Lab:.</strong> <span class="exec-dim"></span> </li><li><strong>├───────────────────────────────────────────┬────────────────────────────────────────────┤ ├───────────────────────────────────────────┼────────────────────────────────────────────┤.</strong> <span class="exec-dim"></span> </li><li><strong>Both systems rely on the same fundamental principle: **Decoupling the message from the transport.**.</strong> <span class="exec-dim"></span> </li>
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ 🗺️ 6. Sprint 84 Realignment &amp; Tension Audit</h3>
+            <ul class="exec-list">
+                <li><strong>We audited all stories in Sprint 84 against this expanded mental model:.</strong> <span class="exec-dim"></span> </li><li><strong>| Story | Focus | Alignment with Semantic Packing &amp; Voice Vectors | Action | | :--- | :--- | :--- | :---: | | **84.1–84.3** | Resume AST &amp; Round-Trip GDoc Export | **Fully Aligned.** Implemented the AST with `variants: { ..</strong> <span class="exec-dim">. }` and preserved ATS layout schema. | ✅ Complete | | **84.4** | Lens Crafter (`/paper/craft_lens`) | **Clarified.** The Lens Crafter compiles the target Voice Vector ($\vec{v}_{\text{style}}$) and rubric rules from raw advice/JDs. | 🎯 Ready | | **84.5** | Paper Grader (`/paper/grade_paper`) | **Clarified.** Evaluates paragraphs against the target Voice Vector and generates 3-tier Review Flags (`PROSE`, `REFINEMENT`, `CONNECTION`). | 🎯 Ready | | **84.6** | `writer.html` Lens Studio UX | **Clarified.** The Lens Studio is the interactive Voice Vector Switcher (`[Base v1]`, `[v2 - Graded]`). | 🎯 Ready | | **84.7** | Review Flags &amp; Triage | **Clarified.** 1-click apply executes AST node mutations and records human decisions in `paper_decisions.json`. | 🎯 Ready | | **84.8** | `[🧠 Expand / Discover]` Arxiv Pass | **Clarified.** Resolves TODO markers into grounded multi-domain Bone Collections. | 🎯 Ready | | **84.9–84.10**| Add/Split Paragraphs &amp; Tree Badges | **Clarified.** Direct structural canvas controls and sidebar bone previews. | 🎯 Ready |</span> </li><li><strong>**Conclusion:** Zero friction or rework required.</strong> <span class="exec-dim">The stories in Sprint 84 provide the direct, concrete foundation for this entire architectural paradigm!</span> </li>
+            </ul>
+        </div>
+        
+            </div>
+        </div>
+
+        <!-- View 3: Story Narrative -->
+        <div id="view-story-paper_semantic_packing" class="view-content">
+            <div class="story-view">
+                
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🧭 Executive Summary &amp; Core Philosophical Law</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Across 84 sprints of the Federated Lab, our knowledge representation has evolved from flat text notes to Rank 4/5 gems, polymorphic DNA collections, and structured document ASTs.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">This document synthesizes our discovery of **Semantic Packing**—the ability of discrete DNA tokens to function like **Kanji ideograms**, packing vast operational and architectural meaning into dense conceptual anchors—and formalizes the **Voice Vector Space**, where stylistic expression (adjectives, adverbs, voice, tense, register) is completely decoupled from invariant semantic truth.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">├────────────────────────────────────────────────────────────────────────────────────────┤</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🏛️ 1. Lineage: From The &quot;Wisdom System&quot; to Semantic DNA</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">In the original *Wisdom System* specification (Google Doc `1waDSq7iZ6XmTyVVYtOxrMgkFA_6vFCopCb77wZy4ZQc`), the fundamental constraints were established:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">&gt; *&quot;Notes/gems should remain static, my history is immutable, but context and review notes are interesting additions... Writer.html (formerly paper.html) is where we can visually organize tags and connections into visual buckets, order paragraphs, re-order DNA inside the paragraphs, and edit non-immutable sentences that sync with DNA.&quot;*</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">From this immutable baseline, we stumbled upon a profound realization: **A small `FEAT-xxx`, `WIS-xxx`, or `RESUME-xxx` token is an extreme form of conceptual compression.**</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### The &quot;Kanji&quot; Analogy of DNA: In Japanese/Chinese ideographic writing, a single kanji character (e.g. **創** *creation/origination*, **鬱** *dense complexity*, **機** *inflection/mechanism*) is not an arbitrary string of phonemes; it is an encapsulated conceptual schema containing historical etymology, relational gravity, and operational meaning.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-586</span>:
+                        <em>"Gives the lab operator complete control over triage latency versus reasoning depth without code refactoring."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">In the Federated Lab, **DNA tokens (`Domain-Named Artifacts`)** function identically: * When an LLM or operator encounters `[FEAT-586]`, it does not read 8 characters—it unpacks the Jacobson-Karels EWMA speculative lead-time equation, dual-engine racing between local vLLM and M5 Air, and asymmetric head-start logic. * When an LLM encounters `[WIS-001]`, it unpacks the 2008 Wireshark CVE-2013-4786 RAKP authentication vulnerability and the lesson to prioritize empirical data over corporate hierarchy.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### Why LLMs Excel at Ideographic DNA: When reasoning over dense symbolic DAGs, an LLM avoids context window dilution and hallucination drift. The self-attention heads operate directly on the **topological graph of truth**, dramatically increasing reasoning density and computational efficiency.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🌌 2. The Voice Vector Space: Adverbs, Adjectives &amp; Style Modifiers</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">If a DNA card (`[RESUME-042]` or `[WIS-012]`) represents the **Invariant Semantic Noun/Verb Core** (the empirical fact of what was designed, debugged, or proven), then adjectives, adverbs, and styling represent a continuous **Voice Vector Space** ($\vec{v}_{\text{style}}$).</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### The Projection Equation: $$\text{Rendered Text} = \mathcal{P}\left(\text{DNA\_Core}, \vec{v}_{\text{style}}\right)$$</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Where $\vec{v}_{\text{style}}$ is parameterized across four continuous stylistic axes:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">$$\vec{v}_{\text{style}} = \begin{bmatrix} \mathbf{Voice} \\ \mathbf{Tense} \\ \mathbf{Register} \\ \mathbf{Density} \end{bmatrix} = \begin{bmatrix} \text{Active / Direct Ownership } \longleftrightarrow \text{ Passive / Observational} \\ \text{Past Action (Architected) } \longleftrightarrow \text{ Present Continuous (Leading)} \\ \text{Kernel Silicon Jargon } \longleftrightarrow \text{ Executive C-Suite } \longleftrightarrow \text{ ATS Recruiter} \\ \text{1.5-Line Power Bullet } \longleftrightarrow \text{ Deep Narrative Prose } \longleftrightarrow \text{ Academic Footnote} \end{bmatrix}$$</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">▲ Register: Academic / Scientific Voice: Passive ──────────┼──────────► Voice: Active / Ownership (Assisted / Was responsible)  │           (Architected / Spearheaded) ▼ Register: Recruiter / Operational</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### The Invariant Guarantee: Because the underlying DNA atom is immutable, **we can rotate the Voice Vector ($\vec{v}_{\text{style}}$) arbitrarily without corrupting the historical ground truth.** * The same technical achievement can be rendered as a casual blog post, an IEEE manuscript section, or a high-impact executive resume bullet simply by changing the projection vector.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🦴 3. The Anatomical Metaphor: Blobs, Bones, Flesh &amp; Ossification</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Ungrounded Prose              The Structural Skeleton             Rendered Reality (The &quot;Blob&quot;)                  (DNA / Bones)                  (Fleshed-out Prose)</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-586</span>:
+                        <em>"Gives the lab operator complete control over triage latency versus reasoning depth without code refactoring."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">* **The Blob:** Pure generative text without DNA citations. It has no structure, shifts shape across prompts, and collapses under adversarial questioning. * **The Bones (DNA Atoms):** `[WIS-012]`, `[FEAT-586]`, `[RESUME-042]`. Discrete, rigid, non-negotiable structural anchors that cannot be warped or hallucinated. * **The Flesh (Voice Vector):** The connective phrasing, rhetoric, adverbs, and register that wrap around the bones to make them readable for a human audience.</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### Directionality: Bone Cluster vs. The Semantic Spine | Structure | Nature | Directionality | Where It Lives | | :--- | :---: | :---: | :--- | | **Bone Cluster** | Relational / Multi-domain | **Unoriented (Constellation)** | ChromaDB vector space &amp; `bone_collections.json`. Facts are related by proximity, not sequence. | | **The Semantic Spine** | Structural / Narrative | **Directional (Linear DAG)** | Inside a Paragraph or Section AST (`PAPER-RESUME_v1.json`). Ordered along a temporal or causal axis ($A \rightarrow B \rightarrow C$). |</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">### &quot;Ossification&quot; (DNA Consolidation &amp; Remodeling): * **The Mechanism:** The automated or human-guided fusion of duplicate, fragmented, or slightly divergent DNA cards into a single, hardened canonical anchor (`[WIS-012]`). * When the nightly engine or operator detects $&gt;0.85$ semantic overlap, it triggers **Ossification**, merging the cards and redirecting all downstream spine references to the canonical bone.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🦴 4. Bone Collections as Multi-Domain Semantic Spines</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">A **Bone Collection** (`bone_collections.json`) is the semantic spine that consolidates disparate vector spaces across our 8 polymorphic domains:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">├────────────────────────────────────────────────────────────────────────────────────────┤</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Rather than executing 5 disconnected vector queries across isolated ChromaDB collections, the **Bone Collection** provides a pre-consolidated, axis-aligned skeleton. A &quot;Semantic Paragraph&quot; in `writer.html` attaches to this bone collection, ensuring every sentence is structurally anchored to empirical findings.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🔀 4. Mutation Revisions &amp; Variant Swapping</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Within our Paper AST (`PAPER-RESUME_v1.json`), nodes can maintain a discrete set of **approved mutations / variants**:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">{ &quot;node_id&quot;: &quot;node_header_title&quot;, &quot;type&quot;: &quot;title&quot;, &quot;active_key&quot;: &quot;datacenter_platform&quot;, &quot;text&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;variants&quot;: { &quot;datacenter_platform&quot;: &quot;Senior Data Center Platform Engineer &amp; Telemetry Architect&quot;, &quot;ai_infrastructure&quot;: &quot;Lead AI Infrastructure &amp; Telemetry Architect&quot;, &quot;pre_silicon_validation&quot;: &quot;Principal Pre-Silicon &amp; Manageability Validation Architect&quot; } }</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                    <div class="narrative-epigraph">
+                        <span class="epigraph-anchor">📜 FEAT-594</span>:
+                        <em>"Bridges high-level editorial and recruiting rubrics with surgical paragraph-level writing, enabling automated tailoring for specific job requisitions."</em>
+                        <span class="epigraph-author">--- Federated Lab</span>
+                    </div>
+                    
+                <p class="story-p">When an author applies a specific **Synthesis Lens** (`[FEAT-594]`): 1. The Lens Engine computes the alignment between the target Job Description / rubric and the available node variants. 2. The UI renders an inline mutation suggestion: `[🔀 Swap Variant: &quot;Lead AI Infrastructure Architect&quot; (96% Match)]`. 3. A single click applies the approved mutation into a new discrete revision (`v2_graded.json`) without destroying the baseline.</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🔄 5. The Two Sides of the Vector Coin: Triage Space vs. Expression Space</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Notice the profound duality across the Federated Lab:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">├───────────────────────────────────────────┬────────────────────────────────────────────┤ ├───────────────────────────────────────────┼────────────────────────────────────────────┤</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">Both systems rely on the same fundamental principle: **Decoupling the message from the transport.**</p>
+            </div>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 🗺️ 6. Sprint 84 Realignment &amp; Tension Audit</h2>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">We audited all stories in Sprint 84 against this expanded mental model:</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">| Story | Focus | Alignment with Semantic Packing &amp; Voice Vectors | Action | | :--- | :--- | :--- | :---: | | **84.1–84.3** | Resume AST &amp; Round-Trip GDoc Export | **Fully Aligned.** Implemented the AST with `variants: { ... }` and preserved ATS layout schema. | ✅ Complete | | **84.4** | Lens Crafter (`/paper/craft_lens`) | **Clarified.** The Lens Crafter compiles the target Voice Vector ($\vec{v}_{\text{style}}$) and rubric rules from raw advice/JDs. | 🎯 Ready | | **84.5** | Paper Grader (`/paper/grade_paper`) | **Clarified.** Evaluates paragraphs against the target Voice Vector and generates 3-tier Review Flags (`PROSE`, `REFINEMENT`, `CONNECTION`). | 🎯 Ready | | **84.6** | `writer.html` Lens Studio UX | **Clarified.** The Lens Studio is the interactive Voice Vector Switcher (`[Base v1]`, `[v2 - Graded]`). | 🎯 Ready | | **84.7** | Review Flags &amp; Triage | **Clarified.** 1-click apply executes AST node mutations and records human decisions in `paper_decisions.json`. | 🎯 Ready | | **84.8** | `[🧠 Expand / Discover]` Arxiv Pass | **Clarified.** Resolves TODO markers into grounded multi-domain Bone Collections. | 🎯 Ready | | **84.9–84.10**| Add/Split Paragraphs &amp; Tree Badges | **Clarified.** Direct structural canvas controls and sidebar bone previews. | 🎯 Ready |</p>
+            </div>
+            
+            <div class="story-par-block">
+                
+                <p class="story-p">**Conclusion:** Zero friction or rework required. The stories in Sprint 84 provide the direct, concrete foundation for this entire architectural paradigm!</p>
+            </div>
+            
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <section id="paper-card-paper_resume_v1" class="paper-card-container" data-paper-id="paper_resume_v1">
+        <header class="paper-header">
+            <h1 class="paper-main-title">Jason Allred - Technical Resume &amp; CV</h1>
+            <div class="subtitle">Sovereign AI Systems Architecture</div>
+            <div class="meta-bar">
+                <span>✍️ Jason Allred</span>
+                <span>📅 2026-09-25</span>
+                <span class="drift-badge">🛡️ Cross-View Drift: 0.0%</span>
+            </div>
+        </header>
+
+        <!-- View Navigation Tabs -->
+        <nav class="view-switcher" data-paper-target="paper_resume_v1">
+            <button class="view-tab-btn active" data-view="formal">🔬 Formal Academic View</button>
+            <button class="view-tab-btn" data-view="executive">💼 Executive Summary</button>
+            <button class="view-tab-btn" data-view="story">📖 Narrative &amp; Origins</button>
+        </nav>
+
+        <!-- View 1: Formal Academic -->
+        <div id="view-formal-paper_resume_v1" class="view-content active">
+            <article class="formal-view">
+                
+        <div class="paper-section">
+            <h2 class="section-title">Target Title</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Professional Summary</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Technical Skills</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Education</h2>
+            
+        </div>
+        
+            </article>
+        </div>
+
+        <!-- View 2: Executive Brief -->
+        <div id="view-executive-paper_resume_v1" class="view-content">
+            <div class="exec-view">
+                
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Target Title</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Professional Summary</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Technical Skills</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Professional Experience</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Education</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+            </div>
+        </div>
+
+        <!-- View 3: Story Narrative -->
+        <div id="view-story-paper_resume_v1" class="view-content">
+            <div class="story-view">
+                
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Target Title</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Professional Summary</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Technical Skills</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Professional Experience</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Education</h2>
+            
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <section id="paper-card-paper_resume_v2" class="paper-card-container" data-paper-id="paper_resume_v2">
+        <header class="paper-header">
+            <h1 class="paper-main-title">Jason Allred - Technical Resume &amp; CV</h1>
+            <div class="subtitle">Sovereign AI Systems Architecture</div>
+            <div class="meta-bar">
+                <span>✍️ Jason Allred</span>
+                <span>📅 2026-09-25</span>
+                <span class="drift-badge">🛡️ Cross-View Drift: 0.0%</span>
+            </div>
+        </header>
+
+        <!-- View Navigation Tabs -->
+        <nav class="view-switcher" data-paper-target="paper_resume_v2">
+            <button class="view-tab-btn active" data-view="formal">🔬 Formal Academic View</button>
+            <button class="view-tab-btn" data-view="executive">💼 Executive Summary</button>
+            <button class="view-tab-btn" data-view="story">📖 Narrative &amp; Origins</button>
+        </nav>
+
+        <!-- View 1: Formal Academic -->
+        <div id="view-formal-paper_resume_v2" class="view-content active">
+            <article class="formal-view">
+                
+        <div class="paper-section">
+            <h2 class="section-title">Target Title</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Professional Summary</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Technical Skills</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+        </div>
+        
+        <div class="paper-section">
+            <h2 class="section-title">Education</h2>
+            
+        </div>
+        
+            </article>
+        </div>
+
+        <!-- View 2: Executive Brief -->
+        <div id="view-executive-paper_resume_v2" class="view-content">
+            <div class="exec-view">
+                
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Target Title</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Professional Summary</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Technical Skills</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Professional Experience</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+        <div class="exec-card">
+            <h3 class="exec-heading">⚡ Education</h3>
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+        
+            </div>
+        </div>
+
+        <!-- View 3: Story Narrative -->
+        <div id="view-story-paper_resume_v2" class="view-content">
+            <div class="story-view">
+                
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Target Title</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Professional Summary</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Technical Skills</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Professional Experience</h2>
+            
+        </div>
+        
+        <div class="story-chapter">
+            <h2 class="story-title">📖 Education</h2>
+            
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    
+        </div>
+
+        <footer>
+            <p>Federated Lab Sovereign Publishing Engine (FEAT-616 • FEAT-589 • BKM-065 • VIBE-008)</p>
+            <p>100% Offline Static Bundle • Zero Live Runtime Dependencies</p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            const paperSelect = document.getElementById('paper-selector');
+            const paperCards = document.querySelectorAll('.paper-card-container');
+
+            function showPaper(pid) {
+                paperCards.forEach(c => {
+                    if (c.getAttribute('data-paper-id') === pid) {
+                        c.classList.add('active');
+                    } else {
+                        c.classList.remove('active');
+                    }
+                });
+            }
+
+            if (paperSelect) {
+                paperSelect.addEventListener('change', function() {
+                    showPaper(this.value);
+                });
+                showPaper(paperSelect.value);
+            }
+
+            // View Tabs Switcher per paper card
+            document.querySelectorAll('.view-switcher').forEach(switcher => {
+                const targetPaperId = switcher.getAttribute('data-paper-target');
+                const buttons = switcher.querySelectorAll('.view-tab-btn');
+                const card = document.getElementById('paper-card-' + targetPaperId);
+                if (!card) return;
+                const views = card.querySelectorAll('.view-content');
+
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetView = btn.getAttribute('data-view');
+                        buttons.forEach(b => b.classList.remove('active'));
+                        views.forEach(v => v.classList.remove('active'));
+
+                        btn.classList.add('active');
+                        const targetEl = document.getElementById('view-' + targetView + '-' + targetPaperId);
+                        if (targetEl) targetEl.classList.add('active');
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

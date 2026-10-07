@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifacts | Jason Allred</title>
+    <link rel="stylesheet" href="style.css?v=9855deef">
+    <style>
+        /* Override Main Max-Width to allow full expansion */
+        main {
+            max-width: none !important;
+            padding-right: 40px; 
+        }
+
+        /* Search Bar & Controls */
+        .controls-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #artifact-search {
+            flex-grow: 1;
+            padding: 10px;
+            background: #222;
+            border: 1px solid #444;
+            color: #fff;
+            font-family: var(--font-stack);
+        }
+
+        .drive-btn {
+            background: #264f78;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .drive-btn:hover { background: #4daafc; color: #000; }
+
+        /* Folder-Like List Layout */
+        .artifact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            font-family: var(--font-stack);
+            font-size: 0.9em;
+        }
+
+        .artifact-row {
+            display: grid;
+            grid-template-columns: 40px minmax(200px, 1.2fr) minmax(300px, 2fr) 100px 80px; /* Rank | Name | Synopsis | Type | Folder */
+            align-items: center;
+            gap: 15px;
+            padding: 8px 15px;
+            border-bottom: 1px solid #333;
+            transition: background 0.1s;
+        }
+
+        .artifact-row:hover {
+            background-color: #222;
+        }
+
+        .header-row {
+            background: #222; 
+            color: #fff; 
+            font-weight: bold; 
+            border-bottom: 2px solid #444;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Rank Styling */
+        .rank-high { color: #ffd700; font-weight: bold; }
+        .rank-med { color: #888; }
+        .rank-low { color: #444; }
+
+        /* Filename */
+        .file-name {
+            color: #4daafc;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* Synopsis */
+        .file-synopsis {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        
+        .rank-5 .file-synopsis, .rank-4 .file-synopsis {
+            color: #fff;
+        }
+
+        /* Type Badge */
+        .type-badge {
+            text-align: center;
+            padding: 2px 0;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+        .type-Script { color: #2a4; background: #0f2215; border: 1px solid #2a4; }
+        .type-Document { color: #4af; background: #0f1922; border: 1px solid #4af; }
+        .type-Log { color: #888; }
+
+        .year-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .year-tab {
+            padding: 8px 16px;
+            background: #222;
+            border: 1px solid #444;
+            cursor: pointer;
+            color: #888;
+        }
+        .year-tab.active {
+            background: var(--heading-color);
+            color: #000;
+            font-weight: bold;
+        }
+        .year-tab:hover { border-color: var(--heading-color); }
+        
+        .folder-link {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .folder-link:hover { color: #4daafc; text-decoration: underline; }
+        
+        .row-has-link .folder-link {
+            color: #4daafc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="menu-toggle">☰ MENU</button>
+
+    <nav id="sidebar">
+        <mission-control></mission-control>
+        <div class="sys-banner">ARTIFACT SCANNER ONLINE</div>
+    </nav>
+
+    <main>
+        <div id="sys-console">
+            <div>[INIT] Artifacts loaded.</div>
+        </div>
+
+        <section>
+            <h2 id="page-title">/home/jason/artifacts</h2>
+            
+            <div class="disclaimer-box">
+                <span style="color: var(--accent-color); font-weight: bold;">[SCAN STATUS]</span> 
+                Deep scan active. Showing classified artifacts.
+                <div id="pinky-status" style="margin-top: 10px; font-size: 0.85em; color: #aaa; border-top: 1px solid #333; padding-top: 10px; line-height: 1.4;">
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div><span style="color: #4daafc; font-weight: bold;">[SYSTEM]</span> <span id="status-text">Uplink Nominal</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[EVENTS]</span> <span id="event-count">---</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[LAST SCAN]</span> <span id="last-file">None</span></div>
+                        <div><span style="color: #4daafc; font-weight: bold;">[LOAD]</span> <span id="sys-load">0.00</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-tabs" id="year-tabs">
+                <!-- Populated via JS -->
+            </div>
+
+            <div class="controls-bar">
+                <input type="text" id="artifact-search" placeholder="Search filename, synopsis, or keywords (e.g. 'PECI')...">
+                <a href="#" id="drive-link" target="_blank" class="drive-btn">
+                    <span>📂</span> Open Folder in Drive
+                </a>
+            </div>
+
+            <div class="artifact-list">
+                <div class="artifact-row header-row">
+                    <div>Rank</div>
+                    <div>Filename</div>
+                    <div>Synopsis</div>
+                    <div>Type</div>
+                    <div style="text-align: center;">Folder</div>
+                </div>
+                <div id="artifact-body">
+                    <div style="padding: 20px; text-align: center; color: #666; grid-column: 1/-1;">Select a year or 'ALL' to load artifacts.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="mission-control.js?v=9f1019d4"></script>
+    <script>
+        const YEARS = ['ALL', 'EXPERTISE', 'DOCS', '2024', '2023', '2022', '2021', '2020', '2019'];
+        const DRIVE_IDS = {
+            'DOCS': '1uZX2RxK49MAd9u46uNDMyXB2eesH-UiE',
+            '2019': '10R02sdAEPRJoWfVdiSPKoM8IvOt1r--4',
+            '2020': '1o1yy8SYFy1dfegCdMSvvhyg-MX0XEoVF',
+            '2021': '1C89A22SDuwJApIf6SMbmT4Lq9J_T7u56',
+            '2022': '1yB6_dKNI-LJFMcBB8nP_Hm-IPcyXh2ET',
+            '2023': '1y7jc5d1im066JuWbRfe1iEQRqnrt-6-q',
+            '2024': '1Cq7gZsIlkiHlOvdWxDgRHxGTIWErPYu0'
+        };
+
+        const consoleEl = document.getElementById('sys-console');
+        let currentArtifacts = [];
+        let activeYear = 'ALL';
+
+        function log(msg) {
+            const div = document.createElement('div');
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            consoleEl.appendChild(div);
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+
+        function renderTabs() {
+            const container = document.getElementById('year-tabs');
+            container.innerHTML = YEARS.map(y => 
+                `<div class="year-tab ${y === activeYear ? 'active' : ''}" onclick="loadYear('${y}')">${y}</div>`
+            ).join('');
+        }
+
+        function renderList(data) {
+            const container = document.getElementById('artifact-body');
+            if (data.length === 0) {
+                container.innerHTML = '<div style="padding: 20px; text-align: center; color: #666; grid-column: 1/-1;">No matching artifacts found.</div>';
+                return;
+            }
+
+            container.innerHTML = data.map(item => {
+                const rankClass = (item.rank >= 4) ? 'rank-high' : (item.rank <= 2) ? 'rank-low' : 'rank-med';
+                const rowClass = (item.rank >= 5) ? 'rank-5' : '';
+                const stars = "★".repeat(item.rank || 0);
+                
+                // Determine Folder Label and Link
+                const hasLink = !!item.drive_id;
+                const folderLabel = hasLink ? 'LINK' : (item.year || activeYear);
+                let driveUrl = "#";
+                
+                // Direct File Link if drive_id is present
+                if (item.drive_id) {
+                    driveUrl = `https://drive.google.com/open?id=${item.drive_id}`;
+                } else if (DRIVE_IDS[folderLabel] || DRIVE_IDS[activeYear]) {
+                    const targetFolder = DRIVE_IDS[folderLabel] || DRIVE_IDS[activeYear];
+                    driveUrl = `https://drive.google.com/drive/folders/${targetFolder}`;
+                }
+
+                const hasLinkClass = hasLink ? 'row-has-link' : '';
+
+                return `
+                <div class="artifact-row ${rowClass} ${hasLinkClass}">
+                    <div class="${rankClass}" title="Rank: ${item.rank}">${stars}</div>
+                    <div class="file-name" title="${item.filename}">${item.filename}</div>
+                    <div class="file-synopsis" title="${item.synopsis}">${item.synopsis || ""}</div>
+                    <div class="type-badge type-${item.type}">${item.type}</div>
+                    <div style="text-align: center;"><a href="${driveUrl}" target="_blank" class="folder-link" title="${hasLink ? 'Open File in Drive' : 'Open Folder in Drive'}">${folderLabel}</a></div>
+                </div>`;
+            }).join('');
+        }
+
+        async function loadYear(year) {
+            activeYear = year;
+            log(`Loading sector: ${year}...`);
+            renderTabs();
+            document.getElementById('page-title').textContent = `/home/jason/artifacts/${year}`;
+            
+            // Update Header Drive Button
+            const driveBtn = document.getElementById('drive-link');
+            if (DRIVE_IDS[year]) {
+                driveBtn.href = `https://drive.google.com/drive/folders/${DRIVE_IDS[year]}`;
+                driveBtn.style.display = 'flex';
+            } else {
+                driveBtn.style.display = (year === 'ALL') ? 'none' : 'flex';
+            }
+
+            const container = document.getElementById('artifact-body');
+            container.innerHTML = '<div style="padding: 20px; text-align: center; grid-column: 1/-1;">Scanning...</div>';
+
+            try {
+                let mergedData = [];
+                if (year === 'ALL') {
+                    // Load all known years + DOCS
+                    const targets = YEARS.filter(y => y !== 'ALL');
+                    for (const t of targets) {
+                        try {
+                            const res = await fetch(`data/artifacts_${t}.json?t=${new Date().getTime()}`);
+                            if (res.ok) {
+                                const d = await res.json();
+                                mergedData = mergedData.concat(d.map(item => ({...item, year: t})));
+                            }
+                        } catch(e) {}
+                    }
+                } else {
+                    const response = await fetch(`data/artifacts_${year}.json?t=${new Date().getTime()}`);
+                    if (!response.ok) throw new Error("Sector map not found");
+                    const d = await response.json();
+                    mergedData = d.map(item => ({...item, year: year}));
+                }
+                
+                // Sort by Rank DESC
+                mergedData.sort((a, b) => (b.rank || 0) - (a.rank || 0));
+                
+                currentArtifacts = mergedData;
+                renderList(currentArtifacts);
+                
+                const aiCount = mergedData.filter(i => i.method === 'AI').length;
+                const hCount = mergedData.filter(i => i.method === 'Heuristic').length;
+                log(`Mount successful. Records: ${mergedData.length} (AI: ${aiCount}, Heuristic: ${hCount})`);
+
+            } catch (e) {
+                log(`Mount failed for ${year}: ${e.message}`, 'err');
+                container.innerHTML = `<div style="padding: 20px; text-align: center; color: #d55; grid-column: 1/-1;">[ERROR] ${e.message}. Run scan_artifacts.py</div>`;
+                currentArtifacts = [];
+            }
+        }
+
+        // Search Filter
+        document.getElementById('artifact-search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = currentArtifacts.filter(item => {
+                const text = (item.filename + " " + item.synopsis + " " + (item.keywords || []).join(" ")).toLowerCase();
+                return text.includes(term);
+            });
+            renderList(filtered);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch Global Status
+            fetch('data/status.json?t=' + new Date().getTime())
+                .then(r => r.json())
+                .then(status => {
+                    document.getElementById('status-text').textContent = status.status || "UNKNOWN";
+                    document.getElementById('event-count').textContent = status.total_events || "---";
+                    document.getElementById('last-file').textContent = status.last_file || "None";
+                });
+
+            // Fetch Live Load
+            fetch('http://localhost:9090/api/v1/query?query=node_load1')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.status === 'success' && data.data.result.length > 0) {
+                        const load = parseFloat(data.data.result[0].value[1]).toFixed(2);
+                        document.getElementById('sys-load').textContent = load;
+                    }
+                })
+                .catch(() => { document.getElementById('sys-load').textContent = "OFFLINE"; });
+
+            loadYear('ALL');
+        });
+    </script>
+</body>
+</html>

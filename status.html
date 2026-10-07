@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // [FEAT-223] Global Error Sentry
+        window.addEventListener('error', function(e) {
+            const msg = `[CRITICAL UI ERROR] ${e.message} at ${e.filename || 'inline'}:${e.lineno || '?'}`;
+            console.error(msg);
+            const report = () => {
+                const consoleEl = document.getElementById('chat-console') || document.getElementById('sys-console');
+                if (consoleEl) {
+                    const errDiv = document.createElement('div');
+                    errDiv.style.color = '#f85149';
+                    errDiv.style.fontWeight = 'bold';
+                    errDiv.style.borderLeft = '2px solid #f85149';
+                    errDiv.style.paddingLeft = '10px';
+                    errDiv.style.marginTop = '10px';
+                    errDiv.innerText = msg;
+                    consoleEl.appendChild(errDiv);
+                    consoleEl.scrollTop = consoleEl.scrollHeight;
+                }
+            };
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', report);
+            else report();
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Status | Jason Allred</title>
+    <link rel="stylesheet" href="style.css?v=9855deef">
+    <style>
+        .vitals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .vital-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .vital-label { font-size: 0.75rem; color: #888; text-transform: uppercase; margin-bottom: 5px; }
+        .vital-value { font-size: 1.2rem; font-weight: bold; font-family: var(--font-stack); }
+        
+        /* Burn Progress Bar */
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            height: 4px;
+            margin-top: 10px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #007bff, var(--accent-color));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .status-led {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .led-online { background: #28a745; box-shadow: 0 0 5px #28a745; }
+        .led-offline { background: #dc3545; box-shadow: 0 0 5px #dc3545; }
+        .led-busy { background: #ffc107; box-shadow: 0 0 5px #ffc107; }
+        .led-yielded { background: #007bff; box-shadow: 0 0 5px #007bff; }
+
+        /* Telemetry Section */
+        .telemetry-tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        .telemetry-tab {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            color: #888;
+            padding: 8px 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .telemetry-tab.active {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        .telemetry-box {
+            background: #000;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            min-height: 400px;
+        }
+        iframe { width: 100%; height: 400px; border: none; }
+
+        /* Tree Overrides for Status */
+        .alert-item {
+            padding: 5px 15px;
+            margin-bottom: 5px;
+            font-family: var(--font-stack);
+            font-size: 0.85rem;
+            border-left: 2px solid transparent;
+        }
+        .severity-critical { color: #ff3b30; font-weight: bold; border-left-color: #ff3b30; background: rgba(255,59,48,0.08); margin-bottom: 10px; padding: 10px 15px; border-top: 1px solid #661111; border-bottom: 1px solid #661111; border-right: 1px solid #661111; }
+        .severity-warning { color: #ffcc00; font-weight: bold; border-left-color: #ffcc00; background: rgba(255,204,0,0.05); margin-bottom: 10px; padding: 10px 15px; border-top: 1px solid #443300; border-bottom: 1px solid #443300; border-right: 1px solid #443300; }
+        .severity-info { color: #888; border-left-color: #444; background: rgba(255,255,255,0.02); }
+        .source-acme { border-left-color: #58a6ff !important; background: rgba(88, 166, 255, 0.04); color: #c9d1d9; }
+        .has-artifact { border-left-color: #3fb950 !important; background: rgba(63, 185, 80, 0.05) !important; color: #c9d1d9; }
+        .source-judge { border-left-color: #ffc107 !important; background: rgba(255, 193, 7, 0.06) !important; color: #c9d1d9; }
+        .judge-badge { color: #ffc107; background: rgba(255, 193, 7, 0.12); border: 1px solid #ffc107; border-radius: 3px; padding: 0 5px; margin-left: 6px; font-size: 0.72em; font-weight: bold; letter-spacing: 0.5px; }
+        .alert-item { transition: all 0.2s ease; cursor: pointer; }
+        .alert-item:hover { background: rgba(255,255,255,0.05); border-right: 2px solid var(--accent-color); }
+        .inline-terminal { display: none; background: #000; border: 1px solid #333; padding: 6px 10px; font-family: monospace; font-size: 0.75rem; line-height: 1.3; color: #aaa; margin: 4px 0 6px 0; overflow-x: auto; white-space: normal; border-left: 2px solid var(--accent-color); }
+        .markdown-body { color: #ccc; line-height: 1.6; }
+        .markdown-body h1, .markdown-body h2 { color: var(--accent-color); margin-top: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .markdown-body ul { padding-left: 20px; }
+        .markdown-body li { margin-bottom: 5px; }
+        .markdown-body a { color: #4daafc; text-decoration: none; border-bottom: 1px dashed #444; position: relative; z-index: 10; pointer-events: auto; }
+        .markdown-body a:hover { color: #ffffff; border-bottom-style: solid; }
+        .markdown-body p { margin: 5px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 5px 0; }
+        .markdown-body h1, .markdown-body h2, .markdown-body h3 { margin: 10px 0 5px 0; }
+        
+        .alert-meta { font-size: 0.7rem; color: #555; margin-right: 10px; }
+        .alert-header { cursor: pointer; display: block; width: 100%; }
+        .alert-header:hover { opacity: 0.8; }
+        
+        .log-tree-container { margin-top: 20px; }
+
+        /* Remote Control Suite */
+        .control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .control-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #444;
+            color: #eee;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .control-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent-color); }
+        .control-btn:active { transform: translateY(2px); }
+        .control-btn .status-led { margin-right: 0; }
+        .control-btn.btn-danger:hover { border-color: #f85149; color: #f85149; }
+        .control-btn.locked { opacity: 0.5; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+
+    <button id="menu-toggle">☰ MENU</button>
+
+    <nav id="sidebar">
+        <mission-control></mission-control>
+    </nav>
+
+    <main>
+        <div id="sys-console">
+            <div>[INIT] Uplink established. Monitoring telemetry...</div>
+        </div>
+
+        <div id="discrepancy-sentry-banner" style="display:none; margin-bottom: 20px; padding: 12px 16px; background: rgba(248, 81, 73, 0.15); border: 1px solid #f85149; border-radius: 6px; color: #ff7b72; font-family: monospace; font-size: 0.85rem; line-height: 1.4;"></div>
+
+        <section id="vitals">
+            <h2 class="section-title">Live Lab Vitals</h2>
+            <div class="vitals-grid">
+                <div class="vital-card">
+                    <div class="vital-label">Scanner Engine <span class="vital-health-badge" id="scanner-health-badge"></span></div>
+                    <div class="vital-value" id="scanner-status"><span class="status-led led-offline"></span>OFFLINE</div>
+                    <div class="progress-container"><div class="progress-bar" id="burn-progress"></div></div>
+                </div>
+                <div class="vital-card">
+                    <div class="vital-label">Bicameral State <span class="vital-health-badge" id="engine-health-badge"></span></div>
+                    <div class="vital-value" id="engine-mode"><span class="status-led led-offline"></span>OPERATIONAL</div>
+                    <div id="ignition-reason" style="font-size: 0.7em; color: #666; margin-top: 4px; font-family: monospace;">[UNITY-3B]</div>
+                </div>
+                <div class="vital-card">
+                    <div class="vital-label">Active Model <span class="vital-health-badge" id="model-health-badge"></span></div>
+                    <div class="vital-value" id="model-name">Llama-3.2-3B-AWQ</div>
+                </div>
+                <div class="vital-card">
+                    <div class="vital-label">Web Intercom <span class="vital-health-badge" id="intercom-health-badge"></span></div>
+                    <div class="vital-value" id="intercom-status"><span class="status-led led-yielded"></span>HIBERNATING</div>
+                </div>
+                <div class="vital-card" id="job-hunt-card" style="display:none; border-left-color: #ffc107;">
+                    <div class="vital-label">Recruiter Brief <span class="vital-health-badge" id="job-health-badge"></span></div>
+                    <div class="vital-value" id="job-status"><span id="job-led" class="status-led led-online"></span>IDLE</div>
+                    <div id="job-meta" style="font-size: 0.7rem; color: #888; margin-top: 5px;"></div>
+                </div>
+            </div>
+            <div id="scanner-message" style="color: #666; font-size: 0.8rem; margin-top: -20px; margin-bottom: 20px; font-family: monospace;"></div>
+        </section>
+
+        <section id="remote-control">
+            <h2 class="section-title">Remote Lab Control</h2>
+            <div class="control-grid" style="grid-template-columns: repeat(5, 1fr);">
+                <div class="control-btn" onclick="triggerLabAction('wake')">
+                    <span class="status-led led-online"></span>
+                    Wake
+                </div>
+                <div class="control-btn" onclick="triggerLabAction('sleep')">
+                    <span class="status-led led-online" style="background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+                    Sleep
+                </div>
+                <div class="control-btn" onclick="triggerLabAction('reload_residents')">
+                    <span class="status-led led-online" style="background-color: #a371f7; box-shadow: 0 0 8px #a371f7;"></span>
+                    Reset
+                </div>
+                <div class="control-btn" onclick="triggerLabAction('lock')">
+                    <span class="status-led led-busy"></span>
+                    Lock
+                </div>
+                <div class="control-btn btn-danger" onclick="triggerLabAction('shutdown')">
+                    <span class="status-led led-offline"></span>
+                    Shutdown
+                </div>
+            </div>
+        </section>
+
+        <section id="telemetry">
+            <h2 class="section-title">Neural Uplink Telemetry</h2>
+            <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <div class="telemetry-tabs" id="panel-tabs">
+                    <button class="telemetry-tab active" onclick="updatePanel(8, this)">MEMORY</button>
+                    <button class="telemetry-tab" onclick="updatePanel(6, this)">POWER / THERMAL</button>
+                    <button class="telemetry-tab" onclick="updatePanel(4, this)" style="display:none">THERMAL</button>
+                    <button class="telemetry-tab" onclick="updatePanel(10, this)">NETWORK</button>
+                    <button class="telemetry-tab" onclick="updatePanel(2, this)" style="display:none">LOAD</button>
+                    <button class="telemetry-tab" id="sys-graph-tab" onclick="showSysGraph(this)">SYSTEM</button>
+                    <button class="telemetry-tab" onclick="showLedger(this)">LEDGER</button>
+                    <button class="telemetry-tab" onclick="showKpi(this)">KPI</button>
+                    <button class="telemetry-tab" onclick="showRagEval(this)">RAG EVAL</button>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="icon-btn" onclick="updateTime('1h')">1H</button>
+                    <button class="icon-btn active" onclick="updateTime('8h')">8H</button>
+                    <button class="icon-btn" onclick="updateTime('24h')">24H</button>
+                    <button class="icon-btn" onclick="updateTime('7d')">7D</button>
+                </div>
+            </div>
+            <div class="telemetry-box">
+                <iframe id="grafana-main" src="https://monitor.jason-lab.dev/d-solo/pinky-status-01/neural-uplink-status?orgId=1&panelId=8&from=now-8h&to=now&theme=dark"></iframe>
+                <div id="ledger-container" style="display:none; height:400px; overflow-y:auto; padding:15px; background:#000; font-family:monospace;"></div>
+                <div id="kpi-container" style="display:none; height:400px; overflow-y:auto; padding:15px; background:#000;"></div>
+                <div id="sys-graph-container" style="display:none; background:#000; padding:14px;"></div>
+                <div id="rageval-container" style="display:none; height:400px; overflow-y:auto; padding:15px; background:#000; font-family:monospace;"></div>
+                <div style="margin-top: 10px; text-align: center; font-size: 0.8rem; color: #666;">
+                    Mobile users: <a href="https://monitor.jason-lab.dev" target="_blank" style="color: var(--accent-color); text-decoration: underline;">Login to Monitor</a> if telemetry is blocked.
+                </div>
+            </div>
+        </section>
+
+        <section id="logs">
+            <h2 class="section-title">Interleaved System Logs</h2>
+            
+            <div class="timeline-container log-tree-container" id="log-tree-root">
+                <div style="color: #444; padding: 20px;">[WAIT] Sorting priority timeline...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/marked.min.js"></script>
+    <script src="mission-control.js?v=9f1019d4"></script>
+    <script>
+        const iframeMain = document.getElementById('grafana-main');
+        const root = document.getElementById('log-tree-root');
+        const consoleRow = document.getElementById('sys-console');
+        let currentTimeRange = '8h';
+        let currentPanelId = 8;
+        let lastKnownState = "";
+        let lastKnownMsg = "";
+        let currentLabKey = "";
+        let currentLabSession = "";
+
+        function logToConsole(text, color = '#888') {
+            if (!consoleRow) return;
+            const time = new Date().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const div = document.createElement('div');
+            div.style.color = color;
+            div.style.marginBottom = '2px';
+            div.innerText = `[${time}] ${text}`;
+            consoleRow.appendChild(div);
+            consoleRow.scrollTop = consoleRow.scrollHeight;
+            
+            // Keep last 50 lines to prevent DOM bloat
+            while (consoleRow.children.length > 50) {
+                consoleRow.removeChild(consoleRow.firstChild);
+            }
+        }
+
+        // Global Error & Promise Rejection Trap for Live Console Output
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            const fileName = url ? url.split('/').pop() : 'script';
+            logToConsole(`[JS ERROR] ${msg} (${fileName}:${lineNo})`, '#ff3b30');
+            return false;
+        };
+
+        window.addEventListener('unhandledrejection', function(event) {
+            const reason = event.reason ? (event.reason.message || event.reason) : 'Unknown Promise Error';
+            logToConsole(`[UNHANDLED REJECTION] ${reason}`, '#ff3b30');
+        });
+
+        function hideAllContainers() {
+            iframeMain.style.display = 'none';
+            document.getElementById('ledger-container').style.display = 'none';
+            document.getElementById('kpi-container').style.display = 'none';
+            document.getElementById('sys-graph-container').style.display = 'none';
+            document.getElementById('rageval-container').style.display = 'none';
+            _stopSysGraph();
+        }
+
+        function updatePanel(id, btn) {
+            currentPanelId = id;
+            const base = "https://monitor.jason-lab.dev/d-solo/pinky-status-01/neural-uplink-status?orgId=1&theme=dark";
+            iframeMain.src = `${base}&panelId=${id}&from=now-${currentTimeRange}&to=now`;
+
+            hideAllContainers();
+            iframeMain.style.display = 'block';
+
+            // UI Toggle
+            document.querySelectorAll('.telemetry-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        async function showLedger(btn) {
+            hideAllContainers();
+            const ledger = document.getElementById('ledger-container');
+            ledger.style.display = 'block';
+            ledger.innerHTML = "<div style='color:var(--accent-color); padding: 20px;'>[LOADING TELEMETRY SNAPSHOTS...]</div>";
+
+            // UI Toggle
+            document.querySelectorAll('.telemetry-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            try {
+                const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                const attendantBase = isLocal ? 'http://localhost:8765' : 'https://acme.jason-lab.dev';
+                const r = await fetch(`${attendantBase}/telemetry_kpi?n=100&t=${Date.now()}`, { credentials: 'include' });
+                if (!r.ok) throw new Error(`Attendant returned ${r.status}. Is the Lab running?`);
+                const payload = await r.json();
+                const samples = (payload.samples || []).reverse().slice(0, 60);
+
+                if (samples.length === 0) {
+                    ledger.innerHTML = "<div style='color:#444; padding:20px; font-family:monospace;'>No telemetry samples yet. Run a query through the Intercom to generate data.</div>";
+                    return;
+                }
+
+                let html = "<table style='width:100%; font-size:0.75rem; border-collapse:collapse; color:#aaa; font-family:monospace;'>";
+                html += "<tr style='color:var(--accent-color); text-align:left; border-bottom:1px solid #333;'>" +
+                        "<th style='padding:6px 8px;'>TIME</th><th>NODE</th><th>TTFT</th>" +
+                        "<th>TOK/S</th><th>TOKENS</th><th>POWER</th><th>J/TOK</th></tr>";
+                samples.forEach(s => {
+                    try {
+                        const ts = new Date(s.timestamp * 1000).toLocaleTimeString([], {hour12:false, hour:'2-digit', minute:'2-digit', second:'2-digit'});
+                        html += `<tr style='border-bottom:1px solid #111;'>` +
+                            `<td style='padding:6px 8px; color:#555;'>${ts}</td>` +
+                            `<td style='color:#e6edf3;'>${s.node || '\u2014'}</td>` +
+                            `<td>${s.ttft_ms ? s.ttft_ms.toFixed(0)+'ms' : '\u2014'}</td>` +
+                            `<td style='color:#3fb950;'>${s.tokens_per_sec ? s.tokens_per_sec.toFixed(1) : '\u2014'}</td>` +
+                            `<td>${s.total_tokens || '\u2014'}</td>` +
+                            `<td style='color:#f78166;'>${s.gpu_power_w ? s.gpu_power_w.toFixed(0)+'W' : '\u2014'}</td>` +
+                            `<td style='color:#d2a8ff;'>${s.joules_per_token ? s.joules_per_token.toFixed(4) : '\u2014'}</td>` +
+                            `</tr>`;
+                    } catch(e) {}
+                });
+                html += "</table>";
+                ledger.innerHTML = html;
+            } catch(err) {
+                ledger.innerHTML = `<div style='color:#f85149; padding:20px; font-family:monospace;'>[ERROR] ${err.message}</div>`;
+            }
+        }
+
+        // ── KPI Sparkline Helpers ──────────────────────────────────────────────
+        function drawSparkline(canvas, values, color) {
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width, h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+            if (!values || values.length < 2) return;
+            const min = Math.min(...values);
+            const max = Math.max(...values);
+            const range = max - min || 1;
+            const step = w / (values.length - 1);
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1.5;
+            values.forEach((v, i) => {
+                const x = i * step;
+                const y = h - ((v - min) / range) * (h - 4) - 2;
+                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+            // Fill under
+            ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+            ctx.fillStyle = color + '22';
+            ctx.fill();
+        }
+
+        function kpiCard(label, value, unit, sparkValues, color, trend) {
+            const id = 'spark_' + label.replace(/[^a-z]/gi, '_');
+            setTimeout(() => {
+                const c = document.getElementById(id);
+                if (c) drawSparkline(c, sparkValues, color);
+            }, 50);
+            return `
+            <div style="background:#0d1117; border:1px solid #30363d; border-left:3px solid ${color}; border-radius:6px; padding:14px 18px; min-width:180px; flex:1;">
+                <div style="font-size:0.65rem; color:#666; letter-spacing:0.12em; margin-bottom:6px;">${label}</div>
+                <div style="font-size:1.6rem; font-weight:700; color:#e6edf3; line-height:1;">${value}<span style="font-size:0.75rem; color:#8b949e; margin-left:4px;">${unit}</span></div>
+                <div style="font-size:0.7rem; color:${trend >= 0 ? '#3fb950' : '#f85149'}; margin-top:4px;">${trend >= 0 ? '▲' : '▼'} ${Math.abs(trend).toFixed(1)}% vs avg</div>
+                <canvas id="${id}" width="160" height="28" style="margin-top:8px; display:block; opacity:0.8;"></canvas>
+            </div>`;
+        }
+
+        async function showRagEval(btn) {
+            hideAllContainers();
+            const container = document.getElementById('rageval-container');
+            container.style.display = 'block';
+            container.innerHTML = "<div style='color:var(--accent-color); padding: 20px;'>[LOADING RAG EVALUATION LEDGER...]</div>";
+
+            document.querySelectorAll('.telemetry-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            try {
+                const r = await fetch(`data/validation_ledger.jsonl?t=${Date.now()}`);
+                if (!r.ok) throw new Error(`Failed to load ledger: ${r.status}`);
+                const text = await r.text();
+                const lines = text.trim().split('\n').filter(l => l.trim().length > 0);
+                
+                if (lines.length === 0) {
+                    container.innerHTML = "<div style='color:#666; padding:20px;'>No validation logs recorded yet.</div>";
+                    return;
+                }
+
+                let passCount = 0;
+                let failCount = 0;
+                let borderCount = 0;
+                let errCount = 0;
+                let sumRecall = 0.0;
+                
+                const parsedEntries = [];
+                for (const line of lines) {
+                    try {
+                        const entry = JSON.parse(line);
+                        if (entry) {
+                            parsedEntries.push(entry);
+                            const verdict = (entry.kender_audit || {}).verdict || "UNKNOWN";
+                            if (verdict === "PASS") passCount++;
+                            else if (verdict === "FAIL") failCount++;
+                            else if (verdict === "BORDERLINE") borderCount++;
+                            else errCount++;
+                            sumRecall += entry.keyword_recall || 0.0;
+                        }
+                    } catch(e) {}
+                }
+
+                parsedEntries.reverse(); // Newest first
+                const avgRecall = parsedEntries.length > 0 ? (sumRecall / parsedEntries.length) * 100 : 0;
+                
+                let html = `
+                    <div style="margin-bottom:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:10px;">
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid #333; padding:10px; border-left: 3px solid var(--accent-color);">
+                            <div style="font-size:0.7rem; color:#888;">EVALUATIONS RUN</div>
+                            <div style="font-size:1.5rem; font-weight:bold; color:#eee;">${parsedEntries.length}</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid #333; padding:10px; border-left: 3px solid #28a745;">
+                            <div style="font-size:0.7rem; color:#888;">PASS RATE</div>
+                            <div style="font-size:1.5rem; font-weight:bold; color:#28a745;">${parsedEntries.length > 0 ? ((passCount/parsedEntries.length)*100).toFixed(1) : 0}%</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid #333; padding:10px; border-left: 3px solid #ffcc00;">
+                            <div style="font-size:0.7rem; color:#888;">AVG RECALL</div>
+                            <div style="font-size:1.5rem; font-weight:bold; color:#ffcc00;">${avgRecall.toFixed(1)}%</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid #333; padding:10px; border-left: 3px solid #ff3b30;">
+                            <div style="font-size:0.7rem; color:#888;">FAIL/ERRORS</div>
+                            <div style="font-size:1.5rem; font-weight:bold; color:#ff3b30;">${failCount + errCount}</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background:rgba(88,166,255,0.05); border:1px solid rgba(88,166,255,0.1); padding:12px; border-radius:4px; font-size:0.75rem; color:#8b949e; margin-bottom:20px; line-height:1.4;">
+                        <strong style="color:#58a6ff;">💡 Ledger Relocation:</strong> Individual RAG query evaluation details (raw query, retrieval paths, keyword lists) are now interleaved in the <strong>Interleaved System Logs</strong> table below as expandable rows. Click on any RAG log header to review detail cards.
+                    </div>
+                `;
+
+                // Fetch and load drafts (Goal 7)
+                let draftsHtml = `<h3 style="color:var(--accent-color); margin-top:30px; margin-bottom:15px; font-size:0.85rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #333; padding-bottom:5px;">Pending Draft Insights (Rank &lt; 4)</h3>`;
+                try {
+                    const years = ["2024", "2023", "2022"];
+                    const drafts = [];
+                    for (const y of years) {
+                        const ry = await fetch(`data/${y}.json?t=${Date.now()}`);
+                        if (ry.ok) {
+                            const events = await ry.json();
+                            for (const ev of events) {
+                                if (ev.rank === undefined || ev.rank < 4) {
+                                    drafts.push(ev);
+                                }
+                            }
+                        }
+                    }
+
+                    if (drafts.length === 0) {
+                        draftsHtml += "<div style='color:#666; font-size:0.75rem; padding:10px;'>No pending low-rank drafts. All events are Diamond-refined (Rank 4).</div>";
+                    } else {
+                        draftsHtml += `<div style="max-height:220px; overflow-y:auto; border:1px solid #222; background:rgba(255,255,255,0.01); padding:10px;">`;
+                        for (const d of drafts) {
+                            const gemId = d.id || "GEM-unknown";
+                            draftsHtml += `
+                                <div style="border-bottom:1px solid #222; padding:8px 0; font-size:0.75rem; line-height:1.4;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                                        <span style="color:#ffcc00; font-weight:bold; font-family:monospace; background:rgba(255,204,0,0.05); padding:2px 6px; border:1px solid rgba(255,204,0,0.1);">${gemId}</span>
+                                        <span style="color:#666;">${d.date}</span>
+                                    </div>
+                                    <div style="color:#ddd; margin-bottom:4px;">${d.summary}</div>
+                                    <div style="color:#666; font-size:0.7rem; font-style:italic;">Evidence: ${d.evidence || 'None'}</div>
+                                    <div style="margin-top:4px;">
+                                        ${(d.tags || []).map(t => `<span style="color:#888; border:1px solid #333; padding:1px 5px; margin-right:4px; font-size:0.65rem;">${t}</span>`).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+                        draftsHtml += `</div>`;
+                    }
+                } catch(err) {
+                    draftsHtml += `<div style='color:#ff3b30; font-size:0.75rem;'>Error loading pending drafts: ${err.message}</div>`;
+                }
+
+                container.innerHTML = html + draftsHtml;
+            } catch (e) {
+                container.innerHTML = `<div style='color:#ff3b30; padding:20px;'>Error loading ledger details: ${e.message}</div>`;
+            }
+        }
+
+        async function showKpi(btn) {
+            hideAllContainers();
+            const kpi = document.getElementById('kpi-container');
+            kpi.style.display = 'block';
+            kpi.innerHTML = "<div style='color:var(--accent-color); padding:20px; font-family:monospace;'>[LOADING KPI SAMPLES...]</div>";
+            document.querySelectorAll('.telemetry-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Detect attendant URL (local vs tunnel)
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const attendantBase = isLocal ? 'http://localhost:8765' : 'https://acme.jason-lab.dev';
+
+            try {
+                const r = await fetch(`${attendantBase}/telemetry_kpi?n=100&t=${Date.now()}`, { credentials: 'include' });
+                if (!r.ok) throw new Error(`Attendant unreachable (${r.status}). Is the Lab running?`);
+                const payload = await r.json();
+                const samples = payload.samples || [];
+
+                if (samples.length === 0) {
+                    kpi.innerHTML = `
+                        <div style='padding:30px; text-align:center; color:#444; font-family:monospace;'>
+                            <div style='font-size:2rem; margin-bottom:10px;'>◌</div>
+                            <div>No KPI samples yet. Run a query through the Intercom to generate data.</div>
+                        </div>`;
+                    return;
+                }
+
+                // Filter to records with actual token data
+                const active = samples.filter(s => s.total_tokens > 0);
+                const gpu = samples.filter(s => s.gpu_power_w > 0);
+
+                const avg = (arr, key) => arr.length ? arr.reduce((a,b) => a + (b[key]||0), 0) / arr.length : 0;
+                const last = (arr, key) => arr.length ? arr[arr.length-1][key] || 0 : 0;
+                const trend = (arr, key) => {
+                    const a = avg(arr, key); const l = last(arr, key);
+                    return a ? ((l - a) / a) * 100 : 0;
+                };
+
+                const ttftVals = active.map(s => s.ttft_ms);
+                const tpsVals = active.map(s => s.tokens_per_sec);
+                const pwrVals = gpu.map(s => s.gpu_power_w);
+                const jtVals = active.filter(s => s.joules_per_token > 0).map(s => s.joules_per_token);
+                const tcoVals = active.filter(s => s.tco_usd > 0).map(s => s.tco_usd * 1e6); // micro-USD
+
+                const latestModel = active.length ? active[active.length-1].model || '—' : '—';
+                const latestEngine = active.length ? active[active.length-1].engine_type || '—' : '—';
+                const totalTokens = active.reduce((a,b) => a + (b.total_tokens||0), 0);
+                const totalQueries = active.length;
+
+                const headerHtml = `
+                    <div style="font-family:monospace; font-size:0.7rem; color:#555; margin-bottom:16px; border-bottom:1px solid #21262d; padding-bottom:8px;">
+                        <span style="color:#8b949e;">ENGINE:</span> ${latestEngine} &nbsp;|&nbsp;
+                        <span style="color:#8b949e;">MODEL:</span> ${latestModel} &nbsp;|&nbsp;
+                        <span style="color:#8b949e;">QUERIES:</span> ${totalQueries} &nbsp;|&nbsp;
+                        <span style="color:#8b949e;">TOTAL TOKENS:</span> ${totalTokens.toLocaleString()}
+                    </div>`;
+
+                const cardsHtml = `<div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+                    ${ttftVals.length ? kpiCard('TTFT', avg(active,'ttft_ms').toFixed(0), 'ms', ttftVals, '#58a6ff', trend(active,'ttft_ms')) : ''}
+                    ${tpsVals.length ? kpiCard('THROUGHPUT', avg(active,'tokens_per_sec').toFixed(1), 'tok/s', tpsVals, '#3fb950', trend(active,'tokens_per_sec')) : ''}
+                    ${pwrVals.length ? kpiCard('GPU POWER', avg(gpu,'gpu_power_w').toFixed(0), 'W', pwrVals, '#f78166', trend(gpu,'gpu_power_w')) : ''}
+                    ${jtVals.length ? kpiCard('J / TOKEN', avg(active.filter(s=>s.joules_per_token>0),'joules_per_token').toFixed(4), 'J', jtVals, '#d2a8ff', 0) : ''}
+                    ${tcoVals.length ? kpiCard('SYNTHETIC TCO', avg(active.filter(s=>s.tco_usd>0).map(s=>({tco_usd:s.tco_usd*1e6})),'tco_usd').toFixed(2), 'µ$', tcoVals, '#ffa657', 0) : ''}
+                </div>`;
+
+                // Recent query table
+                const recent = [...active].reverse().slice(0, 15);
+                let tableHtml = `<div style="font-size:0.65rem; color:#666; letter-spacing:0.1em; margin-bottom:8px;">RECENT GENERATIONS</div>
+                    <table style="width:100%; font-size:0.75rem; border-collapse:collapse; color:#8b949e;">
+                    <tr style="color:#58a6ff; text-align:left; border-bottom:1px solid #21262d;">
+                        <th style="padding:6px 8px;">TIME</th><th>NODE</th><th>TTFT</th><th>TOK/S</th><th>TOKENS</th><th>POWER</th><th>J/TOK</th>
+                    </tr>`;
+                recent.forEach(s => {
+                    const ts = new Date(s.timestamp * 1000).toLocaleTimeString([], {hour12:false, hour:'2-digit', minute:'2-digit', second:'2-digit'});
+                    tableHtml += `<tr style="border-bottom:1px solid #161b22;">
+                        <td style="padding:5px 8px; color:#444;">${ts}</td>
+                        <td style="color:#e6edf3;">${s.node || '—'}</td>
+                        <td>${s.ttft_ms ? s.ttft_ms.toFixed(0)+'ms' : '—'}</td>
+                        <td style="color:#3fb950;">${s.tokens_per_sec ? s.tokens_per_sec.toFixed(1) : '—'}</td>
+                        <td>${s.total_tokens || '—'}</td>
+                        <td style="color:#f78166;">${s.gpu_power_w ? s.gpu_power_w.toFixed(0)+'W' : '—'}</td>
+                        <td style="color:#d2a8ff;">${s.joules_per_token ? s.joules_per_token.toFixed(4) : '—'}</td>
+                    </tr>`;
+                });
+                tableHtml += '</table>';
+
+                kpi.innerHTML = headerHtml + cardsHtml + tableHtml;
+
+            } catch(err) {
+                kpi.innerHTML = `<div style='color:#f85149; padding:20px; font-family:monospace;'>[ERROR] ${err.message}</div>`;
+            }
+        }
+
+        // ── SYSTEM Graph ────────────────────────────────────────────────────────
+        // Polls /sys_metrics every 5s and draws a multi-line rolling canvas graph.
+        // Series: CPU% | RAM% | VRAM% | GPU Temp°C (scaled /100) | GPU Power W (scaled /3)
+
+        const SYS_SERIES = [
+            { key: 'cpu_pct',       label: 'CPU %',          color: '#58a6ff', scale: v => v },
+            { key: 'ram_pct',       label: 'System RAM %',   color: '#e3b341', scale: v => v },
+            { key: 'vram_pct',      label: 'VRAM %',         color: '#d2a8ff', scale: v => v },
+            { key: 'gpu_temp_c',    label: 'GPU Temp °C',    color: '#f78166', scale: v => v },
+            { key: 'gpu_power_w',   label: 'GPU Power W',    color: '#ffa657', scale: v => v },
+            { key: 'swap_pct',      label: 'Swap Used %',    color: '#8b949e', scale: v => v },
+            { key: 'pressure_pct',  label: 'Mem Pressure (PSI ×10)', color: '#f85149', scale: v => Math.min(v * 10, 100) },
+        ];
+        const MAX_POINTS = 60;  // 5 min at 5s intervals
+        let _sysHistory = { cpu_pct:[], ram_pct:[], vram_pct:[], gpu_temp_c:[], gpu_power_w:[], swap_pct:[], pressure_pct:[] };
+        let _sysTimer = null;
+        let _sysActive = false;
+        let _sysCanvas = null;
+        let _sysCtx = null;
+
+        function _stopSysGraph() {
+            _sysActive = false;
+            if (_sysTimer) { clearInterval(_sysTimer); _sysTimer = null; }
+        }
+
+        function _drawSysGraph() {
+            if (!_sysCanvas || !_sysCtx) return;
+            // Use logical (CSS) dimensions — canvas is DPR-scaled but ctx is already scaled
+            const W = _sysCanvas._logicalW || _sysCanvas.width;
+            const H = _sysCanvas._logicalH || _sysCanvas.height;
+            const ctx = _sysCtx;
+            ctx.clearRect(0, 0, W, H);
+
+            // ── Background grid ────────────────────────────────────────────────
+            ctx.strokeStyle = '#1c1f26';
+            ctx.lineWidth = 0.5;
+            for (let y = 0; y <= 4; y++) {
+                const py = Math.round((y / 4) * H) + 0.5;
+                ctx.beginPath(); ctx.moveTo(0, py); ctx.lineTo(W, py); ctx.stroke();
+            }
+            for (let x = 0; x <= 6; x++) {
+                const px = Math.round((x / 6) * W) + 0.5;
+                ctx.beginPath(); ctx.moveTo(px, 0); ctx.lineTo(px, H); ctx.stroke();
+            }
+
+            // ── Y-axis labels ────────────────────────────────────────────────
+            ctx.fillStyle = '#3a3f4a';
+            ctx.font = '10px JetBrains Mono, monospace';
+            ctx.textAlign = 'right';
+            ['100', '75', '50', '25', '0'].forEach((label, i) => {
+                ctx.fillText(label, 36, Math.round((i / 4) * H) + 4);
+            });
+
+            // ── Per-series lines ───────────────────────────────────────────────
+            const CHART_L = 42;
+            const cW = W - CHART_L - 4;
+            const BOTTOM_PAD = 4, TOP_PAD = 6;
+            const chartH = H - BOTTOM_PAD - TOP_PAD;
+
+            // Auto-scale: clamp temp/power to a 0-100 normalised range
+            // GPU Temp: typical 30–100°C → display raw; GPU Power: /3 to fit ~0-100 notional range
+            // Mem Pressure: PSI avg10 ×4 so 25% stall = full chart (climbs before OOM while RAM% looks flat)
+            const scaleValue = (key, v) => {
+                if (key === 'gpu_power_w') return Math.min(v / 3.0, 100); // 300W = 100%
+                const s = SYS_SERIES.find(s => s.key === key);
+                return s ? Math.min(s.scale(v), 100) : Math.min(v, 100);
+            };
+
+            SYS_SERIES.forEach(s => {
+                const vals = _sysHistory[s.key];
+                if (vals.length < 2) return;
+                const n = vals.length;
+                const step = cW / (MAX_POINTS - 1);
+                const startX = CHART_L + (MAX_POINTS - n) * step;
+
+                ctx.beginPath();
+                ctx.strokeStyle = s.color;
+                ctx.lineWidth = 1.5;
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+                vals.forEach((v, i) => {
+                    let sv = scaleValue(s.key, v);
+                    if (s.key === 'pressure_pct') {
+                        const ramVal = (_sysHistory['ram_pct'] && _sysHistory['ram_pct'][i]) || 0;
+                        sv = Math.min(scaleValue('ram_pct', ramVal) + sv, 100);
+                    }
+                    const x = startX + i * step;
+                    const y = TOP_PAD + chartH - (sv / 100) * chartH;
+                    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                });
+                ctx.stroke();
+
+                // Gradient fill: for PSI, fill band riding on top of RAM line
+                if (s.key === 'pressure_pct' && _sysHistory['ram_pct'] && _sysHistory['ram_pct'].length === n) {
+                    const ramVals = _sysHistory['ram_pct'];
+                    for (let i = n - 1; i >= 0; i--) {
+                        const ramSv = scaleValue('ram_pct', ramVals[i]);
+                        const rx = startX + i * step;
+                        const ry = TOP_PAD + chartH - (ramSv / 100) * chartH;
+                        ctx.lineTo(rx, ry);
+                    }
+                    ctx.closePath();
+                    ctx.fillStyle = s.color + '25';
+                    ctx.fill();
+                } else {
+                    const lastSv = scaleValue(s.key, vals[vals.length - 1]);
+                    const fillX0 = startX + (n - 1) * step;
+                    const fillY0 = TOP_PAD + chartH - (lastSv / 100) * chartH;
+                    ctx.lineTo(fillX0, H - BOTTOM_PAD);
+                    ctx.lineTo(startX, H - BOTTOM_PAD);
+                    ctx.closePath();
+                    ctx.fillStyle = s.color + '18';
+                    ctx.fill();
+                }
+            });
+        }
+
+        function _updateSysLegend(data) {
+            const legend = document.getElementById('sys-legend');
+            if (!legend || !data) return;
+            SYS_SERIES.forEach(s => {
+                const el = document.getElementById('sysval_' + s.key);
+                if (!el) return;
+                if (s.key === 'gpu_temp_c')    el.textContent = (data[s.key] || 0).toFixed(0) + '°C';
+                else if (s.key === 'gpu_power_w') el.textContent = (data[s.key] || 0).toFixed(0) + 'W';
+                else if (s.key === 'pressure_pct') el.textContent = (data[s.key] || 0).toFixed(2) + '%';
+                else el.textContent = (data[s.key] || 0).toFixed(1) + '%';
+            });
+        }
+
+        async function _fetchSysMetric() {
+            if (!_sysActive) return;
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            const attendantBase = isLocal ? 'http://localhost:8765' : 'https://acme.jason-lab.dev';
+            try {
+                const r = await fetch(`${attendantBase}/sys_metrics?t=${Date.now()}`, { credentials: 'include' });
+                if (!r.ok) return;
+                const d = await r.json();
+                if (d.error) return;
+                SYS_SERIES.forEach(s => {
+                    _sysHistory[s.key].push(d[s.key] || 0);
+                    if (_sysHistory[s.key].length > MAX_POINTS)
+                        _sysHistory[s.key].shift();
+                });
+                _drawSysGraph();
+                _updateSysLegend(d);
+            } catch(e) {}
+        }
+
+        function showSysGraph(btn) {
+            hideAllContainers();
+            document.querySelectorAll('.telemetry-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            const container = document.getElementById('sys-graph-container');
+            container.style.display = 'block';
+
+            // Build legend HTML (only on first open or if empty)
+            if (!document.getElementById('sys-canvas')) {
+                const legendItems = SYS_SERIES.map(s =>
+                    `<div style="display:flex;align-items:center;gap:6px;">
+                        <span style="display:inline-block;width:10px;height:2px;background:${s.color};"></span>
+                        <span style="color:#555;font-size:0.68rem;">${s.label}</span>
+                        <span id="sysval_${s.key}" style="color:${s.color};font-weight:600;font-size:0.72rem;">—</span>
+                    </div>`
+                ).join('');
+
+                container.innerHTML = `
+                    <div id="sys-legend" style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:10px;padding:0 4px;font-family:'JetBrains Mono',monospace;">
+                        ${legendItems}
+                        <span style="margin-left:auto;font-size:0.65rem;color:#333;">5s poll | ${MAX_POINTS} pts (~5 min)</span>
+                    </div>
+                    <canvas id="sys-canvas" style="width:100%;height:340px;display:block;border-radius:4px;"></canvas>
+                    <div id="sys-offline" style="display:none;text-align:center;padding:20px;color:#333;font-size:0.8rem;font-family:monospace;">Attendant offline — start the Lab to see live data.</div>
+                `;
+            }
+
+            // Size canvas to actual pixels for crisp rendering
+            _sysCanvas = document.getElementById('sys-canvas');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = _sysCanvas.getBoundingClientRect();
+            // Use a fixed logical height; width stretches to container
+            _sysCanvas.width  = (rect.width  || container.clientWidth - 28) * dpr;
+            _sysCanvas.height = 340 * dpr;
+            _sysCanvas.style.height = '340px';
+            _sysCtx = _sysCanvas.getContext('2d');
+            _sysCtx.scale(dpr, dpr);
+            // Redraw with logical dimensions from here on
+            _sysCanvas._logicalW = _sysCanvas.width / dpr;
+            _sysCanvas._logicalH = 340;
+
+            _sysActive = true;
+            _fetchSysMetric(); // immediate first fetch
+            if (_sysTimer) clearInterval(_sysTimer);
+            _sysTimer = setInterval(_fetchSysMetric, 5000);
+        }
+
+        function updateTime(range) {
+            currentTimeRange = range;
+            const base = "https://monitor.jason-lab.dev/d-solo/pinky-status-01/neural-uplink-status?orgId=1&theme=dark";
+            iframeMain.src = `${base}&panelId=${currentPanelId}&from=now-${range}&to=now`;
+
+            // Highlight active button
+            document.querySelectorAll('.icon-btn').forEach(btn => {
+                const isMatch = btn.textContent.toLowerCase() === range.toLowerCase();
+                btn.classList.toggle('active', isMatch);
+            });
+        }
+
+        async function triggerLabAction(action) {
+            const hostname = window.location.hostname;
+            const isLocal = hostname === 'localhost' || hostname === '127.0.0.1' || hostname.startsWith('192.168.') || hostname.startsWith('10.');
+            
+            // [FEAT-463] Same-Origin Tunnel Routing:
+            // When accessed via https://notes.jason-lab.dev, use same-origin /attendant/${action} which Cloudflare Tunnel
+            // proxies directly to localhost:8765. Same-origin requests bypass CORS preflights and Mixed-Content blocks.
+            let primaryUrl = isLocal ? `http://${hostname}:8765/${action}` : `${window.location.origin}/attendant/${action}`;
+            let fallbackUrl = `https://acme.jason-lab.dev/${action}`;
+            
+            // Remove confirmation for benign 'wake' action
+            if (action !== 'wake' && !confirm(`Are you sure you want to trigger ${action.toUpperCase()}?`)) return;
+
+            const key = currentLabKey || currentLabSession || "unknown";
+            logToConsole(`[REMOTE] Sending ${action.toUpperCase()} signal to ${primaryUrl}...`, 'var(--accent-color)');
+
+            const sendRequest = async (targetUrl) => {
+                const response = await fetch(targetUrl, { 
+                    method: 'POST',
+                    headers: { 
+                        'X-Lab-Key': key,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({})
+                });
+                const text = await response.text();
+                let result = {};
+                try { if (text) result = JSON.parse(text); } catch (e) {}
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status} (${response.statusText || 'Error'}): ${result.message || result.error || text.substring(0,60)}`);
+                }
+                return result;
+            };
+
+            try {
+                let result = await sendRequest(primaryUrl);
+                logToConsole(`[ATTENDANT] ${result.message || 'Signal Acknowledged'}`, '#28a745');
+                setTimeout(pollStatus, 2000);
+            } catch (primaryErr) {
+                logToConsole(`[TELEMETRY] Primary endpoint ${primaryUrl} failed: ${primaryErr.message}`, '#ffc107');
+                // Try fallback URL if primary call failed
+                try {
+                    logToConsole(`[REMOTE] Trying fallback endpoint ${fallbackUrl}...`, 'var(--accent-color)');
+                    let result = await sendRequest(fallbackUrl);
+                    logToConsole(`[ATTENDANT-TUNNEL] ${result.message || 'Signal Acknowledged'}`, '#28a745');
+                    setTimeout(pollStatus, 2000);
+                } catch (fallbackErr) {
+                    logToConsole(`[ERROR DIAGNOSTIC] Origin: ${window.location.origin} | Target: ${primaryUrl} | Key: ${key}`, '#f85149');
+                    logToConsole(`[ERROR] Remote Control failed (${action}): ${fallbackErr.message}`, '#f85149');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            pollStatus();
+            pollPager();
+            pollRecruiter();
+            setInterval(pollStatus, 10000);
+            setInterval(pollPager, 30000);
+            setInterval(pollRecruiter, 60000);
+
+            // [FIX] Link Click Delegation
+            document.getElementById('log-tree-root').addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    e.stopPropagation(); // Prevent minimization but allow navigation
+                }
+            });
+        });
+
+        function pollRecruiter() {
+            fetch('data/recruiter_report.json?t=' + new Date().getTime())
+                .then(r => r.json())
+                .then(data => {
+                    const card = document.getElementById('job-hunt-card');
+                    const status = document.getElementById('job-status');
+                    const led = document.getElementById('job-led');
+                    const meta = document.getElementById('job-meta');
+                    
+                    card.style.display = 'block';
+                    const jobsText = data.new_jobs !== undefined ? `${data.new_jobs} NEW` : `${data.jobs_found} FOUND`;
+                    status.innerHTML = `<span id="job-led" class="status-led ${data.status === 'UPLINK_ACTIVE' ? 'led-online' : 'led-yielded'}"></span>${jobsText}`;
+                    
+                    // [FIX] Robust Date Parsing
+                    let lastRun = "Unknown";
+                    if (data.last_run) {
+                        const d = new Date(data.last_run.includes('T') ? data.last_run : data.last_run.replace(' ', 'T'));
+                        if (!isNaN(d.getTime())) {
+                            lastRun = d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                        }
+                    }
+                    meta.innerText = `Last Run: ${lastRun}\nStatus: ${data.status || 'NOMINAL'}`;
+                })
+                .catch(err => {
+                    document.getElementById('job-hunt-card').style.display = 'none';
+                });
+        }
+
+        function pollStatus() {
+            fetch('data/status.json?t=' + new Date().getTime())
+                .then(r => r.json())
+                .then(data => {
+                    const scanner = document.getElementById('scanner-status');
+                    const intercom = document.getElementById('intercom-status');
+                    const vram = document.getElementById('vram-status');
+                    const ram = document.getElementById('ram-status');
+                    const msg = document.getElementById('scanner-message');
+                    const progressBar = document.getElementById('burn-progress');
+
+                    if (data.vitals) {
+                        currentLabSession = data.vitals.session || "";
+                        currentLabKey = data.vitals.style_key || "";
+                    }
+
+                    // Console Logging: State Transitions
+                    if (data.status !== lastKnownState) {
+                        logToConsole(`[STATE] System transitioned to ${data.status}`, '#28a745');
+                        lastKnownState = data.status;
+                    }
+                    if (data.message && data.message !== lastKnownMsg) {
+                        logToConsole(`[HUB] ${data.message}`, '#aaa');
+                        lastKnownMsg = data.message;
+                    }
+
+                    let ledClass = data.status === 'ONLINE' || data.status === 'IDLE' ? 'led-online' : (data.status === 'BUSY' ? 'led-busy' : 'led-offline');
+                    if (data.status === 'HIBERNATING (VRAM Free)') ledClass = 'led-busy';
+                    if (data.yielded) ledClass = 'led-yielded';
+
+                    const statusText = data.status === 'HIBERNATING (VRAM Free)' ? '🌙 SLEEPING' : (data.yielded ? 'YIELDED' : data.status);
+                    scanner.innerHTML = `<span class="status-led ${ledClass}"></span>${statusText}`;
+                    
+                    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                    const attendantBase = isLocal ? 'http://localhost:8765' : 'https://acme.jason-lab.dev';
+                    fetch(`${attendantBase}/version?t=${Date.now()}`, { credentials: 'omit' })
+                        .then(res => res.json())
+                        .then(vData => {
+                            if (vData && vData.boot_commit && vData.boot_commit !== 'unknown') {
+                                // Add informational badge
+                                const badgeStr = `<span id='stale-badge' style='color:#e3b341;font-size:0.7rem;font-family:monospace;margin-left:8px;'>[BOOT: ${vData.boot_commit}]</span>`;
+                                if (!scanner.innerHTML.includes('stale-badge')) {
+                                    scanner.innerHTML += badgeStr;
+                                }
+                            }
+                        }).catch(e => {});
+                    msg.textContent = `> ${data.message} (${data.timestamp})`;
+                    
+                    if (data.progress_pct !== undefined) {
+                        progressBar.style.width = data.progress_pct + '%';
+                    }
+
+                    if (data.vitals) {
+                        const engineEl = document.getElementById('engine-mode');
+                        const modelEl = document.getElementById('model-name');
+                        const reasonEl = document.getElementById('ignition-reason');
+                        
+                        let engineClass = data.vitals.brain === 'ONLINE' ? 'led-online' : 'led-offline';
+                        if (data.vitals.mode === 'SWAPPING' || data.vitals.mode === 'DOWNSHIFTING' || data.vitals.mode === 'HIBERNATING') engineClass = 'led-busy';
+                        
+                        engineEl.innerHTML = `<span class="status-led ${engineClass}"></span>${data.vitals.mode || 'OFFLINE'}`;
+                        modelEl.textContent = data.vitals.mode === 'HIBERNATING' ? 'Engines Parked' : (data.vitals.model || '-');
+                        reasonEl.textContent = data.vitals.reason ? `[${data.vitals.reason.toUpperCase()}]` : '-';
+                        
+                        intercom.innerHTML = `<span class="status-led ${data.vitals.intercom === 'ONLINE' ? 'led-online' : 'led-offline'}"></span>${data.vitals.intercom}`;
+                        vram.textContent = data.vitals.vram;
+                        if (ram) ram.textContent = data.vitals.ram;
+                    }
+
+                    // [FEAT-607 / FEAT-641] Green-Lie Discrepancy Sentry & 6:00 AM Daily Sanity Check Badges
+                    fetch('data/daily_accountability_digest.json?t=' + Date.now())
+                        .then(r => r.ok ? r.json() : null)
+                        .then(digest => {
+                            if (!digest) {
+                                ['scanner-health-badge', 'engine-health-badge', 'model-health-badge', 'intercom-health-badge', 'job-health-badge'].forEach(id => {
+                                    const el = document.getElementById(id);
+                                    if (el) el.innerHTML = `<span style="background:rgba(227,179,65,0.15);color:#e3b341;border:1px solid rgba(227,179,65,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;" title="6:00 AM Daily Sanity Check (No Audit Digest Found)">[HEALTH: AUDIT_STALE]</span>`;
+                                });
+                                return;
+                            }
+                            
+                            const sentryBanner = document.getElementById('discrepancy-sentry-banner');
+                            if (digest.discrepancies && digest.discrepancies.length > 0) {
+                                if (sentryBanner) {
+                                    sentryBanner.style.display = 'block';
+                                    sentryBanner.innerHTML = `🚨 <strong>DISCREPANCY SENTRY [GREEN LIE DETECTED]:</strong> ${digest.discrepancies.join(' • ')}`;
+                                }
+                            } else if (sentryBanner) {
+                                sentryBanner.style.display = 'none';
+                            }
+
+                            // [FEAT-641] Live Lab Vitals 6:00 AM Daily Sanity Check Badges
+                            const now = Date.now();
+                            const auditDate = digest.timestamp ? new Date(digest.timestamp).getTime() : 0;
+                            const ageHours = (now - auditDate) / (1000 * 3600);
+                            const isNominal = digest.overall_status === 'PASS' && ageHours < 26.0;
+
+                            const badgeText = isNominal ? '[HEALTH: NOMINAL]' : '[HEALTH: AUDIT_STALE]';
+                            const badgeStyle = isNominal 
+                                ? 'background:rgba(40,167,69,0.15);color:#28a745;border:1px solid rgba(40,167,69,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;'
+                                : 'background:rgba(227,179,65,0.15);color:#e3b341;border:1px solid rgba(227,179,65,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;';
+
+                            const badgeHtml = `<span style="${badgeStyle}" title="6:00 AM Daily Sanity Check (${digest.timestamp || 'N/A'})">${badgeText}</span>`;
+
+                            ['scanner-health-badge', 'engine-health-badge', 'model-health-badge', 'intercom-health-badge', 'job-health-badge'].forEach(id => {
+                                const el = document.getElementById(id);
+                                if (el) el.innerHTML = badgeHtml;
+                            });
+                        }).catch(e => {});
+                })
+                .catch(err => console.error("Status poll failed", err));
+        }
+
+        async function pollPager() {
+            try {
+                let alerts = [];
+                const r1 = await fetch('data/pager_activity.json?t=' + new Date().getTime());
+                if (r1.ok) {
+                    alerts = await r1.json();
+                }
+                
+                const r2 = await fetch('data/validation_ledger.jsonl?t=' + new Date().getTime());
+                if (r2.ok) {
+                    const text = await r2.text();
+                    const lines = text.trim().split('\n').filter(l => l.trim().length > 0);
+                    for (const line of lines) {
+                        try {
+                            const entry = JSON.parse(line);
+                            if (entry) {
+                                const isHumanFeedback = entry.source === 'CO_PILOT_FOURTH_WALL' || entry.ground_truth;
+                                const isBenchmark = entry.run_type === 'AUTOMATED_BENCHMARK' || (!isHumanFeedback && entry.query);
+                                
+                                if (isHumanFeedback) {
+                                    alerts.push({
+                                        timestamp: entry.timestamp,
+                                        severity: 'info',
+                                        source: 'CO-PILOT COACHING',
+                                        message: `[CO-PILOT] "${entry.query || 'User Feedback'}" ➔ Ground Truth Captured [FEAT-456]`,
+                                        is_rag_eval: true,
+                                        is_human_feedback: true,
+                                        rag_data: entry
+                                    });
+                                } else {
+                                    const verdict = entry.verdict || entry.kender_audit?.verdict || 'UNKNOWN';
+                                    const collection = entry.target_collection ? `[${entry.target_collection}]` : '';
+                                    alerts.push({
+                                        timestamp: entry.timestamp,
+                                        severity: verdict === 'PASS' ? 'info' : 'warning',
+                                        source: 'RAG-BENCHMARK',
+                                        message: `[EVAL ${collection}] Query: "${entry.query}" | Verdict: ${verdict}`,
+                                        is_rag_eval: true,
+                                        is_human_feedback: false,
+                                        rag_data: entry
+                                    });
+                                }
+                            }
+                        } catch (e) {}
+                    }
+                }
+                
+                // [Story 971] Interleave the single-home accountability ledger
+                // (appended nightly by the standalone watchdog) with the pager stream.
+                const r3 = await fetch('data/accountability_ledger.jsonl?t=' + new Date().getTime());
+                if (r3.ok) {
+                    const text3 = await r3.text();
+                    for (const line of text3.trim().split('\n').filter(l => l.trim().length > 0)) {
+                        try {
+                            const entry = JSON.parse(line);
+                            const status = entry.overall_status || 'UNKNOWN';
+                            const severity = status === 'PASS' ? 'info' : (status === 'FAIL' ? 'critical' : 'warning');
+                            alerts.push({
+                                timestamp: entry.timestamp,
+                                severity: severity,
+                                source: 'ACCOUNTABILITY',
+                                message: `[AUDIT: ${status}] ${entry.passed_checks}/${entry.total_checks} checks passed${entry.discrepancies && entry.discrepancies.length ? ' | ' + entry.discrepancies.join(' • ').substring(0, 180) : ''}`,
+                                accountability: entry
+                            });
+                        } catch (e) {}
+                    }
+                }
+
+                renderInterleavedTimeline(alerts);
+            } catch (err) {
+                console.error("Pager/RAG poll failed", err);
+            }
+        }
+
+        window._userOpenDayFolders = window._userOpenDayFolders || new Set();
+
+        function toggleDayFolder(dayNode) {
+            dayNode.classList.toggle('open');
+            if (dayNode.classList.contains('open')) {
+                window._userOpenDayFolders.add(dayNode.id);
+            } else {
+                window._userOpenDayFolders.delete(dayNode.id);
+            }
+        }
+
+        function renderInterleavedTimeline(alerts) {
+            const openTerminals = new Set();
+            document.querySelectorAll('.inline-terminal').forEach(t => {
+                if(t.style.display === 'block') openTerminals.add(t.closest('.alert-item').dataset.id);
+            });
+
+            root.innerHTML = "";
+            const parseTs = (ts) => {
+                if (!ts) return 0;
+                const clean = ts.includes('T') ? ts : ts.replace(' ', 'T');
+                const d = new Date(clean).getTime();
+                return isNaN(d) ? 0 : d;
+            };
+
+            const sortedAlerts = alerts.sort((a, b) => parseTs(b.timestamp) - parseTs(a.timestamp));
+            const nodes = [];
+            let currentDayFolder = null;
+            let pendingAlert = null;
+            let dedupCount = 0;
+            let prevKey = null;
+
+            const flushPending = () => {
+                if (pendingAlert && dedupCount > 0 && currentDayFolder) {
+                    pendingAlert._dedupCount = dedupCount;
+                    currentDayFolder.items.push(pendingAlert);
+                }
+                pendingAlert = null;
+                dedupCount = 0;
+                prevKey = null;
+            };
+
+            sortedAlerts.forEach(alert => {
+                if (!alert || !alert.timestamp) return;
+                const severity = (alert.severity || 'info').toLowerCase();
+                const tier = classifyExpandTier(alert);
+                const rawTs = String(alert.timestamp);
+                const ts = rawTs.includes('T') ? rawTs : rawTs.replace(' ', 'T');
+                const day = ts.split('T')[0];
+
+                if (severity === 'critical' || severity === 'warning' || tier === 'rich') {
+                    flushPending();
+                    nodes.push({ type: 'priority', data: alert });
+                    currentDayFolder = null;
+                } else {
+                    if (!currentDayFolder || currentDayFolder.day !== day) {
+                        flushPending();
+                        currentDayFolder = { type: 'folder', day: day, items: [] };
+                        nodes.push(currentDayFolder);
+                    }
+
+                    const key = alert.source + '|' + normalizeMessage(alert.message);
+                    if (key === prevKey && pendingAlert) {
+                        dedupCount++;
+                    } else {
+                        flushPending();
+                        pendingAlert = alert;
+                        dedupCount = 1;
+                        prevKey = key;
+                    }
+                }
+            });
+            flushPending();
+
+            nodes.forEach(node => {
+                if (node.type === 'priority') {
+                    const el = createAlertElement(node.data);
+                    const t = classifyExpandTier(node.data);
+                    if (openTerminals.has(el.dataset.id)) {
+                        const termElement = el.querySelector('.inline-terminal');
+                        if (termElement) {
+                            expandAlertDetail(termElement, node.data);
+                        }
+                        const indicator = el.querySelector('.expand-indicator');
+                        if (indicator) indicator.textContent = '[-]';
+                    }
+                    root.appendChild(el);
+                } else {
+                    const dayNode = document.createElement('div');
+                    dayNode.className = 'tree-year';
+                    dayNode.id = 'day-' + node.day;
+                    
+                    if (window._userOpenDayFolders.has(dayNode.id)) {
+                        dayNode.classList.add('open');
+                    }
+                    
+                    const totalLogs = node.items.length;
+                    const displayDate = new Date(node.day + "T12:00:00").toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    
+                    dayNode.innerHTML = `
+                        <div class="year-label" onclick="toggleDayFolder(this.parentElement)">
+                            📅 ${displayDate} (${totalLogs} logs)
+                        </div>
+                        <div class="year-content">
+                            <div class="file-list"></div>
+                        </div>
+                    `;
+                    const list = dayNode.querySelector('.file-list');
+                    
+                    node.items.forEach(alertItem => {
+                        const el = createAlertElement(alertItem);
+                        const t = classifyExpandTier(alertItem);
+                        if (openTerminals.has(el.dataset.id)) {
+                            const term = el.querySelector('.inline-terminal');
+                            if (term) {
+                                expandAlertDetail(term, alertItem);
+                                const indicator = el.querySelector('.expand-indicator');
+                                if (indicator) indicator.textContent = '[-]';
+                            }
+                        }
+                        list.appendChild(el);
+                    });
+                    
+                    root.appendChild(dayNode);
+                }
+            });
+        }
+
+        /**
+         * Strip embedded timestamps (HH:MM:SS.mmm), PIDs ((process-name:12345)),
+         * and trailing whitespace from a log message. Returns a stable dedup key.
+         */
+        function normalizeMessage(msg) {
+            if (!msg) return '';
+            return msg
+                .replace(/\d{2}:\d{2}:\d{2}\.\d{3}/g, '')   // strip timestamps
+                .replace(/\([^:]+:\d+\)/g, '')                // strip PIDs
+                .replace(/\s+/g, ' ')                          // collapse whitespace
+                .trim();
+        }
+
+        function classifyExpandTier(alert) {
+            const source = (alert.source || '').toLowerCase();
+            const message = (alert.message || '').toLowerCase();
+            const richSources = [
+                'recruiter', 'massscan', 'benchmark', 'foyer', 'ignition',
+                'labattendant', 'montana', 'nightly-dialogue', 'privacy-audit',
+                'accountability', 'accountability-watchdog', 'watchdog'
+            ];
+            const inlineSources = ['tailscaled', 'cloudflared', 'mctp'];
+
+            if (
+                alert.is_rag_eval ||
+                richSources.includes(source) ||
+                source.includes('accountability') ||
+                (message.includes('crash_') && message.includes('.log')) ||
+                message.includes('gem refined') ||
+                message.includes('distilled') ||
+                message.includes('nightly-dialogue') ||
+                message.includes('accountability') ||
+                message.includes('digest')
+            ) {
+                return 'rich';
+            }
+
+            if (inlineSources.includes(source)) {
+                return 'inline';
+            }
+
+            return 'none';
+        }
+
+        function createAlertElement(alert) {
+            const tier = classifyExpandTier(alert);
+            const div = document.createElement('div');
+            div.dataset.id = alert.timestamp + '-' + alert.source;
+            
+            const severity = (alert.severity || 'info').toLowerCase();
+            const source = (alert.source || '').toLowerCase();
+            const msg = (alert.message || '').toLowerCase();
+            
+            let extraClass = '';
+            
+            // 1. Detect if it has an artifact/report (Green)
+            const hasArtifact = source === 'recruiter' || 
+                                source === 'rag-eval' ||
+                                msg.includes('.md') || 
+                                msg.includes('.patch') || 
+                                msg.includes('.json') || 
+                                msg.match(/\breport[: ]/) || 
+                                msg.includes('artifact') ||
+                                msg.includes('gem refined') || 
+                                msg.includes('distilled');
+            
+            // 2. Detect if it is an acme-lab specific process (Blue)
+            const isAcme = ['system', 'systemd', 'labattendant', 'foyer', 'ignition', 'pinky', 'brain', 'thought', 'recruiter', 'librarian', 'architect', 'nibbler', 'nibble', 'nibble_v2', 'curator', 'rag', 'rag-eval', 'induction', 'refiner', 'attendant'].includes(source) || 
+                           msg.includes('nibble') || 
+                           msg.includes('nibbler') || 
+                           msg.includes('curator') || 
+                           msg.includes('attendant');
+
+            // [FEAT-444] Detect M5 Judge backpressure entries (Amber)
+            const isJudge = source.includes('judge') || 
+                            msg.includes('m5 judge') || 
+                            msg.includes('judge_backpressure') || 
+                            msg.includes('[lab-010]');
+            
+            if (severity === 'info') {
+                if (isJudge) {
+                    extraClass = 'source-judge';
+                } else if (hasArtifact) {
+                    extraClass = 'has-artifact';
+                } else if (isAcme) {
+                    extraClass = 'source-acme';
+                }
+            }
+            
+            const tierClass = tier === 'none' ? 'no-expand' : `expandable-${tier}`;
+            div.className = `alert-item severity-${severity} ${extraClass} ${tierClass}`;
+            
+            const d = new Date(alert.timestamp.includes('T') ? alert.timestamp : alert.timestamp.replace(' ', 'T'));
+            const timeStr = !isNaN(d.getTime()) ? d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : "??:??";
+
+            const dedupBadge = (alert._dedupCount && alert._dedupCount > 1)
+                ? `<span class="dedup-badge">(x${alert._dedupCount})</span>`
+                : '';
+
+            // [FEAT-444] Amber [JUDGE] badge for judicial backpressure entries
+            const judgeBadge = isJudge
+                ? `<span class="judge-badge">[JUDGE]</span>`
+                : '';
+
+            if (tier === 'none') {
+                div.innerHTML = `
+                    <div class="alert-header">
+                        <span class="alert-meta">[${timeStr}]</span> 
+                        <span style="color:#fff; font-weight:bold;">${alert.source}:</span> ${alert.message}${dedupBadge}${judgeBadge}
+                    </div>
+                `;
+            } else {
+                const indicatorStyle = tier === 'rich'
+                    ? 'color:var(--accent-color); font-weight:bold; margin-right:5px;'
+                    : 'color:#666; font-weight:bold; margin-right:5px;';
+                const indicatorText = tier === 'rich' ? '[+]' : '[>]';
+                div.innerHTML = `
+                    <div class="alert-header">
+                        <span class="expand-indicator" style="${indicatorStyle}">${indicatorText}</span>
+                        <span class="alert-meta">[${timeStr}]</span> 
+                        <span style="color:#fff; font-weight:bold;">${alert.source}:</span> ${alert.message}${dedupBadge}${judgeBadge}
+                    </div>
+                    <div class="inline-terminal"></div>
+                `;
+            }
+            
+            const header = div.querySelector('.alert-header');
+
+            if (tier === 'rich') {
+                const term = div.querySelector('.inline-terminal');
+                if (term) {
+                    header.onclick = (e) => {
+                        e.stopPropagation();
+                        const indicator = header.querySelector('.expand-indicator');
+                        if (term.style.display === 'block') {
+                            term.style.display = 'none';
+                            if (indicator) indicator.textContent = '[+]';
+                        } else {
+                            expandAlertDetail(term, alert);
+                            if (indicator) indicator.textContent = '[-]';
+                        }
+                    };
+                }
+            } else if (tier === 'inline') {
+                const term = div.querySelector('.inline-terminal');
+                if (term) {
+                    header.onclick = (e) => {
+                        e.stopPropagation();
+                        const indicator = header.querySelector('.expand-indicator');
+                        if (term.style.display === 'block') {
+                            term.style.display = 'none';
+                            if (indicator) indicator.textContent = '[>]';
+                        } else {
+                            term.style.display = 'block';
+                            term.innerHTML = `<span style="color:#999;">Metadata: ${JSON.stringify(alert)}</span>`;
+                            if (indicator) indicator.textContent = '[-]';
+                        }
+                    };
+                }
+            }
+            
+            return div;
+        }
+
+        async function expandAlertDetail(term, alert) {
+            term.style.display = 'block';
+            term.innerHTML = "<span style='color:var(--accent-color)'>[ACCESSING EVIDENCE...]</span>";
+            
+            try {
+                // [FEAT-607 / Story 88.5] Nightly Accountability Digest Expansion
+                const msgUpper = (alert.message || '').toUpperCase();
+                const srcLower = (alert.source || '').toLowerCase();
+                if (msgUpper.includes('ACCOUNTABILITY') || srcLower.includes('accountability') || srcLower.includes('watchdog')) {
+                    try {
+                        const rDigest = await fetch('data/daily_accountability_digest.json?t=' + Date.now());
+                        if (rDigest.ok) {
+                            const digest = await rDigest.json();
+                            const statusColor = digest.overall_status === 'PASS' ? '#28a745' : (digest.overall_status === 'DEGRADED' ? '#ffcc00' : '#ff3b30');
+                            const checkRows = (digest.checks || []).map(c => `
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid #161b22;">
+                                    <span>${c.passed ? '<span style="color:#28a745;">✔</span>' : '<span style="color:#ff3b30;">✖</span>'} <strong style="color:#c9d1d9;">${c.name}</strong></span>
+                                    <span style="color:${c.passed ? '#3fb950' : '#f85149'};font-size:0.7rem;">${c.detail}</span>
+                                </div>
+                            `).join('');
+
+                            const discHtml = (digest.discrepancies || []).length > 0 ? `
+                                <div style="margin-top:6px;background:rgba(248,81,73,0.1);border:1px solid #f85149;border-radius:4px;padding:6px 8px;">
+                                    <div style="color:#f85149;font-weight:bold;font-size:0.7rem;">⚠ DETECTED DISCREPANCIES (GREEN LIE SENTRY):</div>
+                                    <ul style="margin:2px 0 0 16px;padding:0;color:#f85149;font-size:0.68rem;">
+                                        ${digest.discrepancies.map(d => `<li>${d}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            ` : '';
+
+                            term.innerHTML = `
+                                <div style="font-family:monospace;font-size:0.75rem;padding:8px 12px;background:#0d1117;border:1px solid #30363d;border-radius:6px;margin-top:4px;">
+                                    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #21262d;padding-bottom:4px;margin-bottom:6px;">
+                                        <span style="color:var(--accent-color);font-weight:bold;">📋 DAILY NIGHTLY ACCOUNTABILITY DIGEST [FEAT-607]</span>
+                                        <span style="color:${statusColor};font-weight:bold;border:1px solid ${statusColor};padding:1px 6px;border-radius:3px;font-size:0.7rem;">${digest.overall_status} (${digest.passed_checks}/${digest.total_checks} PASSED)</span>
+                                    </div>
+                                    <div style="margin-bottom:6px;color:#8b949e;font-size:0.7rem;">Evaluation Date: ${digest.date} • Timestamp: ${digest.timestamp}</div>
+                                    <div style="display:flex;flex-direction:column;gap:2px;">
+                                        ${checkRows}
+                                    </div>
+                                    ${discHtml}
+                                </div>
+                            `;
+                            return;
+                        } else {
+                            term.innerHTML = `<div style="font-family:monospace;font-size:0.75rem;padding:6px 10px;color:#8b949e;background:#0d1117;border:1px solid #30363d;border-radius:4px;">[Daily Accountability Digest file not found or pending generation]</div>`;
+                            return;
+                        }
+                    } catch (dErr) {
+                        console.warn("Digest load failed", dErr);
+                        term.innerHTML = `<div style="font-family:monospace;font-size:0.75rem;padding:6px 10px;color:#8b949e;background:#0d1117;border:1px solid #30363d;border-radius:4px;">[Daily Accountability Digest currently unavailable]</div>`;
+                        return;
+                    }
+                }
+
+                // Check if it is a RAG evaluation or Human Coaching log
+                if (alert.is_rag_eval) {
+                    const entry = alert.rag_data;
+                    const isHuman = alert.is_human_feedback || entry.source === 'CO_PILOT_FOURTH_WALL' || entry.ground_truth;
+                    
+                    if (isHuman) {
+                        let humanHtml = `
+                            <div style="font-family:monospace;font-size:0.75rem;padding:8px 12px;line-height:1.4;color:#e6edf3;background:rgba(163, 113, 247, 0.08);border:1px solid #a371f7;border-radius:4px;">
+                                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+                                    <span style="background:rgba(163, 113, 247, 0.25);border:1px solid #a371f7;color:#d2a8ff;font-weight:bold;padding:2px 8px;border-radius:4px;font-size:0.72rem;">🟣 HUMAN GROUND TRUTH [FEAT-456]</span>
+                                    <span style="color:#8b949e;font-size:0.7rem;">CO-PILOT FOURTH-WALL SUPERVISION</span>
+                                </div>
+                                <div style="margin-top:4px;"><strong>Original User Context:</strong> <span style="color:#d2a8ff;">"${entry.query || 'N/A'}"</span></div>
+                                ${entry.flawed_output ? `<div style="margin-top:4px;color:#8b949e;"><strong>Prior Assistant Hallucination/Flaw:</strong><pre style="background:#090d13;color:#8b949e;padding:6px;border:1px solid #21262d;border-radius:4px;margin-top:2px;font-size:0.7rem;white-space:pre-wrap;">${entry.flawed_output}</pre></div>` : ''}
+                                <div style="margin-top:6px;color:#3fb950;"><strong>Human Ground-Truth Correction:</strong><pre style="background:#090d13;color:#7ee787;padding:6px;border:1px solid rgba(63, 185, 80, 0.3);border-radius:4px;margin-top:2px;font-size:0.7rem;white-space:pre-wrap;">${entry.ground_truth || 'N/A'}</pre></div>
+                                <div style="margin-top:6px;font-size:0.7rem;color:#8b949e;">Status: Ingested as Epistemic Boolean Constraint • Distilled to Knowledge Base</div>
+                            </div>
+                        `;
+                        term.innerHTML = humanHtml;
+                        return;
+                    }
+
+                    const verdict = entry.verdict || entry.kender_audit?.verdict || "UNKNOWN";
+                    let verdictColor = "#888";
+                    if (verdict === "PASS") verdictColor = "#28a745";
+                    else if (verdict === "FAIL") verdictColor = "#ff3b30";
+                    else if (verdict === "BORDERLINE") verdictColor = "#ffcc00";
+
+                    const collection = entry.target_collection || "artifact_vault";
+                    const keywordList = Object.entries(entry.keyword_results || {})
+                        .map(([kw, hit]) => `<span style="color:${hit ? '#28a745' : '#ff3b30'}; margin-right:8px;">${hit ? '●' : '○'} ${kw}</span>`)
+                        .join('');
+
+                    let detailHtml = `<div style="font-family:monospace;font-size:0.75rem;padding:6px 10px;line-height:1.35;color:#ccc;background:#0d1117;border:1px solid #30363d;border-radius:4px;"><strong style="color:var(--accent-color);">[RAG EVALUATION METRICS]</strong><div style="margin-top:4px;"><strong>Raw Query:</strong> "${entry.query}"</div><div><strong>Domain:</strong> <span style="color:#58a6ff;">${entry.domain}</span> | <strong>Target DNA:</strong> <span style="color:#d2a8ff;font-weight:bold;">${collection}</span> | <strong>Time:</strong> ${entry.retrieval_time_s ? entry.retrieval_time_s.toFixed(3) + 's' : 'N/A'}</div><div><strong>Keyword Recall:</strong> <span style="color:${verdictColor};font-weight:bold;">${((entry.keyword_recall || 0)*100).toFixed(0)}%</span> (Hits: ${entry.keyword_hits || 0}/${entry.keyword_total || 0}) | <strong>Verdict:</strong> <span style="color:${verdictColor};font-weight:bold;">${verdict}</span></div><div style="margin-top:2px;font-size:0.7rem;">${keywordList}</div><div style="margin-top:4px;"><strong>Retrieval Paths (Sources):</strong></div><ul style="margin:2px 0 2px 20px;padding:0;list-style-type:square;color:#8b949e;">${(entry.sources || []).map(src => `<li>${src}</li>`).join('')}</ul>${entry.kender_audit?.issues?.length ? `<div>Issues: <span style="color:#ffcc00;">${entry.kender_audit.issues.join(', ')}</span></div>` : ''}<div class="rag-run-details" style="margin-top:8px;border-top:1px dashed #30363d;padding-top:6px;"><span style="color:#8b949e;">[LOADING DECOUPLED CONTEXT LOG...]</span></div></div>`;
+                    term.innerHTML = detailHtml;
+                    
+                    if (entry.run_id) {
+                        try {
+                            const detailResp = await fetch(`data/rag_runs/${entry.run_id}.json?t=${Date.now()}`);
+                            if (detailResp.ok) {
+                                const runDetail = await detailResp.json();
+                                const runDetailsDiv = term.querySelector('.rag-run-details');
+                                if (runDetailsDiv) {
+                                    runDetailsDiv.innerHTML = `<strong style="color:var(--accent-color);">[DECOUPLED LOG DETAILS]</strong><div style="margin-top:4px;"><strong>Retrieved Context (Ground Truth):</strong></div><pre style="background:#090d13;color:#c9d1d9;border:1px solid #21262d;padding:8px;border-radius:4px;max-height:220px;overflow-y:auto;white-space:pre-wrap;font-size:0.7rem;margin-top:2px;">${runDetail.context || 'None'}</pre><div style="margin-top:6px;"><strong>Kender Audit Conversation:</strong></div><pre style="background:#090d13;color:#c9d1d9;border:1px solid #21262d;padding:8px;border-radius:4px;max-height:180px;overflow-y:auto;white-space:pre-wrap;font-size:0.7rem;margin-top:2px;">${runDetail.kender_response || 'None'}</pre>`;
+                                }
+                            } else {
+                                const runDetailsDiv = term.querySelector('.rag-run-details');
+                                if (runDetailsDiv) {
+                                    runDetailsDiv.innerHTML = `<span style="color:#ff3b30;">[ERROR: Decoupled log not found (HTTP ${detailResp.status})]</span>`;
+                                }
+                            }
+                        } catch (fetchErr) {
+                            const runDetailsDiv = term.querySelector('.rag-run-details');
+                            if (runDetailsDiv) {
+                                runDetailsDiv.innerHTML = `<span style="color:#ff3b30;">[ERROR loading log: ${fetchErr.message}]</span>`;
+                            }
+                        }
+                    } else {
+                        const runDetailsDiv = term.querySelector('.rag-run-details');
+                        if (runDetailsDiv) {
+                            runDetailsDiv.innerHTML = `<span style="color:#8b949e;">[Decoupled log unavailable: legacy ledger entry]</span>`;
+                        }
+                    }
+                    return;
+                }
+
+                // 1. Check for Recruiter Briefs
+                if (alert.source.toLowerCase() === 'recruiter') {
+                    const briefMatch = alert.message.match(/brief_[a-zA-Z0-9_.-]+/);
+                    const briefName = briefMatch ? briefMatch[0] : alert.message.split(': ')[1];
+                    if (briefName && briefName.trim()) {
+                        const r = await fetch(`data/recruiter_briefs/${briefName.trim()}`);
+                        if (r.ok) {
+                            const text = await r.text();
+                            term.innerHTML = `<div style="margin-bottom:8px;font-family:monospace;font-size:0.75rem;"><a href="data/recruiter_briefs/${briefName.trim()}" target="_blank" style="color:#3fb950;text-decoration:underline;font-weight:bold;">📄 VIEW BRIEF IN NEW TAB</a> &nbsp;|&nbsp; <a href="data/recruiter_briefs/${briefName.trim()}" download style="color:#3fb950;text-decoration:underline;font-weight:bold;">⬇️ DOWNLOAD MARKDOWN FILE</a></div><div class='markdown-body'>${marked.parse(text)}</div>`;
+                            term.style.display = 'block';
+                            return;
+                        }
+                    }
+                }
+                
+                // 3. MassScan Progress Panel
+                const src = (alert.source || '').toLowerCase();
+                if (src === 'massscan' || src.includes('mass_scan') || src.includes('scanner')) {
+                    const msg = alert.message || '';
+                    const epochMatch = msg.match(/Epoch\s+(\d+)(?:\/(\d+))?/i);
+                    const stepMatch = msg.match(/Step\s+(\d+)(?:\/(\d+))?/i);
+                    const gemsMatch = msg.match(/gems refined[=:]?\s*(\d+)/i);
+                    const rankMatch = msg.match(/rank upgrades?[=:]?\s*(\d+)/i);
+                    const rankDetailMatch = msg.match(/(\d+)\s*[→➡]\s*(\d+)/);
+                    
+                    let epochHtml = '', stepHtml = '', regexGemsHtml = '', rankHtml = '';
+                    if (epochMatch) {
+                        const cur = epochMatch[1];
+                        const tot = epochMatch[2] || cur;
+                        const pct = epochMatch[2] ? ((parseInt(cur) / parseInt(tot)) * 100).toFixed(0) : '100';
+                        epochHtml = `<div><span style="color:#8b949e;">Epoch:</span> <strong>${cur}${epochMatch[2] ? `/${tot} (${pct}%)` : ' Complete'}</strong></div>`;
+                    }
+                    if (stepMatch) {
+                        stepHtml = `<div><span style="color:#8b949e;">Step:</span> <strong>${stepMatch[1]}${stepMatch[2] ? `/${stepMatch[2]}` : ''}</strong></div>`;
+                    }
+                    if (gemsMatch) {
+                        regexGemsHtml = `<div><span style="color:#8b949e;">Gems Refined:</span> <strong>${gemsMatch[1]}</strong></div>`;
+                    }
+                    if (rankMatch) {
+                        const detail = rankDetailMatch ? ` <span style="color:#28a745;">↑ ${rankDetailMatch[1]} → ${rankDetailMatch[2]}</span>` : '';
+                        rankHtml = `<div><span style="color:#8b949e;">Rank Upgrades:</span> <strong>${rankMatch[1]}</strong>${detail}</div>`;
+                    }
+
+                    // Fetch live status.json, queue.json, and latest_synthesis_gems.json to enrich diagnostic context
+                    let statusData = null, queueCount = 0, gemsData = null;
+                    try {
+                        const rStatus = await fetch('data/status.json?t=' + Date.now());
+                        if (rStatus.ok) statusData = await rStatus.json();
+                        const rQueue = await fetch('data/queue.json?t=' + Date.now());
+                        if (rQueue.ok) {
+                            const q = await rQueue.json();
+                            queueCount = Array.isArray(q) ? q.length : 0;
+                        }
+                        const rGems = await fetch('data/latest_synthesis_gems.json?t=' + Date.now());
+                        if (rGems.ok) gemsData = await rGems.json();
+                    } catch (e) {}
+
+                    const state = statusData ? (statusData.status || 'IDLE') : 'IDLE';
+                    const stateColor = state === 'ONLINE' || state === 'IDLE' ? '#28a745' : (state === 'BUSY' ? '#58a6ff' : '#ffcc00');
+                    const rawActivity = (statusData && statusData.message) ? statusData.message : (msg || 'Dormant / Idle');
+                    const activityMsg = rawActivity.replace(/\s+/g, ' ').trim();
+                    const targetFile = (statusData && statusData.last_file) ? statusData.last_file.trim() : '';
+                    const totalEvents = (statusData && statusData.total_events) ? statusData.total_events : 370;
+
+                    let gemsHtml = '';
+                    if (gemsData && Array.isArray(gemsData.gems) && gemsData.gems.length > 0) {
+                        const gemItems = gemsData.gems.map(g => {
+                            const rankColor = g.rank >= 5 ? '#ffcc00' : '#58a6ff';
+                            const rankLabel = g.rank >= 5 ? '💎 Rank 5' : '🔹 Rank 4';
+                            const cleanSummary = (g.summary || '').replace(/\s+/g, ' ').trim();
+                            const cleanEvidence = (g.evidence || '').replace(/\s+/g, ' ').trim();
+                            return `
+                                <div style="background:#161b22;border:1px solid #21262d;border-radius:4px;padding:5px 8px;margin-top:4px;">
+                                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                                        <span><strong style="color:var(--accent-color);">${g.id}</strong> <span style="color:${rankColor};font-weight:bold;font-size:0.7rem;margin-left:4px;">${rankLabel}</span> <span style="color:#8b949e;font-size:0.7rem;">(${g.date})</span></span>
+                                        <span style="font-size:0.65rem;color:#8b949e;">${(g.tags || []).map(t => `<span style="background:#0d1117;border:1px solid #30363d;padding:1px 4px;border-radius:3px;margin-left:2px;">#${t}</span>`).join('')}</span>
+                                    </div>
+                                    <div style="margin-top:2px;color:#e6edf3;font-size:0.72rem;line-height:1.35;"><strong>Knowledge:</strong> ${cleanSummary}</div>
+                                    ${cleanEvidence ? `<div style="margin-top:2px;color:#8b949e;font-size:0.68rem;font-family:monospace;line-height:1.25;"><strong>Evidence:</strong> ${cleanEvidence}</div>` : ''}
+                                </div>
+                            `;
+                        }).join('');
+
+                        gemsHtml = `
+                            <div style="margin-top:6px;border-top:1px dashed #30363d;padding-top:4px;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.7rem;margin-bottom:2px;">
+                                    <span style="color:#ffcc00;font-weight:bold;">💎 RECENT DISTILLED KNOWLEDGE & GEMS (${gemsData.source_file || 'Latest Scan'})</span>
+                                    <span style="color:#8b949e;font-size:0.68rem;">${gemsData.total_gems_extracted} gems extracted</span>
+                                </div>
+                                ${gemItems}
+                            </div>
+                        `;
+                    }
+
+                    term.innerHTML = `
+                        <div style="font-family:monospace;font-size:0.75rem;padding:6px 10px;line-height:1.35;color:#c9d1d9;background:#0d1117;border:1px solid #30363d;border-radius:6px;margin-top:4px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #21262d; padding-bottom:3px; margin-bottom:4px;">
+                                <span style="color:var(--accent-color); font-weight:bold;">⚡ MASSSCAN SYNTHESIS</span>
+                                <span style="color:${stateColor}; font-weight:bold; background:#161b22; padding:1px 6px; border-radius:3px; border:1px solid ${stateColor}; font-size:0.7rem;">${state} (${(statusData && statusData.engine) || 'LOCAL'})</span>
+                            </div>
+                            <div style="display:flex; flex-wrap:wrap; gap:4px 12px; font-size:0.72rem;">
+                                <div><span style="color:#8b949e;">Activity:</span> <strong>${activityMsg}</strong></div>
+                                ${targetFile ? `<div><span style="color:#8b949e;">Target:</span> <code style="color:#58a6ff;">${targetFile}</code></div>` : ''}
+                                <div><span style="color:#8b949e;">Archive:</span> <strong style="color:var(--accent-color);">${totalEvents}</strong> events (18-yr)</div>
+                                ${epochHtml}
+                                ${stepHtml}
+                                ${regexGemsHtml}
+                                ${rankHtml}
+                                ${queueCount > 0 ? `<div><span style="color:#ffcc00; font-weight:bold;">⚡ Queue: ${queueCount} chunks</span></div>` : ''}
+                            </div>
+                            ${gemsHtml}
+                        </div>
+                    `;
+                    term.style.display = 'block';
+                    return;
+                }
+                
+                // 4. Lab State Transition Panel
+                if (['foyer', 'ignition', 'labattendant'].includes(src)) {
+                    const msg = alert.message || '';
+                    const stateMatch = msg.match(/State transition:\s*(\w+)\s*[→➡]\s*(\w+)/i);
+                    
+                    const stateColors = {
+                        'ONLINE': '#28a745',
+                        'HIBERNATING': '#d29922',
+                        'OFFLINE': '#ff3b30',
+                        'IGNITING': '#58a6ff'
+                    };
+                    
+                    const renderBadge = (s) => {
+                        const c = stateColors[s.toUpperCase()] || '#888';
+                        return `<span style="color:${c}; font-weight:bold; padding:1px 6px; border:1px solid ${c}; border-radius:3px; font-size:0.7rem;">${s}</span>`;
+                    };
+                    
+                    let transitionHtml = '';
+                    if (stateMatch) {
+                        transitionHtml = `
+                            <div style="margin-top:5px;">
+                                <strong>Transition:</strong>
+                                ${renderBadge(stateMatch[1])}
+                                <span style="color:#666; margin:0 4px;">→</span>
+                                ${renderBadge(stateMatch[2])}
+                            </div>
+                        `;
+                    }
+                    
+                    let reasonHtml = '';
+                    const reasonMatch = msg.match(/reason[:\s]+(.+?)(?:\.|$)/i);
+                    if (reasonMatch) {
+                        reasonHtml = `<div><strong>Trigger:</strong> ${reasonMatch[1].trim()}</div>`;
+                    }
+                    
+                    let statusData = null;
+                    try {
+                        const resp = await fetch('data/status.json?t=' + Date.now());
+                        if (resp.ok) statusData = await resp.json();
+                    } catch (e) {}
+                    
+                    let vramHtml = '', residentHtml = '';
+                    if (statusData && statusData.vitals) {
+                        vramHtml = `<div><strong>VRAM:</strong> ${statusData.vitals.vram || 'N/A'}</div>`;
+                        if (statusData.vitals.resident_list) {
+                            const residents = Array.isArray(statusData.vitals.resident_list)
+                                ? statusData.vitals.resident_list.join(', ')
+                                : statusData.vitals.resident_list;
+                            residentHtml = `<div><strong>Residents:</strong> ${residents}</div>`;
+                        }
+                    }
+                    
+                    term.innerHTML = `<div style="font-family:monospace;font-size:0.75rem;padding:6px 10px;line-height:1.35;color:#ccc;background:#0d1117;border:1px solid #30363d;border-radius:4px;"><div style="display:flex;justify-content:space-between;align-items:center;"><strong style="color:var(--accent-color);">[LAB STATE TRANSITION]</strong>${stateMatch ? `<span>${renderBadge(stateMatch[1])} <span style="color:#666;margin:0 2px;">→</span> ${renderBadge(stateMatch[2])}</span>` : ''}</div>${reasonMatch ? `<div style="margin-top:2px;"><strong>Trigger:</strong> ${reasonMatch[1].trim()}</div>` : ''}${statusData ? `<div style="margin-top:4px;border-top:1px dashed #21262d;padding-top:4px;font-size:0.7rem;color:#888;"><strong>VRAM:</strong> ${statusData.vitals?.vram || 'N/A'} | <strong>Status:</strong> ${renderBadge(statusData.status || 'ONLINE')}</div>` : ''}</div>`;
+                    term.style.display = 'block';
+                    return;
+                }
+                
+                // 5. Nightly Dialogue Panel
+                if ((alert.message || '').toLowerCase().includes('nightly-dialogue')) {
+                    let dialogueContent = "[DIALOGUE DATA UNAVAILABLE]\n";
+                    try {
+                        const resp = await fetch('data/nightly_dialogue.json?t=' + Date.now());
+                        if (resp.ok) {
+                            const data = await resp.json();
+                            dialogueContent = `[NIGHTLY DIALOGUE - ${data.topic || 'Unknown Topic'}]\nTimestamp: ${data.timestamp || 'N/A'}\n\n${data.content || '(empty dialogue)'}`;
+                        }
+                    } catch (e) {
+                        dialogueContent = "[DIALOGUE DATA UNAVAILABLE]\nFetch error: " + e.message;
+                    }
+                    term.style.display = 'block';
+                    simulateTyping(term, dialogueContent);
+                    return;
+                }
+                
+                // 6. Generic Artifact/File parser (.md, .patch, .json, .log)
+                const fileMatch = alert.message.match(/[a-zA-Z0-9_.-]+\.(md|patch|json|log|jsonl)/i);
+                if (fileMatch) {
+                    const fileName = fileMatch[0];
+                    if (fileName.startsWith("brief_")) {
+                        const r = await fetch(`data/recruiter_briefs/${fileName}`);
+                        if (r.ok) {
+                            const text = await r.text();
+                            term.innerHTML = `
+                                <div style="margin-bottom: 12px; font-family: monospace; font-size: 0.75rem;">
+                                    <a href="data/recruiter_briefs/${fileName}" target="_blank" style="color: #3fb950; text-decoration: underline; font-weight: bold;">📄 VIEW BRIEF</a>
+                                    &nbsp;|&nbsp;
+                                    <a href="data/recruiter_briefs/${fileName}" download style="color: #3fb950; text-decoration: underline; font-weight: bold;">⬇️ DOWNLOAD BRIEF</a>
+                                </div>
+                                <div class='markdown-body'>${marked.parse(text)}</div>
+                            `;
+                            term.style.display = 'block';
+                            return;
+                        }
+                    }
+                    
+                    // Check other local data folder endpoints
+                    const r = await fetch(`data/${fileName}`);
+                    if (r.ok) {
+                        const text = await r.text();
+                        const isJson = fileName.endsWith('.json') || fileName.endsWith('.jsonl');
+                        const displayContent = isJson ? JSON.stringify(JSON.parse(text), null, 2) : text;
+                        term.innerHTML = `
+                            <div style="margin-bottom: 12px; font-family: monospace; font-size: 0.75rem;">
+                                <a href="data/${fileName}" target="_blank" style="color: #3fb950; text-decoration: underline; font-weight: bold;">📄 VIEW ARTIFACT</a>
+                                &nbsp;|&nbsp;
+                                <a href="data/${fileName}" download style="color: #3fb950; text-decoration: underline; font-weight: bold;">⬇️ DOWNLOAD FILE</a>
+                            </div>
+                            <pre style="background: #0d1117; color: #c9d1d9; border: 1px solid #30363d; padding: 10px; border-radius: 4px; overflow-x: auto; white-space: pre; font-size: 0.75rem;">${displayContent}</pre>
+                        `;
+                        term.style.display = 'block';
+                        return;
+                    }
+                }
+                
+                // 3. Fallback: System or LabAttendant specific crash/trace lookups
+                const sourceLower = alert.source.toLowerCase();
+                if (sourceLower === 'system' || sourceLower === 'labattendant' || sourceLower === 'foyer' || sourceLower === 'ignition') {
+                    const crashMatch = alert.message.match(/crash_\d+\.log/);
+                    if (crashMatch) {
+                        const logFile = crashMatch[0];
+                        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                        const url = isLocal ? `http://localhost:8765/logs?file=${logFile}` : `https://acme.jason-lab.dev/logs?file=${logFile}`;
+                        
+                        const r = await fetch(url, { headers: { 'X-Lab-Key': currentLabKey || "unknown" }, credentials: 'include' });
+                        if (r.ok) {
+                            const text = await r.text();
+                            simulateTyping(term, `[FORENSIC SNIP: ${logFile}]\n` + text);
+                        } else {
+                            simulateTyping(term, `[CRASH LOG NOT FOUND]\nFile: ${logFile}`);
+                        }
+                    } else {
+                        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                        const url = isLocal ? `http://localhost:8765/logs?file=trace_brain.json` : `https://acme.jason-lab.dev/logs?file=trace_brain.json`;
+                        const r = await fetch(url, { headers: { 'X-Lab-Key': currentLabKey || "unknown" }, credentials: 'include' });
+                        if (r.ok) {
+                            const text = await r.text();
+                            simulateTyping(term, "[LAST TRACE]:\n" + text.split('\n').filter(l => l.trim().length > 0).slice(-8).join('\n'));
+                        } else {
+                            renderAlertMetaCard(term, alert);
+                        }
+                    }
+                } else {
+                    renderAlertMetaCard(term, alert);
+                }
+            } catch (err) {
+                term.textContent = "Error retrieving evidence: " + err.message;
+            }
+        }
+
+        function renderAlertMetaCard(term, alert) {
+            const cleanMsg = (alert.message || '').replace(/\s+/g, ' ').trim();
+            const timeStr = alert.timestamp || 'N/A';
+            const srcStr = alert.source || 'SYSTEM';
+            const sevStr = (alert.severity || 'INFO').toUpperCase();
+            const sevColor = sevStr === 'CRITICAL' ? '#ff3b30' : (sevStr === 'WARNING' ? '#ffcc00' : '#58a6ff');
+
+            term.innerHTML = `
+                <div style="font-family:monospace; font-size:0.75rem; padding:6px 10px; color:#c9d1d9; background:#0d1117; border:1px solid #30363d; border-radius:4px; margin-top:4px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #21262d; padding-bottom:3px; margin-bottom:4px;">
+                        <span><strong style="color:${sevColor};">[${sevStr}]</strong> <strong style="color:var(--accent-color); margin-left:4px;">${srcStr}</strong></span>
+                        <span style="color:#8b949e; font-size:0.68rem;">${timeStr}</span>
+                    </div>
+                    <div style="color:#e6edf3; font-size:0.72rem; line-height:1.35;">${cleanMsg}</div>
+                </div>
+            `;
+            term.style.display = 'block';
+        }
+
+        function simulateTyping(el, text) {
+            el.textContent = "> ";
+            let i = 0;
+            const interval = setInterval(() => {
+                el.textContent += text.substring(i, i + 30);
+                i += 30;
+                if (i >= text.length) {
+                    clearInterval(interval);
+                    const cursor = document.createElement('span');
+                    cursor.className = 'cursor';
+                    el.appendChild(cursor);
+                }
+                el.scrollTop = el.scrollHeight;
+            }, 5);
+        }
+    </script>
+</body>
+</html>
