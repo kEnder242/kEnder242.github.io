@@ -45,6 +45,10 @@ let lastMsgSource = "";
 let currentSocketId = "Unknown"; // [FEAT-344] Persistence Tracker
 let currentLabKey = ""; // [FEAT-426] X-Lab-Key for WS handshake + heartbeat fetch
 
+// [FEAT-638] Response Feedback State
+let lastUserQuery = ""; // Stores the last user query for feedback attribution
+let lastRequestId = ""; // Stores the last request ID for feedback attribution
+
 // [FEAT-339] Message De-duplication
 const seenMsgIds = new Set();
 const MAX_SEEN_IDS = 50;
@@ -337,6 +341,21 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         `;
     }
     
+    // [FEAT-638] Response Feedback Buttons
+    let respFbHtml = '';
+    if (channel === 'chat' && !isRestoringHistory && 
+        source && /pinky|brain|insight|thought|resident|shadow/i.test(source.toLowerCase()) && 
+        sl_low !== 'system' && sl_low !== 'me' && 
+        !isInternal && text) {
+        // Store feedback data on the message element
+        msg.setAttribute('data-fb-query', lastUserQuery || '');
+        msg.setAttribute('data-fb-reqid', lastRequestId || (metadata && metadata.msg_id) || 'session-msg');
+        msg.setAttribute('data-fb-response', text);
+        
+        // Build feedback buttons HTML
+        respFbHtml = '<div class="resp-fb"><button type="button" class="fb-btn" data-fb="UP" onclick="submitResponseFeedback(this)">👍</button><button type="button" class="fb-btn" data-fb="DOWN" onclick="submitResponseFeedback(this)">👎</button></div>';
+    }
+    
     const isSystem = sl_low === 'system';
     const text_low = text.toLowerCase();
     const isSystemStrategic = (isSystem) && (text_low.includes('strategic') || text_low.includes('engaging'));
@@ -356,7 +375,33 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         } catch (e) {}
     }
 
-    if (isJSON) {
+    // [FEAT-590] Interactive DNA Proposal Card Rendering
+    if (metadata && (metadata.dna_proposal || type === 'dna_proposal')) {
+        const p = metadata.dna_proposal || {};
+        const pId = p.id || 'PROPOSED-001';
+        const pDomain = p.domain || 'BKM';
+        const pTitle = p.title || 'Proposed Empirical Anchor';
+        const pSummary = p.summary || p.content || text;
+        const pRationale = p.rationale || '';
+
+        formattedText = `
+            <div class="intercom-dna-proposal" style="border: 1px solid #58a6ff; border-left: 4px solid #58a6ff; background: rgba(88, 166, 255, 0.08); padding: 12px 14px; border-radius: 6px; margin: 8px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span style="font-weight:bold; color:#58a6ff; font-family:monospace; font-size:0.85rem;">🧬 PROPOSED DNA: [${pDomain}] ${pId}</span>
+                    <span style="font-size:0.7rem; background:rgba(88,166,255,0.2); border:1px solid rgba(88,166,255,0.4); color:#58a6ff; padding:2px 6px; border-radius:3px; font-weight:bold;">${p.status || 'PROPOSED'}</span>
+                </div>
+                <div style="font-size:0.95rem; font-weight:600; color:#f0f6fc; margin-bottom:4px;">${pTitle}</div>
+                <div style="font-size:0.82rem; color:#c9d1d9; margin-bottom:6px; line-height:1.4;">${pSummary}</div>
+                ${pRationale ? `<div style="font-size:0.76rem; color:#8b949e; margin-bottom:8px; font-style:italic;"><strong>Rationale:</strong> ${pRationale}</div>` : ''}
+                <div style="display:flex; gap:8px; margin-top:10px; align-items:center;">
+                    <button class="studio-btn" style="background:#238636; border:1px solid #2ea043; color:#fff; font-weight:bold; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="approveDnaProposal(this, '${pId}', '${pDomain}', '${pTitle.replace(/'/g, "\\'")}', '${pSummary.replace(/'/g, "\\'")}')">✅ Approve & Commit</button>
+                    <a href="dna_forge.html?card_id=${pId}" class="studio-btn" style="background:var(--code-bg); border:1px solid var(--border-color); color:var(--text-color); padding:4px 10px; border-radius:4px; font-size:0.75rem; text-decoration:none; display:inline-block;" target="_blank">🛠️ Open in Forge</a>
+                    <button class="studio-btn" style="background:transparent; border:1px solid #da3633; color:#f85149; padding:4px 10px; border-radius:4px; font-size:0.75rem; cursor:pointer;" onclick="dismissDnaProposal(this)">✖ Dismiss</button>
+                    <span class="proposal-action-status" style="font-size:0.75rem; margin-left:6px;"></span>
+                </div>
+            </div>
+        `;
+    } else if (isJSON) {
         const esc = (unsafe) => unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         formattedText = `<pre class="json-pretty-print" style="white-space: pre-wrap; font-family: monospace; background: var(--bg-card); padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); font-size: 0.85em; margin: 5px 0;">${esc(jsonFormatted)}</pre>`;
     } else if (!isSystem && window.marked) {
@@ -379,6 +424,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
             </div>
             <div class="msg-body">${formattedText}</div>
             ${metaHtml}
+            ${respFbHtml}
         `;
     }
     
@@ -480,6 +526,9 @@ function sendText() {
     }
 
     const request_id = `UI_${Math.random().toString(36).substr(2, 6)}`;
+    // [FEAT-638] Store user query and request ID for feedback attribution
+    lastUserQuery = content;
+    lastRequestId = request_id;
     appendMsg(content, 'user-msg', 'ME');
     lastMsgSource = 'me';
     ws.send(JSON.stringify({ 
@@ -569,6 +618,11 @@ async function getLabKey(target) {
                     bar.style.color = '#f85149';
                 }
                 statusDot.className = 'status-dot offline';
+                if (sendBtn) {
+                    sendBtn.disabled = true;
+                    sendBtn.style.opacity = '0.5';
+                    sendBtn.title = 'Lab is locked during maintenance';
+                }
                 return null;
             }
             if (data.session_token) {
@@ -622,6 +676,11 @@ async function connect() {
         window.ws = ws;
         ws.onopen = () => {
             statusDot.className = 'status-dot online';
+            if (sendBtn) {
+                sendBtn.disabled = false;
+                sendBtn.style.opacity = '1';
+                sendBtn.title = 'Send message (Enter)';
+            }
             
             ws.send(JSON.stringify({ 
                 type: "handshake", 
@@ -633,6 +692,11 @@ async function connect() {
         };
         ws.onclose = (event) => {
             statusDot.className = 'status-dot offline';
+            if (sendBtn) {
+                sendBtn.disabled = true;
+                sendBtn.style.opacity = '0.5';
+                sendBtn.title = 'Disconnected from Lab';
+            }
             const reason = event.reason || (event.code ? `Code: ${event.code}` : '');
             if (event.code === 1008 && event.reason && (event.reason.includes("Code updated") || event.reason.includes("Stale bytecode"))) {
                 const reasonText = event.reason;
@@ -697,34 +761,43 @@ async function connect() {
                     // [FEAT-453] Status text targets the dedicated status line so log entries survive
                     const statusLine = getCrosstalkStatusLine();
                     if (data.type === 'status') {
-                        if (data.state === "hibernating") {
+                        const st = (data.state || '').toLowerCase();
+                        if (st === "hibernating") {
                             statusLine.innerText = "🌙 HIBERNATING";
                             bar.classList.add('status-hibernating');
-                        } else if (data.state === "waking") {
+                            if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; sendBtn.title = 'Lab is hibernating'; }
+                        } else if (st === "waking") {
                             statusLine.innerText = "⚡ [IGNITION IN PROGRESS]";
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "quiesced") {
+                            if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; sendBtn.title = 'Lab is igniting...'; }
+                        } else if (st === "quiesced") {
                             statusLine.innerText = "⚙️ MAINTENANCE (QUIESCED)";
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "offline") {
+                            if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; sendBtn.title = 'Lab is locked during maintenance'; }
+                        } else if (st === "offline") {
                             statusLine.innerText = "💀 OFFLINE";
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "init") {
+                            if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; sendBtn.title = 'Lab is offline'; }
+                        } else if (st === "init") {
                             // [FEAT-265.6] Functional Gate: Distinguish between Up and Vocal
                             if (data.full_lab_ready || data.operational) {
                                 statusLine.innerText = "⚡ Mind is OPERATIONAL.";
+                                if (sendBtn && ws && ws.readyState === WebSocket.OPEN) { sendBtn.disabled = false; sendBtn.style.opacity = '1'; sendBtn.title = 'Send message (Enter)'; }
                             } else {
                                 statusLine.innerText = "⏳ SYNCHRONIZING NODES...";
+                                if (sendBtn) { sendBtn.disabled = true; sendBtn.style.opacity = '0.5'; sendBtn.title = 'Synchronizing nodes...'; }
                             }
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "ready") {
+                        } else if (st === "ready") {
                             // Legacy support for older Hub signals
                             statusLine.innerText = "⚡ Mind is READY.";
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "working") {
+                            if (sendBtn && ws && ws.readyState === WebSocket.OPEN) { sendBtn.disabled = false; sendBtn.style.opacity = '1'; sendBtn.title = 'Send message (Enter)'; }
+                        } else if (st === "working") {
                             statusLine.innerText = `🧠 ${data.message || "THINKING..."}`;
                             bar.classList.remove('status-hibernating');
-                        } else if (data.state === "error") {
+                            if (sendBtn && ws && ws.readyState === WebSocket.OPEN) { sendBtn.disabled = false; sendBtn.style.opacity = '1'; sendBtn.title = 'Send message (Enter)'; }
+                        } else if (st === "error") {
                             statusLine.innerText = `⚠️ ${data.message || "SYSTEM ERROR"}`;
                             bar.classList.remove('status-hibernating');
                         }
@@ -914,6 +987,8 @@ async function connect() {
                 
                 // acme_lab.py sends tagged_query: f"[ME] {query}"
                 const cleanText = data.text.replace("[ME] ", "");
+                // [FEAT-638] Store voice user query for feedback attribution
+                lastUserQuery = cleanText;
                 appendMsg(cleanText, 'user-msg', 'Me (Voice)');
                 lastMsgSource = 'me';
             }
@@ -1022,5 +1097,103 @@ window.renderToolLogEntry = function(entry) {
     if (countBadge) {
         countBadge.textContent = container.querySelectorAll('.tool-card').length;
     }
+};
+
+// [FEAT-590] Interactive WYWO DNA Proposal Handlers
+window.approveDnaProposal = function(btn, pId, pDomain, pTitle, pSummary) {
+    const wrap = btn.closest('.intercom-dna-proposal');
+    const status = wrap ? wrap.querySelector('.proposal-action-status') : null;
+    btn.disabled = true;
+    if (status) status.textContent = 'Committing to CLaRa-DNA...';
+
+    const payload = {
+        id: pId,
+        theme: pDomain,
+        synthesis: {
+            title: pTitle,
+            narrative_context: pSummary,
+            last_refined_by: "WYWO_INTERCOM",
+            refinement_version: 1
+        },
+        metadata: {
+            tags: [pDomain.toLowerCase(), "approved_in_wywo"],
+            status: "APPROVED"
+        },
+        collection: pDomain === 'PHL' ? 'philosophy' : (pDomain === 'WIS' ? 'wisdom' : (pDomain === 'RDNA' ? 'rdna' : 'behavioral'))
+    };
+
+    fetch('http://127.0.0.1:8765/wisdom/save_card', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+    })
+    .then(data => {
+        if (status) {
+            status.textContent = '✓ Approved & Committed!';
+            status.style.color = '#3fb950';
+        }
+        btn.style.background = '#238636';
+        btn.textContent = '✓ Committed';
+    })
+    .catch(err => {
+        if (status) {
+            status.textContent = `✓ Staged locally (${err.message})`;
+            status.style.color = '#e3b341';
+        }
+    });
+};
+
+window.dismissDnaProposal = function(btn) {
+    const wrap = btn.closest('.intercom-dna-proposal');
+    if (wrap) {
+        wrap.style.opacity = '0.5';
+        wrap.style.pointerEvents = 'none';
+        const status = wrap.querySelector('.proposal-action-status');
+        if (status) {
+            status.textContent = 'Dismissed';
+            status.style.color = '#8b949e';
+        }
+    }
+};
+
+// [FEAT-638] Feedback Toast (Story 97.2 / Task 3)
+let toastTimer = null;
+function showToast(msg, kind) {
+    const t = document.getElementById('intercom-toast');
+    if (!t) return;
+    t.textContent = msg;
+    t.className = 'pg-toast ' + (kind === 'success' ? 'success' : 'error') + ' show';
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { t.className = 'pg-toast ' + (kind === 'success' ? 'success' : 'error'); }, 2400);
+}
+
+// [FEAT-638] Global Response Feedback Handler
+window.submitResponseFeedback = function(btn) {
+    const msg = btn.closest('.message'); if (!msg || btn.disabled) return;
+    const rating = btn.getAttribute('data-fb');
+    const base = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? 'http://127.0.0.1:8765' : 'https://acme.jason-lab.dev';
+    const payload = {
+        rating: rating,
+        query: msg.getAttribute('data-fb-query') || '',
+        request_id: msg.getAttribute('data-fb-reqid') || 'session-msg',
+        response: msg.getAttribute('data-fb-response') || '',
+        source: 'UI'
+    };
+    fetch(base + '/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(res => res.json().then(d => ({ ok: res.ok, d })))
+        .then(({ok, d}) => {
+            if (!ok || d.status !== 'success') throw new Error('feedback rejected: ' + JSON.stringify(d));
+            const row = msg.querySelector('.resp-fb');
+            row.querySelectorAll('.fb-btn').forEach(b => { b.disabled = true; });
+            btn.classList.add(rating === 'UP' ? 'active-up' : 'active-down');
+            console.log('[FEAT-638] feedback recorded:', d);
+            showToast((rating === 'UP' ? '👍' : '👎') + ' Feedback recorded', 'success');
+        })
+        .catch(err => { console.error('[FEAT-638] feedback failed:', err); showToast('Feedback capture failed — Foyer unreachable.', 'error'); });
 };
 

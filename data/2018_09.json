@@ -5,10 +5,10 @@
     "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
     "sensitivity": "Public",
     "tags": [
-      "Proton1",
-      "Purley 4S",
       "Proton2",
-      "Purley 2S"
+      "Purley 4S",
+      "Purley 2S",
+      "Proton1"
     ],
     "rank": 4
   },
@@ -18,8 +18,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "FIO",
-      "stressapptest"
+      "stressapptest",
+      "FIO"
     ],
     "rank": 4
   },
@@ -74,8 +74,8 @@
     "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
     "sensitivity": "Public",
     "tags": [
-      "DC Cycling",
-      "Cold Reset"
+      "Cold Reset",
+      "DC Cycling"
     ],
     "rank": 4
   }

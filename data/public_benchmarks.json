@@ -196,9 +196,9 @@
       "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
       "sensitivity": "Public",
       "tags": [
-        "upgrade",
+        "EFS",
         "BMC23",
-        "EFS"
+        "upgrade"
       ],
       "rank": 4
     },
@@ -242,8 +242,8 @@
       "evidence": "HW BMC25/EFS1.15   EFS1.16",
       "sensitivity": "Public",
       "tags": [
-        "tool_version",
-        "evaluation"
+        "evaluation",
+        "tool_version"
       ],
       "rank": 4
     },
@@ -557,8 +557,8 @@
       "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
       "sensitivity": "Public",
       "tags": [
-        "pattern generators",
-        "VISA signals"
+        "VISA signals",
+        "pattern generators"
       ],
       "rank": 4
     },
@@ -1040,8 +1040,8 @@
       "evidence": "Corrected CT item selection in the VISA panel.",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "error_code"
+        "error_code",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1051,8 +1051,8 @@
       "evidence": "Corrected script generated from CEC register programs.",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "error_code"
+        "error_code",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1062,8 +1062,8 @@
       "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "Skylake"
+        "Skylake",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1073,8 +1073,8 @@
       "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
       "sensitivity": "Public",
       "tags": [
-        "logging",
-        "VISA"
+        "VISA",
+        "logging"
       ],
       "rank": 4
     },
@@ -1095,8 +1095,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "BDW",
-        "ITP Bug"
+        "ITP Bug",
+        "BDW"
       ],
       "rank": 4
     },
@@ -1106,8 +1106,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "debugging",
-        "EDRAMBAR"
+        "EDRAMBAR",
+        "debugging"
       ],
       "rank": 4
     },
@@ -1117,8 +1117,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "VISA",
-        "error codes"
+        "error codes",
+        "VISA"
       ],
       "rank": 4
     },
@@ -1139,8 +1139,8 @@
       "evidence": "NorthpeakApi* papi= new NorthpeakApi();\nREDACTED_PATH initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"REDACTED_PATH\"));",
       "sensitivity": "Public",
       "tags": [
-        "configuration file",
-        "Northpeak API"
+        "Northpeak API",
+        "configuration file"
       ],
       "rank": 4
     },
@@ -1549,8 +1549,8 @@
       "sensitivity": "Public",
       "tags": [
         "FPGAIntegration",
-        "powercycle.py",
-        "init_soc.cmm"
+        "init_soc.cmm",
+        "powercycle.py"
       ],
       "rank": 4
     },
@@ -1561,8 +1561,8 @@
       "sensitivity": "Public",
       "tags": [
         "vcd_missing",
-        "test_failure",
-        "msr_error"
+        "msr_error",
+        "test_failure"
       ],
       "rank": 4
     },
@@ -1572,8 +1572,8 @@
       "evidence": "RAW LOGS: Error message indicating MSR access faulted.",
       "sensitivity": "Public",
       "tags": [
-        "cpu_fault",
-        "msr_error"
+        "msr_error",
+        "cpu_fault"
       ],
       "rank": 4
     },
@@ -1583,8 +1583,8 @@
       "evidence": "RAW LOGS: Known issue (ITP Bug [5660831]) with no automated recovery method.",
       "sensitivity": "Public",
       "tags": [
-        "recovery_failure",
-        "trace32_error"
+        "trace32_error",
+        "recovery_failure"
       ],
       "rank": 4
     },
@@ -1616,9 +1616,9 @@
       "evidence": "ERROR: cound not start target config sequence: Unable to connect IPC error code: (0x80000001):",
       "sensitivity": "Public",
       "tags": [
+        "connection",
         "failure",
-        "ipc",
-        "connection"
+        "ipc"
       ],
       "rank": 4
     },
@@ -1629,8 +1629,8 @@
       "sensitivity": "Public",
       "tags": [
         "cfg_apitest64.exe",
-        "probemode",
-        "tap2sb"
+        "tap2sb",
+        "probemode"
       ],
       "rank": 4
     },
@@ -1640,8 +1640,8 @@
       "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
       "sensitivity": "Public",
       "tags": [
-        "ITP",
-        "bugs"
+        "bugs",
+        "ITP"
       ],
       "rank": 4
     },
@@ -1651,8 +1651,8 @@
       "evidence": "RAW LOGS: ImportError: No module named ipccli",
       "sensitivity": "Public",
       "tags": [
-        "ipccli",
-        "Python 2.7.9"
+        "Python 2.7.9",
+        "ipccli"
       ],
       "rank": 4
     },
@@ -1693,8 +1693,8 @@
       "evidence": "[RAW LOGS: Height of EDRAMIOT is 525.130909090909 and Width is 383, Anchor set to Top]",
       "sensitivity": "Public",
       "tags": [
-        "dockable_content",
-        "EDRAMIOT"
+        "EDRAMIOT",
+        "dockable_content"
       ],
       "rank": 4
     },
@@ -1704,9 +1704,9 @@
       "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
       "sensitivity": "Public",
       "tags": [
+        "SkyLake_M0",
         "EDRAM",
-        "VISA",
-        "SkyLake_M0"
+        "VISA"
       ],
       "rank": 4
     },
@@ -1716,8 +1716,8 @@
       "evidence": "Path modified from `REDACTED_PATH` to `REDACTED_PATH`.",
       "sensitivity": "Public",
       "tags": [
-        "visa_custom_rs.xml",
-        "EDC"
+        "EDC",
+        "visa_custom_rs.xml"
       ],
       "rank": 4
     },
@@ -1738,8 +1738,8 @@
       "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
       "sensitivity": "Public",
       "tags": [
-        "testing",
         "PVT BXTOEM",
+        "testing",
         "SV2K8122"
       ],
       "rank": 4
@@ -1750,8 +1750,8 @@
       "evidence": "The latest nightly build was fetched from https:REDACTED_PATH refs/changes/49/63649/2. The build script was run using REDACTED_PATH -64 -e and then REDACTED_PATH -64 -r -b",
       "sensitivity": "Public",
       "tags": [
-        "NPK SDK",
         "configuration",
+        "NPK SDK",
         "installation"
       ],
       "rank": 4
@@ -1792,9 +1792,9 @@
       "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
       "sensitivity": "Public",
       "tags": [
+        "PVT",
         "testing",
-        "validation",
-        "PVT"
+        "validation"
       ],
       "rank": 4
     },
@@ -1826,8 +1826,8 @@
       "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
       "sensitivity": "Public",
       "tags": [
-        "metadata file",
-        "internal error"
+        "internal error",
+        "metadata file"
       ],
       "rank": 4
     },
@@ -1837,8 +1837,8 @@
       "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
       "sensitivity": "Public",
       "tags": [
-        "target relocation",
-        "BXTP"
+        "BXTP",
+        "target relocation"
       ],
       "rank": 4
     },
@@ -1848,8 +1848,8 @@
       "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
       "sensitivity": "Public",
       "tags": [
-        "tool",
-        "causality error"
+        "causality error",
+        "tool"
       ],
       "rank": 4
     },
@@ -1880,8 +1880,8 @@
       "evidence": "https:REDACTED_PATH#article?id=1404494581",
       "sensitivity": "Public",
       "tags": [
-        "update",
-        "HSD"
+        "HSD",
+        "update"
       ],
       "rank": 4
     },
@@ -1891,8 +1891,8 @@
       "evidence": "BLUE - REDACTED_PATH IFWI 2015_WW47_4_02\\APLK_IFWI_X64_D_2015_47_4_02_SPI_RVP1.bin",
       "sensitivity": "Public",
       "tags": [
-        "configuration",
-        "debug"
+        "debug",
+        "configuration"
       ],
       "rank": 4
     },
@@ -2348,9 +2348,9 @@
       "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
       "sensitivity": "Public",
       "tags": [
-        "pipes",
         "bling",
-        "dc6"
+        "dc6",
+        "pipes"
       ],
       "rank": 4
     },
@@ -2360,8 +2360,8 @@
       "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
       "sensitivity": "Public",
       "tags": [
-        "dc6",
-        "build process"
+        "build process",
+        "dc6"
       ],
       "rank": 4
     },
@@ -2382,8 +2382,8 @@
       "evidence": "REDACTED_PATH -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
       "sensitivity": "Public",
       "tags": [
-        "test environment",
-        "Maestro"
+        "Maestro",
+        "test environment"
       ],
       "rank": 4
     },
@@ -2931,9 +2931,9 @@
       "evidence": "http:REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "UFM",
+        "shmemcc",
         "HAMR",
-        "shmemcc"
+        "UFM"
       ],
       "rank": 4
     },
@@ -2954,9 +2954,9 @@
       "evidence": "",
       "sensitivity": "Public",
       "tags": [
-        "AppDirect Mode",
+        "PMEM",
         "AEP",
-        "PMEM"
+        "AppDirect Mode"
       ],
       "rank": 4
     },
@@ -2999,8 +2999,8 @@
       "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 REDACTED_PATH -i 100000 -m1024 -M65536 --time-init 1",
       "sensitivity": "Public",
       "tags": [
-        "SHMEM_SYMMETRIC_HEAP_SIZE",
-        "configuration"
+        "configuration",
+        "SHMEM_SYMMETRIC_HEAP_SIZE"
       ],
       "rank": 4
     },
@@ -3021,9 +3021,9 @@
       "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
       "sensitivity": "Public",
       "tags": [
-        "mce",
         "error",
-        "vc30"
+        "vc30",
+        "mce"
       ],
       "rank": 4
     },
@@ -3033,8 +3033,8 @@
       "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "ixpdimm-cli"
+        "ixpdimm-cli",
+        "performance"
       ],
       "rank": 4
     },
@@ -3044,10 +3044,10 @@
       "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
       "sensitivity": "Public",
       "tags": [
-        "Proton1",
-        "Purley 4S",
         "Proton2",
-        "Purley 2S"
+        "Purley 4S",
+        "Purley 2S",
+        "Proton1"
       ],
       "rank": 4
     },
@@ -3057,8 +3057,8 @@
       "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
       "sensitivity": "Public",
       "tags": [
-        "FIO",
-        "stressapptest"
+        "stressapptest",
+        "FIO"
       ],
       "rank": 4
     },
@@ -3113,8 +3113,8 @@
       "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
       "sensitivity": "Public",
       "tags": [
-        "DC Cycling",
-        "Cold Reset"
+        "Cold Reset",
+        "DC Cycling"
       ],
       "rank": 4
     },
@@ -3158,8 +3158,8 @@
       "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https:REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "Testing"
+        "Testing",
+        "Error Injection"
       ],
       "rank": 4
     },
@@ -3169,8 +3169,8 @@
       "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
       "sensitivity": "Public",
       "tags": [
-        "CAUSALITY ERROR",
-        "SvBios"
+        "SvBios",
+        "CAUSALITY ERROR"
       ],
       "rank": 4
     },
@@ -3180,8 +3180,8 @@
       "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
       "sensitivity": "Public",
       "tags": [
-        "Error Injection",
-        "biosKnobs"
+        "biosKnobs",
+        "Error Injection"
       ],
       "rank": 4
     },
@@ -3226,8 +3226,8 @@
       "sensitivity": "Public",
       "tags": [
         "Git",
-        "hook",
-        "commit-msg"
+        "commit-msg",
+        "hook"
       ],
       "rank": 4
     },
@@ -3248,8 +3248,8 @@
       "evidence": "REDACTED_PATH -a ipc -c CLX_LBG_XDPA",
       "sensitivity": "Public",
       "tags": [
-        "IPC",
-        "CLX_LBG_XDPA"
+        "CLX_LBG_XDPA",
+        "IPC"
       ],
       "rank": 4
     },
@@ -3596,8 +3596,8 @@
       "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
       "sensitivity": "Public",
       "tags": [
-        "jenkins",
         "error",
+        "jenkins",
         "pipeline"
       ],
       "rank": 4
@@ -3609,8 +3609,8 @@
       "sensitivity": "Public",
       "tags": [
         "docker",
-        "aws-ecr-credential-helper",
-        "registry"
+        "registry",
+        "aws-ecr-credential-helper"
       ],
       "rank": 4
     },
@@ -3621,8 +3621,8 @@
       "sensitivity": "Public",
       "tags": [
         "compose",
-        "build",
-        "docker"
+        "docker",
+        "build"
       ],
       "rank": 4
     },
@@ -3708,9 +3708,9 @@
       "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
       "sensitivity": "Public",
       "tags": [
-        "ME",
-        "IPMI",
         "ICX-HCC",
+        "IPMI",
+        "ME",
         "BMC"
       ],
       "rank": 4
@@ -3743,8 +3743,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "power_limit_accuracy",
-        "pmcapsweep"
+        "pmcapsweep",
+        "power_limit_accuracy"
       ],
       "rank": 4
     },
@@ -3754,10 +3754,10 @@
       "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
       "sensitivity": "Public",
       "tags": [
-        "Error Code 0xAC",
         "Error Code 0xAB",
         "IPMI",
-        "PCI"
+        "PCI",
+        "Error Code 0xAC"
       ],
       "rank": 4
     },
@@ -3777,9 +3777,9 @@
       "evidence": "RAW LOGS: Manually determined limiting policy was 74, but actual limiting policy ID obtained through IPMI command was 101.",
       "sensitivity": "Public",
       "tags": [
-        "power limiting",
         "error",
-        "IPMI"
+        "IPMI",
+        "power limiting"
       ],
       "rank": 4
     },
@@ -3790,8 +3790,8 @@
       "sensitivity": "Public",
       "tags": [
         "ipmitool",
-        "unknown return code",
-        "PECI"
+        "PECI",
+        "unknown return code"
       ],
       "rank": 4
     },
@@ -3801,8 +3801,8 @@
       "evidence": "Line 1315: 03:12.8,INFO,montana.verification.usermsg,set power limit policies on domain 0",
       "sensitivity": "Public",
       "tags": [
-        "policy",
-        "power management"
+        "power management",
+        "policy"
       ],
       "rank": 4
     },
@@ -3834,8 +3834,8 @@
       "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "policy #231"
+        "policy #231",
+        "avgpowercmp"
       ],
       "rank": 4
     },
@@ -3856,8 +3856,8 @@
       "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
       "sensitivity": "Public",
       "tags": [
-        "avgpowercmp",
-        "error reporting"
+        "error reporting",
+        "avgpowercmp"
       ],
       "rank": 4
     },
@@ -3878,9 +3878,9 @@
       "evidence": "MIV Wiki https:REDACTED_PATH\nManageability Spec Links - https:REDACTED_PATH:REDACTED_PATH%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
       "sensitivity": "Public",
       "tags": [
-        "Manageability specifications",
         "Intel MIV",
-        "MIV Wiki"
+        "MIV Wiki",
+        "Manageability specifications"
       ],
       "rank": 4
     },
@@ -3890,10 +3890,10 @@
       "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager REDACTED_PATH xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https:REDACTED_PATH+and+Receiving+MCTP+Message+Payloads+over+Redfish",
       "sensitivity": "Public",
       "tags": [
+        "MCTP",
         "D-Bus",
-        "PECI",
         "Intel MIV",
-        "MCTP"
+        "PECI"
       ],
       "rank": 4
     },
@@ -3903,9 +3903,9 @@
       "evidence": "Simics dashboard - https:REDACTED_PATH%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https:REDACTED_PATH+Content+Developer+quick+start+guide",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
+        "Intel MIV",
         "Simics",
-        "Intel MIV"
+        "DTAF"
       ],
       "rank": 4
     },
@@ -4409,8 +4409,8 @@
       "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "MIV software",
-        "CLX"
+        "CLX",
+        "MIV software"
       ],
       "rank": 4
     },
@@ -4431,8 +4431,8 @@
       "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "MIV software",
-        "CLX"
+        "CLX",
+        "MIV software"
       ],
       "rank": 4
     },
@@ -4464,8 +4464,8 @@
       "sensitivity": "Public",
       "tags": [
         "msr",
-        "pyghmi",
-        "crypto"
+        "crypto",
+        "pyghmi"
       ],
       "rank": 4
     },
@@ -4475,9 +4475,9 @@
       "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
       "sensitivity": "Public",
       "tags": [
-        "MIV",
         "Reset",
-        "Recovery"
+        "Recovery",
+        "MIV"
       ],
       "rank": 4
     },
@@ -4487,8 +4487,8 @@
       "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "PECI"
+        "PECI",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4498,8 +4498,8 @@
       "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "MIV",
-        "Test"
+        "Test",
+        "MIV"
       ],
       "rank": 4
     },
@@ -4509,8 +4509,8 @@
       "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "MIV",
-        "Recovery"
+        "Recovery",
+        "MIV"
       ],
       "rank": 4
     },
@@ -4520,8 +4520,8 @@
       "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "PECI"
+        "PECI",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4531,8 +4531,8 @@
       "evidence": "Higher-order PECI test cases were planned",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
-        "PECI"
+        "PECI",
+        "DTAF"
       ],
       "rank": 4
     },
@@ -4542,8 +4542,8 @@
       "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
-        "PECI"
+        "PECI",
+        "DTAF"
       ],
       "rank": 4
     },
@@ -4553,8 +4553,8 @@
       "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "PECI"
+        "PECI",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4575,8 +4575,8 @@
       "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
       "sensitivity": "Public",
       "tags": [
-        "PCIE Whitley",
-        "priority execution requests"
+        "priority execution requests",
+        "PCIE Whitley"
       ],
       "rank": 4
     },
@@ -4597,8 +4597,8 @@
       "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
       "sensitivity": "Public",
       "tags": [
-        "external interface spec",
-        "nm-4.0"
+        "nm-4.0",
+        "external interface spec"
       ],
       "rank": 4
     },
@@ -4630,8 +4630,8 @@
       "evidence": "https:REDACTED_PATH Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "L-BMC"
+        "L-BMC",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4641,8 +4641,8 @@
       "evidence": "RAW LOGS text",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "validation"
+        "validation",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4663,8 +4663,8 @@
       "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
       "sensitivity": "Public",
       "tags": [
-        "issue investigation",
-        "code review"
+        "code review",
+        "issue investigation"
       ],
       "rank": 4
     },
@@ -4696,9 +4696,9 @@
       "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
       "sensitivity": "Public",
       "tags": [
-        "Opcode 0x2E",
         "Power Limiting Policy",
-        "Node Manager"
+        "Node Manager",
+        "Opcode 0x2E"
       ],
       "rank": 4
     },
@@ -4731,8 +4731,8 @@
       "sensitivity": "Public",
       "tags": [
         "master",
-        "PECI",
         "PCH",
+        "PECI",
         "BMC"
       ],
       "rank": 4
@@ -4774,8 +4774,8 @@
       "evidence": null,
       "sensitivity": "Public",
       "tags": [
-        "Troubleshooting",
-        "Era Registry"
+        "Era Registry",
+        "Troubleshooting"
       ],
       "rank": 4
     },
@@ -4818,8 +4818,8 @@
       "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
       "sensitivity": "Public",
       "tags": [
-        "BMC",
-        "PECI"
+        "PECI",
+        "BMC"
       ],
       "rank": 4
     },
@@ -4840,8 +4840,8 @@
       "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https:REDACTED_PATH%20Requests/AllItems.aspx.",
       "sensitivity": "Public",
       "tags": [
-        "updated list",
-        "inventory requests"
+        "inventory requests",
+        "updated list"
       ],
       "rank": 4
     },
@@ -5277,8 +5277,8 @@
       "evidence": "...-MIV report Weldon/Hooper/Staff...",
       "sensitivity": "Public",
       "tags": [
-        "report",
-        "MIV"
+        "MIV",
+        "report"
       ],
       "rank": 4
     },
@@ -5288,8 +5288,8 @@
       "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
       "sensitivity": "Public",
       "tags": [
-        "PECI",
-        "fuzzing"
+        "fuzzing",
+        "PECI"
       ],
       "rank": 4
     },
@@ -5333,8 +5333,8 @@
       "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
       "sensitivity": "Public",
       "tags": [
-        "PECI Throughput",
-        "peci_flood.tdf"
+        "peci_flood.tdf",
+        "PECI Throughput"
       ],
       "rank": 4
     },
@@ -5365,8 +5365,8 @@
       "evidence": "RAW LOGS on 6/30/2021",
       "sensitivity": "Public",
       "tags": [
-        "collaboration",
-        "team structure"
+        "team structure",
+        "collaboration"
       ],
       "rank": 4
     },
@@ -5790,8 +5790,8 @@
       "evidence": "REDACTED_PATH -y 0x010000C800800D -d 00",
       "sensitivity": "Public",
       "tags": [
-        "MCTP",
-        "PythonSV"
+        "PythonSV",
+        "MCTP"
       ],
       "rank": 4
     },
@@ -6390,8 +6390,8 @@
       "evidence": "Developed telemetry software 'Blackbox recorder' used to debug RAPL failures...",
       "sensitivity": "Public",
       "tags": [
-        "telemetry",
-        "RAPL"
+        "RAPL",
+        "telemetry"
       ],
       "rank": 4
     },
@@ -6401,8 +6401,8 @@
       "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
       "sensitivity": "Public",
       "tags": [
-        "negative testing",
-        "refactored code"
+        "refactored code",
+        "negative testing"
       ],
       "rank": 4
     },
@@ -6423,8 +6423,8 @@
       "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
       "sensitivity": "Public",
       "tags": [
-        "TDF architecture",
         "Python scripts",
+        "TDF architecture",
         "kayak framework"
       ],
       "rank": 4
@@ -6435,8 +6435,8 @@
       "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
       "sensitivity": "Public",
       "tags": [
-        "TDF architecture",
-        "MCTP failures"
+        "MCTP failures",
+        "TDF architecture"
       ],
       "rank": 4
     },
@@ -6705,9 +6705,9 @@
       "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
       "sensitivity": "Public",
       "tags": [
-        "i2cdetect",
         "busctl",
         "MCTP",
+        "i2cdetect",
         "i2cget"
       ],
       "rank": 4
@@ -6782,8 +6782,8 @@
       "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https:REDACTED_PATH:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
       "sensitivity": "Public",
       "tags": [
-        "MTM",
-        "IPMI"
+        "IPMI",
+        "MTM"
       ],
       "rank": 4
     },
@@ -6804,8 +6804,8 @@
       "evidence": "[0x7E, 0x80, 0x86, 0x80, 0x02, 0x0C, 0x05, 0xC1, 0x12, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x78, 0x11, 0x01, 0x00]",
       "sensitivity": "Public",
       "tags": [
-        "Python",
-        "PECI"
+        "PECI",
+        "Python"
       ],
       "rank": 4
     },
@@ -6858,8 +6858,8 @@
       "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
       "sensitivity": "Public",
       "tags": [
-        "Oakstream",
-        "simulation"
+        "simulation",
+        "Oakstream"
       ],
       "rank": 4
     },

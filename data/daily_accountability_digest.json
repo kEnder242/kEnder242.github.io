@@ -1,65 +1,59 @@
 {
-  "timestamp": "2026-09-24T00:28:31.554013",
-  "date": "2026-09-24",
+  "timestamp": "2026-10-06T06:01:19.553483",
+  "date": "2026-10-06",
+  "auditor": "standalone_accountability_watchdog (FEAT-619)",
   "overall_status": "FAIL",
-  "total_checks": 6,
-  "passed_checks": 4,
-  "failed_checks": 2,
+  "total_checks": 7,
+  "passed_checks": 2,
+  "failed_checks": 5,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
       "passed": true,
-      "detail": "Verified 165W clamp limit"
-    },
-    {
-      "name": "VRAM Quiesce Drain (<250MB)",
-      "passed": true,
-      "detail": "VRAM evicted cleanly before training"
-    },
-    {
-      "name": "LoRA Fine-Tuning Multi-Adapter Pass",
-      "passed": true,
-      "detail": "Status: COMPLETED, Adapters: 4"
+      "detail": "Power limit is 165.0W (max 170.0W)",
+      "val": 165.0
     },
     {
       "name": "Foyer Re-Ignition & Hot-Reload",
-      "passed": true,
-      "detail": "Foyer returned to OPERATIONAL"
+      "passed": false,
+      "detail": "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN"
+    },
+    {
+      "name": "Lockfile Cleanliness & Quiescence",
+      "passed": false,
+      "detail": "Stale lock(s) detected: nightly_forge.lock (DEAD PID 1870642, 240.0m old)"
+    },
+    {
+      "name": "Nightly Forge Orchestration",
+      "passed": false,
+      "detail": "Status: RUNNING (Age: 999.0h)",
+      "status": "RUNNING",
+      "age_hours": 999.0
+    },
+    {
+      "name": "LoRA Fine-Tuning Multi-Adapter Pass",
+      "passed": false,
+      "detail": "Status: FAILED",
+      "status": "FAILED"
     },
     {
       "name": "Accountable Subconscious Dreaming",
-      "passed": false,
-      "detail": "Turns: 0, Refined: 0, Status: PASS"
+      "passed": true,
+      "detail": "Active Gems: 4",
+      "count": 4
     },
     {
       "name": "Synthetic Morning Round Table Probe",
       "passed": false,
-      "detail": "Greeting Latency: 0ms, Critic Score: 0.00, Status: FAIL"
+      "detail": "Status: DEGRADED, Critic Score: 0.00, Latency: 1.39ms",
+      "critic_score": 0.0
     }
   ],
   "discrepancies": [
-    "Dream cycle completed with zero synthesized turns and zero refined items (Green Lie).",
-    "Round table probe returned FAIL: Triage timeout"
-  ],
-  "raw_telemetry": {
-    "gpu_power_clamped": true,
-    "vram_quiesced": true,
-    "lora_status": "COMPLETED",
-    "adapters_trained": [
-      "cli_voice_v1",
-      "lab_history_v1",
-      "triage_v1",
-      "reviewer_v1"
-    ],
-    "re_ignited": true,
-    "dream_telemetry": {
-      "status": "PASS",
-      "turns_synthesized": 0,
-      "items_refined": 0
-    },
-    "round_table_probe": {
-      "status": "FAIL",
-      "error": "Triage timeout"
-    }
-  }
+    "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN",
+    "Stale lock(s) detected: nightly_forge.lock (DEAD PID 1870642, 240.0m old)",
+    "Nightly Forge did not complete successfully (Status: RUNNING (Age: 999.0h))",
+    "LoRA Multi-Adapter Pass failed (Status: FAILED)",
+    "Status: DEGRADED, Critic Score: 0.00, Latency: 1.39ms"
+  ]
 }

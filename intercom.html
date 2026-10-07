@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // [FEAT-223] Global Error Sentry
+        window.addEventListener('error', function(e) {
+            const msg = `[CRITICAL UI ERROR] ${e.message} at ${e.filename || 'inline'}:${e.lineno || '?'}`;
+            console.error(msg);
+            const report = () => {
+                const consoleEl = document.getElementById('chat-console') || document.getElementById('sys-console');
+                if (consoleEl) {
+                    const errDiv = document.createElement('div');
+                    errDiv.className = 'system-msg';
+                    errDiv.style.color = '#f85149';
+                    errDiv.style.fontWeight = 'bold';
+                    errDiv.style.borderLeft = '2px solid #f85149';
+                    errDiv.style.paddingLeft = '10px';
+                    errDiv.style.marginTop = '10px';
+                    errDiv.innerText = msg;
+                    consoleEl.appendChild(errDiv);
+                    consoleEl.scrollTop = consoleEl.scrollHeight;
+                }
+            };
+            if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', report);
+            else report();
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Intercom - Acme Lab</title>
+    <link rel="stylesheet" href="style.css?v=9855deef">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --accent-dim: #1f6feb;
+            --border-color: #30363d;
+            --panel-bg: #161b22;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        body { 
+            background: var(--bg-color); color: var(--text-color); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0; display: flex; height: 100vh; overflow: hidden;
+        }
+        
+        /* Main Layout */
+        main { flex: 1; display: flex; flex-direction: column; padding: 20px; gap: 15px; }
+        
+        #console-row { display: flex; gap: 0; height: 40%; min-height: 200px; width: 100%; box-sizing: border-box; }
+        .console-panel { 
+            flex: 1 1 0px; background: #000; border: 1px solid var(--border-color); border-radius: 4px; 
+            padding: 15px; overflow-y: auto; font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem; box-shadow: inset 0 0 10px rgba(0,255,0,0.05); min-width: 100px;
+            box-sizing: border-box;
+        }
+        .col-resizer {
+            width: 8px;
+            background: #1c2128;
+            cursor: col-resize;
+            border-left: 1px solid #30363d;
+            border-right: 1px solid #30363d;
+            border-radius: 2px;
+            margin: 0 4px;
+            transition: background 0.15s ease;
+            user-select: none;
+            flex: 0 0 8px;
+            box-sizing: border-box;
+        }
+        .col-resizer:hover, .col-resizer.active {
+            background: var(--accent-color);
+            box-shadow: 0 0 6px rgba(88, 166, 255, 0.4);
+        }
+        .panel-header { font-size: 0.7rem; color: #555; text-transform: uppercase; margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .system-msg { color: #666; font-style: italic; }
+        
+        /* High-Fidelity Messages - Zero Indent Overhaul */
+        .message { margin-bottom: 4px; line-height: 1.3; }
+        .msg-header { display: block; font-size: 0.7rem; margin-bottom: 2px; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px; }
+        .msg-time { color: #444; font-family: monospace; margin-right: 8px; }
+        .msg-source { font-weight: bold; text-transform: uppercase; font-family: monospace; }
+        .msg-source.pinky { color: var(--accent-color); }
+        .msg-source.brain { color: #f85149; }
+        .msg-source.me { color: #888; }
+        .msg-source.system { color: #444; }
+        .msg-body { display: block; color: #eee; word-wrap: break-word; }
+        .msg-body p { margin: 2px 0; }
+
+        /* [FEAT-222] Simplified Message Density */
+        .message.internal {
+            border-left: 1px solid #333;
+            background: rgba(255, 255, 255, 0.02);
+            margin-left: 5px;
+            padding: 5px 10px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Input Area */
+        #input-container { 
+            display: flex; gap: 10px; align-items: center; background: var(--panel-bg); 
+            padding: 10px; border-radius: 4px; border: 1px solid var(--border-color);
+        }
+        #text-input { 
+            flex: 1; background: #000; border: 1px solid #333; color: #fff; 
+            padding: 10px; border-radius: 4px; outline: none; font-family: inherit;
+            resize: none; min-height: 20px; max-height: 120px; line-height: 1.4;
+        }
+
+        /* Tool Log Card Styles */
+        #tool-log-section { 
+            margin-top: 15px; 
+            border-top: 1px solid var(--border-color); 
+            padding-top: 15px; 
+            overflow-y: auto; 
+            max-height: 35vh; 
+        }
+        .tool-log-title { 
+            font-size: 0.7rem; 
+            color: #555; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-bottom: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .tool-log-badge { 
+            font-size: 0.6rem; 
+            background: #222; 
+            color: #888; 
+            padding: 1px 6px; 
+            border-radius: 8px; 
+        }
+        .tool-card { 
+            margin-bottom: 4px; 
+            border: 1px solid var(--border-color); 
+            border-left: 3px solid var(--accent-color); 
+            border-radius: 3px; 
+            background: #0a0a0a; 
+        }
+        .tool-card summary { 
+            cursor: pointer; 
+            padding: 4px 8px; 
+            font-size: 0.72rem; 
+            color: #aaa; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px; 
+            user-select: none; 
+        }
+        .tool-card summary:hover { 
+            background: #111; 
+        }
+        .tool-card summary::-webkit-details-marker { 
+            color: #555; 
+        }
+        .tool-card[open] { 
+            border-left-color: #4caf50; 
+        }
+        .tool-card[open] summary { 
+            background: #111; 
+            color: #ccc; 
+            border-bottom: 1px solid var(--border-color); 
+        }
+        .tool-card-body { 
+            padding: 6px 8px 8px 24px; 
+            font-size: 0.7rem; 
+            color: #777; 
+            line-height: 1.5; 
+        }
+        .tool-card-body .param-row { 
+            display: flex; 
+            gap: 8px; 
+            margin-bottom: 2px; 
+        }
+        .tool-card-body .param-key { 
+            color: #555; 
+            min-width: 50px; 
+        }
+        .tool-card-body .param-val { 
+            color: #999; 
+            font-family: monospace; 
+            word-break: break-all; 
+        }
+        .tool-card-body .output-link { 
+            color: var(--accent-color); 
+            text-decoration: none; 
+            font-size: 0.68rem; 
+        }
+        .tool-card-body .output-link:hover { 
+            text-decoration: underline; 
+        }
+        .tool-timestamp { 
+            color: #555; 
+            font-family: monospace; 
+            font-size: 0.65rem; 
+            min-width: 55px; 
+        }
+        .tool-node-badge { 
+            background: #1a1a2e; 
+            color: #7ec8e3; 
+            padding: 0 4px; 
+            border-radius: 2px; 
+            font-size: 0.65rem; 
+        }
+        
+        /* Workspace: Reverted to Dark Grey 'Reports' style */
+
+        /* EasyMDE Dark Overrides */
+        .editor-toolbar { background: #1a1a1a; border-color: #333; color: #ccc; }
+        .editor-toolbar i { color: #888 !important; }
+        .editor-toolbar a.active, .editor-toolbar a:hover { background: #333; border-color: #444; }
+        .CodeMirror { 
+            background: #111; color: #ccc; border-color: #333; 
+            font-family: 'Courier New', Courier, monospace;
+            flex: 1; /* Key for scaling */
+            height: auto;
+        }
+        .CodeMirror-scroll { min-height: 100px; }
+        .CodeMirror-cursor { border-left: 2px solid #fff !important; }
+        .editor-statusbar { background: #1a1a1a; color: #555; padding: 4px 10px; border-top: 1px solid #333; }
+        .editor-wrapper { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+        /* [FEAT-232] Relay Feedback & Metadata */
+        .relay-meta { font-size: 0.65rem; color: #555; display: flex; gap: 10px; align-items: center; margin-top: 5px; }
+        .fuel-gauge { width: 40px; height: 4px; background: #222; border-radius: 2px; overflow: hidden; display: inline-block; vertical-align: middle; }
+        .fuel-fill { height: 100%; background: var(--accent-color); }
+        .feedback-btns { display: flex; gap: 5px; margin-left: auto; }
+        .feedback-btn { 
+            background: none; border: 1px solid #333; color: #444; cursor: pointer; 
+            padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; transition: all 0.2s;
+        }
+        .feedback-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
+        .feedback-btn.up:hover { border-color: #3fb950; color: #3fb950; }
+        .feedback-btn.down:hover { border-color: #f85149; color: #f85149; }
+        .feedback-btn.up { color: #3fb950; }
+        .feedback-btn.down { color: #f85149; }
+        .feedback-btn.active-up { border-color: #3fb950; color: #3fb950; background: rgba(63, 185, 80, 0.1); font-weight: bold; }
+        .feedback-btn.active-down { border-color: #f85149; color: #f85149; background: rgba(248, 81, 73, 0.1); }
+
+        .icon-btn { background: var(--accent-dim); color: #fff; border: none; padding: 8px; cursor: pointer; border-radius: 4px; }
+        .icon-btn.active { background: #f85149; }
+        
+        /* [FEAT-638] Response Feedback Buttons */
+        .resp-fb { display:flex; gap:6px; margin-top:3px; justify-content:flex-end; }
+        .fb-btn { background:none; border:1px solid #333; border-radius:3px; font-size:0.7rem; padding:1px 7px; cursor:pointer; opacity:0.55; transition:all 0.2s; }
+        .fb-btn:hover { opacity:1; }
+        .fb-btn.active-up { opacity:1; border-color:#3fb950; color:#3fb950; background:rgba(63,185,80,0.12); box-shadow:0 0 8px rgba(63,185,80,0.5); }
+        .fb-btn.active-down { opacity:1; border-color:#f85149; color:#f85149; background:rgba(248,81,73,0.12); box-shadow:0 0 8px rgba(248,81,73,0.5); }
+        .fb-btn:disabled { cursor:default; }
+    </style>
+</head>
+<body>
+    <button id="menu-toggle" style="position:fixed; top:10px; left:10px; z-index:100; background:rgba(0,0,0,0.5); color:#fff; border:none; border-radius:4px; padding:5px 10px; cursor:pointer;">☰ MENU</button>
+
+    <nav id="sidebar">
+        <mission-control></mission-control>
+    </nav>
+        
+    <main>
+        <div id="console-row">
+            <div class="console-panel" id="chat-console">
+                <div class="panel-header">Pinky's Console</div>
+                <div class="system-msg">Uplink sequence initiated...</div>
+            </div>
+            <div id="col-resizer" class="col-resizer" title="Drag to resize panels"></div>
+            <div class="console-panel" id="insight-console">
+                <div class="panel-header">Brain's Insight</div>
+                <div class="system-msg" style="color:#444">Awaiting neural activity...</div>
+            </div>
+        </div>
+
+        <div id="resizer" style="height: 8px; background: #222; cursor: row-resize; border-top: 1px solid #333; border-bottom: 1px solid #333;"></div>
+
+        <div id="crosstalk-bar" style="font-family: 'Courier New', Courier, monospace; font-size: 0.75rem; color: #d29922; padding: 5px 15px; background: #000; border-bottom: 1px solid #222; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; min-height: 1.2rem;">Nominal...</div>
+
+        <div id="input-container">
+            <button id="mic-btn" class="icon-btn">🎤</button>
+            <textarea id="text-input" rows="1" placeholder="Communicate with the Lab..." autofocus></textarea>
+            <button id="send-btn" class="icon-btn" style="min-width: 60px;">SEND</button>
+            <div class="status-panel" style="margin-left: auto; border: none; padding: 0;">
+                <span id="connection-dot" class="status-dot offline"></span>
+                <span id="lab-version" style="font-size: 0.6rem; color: #444;">v3.6.4</span>
+            </div>
+        </div>
+
+        <section id="tool-log-section">
+            <div class="tool-log-title">
+                <span>🔧 Tool Call Logs</span>
+                <span class="tool-log-badge" id="tool-log-count">0</span>
+            </div>
+            <div id="tool-log-container">
+                <div class="tool-empty" style="font-size: 0.7rem; color: #444; padding: 5px 8px; font-style: italic;">No tools executed in this session</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/marked.min.js"></script>
+    <script src="intercom_v2.js?v=fdb172c2"></script>
+    <script src="mission-control.js?v=9f1019d4"></script>
+    <div id="intercom-toast" class="pg-toast" role="status" aria-live="polite" style="bottom:20px;"></div>
+</body>
+</html>
