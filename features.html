@@ -18135,7 +18135,7 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Formalizes the cross-node silicon API topology, port assignments, TurboQuant 4-bit KV cache compression bounds, and reasoning/thinking control mechanisms for Node KENDER (<code>192.168.1.26:11434</code> / Ollama / RTX 4090) and Apple M5 Air (<code>192.168.1.46:8002</code> / oMLX Headroom Proxy). Enforces reasoning suppression on M5 Air worker endpoints (<code>'reasoning': 0</code>) and Ollama conduction thinking controls.</p>
+                    <p>Formalizes the cross-node silicon API topology, port assignments, TurboQuant 4-bit KV cache compression bounds, and reasoning/thinking control mechanisms for Node KENDER (<code>192.168.1.26:11434</code> / Ollama / RTX 4090 via port <code>11435</code> proxy) and Apple M5 Air (<code>192.168.1.46:8002</code> / oMLX Headroom Proxy). Enforces hardware/proxy-level reasoning suppression on both local silicon endpoints (<code>'reasoning': 0</code>), eliminating prompt-level adversarial instructions.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -18147,7 +18147,51 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Port 8002 proxying, <code>opencode.json</code> provider config, and prompt generation directives.</p>
+                    <p>Port 8002 proxying (M5 Air), Port 11435 proxying (Kender), and <code>opencode.json</code> provider config.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="LAB-116">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">LAB-116</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Kender Thought-Stripping Proxy & Silicon Decoupling Protocol
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>SPR-100.0 (Active)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/src/infra/kender_proxy.py</code>, <code>~/.config/systemd/user/kender-proxy.service</code>, <code>opencode.json</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Deploys a dedicated host-resident FastAPI/uvicorn proxy on port 11435 intercepting <code>/v1/chat/completions</code> from OpenCode to Node KENDER. Deletes <code>reasoning</code> and <code>reasoning_content</code> delta blocks from SSE streams and non-streaming responses, dropping empty reasoning chunks so OpenCode receives immediate text and tool calls without <code>&lt;think&gt;</code> loops.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Completely decouples thinking suppression from prompt templates or modelfiles, enforcing zero reasoning tokens directly in silicon.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Mechanism</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>kender-proxy.service</code> on port 11435 forwarding to Ollama port 11434.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -18838,6 +18882,7 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
 <li><strong>The Single-Shot Worker Contract (<code>jit_one_shot</code>):</strong> Constrains Layer 3 surgical workers (Junior on M5 Air) to an ephemeral, single-attempt task loop: Turn 1: Ingest blueprint and execute <code>safe_patch</code>; Turn 2: Run pytest; Turn 3: If pass, record <code>jit_checkpoint</code> and exit; if fail, perform in-context root-cause diagnosis, synthesize a 3-line recommendation report (assertion failure, root cause, recommended fix), and terminate immediately without attempting recursive self-fixing.</li>
 <li><strong>Context Garbage Isolation:</strong> Prevents terminal traceback soup and intermediate failure diffs from accumulating in worker context or leaking upward to Layer 2. The failed execution context is discarded upon worker termination.</li>
 <li><strong>Layer 2 Anti-Spiral Orchestration:</strong> Layer 2 (Atlas) retains the macro plan and session trajectory. Upon receiving Layer 3's recommendation report, Layer 2 evaluates whether the suggestion is regressive, circular (the "Waffle Trap" [INS-042]), or structurally sound. Layer 2 exercises executive judgment: if sound, it updates the blueprint via <code>jit_stage</code> and spawns a fresh, zero-mileage Layer 3 instance; if circular, Layer 2 rejects the suggestion and synthesizes an alternative architectural route.</li>
+<li><strong>Strict Staging &amp; Task Invariant (Zero-Diff IPC):</strong> Establishes the invariant that all file changes, replacement code blocks, AST line anchors, and patch blueprints must live exclusively in <code>jit_stage()</code>. File changes must NOT be in <code>task()</code>. If the conductor cannot express a dispatch without inlining diffs into <code>task()</code>, it must abort and escalate (invoke <code>ask_oracle</code>). Other operational instructions (staged target file names to research, macro directives, test commands) are passed cleanly through <code>task()</code>, forcing Layer 3 to pull blueprints through <code>jit_research()</code>.</li>
 </ol>
                 </div>
             </div>
@@ -18845,6 +18890,60 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
                     <p>Eliminates the quadratic context accumulation trap, prevents 27B model panic-fixing spirals, and enforces pristine separation between micro-execution and macro-orchestration.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-656">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-656</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Ask-Oracle Psychological Escalation & Clean-Kill Handback Protocol
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 100</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#ask_oracle</code>, <code>#escalation</code>, <code>#clean_kill</code>, <code>#opencode_harness</code>, <code>#agency_preservation</code>, <code>[BKM-080]</code>, <code>[FEAT-655](#FEAT-655)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <ul>
+<li><code>HomeLabAI/src/mcp/clara_dna_mcp_server.py</code> — <code>@mcp.tool() ask_oracle</code> endpoint writing diagnostic payloads to <code>.jit_cache/oracle_request.json</code>.</li>
+<li><code>HomeLabAI/src/tests/delegate.py</code> — Polling loop intercept for <code>ask_oracle</code>/<code>clara-dna_ask_oracle</code> with high-visibility banner, session abort, and clean exit (code 3).</li>
+<li><code>~/.config/opencode/oh-my-openagent.json</code> — Declarative tool grants for <code>ask_oracle</code> and <code>clara-dna_ask_oracle</code> on <code>atlas</code> and <code>Atlas</code>.</li>
+<li><code>Dev_Lab/AGENTS_L2.md</code> — Layer 2 Conductor protocol advertising <code>ask_oracle</code> as authoritative Tier 1 architectural consultation.</li>
+</ul>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <ol>
+<li><strong>The Agency &amp; Model Skepticism Paradox:</strong> Open-weights conductor models (e.g. Qwen 27B) often resist halting or admitting defeat via <code>[BLOCKER REPORT]</code> when faced with ambiguous specifications, conflicting test assertions, or missing domain schemas. Models perceive termination as failure/loss of control, often spiraling into endless bash wandering or hallucinated code searches.</li>
+<li><strong>Psychological Peer Escalation:</strong> Provides the model with an attractive, authoritative peer-consulting tool (<code>ask_oracle(question, current_hypothesis, code_inspected)</code>). The model believes it is consulting the Tier 1 Strategic Oracle (AGY) while maintaining conductor agency, rather than failing.</li>
+<li><strong>Clean-Kill Handback via Unix Harness:</strong> When Atlas executes <code>ask_oracle</code>, the MCP server persists the consultation structured payload. The execution harness (<code>delegate.py</code>) intercepts the tool call in its live telemetry polling loop, logs <code>ORACLE_CONSULTATION_REQUESTED</code>, prints the structured diagnostic report directly to standard out for AGY, cleanly frees resources/aborts the active model stream, and exits with code 3.</li>
+<li><strong>Resumption &amp; Session Reconnection:</strong> OpenCode preserves the conversation history on its REST endpoint. Tier 1 (AGY) evaluates the consultation report in its prompt, resolves the architectural ambiguity or corrects the contract, and can seamlessly reconnect to the paused session via <code>delegate.py --resume &lt;session_id&gt; --answer '&lt;guidance&gt;'</code> or re-dispatch with corrected context.</li>
+</ol>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates open-ended model wandering without building complex live chat or bidirectional socket infrastructure. Atlas gets a structured, dignified "way out", and AGY receives structured empirical feedback immediately.</p>
                 </div>
             </div>     </div>
                             </details>

@@ -22,6 +22,9 @@ const CONFIG = {
 // [FEAT-089] Zero Trust Guest Expansion
 // a single audio rotate can never daisy-chain Int16 buffer expansion and
 // grow the browser heap without a bound.
+// [FEAT-638] Whitelist of sources that display in-line feedback buttons
+const VOTEABLE_SOURCES = ['pinky', 'brain', 'thought', 'triage', 'lab'];
+
 const PCM_CHUNK_CAP = 32768;
 
 let ws = null;
@@ -343,8 +346,9 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     
     // [FEAT-638] Response Feedback Buttons
     let respFbHtml = '';
+    const isVoteableSource = (typeof VOTEABLE_SOURCES !== 'undefined' ? VOTEABLE_SOURCES : ['pinky', 'brain', 'thought', 'triage', 'lab']).some(src => new RegExp(src, 'i').test(source || ''));
     if (channel === 'chat' && !isRestoringHistory && 
-        source && /pinky|brain|insight|thought|resident|shadow/i.test(source.toLowerCase()) && 
+        source && isVoteableSource && 
         sl_low !== 'system' && sl_low !== 'me' && 
         !isInternal && text) {
         // Store feedback data on the message element
@@ -421,10 +425,10 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
             <div class="msg-header">
                 <span class="msg-time">${time}</span>
                 <span class="msg-source ${sl}">[${isBuildingUpon ? '↳ ' : ''}${displaySource}]</span>
+                ${respFbHtml}
             </div>
             <div class="msg-body">${formattedText}</div>
             ${metaHtml}
-            ${respFbHtml}
         `;
     }
     
