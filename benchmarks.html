@@ -495,6 +495,7 @@
             <button class="tab-btn active" onclick="switchTab(event, 'tab-delta-t')">⏱️ LIVE ROUND TABLE ELAPSED TIME</button>
             <button class="tab-btn" onclick="switchTab(event, 'tab-arena')">🏛️ SILICON ARENA & WORKLOAD</button>
             <button class="tab-btn" onclick="switchTab(event, 'tab-roi')">⚡ ENERGY, ROI & CoT</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-delegation')">🐝 SWARM DELEGATION & SOVEREIGN GAINS</button>
         </div>
 
         <!-- TAB 1 (DEFAULT): LIVE ROUND TABLE ELAPSED TIME & BLACKBOARD LEDGER [FEAT-525/526] -->
@@ -644,6 +645,55 @@
                         <div style="font-size:0.7rem; color:#6a737d;">Calculated net margin</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- TAB 4 (NEW): SWARM DELEGATION & SOVEREIGN GAINS [STORY 101.15] -->
+        <div id="tab-delegation" class="tab-pane hidden">
+            <div class="delegation-summary-cards" id="delegation-summary-cards">
+                <div class="calc-card">
+                    <div class="calc-label">Total Tokens (Blended)</div>
+                    <div class="calc-num" id="delg-tokens-val">--</div>
+                    <div style="font-size:0.7rem; color:#6a737d;">Conductor + L3 sub-inferences</div>
+                </div>
+                <div class="calc-card">
+                    <div class="calc-label">Net Savings ($)</div>
+                    <div class="calc-num" id="delg-savings-val" style="color:#3fb950;">--</div>
+                    <div style="font-size:0.7rem; color:#6a737d;">Cloud cost minus local power</div>
+                </div>
+                <div class="calc-card">
+                    <div class="calc-label">Local Offload %</div>
+                    <div class="calc-num" id="delg-offload-val">--</div>
+                    <div style="font-size:0.7rem; color:#6a737d;">Runs offloaded to silicon</div>
+                </div>
+                <div class="calc-card">
+                    <div class="calc-label">Wall Time</div>
+                    <div class="calc-num" id="delg-walltime-val">--</div>
+                    <div style="font-size:0.7rem; color:#6a737d;">Cumulative delegated minutes</div>
+                </div>
+            </div>
+
+            <div class="delegation-filter-row" id="delegation-sprint-filter">
+                <button class="tab-btn active" onclick="filterDelegationRuns('all')">All</button>
+                <!-- Sprint filter buttons injected dynamically by renderDelegationFilters() -->
+            </div>
+
+            <div class="table-wrap">
+                <table class="live-stream-table" id="delegation-runs-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Sprint</th>
+                            <th>Story / Title</th>
+                            <th>Mode / Tier</th>
+                            <th>Status</th>
+                            <th>Tokens</th>
+                            <th>Duration</th>
+                            <th>Verified</th>
+                        </tr>
+                    </thead>
+                    <tbody id="delegation-runs-tbody"></tbody>
+                </table>
             </div>
         </div>
     </main>
