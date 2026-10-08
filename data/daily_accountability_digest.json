@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-06T06:01:19.553483",
-  "date": "2026-10-06",
+  "timestamp": "2026-10-08T12:30:44.038440",
+  "date": "2026-10-08",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
-  "overall_status": "FAIL",
-  "total_checks": 7,
-  "passed_checks": 2,
-  "failed_checks": 5,
+  "overall_status": "PASS",
+  "total_checks": 8,
+  "passed_checks": 8,
+  "failed_checks": 0,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
@@ -15,26 +15,27 @@
     },
     {
       "name": "Foyer Re-Ignition & Hot-Reload",
-      "passed": false,
-      "detail": "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN"
+      "passed": true,
+      "detail": "Foyer state: OPERATIONAL, status: ONLINE, engine: UP"
     },
     {
       "name": "Lockfile Cleanliness & Quiescence",
-      "passed": false,
-      "detail": "Stale lock(s) detected: nightly_forge.lock (DEAD PID 1870642, 240.0m old)"
+      "passed": true,
+      "detail": "All lockfiles cleared",
+      "reaped": []
     },
     {
       "name": "Nightly Forge Orchestration",
-      "passed": false,
-      "detail": "Status: RUNNING (Age: 999.0h)",
-      "status": "RUNNING",
-      "age_hours": 999.0
+      "passed": true,
+      "detail": "Status: COMPLETED (Age: 0.0h)",
+      "status": "COMPLETED",
+      "age_hours": 0.0
     },
     {
       "name": "LoRA Fine-Tuning Multi-Adapter Pass",
-      "passed": false,
-      "detail": "Status: FAILED",
-      "status": "FAILED"
+      "passed": true,
+      "detail": "Status: COMPLETED",
+      "status": "COMPLETED"
     },
     {
       "name": "Accountable Subconscious Dreaming",
@@ -44,16 +45,18 @@
     },
     {
       "name": "Synthetic Morning Round Table Probe",
-      "passed": false,
-      "detail": "Status: DEGRADED, Critic Score: 0.00, Latency: 1.39ms",
-      "critic_score": 0.0
+      "passed": true,
+      "detail": "Status: PASS, Critic Score: 0.95, Latency: 1.14ms",
+      "critic_score": 0.95
+    },
+    {
+      "name": "Cgroup Swap Pressure Monitor",
+      "passed": true,
+      "detail": "Swap: 7497MB/7497MB peak (47.6%)",
+      "swap_peak_mb": 7497.34,
+      "swap_current_mb": 7497.34,
+      "swap_utilization_pct": 47.63
     }
   ],
-  "discrepancies": [
-    "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN",
-    "Stale lock(s) detected: nightly_forge.lock (DEAD PID 1870642, 240.0m old)",
-    "Nightly Forge did not complete successfully (Status: RUNNING (Age: 999.0h))",
-    "LoRA Multi-Adapter Pass failed (Status: FAILED)",
-    "Status: DEGRADED, Critic Score: 0.00, Latency: 1.39ms"
-  ]
+  "discrepancies": []
 }

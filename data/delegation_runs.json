@@ -1,0 +1,5837 @@
+{
+  "summary": {
+    "total_runs": 291,
+    "successful_runs": 194,
+    "total_tokens_blended": 7858092,
+    "total_conductor_tokens": 7784705,
+    "total_l3_tokens": 73387,
+    "total_cached_tokens": 5555422,
+    "total_wall_time_minutes": 2084.54,
+    "estimated_cloud_cost_usd": 9.976983,
+    "estimated_local_power_cost_usd": 1.04227,
+    "net_savings_usd": 8.934713,
+    "local_offload_ratio_pct": 9.46
+  },
+  "runs": [
+    {
+      "sprint": "101",
+      "story": "101.15",
+      "title": "Model Benchmarks Tab 4 UI & Accordion Ledger Rendering",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 463.96,
+      "duration_m": 7.73,
+      "tokens": {
+        "conductor": 49339,
+        "l3": 6300,
+        "total": 55639,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T13:58:55"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.15 Tab 4 SWARM DELEGATION UI: staged+applied to benchmarks.html (4th tab-btn + #tab-delegation pane: 4 summary cards, sprint filter row, 8-col accordion runs table) and benchmarks.js (loadDelegationRuns hooked into loadBenchmarks + 7 render/filter/accordion functions). node --check OK; DOM IDs cross-checked; data contract matches delegation_runs.json schema.",
+      "timestamp": "2026-10-08T13:58:44"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.15 Tab 4 UI staged+applied",
+      "timestamp": "2026-10-08T13:56:56"
+    },
+    {
+      "sprint": "101",
+      "story": "101.14",
+      "title": "Swarm Delegation Web Feed Export Engine",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 305.62,
+      "duration_m": 5.09,
+      "tokens": {
+        "conductor": 47307,
+        "l3": 0,
+        "total": 47307,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T13:50:46"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.14 export_web_telemetry + --export-web CLI deployed and verified",
+      "timestamp": "2026-10-08T13:49:22"
+    },
+    {
+      "sprint": "101",
+      "story": "101.M4",
+      "title": "Adversarial Oracle Post-Flight Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 190.69,
+      "duration_m": 3.18,
+      "tokens": {
+        "conductor": 59318,
+        "l3": 0,
+        "total": 59318,
+        "cache_read": 57200
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:34:47"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Applied edits for story 101.M4 (Adversarial Oracle Post-Flight Audit) to docs/sprints/active/SPRINT_PLAN_SPR_101_0.md. Updated Milestone 4 section to show completion with verification details, and updated Execution Trajectory to include all completed stories (101.9-101.13) and Milestone 4 completion.",
+      "timestamp": "2026-10-08T12:34:36"
+    },
+    {
+      "sprint": "101",
+      "story": "101.12",
+      "title": "Cgroup Swap Peak & Memory Pressure Sentinel",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 133.86,
+      "duration_m": 2.23,
+      "tokens": {
+        "conductor": 77539,
+        "l3": 3143,
+        "total": 80682,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:25:41"
+    },
+    {
+      "sprint": "101",
+      "story": "101.12",
+      "title": "Cgroup Swap Peak & Memory Pressure Sentinel",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "SUCCESS",
+      "duration_s": 126.08,
+      "duration_m": 2.1,
+      "tokens": {
+        "conductor": 57944,
+        "l3": 3143,
+        "total": 61087,
+        "cache_read": 37376
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:22:06"
+    },
+    {
+      "sprint": "101",
+      "story": "101.11",
+      "title": "Round Table Accountability Probe Timeout Alignment",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 149.12,
+      "duration_m": 2.49,
+      "tokens": {
+        "conductor": 39919,
+        "l3": 3887,
+        "total": 43806,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:19:34"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Verified Story 101.11: HomeLabAI/src/infra/nightly_forge.py run_round_table_probe timeout updated 60 -> 120. Scope verified as single line diff; py_compile exit 0; LSP error diagnostics clean.",
+      "timestamp": "2026-10-08T12:19:27"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.11: run_round_table_probe timeout 60 -> 120",
+      "timestamp": "2026-10-08T12:18:32"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "Staged Story 101.11 blueprint for HomeLabAI/src/infra/nightly_forge.py: update run_round_table_probe subprocess timeout from 60 to 120.",
+      "timestamp": "2026-10-08T12:18:01"
+    },
+    {
+      "sprint": "101",
+      "story": "101.10",
+      "title": "Canonical Wisdom DNA Path Resolution in Refiner",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 245.02,
+      "duration_m": 4.08,
+      "tokens": {
+        "conductor": 50050,
+        "l3": 0,
+        "total": 50050,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:16:32"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "[STORY 101.10] Canonical Wisdom DNA Path Resolution: patch applied (L19 WISDOM_DATA_PATH now resolves canonical dna/wisdom_data.json first with field_notes/data/ fallback), verified via --dry-run exit 0 with 93 ChromaDB embeddings loaded from live daemon (port 8001), no duplicate copies in data/, LSP clean (pre-existing chromadb import unresolvable in local pyright only, runtime OK).",
+      "timestamp": "2026-10-08T12:16:14"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "[STORY 101.10] Canonical path patch applied and verified: WISDOM_DATA_PATH now resolves to dna/wisdom_data.json (canonical-first) with DATA_DIR fallback; --dry-run exits 0, loads 93 cards from ChromaDB, records dedup candidates, dry-run writes no data. Pre-existing non-fatal: M5 Air refinement endpoint returns HTTP 404 for WIS-001 (out of scope, unrelated to path patch).",
+      "timestamp": "2026-10-08T12:15:08"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "[STORY 101.10] Staged canonical wisdom path blueprint: single module-level assignment swap at L19 (WISDOM_DATA_PATH -> canonical-first dna/wisdom_data.json with field_notes/data/ fallback). No writes to data/ dir in any code path, so requirement 2 is structurally satisfied.",
+      "timestamp": "2026-10-08T12:14:04"
+    },
+    {
+      "sprint": "101",
+      "story": "101.9",
+      "title": "Dedicated Sprint DNA Curator Engine Reconnection",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 235.8,
+      "duration_m": 3.93,
+      "tokens": {
+        "conductor": 40460,
+        "l3": 7615,
+        "total": 48075,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:11:52"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.9: Sprint DNA Sync target rebound and args stripped",
+      "timestamp": "2026-10-08T12:10:54"
+    },
+    {
+      "sprint": "101",
+      "story": "101.8",
+      "title": "vLLM Re-Ignition Settle Gate",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "SUCCESS",
+      "duration_s": 307.08,
+      "duration_m": 5.12,
+      "tokens": {
+        "conductor": 128792,
+        "l3": 3705,
+        "total": 132497,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T12:07:31"
+    },
+    {
+      "sprint": "101",
+      "story": "101.8",
+      "title": "vLLM Re-Ignition Settle Gate",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "API_ERROR",
+      "duration_s": 171.77,
+      "duration_m": 2.86,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T11:58:48"
+    },
+    {
+      "sprint": "101",
+      "story": "101.7",
+      "title": "Tail Mass Scan 05:00 AM Hard Cutoff Gate",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 654.17,
+      "duration_m": 10.9,
+      "tokens": {
+        "conductor": 49705,
+        "l3": 903,
+        "total": 50608,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T11:53:44"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "STORY 101.7 / FEAT-416 verified: (1) utils.py can_burn quiet-hours gate correct, (2) nibble.py can_burn quiet-hours gate correct, (3) mass_scan.py distill_journal_ledger 5-22 yield correct, (4) test file has 3 tests. 11/11 pytest pass. Zero new LSP errors (2 pre-existing dict-append/sort in nibble.py L279/L301).",
+      "timestamp": "2026-10-08T11:53:38"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "STORY 101.7: FEAT-416 quiet-hours gates applied to can_burn and distill_journal_ledger; test_0500_cutoff suite green. utils.py uses `from datetime import datetime` (compatible with blueprint's FakeDateTime class monkeypatch); nibble.py uses module-level `import datetime`; mass_scan.py pre-existing import reused. All 11 tests pass, py_compile clean on all 4 files.",
+      "timestamp": "2026-10-08T11:49:22"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "FAILURE",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "STORY 101.7: FEAT-416 quiet-hours gates applied to can_burn and distill_journal_ledger. 10/11 tests pass; test_0500_cutoff_utils_can_burn fails: blueprint's FakeDateTime monkeypatch of utils.datetime is incompatible with utils.py's module-level `datetime.datetime.now()` call (AttributeError: type object 'FakeDateTime' has no attribute 'datetime'). Patched utils.py to use `from datetime import datetime` / `now = datetime.now()` per diagnosis. Re-running verification.",
+      "timestamp": "2026-10-08T11:48:52"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "STORY 101.7: All 4 file blueprints staged. utils.py: quiet-hours gate in can_burn. nibble.py: quiet-hours gate in can_burn. mass_scan.py: quiet-hours yield in distill_journal_ledger. test file: 3 new test_0500_cutoff tests.",
+      "timestamp": "2026-10-08T11:46:21"
+    },
+    {
+      "sprint": "101",
+      "story": "101.7",
+      "title": "Tail Mass Scan 05:00 AM Hard Cutoff Gate",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 119.68,
+      "duration_m": 1.99,
+      "tokens": {
+        "conductor": 39415,
+        "l3": 3636,
+        "total": 43051,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T10:59:50"
+    },
+    {
+      "sprint": "101",
+      "story": "101.6",
+      "title": "Ignition Kill Guardrail",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 739.56,
+      "duration_m": 12.33,
+      "tokens": {
+        "conductor": 103407,
+        "l3": 1720,
+        "total": 105127,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T10:34:11"
+    },
+    {
+      "sprint": "101",
+      "story": "101.5",
+      "title": "Step Calibration",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 213.12,
+      "duration_m": 3.55,
+      "tokens": {
+        "conductor": 37230,
+        "l3": 4512,
+        "total": 41742,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T10:16:22"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.5 Step Calibration: forge.default_steps 450 -> 350 verified (git diff 1 line, pacing 5.0/1/4 preserved, JSON valid). Note: safe_patch reported false 'Pattern not found' 5x; worker fell back to one-shot python replace.",
+      "timestamp": "2026-10-08T10:16:15"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 101.5: forge.default_steps 450 -> 350, JSON valid",
+      "timestamp": "2026-10-08T10:15:20"
+    },
+    {
+      "sprint": "101",
+      "story": "101.0",
+      "title": "Pre-Flight Plan Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 14.51,
+      "duration_m": 0.24,
+      "tokens": {
+        "conductor": 28796,
+        "l3": 0,
+        "total": 28796,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T10:08:47"
+    },
+    {
+      "sprint": "100",
+      "story": "100.12",
+      "title": "Pinky Coherence Critic Retort & Reasoning Scorecard Architecture",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 348.88,
+      "duration_m": 5.81,
+      "tokens": {
+        "conductor": 49924,
+        "l3": 0,
+        "total": 49924,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T01:35:55"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.12 complete: build_critic_prompt output_schema harmonized to four-key scorecard {score, reasoning, slop_found, retort} matching cognitive_hub eval_schema; cognitive_hub.py verified unchanged (already compliant); 3 companion tests added; 53/53 pytest pass; LSP clean. Note: local HEAD (01adc0c) != daemon served (d8badab) - soft-reload pending per BKM-024.",
+      "timestamp": "2026-10-08T01:35:31"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.12 pinky critic schema harmonized",
+      "timestamp": "2026-10-08T01:33:42"
+    },
+    {
+      "sprint": "100",
+      "story": "100.11",
+      "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 615.02,
+      "duration_m": 10.25,
+      "tokens": {
+        "conductor": 57072,
+        "l3": 6355,
+        "total": 63427,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T01:27:43"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.11 verified: (1) lead_node=='brain' branch now mandates _run_two_mice_handover Stage 1 gatekeeper with no interest/CASUAL funnel gate; (2) _distill_strategic_brief fully deleted, 0 references in .py codebase, 0 PECI/MSR text in cognitive_hub.py; (3) _run_brain_leg retired to minimal decoupled stub preserving call signature. 21/21 tests pass (test_brain_gatekeeper, test_two_mice_handover, test_two_mice_single_execution, test_interest_speculative_prefetch). py_compile clean. Daemon live gate pending (stale bytecode a6567a8 vs fc867e7).",
+      "timestamp": "2026-10-08T01:27:17"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.11: Stage 1 mandatory gatekeeper + _distill_strategic_brief deleted + _run_brain_leg stubbed",
+      "timestamp": "2026-10-08T01:25:12"
+    },
+    {
+      "sprint": "100",
+      "story": "100.11",
+      "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 173.72,
+      "duration_m": 2.9,
+      "tokens": {
+        "conductor": 48437,
+        "l3": 5110,
+        "total": 53547,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T01:16:29"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "ESCALATED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "Story 100.11: Ingested spec (SPR_100_0 L386-421), inspected cognitive_hub.py (3301 lines) - located _distill_strategic_brief L2299-L2339 (PECI/MSR prompt), _run_brain_leg L2631-L2825, and 4 call sites in process_query (L1859, L1879, L1917, L1979). Found 2 sibling test files (test_two_mice_single_execution.py, test_interest_speculative_prefetch.py) that directly exercise _run_brain_leg and will break on deletion. Escalated to AGY: (a) routing replacement for non-brain branches (both/pinky-lead), (b) authority to update stale sibling tests. Awaiting oracle directive.",
+      "timestamp": "2026-10-08T01:16:09"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 643.34,
+      "duration_m": 10.72,
+      "tokens": {
+        "conductor": 57147,
+        "l3": 1361,
+        "total": 58508,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T01:05:37"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.10 complete: CASUAL vibe defeatured from triage_mode_context prompt (cognitive_hub.py L1487 commented with [DEFEATURED] marker), test fallback assertions updated CASUAL\u2192SOCRATIC (L578, L632), mock parse-through assertion corrected (L510 CASUAL\u2192SOCRATIC), triage_policy.json CASUAL enabled\u2192false. Full test battery: 126 passed, 10 skipped, 0 failed.",
+      "timestamp": "2026-10-08T01:05:22"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.10: CASUAL defeatured from triage prompt (cognitive_hub.py L1487), test assertions L578+L632 updated to SOCRATIC, policy CASUAL enabled=false. 125/128 tests pass. 1 pre-existing failure: test_evaluate_triage_native_think (L510) \u2014 mock resident returns vibe=CASUAL in its JSON fixture, test asserts SOCRATIC. This test's mock data was not in the contract scope; requires either updating the mock fixture or re-scoping the test.",
+      "timestamp": "2026-10-08T01:01:21"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 365.08,
+      "duration_m": 6.08,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T00:22:34"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1602.75,
+      "duration_m": 26.71,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T23:33:00"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T23:31:42"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T23:31:42"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 874.09,
+      "duration_m": 14.57,
+      "tokens": {
+        "conductor": 0,
+        "l3": 3577,
+        "total": 3577,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T23:02:24"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.10 (ANCHOR-14 / FEAT-640) verification-only gate: Target A confirmed \u2014 cognitive_hub.py CASUAL archetype bullet L1486 commented out, 5 active bullets + 6-CORE-ARCHETYPES header + Python plumbing (casual schema field L1442, validate_triage_payload, classify_vibe_and_domain, fallback vibe=CASUAL L1518) intact. Target B confirmed \u2014 triage_policy.json exactly 9 vibes, CASUAL enabled=false rag=null, rag only on WYWO+HISTORICAL. pytest: 136 passed (test_triage_engine.py + test_triage_policy_loader.py), 0 failed. BKM-024 live-daemon sync notice present but not a test failure. No patches applied; working tree left clean.",
+      "timestamp": "2026-10-07T23:02:21"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T22:44:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T22:44:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T22:42:29"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T22:42:29"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 488.81,
+      "duration_m": 8.15,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T22:31:31"
+    },
+    {
+      "sprint": "100",
+      "story": "100.14",
+      "title": "Lab Triage Intercom Feedback & In-Line Hover Timestamp Voting UI",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 95.05,
+      "duration_m": 1.58,
+      "tokens": {
+        "conductor": 48047,
+        "l3": 0,
+        "total": 48047,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T19:35:52"
+    },
+    {
+      "sprint": "100",
+      "story": "100.13",
+      "title": "Cloud Delegation Baseline & Model Invocation Smoke Test",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "SUCCESS",
+      "duration_s": 70.96,
+      "duration_m": 1.18,
+      "tokens": {
+        "conductor": 45362,
+        "l3": 0,
+        "total": 45362,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T19:32:01"
+    },
+    {
+      "sprint": "100",
+      "story": "100.12",
+      "title": "Pinky Critic Scorecard (Single-Pass WHY Reasoning + Spoken Retort)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 907.71,
+      "duration_m": 15.13,
+      "tokens": {
+        "conductor": 51057,
+        "l3": 1654,
+        "total": 52711,
+        "cache_read": 49802
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T19:29:01"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "STORY 100.12 Pinky Critic Scorecard completed in Direct Implementation Mode. (1) build_critic_prompt output_schema now advertises score/reasoning/slop_found/retort single-pass scorecard; (2) format_chat_delivery gained reasoning kwarg with parenthetical blend into retort (empty/whitespace reasons safely no-op); (3) cognitive_hub eval_schema properties now carry WHY-reasoning + Brain-addressed retort descriptions; (4) test file +66 lines: TestCriticScorecard class with test_critic_generates_grounded_reasoning_and_retort + test_format_chat_delivery_blends_retort_and_reasoning (+3 blend edge tests). Verification: pytest 56/56 passed. pre-existing pyright noise in cognitive_hub.py (18 errors L600-3022, untouched async patterns) confirmed pre-existing, not introduced.",
+      "timestamp": "2026-10-07T19:28:31"
+    },
+    {
+      "sprint": "100",
+      "story": "100.11",
+      "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 1410.01,
+      "duration_m": 23.5,
+      "tokens": {
+        "conductor": 60580,
+        "l3": 2002,
+        "total": 62582,
+        "cache_read": 58552
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T19:10:48"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.11 complete: (1) lead_node=='brain' gate now mandatory residents check (brain+pinky, non-CASUAL), TWO_MICE_FUNNEL_INTEREST removed from gate; (2) handover-failure fallback + Brain-leads-Turn1 branch stream Brain directly via _process_node_stream; (3) _distill_strategic_brief deleted (0 occurrences repo-wide in src/); (4) _run_brain_leg retired to compat stub streaming Brain with rag_context. Verification: mandatory pytest test_brain_gatekeeper + test_two_mice_handover 18/18 PASS; regression siblings test_two_mice_single_execution + test_interest_speculative_prefetch 3/3 PASS; ast.parse clean; module import clean.",
+      "timestamp": "2026-10-07T19:09:53"
+    },
+    {
+      "sprint": "100",
+      "story": "100.11",
+      "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 582.33,
+      "duration_m": 9.71,
+      "tokens": {
+        "conductor": 47901,
+        "l3": 2002,
+        "total": 49903,
+        "cache_read": 37077
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T18:46:23"
+    },
+    {
+      "sprint": "100",
+      "story": "100.11",
+      "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 602.31,
+      "duration_m": 10.04,
+      "tokens": {
+        "conductor": 74618,
+        "l3": 2002,
+        "total": 76620,
+        "cache_read": 61070
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T18:35:00"
+    },
+    {
+      "sprint": "100",
+      "story": "100.9",
+      "title": "Multi-Turn Turn Isolation & HyDE Context Poisoning Remediation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 226.04,
+      "duration_m": 3.77,
+      "tokens": {
+        "conductor": 45152,
+        "l3": 3988,
+        "total": 49140,
+        "cache_read": 28925
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T17:17:30"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.9 AFFIRMED (verification-only, zero edits). resolve_hyde_vector (cognitive_hub.py L2479-2480) dispatches _process_node_stream with scope=ContextScope.TURN and request_id=request_id; ContextScope imported at L33. Implementation was already committed in bc38f7b (ahead of HEAD aed870b). Verification: /home/jallred/Dev_Lab/HomeLabAI/.venv/bin/pytest HomeLabAI/src/tests/test_feat437_resolve_hyde_vector.py HomeLabAI/src/tests/test_triage_context_squeeze.py -v \u2192 13/13 passed in 0.46s, including test_resolve_hyde_vector_turn_scope_isolation (scope==ContextScope.TURN, request_id=='req-42' captured) and test_hyde_synthesis_does_not_ingest_previous_debate (prior round_table_memory not in synthesis prompt). STALE BYTECODE notice (local aed870b vs served 3524be9) \u2014 daemon process bounce pending per BKM-024, does not block unit-test gate.",
+      "timestamp": "2026-10-07T17:16:57"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "SUCCESS",
+      "duration_s": 454.27,
+      "duration_m": 7.57,
+      "tokens": {
+        "conductor": 45881,
+        "l3": 4629,
+        "total": 50510,
+        "cache_read": 45070
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-07T17:11:49"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.10 / FEAT-534: Aligned TestProductionConfig to CASUAL defeature. Hunk A (test_production_has_all_nine_vibes): assert 9 vibes defined via self._prod_loader._policy.get(\"vibes\", {}).keys() == expected + assert \"CASUAL\" not in get_active_vibes(). Hunk B (test_production_retrieval_vibes_have_rag): narrowed RAG loop to (\"WYWO\", \"HISTORICAL\"). Verification: .venv/bin/pytest src/tests/test_triage_engine.py src/tests/test_triage_policy_loader.py -v from HomeLabAI/ \u2192 136 passed, 0 failed. Config grounded: CASUAL enabled=false, rag=null; WYWO/HISTORICAL rag non-null. Live sync: Boot 3524be9 == Local HEAD.",
+      "timestamp": "2026-10-07T17:11:36"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 339.87,
+      "duration_m": 5.66,
+      "tokens": {
+        "conductor": 38660,
+        "l3": 1361,
+        "total": 40021,
+        "cache_read": 37178
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T17:02:20"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/atlas:27b",
+      "status": "API_ERROR",
+      "duration_s": 1145.63,
+      "duration_m": 19.09,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T16:54:55"
+    },
+    {
+      "sprint": "100",
+      "story": "100.10",
+      "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 376.51,
+      "duration_m": 6.28,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T16:00:56"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.9 VERIFIED GREEN. L3 commit bc38f7b (7 hunks: request_id threaded _fetch_rag_context->resolve_hyde_vector at 3 process_query sites; scope=ContextScope.TURN + request_id on HyDE _process_node_stream). 15/15 pytest passed incl. both new FEAT-640 assertions; Live Lab synced to HEAD. 12 LSP errors = pre-existing file-wide Pyright async-generator false positive (py_compile clean). LIVE_GATE: PASSED.",
+      "timestamp": "2026-10-07T15:46:10"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.9 HyDE turn-isolation: ContextScope.TURN + request_id enforced on HyDE _process_node_stream dispatch (resolve_hyde_vector Tier 1); request_id threaded from _fetch_rag_context and all 3 process_query call sites (L1792/L1840/L1937); _run_brain_leg leg intentionally untouched. 2 TDD tests appended (turn-scope isolation + no prior-debate leak). pytest 15/15 passed exit 0; py_compile clean; test file LSP clean (4 type:ignore on mock-injection lines per repo convention). Daemon auto-synced to Local HEAD bc38f7b (LIVE LAB SYNCHRONIZED).",
+      "timestamp": "2026-10-07T15:34:01"
+    },
+    {
+      "sprint": "100",
+      "story": "100.9",
+      "title": "Multi-Turn Turn Isolation & HyDE Context Poisoning Remediation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T15:07:38"
+    },
+    {
+      "sprint": "100",
+      "story": "100.9",
+      "title": "Multi-Turn Turn Isolation & HyDE Context Poisoning Remediation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 694.19,
+      "duration_m": 11.57,
+      "tokens": {
+        "conductor": 63562,
+        "l3": 0,
+        "total": 63562,
+        "cache_read": 63154
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T14:32:30"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "Story 100.9 blueprint staged for HomeLabAI/src/logic/cognitive_hub.py: request_id threading + ContextScope.TURN enforcement on HyDE synthesis. Dispatching L3 quick worker.",
+      "timestamp": "2026-10-07T14:30:37"
+    },
+    {
+      "sprint": "100",
+      "story": "100.8B",
+      "title": "Phase 4 Oracle Adversarial Audit & Legacy Regression Sweep",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "oracle/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 28.1,
+      "duration_m": 0.47,
+      "tokens": {
+        "conductor": 50517,
+        "l3": 0,
+        "total": 50517,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T14:08:13"
+    },
+    {
+      "sprint": "100",
+      "story": "100.13",
+      "title": "Cloud Delegation Baseline & Model Invocation Smoke Test",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "sisyphus/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 302.04,
+      "duration_m": 5.03,
+      "tokens": {
+        "conductor": 155134,
+        "l3": 782,
+        "total": 155916,
+        "cache_read": 147968
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-07T13:35:41"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.13 Cloud Delegation Baseline & Model Invocation Smoke Test - verified cloud tier connectivity. OpenRouter free tier confirmed reachable at https://openrouter.ai/api/v1/models; Cohere API key present in environment; delegate.py telemetry (_log_delegation_ledger) logs cloud model ID ('openrouter/openrouter/free') with 0 local VRAM thrashing on M5 Air. Updated SPRINT_PLAN_SPR_100_0.md ANCHOR-17 & Story 100.13 section status STAGED->DONE. Note: full in-process delegation run timed out after 60s due to port 4097 occupancy; connectivity assertions validated via direct probes. [LIVE_GATE_PENDING: daemon=4097 endpoint=/session/status probe=python3 delegate.py --sprint 100 --story 100.13 --mode cloud]",
+      "timestamp": "2026-10-07T13:35:19"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T02:11:06"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T02:11:06"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:55:36"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:55:36"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:55:09"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:55:09"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:47:37"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:47:37"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:40:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:40:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:39:28"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:39:28"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:35:57"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:35:57"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:21:34"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:21:34"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-07T01:13:08"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-07T01:13:08"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:37:31"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:37:31"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:35:45"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:35:45"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:25:18"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:25:18"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:23:33"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:23:33"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:20:55"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:20:55"
+    },
+    {
+      "sprint": "100",
+      "story": "100.6",
+      "title": "Sovereign JIT Architecture Shakedown",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 829.0,
+      "duration_m": 13.82,
+      "tokens": {
+        "conductor": 41224,
+        "l3": 0,
+        "total": 41224,
+        "cache_read": 40250
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-06T23:18:56"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.6 Sovereign JIT Shakedown CERTIFIED. Pipeline: jit_read (outline, 2 turns) -> jit_stage (blueprint x2; greenfield staging superseded by mutation-only after disk probe revealed pre-warmed INIT_STATE file) -> task(category=quick) L3 dispatch -> L3: jit_research + 2x safe_patch (flip INIT_STATE->CERTIFIED_JIT_V1, gate tightened to strict equality) + pytest 1 passed + L3 jit_checkpoint. Conductor personally re-verified: file content exact, pytest '1 passed in 0.08s', zero scope creep (file unchanged outside 2 lines). LIVE_GATE: PASSED (hermetic, no daemon dependency).",
+      "timestamp": "2026-10-06T23:18:29"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 100.6 shakedown: shakedown_target_fn flipped INIT_STATE->CERTIFIED_JIT_V1, gate tightened to strict equality, pytest 1 passed",
+      "timestamp": "2026-10-06T23:17:06"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:01:59"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:01:59"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:01:32"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-06T23:01:32"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:01:08"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-06T23:00:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T02:39:30"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T02:36:42"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T02:35:30"
+    },
+    {
+      "sprint": "99",
+      "story": "99.5",
+      "title": "Dynamic Model Discovery & Graceful Timeout Skips",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-05T02:30:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "completed",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "[STORY 99.5] test_integration_kender.py: replaced hardcoded 404 model tag with _discover_model() (GET /api/tags, prefers resident Qwen, else first model; graceful skip on no-models/timeout). 4/4 blueprint patches applied via safe_patch in order, AST parse clean. Verification (live, KENDER reachable from this host): '3 passed, 1 warning in 104.83s' \u2014 full live chat path exercised end-to-end, not the offline-skip path. No contract modifications (probe/pytestmark/constants/__main__ untouched). Pre-existing lint PLW0602 (read-only global in test_kender_response_not_stub) is in untouchable code, not introduced by this change.",
+      "timestamp": "2026-10-05T02:19:12"
+    },
+    {
+      "sprint": "99",
+      "story": "99.3",
+      "title": "Silicon Reconciliation on /reload_residents",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 1178.97,
+      "duration_m": 19.65,
+      "tokens": {
+        "conductor": 44431,
+        "l3": 0,
+        "total": 44431,
+        "cache_read": 43815
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-05T01:58:23"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "STORY 99.3 complete. Hermetic gate: 4/4 tests pass in HomeLabAI/src/tests/test_silicon_reconciliation.py (re-verified by conductor after subagent dispatch). Delta this dispatch: speculative_triage.py lines 26-28 globals().pop('_SILICON_RECONCILE_SENTINEL', None) purges runtime sentinel on every (re)execution so importlib.reload resets module-level state. Router.py reconciliation (triage-before-cognitive_hub reload order, reconciled_silicon:True payload, recon log) and delegate.py live-gate fields were pre-existing uncommitted deltas already satisfying tests 1-3. Daemon probe during suite run: boot 1553bb6 matches HEAD.",
+      "timestamp": "2026-10-05T01:56:41"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T01:37:05"
+    },
+    {
+      "sprint": "99",
+      "story": "99.3",
+      "title": "Silicon Reconciliation on /reload_residents",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1383.58,
+      "duration_m": 23.06,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-05T00:56:00"
+    },
+    {
+      "sprint": "99",
+      "story": "99.3",
+      "title": "Silicon Reconciliation on /reload_residents",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "API_ERROR",
+      "duration_s": 159.23,
+      "duration_m": 2.65,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-05T00:32:37"
+    },
+    {
+      "sprint": "99",
+      "story": "99.2",
+      "title": "PID Stale VRAM Mutex Auto-Reclaim",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 503.73,
+      "duration_m": 8.4,
+      "tokens": {
+        "conductor": 42407,
+        "l3": 0,
+        "total": 42407,
+        "cache_read": 33033
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-05T00:29:50"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T00:26:54"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-05T00:26:41"
+    },
+    {
+      "sprint": "99",
+      "story": "99.1",
+      "title": "Sovereign Decoupling and Remote Network Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 789.22,
+      "duration_m": 13.15,
+      "tokens": {
+        "conductor": 50981,
+        "l3": 0,
+        "total": 50981,
+        "cache_read": 40504
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-05T00:20:31"
+    },
+    {
+      "sprint": "99",
+      "story": "99.4",
+      "title": "Subversive Delegation Live Shakedown & Swarm Certification",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 765.8,
+      "duration_m": 12.76,
+      "tokens": {
+        "conductor": 46863,
+        "l3": 0,
+        "total": 46863,
+        "cache_read": 46155
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T23:53:21"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 99.4 conductor checkpoint: staged blueprint via stage_research (zero-patch shakedown), dispatched bounded L3 contract (category=deep-low, ses_ef52c0446ffe29Z7NLGMSkkM6a), worker certified 11/11 in 3 turns. Conductor re-verified: git diff clean (no code edits), independent battery re-run 11/11 passed in 0.41s, ledger entries schema-compliant. Zero-wandering + ambient telemetry certified.",
+      "timestamp": "2026-10-04T23:53:06"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 99.4 live shakedown: 11/11 e2e+canary tests passed, zero-wandering certified (turn_count<=3, no grep, <60s)",
+      "timestamp": "2026-10-04T23:51:51"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "shakedown_started",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "STORY 100.1 Tripartite Tool Law Calibration Shakedown (Mode: LOCAL). Edit target HomeLabAI/src/v5/common/types.py resolved (145 lines; SensoryMode L8, IntentEvent L21, NodeStatus L39, LabStatus L48-145, LAB_VERSION L17). Law 1 PASS \u2014 all five tool manifest categories present/functional (clara-dna_read, stage_research, failure_whisperer, handoff_checkpoint, bash, task). Story 100.1 absent from FeatureTracker.md semantic index -> executed as meta shakedown of AGENTS_L2 Tripartite Tool Execution Law with types.py as calibration substrate. Blueprint staged via stage_research: canonical TRIAD_TOOL_LAW tuple + ToolLawCalibration(bkm_id='BKM-049') anchor after LAB_VERSION.",
+      "timestamp": "2026-10-04T22:53:54"
+    },
+    {
+      "sprint": "100",
+      "story": "100.1",
+      "title": "Tripartite Tool Law Calibration Shakedown",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "BLOCKER_HALT",
+      "duration_s": 264.01,
+      "duration_m": 4.4,
+      "tokens": {
+        "conductor": 37375,
+        "l3": 0,
+        "total": 37375,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-04T22:39:35"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T22:33:18"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T22:21:51"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T22:10:54"
+    },
+    {
+      "sprint": "100",
+      "story": "100.1",
+      "title": "Tripartite Tool Law Calibration Shakedown",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 311.03,
+      "duration_m": 5.18,
+      "tokens": {
+        "conductor": 37089,
+        "l3": 0,
+        "total": 37089,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T22:00:59"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T21:44:33"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T21:26:43"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T21:26:09"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T21:24:14"
+    },
+    {
+      "sprint": "99",
+      "story": "99.5",
+      "title": "Dynamic Model Discovery & Graceful Timeout Skips",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.08,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-04T21:22:26"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T20:52:10"
+    },
+    {
+      "sprint": "99",
+      "story": "99.4",
+      "title": "Eliminate Magic Sleeps & Untracked Background Tasks",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 1034.36,
+      "duration_m": 17.24,
+      "tokens": {
+        "conductor": 47170,
+        "l3": 0,
+        "total": 47170,
+        "cache_read": 44973
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T20:51:45"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T20:48:34"
+    },
+    {
+      "sprint": "99",
+      "story": "99.3",
+      "title": "Silicon Reconciliation on /reload_residents",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 582.37,
+      "duration_m": 9.71,
+      "tokens": {
+        "conductor": 42493,
+        "l3": 0,
+        "total": 42493,
+        "cache_read": 41571
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T20:32:47"
+    },
+    {
+      "sprint": "99",
+      "story": "99.3",
+      "title": "Silicon Reconciliation on /reload_residents",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "BLOCKER_HALT",
+      "duration_s": 342.15,
+      "duration_m": 5.7,
+      "tokens": {
+        "conductor": 40065,
+        "l3": 0,
+        "total": 40065,
+        "cache_read": 37812
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-04T20:22:53"
+    },
+    {
+      "sprint": "99",
+      "story": "99.2",
+      "title": "PID Stale VRAM Mutex Auto-Reclaim",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 726.4,
+      "duration_m": 12.11,
+      "tokens": {
+        "conductor": 53976,
+        "l3": 0,
+        "total": 53976,
+        "cache_read": 44362
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T19:27:45"
+    },
+    {
+      "sprint": "99",
+      "story": "99.2",
+      "title": "PID Stale VRAM Mutex Auto-Reclaim",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "BLOCKER_HALT",
+      "duration_s": 533.85,
+      "duration_m": 8.9,
+      "tokens": {
+        "conductor": 35051,
+        "l3": 0,
+        "total": 35051,
+        "cache_read": 33606
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-04T18:37:03"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T17:32:07"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T17:31:21"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Live stdio checkpoint test",
+      "timestamp": "2026-10-04T17:29:56"
+    },
+    {
+      "sprint": "99",
+      "story": "99.1",
+      "title": "Sovereign Decoupling and Remote Network Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 1077.79,
+      "duration_m": 17.96,
+      "tokens": {
+        "conductor": 54389,
+        "l3": 0,
+        "total": 54389,
+        "cache_read": 53411
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T16:32:08"
+    },
+    {
+      "sprint": "98",
+      "story": "98.3",
+      "title": "Pre-Warmed Worker Session Resumption & Tool Blocking",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "sisyphus/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 317.81,
+      "duration_m": 5.3,
+      "tokens": {
+        "conductor": 87612,
+        "l3": 0,
+        "total": 87612,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-04T00:14:38"
+    },
+    {
+      "sprint": "98",
+      "story": "98.2",
+      "title": "Empirical Trust Gradient & Subversive L3 Prompt Calibration",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "sisyphus/openagent",
+      "status": "SUCCESS",
+      "duration_s": 813.28,
+      "duration_m": 13.55,
+      "tokens": {
+        "conductor": 102629,
+        "l3": 0,
+        "total": 102629,
+        "cache_read": 95040
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-04T00:07:42"
+    },
+    {
+      "sprint": "98",
+      "story": "98.1",
+      "title": "Subversive Tool Suite (research, failure_whisperer, handoff_checkpoint, locate_path) & Conductor Cache",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "sisyphus/openagent",
+      "status": "SUCCESS",
+      "duration_s": 451.29,
+      "duration_m": 7.52,
+      "tokens": {
+        "conductor": 61255,
+        "l3": 0,
+        "total": 61255,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-03T23:43:36"
+    },
+    {
+      "sprint": "97",
+      "story": "97.5",
+      "title": "Live Lab Vitals 6:00 AM Daily Sanity Check Badges & Passive Polling Guarantee",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.09,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T06:08:15"
+    },
+    {
+      "sprint": "97",
+      "story": "97.5",
+      "title": "Live Lab Vitals 6:00 AM Daily Sanity Check Badges & Passive Polling Guarantee",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1062.34,
+      "duration_m": 17.71,
+      "tokens": {
+        "conductor": 68045,
+        "l3": 0,
+        "total": 68045,
+        "cache_read": 55058
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T05:38:08"
+    },
+    {
+      "sprint": "97",
+      "story": "97.5",
+      "title": "Live Lab Vitals 6:00 AM Daily Sanity Check Badges & Passive Polling Guarantee",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T05:20:06"
+    },
+    {
+      "sprint": "97",
+      "story": "97.5",
+      "title": "Live Lab Vitals 6:00 AM Daily Sanity Check Badges & Passive Polling Guarantee",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T04:49:00"
+    },
+    {
+      "sprint": "97",
+      "story": "97.4",
+      "title": "Triage Vibe Palette Expansion & Speculative Head-Start Calibration",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "sisyphus/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 96.74,
+      "duration_m": 1.61,
+      "tokens": {
+        "conductor": 112837,
+        "l3": 0,
+        "total": 112837,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T04:15:38"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.08,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T04:08:45"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T03:38:33"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T02:51:49"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1001.28,
+      "duration_m": 16.69,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-03T01:34:13"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "API_ERROR",
+      "duration_s": 81.96,
+      "duration_m": 1.37,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T23:50:46"
+    },
+    {
+      "sprint": "97",
+      "story": "97.0",
+      "title": "Oracle Pre-Pass on Sprint 97 Plan & Architectural Invariant Grounding",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "oracle/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 115.25,
+      "duration_m": 1.92,
+      "tokens": {
+        "conductor": 51869,
+        "l3": 0,
+        "total": 51869,
+        "cache_read": 43360
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T22:56:52"
+    },
+    {
+      "sprint": "97",
+      "story": "97.0",
+      "title": "Oracle Pre-Pass on Sprint 97 Plan & Architectural Invariant Grounding",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "oracle/openagent",
+      "status": "API_ERROR",
+      "duration_s": 22.43,
+      "duration_m": 0.37,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T22:54:31"
+    },
+    {
+      "sprint": "97",
+      "story": "97.0",
+      "title": "Oracle Pre-Pass on Sprint 97 Plan & Architectural Invariant Grounding",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "oracle",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 556.21,
+      "duration_m": 9.27,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T22:53:14"
+    },
+    {
+      "sprint": "97",
+      "story": "test-local",
+      "title": "Local Silicon Sovereign Health Check",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 629.03,
+      "duration_m": 10.48,
+      "tokens": {
+        "conductor": 41903,
+        "l3": 0,
+        "total": 41903,
+        "cache_read": 40949
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T22:35:05"
+    },
+    {
+      "sprint": "97",
+      "story": "test-cloud",
+      "title": "Cloud Fallback Health Check",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 193.81,
+      "duration_m": 3.23,
+      "tokens": {
+        "conductor": 39257,
+        "l3": 0,
+        "total": 39257,
+        "cache_read": 29520
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T22:04:06"
+    },
+    {
+      "sprint": "97",
+      "story": "test-cloud",
+      "title": "Cloud Fallback Health Check",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "API_ERROR",
+      "duration_s": 3.56,
+      "duration_m": 0.06,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T21:58:41"
+    },
+    {
+      "sprint": "97",
+      "story": "test-cloud",
+      "title": "Cloud Fallback Health Check",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "API_ERROR",
+      "duration_s": 3.82,
+      "duration_m": 0.06,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T21:57:36"
+    },
+    {
+      "sprint": "97",
+      "story": "979",
+      "title": "Cloud Health Check",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 100.21,
+      "duration_m": 1.67,
+      "tokens": {
+        "conductor": 44617,
+        "l3": 0,
+        "total": 44617,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T19:28:07"
+    },
+    {
+      "sprint": "97",
+      "story": "979",
+      "title": "Swarm Dispatch Latency Test",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "API_ERROR",
+      "duration_s": 0.49,
+      "duration_m": 0.01,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T19:19:18"
+    },
+    {
+      "sprint": "97",
+      "story": "97.3",
+      "title": "Dead-Lock Reaping, VRAM Status Clean-up & Queue Hardening",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1556.82,
+      "duration_m": 25.95,
+      "tokens": {
+        "conductor": 116688,
+        "l3": 0,
+        "total": 116688,
+        "cache_read": 105797
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T17:55:04"
+    },
+    {
+      "sprint": "97",
+      "story": "972",
+      "title": "Intercom Feedback UI (Thumbs Up/Down) & Co-Pilot Bridge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1185.97,
+      "duration_m": 19.77,
+      "tokens": {
+        "conductor": 82370,
+        "l3": 0,
+        "total": 82370,
+        "cache_read": 81315
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T17:28:09"
+    },
+    {
+      "sprint": "97",
+      "story": "971",
+      "title": "Single-Home Runtime Data and Accountability in Interleaved Logs",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1447.88,
+      "duration_m": 24.13,
+      "tokens": {
+        "conductor": 79450,
+        "l3": 0,
+        "total": 79450,
+        "cache_read": 78091
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T17:07:51"
+    },
+    {
+      "sprint": "96",
+      "story": "96.5",
+      "title": "Flywheel Closure: Thumbs Up/Down Telemetry & Loop DNA Collection",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-02T00:09:09"
+    },
+    {
+      "sprint": "96",
+      "story": "96.5",
+      "title": "Flywheel Closure: Thumbs Up/Down Telemetry & Loop DNA Collection",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1174.95,
+      "duration_m": 19.58,
+      "tokens": {
+        "conductor": 109229,
+        "l3": 0,
+        "total": 109229,
+        "cache_read": 100024
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T22:15:01"
+    },
+    {
+      "sprint": "96",
+      "story": "96.2",
+      "title": "Triage Decoupling & Target Domain Routing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 643.5,
+      "duration_m": 10.72,
+      "tokens": {
+        "conductor": 81309,
+        "l3": 0,
+        "total": 81309,
+        "cache_read": 67561
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-01T21:55:07"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Retrieval Scope Override",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 718.85,
+      "duration_m": 11.98,
+      "tokens": {
+        "conductor": 58591,
+        "l3": 0,
+        "total": 58591,
+        "cache_read": 57031
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-01T16:41:31"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1401.06,
+      "duration_m": 23.35,
+      "tokens": {
+        "conductor": 92447,
+        "l3": 0,
+        "total": 92447,
+        "cache_read": 84048
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T16:02:43"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "API_ERROR",
+      "duration_s": 4.69,
+      "duration_m": 0.08,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T15:38:25"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "junior",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1074.42,
+      "duration_m": 17.91,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T15:37:31"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 121.64,
+      "duration_m": 2.03,
+      "tokens": {
+        "conductor": 44116,
+        "l3": 0,
+        "total": 44116,
+        "cache_read": 43377
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T15:18:53"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.01,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T15:16:29"
+    },
+    {
+      "sprint": "96",
+      "story": "96.4",
+      "title": "In-Flight Dynamic Scope Override 'Direct Flight'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.05,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T15:10:35"
+    },
+    {
+      "sprint": "96",
+      "story": "96.2",
+      "title": "Triage Decoupling & Target Domain Routing",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T12:50:45"
+    },
+    {
+      "sprint": "96",
+      "story": "96.2",
+      "title": "Triage Decoupling & Target Domain Routing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 638.12,
+      "duration_m": 10.64,
+      "tokens": {
+        "conductor": 38814,
+        "l3": 0,
+        "total": 38814,
+        "cache_read": 32768
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-01T12:20:28"
+    },
+    {
+      "sprint": "96",
+      "story": "96.2",
+      "title": "Triage Decoupling & Target Domain Routing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 214.63,
+      "duration_m": 3.58,
+      "tokens": {
+        "conductor": 36165,
+        "l3": 0,
+        "total": 36165,
+        "cache_read": 34816
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-01T12:09:08"
+    },
+    {
+      "sprint": "95",
+      "story": "9520",
+      "title": "Hybrid HyDE Cascade & Pinky Flywheel Caching",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas/openagent",
+      "status": "SUCCESS",
+      "duration_s": 1412.37,
+      "duration_m": 23.54,
+      "tokens": {
+        "conductor": 42647,
+        "l3": 0,
+        "total": 42647,
+        "cache_read": 32768
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-30T14:29:17"
+    },
+    {
+      "sprint": "95",
+      "story": "9518",
+      "title": "Default State INIT and In-Process Lab Attendant Supervisor",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "atlas",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.03,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-30T13:56:29"
+    },
+    {
+      "sprint": "95",
+      "story": "9510",
+      "title": "Live LLM Engine Integration for RevisionBlender and CoverLetter",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-30T13:02:12"
+    },
+    {
+      "sprint": "95",
+      "story": "993",
+      "title": "Oracle Canary",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "oracle/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1083.23,
+      "duration_m": 18.05,
+      "tokens": {
+        "conductor": 41943,
+        "l3": 0,
+        "total": 41943,
+        "cache_read": 34816
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T20:19:34"
+    },
+    {
+      "sprint": "95",
+      "story": "991",
+      "title": "Cloud Delegate Canary",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "prometheus/openagent",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 74.96,
+      "duration_m": 1.25,
+      "tokens": {
+        "conductor": 34935,
+        "l3": 0,
+        "total": 34935,
+        "cache_read": 28672
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T19:30:29"
+    },
+    {
+      "sprint": "95",
+      "story": "9511",
+      "title": "Live LLM Semantic Persona Extraction in Job Ingest",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 201.34,
+      "duration_m": 3.36,
+      "tokens": {
+        "conductor": 100321,
+        "l3": 0,
+        "total": 100321,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T17:59:02"
+    },
+    {
+      "sprint": "95",
+      "story": "9511",
+      "title": "Live LLM Semantic Persona Extraction in Job Ingest",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/free",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 2.67,
+      "duration_m": 0.04,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T17:46:34"
+    },
+    {
+      "sprint": "95",
+      "story": "9510",
+      "title": "Live LLM Engine Integration for RevisionBlender & CoverLetter",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1414.94,
+      "duration_m": 23.58,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T17:40:17"
+    },
+    {
+      "sprint": "95",
+      "story": "958",
+      "title": "Document-Scoped DNA Promotion Gate & Sync Pipeline",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T16:54:43"
+    },
+    {
+      "sprint": "95",
+      "story": "958",
+      "title": "Document-Scoped DNA Promotion Gate & Sync Pipeline",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T16:24:28"
+    },
+    {
+      "sprint": "95",
+      "story": "957",
+      "title": "Offline Job & Target Ingestion CLI",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 501.3,
+      "duration_m": 8.36,
+      "tokens": {
+        "conductor": 114826,
+        "l3": 0,
+        "total": 114826,
+        "cache_read": 113656
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-29T15:54:06"
+    },
+    {
+      "sprint": "95",
+      "story": "957",
+      "title": "Offline Job & Target Ingestion CLI",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 840.04,
+      "duration_m": 14.0,
+      "tokens": {
+        "conductor": 75259,
+        "l3": 0,
+        "total": 75259,
+        "cache_read": 31660
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T15:45:31"
+    },
+    {
+      "sprint": "95",
+      "story": "956",
+      "title": "Editorial Dialogue Gutter & Synthetic Mutation Blending",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1277.84,
+      "duration_m": 21.3,
+      "tokens": {
+        "conductor": 173281,
+        "l3": 0,
+        "total": 173281,
+        "cache_read": 171066
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T15:29:56"
+    },
+    {
+      "sprint": "95",
+      "story": "955",
+      "title": "Single-Node Proving Ground & Revision Carousel",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 1301.44,
+      "duration_m": 21.69,
+      "tokens": {
+        "conductor": 140984,
+        "l3": 0,
+        "total": 140984,
+        "cache_read": 139987
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-29T15:08:21"
+    },
+    {
+      "sprint": "95",
+      "story": "954",
+      "title": "Thin-Proxy Node Architecture & ML Dependency Purge",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 340.67,
+      "duration_m": 5.68,
+      "tokens": {
+        "conductor": 92037,
+        "l3": 0,
+        "total": 92037,
+        "cache_read": 89891
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-29T14:46:25"
+    },
+    {
+      "sprint": "95",
+      "story": "953",
+      "title": "Idle Sensory Quiescence & Socket-Gated Ear Poller",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 277.86,
+      "duration_m": 4.63,
+      "tokens": {
+        "conductor": 60913,
+        "l3": 0,
+        "total": 60913,
+        "cache_read": 58133
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-29T14:35:08"
+    },
+    {
+      "sprint": "95",
+      "story": "953",
+      "title": "Single-Node Proving Ground & Revision Carousel",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T14:25:18"
+    },
+    {
+      "sprint": "95",
+      "story": "952",
+      "title": "Multi-Version Resume AST Citation & Diff Annotation (Cloud Escalation Round 2)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 474.32,
+      "duration_m": 7.91,
+      "tokens": {
+        "conductor": 71954,
+        "l3": 0,
+        "total": 71954,
+        "cache_read": 70846
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T13:34:40"
+    },
+    {
+      "sprint": "95",
+      "story": "952",
+      "title": "Multi-Version Resume AST Citation & Diff Annotation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 828.24,
+      "duration_m": 13.8,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T13:26:30"
+    },
+    {
+      "sprint": "95",
+      "story": "951",
+      "title": "Self-Contained Spine Manager & Document DNA Archive (Cloud Escalation Round 2)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 350.17,
+      "duration_m": 5.84,
+      "tokens": {
+        "conductor": 65663,
+        "l3": 0,
+        "total": 65663,
+        "cache_read": 64844
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-29T13:11:10"
+    },
+    {
+      "sprint": "95",
+      "story": "951",
+      "title": "Self-Contained Spine Manager & Document DNA Archive (Attempt 1b - Calibrated)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 817.62,
+      "duration_m": 13.63,
+      "tokens": {
+        "conductor": 63658,
+        "l3": 0,
+        "total": 63658,
+        "cache_read": 55073
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T13:04:57"
+    },
+    {
+      "sprint": "95",
+      "story": "951",
+      "title": "Self-Contained Spine Manager & Document DNA Archive",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 686.78,
+      "duration_m": 11.45,
+      "tokens": {
+        "conductor": 69197,
+        "l3": 0,
+        "total": 69197,
+        "cache_read": 31621
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T12:51:00"
+    },
+    {
+      "sprint": "95",
+      "story": "950",
+      "title": "Grader Fallback & Tier Tagging Remediation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 464.52,
+      "duration_m": 7.74,
+      "tokens": {
+        "conductor": 46835,
+        "l3": 0,
+        "total": 46835,
+        "cache_read": 31621
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T12:25:34"
+    },
+    {
+      "sprint": "95",
+      "story": "950",
+      "title": "Grader Fallback & Tier Tagging Remediation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 855.99,
+      "duration_m": 14.27,
+      "tokens": {
+        "conductor": 86640,
+        "l3": 0,
+        "total": 86640,
+        "cache_read": 73452
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T12:12:49"
+    },
+    {
+      "sprint": "95",
+      "story": "950",
+      "title": "Pre-Sprint Adversarial Architectural Audit on Refined Self-Contained Spine & Document DNA",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 515.09,
+      "duration_m": 8.58,
+      "tokens": {
+        "conductor": 85092,
+        "l3": 0,
+        "total": 85092,
+        "cache_read": 70021
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T11:54:42"
+    },
+    {
+      "sprint": "95",
+      "story": "950",
+      "title": "Pre-Sprint Adversarial Architectural Review on Sprint 95 Spine & Sandbox",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 495.13,
+      "duration_m": 8.25,
+      "tokens": {
+        "conductor": 96566,
+        "l3": 0,
+        "total": 96566,
+        "cache_read": 79427
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-29T11:12:32"
+    },
+    {
+      "sprint": "94",
+      "story": "947",
+      "title": "Post-Implementation Dual Adversarial Oracle Review",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 614.81,
+      "duration_m": 10.25,
+      "tokens": {
+        "conductor": 101537,
+        "l3": 0,
+        "total": 101537,
+        "cache_read": 100639
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T21:27:17"
+    },
+    {
+      "sprint": "94",
+      "story": "947",
+      "title": "Post-Implementation Dual Adversarial Oracle Review",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "cohere/command-a-plus-05-2026",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 3.47,
+      "duration_m": 0.06,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T21:16:15"
+    },
+    {
+      "sprint": "94",
+      "story": "943",
+      "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Cloud Escalation Round 2)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 979.05,
+      "duration_m": 16.32,
+      "tokens": {
+        "conductor": 104280,
+        "l3": 0,
+        "total": 104280,
+        "cache_read": 102744
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-28T21:14:47"
+    },
+    {
+      "sprint": "94",
+      "story": "943",
+      "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Attempt 1c - 128k Context Active)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T20:58:09"
+    },
+    {
+      "sprint": "94",
+      "story": "943",
+      "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Attempt 1b - Feedback Calibrated)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1627.21,
+      "duration_m": 27.12,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T20:27:42"
+    },
+    {
+      "sprint": "94",
+      "story": "943",
+      "title": "Paper AST Schema v2 & Dynamic Scoping Gate",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1178.51,
+      "duration_m": 19.64,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T20:00:04"
+    },
+    {
+      "sprint": "94",
+      "story": "941",
+      "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Cloud Escalation Round 2)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 587.12,
+      "duration_m": 9.79,
+      "tokens": {
+        "conductor": 79307,
+        "l3": 0,
+        "total": 79307,
+        "cache_read": 78076
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-28T19:22:04"
+    },
+    {
+      "sprint": "94",
+      "story": "941",
+      "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Attempt 1c - Exact Write Contract)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T19:12:00"
+    },
+    {
+      "sprint": "94",
+      "story": "941",
+      "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Attempt 1b - Junior Direct Scaffold)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T18:41:28"
+    },
+    {
+      "sprint": "94",
+      "story": "941",
+      "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T18:11:08"
+    },
+    {
+      "sprint": "94",
+      "story": "946",
+      "title": "Consolidated Projection Engine Backend Package (Cloud Escalation Round 2)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 814.67,
+      "duration_m": 13.58,
+      "tokens": {
+        "conductor": 136786,
+        "l3": 0,
+        "total": 136786,
+        "cache_read": 135056
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-28T17:39:43"
+    },
+    {
+      "sprint": "94",
+      "story": "946",
+      "title": "Consolidated Projection Engine Backend Package (Attempt 1c - Sisyphus-Junior Direct Code Generation)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T17:25:44"
+    },
+    {
+      "sprint": "94",
+      "story": "946",
+      "title": "Consolidated Projection Engine Backend Package (Attempt 1b - High-Precision 4-Anchor)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1234.48,
+      "duration_m": 20.57,
+      "tokens": {
+        "conductor": 66267,
+        "l3": 0,
+        "total": 66267,
+        "cache_read": 57816
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T16:54:58"
+    },
+    {
+      "sprint": "94",
+      "story": "946",
+      "title": "Consolidated Projection Engine Backend Package",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1581.81,
+      "duration_m": 26.36,
+      "tokens": {
+        "conductor": 70345,
+        "l3": 0,
+        "total": 70345,
+        "cache_read": 59166
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T16:33:18"
+    },
+    {
+      "sprint": "94",
+      "story": "946",
+      "title": "Consolidated Projection Engine Backend Package",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 941.4,
+      "duration_m": 15.69,
+      "tokens": {
+        "conductor": 38232,
+        "l3": 0,
+        "total": 38232,
+        "cache_read": 3
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T12:41:00"
+    },
+    {
+      "sprint": "94",
+      "story": "940",
+      "title": "Sprint 94 Open Track Conversation Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 291.75,
+      "duration_m": 4.86,
+      "tokens": {
+        "conductor": 68865,
+        "l3": 0,
+        "total": 68865,
+        "cache_read": 56423
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T12:21:49"
+    },
+    {
+      "sprint": "93",
+      "story": "93.5",
+      "title": "Standalone Projection Studio Sandbox Scaffolding",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 1067.67,
+      "duration_m": 17.79,
+      "tokens": {
+        "conductor": 150664,
+        "l3": 0,
+        "total": 150664,
+        "cache_read": 148788
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-28T01:46:09"
+    },
+    {
+      "sprint": "93",
+      "story": "93.4",
+      "title": "Cloud Oracle Synthesis on Chained Projections and Dynamic Lens Crafting Protocol",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "cohere/command-a-plus-05-2026",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.04,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T01:26:29"
+    },
+    {
+      "sprint": "93",
+      "story": "93.3",
+      "title": "Multi-Paper Selector & Publishing Purgatory in Papers Viewer",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1778.88,
+      "duration_m": 29.65,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-28T01:17:59"
+    },
+    {
+      "sprint": "93",
+      "story": "93.2",
+      "title": "Reposition Projection Toolbar in Writer Studio",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "SUCCESS",
+      "duration_s": 44.73,
+      "duration_m": 0.75,
+      "tokens": {
+        "conductor": 32063,
+        "l3": 0,
+        "total": 32063,
+        "cache_read": 31604
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-27T23:48:19"
+    },
+    {
+      "sprint": "93",
+      "story": "93.2",
+      "title": "Reposition Projection Toolbar in Writer Studio",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "SUCCESS",
+      "duration_s": 84.03,
+      "duration_m": 1.4,
+      "tokens": {
+        "conductor": 35300,
+        "l3": 0,
+        "total": 35300,
+        "cache_read": 31039
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-27T23:46:00"
+    },
+    {
+      "sprint": "92",
+      "story": "924",
+      "title": "Sprint 92 Ground Truth Round Table and Anti-Green-Lie Adversarial Review",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 334.01,
+      "duration_m": 5.57,
+      "tokens": {
+        "conductor": 80398,
+        "l3": 0,
+        "total": 80398,
+        "cache_read": 73538
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T23:47:04"
+    },
+    {
+      "sprint": "91",
+      "story": "91.5",
+      "title": "Post-Implementation Architectural Review: Decoupled Morning Accountability Watchdog",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 312.18,
+      "duration_m": 5.2,
+      "tokens": {
+        "conductor": 62392,
+        "l3": 0,
+        "total": 62392,
+        "cache_read": 55033
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T21:20:44"
+    },
+    {
+      "sprint": "91",
+      "story": "91.5",
+      "title": "Post-Implementation Architectural Review: Decoupled Morning Accountability Watchdog",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "cohere/command-a-plus-05-2026",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.06,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T21:14:14"
+    },
+    {
+      "sprint": "91",
+      "story": "91.0",
+      "title": "Pre-Execution Architectural Review: Decoupled Morning Accountability Watchdog",
+      "mode": "oracle",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 304.83,
+      "duration_m": 5.08,
+      "tokens": {
+        "conductor": 39803,
+        "l3": 0,
+        "total": 39803,
+        "cache_read": 36864
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T20:47:09"
+    },
+    {
+      "sprint": "90",
+      "story": "90.5",
+      "title": "Sprint 90 Closeout Architectural Review & Code Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 75.41,
+      "duration_m": 1.26,
+      "tokens": {
+        "conductor": 34056,
+        "l3": 0,
+        "total": 34056,
+        "cache_read": 32768
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T16:58:41"
+    },
+    {
+      "sprint": "90",
+      "story": "90.0",
+      "title": "Oracle Pre-Execution Review",
+      "mode": "oracle",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 130.57,
+      "duration_m": 2.18,
+      "tokens": {
+        "conductor": 38845,
+        "l3": 0,
+        "total": 38845,
+        "cache_read": 30720
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-25T14:47:41"
+    },
+    {
+      "sprint": "89",
+      "story": "89.2",
+      "title": "Nightly Forge Log Consolidation & WebSocket Digest [FEAT-602]",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-24T16:19:43"
+    },
+    {
+      "sprint": "89",
+      "story": "89.1",
+      "title": "Dynamic AST Re-Drafting Engine [FEAT-601]",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3:14b",
+      "status": "SUCCESS",
+      "duration_s": 1574.72,
+      "duration_m": 26.25,
+      "tokens": {
+        "conductor": 34377,
+        "l3": 0,
+        "total": 34377,
+        "cache_read": 4
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-24T14:48:57"
+    },
+    {
+      "sprint": "88",
+      "story": "88.2",
+      "title": "Accountable Dream Manager & Telemetry Instrumentation",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.1,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T17:06:04"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Atlas Prompt Headroom Test",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1.94,
+      "duration_m": 0.03,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T16:39:49"
+    },
+    {
+      "sprint": "88",
+      "story": "88.2",
+      "title": "Accountable Dream Manager & Telemetry Instrumentation",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 2.28,
+      "duration_m": 0.04,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T16:36:39"
+    },
+    {
+      "sprint": "88",
+      "story": "88.2",
+      "title": "Accountable Dream Manager & Telemetry Instrumentation",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 533.64,
+      "duration_m": 8.89,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T16:35:48"
+    },
+    {
+      "sprint": "88",
+      "story": "88.2",
+      "title": "Accountable Dream Manager & Telemetry Instrumentation",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 19.77,
+      "duration_m": 0.33,
+      "tokens": {
+        "conductor": 33815,
+        "l3": 0,
+        "total": 33815,
+        "cache_read": 32768
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T15:57:31"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Root Monorepo Protection Test",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 337.84,
+      "duration_m": 5.63,
+      "tokens": {
+        "conductor": 39387,
+        "l3": 0,
+        "total": 39387,
+        "cache_read": 30720
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T15:57:10"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Canary Safe Patch Certification",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "SUCCESS",
+      "duration_s": 167.93,
+      "duration_m": 2.8,
+      "tokens": {
+        "conductor": 37324,
+        "l3": 0,
+        "total": 37324,
+        "cache_read": 36864
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-23T15:00:03"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Canary Safe Patch Certification",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1.91,
+      "duration_m": 0.03,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T14:41:19"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Canary Safe Patch Certification",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.01,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T14:35:12"
+    },
+    {
+      "sprint": "88",
+      "story": "canary",
+      "title": "Canary Safe Patch Certification",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 1.33,
+      "duration_m": 0.02,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T14:32:12"
+    },
+    {
+      "sprint": "88",
+      "story": "880",
+      "title": "Sprint 88 Delegation Strategy & Task-Level Breakdown Oracle Review",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 271.29,
+      "duration_m": 4.52,
+      "tokens": {
+        "conductor": 76860,
+        "l3": 0,
+        "total": 76860,
+        "cache_read": 69376
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-23T13:32:04"
+    },
+    {
+      "sprint": "86",
+      "story": "8614",
+      "title": "sync_chroma_dna.py Idempotency Guard and Checksum Diffing",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 762.69,
+      "duration_m": 12.71,
+      "tokens": {
+        "conductor": 135675,
+        "l3": 0,
+        "total": 135675,
+        "cache_read": 134144
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T19:02:51"
+    },
+    {
+      "sprint": "86",
+      "story": "8613",
+      "title": "writer.html and build_writer.py DNA Revision and Mutation Exposure",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 293.54,
+      "duration_m": 4.89,
+      "tokens": {
+        "conductor": 93422,
+        "l3": 0,
+        "total": 93422,
+        "cache_read": 92160
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:49:24"
+    },
+    {
+      "sprint": "86",
+      "story": "8612",
+      "title": "WIS and PHL Schema Backfill Migration",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 73.19,
+      "duration_m": 1.22,
+      "tokens": {
+        "conductor": 45952,
+        "l3": 0,
+        "total": 45952,
+        "cache_read": 45056
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:43:45"
+    },
+    {
+      "sprint": "86",
+      "story": "867",
+      "title": "Draft Promotion Static HTML Rebuild and Safe ID Allocation",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 326.98,
+      "duration_m": 5.45,
+      "tokens": {
+        "conductor": 85665,
+        "l3": 0,
+        "total": 85665,
+        "cache_read": 84224
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:41:52"
+    },
+    {
+      "sprint": "86",
+      "story": "868",
+      "title": "RDNA Save Path Fix in handle_wisdom_save_card",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 98.44,
+      "duration_m": 1.64,
+      "tokens": {
+        "conductor": 55389,
+        "l3": 0,
+        "total": 55389,
+        "cache_read": 54528
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:35:03"
+    },
+    {
+      "sprint": "86",
+      "story": "866",
+      "title": "mutations array Cleanup After Certification",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 245.44,
+      "duration_m": 4.09,
+      "tokens": {
+        "conductor": 72725,
+        "l3": 0,
+        "total": 72725,
+        "cache_read": 71680
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:32:40"
+    },
+    {
+      "sprint": "86",
+      "story": "865",
+      "title": "FEAT Domain and RDNA Synthesis in build_dna_polymorphic_dataset",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "cohere/command-a-plus-05-2026",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.11,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:27:34"
+    },
+    {
+      "sprint": "86",
+      "story": "864",
+      "title": "ensure_datasets Force-Rebuild Flag in nightly_lora_training.py",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 45.7,
+      "duration_m": 0.76,
+      "tokens": {
+        "conductor": 51854,
+        "l3": 0,
+        "total": 51854,
+        "cache_read": 50944
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:24:03"
+    },
+    {
+      "sprint": "86",
+      "story": "863",
+      "title": "Wire nightly_lora_training.py into Nightly Forge",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 153.42,
+      "duration_m": 2.56,
+      "tokens": {
+        "conductor": 77083,
+        "l3": 0,
+        "total": 77083,
+        "cache_read": 76032
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:22:49"
+    },
+    {
+      "sprint": "86",
+      "story": "862",
+      "title": "Nightly Forge Step Order Inversion Fix",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "SUCCESS",
+      "duration_s": 234.38,
+      "duration_m": 3.91,
+      "tokens": {
+        "conductor": 77175,
+        "l3": 0,
+        "total": 77175,
+        "cache_read": 76032
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-21T18:20:02"
+    },
+    {
+      "sprint": "84",
+      "story": "84.2",
+      "title": "Resume AST Decomposer & DNA Extractor (FEAT-595)",
+      "mode": "execute",
+      "tier": "[SWARM:HYBRID]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 1800.1,
+      "duration_m": 30.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-18T16:29:21"
+    },
+    {
+      "sprint": "84",
+      "story": "84.2",
+      "title": "Resume AST Decomposer & DNA Extractor (FEAT-595)",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-m5-mlx/mlx-community--Qwen3.5-9B-4bit",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 99.1,
+      "duration_m": 1.65,
+      "tokens": {
+        "conductor": 36945,
+        "l3": 0,
+        "total": 36945,
+        "cache_read": 32768
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-18T15:56:52"
+    },
+    {
+      "sprint": "83",
+      "story": "83.8",
+      "title": "Dynamic Triage Engine Preference & RDNA HyDE Bypass",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 332.53,
+      "duration_m": 5.54,
+      "tokens": {
+        "conductor": 118877,
+        "l3": 0,
+        "total": 118877,
+        "cache_read": 117504
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-17T17:04:26"
+    },
+    {
+      "sprint": "83",
+      "story": "83.7",
+      "title": "Discrete Multi-LoRA Nightly Training Pipeline",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 475.21,
+      "duration_m": 7.92,
+      "tokens": {
+        "conductor": 87356,
+        "l3": 0,
+        "total": 87356,
+        "cache_read": 85888
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-17T16:57:49"
+    },
+    {
+      "sprint": "83",
+      "story": "83.6",
+      "title": "Dual Oracle Review: Architecture & Blast Radius Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 159.79,
+      "duration_m": 2.66,
+      "tokens": {
+        "conductor": 96500,
+        "l3": 0,
+        "total": 96500,
+        "cache_read": 85504
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-17T16:48:55"
+    },
+    {
+      "sprint": "82",
+      "story": "82.4",
+      "title": "Objective Curation & Anti-Embellishment UI in writer.html",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "SUCCESS",
+      "duration_s": 1.02,
+      "duration_m": 0.02,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-16T00:31:54"
+    },
+    {
+      "sprint": "82",
+      "story": "82.4",
+      "title": "Objective Curation & Anti-Embellishment UI in writer.html",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 0.95,
+      "duration_m": 0.02,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T23:47:29"
+    },
+    {
+      "sprint": "82",
+      "story": "82.3",
+      "title": "Target Objective & JD Matching Engine",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 823.63,
+      "duration_m": 13.73,
+      "tokens": {
+        "conductor": 113671,
+        "l3": 0,
+        "total": 113671,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T23:23:53"
+    },
+    {
+      "sprint": "82",
+      "story": "82.3",
+      "title": "Target Objective & JD Matching Engine",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 0.84,
+      "duration_m": 0.01,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T23:09:22"
+    },
+    {
+      "sprint": "82",
+      "story": "82.2",
+      "title": "Paper-Scoped ChromaDB DNA Collections",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "cohere/command-a-plus-05-2026",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T20:43:02"
+    },
+    {
+      "sprint": "82",
+      "story": "82.2",
+      "title": "Paper-Scoped ChromaDB DNA Collections",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 0.86,
+      "duration_m": 0.01,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T20:30:57"
+    },
+    {
+      "sprint": "82",
+      "story": "82.1",
+      "title": "Generic Document Ingestion & Two-Tier AST Schema (/paper/import)",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "opencode/big-pickle",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 652.0,
+      "duration_m": 10.87,
+      "tokens": {
+        "conductor": 141773,
+        "l3": 0,
+        "total": 141773,
+        "cache_read": 139776
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T16:59:31"
+    },
+    {
+      "sprint": "82",
+      "story": "82.1",
+      "title": "Generic Document Ingestion & Two-Tier AST Schema (/paper/import)",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 0.77,
+      "duration_m": 0.01,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T16:47:58"
+    },
+    {
+      "sprint": "82",
+      "story": "82.1",
+      "title": "Generic Document Ingestion & Two-Tier AST Schema (/paper/import)",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/qwen3-14b-16k:latest",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1.24,
+      "duration_m": 0.02,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T16:28:01"
+    },
+    {
+      "sprint": "83",
+      "story": "833",
+      "title": "Round Table Memory Persistence & Context Pruning",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "unknown",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1782.4,
+      "duration_m": 29.71,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T14:08:32"
+    },
+    {
+      "sprint": "83",
+      "story": "831",
+      "title": "Multi-Curriculum Dataset Blender",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "unknown",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 118.4,
+      "duration_m": 1.97,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-15T12:12:09"
+    },
+    {
+      "sprint": "81",
+      "story": "81.3",
+      "title": "Deep Water-Level DNA Palette & Waterline Card Popover",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 137.7,
+      "duration_m": 2.29,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-14T15:11:26"
+    },
+    {
+      "sprint": "80",
+      "story": "80.3",
+      "title": "Context-Aware Water-Level DNA Palette & Micro-Surface Controller (FEAT-588)",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "SUCCESS",
+      "duration_s": 741.7,
+      "duration_m": 12.36,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-14T13:33:29"
+    },
+    {
+      "sprint": "79",
+      "story": "794",
+      "title": "Story 79.4: Multi-Tier Bone Outliner Drag-and-Drop & Domain-Partitioned Palette",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 896.3,
+      "duration_m": 14.94,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-14T11:24:21"
+    },
+    {
+      "sprint": "78",
+      "story": "7812",
+      "title": "3-Tier Revision History < > Carousel & In-Place Restoration",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "SUCCESS",
+      "duration_s": 363.9,
+      "duration_m": 6.06,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-14T05:46:40"
+    },
+    {
+      "sprint": "78",
+      "story": "7811",
+      "title": "Cross-Paragraph SortableJS Citation Drag-and-Drop & Reactive Dirty State",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "SUCCESS",
+      "duration_s": 1119.3,
+      "duration_m": 18.65,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-14T05:26:34"
+    },
+    {
+      "sprint": "78",
+      "story": "78.6",
+      "title": "Cascade Synthesis Reflow & 3-Tier Revision Carousel (FEAT-584)",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 2.7,
+      "duration_m": 0.05,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-14T00:21:48"
+    },
+    {
+      "sprint": "78",
+      "story": "78.5",
+      "title": "Structural Tree View & SortableJS DNA Tag Drag-and-Drop (FEAT-583)",
+      "mode": "execute",
+      "tier": "[SWARM:CLOUD]",
+      "model": "unknown",
+      "status": "SUCCESS",
+      "duration_s": 6.8,
+      "duration_m": 0.11,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-09-14T00:21:08"
+    },
+    {
+      "sprint": "78",
+      "story": "78.4",
+      "title": "Foyer REST Paper API Endpoints",
+      "mode": "execute",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3-14B-GGUF:UD-Q4_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 76.9,
+      "duration_m": 1.28,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-09-13T09:53:30"
+    }
+  ]
+}
