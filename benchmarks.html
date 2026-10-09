@@ -301,6 +301,13 @@
             text-transform: uppercase;
         }
 
+        .delegation-summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
         /* Delta-T Chart & Legend Box */
         .delta-t-chart-box {
             background: #12161f;
@@ -470,20 +477,17 @@
     <main>
         <div class="console-header">
             <h1 class="console-title">Federated Silicon Benchmarks</h1>
-            <p class="console-subtitle">[BKM-049] Multi-Seat Hardware & ROI Telemetry Workbench | v2.0</p>
+            <p class="console-subtitle">Multi-Seat Hardware & ROI Telemetry Workbench | v2.0</p>
         </div>
 
         <div class="telemetry-banner">
-            <div class="telemetry-item">Active Seats: <span>4 Federated Nodes (M5 Air, 4090, 2080 Ti, Cloud)</span></div>
-            <div class="telemetry-item">Last Sync: <span id="telemetry-timestamp">Synchronizing...</span></div>
+            <div class="telemetry-item">Last Nightly Silicon Sweep: <span id="telemetry-timestamp">Synchronizing...</span></div>
             <div>
                 <span id="telemetry-status" class="status-badge status-online">FEDERATED ONLINE</span>
             </div>
         </div>
 
-        <div class="controls-bar">
-            <button class="console-btn console-btn-primary" onclick="loadBenchmarks()">🔄 REFRESH TELEMETRY</button>
-        </div>
+
 
         <!-- GLOBAL HARDWARE DASHBOARD: Model Seats outside tabs [USER DIRECTIVE] -->
         <div class="seat-grid" id="seat-cards-container">
@@ -673,9 +677,19 @@
                 </div>
             </div>
 
-            <div class="delegation-filter-row" id="delegation-sprint-filter">
-                <button class="tab-btn active" onclick="filterDelegationRuns('all')">All</button>
-                <!-- Sprint filter buttons injected dynamically by renderDelegationFilters() -->
+            <div class="chart-block" style="margin: 18px 0;">
+                <div class="chart-title">🐝 Sovereign Swarm Token Trajectory (Tokens per Sprint)</div>
+                <div class="chart-subtitle" style="margin-bottom:8px;">Total tokens per sprint partitioned by tier — local silicon vs Primary AGY vs cloud &amp; oracle offloads.</div>
+                <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Local Silicon</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>Primary AGY</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud &amp; Oracle</span>
+                </div>
+                <canvas id="swarm-token-chart" width="1000" height="260" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+            </div>
+
+<div class="delegation-filter-row" id="delegation-sprint-filter">
+                <select id="delegation-sprint-select" onchange="filterDelegationRuns(this.value)"></select>
             </div>
 
             <div class="table-wrap">
