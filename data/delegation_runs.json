@@ -1,18 +1,98 @@
 {
   "summary": {
-    "total_runs": 218,
-    "successful_runs": 124,
-    "total_tokens_blended": 8074334,
-    "total_conductor_tokens": 7989600,
-    "total_l3_tokens": 84734,
+    "total_runs": 222,
+    "successful_runs": 126,
+    "total_tokens_blended": 8287630,
+    "total_conductor_tokens": 8197022,
+    "total_l3_tokens": 90608,
     "total_cached_tokens": 5555422,
-    "total_wall_time_minutes": 2128.12,
-    "estimated_cloud_cost_usd": 10.602084,
-    "estimated_local_power_cost_usd": 1.06406,
-    "net_savings_usd": 9.538024,
-    "local_offload_ratio_pct": 9.12
+    "total_wall_time_minutes": 2147.95,
+    "estimated_cloud_cost_usd": 11.242194,
+    "estimated_local_power_cost_usd": 1.073975,
+    "net_savings_usd": 10.168219,
+    "local_offload_ratio_pct": 8.72
   },
   "runs": [
+    {
+      "sprint": "101",
+      "story": "101.19",
+      "title": "Dynamic Seat Card Synchronization & Header Fluff Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 60.95,
+      "duration_m": 1.02,
+      "tokens": {
+        "conductor": 76232,
+        "l3": 0,
+        "total": 76232,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T20:04:15"
+    },
+    {
+      "sprint": "101",
+      "story": "101.19",
+      "title": "Dynamic Seat Card Synchronization & Header Fluff Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 812.39,
+      "duration_m": 13.54,
+      "tokens": {
+        "conductor": 70364,
+        "l3": 5874,
+        "total": 76238,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T20:02:08"
+    },
+    {
+      "sprint": "101",
+      "story": "101.19",
+      "title": "Dynamic Seat Card Synchronization & Header Fluff Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 316.17,
+      "duration_m": 5.27,
+      "tokens": {
+        "conductor": 60826,
+        "l3": 0,
+        "total": 60826,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T19:48:09"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "www_deploy/benchmarks.js renderSeatCards synced with field_notes null-guards; '32k' synthetic fallback removed (D1-D5 applied, node --check clean, no raw toFixed without guards in renderSeatCards)",
+      "timestamp": "2026-10-08T19:47:16"
+    },
     {
       "sprint": "101",
       "story": "101.ORACLE",
