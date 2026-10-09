@@ -1,18 +1,98 @@
 {
   "summary": {
-    "total_runs": 214,
-    "successful_runs": 123,
-    "total_tokens_blended": 7926218,
-    "total_conductor_tokens": 7845303,
-    "total_l3_tokens": 80915,
+    "total_runs": 218,
+    "successful_runs": 124,
+    "total_tokens_blended": 8074334,
+    "total_conductor_tokens": 7989600,
+    "total_l3_tokens": 84734,
     "total_cached_tokens": 5555422,
-    "total_wall_time_minutes": 2093.61,
-    "estimated_cloud_cost_usd": 10.164105,
-    "estimated_local_power_cost_usd": 1.046805,
-    "net_savings_usd": 9.1173,
-    "local_offload_ratio_pct": 9.34
+    "total_wall_time_minutes": 2128.12,
+    "estimated_cloud_cost_usd": 10.602084,
+    "estimated_local_power_cost_usd": 1.06406,
+    "net_savings_usd": 9.538024,
+    "local_offload_ratio_pct": 9.12
   },
   "runs": [
+    {
+      "sprint": "101",
+      "story": "101.ORACLE",
+      "title": "Phase 5 Completion Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "SUCCESS",
+      "duration_s": 36.5,
+      "duration_m": 0.61,
+      "tokens": {
+        "conductor": 32498,
+        "l3": 0,
+        "total": 32498,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-08T17:55:29"
+    },
+    {
+      "sprint": "101",
+      "story": "101.19",
+      "title": "Dynamic Seat Card Synchronization & Header Fluff Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 682.34,
+      "duration_m": 11.37,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T17:50:00"
+    },
+    {
+      "sprint": "101",
+      "story": "101.18",
+      "title": "Swarm Token Multi-Series Canvas Line Graph",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 950.18,
+      "duration_m": 15.84,
+      "tokens": {
+        "conductor": 62997,
+        "l3": 3819,
+        "total": 66816,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T17:37:55"
+    },
+    {
+      "sprint": "101",
+      "story": "101.17",
+      "title": "Dashboard Polish - Layout, Dropdown & Semantic Badges",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 401.26,
+      "duration_m": 6.69,
+      "tokens": {
+        "conductor": 48802,
+        "l3": 0,
+        "total": 48802,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T17:21:40"
+    },
     {
       "sprint": "101",
       "story": "101.16",
