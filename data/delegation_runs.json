@@ -1,18 +1,38 @@
 {
   "summary": {
-    "total_runs": 291,
-    "successful_runs": 194,
-    "total_tokens_blended": 7858092,
-    "total_conductor_tokens": 7784705,
-    "total_l3_tokens": 73387,
+    "total_runs": 214,
+    "successful_runs": 123,
+    "total_tokens_blended": 7926218,
+    "total_conductor_tokens": 7845303,
+    "total_l3_tokens": 80915,
     "total_cached_tokens": 5555422,
-    "total_wall_time_minutes": 2084.54,
-    "estimated_cloud_cost_usd": 9.976983,
-    "estimated_local_power_cost_usd": 1.04227,
-    "net_savings_usd": 8.934713,
-    "local_offload_ratio_pct": 9.46
+    "total_wall_time_minutes": 2093.61,
+    "estimated_cloud_cost_usd": 10.164105,
+    "estimated_local_power_cost_usd": 1.046805,
+    "net_savings_usd": 9.1173,
+    "local_offload_ratio_pct": 9.34
   },
   "runs": [
+    {
+      "sprint": "101",
+      "story": "101.16",
+      "title": "Ledger Ingestion Hygiene, Deduplication & Historical Backfill",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 544.06,
+      "duration_m": 9.07,
+      "tokens": {
+        "conductor": 60598,
+        "l3": 7528,
+        "total": 68126,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-08T17:14:24"
+    },
     {
       "sprint": "101",
       "story": "101.15",
@@ -34,46 +54,6 @@
       "timestamp": "2026-10-08T13:58:55"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.15 Tab 4 SWARM DELEGATION UI: staged+applied to benchmarks.html (4th tab-btn + #tab-delegation pane: 4 summary cards, sprint filter row, 8-col accordion runs table) and benchmarks.js (loadDelegationRuns hooked into loadBenchmarks + 7 render/filter/accordion functions). node --check OK; DOM IDs cross-checked; data contract matches delegation_runs.json schema.",
-      "timestamp": "2026-10-08T13:58:44"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.15 Tab 4 UI staged+applied",
-      "timestamp": "2026-10-08T13:56:56"
-    },
-    {
       "sprint": "101",
       "story": "101.14",
       "title": "Swarm Delegation Web Feed Export Engine",
@@ -92,26 +72,6 @@
       "verification_passed": true,
       "reflection": "",
       "timestamp": "2026-10-08T13:50:46"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.14 export_web_telemetry + --export-web CLI deployed and verified",
-      "timestamp": "2026-10-08T13:49:22"
     },
     {
       "sprint": "101",
@@ -214,66 +174,6 @@
       "timestamp": "2026-10-08T12:19:34"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Verified Story 101.11: HomeLabAI/src/infra/nightly_forge.py run_round_table_probe timeout updated 60 -> 120. Scope verified as single line diff; py_compile exit 0; LSP error diagnostics clean.",
-      "timestamp": "2026-10-08T12:19:27"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.11: run_round_table_probe timeout 60 -> 120",
-      "timestamp": "2026-10-08T12:18:32"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "STAGED",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "Staged Story 101.11 blueprint for HomeLabAI/src/infra/nightly_forge.py: update run_round_table_probe subprocess timeout from 60 to 120.",
-      "timestamp": "2026-10-08T12:18:01"
-    },
-    {
       "sprint": "101",
       "story": "101.10",
       "title": "Canonical Wisdom DNA Path Resolution in Refiner",
@@ -294,66 +194,6 @@
       "timestamp": "2026-10-08T12:16:32"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "[STORY 101.10] Canonical Wisdom DNA Path Resolution: patch applied (L19 WISDOM_DATA_PATH now resolves canonical dna/wisdom_data.json first with field_notes/data/ fallback), verified via --dry-run exit 0 with 93 ChromaDB embeddings loaded from live daemon (port 8001), no duplicate copies in data/, LSP clean (pre-existing chromadb import unresolvable in local pyright only, runtime OK).",
-      "timestamp": "2026-10-08T12:16:14"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "[STORY 101.10] Canonical path patch applied and verified: WISDOM_DATA_PATH now resolves to dna/wisdom_data.json (canonical-first) with DATA_DIR fallback; --dry-run exits 0, loads 93 cards from ChromaDB, records dedup candidates, dry-run writes no data. Pre-existing non-fatal: M5 Air refinement endpoint returns HTTP 404 for WIS-001 (out of scope, unrelated to path patch).",
-      "timestamp": "2026-10-08T12:15:08"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "STAGED",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "[STORY 101.10] Staged canonical wisdom path blueprint: single module-level assignment swap at L19 (WISDOM_DATA_PATH -> canonical-first dna/wisdom_data.json with field_notes/data/ fallback). No writes to data/ dir in any code path, so requirement 2 is structurally satisfied.",
-      "timestamp": "2026-10-08T12:14:04"
-    },
-    {
       "sprint": "101",
       "story": "101.9",
       "title": "Dedicated Sprint DNA Curator Engine Reconnection",
@@ -372,26 +212,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-08T12:11:52"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.9: Sprint DNA Sync target rebound and args stripped",
-      "timestamp": "2026-10-08T12:10:54"
     },
     {
       "sprint": "101",
@@ -454,86 +274,6 @@
       "timestamp": "2026-10-08T11:53:44"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "STORY 101.7 / FEAT-416 verified: (1) utils.py can_burn quiet-hours gate correct, (2) nibble.py can_burn quiet-hours gate correct, (3) mass_scan.py distill_journal_ledger 5-22 yield correct, (4) test file has 3 tests. 11/11 pytest pass. Zero new LSP errors (2 pre-existing dict-append/sort in nibble.py L279/L301).",
-      "timestamp": "2026-10-08T11:53:38"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "STORY 101.7: FEAT-416 quiet-hours gates applied to can_burn and distill_journal_ledger; test_0500_cutoff suite green. utils.py uses `from datetime import datetime` (compatible with blueprint's FakeDateTime class monkeypatch); nibble.py uses module-level `import datetime`; mass_scan.py pre-existing import reused. All 11 tests pass, py_compile clean on all 4 files.",
-      "timestamp": "2026-10-08T11:49:22"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "FAILURE",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "STORY 101.7: FEAT-416 quiet-hours gates applied to can_burn and distill_journal_ledger. 10/11 tests pass; test_0500_cutoff_utils_can_burn fails: blueprint's FakeDateTime monkeypatch of utils.datetime is incompatible with utils.py's module-level `datetime.datetime.now()` call (AttributeError: type object 'FakeDateTime' has no attribute 'datetime'). Patched utils.py to use `from datetime import datetime` / `now = datetime.now()` per diagnosis. Re-running verification.",
-      "timestamp": "2026-10-08T11:48:52"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "STAGED",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "STORY 101.7: All 4 file blueprints staged. utils.py: quiet-hours gate in can_burn. nibble.py: quiet-hours gate in can_burn. mass_scan.py: quiet-hours yield in distill_journal_ledger. test file: 3 new test_0500_cutoff tests.",
-      "timestamp": "2026-10-08T11:46:21"
-    },
-    {
       "sprint": "101",
       "story": "101.7",
       "title": "Tail Mass Scan 05:00 AM Hard Cutoff Gate",
@@ -594,46 +334,6 @@
       "timestamp": "2026-10-08T10:16:22"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.5 Step Calibration: forge.default_steps 450 -> 350 verified (git diff 1 line, pacing 5.0/1/4 preserved, JSON valid). Note: safe_patch reported false 'Pattern not found' 5x; worker fell back to one-shot python replace.",
-      "timestamp": "2026-10-08T10:16:15"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 101.5: forge.default_steps 450 -> 350, JSON valid",
-      "timestamp": "2026-10-08T10:15:20"
-    },
-    {
       "sprint": "101",
       "story": "101.0",
       "title": "Pre-Flight Plan Audit",
@@ -674,46 +374,6 @@
       "timestamp": "2026-10-08T01:35:55"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.12 complete: build_critic_prompt output_schema harmonized to four-key scorecard {score, reasoning, slop_found, retort} matching cognitive_hub eval_schema; cognitive_hub.py verified unchanged (already compliant); 3 companion tests added; 53/53 pytest pass; LSP clean. Note: local HEAD (01adc0c) != daemon served (d8badab) - soft-reload pending per BKM-024.",
-      "timestamp": "2026-10-08T01:35:31"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.12 pinky critic schema harmonized",
-      "timestamp": "2026-10-08T01:33:42"
-    },
-    {
       "sprint": "100",
       "story": "100.11",
       "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
@@ -732,46 +392,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-08T01:27:43"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.11 verified: (1) lead_node=='brain' branch now mandates _run_two_mice_handover Stage 1 gatekeeper with no interest/CASUAL funnel gate; (2) _distill_strategic_brief fully deleted, 0 references in .py codebase, 0 PECI/MSR text in cognitive_hub.py; (3) _run_brain_leg retired to minimal decoupled stub preserving call signature. 21/21 tests pass (test_brain_gatekeeper, test_two_mice_handover, test_two_mice_single_execution, test_interest_speculative_prefetch). py_compile clean. Daemon live gate pending (stale bytecode a6567a8 vs fc867e7).",
-      "timestamp": "2026-10-08T01:27:17"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.11: Stage 1 mandatory gatekeeper + _distill_strategic_brief deleted + _run_brain_leg stubbed",
-      "timestamp": "2026-10-08T01:25:12"
     },
     {
       "sprint": "100",
@@ -794,26 +414,6 @@
       "timestamp": "2026-10-08T01:16:29"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "ESCALATED",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "Story 100.11: Ingested spec (SPR_100_0 L386-421), inspected cognitive_hub.py (3301 lines) - located _distill_strategic_brief L2299-L2339 (PECI/MSR prompt), _run_brain_leg L2631-L2825, and 4 call sites in process_query (L1859, L1879, L1917, L1979). Found 2 sibling test files (test_two_mice_single_execution.py, test_interest_speculative_prefetch.py) that directly exercise _run_brain_leg and will break on deletion. Escalated to AGY: (a) routing replacement for non-brain branches (both/pinky-lead), (b) authority to update stale sibling tests. Awaiting oracle directive.",
-      "timestamp": "2026-10-08T01:16:09"
-    },
-    {
       "sprint": "100",
       "story": "100.10",
       "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
@@ -832,46 +432,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-08T01:05:37"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.10 complete: CASUAL vibe defeatured from triage_mode_context prompt (cognitive_hub.py L1487 commented with [DEFEATURED] marker), test fallback assertions updated CASUAL\u2192SOCRATIC (L578, L632), mock parse-through assertion corrected (L510 CASUAL\u2192SOCRATIC), triage_policy.json CASUAL enabled\u2192false. Full test battery: 126 passed, 10 skipped, 0 failed.",
-      "timestamp": "2026-10-08T01:05:22"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.10: CASUAL defeatured from triage prompt (cognitive_hub.py L1487), test assertions L578+L632 updated to SOCRATIC, policy CASUAL enabled=false. 125/128 tests pass. 1 pre-existing failure: test_evaluate_triage_native_think (L510) \u2014 mock resident returns vibe=CASUAL in its JSON fixture, test asserts SOCRATIC. This test's mock data was not in the contract scope; requires either updating the mock fixture or re-scoping the test.",
-      "timestamp": "2026-10-08T01:01:21"
     },
     {
       "sprint": "100",
@@ -930,26 +490,6 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T23:31:42"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T23:31:42"
     },
@@ -990,68 +530,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Story 100.10 (ANCHOR-14 / FEAT-640) verification-only gate: Target A confirmed \u2014 cognitive_hub.py CASUAL archetype bullet L1486 commented out, 5 active bullets + 6-CORE-ARCHETYPES header + Python plumbing (casual schema field L1442, validate_triage_payload, classify_vibe_and_domain, fallback vibe=CASUAL L1518) intact. Target B confirmed \u2014 triage_policy.json exactly 9 vibes, CASUAL enabled=false rag=null, rag only on WYWO+HISTORICAL. pytest: 136 passed (test_triage_engine.py + test_triage_policy_loader.py), 0 failed. BKM-024 live-daemon sync notice present but not a test failure. No patches applied; working tree left clean.",
-      "timestamp": "2026-10-07T23:02:21"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T22:44:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T22:44:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T22:42:29"
     },
     {
       "sprint": "",
@@ -1154,26 +634,6 @@
       "timestamp": "2026-10-07T19:29:01"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "STORY 100.12 Pinky Critic Scorecard completed in Direct Implementation Mode. (1) build_critic_prompt output_schema now advertises score/reasoning/slop_found/retort single-pass scorecard; (2) format_chat_delivery gained reasoning kwarg with parenthetical blend into retort (empty/whitespace reasons safely no-op); (3) cognitive_hub eval_schema properties now carry WHY-reasoning + Brain-addressed retort descriptions; (4) test file +66 lines: TestCriticScorecard class with test_critic_generates_grounded_reasoning_and_retort + test_format_chat_delivery_blends_retort_and_reasoning (+3 blend edge tests). Verification: pytest 56/56 passed. pre-existing pyright noise in cognitive_hub.py (18 errors L600-3022, untouched async patterns) confirmed pre-existing, not introduced.",
-      "timestamp": "2026-10-07T19:28:31"
-    },
-    {
       "sprint": "100",
       "story": "100.11",
       "title": "Mandatory Stage 1 Brain Information Gatekeeper & Complete Deletion of Sprint 32 Brief",
@@ -1192,26 +652,6 @@
       "verification_passed": true,
       "reflection": "",
       "timestamp": "2026-10-07T19:10:48"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.11 complete: (1) lead_node=='brain' gate now mandatory residents check (brain+pinky, non-CASUAL), TWO_MICE_FUNNEL_INTEREST removed from gate; (2) handover-failure fallback + Brain-leads-Turn1 branch stream Brain directly via _process_node_stream; (3) _distill_strategic_brief deleted (0 occurrences repo-wide in src/); (4) _run_brain_leg retired to compat stub streaming Brain with rag_context. Verification: mandatory pytest test_brain_gatekeeper + test_two_mice_handover 18/18 PASS; regression siblings test_two_mice_single_execution + test_interest_speculative_prefetch 3/3 PASS; ast.parse clean; module import clean.",
-      "timestamp": "2026-10-07T19:09:53"
     },
     {
       "sprint": "100",
@@ -1274,26 +714,6 @@
       "timestamp": "2026-10-07T17:17:30"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.9 AFFIRMED (verification-only, zero edits). resolve_hyde_vector (cognitive_hub.py L2479-2480) dispatches _process_node_stream with scope=ContextScope.TURN and request_id=request_id; ContextScope imported at L33. Implementation was already committed in bc38f7b (ahead of HEAD aed870b). Verification: /home/jallred/Dev_Lab/HomeLabAI/.venv/bin/pytest HomeLabAI/src/tests/test_feat437_resolve_hyde_vector.py HomeLabAI/src/tests/test_triage_context_squeeze.py -v \u2192 13/13 passed in 0.46s, including test_resolve_hyde_vector_turn_scope_isolation (scope==ContextScope.TURN, request_id=='req-42' captured) and test_hyde_synthesis_does_not_ingest_previous_debate (prior round_table_memory not in synthesis prompt). STALE BYTECODE notice (local aed870b vs served 3524be9) \u2014 daemon process bounce pending per BKM-024, does not block unit-test gate.",
-      "timestamp": "2026-10-07T17:16:57"
-    },
-    {
       "sprint": "100",
       "story": "100.10",
       "title": "Defeature CASUAL Vibe via Prompt Comment & Align 9-Vibe Taxonomy",
@@ -1312,26 +732,6 @@
       "verification_passed": true,
       "reflection": "",
       "timestamp": "2026-10-07T17:11:49"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.10 / FEAT-534: Aligned TestProductionConfig to CASUAL defeature. Hunk A (test_production_has_all_nine_vibes): assert 9 vibes defined via self._prod_loader._policy.get(\"vibes\", {}).keys() == expected + assert \"CASUAL\" not in get_active_vibes(). Hunk B (test_production_retrieval_vibes_have_rag): narrowed RAG loop to (\"WYWO\", \"HISTORICAL\"). Verification: .venv/bin/pytest src/tests/test_triage_engine.py src/tests/test_triage_policy_loader.py -v from HomeLabAI/ \u2192 136 passed, 0 failed. Config grounded: CASUAL enabled=false, rag=null; WYWO/HISTORICAL rag non-null. Live sync: Boot 3524be9 == Local HEAD.",
-      "timestamp": "2026-10-07T17:11:36"
     },
     {
       "sprint": "100",
@@ -1394,46 +794,6 @@
       "timestamp": "2026-10-07T16:00:56"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.9 VERIFIED GREEN. L3 commit bc38f7b (7 hunks: request_id threaded _fetch_rag_context->resolve_hyde_vector at 3 process_query sites; scope=ContextScope.TURN + request_id on HyDE _process_node_stream). 15/15 pytest passed incl. both new FEAT-640 assertions; Live Lab synced to HEAD. 12 LSP errors = pre-existing file-wide Pyright async-generator false positive (py_compile clean). LIVE_GATE: PASSED.",
-      "timestamp": "2026-10-07T15:46:10"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.9 HyDE turn-isolation: ContextScope.TURN + request_id enforced on HyDE _process_node_stream dispatch (resolve_hyde_vector Tier 1); request_id threaded from _fetch_rag_context and all 3 process_query call sites (L1792/L1840/L1937); _run_brain_leg leg intentionally untouched. 2 TDD tests appended (turn-scope isolation + no prior-debate leak). pytest 15/15 passed exit 0; py_compile clean; test file LSP clean (4 type:ignore on mock-injection lines per repo convention). Daemon auto-synced to Local HEAD bc38f7b (LIVE LAB SYNCHRONIZED).",
-      "timestamp": "2026-10-07T15:34:01"
-    },
-    {
       "sprint": "100",
       "story": "100.9",
       "title": "Multi-Turn Turn Isolation & HyDE Context Poisoning Remediation",
@@ -1472,26 +832,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-07T14:32:30"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "STAGED",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "Story 100.9 blueprint staged for HomeLabAI/src/logic/cognitive_hub.py: request_id threading + ContextScope.TURN enforcement on HyDE synthesis. Dispatching L3 quick worker.",
-      "timestamp": "2026-10-07T14:30:37"
     },
     {
       "sprint": "100",
@@ -1550,68 +890,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Story 100.13 Cloud Delegation Baseline & Model Invocation Smoke Test - verified cloud tier connectivity. OpenRouter free tier confirmed reachable at https://openrouter.ai/api/v1/models; Cohere API key present in environment; delegate.py telemetry (_log_delegation_ledger) logs cloud model ID ('openrouter/openrouter/free') with 0 local VRAM thrashing on M5 Air. Updated SPRINT_PLAN_SPR_100_0.md ANCHOR-17 & Story 100.13 section status STAGED->DONE. Note: full in-process delegation run timed out after 60s due to port 4097 occupancy; connectivity assertions validated via direct probes. [LIVE_GATE_PENDING: daemon=4097 endpoint=/session/status probe=python3 delegate.py --sprint 100 --story 100.13 --mode cloud]",
-      "timestamp": "2026-10-07T13:35:19"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T02:11:06"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T02:11:06"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:55:36"
     },
     {
       "sprint": "",
@@ -1650,48 +930,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:55:09"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T01:55:09"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:47:37"
     },
     {
       "sprint": "",
@@ -1730,48 +970,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:40:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T01:40:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:39:28"
     },
     {
       "sprint": "",
@@ -1810,48 +1010,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:35:57"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T01:35:57"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:21:34"
     },
     {
       "sprint": "",
@@ -1890,48 +1050,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-07T01:13:08"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-07T01:13:08"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:37:31"
     },
     {
       "sprint": "",
@@ -1970,48 +1090,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:35:45"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-06T23:35:45"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:25:18"
     },
     {
       "sprint": "",
@@ -2050,48 +1130,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:23:33"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-06T23:23:33"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:20:55"
     },
     {
       "sprint": "",
@@ -2150,66 +1190,6 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Story 100.6 Sovereign JIT Shakedown CERTIFIED. Pipeline: jit_read (outline, 2 turns) -> jit_stage (blueprint x2; greenfield staging superseded by mutation-only after disk probe revealed pre-warmed INIT_STATE file) -> task(category=quick) L3 dispatch -> L3: jit_research + 2x safe_patch (flip INIT_STATE->CERTIFIED_JIT_V1, gate tightened to strict equality) + pytest 1 passed + L3 jit_checkpoint. Conductor personally re-verified: file content exact, pytest '1 passed in 0.08s', zero scope creep (file unchanged outside 2 lines). LIVE_GATE: PASSED (hermetic, no daemon dependency).",
-      "timestamp": "2026-10-06T23:18:29"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 100.6 shakedown: shakedown_target_fn flipped INIT_STATE->CERTIFIED_JIT_V1, gate tightened to strict equality, pytest 1 passed",
-      "timestamp": "2026-10-06T23:17:06"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:01:59"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-06T23:01:59"
     },
@@ -2230,128 +1210,8 @@
         "cache_read": 0
       },
       "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:01:32"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
       "reflection": "Canonical JIT shakedown checkpoint",
       "timestamp": "2026-10-06T23:01:32"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:01:08"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-06T23:00:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T02:39:30"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T02:36:42"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T02:35:30"
     },
     {
       "sprint": "99",
@@ -2374,26 +1234,6 @@
       "timestamp": "2026-10-05T02:30:07"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "completed",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "[STORY 99.5] test_integration_kender.py: replaced hardcoded 404 model tag with _discover_model() (GET /api/tags, prefers resident Qwen, else first model; graceful skip on no-models/timeout). 4/4 blueprint patches applied via safe_patch in order, AST parse clean. Verification (live, KENDER reachable from this host): '3 passed, 1 warning in 104.83s' \u2014 full live chat path exercised end-to-end, not the offline-skip path. No contract modifications (probe/pytestmark/constants/__main__ untouched). Pre-existing lint PLW0602 (read-only global in test_kender_response_not_stub) is in untouchable code, not introduced by this change.",
-      "timestamp": "2026-10-05T02:19:12"
-    },
-    {
       "sprint": "99",
       "story": "99.3",
       "title": "Silicon Reconciliation on /reload_residents",
@@ -2412,46 +1252,6 @@
       "verification_passed": true,
       "reflection": "",
       "timestamp": "2026-10-05T01:58:23"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "STORY 99.3 complete. Hermetic gate: 4/4 tests pass in HomeLabAI/src/tests/test_silicon_reconciliation.py (re-verified by conductor after subagent dispatch). Delta this dispatch: speculative_triage.py lines 26-28 globals().pop('_SILICON_RECONCILE_SENTINEL', None) purges runtime sentinel on every (re)execution so importlib.reload resets module-level state. Router.py reconciliation (triage-before-cognitive_hub reload order, reconciled_silicon:True payload, recon log) and delegate.py live-gate fields were pre-existing uncommitted deltas already satisfying tests 1-3. Daemon probe during suite run: boot 1553bb6 matches HEAD.",
-      "timestamp": "2026-10-05T01:56:41"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T01:37:05"
     },
     {
       "sprint": "99",
@@ -2514,46 +1314,6 @@
       "timestamp": "2026-10-05T00:29:50"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T00:26:54"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-05T00:26:41"
-    },
-    {
       "sprint": "99",
       "story": "99.1",
       "title": "Sovereign Decoupling and Remote Network Purge",
@@ -2594,66 +1354,6 @@
       "timestamp": "2026-10-04T23:53:21"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 99.4 conductor checkpoint: staged blueprint via stage_research (zero-patch shakedown), dispatched bounded L3 contract (category=deep-low, ses_ef52c0446ffe29Z7NLGMSkkM6a), worker certified 11/11 in 3 turns. Conductor re-verified: git diff clean (no code edits), independent battery re-run 11/11 passed in 0.41s, ledger entries schema-compliant. Zero-wandering + ambient telemetry certified.",
-      "timestamp": "2026-10-04T23:53:06"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Story 99.4 live shakedown: 11/11 e2e+canary tests passed, zero-wandering certified (turn_count<=3, no grep, <60s)",
-      "timestamp": "2026-10-04T23:51:51"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "shakedown_started",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": false,
-      "reflection": "STORY 100.1 Tripartite Tool Law Calibration Shakedown (Mode: LOCAL). Edit target HomeLabAI/src/v5/common/types.py resolved (145 lines; SensoryMode L8, IntentEvent L21, NodeStatus L39, LabStatus L48-145, LAB_VERSION L17). Law 1 PASS \u2014 all five tool manifest categories present/functional (clara-dna_read, stage_research, failure_whisperer, handoff_checkpoint, bash, task). Story 100.1 absent from FeatureTracker.md semantic index -> executed as meta shakedown of AGENTS_L2 Tripartite Tool Execution Law with types.py as calibration substrate. Blueprint staged via stage_research: canonical TRIAD_TOOL_LAW tuple + ToolLawCalibration(bkm_id='BKM-049') anchor after LAB_VERSION.",
-      "timestamp": "2026-10-04T22:53:54"
-    },
-    {
       "sprint": "100",
       "story": "100.1",
       "title": "Tripartite Tool Law Calibration Shakedown",
@@ -2672,66 +1372,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-04T22:39:35"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T22:33:18"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T22:21:51"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T22:10:54"
     },
     {
       "sprint": "100",
@@ -2754,86 +1394,6 @@
       "timestamp": "2026-10-04T22:00:59"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T21:44:33"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T21:26:43"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T21:26:09"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T21:24:14"
-    },
-    {
       "sprint": "99",
       "story": "99.5",
       "title": "Dynamic Model Discovery & Graceful Timeout Skips",
@@ -2854,26 +1414,6 @@
       "timestamp": "2026-10-04T21:22:26"
     },
     {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T20:52:10"
-    },
-    {
       "sprint": "99",
       "story": "99.4",
       "title": "Eliminate Magic Sleeps & Untracked Background Tasks",
@@ -2892,26 +1432,6 @@
       "verification_passed": true,
       "reflection": "",
       "timestamp": "2026-10-04T20:51:45"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T20:48:34"
     },
     {
       "sprint": "99",
@@ -2992,66 +1512,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-04T18:37:03"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T17:32:07"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T17:31:21"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Live stdio checkpoint test",
-      "timestamp": "2026-10-04T17:29:56"
     },
     {
       "sprint": "99",

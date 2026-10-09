@@ -1,12 +1,14 @@
 {
   "pending_action": "DEEP_RESET",
   "action_level": 2,
-  "timer_expiry_ts": 1791495012,
-  "triggered_at_ts": 1791493212,
-  "last_commit": "cd805cd",
+  "timer_expiry_ts": 1791508972,
+  "triggered_at_ts": 1791507172,
+  "last_commit": "92331e9",
   "repo": "Portfolio_Dev",
   "reasons": [
+    "field_notes/benchmarks.js (Portfolio Active Code)",
+    "src/mcp/clara_dna_mcp_server.py (Active Module)",
     "src/infra/sprint_telemetry.py (Deep Core/Infra Architecture)",
-    "field_notes/benchmarks.js (Portfolio Active Code)"
+    "field_notes/bench_models.py (Portfolio Active Code)"
   ]
 }
