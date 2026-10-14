@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-13T16:55:51.859626",
+  "timestamp": "2026-10-13T21:01:49.573300",
   "date": "2026-10-13",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
-  "overall_status": "PASS",
+  "overall_status": "FAIL",
   "total_checks": 8,
-  "passed_checks": 8,
-  "failed_checks": 0,
+  "passed_checks": 6,
+  "failed_checks": 2,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
@@ -15,8 +15,8 @@
     },
     {
       "name": "Foyer Re-Ignition & Hot-Reload",
-      "passed": true,
-      "detail": "Foyer state: OPERATIONAL, status: ONLINE, engine: UP"
+      "passed": false,
+      "detail": "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN"
     },
     {
       "name": "Lockfile Cleanliness & Quiescence",
@@ -27,9 +27,9 @@
     {
       "name": "Nightly Forge Orchestration",
       "passed": true,
-      "detail": "Status: COMPLETED (Age: 12.1h)",
+      "detail": "Status: COMPLETED (Age: 16.3h)",
       "status": "COMPLETED",
-      "age_hours": 12.1
+      "age_hours": 16.3
     },
     {
       "name": "LoRA Fine-Tuning Multi-Adapter Pass",
@@ -45,18 +45,21 @@
     },
     {
       "name": "Synthetic Morning Round Table Probe",
-      "passed": true,
-      "detail": "Status: PASS, Critic Score: 0.95, Latency: 1.13ms",
-      "critic_score": 0.95
+      "passed": false,
+      "detail": "Round Table Probe failed or timed out",
+      "critic_score": 0.0
     },
     {
       "name": "Cgroup Swap Pressure Monitor",
       "passed": true,
-      "detail": "Swap: 5490MB/5490MB peak (34.9%)",
-      "swap_peak_mb": 5489.53,
-      "swap_current_mb": 5489.53,
-      "swap_utilization_pct": 34.87
+      "detail": "Swap: 2605MB/2605MB peak (16.5%)",
+      "swap_peak_mb": 2604.97,
+      "swap_current_mb": 2604.97,
+      "swap_utilization_pct": 16.55
     }
   ],
-  "discrepancies": []
+  "discrepancies": [
+    "Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN",
+    "Round Table Probe failed or timed out"
+  ]
 }

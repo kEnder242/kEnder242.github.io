@@ -1,18 +1,38 @@
 {
   "summary": {
-    "total_runs": 231,
-    "successful_runs": 134,
-    "total_tokens_blended": 8683445,
-    "total_conductor_tokens": 8565218,
-    "total_l3_tokens": 118227,
+    "total_runs": 232,
+    "successful_runs": 135,
+    "total_tokens_blended": 8757108,
+    "total_conductor_tokens": 8631237,
+    "total_l3_tokens": 125871,
     "total_cached_tokens": 5555422,
-    "total_wall_time_minutes": 2190.91,
-    "estimated_cloud_cost_usd": 12.386496,
-    "estimated_local_power_cost_usd": 1.095455,
-    "net_savings_usd": 11.291041,
-    "local_offload_ratio_pct": 8.13
+    "total_wall_time_minutes": 2201.11,
+    "estimated_cloud_cost_usd": 12.592629,
+    "estimated_local_power_cost_usd": 1.100555,
+    "net_savings_usd": 11.492074,
+    "local_offload_ratio_pct": 8.04
   },
   "runs": [
+    {
+      "sprint": "102",
+      "story": "102.18",
+      "title": "Model Throughput Live Telemetry Canvas Component",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 611.75,
+      "duration_m": 10.2,
+      "tokens": {
+        "conductor": 66019,
+        "l3": 7644,
+        "total": 73663,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T21:38:22"
+    },
     {
       "sprint": "102",
       "story": "102.10",

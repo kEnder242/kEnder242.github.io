@@ -1,14 +1,11 @@
 {
-  "pending_action": "DEEP_RESET",
-  "action_level": 2,
-  "timer_expiry_ts": 1791952235,
-  "triggered_at_ts": 1791950435,
-  "last_commit": "80781ea",
+  "pending_action": "SOFT_RELOAD",
+  "action_level": 1,
+  "timer_expiry_ts": 1791955105,
+  "triggered_at_ts": 1791953305,
+  "last_commit": "8d7bb39",
   "repo": "Portfolio_Dev",
   "reasons": [
-    "src/tests/delegate.py (Active Module)",
-    "src/infra/sprint_telemetry.py (Deep Core/Infra Architecture)",
-    "field_notes/benchmarks.js (Portfolio Active Code)",
-    "field_notes/build_site.py (Portfolio Active Code)"
+    "field_notes/benchmarks.js (Portfolio Active Code)"
   ]
 }
