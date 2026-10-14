@@ -1,11 +1,16 @@
 {
-  "pending_action": "SOFT_RELOAD",
-  "action_level": 1,
-  "timer_expiry_ts": 1791955105,
-  "triggered_at_ts": 1791953305,
-  "last_commit": "8d7bb39",
+  "pending_action": "DEEP_RESET",
+  "action_level": 2,
+  "timer_expiry_ts": 1791964401,
+  "triggered_at_ts": 1791962601,
+  "last_commit": "b23285d",
   "repo": "Portfolio_Dev",
   "reasons": [
-    "field_notes/benchmarks.js (Portfolio Active Code)"
+    "src/memory/blackboard_ledger.py (Active Module)",
+    "src/infra/backfill_agy_telemetry.py (Deep Core/Infra Architecture)",
+    "field_notes/benchmarks.js (Portfolio Active Code)",
+    "src/tests/delegate.py (Active Module)",
+    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)",
+    "src/logic/cognitive_hub.py (Active Module)"
   ]
 }
