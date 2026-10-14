@@ -1170,12 +1170,18 @@
 <strong>Status:</strong> ACTIVE / MANDATORY  </p>
 <h4>1. The Tri-Loop Law</h4>
 <ol>
-<li><strong>Execution Tiers &amp; Retry Boundaries:</strong></li>
-<li><strong><code>[SWARM:LOCAL]</code> (The 3-Loop Diagnostic Mandate):</strong> When targeting sovereign local silicon (Windows RTX 4090 Kender + macOS M5 Air Brain), the orchestrator MUST execute up to <strong>3 full diagnostic remediation rounds on local silicon</strong> (Attempt 1a → diagnose &amp; fix harness/prompt/knobs via [BKM-071] → Attempt 1b → Attempt 1c). Any failure on Attempt 1 requires the orchestrator to diagnose the failure, adjust the harness/config/prompt, and retry on local. Local silicon is NEVER abandoned after a single failure. Only after all 3 diagnosed local attempts are exhausted does the story escalate to Cloud Swarm (<code>[SWARM:CLOUD]</code>), followed by Primary Takeover (<code>[AGY:TAKEOVER]</code>).</li>
-<li><strong><code>[SWARM:CLOUD]</code> (Direct Cloud Route):</strong> When a story is tagged <code>[SWARM:CLOUD]</code>, local attempts are skipped entirely. The dispatch routes directly to Cloud Swarm (Groq / OpenCode Cloud / Big-Pickle / Cohere). If Cloud Swarm fails, it skips local retries and routes straight to Primary Takeover (<code>[AGY:TAKEOVER]</code>).</li>
+<li><strong>Execution Tiers &amp; Feedback Remediation Boundaries:</strong></li>
+<li><strong><code>[SWARM:LOCAL]</code> (The 3-Loop Diagnostic Mandate):</strong> When targeting sovereign local silicon (Windows RTX 4090 Kender + macOS M5 Air Brain), the orchestrator MUST execute up to <strong>3 full diagnostic remediation rounds on local silicon</strong> before considering tier escalation:<ul>
+<li><strong>Attempt 1a (Initial Specification Dispatch):</strong> Dispatches the baseline 4-anchor story contract.</li>
+<li><strong>Attempt 1b (Diagnostic Remediation Round 1):</strong> Mandatory ingestion of the subagent's <code>[HANDOVER REFLECTION]</code> ([INS-009]) and test failure trace; dispatches targeted corrective feedback.</li>
+<li><strong>Attempt 1c (Diagnostic Remediation Round 2):</strong> In-depth adjustment of harness, anchors, or model knobs per <strong>[BKM-071]</strong>.</li>
+<li>Local silicon is NEVER abandoned after a single failure. Only after all 3 diagnosed feedback rounds on local silicon are exhausted does the story escalate to Cloud Swarm (<code>[SWARM:CLOUD]</code>), followed by Primary Takeover (<code>[AGY:TAKEOVER]</code>).</li>
+</ul>
+</li>
+<li><strong><code>[SWARM:CLOUD]</code> (Direct Cloud Route):</strong> When a story is tagged <code>[SWARM:CLOUD]</code>, local attempts are skipped entirely. The dispatch routes directly to Cloud Swarm (Groq / OpenCode Cloud / Big-Pickle / Cohere). If Cloud Swarm fails after feedback remediation, it skips local retries and routes straight to Primary Takeover (<code>[AGY:TAKEOVER]</code>).</li>
 <li><strong><code>[AGY:PRIMARY]</code> (Direct Architectural Core):</strong> Architectural scaffolding, protocol governance, and schema bootstrap executed directly by the primary agent.</li>
-<li><strong>Never Blindly Retry (Zero Internal Script Loops):</strong> <code>delegate.py</code> is strictly a single-shot execution harness. Retries are smart outer-loop operations driven by AGY diagnostics, never blind script-level loops. A retry within local silicon (or between escalation tiers) is strictly defined as an execution attempt preceded by root-cause diagnosis and harness/prompt remediation per <strong>[BKM-071]</strong>.</li>
-<li><strong>Non-Convergence Circuit Breaker ("Definition of Insanity" Law):</strong> If a local worker generates degenerate output, enters an unrecoverable non-convergent loop, or demonstrates fundamental capacity failure for a specific task and a viable harness/prompt remedy is not apparent, the orchestrator is authorized to trip the circuit breaker immediately. The orchestrator logs the diagnostic failure reason in the sprint ledger and escalates directly to <code>[SWARM:CLOUD]</code> or <code>[AGY:TAKEOVER]</code> without burning identical futile retry cycles.</li>
+<li><strong>Never Blindly Retry (Feedback Loop Mandate):</strong> <code>delegate.py</code> is strictly a single-shot execution harness; blind script loops are prohibited. All subsequent dispatches are <strong>Contracted Feedback Loops</strong>, NOT blind re-prompts. Repeating an identical dispatch without injecting diagnosed failure traces or worker reflections is an explicit architectural violation (<em>"Definition of Insanity" Law</em>).</li>
+<li><strong>Non-Convergence Circuit Breaker:</strong> If a local worker generates degenerate output, enters an unrecoverable non-convergent loop, or demonstrates fundamental capacity failure for a specific task and a viable harness/prompt remedy is not apparent, the orchestrator is authorized to trip the circuit breaker immediately. The orchestrator logs the diagnostic failure reason in the sprint ledger and escalates directly to <code>[SWARM:CLOUD]</code> or <code>[AGY:TAKEOVER]</code> without burning futile iterations.</li>
 <li><strong>Safe-Patch Mandate (Anti-Bash-Clobber):</strong> Subagents MUST NOT use destructive bash file writes (<code>cat &lt;&lt; 'EOF' &gt;</code> or <code>echo &gt;</code>) on existing codebase files. Subagents must invoke <code>clara-dna_safe_patch</code> (or atomic patchers) for existing files, reserving <code>write</code> strictly for new standalone files.</li>
 </ol>
 <h4>2. The 5-Minute Watchdog &amp; Inspection Gate Law</h4>
@@ -1224,11 +1230,22 @@
 <li><strong>Action on Missing Tag:</strong> If a subagent modifies codebase logic but omits the Live Gate tag, AGY must treat the story as <code>LIVE_GATE_PENDING</code> and perform live daemon verification before committing.</li>
 <li><strong>Inter-Attempt Diagnostic Index:</strong> For all failure diagnosis, prompt tuning, circular trap prevention, and playbook references, proceed immediately to <strong>[BKM-071]</strong>.</li>
 </ol>
-<h4>6. Bounded Conductor Context &amp; Semantic Pre-Warming Invariant ([FEAT-642] / [FEAT-643] / [DISC-011])</h4>
+<h4>7. The Git Backchannel &amp; Inter-Story Cleanliness Law</h4>
 <ol>
-<li><strong>The Just-In-Time Illusion (<code>DISC-011</code>):</strong> To preserve L2 conductor agency without inducing context bloat or multi-turn slicing loops, <code>delegate.py</code> MUST pre-warm target file semantic digests (<code>_prewarm_target_context</code>) into <code>/tmp/clara_context_cache.json</code> before session execution.</li>
-<li><strong>First-Touch AST Blueprint &amp; Digest:</strong> When the conductor invokes <code>clara-dna_read(file_path)</code>, the tool serves a bounded (&lt;400 tokens) payload containing the full class/def AST blueprint alongside the pre-warmed semantic digest.</li>
-<li><strong>Raw Read Denial:</strong> Conductor personas are denied raw, unbuffered whole-file reads (<code>read: deny</code> / <code>grep: deny</code>) to enforce structural grounding and prevent 100k+ token context blowouts. Slicing is bounded to max 150 lines per call.</li>
+<li><strong>The Causal Why (Git as an Active Inter-Tier Channel):</strong></li>
+<li>The Git working tree is NOT merely passive local storage; it is an active <strong>forensic backchannel between Layer 2 (Tactical Conductor) and Layer 3 (Leaf Worker)</strong>. Conductor personas (Atlas on Node KENDER) continuously execute <code>git status</code> and <code>git diff --stat</code> to verify story isolation and detect rogue file modifications.</li>
+<li><strong>The Failure Mode:</strong> When the primary orchestrator (AGY / L1) withholds <code>git commit</code> across stories (e.g. attempting to batch commits at phase boundaries), preceding story changes linger in the working tree as dirty uncommitted files. During the subsequent story, L2's automated scope enforcement inspects <code>git diff</code>, cannot distinguish between <em>prior authorized work</em> and <em>L3 scope bleed</em>, assumes L3 went rogue, and executes <code>git checkout -- &lt;file&gt;</code>. This inadvertently destroys preceding stories.</li>
+<li><strong>The Mandate (Immediate Per-Story Checkpoint):</strong></li>
+<li>The primary orchestrator (AGY / L1) MUST execute an atomic <code>git commit</code> immediately upon certifying each story, before dispatching the next story.</li>
+<li><strong>Prohibition of Multi-Story Dirty Trees:</strong></li>
+<li>Leaving uncommitted modifications in the workspace across story dispatches is strictly forbidden. Every dispatch MUST start from a clean, unambiguous Git HEAD so L2's scope-enforcement lens reflects 100% active-story changes.</li>
+</ol>
+<h4>8. Canonical Story Argument Law (Dotted Identifier Mandate)</h4>
+<ol>
+<li><strong>The Invariant Formatting Law:</strong></li>
+<li>All dispatch launchers (<code>delegate.py --story &lt;id&gt;</code>), JIT checkpoints (<code>clara-dna_jit_checkpoint</code>), and sprint telemetry analyzers MUST format the story argument in <strong>canonical dotted notation</strong>: <code>&lt;sprint&gt;.&lt;story_index&gt;</code> (e.g. <code>102.1</code>, <code>102.9</code>, <code>102.10</code>, <code>101.15</code>).</li>
+<li><strong>Prohibition of Un-dotted and Free-form Prefixes:</strong></li>
+<li>Passing un-dotted integers (<code>--story 1029</code>) or free-form strings (<code>--story "STORY 1029"</code>) is strictly prohibited. Un-dotted notation breaks regex deduplication in <code>sprint_telemetry.py</code>, prevents correlation between conductor <code>delegate.py</code> records and worker <code>jit_checkpoint</code> records, and pollutes public web feeds with undecorated stubs.</li>
 </ol>
                             </div>
                         </td>

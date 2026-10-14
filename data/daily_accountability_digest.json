@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-08T14:03:11.369616",
-  "date": "2026-10-08",
+  "timestamp": "2026-10-13T16:55:51.859626",
+  "date": "2026-10-13",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
-  "overall_status": "DEGRADED",
+  "overall_status": "PASS",
   "total_checks": 8,
-  "passed_checks": 7,
-  "failed_checks": 1,
+  "passed_checks": 8,
+  "failed_checks": 0,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
@@ -27,9 +27,9 @@
     {
       "name": "Nightly Forge Orchestration",
       "passed": true,
-      "detail": "Status: COMPLETED (Age: 1.6h)",
+      "detail": "Status: COMPLETED (Age: 12.1h)",
       "status": "COMPLETED",
-      "age_hours": 1.6
+      "age_hours": 12.1
     },
     {
       "name": "LoRA Fine-Tuning Multi-Adapter Pass",
@@ -45,20 +45,18 @@
     },
     {
       "name": "Synthetic Morning Round Table Probe",
-      "passed": false,
-      "detail": "Round Table Probe failed or timed out",
-      "critic_score": 0.0
+      "passed": true,
+      "detail": "Status: PASS, Critic Score: 0.95, Latency: 1.13ms",
+      "critic_score": 0.95
     },
     {
       "name": "Cgroup Swap Pressure Monitor",
       "passed": true,
-      "detail": "Swap: 4928MB/4928MB peak (31.3%)",
-      "swap_peak_mb": 4928.37,
-      "swap_current_mb": 4928.37,
-      "swap_utilization_pct": 31.31
+      "detail": "Swap: 5490MB/5490MB peak (34.9%)",
+      "swap_peak_mb": 5489.53,
+      "swap_current_mb": 5489.53,
+      "swap_utilization_pct": 34.87
     }
   ],
-  "discrepancies": [
-    "Round Table Probe failed or timed out"
-  ]
+  "discrepancies": []
 }

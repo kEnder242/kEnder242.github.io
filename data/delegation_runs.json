@@ -1,18 +1,218 @@
 {
   "summary": {
-    "total_runs": 222,
-    "successful_runs": 126,
-    "total_tokens_blended": 8287630,
-    "total_conductor_tokens": 8197022,
-    "total_l3_tokens": 90608,
+    "total_runs": 231,
+    "successful_runs": 134,
+    "total_tokens_blended": 8683445,
+    "total_conductor_tokens": 8565218,
+    "total_l3_tokens": 118227,
     "total_cached_tokens": 5555422,
-    "total_wall_time_minutes": 2147.95,
-    "estimated_cloud_cost_usd": 11.242194,
-    "estimated_local_power_cost_usd": 1.073975,
-    "net_savings_usd": 10.168219,
-    "local_offload_ratio_pct": 8.72
+    "total_wall_time_minutes": 2190.91,
+    "estimated_cloud_cost_usd": 12.386496,
+    "estimated_local_power_cost_usd": 1.095455,
+    "net_savings_usd": 11.291041,
+    "local_offload_ratio_pct": 8.13
   },
   "runs": [
+    {
+      "sprint": "102",
+      "story": "102.10",
+      "title": "Update test_brain_gatekeeper.py assertions for Story 102.8 narrative steering",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 169.51,
+      "duration_m": 2.83,
+      "tokens": {
+        "conductor": 41561,
+        "l3": 2212,
+        "total": 43773,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:53:31"
+    },
+    {
+      "sprint": "102",
+      "story": "102.9",
+      "title": "Standalone Brain Voice & Replay Test Harness",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 677.17,
+      "duration_m": 11.29,
+      "tokens": {
+        "conductor": 56557,
+        "l3": 4686,
+        "total": 61243,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:49:10"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Created offline brain voice & replay harness; 10 tests green in 0.32s. Fixed mal",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Created offline brain voice & replay harness; 10 tests green in 0.32s. Fixed malformed regex in _parse_candidate_chunks (unbalanced paren in blueprint) \u2014 test-only fix.",
+      "timestamp": "2026-10-13T16:46:49"
+    },
+    {
+      "sprint": "102",
+      "story": "102.8",
+      "title": "Two-Mice Sideband Consensus & RAG Filter Logic (VIBE-015)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 279.29,
+      "duration_m": 4.65,
+      "tokens": {
+        "conductor": 56727,
+        "l3": 1920,
+        "total": 58647,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:37:15"
+    },
+    {
+      "sprint": "102",
+      "story": "102.7",
+      "title": "Brain Cynical Voice & Narrative Steering Prompt",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 398.5,
+      "duration_m": 6.64,
+      "tokens": {
+        "conductor": 46984,
+        "l3": 4386,
+        "total": 51370,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:31:45"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "1/5 tests failed. Patch applied 3 directives per blueprint. Test 1 asserts '[FEA",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "FAILURE",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "1/5 tests failed. Patch applied 3 directives per blueprint. Test 1 asserts '[FEAT-635] INFORMATION GATEKEEPER' in BRAIN_SYSTEM_PROMPT but directive 8 was renamed to 'EPISTEMIC GATEKEEPER & RAG FILTERING' per staged blueprint.",
+      "timestamp": "2026-10-13T16:27:53"
+    },
+    {
+      "sprint": "102",
+      "story": "102.5",
+      "title": "Clean Prompt Meta-Vocabulary Purge",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 377.19,
+      "duration_m": 6.29,
+      "tokens": {
+        "conductor": 45827,
+        "l3": 4004,
+        "total": 49831,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:24:02"
+    },
+    {
+      "sprint": "102",
+      "story": "102.4",
+      "title": "CognitiveHub Multiplier Pacing & String Vibe Decoupling",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 458.52,
+      "duration_m": 7.64,
+      "tokens": {
+        "conductor": 51512,
+        "l3": 5901,
+        "total": 57413,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:16:50"
+    },
+    {
+      "sprint": "102",
+      "story": "102.3",
+      "title": "Configurable Multiplier Token Budget & Node Profiles in infrastructure.json",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 203.54,
+      "duration_m": 3.39,
+      "tokens": {
+        "conductor": 39318,
+        "l3": 4510,
+        "total": 43828,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-13T16:08:43"
+    },
+    {
+      "sprint": "102",
+      "story": "102.1",
+      "title": "Cloud Oracle Adversarial Pre-Pass",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 13.78,
+      "duration_m": 0.23,
+      "tokens": {
+        "conductor": 29710,
+        "l3": 0,
+        "total": 29710,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-13T15:56:15"
+    },
     {
       "sprint": "101",
       "story": "101.19",
@@ -76,7 +276,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "www_deploy/benchmarks.js renderSeatCards synced with field_notes null-guards; '3",
       "mode": "",
       "tier": "",
       "model": "",
@@ -252,26 +452,6 @@
       "verification_passed": false,
       "reflection": "",
       "timestamp": "2026-10-08T12:34:47"
-    },
-    {
-      "sprint": "",
-      "story": "",
-      "title": "",
-      "mode": "",
-      "tier": "",
-      "model": "",
-      "status": "SUCCESS",
-      "duration_s": 0.0,
-      "duration_m": 0.0,
-      "tokens": {
-        "conductor": 0,
-        "l3": 0,
-        "total": 0,
-        "cache_read": 0
-      },
-      "verification_passed": true,
-      "reflection": "Applied edits for story 101.M4 (Adversarial Oracle Post-Flight Audit) to docs/sprints/active/SPRINT_PLAN_SPR_101_0.md. Updated Milestone 4 section to show completion with verification details, and updated Execution Trajectory to include all completed stories (101.9-101.13) and Milestone 4 completion.",
-      "timestamp": "2026-10-08T12:34:36"
     },
     {
       "sprint": "101",
@@ -636,7 +816,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -676,7 +856,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -696,7 +876,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1036,7 +1216,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1056,7 +1236,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1076,7 +1256,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1096,7 +1276,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1116,7 +1296,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1136,7 +1316,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1156,7 +1336,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1176,7 +1356,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1196,7 +1376,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1216,7 +1396,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1236,7 +1416,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1256,7 +1436,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1276,7 +1456,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1296,7 +1476,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1336,7 +1516,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -1356,7 +1536,7 @@
     {
       "sprint": "",
       "story": "",
-      "title": "",
+      "title": "Canonical JIT shakedown checkpoint",
       "mode": "",
       "tier": "",
       "model": "",
@@ -2095,7 +2275,7 @@
     },
     {
       "sprint": "97",
-      "story": "979",
+      "story": "97.9",
       "title": "Cloud Health Check",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2115,7 +2295,7 @@
     },
     {
       "sprint": "97",
-      "story": "979",
+      "story": "97.9",
       "title": "Swarm Dispatch Latency Test",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2155,7 +2335,7 @@
     },
     {
       "sprint": "97",
-      "story": "972",
+      "story": "97.2",
       "title": "Intercom Feedback UI (Thumbs Up/Down) & Co-Pilot Bridge",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2175,7 +2355,7 @@
     },
     {
       "sprint": "97",
-      "story": "971",
+      "story": "97.1",
       "title": "Single-Home Runtime Data and Accountability in Interleaved Logs",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2455,7 +2635,7 @@
     },
     {
       "sprint": "95",
-      "story": "9520",
+      "story": "95.20",
       "title": "Hybrid HyDE Cascade & Pinky Flywheel Caching",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2475,7 +2655,7 @@
     },
     {
       "sprint": "95",
-      "story": "9518",
+      "story": "95.18",
       "title": "Default State INIT and In-Process Lab Attendant Supervisor",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2495,7 +2675,7 @@
     },
     {
       "sprint": "95",
-      "story": "9510",
+      "story": "95.10",
       "title": "Live LLM Engine Integration for RevisionBlender and CoverLetter",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2515,7 +2695,7 @@
     },
     {
       "sprint": "95",
-      "story": "993",
+      "story": "99.3",
       "title": "Oracle Canary",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -2535,7 +2715,7 @@
     },
     {
       "sprint": "95",
-      "story": "991",
+      "story": "99.1",
       "title": "Cloud Delegate Canary",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2555,7 +2735,7 @@
     },
     {
       "sprint": "95",
-      "story": "9511",
+      "story": "95.11",
       "title": "Live LLM Semantic Persona Extraction in Job Ingest",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2575,7 +2755,7 @@
     },
     {
       "sprint": "95",
-      "story": "9511",
+      "story": "95.11",
       "title": "Live LLM Semantic Persona Extraction in Job Ingest",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2595,7 +2775,7 @@
     },
     {
       "sprint": "95",
-      "story": "9510",
+      "story": "95.10",
       "title": "Live LLM Engine Integration for RevisionBlender & CoverLetter",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2615,7 +2795,7 @@
     },
     {
       "sprint": "95",
-      "story": "958",
+      "story": "95.8",
       "title": "Document-Scoped DNA Promotion Gate & Sync Pipeline",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2635,7 +2815,7 @@
     },
     {
       "sprint": "95",
-      "story": "958",
+      "story": "95.8",
       "title": "Document-Scoped DNA Promotion Gate & Sync Pipeline",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2655,7 +2835,7 @@
     },
     {
       "sprint": "95",
-      "story": "957",
+      "story": "95.7",
       "title": "Offline Job & Target Ingestion CLI",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2675,7 +2855,7 @@
     },
     {
       "sprint": "95",
-      "story": "957",
+      "story": "95.7",
       "title": "Offline Job & Target Ingestion CLI",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2695,7 +2875,7 @@
     },
     {
       "sprint": "95",
-      "story": "956",
+      "story": "95.6",
       "title": "Editorial Dialogue Gutter & Synthetic Mutation Blending",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2715,7 +2895,7 @@
     },
     {
       "sprint": "95",
-      "story": "955",
+      "story": "95.5",
       "title": "Single-Node Proving Ground & Revision Carousel",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2735,7 +2915,7 @@
     },
     {
       "sprint": "95",
-      "story": "954",
+      "story": "95.4",
       "title": "Thin-Proxy Node Architecture & ML Dependency Purge",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2755,7 +2935,7 @@
     },
     {
       "sprint": "95",
-      "story": "953",
+      "story": "95.3",
       "title": "Idle Sensory Quiescence & Socket-Gated Ear Poller",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2775,7 +2955,7 @@
     },
     {
       "sprint": "95",
-      "story": "953",
+      "story": "95.3",
       "title": "Single-Node Proving Ground & Revision Carousel",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2795,7 +2975,7 @@
     },
     {
       "sprint": "95",
-      "story": "952",
+      "story": "95.2",
       "title": "Multi-Version Resume AST Citation & Diff Annotation (Cloud Escalation Round 2)",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2815,7 +2995,7 @@
     },
     {
       "sprint": "95",
-      "story": "952",
+      "story": "95.2",
       "title": "Multi-Version Resume AST Citation & Diff Annotation",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2835,7 +3015,7 @@
     },
     {
       "sprint": "95",
-      "story": "951",
+      "story": "95.1",
       "title": "Self-Contained Spine Manager & Document DNA Archive (Cloud Escalation Round 2)",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -2855,7 +3035,7 @@
     },
     {
       "sprint": "95",
-      "story": "951",
+      "story": "95.1",
       "title": "Self-Contained Spine Manager & Document DNA Archive (Attempt 1b - Calibrated)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2875,7 +3055,7 @@
     },
     {
       "sprint": "95",
-      "story": "951",
+      "story": "95.1",
       "title": "Self-Contained Spine Manager & Document DNA Archive",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2895,7 +3075,7 @@
     },
     {
       "sprint": "95",
-      "story": "950",
+      "story": "95.0",
       "title": "Grader Fallback & Tier Tagging Remediation",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2915,7 +3095,7 @@
     },
     {
       "sprint": "95",
-      "story": "950",
+      "story": "95.0",
       "title": "Grader Fallback & Tier Tagging Remediation",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -2935,7 +3115,7 @@
     },
     {
       "sprint": "95",
-      "story": "950",
+      "story": "95.0",
       "title": "Pre-Sprint Adversarial Architectural Audit on Refined Self-Contained Spine & Document DNA",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -2955,7 +3135,7 @@
     },
     {
       "sprint": "95",
-      "story": "950",
+      "story": "95.0",
       "title": "Pre-Sprint Adversarial Architectural Review on Sprint 95 Spine & Sandbox",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -2975,7 +3155,7 @@
     },
     {
       "sprint": "94",
-      "story": "947",
+      "story": "94.7",
       "title": "Post-Implementation Dual Adversarial Oracle Review",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -2995,7 +3175,7 @@
     },
     {
       "sprint": "94",
-      "story": "947",
+      "story": "94.7",
       "title": "Post-Implementation Dual Adversarial Oracle Review",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -3015,7 +3195,7 @@
     },
     {
       "sprint": "94",
-      "story": "943",
+      "story": "94.3",
       "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Cloud Escalation Round 2)",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -3035,7 +3215,7 @@
     },
     {
       "sprint": "94",
-      "story": "943",
+      "story": "94.3",
       "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Attempt 1c - 128k Context Active)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3055,7 +3235,7 @@
     },
     {
       "sprint": "94",
-      "story": "943",
+      "story": "94.3",
       "title": "Paper AST Schema v2 & Dynamic Scoping Gate (Attempt 1b - Feedback Calibrated)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3075,7 +3255,7 @@
     },
     {
       "sprint": "94",
-      "story": "943",
+      "story": "94.3",
       "title": "Paper AST Schema v2 & Dynamic Scoping Gate",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3095,7 +3275,7 @@
     },
     {
       "sprint": "94",
-      "story": "941",
+      "story": "94.1",
       "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Cloud Escalation Round 2)",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -3115,7 +3295,7 @@
     },
     {
       "sprint": "94",
-      "story": "941",
+      "story": "94.1",
       "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Attempt 1c - Exact Write Contract)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3135,7 +3315,7 @@
     },
     {
       "sprint": "94",
-      "story": "941",
+      "story": "94.1",
       "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains (Attempt 1b - Junior Direct Scaffold)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3155,7 +3335,7 @@
     },
     {
       "sprint": "94",
-      "story": "941",
+      "story": "94.1",
       "title": "DNA Manifest Bridge for VIBE & INSPIRATION Domains",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3175,7 +3355,7 @@
     },
     {
       "sprint": "94",
-      "story": "946",
+      "story": "94.6",
       "title": "Consolidated Projection Engine Backend Package (Cloud Escalation Round 2)",
       "mode": "cloud",
       "tier": "[SWARM:CLOUD]",
@@ -3195,7 +3375,7 @@
     },
     {
       "sprint": "94",
-      "story": "946",
+      "story": "94.6",
       "title": "Consolidated Projection Engine Backend Package (Attempt 1c - Sisyphus-Junior Direct Code Generation)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3215,7 +3395,7 @@
     },
     {
       "sprint": "94",
-      "story": "946",
+      "story": "94.6",
       "title": "Consolidated Projection Engine Backend Package (Attempt 1b - High-Precision 4-Anchor)",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3235,7 +3415,7 @@
     },
     {
       "sprint": "94",
-      "story": "946",
+      "story": "94.6",
       "title": "Consolidated Projection Engine Backend Package",
       "mode": "local",
       "tier": "[SWARM:LOCAL]",
@@ -3255,7 +3435,7 @@
     },
     {
       "sprint": "94",
-      "story": "946",
+      "story": "94.6",
       "title": "Consolidated Projection Engine Backend Package",
       "mode": "execute",
       "tier": "[SWARM:LOCAL]",
@@ -3275,7 +3455,7 @@
     },
     {
       "sprint": "94",
-      "story": "940",
+      "story": "94.0",
       "title": "Sprint 94 Open Track Conversation Audit",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -3395,7 +3575,7 @@
     },
     {
       "sprint": "92",
-      "story": "924",
+      "story": "92.4",
       "title": "Sprint 92 Ground Truth Round Table and Anti-Green-Lie Adversarial Review",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -3755,7 +3935,7 @@
     },
     {
       "sprint": "88",
-      "story": "880",
+      "story": "88.0",
       "title": "Sprint 88 Delegation Strategy & Task-Level Breakdown Oracle Review",
       "mode": "oracle",
       "tier": "[SWARM:CLOUD]",
@@ -3775,7 +3955,7 @@
     },
     {
       "sprint": "86",
-      "story": "8614",
+      "story": "86.14",
       "title": "sync_chroma_dna.py Idempotency Guard and Checksum Diffing",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3795,7 +3975,7 @@
     },
     {
       "sprint": "86",
-      "story": "8613",
+      "story": "86.13",
       "title": "writer.html and build_writer.py DNA Revision and Mutation Exposure",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3815,7 +3995,7 @@
     },
     {
       "sprint": "86",
-      "story": "8612",
+      "story": "86.12",
       "title": "WIS and PHL Schema Backfill Migration",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3835,7 +4015,7 @@
     },
     {
       "sprint": "86",
-      "story": "867",
+      "story": "86.7",
       "title": "Draft Promotion Static HTML Rebuild and Safe ID Allocation",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3855,7 +4035,7 @@
     },
     {
       "sprint": "86",
-      "story": "868",
+      "story": "86.8",
       "title": "RDNA Save Path Fix in handle_wisdom_save_card",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3875,7 +4055,7 @@
     },
     {
       "sprint": "86",
-      "story": "866",
+      "story": "86.6",
       "title": "mutations array Cleanup After Certification",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3895,7 +4075,7 @@
     },
     {
       "sprint": "86",
-      "story": "865",
+      "story": "86.5",
       "title": "FEAT Domain and RDNA Synthesis in build_dna_polymorphic_dataset",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3915,7 +4095,7 @@
     },
     {
       "sprint": "86",
-      "story": "864",
+      "story": "86.4",
       "title": "ensure_datasets Force-Rebuild Flag in nightly_lora_training.py",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3935,7 +4115,7 @@
     },
     {
       "sprint": "86",
-      "story": "863",
+      "story": "86.3",
       "title": "Wire nightly_lora_training.py into Nightly Forge",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -3955,7 +4135,7 @@
     },
     {
       "sprint": "86",
-      "story": "862",
+      "story": "86.2",
       "title": "Nightly Forge Step Order Inversion Fix",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -4255,7 +4435,7 @@
     },
     {
       "sprint": "83",
-      "story": "833",
+      "story": "83.3",
       "title": "Round Table Memory Persistence & Context Pruning",
       "mode": "execute",
       "tier": "[SWARM:LOCAL]",
@@ -4275,7 +4455,7 @@
     },
     {
       "sprint": "83",
-      "story": "831",
+      "story": "83.1",
       "title": "Multi-Curriculum Dataset Blender",
       "mode": "execute",
       "tier": "[SWARM:LOCAL]",
@@ -4335,7 +4515,7 @@
     },
     {
       "sprint": "79",
-      "story": "794",
+      "story": "79.4",
       "title": "Story 79.4: Multi-Tier Bone Outliner Drag-and-Drop & Domain-Partitioned Palette",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -4355,7 +4535,7 @@
     },
     {
       "sprint": "78",
-      "story": "7812",
+      "story": "78.12",
       "title": "3-Tier Revision History < > Carousel & In-Place Restoration",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",
@@ -4375,7 +4555,7 @@
     },
     {
       "sprint": "78",
-      "story": "7811",
+      "story": "78.11",
       "title": "Cross-Paragraph SortableJS Citation Drag-and-Drop & Reactive Dirty State",
       "mode": "execute",
       "tier": "[SWARM:CLOUD]",

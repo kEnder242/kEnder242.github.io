@@ -15,3 +15,12 @@
 {"timestamp":"2026-10-08T12:30:44.038440","overall_status":"PASS","passed_checks":8,"total_checks":8,"discrepancies":[]}
 {"timestamp":"2026-10-08T14:01:29.389111","overall_status":"FAIL","passed_checks":6,"total_checks":8,"discrepancies":["Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN","Round Table Probe failed or timed out"]}
 {"timestamp":"2026-10-08T14:03:11.369616","overall_status":"DEGRADED","passed_checks":7,"total_checks":8,"discrepancies":["Round Table Probe failed or timed out"]}
+{"timestamp":"2026-10-09T06:00:38.773942","overall_status":"FAIL","passed_checks":7,"total_checks":8,"discrepancies":["Nightly Forge did not complete successfully (Status: DEGRADED (Age: 999.0h))"]}
+{"timestamp":"2026-10-10T06:01:19.821081","overall_status":"FAIL","passed_checks":3,"total_checks":8,"discrepancies":["Failed to query nvidia-smi power limit","Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN","Nightly Forge did not complete successfully (Status: FAIL (Age: 999.0h))","LoRA Multi-Adapter Pass failed (Status: FAILED)","Status: DEGRADED, Critic Score: 0.00, Latency: 1.2ms"]}
+{"timestamp":"2026-10-11T06:01:19.496339","overall_status":"FAIL","passed_checks":3,"total_checks":8,"discrepancies":["Failed to query nvidia-smi power limit","Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN","Nightly Forge did not complete successfully (Status: FAIL (Age: 999.0h))","LoRA Multi-Adapter Pass failed (Status: FAILED)","Status: DEGRADED, Critic Score: 0.00, Latency: 0.98ms"]}
+{"timestamp":"2026-10-12T06:00:31.005852","overall_status":"FAIL","passed_checks":7,"total_checks":8,"discrepancies":["Nightly Forge did not complete successfully (Status: DEGRADED (Age: 999.0h))"]}
+{"timestamp":"2026-10-13T06:00:29.542225","overall_status":"FAIL","passed_checks":7,"total_checks":8,"discrepancies":["Nightly Forge did not complete successfully (Status: DEGRADED (Age: 999.0h))"]}
+{"timestamp":"2026-10-13T12:22:37.619002","overall_status":"DEGRADED","passed_checks":7,"total_checks":8,"discrepancies":["Status: DEGRADED, Critic Score: 0.00, Latency: 1.0ms"]}
+{"timestamp":"2026-10-13T13:04:10.488062","overall_status":"PASS","passed_checks":8,"total_checks":8,"discrepancies":[]}
+{"timestamp":"2026-10-13T16:54:16.546858","overall_status":"DEGRADED","passed_checks":7,"total_checks":8,"discrepancies":["Round Table Probe failed or timed out"]}
+{"timestamp":"2026-10-13T16:55:51.859626","overall_status":"PASS","passed_checks":8,"total_checks":8,"discrepancies":[]}
