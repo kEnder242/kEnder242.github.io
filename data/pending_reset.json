@@ -1,15 +1,15 @@
 {
   "pending_action": "DEEP_RESET",
   "action_level": 2,
-  "timer_expiry_ts": 1791964843,
-  "triggered_at_ts": 1791963043,
-  "last_commit": "a37f88a",
+  "timer_expiry_ts": 1791965384,
+  "triggered_at_ts": 1791963584,
+  "last_commit": "01e82e1",
   "repo": "Portfolio_Dev",
   "reasons": [
-    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)",
-    "src/tests/delegate.py (Active Module)",
     "src/logic/cognitive_hub.py (Active Module)",
+    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)",
     "field_notes/benchmarks.js (Portfolio Active Code)",
+    "src/tests/delegate.py (Active Module)",
     "src/memory/blackboard_ledger.py (Active Module)",
     "src/infra/backfill_agy_telemetry.py (Deep Core/Infra Architecture)"
   ]
