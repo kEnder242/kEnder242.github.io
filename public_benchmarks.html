@@ -262,7 +262,7 @@
         <div class="header-bar">
             <div>
                 <h1 class="page-title">⚡ Certified Silicon Benchmarks</h1>
-                <p class="page-subtitle">Public Telemetry & Energy ROI Model &bull; Last Certified: Sep 2026</p>
+                <p class="page-subtitle">Public Certified Silicon Telemetry &bull; Last Certified: Sep 2026</p>
             </div>
             <div>
                 <a href="https://notes.jason-lab.dev/benchmarks.html" class="live-btn">
@@ -405,74 +405,10 @@
             </div>
         </div>
 
-        <!-- 4. Electricity Cost per 1M Tokens & Savings Multiplier -->
-        <div class="chart-card">
-            <div class="chart-title">💰 Electricity Cost per 1M Tokens vs Commercial Cloud ($3.00/1M Baseline)</div>
-            <div class="bar-row">
-                <div class="bar-label">Apple M5 Air ($0.13/kWh)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 100%; background: #238636;"></div></div>
-                <div class="bar-value" style="color: #3fb950;">$0.0482 (62.2x)</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Linux RTX 2080 Ti</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 57.2%; background: #238636;"></div></div>
-                <div class="bar-value" style="color: #3fb950;">$0.0843 (35.6x)</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Windows RTX 4090</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 31.2%; background: #58a6ff;"></div></div>
-                <div class="bar-value" style="color: #58a6ff;">$0.1549 (19.4x)</div>
-            </div>
-            <div class="bar-row">
-                <div class="bar-label">Cloud API Baseline</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 1.6%; background: #30363d;"></div></div>
-                <div class="bar-value" style="color: #f78166;">$3.0000 (1.0x)</div>
-            </div>
-        </div>
 
-        <!-- Energy Efficiency & ROI Calculator -->
-        <div class="chart-card">
-            <div class="chart-title">🌱 Interactive Economic ROI Calculator</div>
-            <div style="font-size: 0.8rem; color: var(--sub-color); margin-bottom: 15px; font-family: var(--mono-stack);">
-                Interactive calculation based on 25M monthly token volume at $0.13/kWh electricity vs $3.00/1M API token cost.
-            </div>
-            <div style="margin-bottom: 20px;">
-                <label for="monthlyTokens" style="font-family:var(--mono-stack); font-size: 0.8rem;">Monthly Token Volume: <span id="tokenSliderVal" style="color:var(--accent-color); font-weight:700;">25 MTok</span></label>
-                <input type="range" id="monthlyTokens" min="1" max="100" value="25" style="width: 100%; margin-top: 8px;" oninput="updatePublicRoi(this.value)">
-            </div>
-            <div class="calc-grid">
-                <div class="calc-card">
-                    <div class="calc-label">Commercial API Cost</div>
-                    <div class="calc-num" id="publicApiCostVal" style="color:#f78166;">$75.00</div>
-                    <div style="font-size:0.7rem; color:var(--sub-color);">Baseline API spend</div>
-                </div>
-                <div class="calc-card">
-                    <div class="calc-label">Local Electricity Cost</div>
-                    <div class="calc-num" id="publicLocalCostVal" style="color:var(--accent-color);">$0.82</div>
-                    <div style="font-size:0.7rem; color:var(--sub-color);">Local lab power draw</div>
-                </div>
-                <div class="calc-card">
-                    <div class="calc-label">Net Monthly Savings</div>
-                    <div class="calc-num" id="publicSavingsVal" style="color:#3fb950;">$74.18 (98.9%)</div>
-                    <div style="font-size:0.7rem; color:var(--sub-color);">Realized margin</div>
-                </div>
-            </div>
-        </div>
+
     </main>
 
     <script src="mission-control.js?v=9f1019d4"></script>
-    <script>
-        function updatePublicRoi(mTok) {
-            document.getElementById('tokenSliderVal').textContent = mTok + ' MTok';
-            const apiCost = mTok * 3.00;
-            const electricityCost = mTok * 0.0328;
-            const savings = apiCost - electricityCost;
-            const savingsPct = ((savings / apiCost) * 100).toFixed(1);
-
-            document.getElementById('publicApiCostVal').textContent = '$' + apiCost.toFixed(2);
-            document.getElementById('publicLocalCostVal').textContent = '$' + electricityCost.toFixed(2);
-            document.getElementById('publicSavingsVal').textContent = '$' + savings.toFixed(2) + ' (' + savingsPct + '%)';
-        }
-    </script>
 </body>
 </html>

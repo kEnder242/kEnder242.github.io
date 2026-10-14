@@ -1247,6 +1247,14 @@
 <li><strong>Prohibition of Un-dotted and Free-form Prefixes:</strong></li>
 <li>Passing un-dotted integers (<code>--story 1029</code>) or free-form strings (<code>--story "STORY 1029"</code>) is strictly prohibited. Un-dotted notation breaks regex deduplication in <code>sprint_telemetry.py</code>, prevents correlation between conductor <code>delegate.py</code> records and worker <code>jit_checkpoint</code> records, and pollutes public web feeds with undecorated stubs.</li>
 </ol>
+<h4>9. Primary Conductor Telemetry Mandate (<code>--log-agy</code>)</h4>
+<ol>
+<li><strong>The Invariant Law:</strong></li>
+<li>Whenever AGY executes directly as Primary Conductor (<code>[AGY:PRIMARY]</code>), executes an emergency takeover, or certifies an architectural story that bypassed OpenCode headless delegation, AGY MUST record its actual conductor tokens and duration to <code>delegation_ledger.jsonl</code> using:
+     <code>HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --log-agy --sprint &lt;S&gt; --story &lt;S.N&gt; --title "&lt;Title&gt;" --tokens &lt;T&gt; --duration &lt;D&gt;</code></li>
+<li><strong>Preventing Telemetry Blindness:</strong></li>
+<li>Omitting AGY logging leaves the Primary Conductor tracked at 0 tokens in public and web telemetry (<code>delegation_runs.json</code>). Conductor expenditures represent true lab development volume and must be committed alongside swarm dispatches.</li>
+</ol>
                             </div>
                         </td>
                     </tr>
@@ -1826,6 +1834,15 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
 <li><strong>HEADS DOWN EXECUTION (The Delivery Stage):</strong></li>
 <li>Execution proceeds under <code>BKM-006</code> and <code>BKM-007</code> with assigned owner tags (<code>[AGY:PRIMARY]</code> vs <code>[SWARM:LOCAL]</code>).</li>
 <li>Every completed anchor transitions its state to <code>✅ DONE</code> in the sprint plan ledger.</li>
+</ol>
+<h3>4. The 1:1 Numbered Swim Lane Invariant (Anti-Grouping Mandate)</h3>
+<ol>
+<li><strong>The Invariant Law:</strong></li>
+<li>Numbered dialogue items ($1 \dots N$) established during design alignment ARE the canonical, immutable swim lanes.</li>
+<li>Agents are <strong>strictly forbidden</strong> from merging, grouping, collapsing, or bunching multiple numbered items together (e.g. headers like "1 &amp; 2", "4, 5 &amp; 11", or "6 &amp; 7").</li>
+<li><strong>Individual Lifetime:</strong></li>
+<li>Every single numbered item MUST be addressed in its own discrete, separate numbered section in responses and sprint plans.</li>
+<li>Swim lanes maintain their individual numbering until they naturally achieve full consensus, are certified, and peter out.</li>
 </ol>
                             </div>
                         </td>
