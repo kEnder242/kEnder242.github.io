@@ -365,7 +365,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     const isSystemStrategic = (isSystem) && (text_low.includes('strategic') || text_low.includes('engaging'));
 
     // [Task 16.2] Markdown Pop via Marked.js
-    let formattedText = text;
+    let formattedText = text.replace(/<thought>([\s\S]*?)<\/thought>/g, '<div class="thought-bubble"><em>$1</em></div>');
     
     // Check if the response is a JSON block to pretty-print
     let isJSON = false;
@@ -949,6 +949,47 @@ async function connect() {
                 try {
                     sessionStorage.setItem('acme_active_file', data.filename);
                 } catch (e) {}
+            } else if (data.type === 'thought_stream') {
+                // [FEAT-489] Dual-Console Thought Stream Handler
+                const channel = data.channel || 'chat';
+                const source = data.source || data.brain_source || 'Resident';
+                const isRight = channel === 'insight' || data.console === 'Right' || data.console === 'right' || data.console === 'center';
+                const targetConsole = isRight ? insightConsole : chatConsole;
+                const streamId = 'stream-' + channel + '-' + (data.console || 'def').toLowerCase();
+                let streamEl = document.getElementById(streamId);
+
+                if (!data.final) {
+                    if (!streamEl) {
+                        streamEl = document.createElement('div');
+                        streamEl.id = streamId;
+                        streamEl.className = 'message brain-msg stream-active';
+                        const time = new Date().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                        const sl = String(source).toLowerCase().replace(/[^a-z0-9_-]/g, '-');
+                        streamEl.innerHTML = `
+                            <div class="msg-header">
+                                <span class="msg-time">${time}</span>
+                                <span class="msg-source ${sl}">[${source}]</span>
+                            </div>
+                            <div class="msg-body" style="white-space: pre-wrap;"></div>
+                        `;
+                        targetConsole.appendChild(streamEl);
+                    }
+                    const bodyEl = streamEl.querySelector('.msg-body');
+                    if (bodyEl && data.token) {
+                        bodyEl.textContent += data.token;
+                    }
+                    targetConsole.scrollTop = targetConsole.scrollHeight;
+                } else {
+                    if (streamEl) {
+                        streamEl.removeAttribute('id');
+                        streamEl.classList.remove('stream-active');
+                        const bodyEl = streamEl.querySelector('.msg-body');
+                        if (bodyEl && window.marked && bodyEl.textContent.trim()) {
+                            bodyEl.innerHTML = marked.parse(bodyEl.textContent);
+                        }
+                        targetConsole.scrollTop = targetConsole.scrollHeight;
+                    }
+                }
             } else if (data.brain) {
                 // [FEAT-453/480] Safety net: diagnostic-prefixed system lines go to the Crosstalk Bar.
                 // Do NOT intercept persona chat responses (Pinky/Brain) even if they contain bracketed text.
