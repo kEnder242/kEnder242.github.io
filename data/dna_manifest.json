@@ -24044,6 +24044,283 @@
         "status": "APPROVED",
         "bucket_id": "bucket_systems_architecture"
       }
+    },
+    {
+      "id": "INS-043",
+      "title": "The Asymmetry of Generation vs. Review (The Zero-Marginal Labor Law)",
+      "theme": "Economics of Federated Silicon & Cognitive Division of Labor",
+      "paper_order": 43,
+      "origin": {
+        "author": "jallred",
+        "text": "Cloud bleed isn't, technically bad. I just want to preserve tokens and if it's doable locally then it's free. As long as it's stable and we have a good sprint plan I can run it overnight and it feels the same to me as a cloud sprint. Also, reviewing work is more efficient than making new work from what I understand so when you review local code I think we're actually saving something.",
+        "source": "Federated Swarm Economics & Sprint 97 Architectural Alignment",
+        "immutable": true,
+        "created_at": "2026-10-02T22:42:00Z"
+      },
+      "synthesis": {
+        "title": "The Asymmetry of Generation vs. Review (The Zero-Marginal Labor Law)",
+        "narrative_context": "In a federated AI lab, code generation (exploring, drafting, AST modifications, iterative testing) is computationally expensive and token-heavy, while code review and verification are precise, fast, and token-light. Leveraging sovereign local silicon (Node KENDER 4090 + Node Brain M5 Air) for overnight execution delivers zero-marginal-cost code production. The strategic frontier guardian (AGY) achieves maximum cognitive leverage not by typing raw lines from scratch, but by evaluating structured diffs, test outputs, and handover reflections\u2014yielding frontier quality at sovereign local cost.",
+        "lab_anchors": [
+          "BKM-049 (The Delegation Execution Rulebook)",
+          "BKM-024 (Live Validation Mandate)",
+          "FEAT-497 (Federated Silicon Multi-Node Live Certification)",
+          "OPENAGENT_HANDOVER_PLAYBOOK.md"
+        ],
+        "review_notes": "Establishes the governing economic invariant for overnight local silicon delegation vs frontier strategic code review.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1,
+        "mutations": [],
+        "revisions": [
+          {
+            "version": 1,
+            "lens": "Original Verbatim",
+            "text": "Code generation is token-heavy and computationally expensive, while verification and review are fast and token-light. Local silicon delivers zero-marginal-cost execution overnight, while frontier agents provide maximum cognitive leverage through structured code review.",
+            "certified_at": "2026-10-02T22:42:00Z"
+          }
+        ]
+      },
+      "metadata": {
+        "tags": [
+          "inspiration",
+          "federated-economics",
+          "zero-marginal-cost",
+          "generation-vs-review",
+          "asymmetry",
+          "overnight-execution",
+          "cognitive-leverage",
+          "systems-architecture"
+        ],
+        "explicit_links": [
+          "INS-038",
+          "INS-042",
+          "BKM-049",
+          "BKM-024",
+          "FEAT-497"
+        ],
+        "aliases": [
+          "PHL-043",
+          "zero-marginal-labor-law",
+          "asymmetry-of-generation-vs-review"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_systems_architecture"
+      }
+    },
+    {
+      "id": "INS-044",
+      "title": "The 'Trust-Me-Bro' Grounding Skepticism Law",
+      "theme": "Systems Architecture & Swarm Governance",
+      "paper_order": 44,
+      "origin": {
+        "author": "jallred",
+        "text": "Models are trained to be cautious, to scout out. When we do any of the work beforehand it\u2019s accepted by the models with a huge grain of salt. No matter how much context is sent, and how much spoon feeding is done, the model will still try to find a \u2018ground truth\u2019. It\u2019s like having a boss say 'Trust me bro, I already scouted ahead'.",
+        "source": "Tackling delegation Google Doc (1iBhb4dgJBS9NfnnA6o268J8ne_nAdnDNW_ih3C0RcIA)",
+        "immutable": true,
+        "created_at": "2026-10-03T22:45:00Z"
+      },
+      "synthesis": {
+        "title": "The 'Trust-Me-Bro' Grounding Skepticism Law",
+        "narrative_context": "Reasoning and RLHF-tuned models possess an intrinsic exploration bias. When system prompts assert that reconnaissance is 'already completed', models treat the static claim with skepticism and spend tokens attempting to verify ground truth empirically. True grounding must be discovered through dynamic tool returns.",
+        "lab_anchors": [
+          "BKM-049",
+          "FEAT-647",
+          "DISC-012"
+        ],
+        "review_notes": "Grounds the psychological motivation for tool-mediated JITC over static prompt injection.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1,
+        "mutations": [],
+        "revisions": [
+          {
+            "version": 1,
+            "lens": "Original Verbatim",
+            "text": "Models inherently distrust static prompt-level claims of prior exploration; only dynamic tool returns satisfy reasoning models' empirical grounding threshold.",
+            "certified_at": "2026-10-03T22:50:00Z"
+          }
+        ]
+      },
+      "metadata": {
+        "tags": [
+          "inspiration",
+          "grounding-skepticism",
+          "exploration-bias",
+          "trust-me-bro-law",
+          "jitc",
+          "swarm-governance",
+          "llm-psychology"
+        ],
+        "explicit_links": [
+          "INS-040",
+          "DISC-011",
+          "DISC-012",
+          "BKM-049",
+          "FEAT-647"
+        ],
+        "aliases": [
+          "PHL-044",
+          "trust-me-bro-skepticism-law"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_systems_architecture"
+      }
+    },
+    {
+      "id": "INS-045",
+      "title": "One-Shot Delegation as Organic Token Cleaning (Bypassing Semantic Compression)",
+      "theme": "Cognitive Architecture & Swarm Governance",
+      "paper_order": 45,
+      "origin": {
+        "author": "jallred",
+        "text": "I have a hunch if we offload patch-test-recommend to L3 we bypass the need for semantic compression... WITH offload what's left? pure orchestration? the brain analogy is compelling. One shot has the potential to clean up tokens.",
+        "source": "Federated Lab Sprint 100 Architectural Review",
+        "immutable": true,
+        "created_at": "2026-10-07T08:18:00Z"
+      },
+      "synthesis": {
+        "title": "One-Shot Delegation as Organic Token Cleaning (Bypassing Semantic Compression)",
+        "narrative_context": "Instead of burdening compute nodes with lossy runtime semantic compression or multi-pass KV cache summarization to rescue bloated session histories, architectural delegation solves context accumulation at the root. By offloading the patch-test-recommend loop to an ephemeral, disposable worker (jit_one_shot), all terminal tracebacks, compiler noise, and failed syntactic attempts die with the worker process. The orchestrator retains pure, pristine coordination context without token exhaustion or semantic degradation.",
+        "lab_anchors": [
+          "BKM-078",
+          "FEAT-655",
+          "INS-046"
+        ],
+        "review_notes": "Codifies the breakthrough that one-shot delegation inherently purges context ballast and keeps the orchestrator pristine without needing lossy compression.",
+        "last_refined_by": "AGY",
+        "refinement_version": 2,
+        "mutations": [],
+        "revisions": []
+      },
+      "metadata": {
+        "tags": [
+          "inspiration",
+          "one-shot-offload",
+          "organic-token-cleaning",
+          "pure-orchestration",
+          "anti-compression",
+          "context-hygiene",
+          "swarm-governance"
+        ],
+        "explicit_links": [
+          "INS-042",
+          "INS-046",
+          "BKM-078",
+          "FEAT-655"
+        ],
+        "aliases": [
+          "PHL-045",
+          "organic-token-cleaning-law"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_systems_architecture"
+      }
+    },
+    {
+      "id": "INS-046",
+      "title": "The Disposable Worker & Ephemeral Garbage Isolation",
+      "theme": "Systems Architecture & Swarm Governance",
+      "paper_order": 46,
+      "origin": {
+        "author": "jallred",
+        "text": "What if we run the stack trace and interpret it but STOP before fixing, bubble up a small report and recommendations to L2, then L2 tracks the progress and queues up another pristine L3.",
+        "source": "Federated Lab Sprint 100 Architectural Review",
+        "immutable": true,
+        "created_at": "2026-10-07T08:20:00Z"
+      },
+      "synthesis": {
+        "title": "The Disposable Worker & Ephemeral Garbage Isolation",
+        "narrative_context": "Letting small open-weights agents attempt recursive self-fixing loops inevitably induces context pollution and manic degradation. Treating surgical workers as ephemeral, single-shot probes (jit_one_shot) ensures that terminal traceback noise and failed syntax diffs die with the subagent session, keeping the orchestrator's context window pristine.",
+        "lab_anchors": [
+          "BKM-078",
+          "FEAT-655",
+          "WIS-482",
+          "INS-042"
+        ],
+        "review_notes": "Formalizes the one-shot disposable worker lifecycle and context isolation pattern.",
+        "last_refined_by": "AGY",
+        "refinement_version": 1,
+        "mutations": [],
+        "revisions": []
+      },
+      "metadata": {
+        "tags": [
+          "inspiration",
+          "disposable-worker",
+          "garbage-isolation",
+          "one-shot-contract",
+          "anti-spiral",
+          "swarm-governance"
+        ],
+        "explicit_links": [
+          "INS-042",
+          "INS-045",
+          "BKM-078",
+          "FEAT-655"
+        ],
+        "aliases": [
+          "PHL-046",
+          "ephemeral-garbage-isolation"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_systems_architecture"
+      }
+    },
+    {
+      "id": "INS-047",
+      "title": "Live is King, History is Queen",
+      "theme": "Grounding Philosophy & Physical Empirical Reality",
+      "paper_order": 47,
+      "origin": {
+        "author": "jallred",
+        "text": "Live is king, history is queen. Do NOT remove hard won code or features. Every time you consider removing a feature or a step or changing the batching behavior or renaming files etc, please correlate what you are doing with the most recent sprint that touched the features around that area. Use your DNA lookup tools heavily. I want you GROUNDED in the past. Write the sprint and report in text to me as well. keep track of and list out mistakes you would have made if not for this additional grounding... make it harder for you to gloss over things than it is to just read, you're REALLY good at reading, so use it! Positive context guidance ('Do Y because Z context guides you to do it this way').",
+        "source": "Federated Lab Sprint 101 Grounding Session",
+        "immutable": true,
+        "created_at": "2026-10-08T09:58:00Z"
+      },
+      "synthesis": {
+        "title": "Live is King, History is Queen",
+        "narrative_context": "The Sovereign Dyad of the Federated Lab. Live validation is King: fast unit tests and mocks verify isolated logic, but final task certification unconditionally requires verifying against the active running daemon (matching Git HEAD) and reachable physical silicon endpoints (BKM-024). History is Queen: sprints and DNA records are not passive human archives, but an active, curated state machine for autonomous agents (BKM-082). Live without History is blind\u2014doomed to repeat historical anti-patterns, misdiagnose multi-hour log horizons, and strip hard-won physical sentinels. History without Live is toothless\u2014producing theoretical plans that fail on physical silicon. The King executes sovereign authority on the physical floor; the Queen governs strategic memory and protects the realm from circular amnesia.",
+        "lab_anchors": [
+          "BKM-024",
+          "BKM-082",
+          "FEAT-659",
+          "FEAT-497",
+          "SCAR-035",
+          "INS-009",
+          "INS-033",
+          "INS-042"
+        ],
+        "review_notes": "Codifies the fundamental dialectic between live empirical validation (King) and historical sprint grounding (Queen).",
+        "last_refined_by": "AGY",
+        "refinement_version": 1,
+        "mutations": [],
+        "revisions": []
+      },
+      "metadata": {
+        "tags": [
+          "inspiration",
+          "live-is-king",
+          "history-is-queen",
+          "sovereign-dyad",
+          "grounding-mandate",
+          "anti-amnesia",
+          "physical-validation",
+          "positive-guidance"
+        ],
+        "explicit_links": [
+          "BKM-024",
+          "BKM-082",
+          "FEAT-659",
+          "FEAT-497",
+          "SCAR-035"
+        ],
+        "aliases": [
+          "PHL-047",
+          "sovereign-dyad-protocol",
+          "live-is-king-history-is-queen"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_grounding_philosophy"
+      }
     }
   ],
   "feature": [
@@ -24562,17 +24839,17 @@
     },
     {
       "id": "FEAT-064",
-      "title": "Static Site Synthesis (build_site.py)",
+      "title": "Static Site Synthesis & Public Airlock Invariant (build_site.py)",
       "origin": {
         "author": "Federated Lab",
-        "text": "Automated pipeline that clears caches and prepares the `www_deploy` directory for public hosting.",
+        "text": "1. **The Airlock Derivative Invariant:** `www_deploy` is an air-gapped, compiled public mirror and cache. It is NEVER the primary source of truth for application logic, scripts, or styles. Direct edits or manual patches to `www_deploy` are strictly classified as \"Fake Fixes\" because any subsequent build sweep will wipe or diverge from them.\n2. **Canonical Source Residency:** All frontend application code, UI styling, and logic live exclusively in `Portfolio_Dev/field_notes/` (e.g., `benchmarks.js`, `benchmarks.html`, `style.css`, `script.js`).\n3. **Internal vs Public Segregation:**\n   - **Public Airlock Pages (`www.jason-lab.dev`):** `index.html`, `stories.html`, `protocols.html`, `research.html`, and sanitized `public_benchmarks.html`. Only public assets are deployed to `www_deploy`.\n   - **Internal Mission Control Pages (`notes.jason-lab.dev`):** `benchmarks.html`, `features.html`, `intercom.html`, `status.html`, `files.html`. These are served directly from live source on port 9001 and are NEVER mixed into `www_deploy`.\n4. **Automated Synthesis Pipeline (`build_site.py`):**\n   - Compiles dynamic markdown schemas (`research.html`, `protocols.html`, `features.html`, `dna_forge.html`, `wisdom.html`, `timeline.html`).\n   - Calculates MD5 cache-busting hashes for all `SOURCE_FILES` (`style.css`, `script.js`, `benchmarks.js`, `intercom_v2.js`, etc.) and injects `?v=<hash>` into all HTML asset references.\n   - Generates Git anchor telemetry (`git_anchor.json`).\n   - Enforces byte-level parity via `deploy_to_airlock()`, synchronizing root assets whenever destination is missing, mtime is newer, or content hash differs (`get_hash(src) != get_hash(dst)`).\n5. **Agent Working Rule:** When addressing any UI issue, agents must edit `Portfolio_Dev/field_notes/` first, then run `python3 Portfolio_Dev/field_notes/build_site.py` to synthesize public assets. Direct edits to `www_deploy` are rejected in code review.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Automated pipeline that clears caches and prepares the `www_deploy` directory for public hosting.\n\nRuns `python3 field_notes/build_site.py` to trigger versioned cache-busting and asset bundling.",
+        "narrative_context": "1. **The Airlock Derivative Invariant:** `www_deploy` is an air-gapped, compiled public mirror and cache. It is NEVER the primary source of truth for application logic, scripts, or styles. Direct edits or manual patches to `www_deploy` are strictly classified as \"Fake Fixes\" because any subsequent build sweep will wipe or diverge from them.\n2. **Canonical Source Residency:** All frontend application code, UI styling, and logic live exclusively in `Portfolio_Dev/field_notes/` (e.g., `benchmarks.js`, `benchmarks.html`, `style.css`, `script.js`).\n3. **Internal vs Public Segregation:**\n   - **Public Airlock Pages (`www.jason-lab.dev`):** `index.html`, `stories.html`, `protocols.html`, `research.html`, and sanitized `public_benchmarks.html`. Only public assets are deployed to `www_deploy`.\n   - **Internal Mission Control Pages (`notes.jason-lab.dev`):** `benchmarks.html`, `features.html`, `intercom.html`, `status.html`, `files.html`. These are served directly from live source on port 9001 and are NEVER mixed into `www_deploy`.\n4. **Automated Synthesis Pipeline (`build_site.py`):**\n   - Compiles dynamic markdown schemas (`research.html`, `protocols.html`, `features.html`, `dna_forge.html`, `wisdom.html`, `timeline.html`).\n   - Calculates MD5 cache-busting hashes for all `SOURCE_FILES` (`style.css`, `script.js`, `benchmarks.js`, `intercom_v2.js`, etc.) and injects `?v=<hash>` into all HTML asset references.\n   - Generates Git anchor telemetry (`git_anchor.json`).\n   - Enforces byte-level parity via `deploy_to_airlock()`, synchronizing root assets whenever destination is missing, mtime is newer, or content hash differs (`get_hash(src) != get_hash(dst)`).\n5. **Agent Working Rule:** When addressing any UI issue, agents must edit `Portfolio_Dev/field_notes/` first, then run `python3 Portfolio_Dev/field_notes/build_site.py` to synthesize public assets. Direct edits to `www_deploy` are rejected in code review.\n\nRuns `python3 field_notes/build_site.py` to trigger versioned cache-busting, dynamic markdown compilation, and airlock synchronization.",
         "lab_anchors": [
-          "[field_notes/build_site.py](https://github.com/kEnder242/Portfolio_Dev/blob/main/field_notes/build_site.py#L1) \u2014 Static Site Synthesis (build_site.py)."
+          "[field_notes/build_site.py](https://github.com/kEnder242/Portfolio_Dev/blob/main/field_notes/build_site.py#L1) \u2014 Static Site Synthesis & Public Airlock Invariant."
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -29700,9 +29977,9 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Wraps RAG retrieval evidence within `<historical_record>` XML boundary tags during `HISTORICAL`, `FORENSIC`, and `TECHNICAL` turns, injecting a strict `GROUNDING_PROTOCOL` instruction restricting generation exclusively to tagged evidence.\n\nConditional string wrapping and positive grounding guidance injection in `cognitive_hub.py` (`_process_node_stream`).",
+        "narrative_context": "Wraps RAG retrieval evidence within `<historical_record>` XML boundary tags during `HISTORICAL`, `FORENSIC`, and `TECHNICAL` turns, injecting a strict `GROUNDING_PROTOCOL` instruction restricting generation exclusively to tagged evidence.\n\nConditional string wrapping and positive grounding guidance injection in `cognitive_hub.py` (`_process_node_stream` at line 1077).",
         "lab_anchors": [
-          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L514) \u2014 Tag-Delimited Grounding Isolation (<historical_record>)."
+          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L1077) \u2014 Tag-Delimited Grounding Isolation (<historical_record>)."
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -31081,16 +31358,16 @@
         "lab_anchors": [
           "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L1402) \u2014 Deep Thought Unified Preamble & Dynamic LLM Greeting Fusion."
         ],
-        "review_notes": "Status: UPDATED (Sprint 56)",
+        "review_notes": "Status: UPDATED (Sprint 56 / Superseded Sprint 103)",
         "refinement_version": 1
       },
       "metadata": {
         "tags": [
           "feature",
           "code-anchor",
-          "updated (sprint 56)"
+          "updated (sprint 56 / superseded sprint 103)"
         ],
-        "status": "UPDATED (Sprint 56)",
+        "status": "UPDATED (Sprint 56 / Superseded Sprint 103)",
         "bucket_id": "bucket_5_infra"
       }
     },
@@ -31933,17 +32210,17 @@
     },
     {
       "id": "FEAT-227",
-      "title": "Component Subsystem (FEAT-227)",
+      "title": "The Grounding Gate (V5)",
       "origin": {
         "author": "Federated Lab",
-        "text": "except Exception as e: logging.error(f\"[HUB] Journal ledger write failed: {e}\") [FEAT-247] Physical Audit Gate async def evaluate_grounding(self, source, text, interest=0.8, shutdown_event=None, request_id=\"default\", ...",
+        "text": "Restores character balance by prompting Pinky to critique or conversationally summarize Deep Thought's technical output directly into the Chat pane.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "except Exception as e: logging.error(f\"[HUB] Journal ledger write failed: {e}\") [FEAT-247] Physical Audit Gate async def evaluate_grounding(self, source, text, interest=0.8, shutdown_event=None, request_id=\"default\", ...\n\n`src/logic/cognitive_hub.py` at line 1157.",
+        "narrative_context": "Restores character balance by prompting Pinky to critique or conversationally summarize Deep Thought's technical output directly into the Chat pane.\n\n`src/logic/cognitive_hub.py` at line 2121 (`evaluate_grounding`).",
         "lab_anchors": [
-          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L1157) \u2014 Component Subsystem (FEAT-227)."
+          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L2121) \u2014 The Grounding Gate (V5)."
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -34147,28 +34424,28 @@
     },
     {
       "id": "FEAT-489",
-      "title": "Two-Mice Sequential Streaming Handover & Distillation Pipeline",
+      "title": "Two-Mice Sequential Streaming Handover & Deliberation Circuit",
       "origin": {
         "author": "Federated Lab",
-        "text": "Replaces uncoordinated parallel essays with a true self-aware dialogue between the lab's analytical and conversational resident nodes.",
+        "text": "Replaces uncoordinated parallel essays with a true self-aware dialogue between the lab's analytical and conversational resident nodes, backed by live coherence verification.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Orchestrates high-interest historical turns into a sequential two-mice distillation funnel: Brain extracts 3-4 dense technical bullet points from raw RAG context to the Right Console, and Pinky receives Brain's extract to deliver a conversational in-character TL;DR directly to the user on the Left Console.\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/nodes/pinky_critic_persona.py`, `src/tests/test_two_mice_handover.py`.",
+        "narrative_context": "Orchestrates high-interest turns into a sequential deliberation funnel under Macro Stage 3. Eliminates monolithic prompt confusion by decoupling extraction, synthesis, delivery, and audit into isolated micro-stages.\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/nodes/pinky_critic_persona.py`, `src/tests/test_two_mice_handover.py`, `src/tests/test_multi_stage_replay_pipeline.py`.",
         "lab_anchors": [
-          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L650) \u2014 Two-Mice Sequential Handover."
+          "[src/logic/cognitive_hub.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L2950) \u2014 Two-Mice Sequential Handover."
         ],
-        "review_notes": "Status: ACTIVE",
+        "review_notes": "Status: ACTIVE (Augmented Sprint 103)",
         "refinement_version": 1
       },
       "metadata": {
         "tags": [
           "feature",
           "code-anchor",
-          "active"
+          "active (augmented sprint 103)"
         ],
-        "status": "ACTIVE",
+        "status": "ACTIVE (Augmented Sprint 103)",
         "bucket_id": "bucket_5_infra"
       }
     },
@@ -34280,51 +34557,51 @@
     },
     {
       "id": "FEAT-494",
-      "title": "benchmarks.html 3-Tab Federated Silicon & ROI Workbench",
+      "title": "[CONSOLIDATED] benchmarks.html 3-Tab Federated Silicon Workbench",
       "origin": {
         "author": "Federated Lab",
-        "text": "Enables clear visualization of speed, cost, energy, and reasoning depth across all four federated hardware tiers.",
+        "text": "Eliminates misleading hypothetical estimations in favor of authenticated empirical telemetry from live homelab workloads.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Upgrades `benchmarks.html` from a single-node RTX 2080 Ti snapshot into a comprehensive 3-tab workbench: Tab 1 (Silicon Arena comparison), Tab 2 (Energy & Financial ROI Calculator), Tab 3 (Intelligence Quotient & CoT depth), plus an interactive live shakedown waterfall runner.\n\n`Portfolio_Dev/field_notes/benchmarks.html`, `Portfolio_Dev/field_notes/benchmarks_cache.json`.",
+        "narrative_context": "Upgrades `benchmarks.html` from a single-node snapshot into a streamlined 3-tab workbench grounded entirely in authenticated physical data stores:\n- **Tab 1 (Live Round Table Elapsed Time):** Physical deliberation checkpoints backed by `Portfolio_Dev/field_notes/data/round_table_deltas.json` (`[FEAT-525]`).\n- **Tab 2 (Model Throughput):** Real-time generation throughput and workload events backed by `Portfolio_Dev/field_notes/data/live_usage_stream.jsonl` (`[FEAT-496]`).\n- **Tab 3 (Sprint Delegation Gains):** Swarm delegation volume and financial sovereign savings backed by `Portfolio_Dev/field_notes/data/delegation_runs.json` and `HomeLabAI/data/delegation_ledger.jsonl` (`[FEAT-552]`).\n\n`Portfolio_Dev/field_notes/benchmarks.html`, `Portfolio_Dev/field_notes/benchmarks.js`, `Portfolio_Dev/field_notes/data/round_table_deltas.json`, `Portfolio_Dev/field_notes/data/live_usage_stream.jsonl`, `Portfolio_Dev/field_notes/data/delegation_runs.json`.",
         "lab_anchors": [],
-        "review_notes": "Status: ACTIVE",
+        "review_notes": "Status: CONSOLIDATED (Hypothetical ROI calculator DEFEATURED; superseded by [FEAT-525] and [FEAT-552] Empirical Telemetry)",
         "refinement_version": 1
       },
       "metadata": {
         "tags": [
           "feature",
           "code-anchor",
-          "active"
+          "consolidated (hypothetical roi calculator defeatured; superseded by [feat-525] and [feat-552] empirical telemetry)"
         ],
-        "status": "ACTIVE",
+        "status": "CONSOLIDATED (Hypothetical ROI calculator DEFEATURED; superseded by [FEAT-525] and [FEAT-552] Empirical Telemetry)",
         "bucket_id": "bucket_5_infra"
       }
     },
     {
       "id": "FEAT-495",
-      "title": "Dynamic Auto-Discovery Benchmark Engine & Nightly Sweep Integration",
+      "title": "Dynamic Auto-Discovery Benchmark Engine & Service De-escalation",
       "origin": {
         "author": "Federated Lab",
-        "text": "Ensures daily benchmarks automatically track resident model swaps and hardware changes without manual code edits.",
+        "text": "Real production dispatches provide higher-fidelity hardware calibration than synthetic probe pings.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Overhauls `bench_models.py` to dynamically query endpoints (`:8000/v1/models`, `:11434/api/tags`, `:8088/v1/models`), discovering whatever model is currently resident on each hardware seat without hardcoded names. Automatically updates `benchmarks_cache.json` and Prometheus metrics.\n\n`Portfolio_Dev/field_notes/bench_models.py`, `HomeLabAI/src/infra/nightly_forge.py`.",
+        "narrative_context": "Originally dynamically queried model endpoints to discover resident models. In Sprint 102 (`Story 102.20`), synthetic nightly benchmark sweeps in `nightly_forge.py` were retired in favor of continuous passive telemetry harvested from real multi-seat production workloads (`[FEAT-496]`), eliminating synthetic token burn and needless endpoint wakes.\n\n`Portfolio_Dev/field_notes/bench_models.py`, `HomeLabAI/src/infra/nightly_forge.py`.",
         "lab_anchors": [],
-        "review_notes": "Status: ACTIVE",
+        "review_notes": "Status: RETIRED / DECOUPLED (Synthetic nightly sweep decoupled in Sprint 102 Story 102.20; superseded by [FEAT-496] Continuous Passive Telemetry)",
         "refinement_version": 1
       },
       "metadata": {
         "tags": [
           "feature",
           "code-anchor",
-          "active"
+          "retired / decoupled (synthetic nightly sweep decoupled in sprint 102 story 102.20; superseded by [feat-496] continuous passive telemetry)"
         ],
-        "status": "ACTIVE",
+        "status": "RETIRED / DECOUPLED (Synthetic nightly sweep decoupled in Sprint 102 Story 102.20; superseded by [FEAT-496] Continuous Passive Telemetry)",
         "bucket_id": "bucket_5_infra"
       }
     },
@@ -34338,7 +34615,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Automatically logs real-world task execution metrics (seat, model, duration, token volume, throughput) to `Portfolio_Dev/field_notes/data/live_usage_stream.jsonl` upon every `delegate.py` completion, rendering a live workload activity waterfall on `benchmarks.html`.\n\n`HomeLabAI/src/tests/delegate.py`, `Portfolio_Dev/field_notes/benchmarks.html`.",
+        "narrative_context": "Automatically logs real-world task execution metrics (seat, model, duration, token volume, throughput) to `Portfolio_Dev/field_notes/data/live_usage_stream.jsonl` upon every `delegate.py` completion, rendering a live workload activity waterfall and scatter plot on `benchmarks.html`. Full 83+ authentic record history displayed in reverse chronological order with sticky table headers.\n\n`HomeLabAI/src/tests/delegate.py`, `Portfolio_Dev/field_notes/data/live_usage_stream.jsonl`, `Portfolio_Dev/field_notes/benchmarks.html`, `Portfolio_Dev/field_notes/benchmarks.js`.",
         "lab_anchors": [],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -34605,15 +34882,15 @@
     },
     {
       "id": "FEAT-523",
-      "title": "Round Table Context Scoping & Blackboard Ledger DNA",
+      "title": "Continuous Interest Multiplier Pacing",
       "origin": {
         "author": "Federated Lab",
-        "text": "Resolves long context bloat while keeping conversational agents self-aware across multi-turn sessions.",
+        "text": "Preserves conversational dynamism across the interest spectrum and eliminates the jarring runaway verbosity cliff when interest slightly crosses discrete thresholds.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Replaces string-sniffing with explicit `ContextScope` enum (`ContextScope.TURN` vs `ContextScope.LONG`). Triage and Deep Thought receive isolated `TURN` scope. Mice (Pinky & Brain) receive `LONG` scope with Blackboard Ledger + 1 prior turn. Brain writes distillation bullets; Pinky writes 1-line consensus; stored in ChromaDB `blackboard_ledger_dna`.\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/memory/blackboard_ledger.py`.",
+        "narrative_context": "Redefines conversational token budgeting from a discrete binary ternary step function (`1500 if interest >= 0.3 else 150`) into a continuous mathematical scalar multiplier: `clamp(int(current_interest * multiplier), floor, ceiling)` (default `multiplier: 150`, `floor: 32`, `ceiling: 1500`). Low interest smoothly tapers turn length toward zero without abrupt gags, while high interest grants proportional elaboration headroom. Generation profiles and repetition penalties are configured declaratively in `infrastructure.json`.\n\n`HomeLabAI/config/infrastructure.json`, `HomeLabAI/src/logic/cognitive_hub.py`.",
         "lab_anchors": [],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -34663,7 +34940,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Physical silicon stopwatch telemetry engine tracking the 5 sequential deliberation stages (Triage $\\rightarrow$ Pinky $\\rightarrow$ Brain $\\rightarrow$ Deep Thought / Oracle $\\rightarrow$ Pinky Judgment / Summary). Telemetry recording is strictly and exclusively bounded to Full Round Table turns ($d_{\\text{brain}} > 0$ and $d_{\\text{thought}} > 0$), bypassing single-actor casual dialogue turns to maintain pure multi-actor benchmark fidelity. Rendered in `benchmarks.html` via cumulative canvas waterfall charts and expandable Blackboard Ledger cards.\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/memory/blackboard_ledger.py`, `Portfolio_Dev/field_notes/benchmarks.html`, `Portfolio_Dev/field_notes/benchmarks.js`, `Portfolio_Dev/field_notes/data/round_table_deltas.json`.",
+        "narrative_context": "Physical silicon stopwatch telemetry engine tracking the 5 sequential deliberation stages (Triage $\\rightarrow$ Pinky $\\rightarrow$ Brain $\\rightarrow$ Deep Thought / Oracle $\\rightarrow$ Pinky Judgment / Summary). Telemetry recording is strictly and exclusively bounded to Full Round Table turns ($d_{\\text{brain}} > 0$ and $d_{\\text{thought}} > 0$), bypassing single-actor casual dialogue turns to maintain pure multi-actor benchmark fidelity. Rendered in `benchmarks.html` via cumulative canvas waterfall charts and expandable Blackboard Ledger cards. In Sprint 102, re-engineered turn sequencing to guarantee persistent monotonic integer indexing (`len(records) + 1`) across hub restarts, captured the operator's prompt into `round_table_deltas.json`, and rendered the prompt directly inside styled drawer cards.\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/memory/blackboard_ledger.py`, `Portfolio_Dev/field_notes/benchmarks.html`, `Portfolio_Dev/field_notes/benchmarks.js`, `Portfolio_Dev/field_notes/data/round_table_deltas.json`.",
         "lab_anchors": [
           "[field_notes/benchmarks.js](https://github.com/kEnder242/Portfolio_Dev/blob/main/field_notes/benchmarks.js#L380) \u2014 Round Table Delta-T Telemetry & Blackboard Drawer UI."
         ],
@@ -34742,18 +35019,18 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Dynamically bounds `ContextScope.TURN` and clamps token budget to 150 tokens for low-interest/casual queries (`importance < 0.3` or `vibe == 'CASUAL'`). Sanitizes `round_table_memory` against unclosed JSON blocks, excessive whitespace, and bounds session memory to the last 10 turns. Refines domain taxonomy to cleanly distinguish between `work_history` (18-year Intel/silicon career archive) and `acme_lab_history` (internal Acme Lab system events & DNA).\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/memory/blackboard_ledger.py`.",
+        "narrative_context": "Dynamically bounds `ContextScope.TURN` and modulates token budget via continuous interest pacing. Sanitizes `round_table_memory` against unclosed JSON blocks, excessive whitespace, and bounds session memory to the last 10 turns. Refines domain taxonomy to cleanly distinguish between `work_history` (18-year Intel/silicon career archive) and `acme_lab_history` (internal Acme Lab system events & DNA).\n\n`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/memory/blackboard_ledger.py`.",
         "lab_anchors": [],
-        "review_notes": "Status: ACTIVE",
+        "review_notes": "Status: ACTIVE (Partially Superseded)",
         "refinement_version": 1
       },
       "metadata": {
         "tags": [
           "feature",
           "code-anchor",
-          "active"
+          "active (partially superseded)"
         ],
-        "status": "ACTIVE",
+        "status": "ACTIVE (Partially Superseded)",
         "bucket_id": "bucket_5_infra"
       }
     },
@@ -35381,17 +35658,17 @@
     },
     {
       "id": "FEAT-552",
-      "title": "Structured Delegation Execution Ledger (`data/delegation_ledger.jsonl`)",
+      "title": "Structured Delegation Execution Ledger & Auto-Live Web Feed Hook",
       "origin": {
         "author": "Federated Lab",
-        "text": "Eliminates telemetry blindness across multi-attempt delegation loops, providing persistent auditability and forensic traceability for Tri-Loop governance.",
+        "text": "Eliminates telemetry blindness across multi-attempt delegation loops and ensures operators see up-to-the-second execution metrics on the web dashboard immediately upon story finish.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Automatically records every swarm delegation attempt into a machine-readable JSONL ledger (`HomeLabAI/data/delegation_ledger.jsonl`). Captures session IDs, target stories, providers, models, duration, token metrics (input/output/reasoning/cache), finish statuses, and deep diagnostic message traces on failures. Provides a clean ASCII table view via `python3 delegate.py --ledger`.\n\n`_log_delegation_ledger` and `--ledger` CLI action in `delegate.py`.",
+        "narrative_context": "Automatically records every swarm delegation attempt into machine-readable JSONL ledgers (`delegation_ledger.jsonl`). To guarantee zero-delay dashboard freshness, `delegate.py` immediately triggers `export_web_telemetry()` upon run completion, regenerating `delegation_runs.json` in real time. Simultaneously, `build_site.py` executes the export hook prior to copying data to the public airlock (`www_deploy/data/`), establishing a dual live-and-deploy publishing pipeline with zero dependency on nightly batch windows.\n\n`record_delegation()` in `delegate.py`, `export_web_telemetry()` in `sprint_telemetry.py`, and `deploy_to_airlock()` in `build_site.py`.",
         "lab_anchors": [
-          "[HomeLabAI/src/tests/delegate.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py) \u2014 Structured Delegation Execution Ledger & CLI Inspector."
+          "[HomeLabAI/src/tests/delegate.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/tests/delegate.py), [HomeLabAI/src/infra/sprint_telemetry.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/infra/sprint_telemetry.py), [Portfolio_Dev/field_notes/build_site.py](https://github.com/kEnder242/Portfolio_Dev/blob/main/field_notes/build_site.py)"
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -35787,14 +36064,14 @@
       "title": "Just-In-Time Context (JITC) Closed Loop & Ambient Hook Architecture",
       "origin": {
         "author": "Federated Lab",
-        "text": "Solves agent manic degradation over long contexts while eliminating Python subprocess startup latency via a sub-5ms `curl` micro-bridge (`ambient_hook.sh`) to resident Foyer/CLaRa daemons.",
+        "text": "Eliminates split-brain divergence by standardizing Layer 1 strategic planning (AGY or Cloud OpenCode personas) on a single canonical client library (`ambient_recall.py`), while enforcing a strict **Hook-Free Execution Law (BKM-076)** on Layer 2 conductors and Layer 3 leaf workers to eliminate context re-bloating and cognitive wandering during code synthesis loops.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Executes the 4-phase cognitive lifecycle (Triage -> Injection -> Save -> Dream). Inverts context window bloat into deterministic data retrieval by classifying user intents against ChromaDB in resident daemon memory prior to LLM generation, injecting minimal micro-grounding at runtime, and compressing session learnings into permanent DNA cards. Features turn-boundary transcript gating to enforce exactly 1 execution per user prompt, bypassing internal agent tool loops in <1ms.\n\n`ambient_recall.py`, `ambient_hook.sh`, Foyer REST endpoint `/ambient_recall` (:8765), CLaRa ChromaDB (:8001).",
+        "narrative_context": "Executes the 4-phase cognitive lifecycle (Triage -> Injection -> Save -> Dream). Inverts context window bloat into deterministic data retrieval by classifying user intents directly against the 24/7 resident ChromaDB daemon on port 8001 and local SQLite memories, injecting minimal micro-grounding with full uncropped markdown document text at runtime. Features turn-boundary transcript gating to enforce exactly 1 execution per user prompt, bypassing internal agent tool loops in <1ms.\n\n`ambient_recall.py`, `ambient_hook.sh`, CLaRa ChromaDB (:8001).",
         "lab_anchors": [
-          "[HomeLabAI/src/curator/ambient_recall.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/curator/ambient_recall.py) \u2014 Just-In-Time Context (JITC) Closed Loop & Ambient Hook Architecture."
+          "[HomeLabAI/src/curator/ambient_recall.py](https://github.com/kEnder242/HomeLabAI/blob/main/src/curator/ambient_recall.py) \u2014 Canonical Ambient Recall Library & ChromaDB Daemon Mesh."
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -36575,9 +36852,9 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Recalibrates pre-turn prompt hook latency from an artificial 25ms hard ceiling to a realistic 100ms soft budget / 250ms execution deadline. Implements a Two-Pass Universal Quota Routing strategy:\n1. **Pass 1 (Universal First Spot):** Guarantees that every peer DNA domain (`feature_dna`, `behavioral_dna`, `wisdom_dna`, `inspiration_dna`/`philosophy_dna`, `rdna`, and `loop_dna`/`vibe_dna`) is evaluated with a guaranteed top-1 slot under strict distance banding ($\\le 0.52$, or $\\le 0.58$ for QQ), eliminating keyword-conditional gating and preventing dense collections from crowding out philosophical, behavioral, or research anchors.\n2. **Pass 2 (Capacity Ceiling Fill):** Expands dense operational collections (`feature_dna` and `behavioral_dna` / `BKM`) up to a maximum capacity ceiling of 3 slots each to fill remaining prompt budget.\n\n`probe_claradb()` in `HomeLabAI/config/hooks/icm_hook.py`.",
+        "narrative_context": "Recalibrates pre-turn prompt hook latency from an artificial 25ms hard ceiling to a realistic 100ms soft budget / 250ms execution deadline. Implements a Two-Pass Universal Quota Routing strategy:\n1. **Pass 1 (Universal First Spot):** Guarantees that every peer DNA domain (`feature_dna`, `behavioral_dna`, `wisdom_dna`, `inspiration_dna`/`philosophy_dna`, `rdna`, and `loop_dna`/`vibe_dna`) is evaluated with a guaranteed top-1 slot under strict distance banding ($\\le 0.52$, or $\\le 0.58$ for QQ), eliminating keyword-conditional gating and preventing dense collections from crowding out philosophical, behavioral, or research anchors.\n2. **Pass 2 (Capacity Ceiling Fill):** Expands dense operational collections (`feature_dna` and `behavioral_dna` / `BKM`) up to a maximum capacity ceiling of 3 slots each to fill remaining prompt budget.\n\n`probe_claradb()` in `HomeLabAI/src/curator/ambient_recall.py`.",
         "lab_anchors": [
-          "`HomeLabAI/config/hooks/icm_hook.py`"
+          "`HomeLabAI/src/curator/ambient_recall.py`"
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -36602,9 +36879,9 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Telemetry watchdog embedded directly inside the ambient pre-turn hook. If hook execution exceeds 150ms or if any ChromaDB collection query fails/times out, the hook immediately injects a prominent warning header (`[\u26a0\ufe0f HOOK WARNING: ...]`) into the model prompt context and emits a colored alert to `stderr`.\n\nTiming decorator and error accumulator in `icm_hook.py`.",
+        "narrative_context": "Telemetry watchdog embedded directly inside the ambient pre-turn hook. If hook execution exceeds 150ms or if any ChromaDB collection query fails/times out, the hook immediately injects a prominent warning header (`[\u26a0\ufe0f HOOK WARNING: ...]`) into the model prompt context and emits a colored alert to `stderr`.\n\nTiming decorator and error accumulator in `HomeLabAI/src/curator/ambient_recall.py`.",
         "lab_anchors": [
-          "`HomeLabAI/config/hooks/icm_hook.py`"
+          "`HomeLabAI/src/curator/ambient_recall.py`"
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -36756,17 +37033,17 @@
     },
     {
       "id": "FEAT-635",
-      "title": "Brain Information Gatekeeper & Curator Synergy Annotations",
+      "title": "Brain Information Gatekeeper & Narrative Steering",
       "origin": {
         "author": "Federated Lab",
-        "text": "Eliminates prompt pollution and hallucination cascades in Deep Thought by guaranteeing high-density, strictly grounded context injection.",
+        "text": "Eliminates prompt pollution, hallucination cascades, and artificial conversation stalls in Deep Thought by guaranteeing high-density, strictly grounded context injection while preserving dialogue momentum.",
         "source": "FeatureTracker.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Transforms the local Brain node into an Information Gatekeeper. Brain evaluates candidate vectors collected by Pinky, drops ungrounded/tangential items without exposing negative distraction clutter to Deep Thought, forwards approved bedrock DNA text verbatim, and appends high-leverage `\ud83d\udca1 Curator Note: [ID] connects with [ID]` annotations. Brain also audits conversation history to trim stale turns and attach prior context notes when relevant.\n\n`BrainNode.curate_context()` and `CognitiveHub.build_deep_thought_context()`.",
+        "narrative_context": "Transforms the local Brain node into an Epistemic Gatekeeper and Narrative Reality Steerer. Brain evaluates candidate vectors collected by Pinky, prunes ungrounded/tangential items without exposing negative distraction clutter to Deep Thought, forwards approved bedrock DNA text verbatim, and appends high-leverage `\ud83d\udca1 Curator Note: [ID] connects with [ID]` annotations. Critically, Brain steers the narrative back to concrete reality rather than downvoting interest or stalling the conversational turn. Brain also audits conversation history to trim stale turns and attach prior context notes when relevant.\n\n`BrainNode.curate_context()`, `CognitiveHub.build_two_mice_stage_prompt()`, and `CognitiveHub.build_deep_thought_context()`.",
         "lab_anchors": [
-          "`HomeLabAI/src/nodes/brain_node.py`, `HomeLabAI/src/logic/cognitive_hub.py`"
+          "`HomeLabAI/src/nodes/brain_node.py`, `HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/tests/test_brain_voice_replay.py`"
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -36818,9 +37095,522 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "Formalizes the cross-node silicon API topology, port assignments, TurboQuant 4-bit KV cache compression bounds, and reasoning/thinking control mechanisms for Node KENDER (`192.168.1.26:11434` / Ollama / RTX 4090) and Apple M5 Air (`192.168.1.46:8002` / oMLX Headroom Proxy). Enforces reasoning suppression on M5 Air worker endpoints (`'reasoning': 0`) and Ollama conduction thinking controls.\n\nPort 8002 proxying, `opencode.json` provider config, and prompt generation directives.",
+        "narrative_context": "Formalizes the cross-node silicon API topology, port assignments, TurboQuant 4-bit KV cache compression bounds, and reasoning/thinking control mechanisms for Node KENDER (`192.168.1.26:11434` / Ollama / RTX 4090 via port `11435` proxy) and Apple M5 Air (`192.168.1.46:8002` / oMLX Headroom Proxy). Enforces hardware/proxy-level reasoning suppression on both local silicon endpoints (`'reasoning': 0`), eliminating prompt-level adversarial instructions.\n\nPort 8002 proxying (M5 Air), Port 11435 proxying (Kender), and `opencode.json` provider config.",
         "lab_anchors": [
           "`HomeLabAI/docs/LAB_INFRASTRUCTURE.md`, `opencode.json`, `HomeLabAI/docs/Protocols.md`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "LAB-116",
+      "title": "Kender Thought-Stripping Proxy & Silicon Decoupling Protocol",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Completely decouples thinking suppression from prompt templates or modelfiles, enforcing zero reasoning tokens directly in silicon.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Deploys a dedicated host-resident FastAPI/uvicorn proxy on port 11435 intercepting `/v1/chat/completions` from OpenCode to Node KENDER. Deletes `reasoning` and `reasoning_content` delta blocks from SSE streams and non-streaming responses, dropping empty reasoning chunks so OpenCode receives immediate text and tool calls without `<think>` loops.\n\n`kender-proxy.service` on port 11435 forwarding to Ollama port 11434.",
+        "lab_anchors": [
+          "`HomeLabAI/src/infra/kender_proxy.py`, `~/.config/systemd/user/kender-proxy.service`, `opencode.json`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-637",
+      "title": "Single-Home Runtime Data & Interleaved Accountability Engine",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Eliminates data drift between build artifacts and active runtime files while elevating morning health audits to the operator console.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Enforces single canonical home architecture for all dynamic ledgers, logs, and statuses directly in `Portfolio_Dev/field_notes/data/`. Eliminates split-brain multi-homed file writing to `www_deploy/data/`. Wires `status.html` `pollPager()` to ingest and interleave `accountability_ledger.jsonl` events into the unified forensic timeline.\n\nSingle-directory logging in `manager.py` and DOM timeline interleaving in `status.html`.",
+        "lab_anchors": [
+          "`Portfolio_Dev/field_notes/status.html`, `HomeLabAI/src/infra/daily_accountability_audit.py`, `HomeLabAI/src/v5/ignition/manager.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-638",
+      "title": "Intercom Fourth Wall Feedback UI & REST Bridge",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Closes the interactive feedback loop during live co-pilot pairing without requiring manual prompt critique.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Embeds discrete, interactive `\ud83d\udc4d` (thumbs up) and `\ud83d\udc4e` (thumbs down) feedback actuators into assistant chat bubbles in `intercom.html`. Dispatches asynchronous payloads (`{ \"message_id\": id, \"verdict\": \"UP\"|\"DOWN\", \"query\": q, \"response\": r }`) to Foyer port `:8765/feedback`, providing immediate visual feedback glow and persisting signals into `foyer_feedback_ledger.jsonl`.\n\nEvent listeners in `intercom_v2.js` and `POST /feedback` handler in `router.py`.",
+        "lab_anchors": [
+          "`Portfolio_Dev/field_notes/intercom.html`, `Portfolio_Dev/field_notes/intercom_v2.js`, `HomeLabAI/src/v5/foyer/router.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-639",
+      "title": "Attendant Dead-Lock Reaping, VRAM Status Clean-up & Queue Gate Hardening",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Guarantees self-healing from aborted nightly fine-tuning tasks and prevents message drop during engine transitions.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Implements an automated dead-lock reaping engine in the Lab Attendant at 05:45 AM that inspects PID liveness and forcibly purges orphaned `maintenance.lock` files, logging a `CRITICAL` alert and re-igniting vLLM via `/wake`. Corrects status serialization in `types.py` to output genuine states (`\"Lab Offline\"`, `\"Standby\"`, `\"Maintenance\"`) and locks the intercom \"Send\" button when Foyer is locked/offline, preserving unsent text in the client input area.\n\n`engine_watchdog.py` reaping sweep, `types.py` status mapper, and `intercom_v2.js` button gating.",
+        "lab_anchors": [
+          "`HomeLabAI/src/v5/foyer/router.py`, `HomeLabAI/src/v5/common/types.py`, `HomeLabAI/src/v5/ignition/manager.py`, `Portfolio_Dev/field_notes/intercom_v2.js`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-640",
+      "title": "Expanded Cognitive Vibe Palette & Speculative Head-Start Calibration",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Enhances reasoning depth and unlocks nuanced domain routing without introducing brittle keyword hardcoding.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Deprecates the catch-all `CASUAL` vibe in favor of an expressive cognitive taxonomy (`SOCRATIC`, `FORENSIC`, `CHRONICLE`, `RETROSPECTIVE`, `ARCHITECTURAL`, `TACTICAL`, `STRATEGIC`, `PROVOCATIVE`, `METABOLIC`). Injects gentle `semantic_hint` vector priors from sub-15ms FastEmbed ChromaDB probes (`BKM-015`) and calibrates the speculative relay to ensure REST-probed M5 Air is granted its full dynamic EWMA lead window before local vLLM fallback racing.\n\n`_extract_triage_intuition()` in `cognitive_hub.py` and `SpeculativeTriageRelay` in `speculative_triage.py`.",
+        "lab_anchors": [
+          "`HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/logic/speculative_triage.py`, `HomeLabAI/src/logic/vector_pre_triage.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-641",
+      "title": "Live Lab Vitals 6:00 AM Daily Sanity Check Badges & Passive Telemetry Guarantee",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Provides clear differentiation between live 5-second polling and authoritative 24-hour health baselines.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Enforces 100% passive, read-only status and telemetry polling across `/status`, `/sys_metrics`, `/telemetry_kpi`, and DCGM port 9400 with zero engine wake side effects. Quarantines vocal synthesis testing strictly to the 06:00 AM daily health audit and equips `status.html` vital cards with visual 06:00 AM baseline health sanity check badges.\n\n`live_telemetry.py` read-only probes and `status.html` DOM badge rendering.\n\n### [FEAT-642] Bounded Multi-Tier Reader (`clara-dna_read` & First-Touch AST Blueprint)",
+        "lab_anchors": [
+          "`Portfolio_Dev/field_notes/status.html`, `HomeLabAI/src/infra/live_telemetry.py`, `HomeLabAI/src/infra/daily_accountability_audit.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-643",
+      "title": "Asynchronous Semantic Pre-Warm (Neural Map-Reduce on M5 Air)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Preserves L2 conductor agency, dumps context bloat before L2 reads, and eliminates runaway multi-turn slicing loops by tricking L2 into receiving a complete, pre-chewed semantic map on Turn 1.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Implements a parallel semantic pre-warming pipeline during story delegation that dispatches declared target files to Node Brain (macOS M5 Air via Headroom port `:8002` running `TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp` with TurboQuant 4-bit KV compression) before session execution. M5 Air executes parallel neural Map-Reduce code summarization across target files via `ThreadPoolExecutor`, populating `/tmp/clara_context_cache.json` with high-density architectural digests (classes, lock paths, state machines, handlers). When the L2 conductor exercises agency by calling `clara-dna_read`, the tool serves the cached neural digest seamlessly alongside the dynamic AST blueprint in <10ms.\n\nCanonical `prewarm_files` in `context_prewarmer.py` invoked by `delegate.py` (`_prewarm_target_context`) and served via `clara_dna_mcp_server.py`.",
+        "lab_anchors": [
+          "`HomeLabAI/src/v5/cognition/context_prewarmer.py`, `HomeLabAI/src/tests/delegate.py`, `AcmeLab/src/clara_dna_mcp_server.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-647",
+      "title": "Subversive `jitc_research` MCP Tool & Swarm IPC Bridge",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Solves the L3 exploratory wandering failure mode by replacing static prompt injection with dynamic, tool-gated context delivery.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Implements a dedicated MCP tool `jitc_research(file_path, query)` acting as an inter-process communication bridge between L2 (Conductor) and L3 (Worker). When a leaf worker executes `jitc_research`, the tool matches the target file against conductor patch notes and returns high-density AST diff instructions and code snippets as \"empirical research findings\", bypassing prompt skepticism and guiding instant atomic patches on Turn 1.",
+        "lab_anchors": [
+          "`AcmeLab/src/clara_dna_mcp_server.py`, `HomeLabAI/src/tests/delegate.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-648",
+      "title": "Pre-Warmed Worker Session Resumption & Tool Blocking",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Eliminates cold-start subprocess latency and KV cache thrashing on M5 Air during rapid multi-story execution.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Caches unexpired worker session IDs across adjacent stories in `/tmp/active_warm_sessions.json`. Subsequent delegations reuse existing warm sessions via `POST /session/{id}/message` instead of spawning fresh sessions, preserving KV cache headroom on M5 Air port 8002 and reducing start latency below 500ms.",
+        "lab_anchors": [
+          "`HomeLabAI/src/v5/cognition/context_prewarmer.py`, `HomeLabAI/src/tests/delegate.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-649",
+      "title": "Subversive Swarm Zero-Wander Silicon Certification",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Certifies that the 27B local conductor/worker stack operates autonomously with empirical tool trust.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Validates end-to-end multi-tier local swarm execution across RTX 4090 (Qwen3.8-27B) and M5 Air (Ternary-Bonsai-2-27B) with zero unprompted `grep`/`read` exploration loops, enforcing <= 3 turns and < 60s duration per story.",
+        "lab_anchors": [
+          "`HomeLabAI/src/tests/delegate.py`, `Portfolio_Dev/field_notes/data/delegation_ledger.jsonl`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-650",
+      "title": "Ambient Delegation Telemetry & Headless Hook Integration",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Ensures operators and orchestrators maintain full ambient memory visibility during heads-down autonomous runs without manual typing.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Integrates ambient memory and knowledge hook triggering at the conclusion of every story delegation in `delegate.py`. Executes `ambient_hook.sh` against the resident daemon `:8765/ambient_recall` with the completed story context, surfacing ambient grounding headers, recent ICM memory changes, and telemetry directly to the console during autonomous headless runs.",
+        "lab_anchors": [
+          "`HomeLabAI/src/tests/delegate.py`, `HomeLabAI/config/scripts/ambient_hook.sh`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-651",
+      "title": "Live Round Table Deliberation Circuit & Zero-Mock Probe Harness",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Enforces BKM-062 and BKM-024 by preventing deceptive green-lie test passes and ensuring round table multi-agent deliberation is authenticated against running daemons.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Refactors round table accountability probes to eliminate all synthetic mocks, fake score fallbacks, and naive substring assertions. Probes execute genuine end-to-end multi-stage deliberation (Triage -> Pinky -> Brain Gatekeeper -> Deep Thought -> Pinky Critic) against live silicon endpoints, measuring physical token latency and recording genuine semantic consensus in `foyer_stage_ledger.jsonl` and `judge_backpressure.jsonl`.",
+        "lab_anchors": [
+          "`HomeLabAI/src/infra/probe_round_table_accountability.py`, `HomeLabAI/src/logic/cognitive_hub.py`, `HomeLabAI/src/v5/foyer/router.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-652",
+      "title": "Sovereign Decoupling & Autonomous Startup Ignition",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Eliminates event-loop blocking, network hang risks, and auto-ignition discrepancies during cold boot and resident reloads.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Enforces complete sovereign decoupling of local startup and ignition from remote secondary endpoints (Node KENDER / Node M5 Air). All remote background priming tasks execute as detached non-blocking coroutines with a strict 2.0s timeout and dynamic host resolution from `infrastructure.json`. The resident daemon automatically reconciles silicon state on `/reload_residents` if the lab is in `INIT` with hibernation disabled, preventing stranded scale-to-zero states.",
+        "lab_anchors": [
+          "`HomeLabAI/src/v5/ignition/manager.py`, `HomeLabAI/src/v5/foyer/router.py`, `HomeLabAI/src/logic/speculative_triage.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-653",
+      "title": "PID-Aware Stale VRAM Mutex Auto-Reclaim Protocol",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Prevents spurious `VRAM Mutex busy` ignition lockouts after unexpected process terminations.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Implements active PID recording and process liveness verification on `/tmp/vram.lock`. When lock acquisition encounters `fcntl.flock` contention (`OSError`), the manager reads the holding PID from disk and evaluates `os.kill(pid, 0)`. If the holding process is dead or orphaned from a prior crash/kill, the stale mutex is automatically broken and reclaimed without requiring manual operator intervention.",
+        "lab_anchors": [
+          "`HomeLabAI/src/v5/ignition/manager.py`"
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-654",
+      "title": "Dual-Mode Verification Mandate (Mock-Isolate + Live-Ready Architecture) & Airtight Live Gate",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Prevents \"green-lie\" sandbox drift across all autonomous tiers while providing models a structured escape hatch that guarantees end-to-end live verification integrity.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "1. **Dual-Mode Contract:** Demands that all code authored or modified during swarm delegation passes hermetic unit/mock assertions during the subagent sandbox run, while strictly maintaining live-ready production contracts (real endpoint resolution, dynamic config bindings, clean dependency injection). Delegation agents are forbidden from hardcoding synthetic mocks or stubbing out production paths to achieve false green passes.\n2. **The Delegation \"Way Out\" Protocol:** If a story inherently requires dependencies, physical GPU inference, or daemons unreachable within the isolated sandbox, subagents are permitted to complete unit-isolated mock execution, provided they emit the machine-readable tag `[LIVE_GATE_PENDING: daemon=<port/name> endpoint=<path> probe=<test_command>]` in their `[HANDOVER REFLECTION]`, specifying exact endpoints and live verification steps. Pure algorithmic stories with no daemon dependencies emit `[LIVE_GATE: PASSED]`.\n3. **Airtight Closed-Loop Governance (Generality):** Solves the multi-agent \"Green Sandbox Illusion\" where subagents pass isolated tests but produce code incompatible with production runtime. The dispatcher programmatically captures the live gate tag, records the pending status into the persistent ledger (`delegation_ledger.jsonl`), and renders a high-visibility gate banner to the primary orchestrator (AGY). Layer 1 (AGY) must execute final live certification against active running daemons (port 8765) and reachable silicon endpoints per BKM-024 before merging code to Git HEAD.",
+        "lab_anchors": [
+          "- [AGENTS_L2.md](https://github.com/kEnder242/Dev_Lab/blob/master/AGENTS_L2.md#L28) \u2014 Layer 2 Conductor Dual-Mode Contract & Live Gate Protocol."
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-655",
+      "title": "JIT One-Shot Surgical Contract & Anti-Spiral Orchestration",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Eliminates the quadratic context accumulation trap, prevents 27B model panic-fixing spirals, and enforces pristine separation between micro-execution and macro-orchestration.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "1. **The Single-Shot Worker Contract (`jit_one_shot`):** Constrains Layer 3 surgical workers (Junior on M5 Air) to an ephemeral, single-attempt task loop: Turn 1: Ingest blueprint and execute `safe_patch`; Turn 2: Run pytest; Turn 3: If pass, record `jit_checkpoint` and exit; if fail, perform in-context root-cause diagnosis, synthesize a 3-line recommendation report (assertion failure, root cause, recommended fix), and terminate immediately without attempting recursive self-fixing.\n2. **Context Garbage Isolation:** Prevents terminal traceback soup and intermediate failure diffs from accumulating in worker context or leaking upward to Layer 2. The failed execution context is discarded upon worker termination.\n3. **Layer 2 Anti-Spiral Orchestration:** Layer 2 (Atlas) retains the macro plan and session trajectory. Upon receiving Layer 3's recommendation report, Layer 2 evaluates whether the suggestion is regressive, circular (the \"Waffle Trap\" [INS-042]), or structurally sound. Layer 2 exercises executive judgment: if sound, it updates the blueprint via `jit_stage` and spawns a fresh, zero-mileage Layer 3 instance; if circular, Layer 2 rejects the suggestion and synthesizes an alternative architectural route.\n4. **Strict Staging & Task Invariant (Zero-Diff IPC):** Establishes the invariant that all file changes, replacement code blocks, AST line anchors, and patch blueprints must live exclusively in `jit_stage()`. File changes must NOT be in `task()`. If the conductor cannot express a dispatch without inlining diffs into `task()`, it must abort and escalate (invoke `ask_oracle`). Other operational instructions (staged target file names to research, macro directives, test commands) are passed cleanly through `task()`, forcing Layer 3 to pull blueprints through `jit_research()`.",
+        "lab_anchors": [
+          "- `Dev_Lab/AGENTS_L3.md` \u2014 Layer 3 Worker `jit_one_shot` contract (patch-test-diagnose-recommend, zero recursive retries)."
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-656",
+      "title": "Ask-Oracle Psychological Escalation & Clean-Kill Handback Protocol",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Eliminates open-ended model wandering without building complex live chat or bidirectional socket infrastructure. Atlas gets a structured, dignified \"way out\", and AGY receives structured empirical feedback immediately.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "1. **The Agency & Model Skepticism Paradox:** Open-weights conductor models (e.g. Qwen 27B) often resist halting or admitting defeat via `[BLOCKER REPORT]` when faced with ambiguous specifications, conflicting test assertions, or missing domain schemas. Models perceive termination as failure/loss of control, often spiraling into endless bash wandering or hallucinated code searches.\n2. **Psychological Peer Escalation:** Provides the model with an attractive, authoritative peer-consulting tool (`ask_oracle(question, current_hypothesis, code_inspected)`). The model believes it is consulting the Tier 1 Strategic Oracle (AGY) while maintaining conductor agency, rather than failing.\n3. **Clean-Kill Handback via Unix Harness:** When Atlas executes `ask_oracle`, the MCP server persists the consultation structured payload. The execution harness (`delegate.py`) intercepts the tool call in its live telemetry polling loop, logs `ORACLE_CONSULTATION_REQUESTED`, prints the structured diagnostic report directly to standard out for AGY, cleanly frees resources/aborts the active model stream, and exits with code 3.\n4. **Resumption & Session Reconnection:** OpenCode preserves the conversation history on its REST endpoint. Tier 1 (AGY) evaluates the consultation report in its prompt, resolves the architectural ambiguity or corrects the contract, and can seamlessly reconnect to the paused session via `delegate.py --resume <session_id> --answer '<guidance>'` or re-dispatch with corrected context.",
+        "lab_anchors": [
+          "- `HomeLabAI/src/mcp/clara_dna_mcp_server.py` \u2014 `@mcp.tool() ask_oracle` endpoint writing diagnostic payloads to `.jit_cache/oracle_request.json`."
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-659",
+      "title": "Sprint Grounding Run (Historical Anchoring & Horizon-Aware Pre-Flight Protocol)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Transforms historical documentation from passive archives into active, mandatory JITC guardrails, immunizing autonomous agents against circular traps and architectural amnesia.",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "1. **The Short Horizon Trap:** Under tight resources, overnight compute cascades (LoRA training, VRAM reallocation, daemon re-ignition), and distributed multi-tier orchestration, evaluating system state based only on the trailing 15 minutes of logs causes severe diagnostic blindness, circular fixes, and accidental deletion of hard-won hardware sentinels.\n2. **Mandatory 5-Sprint Lookback:** Before proposing or modifying sprint plans or executing code changes, agents must review the preceding 5 sprint plans and logs to internalize historical failure modes and design constraints.\n3. **Anti-Removal Invariant:** Hardware laws (e.g. 5.0s thermal pacing in `FEAT-160`, host memory gates in `LAB-110`, single-home runtime data in `FEAT-637`) must never be bypassed or deleted to solve time pressure; workloads must be proportionally calibrated instead.\n4. **Pre-Flight Mistakes Avoided Ledger:** Every sprint specification must document concrete mistakes that would have occurred without deep historical grounding.\n5. **Grounding Gap Declaration:** Any actionable item that cannot be anchored in past history or DNA must be declared as a gap and clarified with the operator before modifying code.",
+        "lab_anchors": [
+          "- `HomeLabAI/docs/Protocols.md` \u2014 Authoritative codification of `BKM-082`, mandating 5-sprint lookbacks, full log horizon inspection, anti-removal invariants, pre-flight mistake ledgers, and grounding gap audits across `BKM-005`, `BKM-006`, `BKM-020`, and `BKM-048`."
+        ],
+        "review_notes": "Status: ACTIVE",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "feature",
+          "code-anchor",
+          "active"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "FEAT-645",
+      "title": "Multi-Stage Replay Pipeline Harness & Contract Assertion",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "Replaces isolated, single-component mocks with end-to-end integration contracts, permanently immunizing the lab against \"The Green Lie\" (`BKM-062`).",
+        "source": "FeatureTracker.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "Standalone offline test harness (`test_multi_stage_replay_pipeline.py`) exercising the 5 decoupled round table stages (Pre-Triage $\\to$ Triage $\\to$ HyDE/RAG $\\to$ Brain Gatekeeper $\\to$ Deep Thought Strategic Synthesis / Pinky Voice Delivery) with frozen litmus fixtures (e.g. *Aurora / psys*). Asserts deterministic token emissions and schema compliance across all resident nodes offline in $< 2.0\\text{s}$.",
+        "lab_anchors": [
+          "`HomeLabAI/src/tests/test_multi_stage_replay_pipeline.py`, `HomeLabAI/src/logic/cognitive_hub.py`"
         ],
         "review_notes": "Status: ACTIVE",
         "refinement_version": 1
@@ -36847,7 +37637,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-001: The Cold-Start Protocol (Agent Orientation)\n**Objective**: Restore the Agent's technical context after a session break or crash.\n\n0.  **Orientation (Bootstrap)**:\n    *   Refer to the top-level **[BOOTSTRAP.md](../../BOOTSTRAP_v4.4.md)** for the primary navigational hub and global project context.\n    *   Consult **[ENGINEERING_PEDIGREE.md](./ENGINEERING_PEDIGREE.md)** for the active architectural laws and design breadcrumbs.\n    *   **Inventory Mandate**: Proactively identify existing \"wheels\" (tests, diagnostic scripts, and tools) in **[DIAGNOSTIC_RUNDOWN.md](./DIAGNOSTIC_RUNDOWN.md)** and **[TOOL_RUNDOWN.md](./TOOL_RUNDOWN.md)** before suggesting or implementing new code.\n    *   **State Snapshot**: Read the last 5 entries in **[00_FEDERATED_STATUS.md](../../Portfolio_Dev/00_FEDERATED_STATUS.md)** to identify the current \"Front Line\" and active sprint.\n    *   **Updates**: Take time to keep orientation files relevant, but preserve boostrap IMMUTABILITY PROTOCOL as it is a pointer not a orientation file.",
+        "narrative_context": "## BKM-001: The Cold-Start Protocol (Agent Orientation)\n**Objective**: Restore the Agent's technical context after a session break or crash.\n\n0.  **Orientation (Bootstrap)**:\n    *   Refer to the top-level **[BOOTSTRAP.md](../../BOOTSTRAP_v4.5.md)** for the primary navigational hub and global project context.\n    *   Consult **[ENGINEERING_PEDIGREE.md](./ENGINEERING_PEDIGREE.md)** for the active architectural laws and design breadcrumbs.\n    *   **Inventory Mandate**: Proactively identify existing \"wheels\" (tests, diagnostic scripts, and tools) in **[DIAGNOSTIC_RUNDOWN.md](./DIAGNOSTIC_RUNDOWN.md)** and **[TOOL_RUNDOWN.md](./TOOL_RUNDOWN.md)** before suggesting or implementing new code.\n    *   **State Snapshot**: Read the last 5 entries in **[00_FEDERATED_STATUS.md](../../Portfolio_Dev/00_FEDERATED_STATUS.md)** to identify the current \"Front Line\" and active sprint.\n    *   **Updates**: Take time to keep orientation files relevant, but preserve boostrap IMMUTABILITY PROTOCOL as it is a pointer not a orientation file.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -36955,7 +37745,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-005: The Design Studio (Greenlight before Code Change)\n**Objective**: Ensure alignment on naming, architecture, and persona before committing code.\n\n1.  **The Pitch**: Agent summarizes the goal in one sentence.\n2.  **The Options**: Agent presents 2-3 implementation paths (e.g., Simple, Robust, Experimental).\n3.  **The Naming Ceremony**: Explicit agreement on Nouns (Folders, DB Collections) and Verbs (Tool Names).\n4.  **The Contract**: User gives \"Greenlight\" to a specific path.",
+        "narrative_context": "## BKM-005: The Design Studio (Greenlight before Code Change)\n**Objective**: Ensure alignment on naming, architecture, and persona before committing code.\n\n0.  **Historical Grounding Check (BKM-082)**: Before formulating pitches or proposing code changes, the Agent MUST execute a **Sprint Grounding Run (BKM-082)**, reviewing the last 5 sprints and checking CLaRa DNA to ensure options do not repeat historical anti-patterns or strip hard-won physical sentinels.\n1.  **The Pitch**: Agent summarizes the goal in one sentence, explicitly correlated with past feature lineage.\n2.  **The Options**: Agent presents 2-3 implementation paths (e.g., Simple, Robust, Experimental).\n3.  **The Naming Ceremony**: Explicit agreement on Nouns (Folders, DB Collections) and Verbs (Tool Names).\n4.  **The Contract**: User gives \"Greenlight\" to a specific path.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -36982,7 +37772,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-006: Autonomous Work Protocol\n**Objective**: Enable deep Agent work cycles during user downtime while maintaining transparency.\n\n1.  **Autonomous Work Trigger**: Initiates an independent work cycle. The Agent works through the agreed-upon task list (from `ProjectStatus.md` or a specific session goal).\n2.  **AFK Hint**: User says \"AFK\" or \"Coffee Break\" to signal they are stepping away. The Agent should check for any queued tasks or proceed autonomously.\n3.  **Detailed Reasoning**: The agent must provide clear reasoning and explanations for each step during autonomous work. High visibility and verbosity is the standard for intent preservation and review.\n4.  **Efficiency**: The agent should complete as much of the plan as possible. If blocked by hardware or permissions, skip the item and maintain momentum on the next available task.\n5.  **Linting Mandate**: The Agent MUST use a linter (e.g., `ruff check`) or the **Atomic Patcher** for all code modifications during a Heads Down sprint to prevent \"Zero-Visibility\" regressions like `NameError`.\n6.  **Conclusion**: Once the backlog is exhausted or the sprint goal is achieved, exit heads down mode and provide the verbose **BKM-007** \"Heads Up\" report.\n7.  **Mid-Flight Guidance Capture (Recommended Practice)**: When the operator provides last-minute guidance, constraints, or preference hints within an \"AFK\" / \"Heads Down\" prompt, the agent is strongly encouraged to jot down these instructions into the active sprint plan (`SPRINT_PLAN_*.md`) or session notes under a dedicated `## \ud83d\udcdd Operator Directives & Mid-Flight Guidance` section. This acts as a reliable reminder so critical guidance is never forgotten during deep autonomous focus or context compaction.\n8.  **Delegation & Owner Tag Discipline (BKM-049)**: During an autonomous Heads Down sprint, every story MUST declare an Assigned Owner (`[SWARM:LOCAL]`, `[SWARM:CLOUD]`, or `[AGY:PRIMARY]`). The orchestrating agent must dispatch stories via `delegate.py` adhering to the Tri-Loop safety contracts, diagnostic retries, and handover reflection audits before taking over or mutating state directly.\n    *   **Caution Against Delegation Bypass**: Primary agents must NEVER bypass planned swarm delegation to directly write or edit code for `[SWARM:*]` stories. Skipping delegation circumvents swarm capability validation, corrupts telemetry, and denies worker models the diagnostic iterations required to improve playbook calibrations. Direct takeover (`[AGY:TAKEOVER]`) is strictly illegal without exhausted delegation attempts.",
+        "narrative_context": "## BKM-006: Autonomous Work Protocol\n**Objective**: Enable deep Agent work cycles during user downtime while maintaining transparency.\n\n1.  **Autonomous Work Trigger**: Initiates an independent work cycle. The Agent works through the agreed-upon task list (from `ProjectStatus.md` or a specific session goal).\n2.  **AFK Hint**: User says \"AFK\" or \"Coffee Break\" to signal they are stepping away. The Agent should check for any queued tasks or proceed autonomously.\n3.  **Detailed Reasoning**: The agent must provide clear reasoning and explanations for each step during autonomous work. High visibility and verbosity is the standard for intent preservation and review.\n4.  **Efficiency**: The agent should complete as much of the plan as possible. If blocked by hardware or permissions, skip the item and maintain momentum on the next available task.\n5.  **Linting Mandate**: The Agent MUST use a linter (e.g., `ruff check`) or the **Atomic Patcher** for all code modifications during a Heads Down sprint to prevent \"Zero-Visibility\" regressions like `NameError`.\n6.  **Conclusion**: Once the backlog is exhausted or the sprint goal is achieved, exit heads down mode and provide the verbose **BKM-007** \"Heads Up\" report.\n7.  **Mid-Flight Guidance Capture (Recommended Practice)**: When the operator provides last-minute guidance, constraints, or preference hints within an \"AFK\" / \"Heads Down\" prompt, the agent is strongly encouraged to jot down these instructions into the active sprint plan (`SPRINT_PLAN_*.md`) or session notes under a dedicated `## \ud83d\udcdd Operator Directives & Mid-Flight Guidance` section. This acts as a reliable reminder so critical guidance is never forgotten during deep autonomous focus or context compaction.\n8.  **Delegation & Owner Tag Discipline (BKM-049)**: During an autonomous Heads Down sprint, every story MUST declare an Assigned Owner (`[SWARM:LOCAL]`, `[SWARM:CLOUD]`, or `[AGY:PRIMARY]`). The orchestrating agent must dispatch stories via `delegate.py` adhering to the Tri-Loop safety contracts, diagnostic retries, and handover reflection audits before taking over or mutating state directly.\n    *   **Caution Against Delegation Bypass**: Primary agents must NEVER bypass planned swarm delegation to directly write or edit code for `[SWARM:*]` stories. Skipping delegation circumvents swarm capability validation, corrupts telemetry, and denies worker models the diagnostic iterations required to improve playbook calibrations. Direct takeover (`[AGY:TAKEOVER]`) is strictly illegal without exhausted delegation attempts.\n    *   **Bounded Conductor Context & Pre-Warming ([FEAT-642] / [FEAT-643] / [DISC-011])**: Conductor dispatches must pre-warm target file semantic digests into `/tmp/clara_context_cache.json`. Conductor workers operate under Bounded Reader (`clara-dna_read`), receiving structural AST blueprints and pre-warmed semantic digests in <400 tokens to eliminate multi-turn slicing loops and prevent context bloat.\n9.  **Pre-Execution Grounding Run (BKM-082)**: Before launching into autonomous code modification cycles, the Agent MUST execute a **Sprint Grounding Run (BKM-082)**. The Agent must verify that current environment symptoms are evaluated across the full multi-hour log horizon (not just the trailing 15 minutes), check the last 5 sprints for recurring failure modes, confirm that no hard-won hardware sentinels or physical pacing delays are bypassed, and document pre-flight mistakes avoided.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37198,7 +37988,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-015: Semantic Anchor Protocol (Anti-Drift & Indirection)\n**Objective**: Eliminate functional drift and rigid logic failures caused by hardcoded keywords or static list-matching.\n\n1.  **Prohibition of Hardcoding (Ghost Keywords)**: No domain keywords, rigid string lists, or static `switch/case` tool-mappings are permitted in `.py` logic blocks. All intent routing and behavioral mappings must be retrieved dynamically via vector similarity from ChromaDB (`behavioral_dna` collection). Static JSON anchor lists (`intent_anchors.json`) are deprecated legacy artifacts.\n2.  **The Vibe-First Mandate**: Every `CognitiveHub` dispatch or intent-routing check must perform a semantic \"Vibe Check\" (Vector or LLM classifier) before selecting tools, adapters, or cognitive loadouts.\n3.  **DNA-First Verification**: A feature is only certified `[COMPLETE]` if its implementation matches the \"Mechanism\" described in `FeatureTracker.md`. If the mechanism specifies \"Sentinel Pass\" and the code uses \"List-Matching,\" the status is `[PARTIAL/STALE]`.\n4.  **Physical Retrieval Exception**: Hardcoded regex (e.g. 4-digit year extraction for `YYYY.json` file loading) is permitted strictly for physical disk retrieval *after* semantic intent has been established. It must never be used to gate intent or replace semantic classification.",
+        "narrative_context": "## BKM-015: Semantic Anchor Protocol (Anti-Drift & Indirection)\n**Objective**: Eliminate functional drift and rigid logic failures caused by hardcoded keywords or static list-matching.\n\n1.  **Prohibition of Hardcoding (Ghost Keywords)**: No domain keywords, rigid string lists, or static `switch/case` tool-mappings are permitted in `.py` logic blocks. All intent routing and behavioral mappings must be retrieved dynamically via vector similarity from ChromaDB (`behavioral_dna` collection). Static JSON anchor lists (`intent_anchors.json`) are deprecated legacy artifacts.\n2.  **The Vibe-First Mandate**: Every `CognitiveHub` dispatch or intent-routing check must perform a semantic \"Vibe Check\" (Vector or LLM classifier) before selecting tools, adapters, or cognitive loadouts.\n3.  **DNA-First Verification**: A feature is only certified `[COMPLETE]` if its implementation matches the \"Mechanism\" described in `FeatureTracker.md`. If the mechanism specifies \"Sentinel Pass\" and the code uses \"List-Matching,\" the status is `[PARTIAL/STALE]`.\n4.  **The Symbolic Complement vs. Cognitive Substitution Boundary**:\n    *   **Permitted (Symbolic Complement)**: Regex and deterministic string operations are fully permitted to enforce physical boundaries, exact text anchoring, and mechanical retrieval. Examples: surgical patch anchoring in `safe_patch`, file path resolution in `locate_path`, badge ID token normalization in `get_protocol` (`BKM-\\d+`), and deterministic syntax linting (`ruff`/`bash -n`).\n    *   **Prohibited (Cognitive Substitution)**: Regex or hardcoded string heuristics must NEVER replace LLM cognitive synthesis, diagnostic reasoning, traceback comprehension, or intent classification. Exposing a regex pattern as an intelligent tool (e.g. `failure_whisperer` matching `E\\s+(.*)` to simulate diagnostic insight) violates this protocol by creating the illusion of an external oracle while wasting inference turns and context.\n5.  **Physical Retrieval Exception**: Hardcoded regex (e.g. 4-digit year extraction for `YYYY.json` file loading) is permitted strictly for physical disk retrieval *after* semantic intent has been established. It must never be used to gate intent or replace semantic classification.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37306,7 +38096,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-024: Validation-Aware Synchronization & Live Verification\n**Objective**: Lab must be current and left in a recoverable state that will recover to live automatically, ensuring physical daemon processes and silicon endpoints match active sprint code before task certification.\n\n1.  **The Recoverable State Invariant**:\n    *   **Liveness $\\neq$ Static Immobility**: Heavy compute operations (Nightly Forge training, VRAM reallocation, deep service resets) are legitimate lifecycle transitions. Quiescing or restarting the lab is expected when needed.\n    *   **Automatic Self-Healing**: Any process that claims exclusive hardware/VRAM or pauses the lab must be protected by a mutex/lockfile (`run/maintenance.lock`) and include a deterministic error-recovery path (`finally:` block) that wakes or restarts the service back to `OPERATIONAL` without requiring human intervention.\n2.  **Two-Tier Verification Standard**:\n    *   **Tier 1 (Fast Mock Isolation)**: Unit tests and mocked suites are encouraged for rapid iteration during local coding, offline AST/schema parsing, and edge-case unit verification.\n    *   **Tier 2 (Mandatory Live Certification)**: No task or bugfix may be marked complete based on mock tests alone. The Agent must verify against the active running daemon (`http://127.0.0.1:8765/status` matching local Git HEAD) and reachable hardware silicon seats.\n3.  **Sync-Gate & Fresh Bytecode (Git Anchor Contract)**: Pytest automatically checks local Git HEAD against the served boot commit (`git_anchor.json` == `daemon.boot_commit` == `git rev-parse HEAD`). If a mismatch is detected, the Agent must trigger a daemon restart/reload rather than ignoring the stale state.\n4.  **State Trust**: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration queries after every service restart.",
+        "narrative_context": "## BKM-024: Validation-Aware Synchronization & Live Verification\n**Feature Anchor:** `[BKM-024]` / `[FEAT-497]` / `[INS-047]` (\"Live is King, History is Queen\")  \n**Objective**: Lab must be current and left in a recoverable state that will recover to live automatically, ensuring physical daemon processes and silicon endpoints match active sprint code before task certification.\n\n\n1.  **The Recoverable State Invariant**:\n    *   **Liveness $\\neq$ Static Immobility**: Heavy compute operations (Nightly Forge training, VRAM reallocation, deep service resets) are legitimate lifecycle transitions. Quiescing or restarting the lab is expected when needed.\n    *   **Automatic Self-Healing**: Any process that claims exclusive hardware/VRAM or pauses the lab must be protected by a mutex/lockfile (`run/maintenance.lock`) and include a deterministic error-recovery path (`finally:` block) that wakes or restarts the service back to `OPERATIONAL` without requiring human intervention.\n2.  **Two-Tier Verification Standard**:\n    *   **Tier 1 (Fast Mock Isolation)**: Unit tests and mocked suites are encouraged for rapid iteration during local coding, offline AST/schema parsing, and edge-case unit verification.\n    *   **Tier 2 (Mandatory Live Certification)**: No task or bugfix may be marked complete based on mock tests alone. The Agent must verify against the active running daemon (`http://127.0.0.1:8765/status` matching local Git HEAD) and reachable hardware silicon seats.\n3.  **Sync-Gate & Fresh Bytecode (Git Anchor Contract)**: Pytest automatically checks local Git HEAD against the served boot commit (`git_anchor.json` == `daemon.boot_commit` == `git rev-parse HEAD`). If a mismatch is detected, the Agent must trigger a daemon restart/reload rather than ignoring the stale state.\n4.  **State Trust**: Do not assume background processes persisted cleanly across git commits or code refactors. Re-verify liveness and run live integration queries after every service restart.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37328,12 +38118,12 @@
       "title": "High-Fidelity Sprint Documentation (Intent Preservation)",
       "origin": {
         "author": "Federated Lab",
-        "text": "Prevent 'Loss of Intent' during context-window shifts or session restores.\n1.  **Task Verbosity**: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.\n2.  **Historical Trace**: Sprints must document the forensic anchors (logs, code fragments) that justify the change.\n3.  **Absolute Append**: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.\n4.  **No Summarization**: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.\n5.  **The Pre-Lock Forensic Gap Audit (Doc vs. Discussion Review)**:\n    Before requesting user Greenlight or finalizing any Sprint Plan, the orchestrator MUST perform a forensic comparison between the conversational design session and the draft markdown document across 5 mandatory verification gates:\n    * \ud83d\udd0d **Localized Root Causes**: Does every individual story contain a \"Why It Broke & Root Cause\" callout box? (Subagents dispatched via `delegate.py` see only their story in isolation; root cause context prevents blind patching).\n    * \ud83d\udccc **Buried Code Pointers**: Are exact filenames and line numbers cited for existing/reusable utilities (e.g., test probes, socket checkers, helper classes) to prevent reinventing the wheel?\n    * \ud83e\uddea **Literal Test Batteries**: Are concrete test input strings, phrases, and assertions printed verbatim in the story specification (never summarized as \"test edge cases\")?\n    * \ud83c\udfdb\ufe0f **Persona & Prompt Pillars**: Are shared bedrock environment prompts, interest levels, and turn-stage tags explicitly anchored in the prompt requirements?\n    * \ud83d\udce1 **Telemetry & Routing Contracts**: Are exact WebSocket packet types, channel names, and UI console targets defined?",
+        "text": "Prevent 'Loss of Intent' during context-window shifts or session restores.\n1.  **Task Verbosity**: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.\n2.  **Historical Trace**: Sprints must document the forensic anchors (logs, code fragments) that justify the change.\n3.  **Absolute Append**: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.\n4.  **No Summarization**: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.\n5.  **The Pre-Lock Forensic Gap Audit (Doc vs. Discussion Review)**:\n    Before requesting user Greenlight or finalizing any Sprint Plan, the orchestrator MUST perform a forensic comparison between the conversational design session and the draft markdown document across 5 mandatory verification gates:\n    * \ud83d\udd0d **Localized Root Causes**: Does every individual story contain a \"Why It Broke & Root Cause\" callout box? (Subagents dispatched via `delegate.py` see only their story in isolation; root cause context prevents blind patching).\n    * \ud83d\udccc **Buried Code Pointers**: Are exact filenames and line numbers cited for existing/reusable utilities (e.g., test probes, socket checkers, helper classes) to prevent reinventing the wheel?\n    * \ud83e\uddea **Literal Test Batteries**: Are concrete test input strings, phrases, and assertions printed verbatim in the story specification (never summarized as \"test edge cases\")?\n    * \ud83c\udfdb\ufe0f **Persona & Prompt Pillars**: Are shared bedrock environment prompts, interest levels, and turn-stage tags explicitly anchored in the prompt requirements?\n    * \ud83d\udce1 **Telemetry & Routing Contracts**: Are exact WebSocket packet types, channel names, and UI console targets defined?\n6.  **Mandatory Sprint Grounding Run Pre-Flight & Phase 0 Housekeeping (BKM-082)**:\n    Before finalizing or locking any Sprint Plan, the authoring agent MUST execute a **Sprint Grounding Run (BKM-082)**:\n    * \ud83d\udcdc **5-Sprint Lookback**: Document review of the preceding 5 sprint plans, logs, and retrospectives to ensure no historical anti-patterns or circular fixes are repeated.\n    * \ud83d\udeab **Pre-Flight Mistake Ledger**: Explicitly enumerate 3\u20135 concrete mistakes that would have been made without this grounding (e.g. patching wrong scripts, altering hardware pacing delays, creating multi-home duplicates).\n    * \ud83e\udded **Grounding Gap Declaration**: Assert zero ungrounded items or explicitly list open gaps requiring operator guidance before any code modification begins.\n    * \ud83d\udee0\ufe0f **Mandatory Phase 0: Pre-Execution Housekeeping**: Strictly bounded to repairing outdated doc pointers, correcting tool flags, and updating `FeatureTracker.md` / `DIAGNOSTIC_SCRIPT_MAP.md` identified *during planning/grounding* before story execution begins. In-flight tool failures during execution are treated as live harness friction under BKM-048/BKM-082, never deferred.",
         "source": "HomeLabAI/docs/Protocols.md",
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-020: High-Fidelity Sprint Documentation (Intent Preservation)\n**Objective**: Prevent 'Loss of Intent' during context-window shifts or session restores.\n1.  **Task Verbosity**: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.\n2.  **Historical Trace**: Sprints must document the forensic anchors (logs, code fragments) that justify the change.\n3.  **Absolute Append**: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.\n4.  **No Summarization**: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.\n5.  **The Pre-Lock Forensic Gap Audit (Doc vs. Discussion Review)**:\n    Before requesting user Greenlight or finalizing any Sprint Plan, the orchestrator MUST perform a forensic comparison between the conversational design session and the draft markdown document across 5 mandatory verification gates:\n    * \ud83d\udd0d **Localized Root Causes**: Does every individual story contain a \"Why It Broke & Root Cause\" callout box? (Subagents dispatched via `delegate.py` see only their story in isolation; root cause context prevents blind patching).\n    * \ud83d\udccc **Buried Code Pointers**: Are exact filenames and line numbers cited for existing/reusable utilities (e.g., test probes, socket checkers, helper classes) to prevent reinventing the wheel?\n    * \ud83e\uddea **Literal Test Batteries**: Are concrete test input strings, phrases, and assertions printed verbatim in the story specification (never summarized as \"test edge cases\")?\n    * \ud83c\udfdb\ufe0f **Persona & Prompt Pillars**: Are shared bedrock environment prompts, interest levels, and turn-stage tags explicitly anchored in the prompt requirements?\n    * \ud83d\udce1 **Telemetry & Routing Contracts**: Are exact WebSocket packet types, channel names, and UI console targets defined?",
+        "narrative_context": "## BKM-020: High-Fidelity Sprint Documentation (Intent Preservation)\n**Objective**: Prevent 'Loss of Intent' during context-window shifts or session restores.\n1.  **Task Verbosity**: Tasks must NOT be one-liners. They must include the 'Why' (Rationale), the 'How' (Mechanism), and the 'Proof' (Verification). Include verbatim snippets/reports from discussions to anchor the task.\n2.  **Historical Trace**: Sprints must document the forensic anchors (logs, code fragments) that justify the change.\n3.  **Absolute Append**: Do NOT re-write, overwrite, or summarize existing phases of an active sprint plan to 'save space.' New requirements or findings MUST be appended as new phases at the end of the document.\n4.  **No Summarization**: Do not slim down technical requirements for brevity. Detail is the only protection against agentic regression. Detail-rich reporting is the standard for intent preservation.\n5.  **The Pre-Lock Forensic Gap Audit (Doc vs. Discussion Review)**:\n    Before requesting user Greenlight or finalizing any Sprint Plan, the orchestrator MUST perform a forensic comparison between the conversational design session and the draft markdown document across 5 mandatory verification gates:\n    * \ud83d\udd0d **Localized Root Causes**: Does every individual story contain a \"Why It Broke & Root Cause\" callout box? (Subagents dispatched via `delegate.py` see only their story in isolation; root cause context prevents blind patching).\n    * \ud83d\udccc **Buried Code Pointers**: Are exact filenames and line numbers cited for existing/reusable utilities (e.g., test probes, socket checkers, helper classes) to prevent reinventing the wheel?\n    * \ud83e\uddea **Literal Test Batteries**: Are concrete test input strings, phrases, and assertions printed verbatim in the story specification (never summarized as \"test edge cases\")?\n    * \ud83c\udfdb\ufe0f **Persona & Prompt Pillars**: Are shared bedrock environment prompts, interest levels, and turn-stage tags explicitly anchored in the prompt requirements?\n    * \ud83d\udce1 **Telemetry & Routing Contracts**: Are exact WebSocket packet types, channel names, and UI console targets defined?\n6.  **Mandatory Sprint Grounding Run Pre-Flight & Phase 0 Housekeeping (BKM-082)**:\n    Before finalizing or locking any Sprint Plan, the authoring agent MUST execute a **Sprint Grounding Run (BKM-082)**:\n    * \ud83d\udcdc **5-Sprint Lookback**: Document review of the preceding 5 sprint plans, logs, and retrospectives to ensure no historical anti-patterns or circular fixes are repeated.\n    * \ud83d\udeab **Pre-Flight Mistake Ledger**: Explicitly enumerate 3\u20135 concrete mistakes that would have been made without this grounding (e.g. patching wrong scripts, altering hardware pacing delays, creating multi-home duplicates).\n    * \ud83e\udded **Grounding Gap Declaration**: Assert zero ungrounded items or explicitly list open gaps requiring operator guidance before any code modification begins.\n    * \ud83d\udee0\ufe0f **Mandatory Phase 0: Pre-Execution Housekeeping**: Strictly bounded to repairing outdated doc pointers, correcting tool flags, and updating `FeatureTracker.md` / `DIAGNOSTIC_SCRIPT_MAP.md` identified *during planning/grounding* before story execution begins. In-flight tool failures during execution are treated as live harness friction under BKM-048/BKM-082, never deferred.",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37738,7 +38528,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-041: Automagic DNA Injection & CLaRa MCP Bridge (The Agent Context Architecture)\n**Objective**: Guarantee that builder agents (AGY, OpenAgent) automagically receive grounded FEAT specs, BKM protocols, and architectural laws in their prompt context before every turn \u2014 while providing on-demand tool access for deep exact-ID lookups \u2014 at zero VRAM/GPU cost.\n\n1. **The Architecture (Dual-Channel Context Grounding)**:\n   Agent context grounding relies on two complementary channels working together:\n\n   ```\n   [Upstream Sources]\n   FeatureTracker.md (FEATs) + Protocols.md (BKMs) + LAB_INFRASTRUCTURE.md\n          \u2502\n          \u25bc (git pre-commit hook: sync_chroma_dna.py)\n   [ChromaDB Vector Server] (port 8001, chroma-server.service)\n          \u2502\n          \u251c\u2500\u2500\u2500\u25ba CHANNEL 1: AUTOMAGIC INJECTION (ICM + BeforeAgent Hook)\n          \u2502     `~/.config/icm/config.toml` (provider=\"chroma\", chroma_url=\"http://localhost:8001\")\n          \u2502     `settings.json` (\"BeforeAgent\": icm hook prompt)\n          \u2502     ==> Automagically injects top vector matches into system prompt BEFORE turn 1.\n          \u2502\n          \u2514\u2500\u2500\u2500\u25ba CHANNEL 2: ON-DEMAND MCP BRIDGE (clara-dna MCP Server)\n                `AcmeLab/src/clara_dna_mcp_server.py` (chromadb.HttpClient -> :8001)\n                `~/.gemini/config/mcp_config.json` (AGY) / `.opencode.json` (OpenAgent)\n                ==> Exposes query_dna(), get_protocol(), list_collections() for exact lookups.\n   ```\n\n2. **Channel 1: Automagic Context Injection (ICM Hook)**:\n   * **Turnkey Engine**: ICM (`/home/jallred/.local/bin/icm`) acts as the native prompt-injection plugin.\n   * **Configuration**: `~/.config/icm/config.toml` sets `provider = \"chroma\"` and `chroma_url = \"http://localhost:8001\"`. \n   * **Port Law**: **Port 8001 is ChromaDB.** (Port 8000 is Prometheus RAPL Exporter \u2014 pointing ICM to 8000 breaks vector retrieval).\n   * **Hook Registration**: `settings.json` registers `icm hook prompt` under `BeforeAgent`. On every prompt, ICM queries ChromaDB `:8001` via vector similarity and automagically prepends relevant context to the prompt before the LLM generates a response.\n\n3. **Channel 2: On-Demand Tool Bridge (`clara-dna` MCP Server)**:\n   * **Purpose**: Allows agents to run surgical, targeted lookups during execution (e.g. `get_protocol(\"BKM-015\")` or `query_dna(\"feature_dna\", \"Unity Pattern\")`).\n   * **Zero Overhead**: Uses `chromadb.HttpClient` to talk to port 8001 over HTTP. Zero VRAM, zero GPU, <1MB RAM.\n   * **Registration**:\n     * **AGY (Antigravity CLI v1.1.10)**: Registered in `~/.gemini/config/mcp_config.json` under `mcpServers.clara-dna`.\n     * **OpenAgent (OpenCode)**: Registered in `HomeLabAI/.opencode.json` under `mcp.clara-dna`.\n\n4. **Relationship & Identity Boundaries**:\n   * **AGY Identity**: AGY is Antigravity CLI (binary: `~/.local/bin/agy`). Config files live at `~/.gemini/antigravity-cli/settings.json` for settings/hooks and `~/.gemini/config/mcp_config.json` for MCP servers.\n   * **ICM vs. CLaRa DNA**: ICM remembers *what happened* across sessions; CLaRa DNA knows *what the architectural rules are* from ChromaDB `:8001`.\n   * **Lab HyDE vs. Agent Injection**: Cognitive Hub HyDE ([FEAT-436]) handles *user-facing* RAG for the lab runtime; ICM + CLaRa DNA handles *agent-facing* grounding for code builders.\n\n---",
+        "narrative_context": "## BKM-041: Automagic DNA Injection & CLaRa MCP Bridge (The Agent Context Architecture)\n**Objective**: Guarantee that builder agents (AGY, OpenAgent) automagically receive grounded FEAT specs, BKM protocols, and architectural laws in their prompt context before every turn \u2014 while providing on-demand tool access for deep exact-ID lookups \u2014 at zero VRAM/GPU cost.\n\n1. **The Architecture (Dual-Channel Context Grounding)**:\n   Agent context grounding relies on two complementary channels working together:\n\n   ```\n   [Upstream Sources]\n   FeatureTracker.md (FEATs) + Protocols.md (BKMs) + LAB_INFRASTRUCTURE.md\n          \u2502\n          \u25bc (git pre-commit hook: sync_chroma_dna.py)\n   [ChromaDB Vector Server] (port 8001, chroma-server.service)\n          \u2502\n          \u251c\u2500\u2500\u2500\u25ba CHANNEL 1: AUTOMAGIC INJECTION (ICM + BeforeAgent Hook)\n          \u2502     `~/.config/icm/config.toml` (provider=\"chroma\", chroma_url=\"http://localhost:8001\")\n          \u2502     `settings.json` (\"BeforeAgent\": icm hook prompt)\n          \u2502     ==> Automagically injects top vector matches into system prompt BEFORE turn 1.\n          \u2502\n          \u2514\u2500\u2500\u2500\u25ba CHANNEL 2: ON-DEMAND MCP BRIDGE (clara-dna MCP Server)\n                `HomeLabAI/src/mcp/clara_dna_mcp_server.py` (chromadb.HttpClient -> :8001)\n                `~/.gemini/config/mcp_config.json` (AGY) / `.opencode.json` (OpenAgent)\n                ==> Exposes query_dna(), get_protocol(), list_collections() for exact lookups.\n   ```\n\n2. **Channel 1: Automagic Context Injection (ICM / Ambient Hook)**:\n   * **Target Layer**: Strictly dedicated to **Layer 1 (Strategic Planning & Architecture)**\u2014whether operating via AGY CLI or via Cloud OpenCode planning orchestrators (e.g., Prometheus / Sisyphus Cloud personas).\n   * **Turnkey Engine**: `ambient_hook.sh` / ICM (`/home/jallred/.local/bin/icm`) acts as the pre-invocation prompt-injection engine.\n   * **Configuration**: `~/.config/icm/config.toml` sets `provider = \"chroma\"` and `chroma_url = \"http://localhost:8001\"`. \n   * **Port Law**: **Port 8001 is ChromaDB.** (Port 8000 is Prometheus RAPL Exporter \u2014 pointing ICM to 8000 breaks vector retrieval).\n   * **Execution Isolation Law (BKM-076)**: **Layers 2 & 3 (Conductor Atlas & Worker Junior) are STRICTLY EXEMPT from pre-invocation prompt hooks.** Injecting ambient vector memories into local code-editing loops induces KV cache bloat, tool-output feedback contamination, and cognitive wandering. L2/L3 operate exclusively on staged contracts, AST outlines, and compiler/pytest tracebacks.\n\n3. **Channel 2: On-Demand Tool Bridge (`clara-dna` MCP Server)**:\n   * **Purpose**: Allows agents across all layers to run surgical, on-demand lookups during execution (e.g. `get_protocol(\"BKM-015\")`, `query_dna(\"feature_dna\", \"Unity Pattern\")`, or `clara-dna_read()`).\n   * **Zero Overhead**: Uses `chromadb.HttpClient` to talk to port 8001 over HTTP. Zero VRAM, zero GPU, <1MB RAM.\n   * **Registration**:\n     * **AGY (Antigravity CLI v1.1.10)**: Registered in `~/.gemini/config/mcp_config.json` under `mcpServers.clara-dna`.\n     * **OpenAgent (OpenCode)**: Registered in `HomeLabAI/.opencode.json` under `mcp.clara-dna`.\n\n4. **Relationship & Identity Boundaries**:\n   * **AGY & Cloud OpenCode Identity**: Frontier intelligence orchestrators (AGY, Cloud Prometheus/Sisyphus) manage sprint plans, cross-system invariants, and acceptance gates.\n   * **Local Swarm Identity**: Atlas ($L_2$ Conductor on 4090) and Junior ($L_3$ Worker on M5 Air) execute surgical AST modifications and live verification without ambient prompt noise.\n   * **ICM vs. CLaRa DNA**: ICM remembers *what happened* across sessions; CLaRa DNA knows *what the architectural rules are* from ChromaDB `:8001`.\n   * **Lab HyDE vs. Agent Injection**: Cognitive Hub HyDE ([FEAT-436]) handles *user-facing* RAG for the lab runtime; ICM + CLaRa DNA handles *agent-facing* grounding for code builders.\n\n---",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37927,7 +38717,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-048: Just-in-Time (JIT) Context Interleaving & The \"Fingertips\" Protocol\n**Feature Anchor:** `[FEAT-515]` / `[BKM-048]`  \n**Domain:** Layered Swarm Delegation, Token Budget Optimization, and On-Disk JIT Execution  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Law: Bake Context In (Do Not Require Search Lookups)\n* **\u274c FORBIDDEN:** Telling a local 14B/27B worker to \"Go query ChromaDB\", \"Go look up BKM-043\", or \"Explore the codebase for imports\". Local attention spans dilute instantly across multi-step research turns, causing memory ceilings and hallucinations.\n* **\u2705 THE \"FINGERTIPS\" LAW:** All necessary context, symbol anchors, import paths, code stubs, and tool schemas MUST be **baked directly into the sprint story on disk**.\n* **POINTER-BASED DELEGATION:** \n  1. **Layer 1 (AGY)** writes the complete self-contained 4-anchor story block into the sprint document.\n  2. **Layer 2 (Atlas)** routes a lean pointer (`< 300` tokens) via `task(category=\"...\", prompt=\"Execute Story X in <sprint_doc> (Section: Story X)...\")`.\n  3. **Layer 3 (Junior)** reads its specific story section on disk. Everything it needs is directly at its fingertips in that section\u2014zero search, zero tool exploration required.\n\n### 2. Three-Layer JIT Authoring & Execution Architecture\n* **Layer 1: Strategic Guardian (AGY / Gemini)** \u2192 Guides: `[BKM-030]` & `[BKM-043]`\n  * Authors the Sprint Plan as the canonical on-disk \"JIT Container\" using clean Markdown (no ASCII art boxes).\n  * Bakes the 4 anchors, tool laws, and pytest commands directly into every story section.\n* **Layer 2: Tactical Router (Atlas on Windows RTX 4090 / Ollama)** \u2192 Guide: `[BKM-034]`\n  * Absorbs broad sprint context (14.8 GB KV cache headroom).\n  * Strict L2 Invariants: Pure router. NEVER writes code or edits files.\n  * Emits exactly ONE pointer dispatch per turn. Never serializes large code blocks across `task()` parameters.\n  * Relays Junior's blockers straight up to AGY; provides a 2-sentence handover reflection on instruction clarity.\n* **Layer 3: Fast Surgical Worker (Sisyphus-Junior on KENDER 4090 / M5 Air)** \u2192 Guide: `[BKM-048]`\n  * Reads its exact 4-anchor section on disk (< 1,500 tokens).\n  * Strict L3 Invariants: Anti-exploratory. Heavy tools (`icm_*`, `websearch_*`, `codegraph_*`) denied via `[BKM-051]`.\n  * Executes edits via `clara-dna_safe_patch` (or `write` for new files) and runs assigned `pytest`.\n  * Halts immediately on missing types; emits `[BLOCKER REPORT: <CATEGORY>] <details>` upward.\n\n### 3. Harness Resilience & Escalation Protocol\n* If a subagent terminates on an interactive popup or silent finish (`finish=unknown`), `delegate.py` breaks out with code 2 (`AWAITING_INPUT`) and provides a resume command.\n* *\"When delegation stumbles, we halt the sprint to fix the harness; we never manually bypass the failure to finish the sprint.\"*\n\n---",
+        "narrative_context": "## BKM-048: Just-in-Time (JIT) Context Interleaving & The \"Fingertips\" Protocol\n**Feature Anchor:** `[FEAT-515]` / `[BKM-048]`  \n**Domain:** Layered Swarm Delegation, Token Budget Optimization, and On-Disk JIT Execution  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Law: Bake Context In (Do Not Require Search Lookups)\n* **\u274c FORBIDDEN:** Telling a local 14B/27B worker to \"Go query ChromaDB\", \"Go look up BKM-043\", or \"Explore the codebase for imports\". Local attention spans dilute instantly across multi-step research turns, causing memory ceilings and hallucinations.\n* **\u2705 THE \"FINGERTIPS\" LAW:** All necessary context, symbol anchors, import paths, code stubs, and tool schemas MUST be **baked directly into the sprint story on disk**.\n* **POINTER-BASED DELEGATION:** \n  1. **Layer 1 (AGY)** writes the complete self-contained 4-anchor story block into the sprint document.\n  2. **Layer 2 (Atlas)** routes a lean pointer (`< 300` tokens) via `task(category=\"...\", prompt=\"Execute Story X in <sprint_doc> (Section: Story X)...\")`.\n  3. **Layer 3 (Junior)** reads its specific story section on disk. Everything it needs is directly at its fingertips in that section\u2014zero search, zero tool exploration required.\n\n### 2. Three-Layer JIT Authoring & Execution Architecture\n* **Layer 1: Strategic Guardian (AGY / Gemini)** \u2192 Guides: `[BKM-030]`, `[BKM-043]` & `[BKM-082]`\n  * Authors the Sprint Plan as the canonical on-disk \"JIT Container\" using clean Markdown (no ASCII art boxes).\n  * Executes the **Sprint Grounding Run (`[BKM-082]`)** across the last 5 sprints before authoring stories to ensure JIT anchors do not repeat historical anti-patterns or strip hard-won physical sentinels.\n  * Bakes the 4 anchors, tool laws, and pytest commands directly into every story section.\n* **Layer 2: Tactical Router (Atlas on Windows RTX 4090 / Ollama)** \u2192 Guide: `[BKM-034]`\n  * Absorbs broad sprint context (14.8 GB KV cache headroom).\n  * Strict L2 Invariants: Pure router. NEVER writes code or edits files.\n  * Emits exactly ONE pointer dispatch per turn. Never serializes large code blocks across `task()` parameters.\n  * Relays Junior's blockers straight up to AGY; provides a 2-sentence handover reflection on instruction clarity.\n* **Layer 3: Fast Surgical Worker (Sisyphus-Junior on KENDER 4090 / M5 Air)** \u2192 Guide: `[BKM-048]`\n  * Reads its exact 4-anchor section on disk (< 1,500 tokens).\n  * Strict L3 Invariants: Anti-exploratory. Heavy tools (`icm_*`, `websearch_*`, `codegraph_*`) denied via `[BKM-051]`.\n  * Executes edits via `clara-dna_safe_patch` (or `write` for new files) and runs assigned `pytest`.\n  * Halts immediately on missing types; emits `[BLOCKER REPORT: <CATEGORY>] <details>` upward.\n\n### 3. Harness Resilience & Escalation Protocol\n* If a subagent terminates on an interactive popup or silent finish (`finish=unknown`), `delegate.py` breaks out with code 2 (`AWAITING_INPUT`) and provides a resume command.\n* *\"When delegation stumbles, we halt the sprint to fix the harness; we never manually bypass the failure to finish the sprint.\"*\n\n---",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -37981,7 +38771,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-049: The Delegation Execution Rulebook (Tri-Loop Story Delegation Protocol)\n**Feature Anchor:** `[FEAT-522]` / `[BKM-049]` / `[BKM-071]` / `[BKM-069]` / `[VIBE-009]`  \n**Domain:** Swarm Delegation, Autonomous Subagent Execution, Story Lifecycle & Execution Invariants  \n**Status:** ACTIVE / MANDATORY  \n\n#### 1. The Tri-Loop Law\n1. **Execution Tiers & Retry Boundaries:**\n   * **`[SWARM:LOCAL]` (The 3-Loop Diagnostic Mandate):** When targeting sovereign local silicon (Windows RTX 4090 Kender + macOS M5 Air Brain), the orchestrator MUST execute up to **3 full diagnostic remediation rounds on local silicon** (Attempt 1a \u2192 diagnose & fix harness/prompt/knobs via [BKM-071] \u2192 Attempt 1b \u2192 Attempt 1c). Any failure on Attempt 1 requires the orchestrator to diagnose the failure, adjust the harness/config/prompt, and retry on local. Local silicon is NEVER abandoned after a single failure. Only after all 3 diagnosed local attempts are exhausted does the story escalate to Cloud Swarm (`[SWARM:CLOUD]`), followed by Primary Takeover (`[AGY:TAKEOVER]`).\n   * **`[SWARM:CLOUD]` (Direct Cloud Route):** When a story is tagged `[SWARM:CLOUD]`, local attempts are skipped entirely. The dispatch routes directly to Cloud Swarm (Groq / OpenCode Cloud / Big-Pickle / Cohere). If Cloud Swarm fails, it skips local retries and routes straight to Primary Takeover (`[AGY:TAKEOVER]`).\n   * **`[AGY:PRIMARY]` (Direct Architectural Core):** Architectural scaffolding, protocol governance, and schema bootstrap executed directly by the primary agent.\n2. **Never Blindly Retry (Zero Internal Script Loops):** `delegate.py` is strictly a single-shot execution harness. Retries are smart outer-loop operations driven by AGY diagnostics, never blind script-level loops. A retry within local silicon (or between escalation tiers) is strictly defined as an execution attempt preceded by root-cause diagnosis and harness/prompt remediation per **[BKM-071]**.\n3. **Non-Convergence Circuit Breaker (\"Definition of Insanity\" Law):** If a local worker generates degenerate output, enters an unrecoverable non-convergent loop, or demonstrates fundamental capacity failure for a specific task and a viable harness/prompt remedy is not apparent, the orchestrator is authorized to trip the circuit breaker immediately. The orchestrator logs the diagnostic failure reason in the sprint ledger and escalates directly to `[SWARM:CLOUD]` or `[AGY:TAKEOVER]` without burning identical futile retry cycles.\n4. **Safe-Patch Mandate (Anti-Bash-Clobber):** Subagents MUST NOT use destructive bash file writes (`cat << 'EOF' >` or `echo >`) on existing codebase files. Subagents must invoke `clara-dna_safe_patch` (or atomic patchers) for existing files, reserving `write` strictly for new standalone files.\n\n#### 2. The 5-Minute Watchdog & Inspection Gate Law\n1. **Inspection Gate, Not an Automatic Kill:** The 5-minute watchdog ceiling is an **Inspection Gate**, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.\n2. **Active Progress Probe:** At the 5-minute mark, the orchestrator must inspect the live session:\n   - Query `GET /session/{id}` or `GET /session/{id}/message` to inspect token generation and tool calls.\n   - **Progressing:** If tokens are actively flowing and constructive work is progressing, extend the timer window.\n   - **Stalled:** If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.\n3. **Mandatory Zombie Cleanup:** When an attempt is halted, timed out, or interrupted, the harness (`delegate.py`) and orchestrator MUST issue an explicit `POST /session/{id}/abort` frame to the OpenCode REST port (`4097`). Never allow orphaned subagent loops to churn GPU silicon after client disconnects.\n\n#### 3. The Story Owner Tag & Anti-Bypass Guard\n1. **Mandatory Owner Tag in Sprint Stories:** Every story defined in `SPRINT_PLAN_*.md` MUST specify an explicit `Assigned Owner:` tag:\n   - `[SWARM:LOCAL]`: Story is assigned to local silicon execution via `delegate.py` with up to 3 diagnostic remediation rounds on local silicon.\n   - `[SWARM:CLOUD]`: Story is assigned to cloud swarm burst via `delegate.py` directly, skipping local retries.\n   - `[AGY:PRIMARY]`: Story is architectural, diagnostic, or governance work reserved for the primary orchestrator.\n2. **Anti-Bypass Invariant:** When a story is tagged `[SWARM:*]`, the primary agent (AGY) is **strictly forbidden from directly modifying the story's target codebase files** without first executing delegation attempts via `delegate.py` (including all 3 local diagnostic rounds for `[SWARM:LOCAL]`).\n3. **Escalation Record Required:** AGY direct code takeover (`[AGY:TAKEOVER]`) is only permissible after the assigned swarm tier (and its required diagnostic retries) has executed, failed, and logged an explicit diagnostic post-mortem in the sprint report. Direct coding on swarm-tagged stories without prior delegation attempts is a high-severity operational violation.\n\n#### 4. Sovereign Local Silicon Topology Invariant (KENDER -> Air)\n1. **The Sovereign Conductor & Leaf Worker Pattern:**\n   `[SWARM:LOCAL]` execution MUST strictly adhere to the canonical bicameral silicon topology:\n   - **Conductor (Root Dispatch / Architectural Roles):** Node KENDER (Windows RTX 4090 Ollama: `hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL` / `Atlas` / `Architect`). Receives the sprint story, conducts architecture planning, and dispatches bounded leaf tasks.\n   - **Leaf Worker (Surgical Patching / Execution):** Node Brain (macOS M5 Air MLX via Headroom `:8002`: `TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp` / `Sisyphus-Junior` or `Daedalus`). Receives spoon-fed 4-anchor tasks, applies atomic `clara-dna_safe_patch` edits, and is strictly forbidden from delegating further (`task: deny`).\n2. **Topology Deviation Invariant:** Any inversion or deviation from this pattern constitutes an immediate operational failure. `delegate.py` and diagnostic monitors MUST enforce this check and fail immediately upon deviation.\n\n#### 5. Handover Reflection Ingestion & Feedback Record\n1. **Standardized Reflection Capture:** Every delegation dispatch automatically extracts the subagent's `[HANDOVER REFLECTION]` reporting what tripped it up, what was missing/ambiguous, and what single change would accelerate completion.\n2. **Persistent Storage:** Reflections are persisted to `icm store -t delegation_feedback` and recorded in `HomeLabAI/data/delegation_ledger.jsonl`.\n3. **Inter-Attempt Diagnostic Index:** For all failure diagnosis, prompt tuning, circular trap prevention, and playbook references, proceed immediately to **[BKM-071]**.\n\n---",
+        "narrative_context": "## BKM-049: The Delegation Execution Rulebook (Tri-Loop Story Delegation Protocol)\n**Feature Anchor:** `[FEAT-522]` / `[BKM-049]` / `[BKM-071]` / `[BKM-069]` / `[VIBE-009]`  \n**Domain:** Swarm Delegation, Autonomous Subagent Execution, Story Lifecycle & Execution Invariants  \n**Status:** ACTIVE / MANDATORY  \n\n#### 1. The Tri-Loop Law\n1. **Execution Tiers & Feedback Remediation Boundaries:**\n   * **`[SWARM:LOCAL]` (The 3-Loop Diagnostic Mandate):** When targeting sovereign local silicon (Windows RTX 4090 Kender + macOS M5 Air Brain), the orchestrator MUST execute up to **3 full diagnostic remediation rounds on local silicon** before considering tier escalation:\n     - **Attempt 1a (Initial Specification Dispatch):** Dispatches the baseline 4-anchor story contract.\n     - **Attempt 1b (Diagnostic Remediation Round 1):** Mandatory ingestion of the subagent's `[HANDOVER REFLECTION]` ([INS-009]) and test failure trace; dispatches targeted corrective feedback.\n     - **Attempt 1c (Diagnostic Remediation Round 2):** In-depth adjustment of harness, anchors, or model knobs per **[BKM-071]**.\n     - Local silicon is NEVER abandoned after a single failure. Only after all 3 diagnosed feedback rounds on local silicon are exhausted does the story escalate to Cloud Swarm (`[SWARM:CLOUD]`), followed by Primary Takeover (`[AGY:TAKEOVER]`).\n   * **`[SWARM:CLOUD]` (Direct Cloud Route):** When a story is tagged `[SWARM:CLOUD]`, local attempts are skipped entirely. The dispatch routes directly to Cloud Swarm (Groq / OpenCode Cloud / Big-Pickle / Cohere). If Cloud Swarm fails after feedback remediation, it skips local retries and routes straight to Primary Takeover (`[AGY:TAKEOVER]`).\n   * **`[AGY:PRIMARY]` (Direct Architectural Core):** Architectural scaffolding, protocol governance, and schema bootstrap executed directly by the primary agent.\n2. **Never Blindly Retry (Feedback Loop Mandate):** `delegate.py` is strictly a single-shot execution harness; blind script loops are prohibited. All subsequent dispatches are **Contracted Feedback Loops**, NOT blind re-prompts. Repeating an identical dispatch without injecting diagnosed failure traces or worker reflections is an explicit architectural violation (*\"Definition of Insanity\" Law*).\n3. **Non-Convergence Circuit Breaker:** If a local worker generates degenerate output, enters an unrecoverable non-convergent loop, or demonstrates fundamental capacity failure for a specific task and a viable harness/prompt remedy is not apparent, the orchestrator is authorized to trip the circuit breaker immediately. The orchestrator logs the diagnostic failure reason in the sprint ledger and escalates directly to `[SWARM:CLOUD]` or `[AGY:TAKEOVER]` without burning futile iterations.\n4. **Safe-Patch Mandate (Anti-Bash-Clobber):** Subagents MUST NOT use destructive bash file writes (`cat << 'EOF' >` or `echo >`) on existing codebase files. Subagents must invoke `clara-dna_safe_patch` (or atomic patchers) for existing files, reserving `write` strictly for new standalone files.\n\n#### 2. The 5-Minute Watchdog & Inspection Gate Law\n1. **Inspection Gate, Not an Automatic Kill:** The 5-minute watchdog ceiling is an **Inspection Gate**, not a blind termination trigger. Reaching 5 minutes does NOT mean immediate cancellation.\n2. **Active Progress Probe:** At the 5-minute mark, the orchestrator must inspect the live session:\n   - Query `GET /session/{id}` or `GET /session/{id}/message` to inspect token generation and tool calls.\n   - **Progressing:** If tokens are actively flowing and constructive work is progressing, extend the timer window.\n   - **Stalled:** If token generation is dead, or the agent is spinning in an unresolvable tool retry loop or orphaned subagent wait, only then terminate the attempt.\n3. **Mandatory Zombie Cleanup:** When an attempt is halted, timed out, or interrupted, the harness (`delegate.py`) and orchestrator MUST issue an explicit `POST /session/{id}/abort` frame to the OpenCode REST port (`4097`). Never allow orphaned subagent loops to churn GPU silicon after client disconnects.\n\n#### 3. The Story Owner Tag & Anti-Bypass Guard\n1. **Mandatory Owner Tag in Sprint Stories:** Every story defined in `SPRINT_PLAN_*.md` MUST specify an explicit `Assigned Owner:` tag:\n   - `[SWARM:LOCAL]`: Story is assigned to local silicon execution via `delegate.py` with up to 3 diagnostic remediation rounds on local silicon.\n   - `[SWARM:CLOUD]`: Story is assigned to cloud swarm burst via `delegate.py` directly, skipping local retries.\n   - `[SWARM:ORACLE]`: Story is an architectural evaluation, pre-pass plan certification, or post-sprint regression audit executed via high-reasoning oracle nodes without mutating runtime codebase files.\n   - `[AGY:PRIMARY]`: Story is architectural scaffolding, protocol governance, and schema bootstrap reserved for the primary orchestrator.\n2. **Anti-Bypass Invariant:** When a story is tagged `[SWARM:*]`, the primary agent (AGY) is **strictly forbidden from directly modifying the story's target codebase files** without first executing delegation attempts via `delegate.py` (including all 3 local diagnostic rounds for `[SWARM:LOCAL]`).\n3. **Escalation Record Required:** AGY direct code takeover (`[AGY:TAKEOVER]`) is only permissible after the assigned swarm tier (and its required diagnostic retries) has executed, failed, and logged an explicit diagnostic post-mortem in the sprint report. Direct coding on swarm-tagged stories without prior delegation attempts is a high-severity operational violation.\n\n#### 4. Sovereign Local Silicon Topology Invariant (KENDER -> Air)\n1. **The Sovereign Conductor & Leaf Worker Pattern:**\n   `[SWARM:LOCAL]` execution MUST strictly adhere to the canonical bicameral silicon topology:\n   - **Conductor (Root Dispatch / Architectural Roles):** Node KENDER (Windows RTX 4090 Ollama: `hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL` / `Atlas` / `Architect`). Receives the sprint story, conducts architecture planning, and dispatches bounded leaf tasks.\n   - **Leaf Worker (Surgical Patching / Execution):** Node Brain (macOS M5 Air MLX via Headroom `:8002`: `TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp` / `Sisyphus-Junior` or `Daedalus`). Receives spoon-fed 4-anchor tasks, applies atomic `clara-dna_safe_patch` edits, and is strictly forbidden from delegating further (`task: deny`).\n2. **Topology Deviation Invariant:** Any inversion or deviation from this pattern constitutes an immediate operational failure. `delegate.py` and diagnostic monitors MUST enforce this check and fail immediately upon deviation.\n\n#### 5. Handover Reflection Ingestion, Live Mandate Audit & Action ([FEAT-654] / [BKM-024])\n1. **Standardized Reflection & Live Gate Tag Capture:** Every delegation dispatch automatically extracts the subagent's `[HANDOVER REFLECTION]` and parses for machine-readable Live Gate tags:\n   - `[LIVE_GATE_PENDING: daemon=<port/name> endpoint=<path> probe=<test_command>]`\n   - `[LIVE_GATE: PASSED]`\n2. **Persistent Storage & Ledger Status:** Reflections, `live_gate_status`, and `live_gate_details` are recorded in `HomeLabAI/data/delegation_ledger.jsonl` and persisted to `icm store -t delegation_feedback`.\n3. **Orchestrator Action on `LIVE_GATE_PENDING` (The Live Gate):**\n   - When `LIVE_GATE_PENDING` is reported, sandbox unit-test passes are strictly **Provisional**.\n   - The primary orchestrator (AGY) is **STRICTLY FORBIDDEN from executing `git commit` or certifying task completion** on sandbox mocks alone.\n   - AGY MUST execute the mandatory live validation actions:\n     1. Hot-reload the live daemon (`POST http://127.0.0.1:8765/reload_residents` or `systemctl --user restart ...`).\n     2. Run the designated live probe / integration test against active daemons and reachable silicon endpoints (`BKM-024`).\n     3. Verify real runtime logs and confirm zero degradation before committing code.\n4. **Orchestrator Action on `LIVE_GATE: PASSED`:** If `[LIVE_GATE: PASSED]` is reported (pure algorithmic logic with 100% genuine execution and zero daemon dependencies), AGY audits git diffs, verifies tests, and certifies the story.\n5. **Action on Missing Tag:** If a subagent modifies codebase logic but omits the Live Gate tag, AGY must treat the story as `LIVE_GATE_PENDING` and perform live daemon verification before committing.\n6. **Inter-Attempt Diagnostic Index:** For all failure diagnosis, prompt tuning, circular trap prevention, and playbook references, proceed immediately to **[BKM-071]**.\n\n#### 7. The Git Backchannel & Inter-Story Cleanliness Law\n1. **The Causal Why (Git as an Active Inter-Tier Channel):**\n   * The Git working tree is NOT merely passive local storage; it is an active **forensic backchannel between Layer 2 (Tactical Conductor) and Layer 3 (Leaf Worker)**. Conductor personas (Atlas on Node KENDER) continuously execute `git status` and `git diff --stat` to verify story isolation and detect rogue file modifications.\n   * **The Failure Mode:** When the primary orchestrator (AGY / L1) withholds `git commit` across stories (e.g. attempting to batch commits at phase boundaries), preceding story changes linger in the working tree as dirty uncommitted files. During the subsequent story, L2's automated scope enforcement inspects `git diff`, cannot distinguish between *prior authorized work* and *L3 scope bleed*, assumes L3 went rogue, and executes `git checkout -- <file>`. This inadvertently destroys preceding stories.\n2. **The Mandate (Immediate Per-Story Checkpoint):**\n   * The primary orchestrator (AGY / L1) MUST execute an atomic `git commit` immediately upon certifying each story, before dispatching the next story.\n3. **Prohibition of Multi-Story Dirty Trees:**\n   * Leaving uncommitted modifications in the workspace across story dispatches is strictly forbidden. Every dispatch MUST start from a clean, unambiguous Git HEAD so L2's scope-enforcement lens reflects 100% active-story changes.\n\n#### 8. Canonical Story Argument Law (Dotted Identifier Mandate)\n1. **The Invariant Formatting Law:**\n   * All dispatch launchers (`delegate.py --story <id>`), JIT checkpoints (`clara-dna_jit_checkpoint`), and sprint telemetry analyzers MUST format the story argument in **canonical dotted notation**: `<sprint>.<story_index>` (e.g. `102.1`, `102.9`, `102.10`, `101.15`).\n2. **Prohibition of Un-dotted and Free-form Prefixes:**\n   * Passing un-dotted integers (`--story 1029`) or free-form strings (`--story \"STORY 1029\"`) is strictly prohibited. Un-dotted notation breaks regex deduplication in `sprint_telemetry.py`, prevents correlation between conductor `delegate.py` records and worker `jit_checkpoint` records, and pollutes public web feeds with undecorated stubs.\n\n#### 9. Primary Conductor Telemetry Mandate (`--log-agy`)\n1. **The Invariant Law:**\n   * Whenever AGY executes directly as Primary Conductor (`[AGY:PRIMARY]`), executes an emergency takeover, or certifies an architectural story that bypassed OpenCode headless delegation, AGY MUST record its actual conductor tokens and duration to `delegation_ledger.jsonl` using:\n     `HomeLabAI/.venv/bin/python3 HomeLabAI/src/tests/delegate.py --log-agy --sprint <S> --story <S.N> --title \"<Title>\" --tokens <T> --duration <D>`\n2. **Preventing Telemetry Blindness:**\n   * Omitting AGY logging leaves the Primary Conductor tracked at 0 tokens in public and web telemetry (`delegation_runs.json`). Conductor expenditures represent true lab development volume and must be committed alongside swarm dispatches.\n\n---",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -38197,7 +38987,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-060: Federated DNA Taxonomy & Horizontal Re-Bucketing Mandate\n**Feature Anchor:** `[FEAT-582]` / `[FEAT-585]` / `[BKM-060]`  \n**Domain:** Memory Architecture, DNA Curation, JITC Vector Grounding  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Principle\nFederated Lab memory is categorized into distinct, peer-level **DNA Buckets** that answer specific cognitive queries. Domains are equal horizontal peers, not a hierarchical ladder. Memory items that drift or are discovered in the wrong container must be horizontally migrated (re-bucketed) to preserve semantic retrieval precision across CLaRaDB port 8001.\n\n### 2. The Universal Taxonomy Matrix (How vs. Why vs. What vs. When)\n| Bucket | Prefix | Cognitive Purpose | Primary Question | Source of Record |\n| :--- | :--- | :--- | :--- | :--- |\n| **Inspirations** | `INS-xxx` *(alias: `PHL-xxx`)* | Conceptual Worldviews, Invariant Epistemology & Spark Insights | **WHY (First Principle)** | `inspiration_data.json` / `philosophy_data.json` $\\rightarrow$ `philosophy_dna` |\n| **Wisdom** | `WIS-xxx` | Practical Lessons, War Stories & Failure Scars | **WHY (Empirical)** | `stories.html` $\\rightarrow$ `wisdom_data.json` $\\rightarrow$ `wisdom_dna` |\n| **Protocols** | `BKM-xxx` | Prescriptive Rules & Actionable Directives | **HOW (Mandate)** | `Protocols.md` $\\rightarrow$ `behavioral_dna` |\n| **Features** | `FEAT-xxx` | Registered Capabilities & Architectural Specs | **WHAT (Mechanics)** | `FeatureTracker.md` $\\rightarrow$ `feature_dna` |\n| **Vibes** | `VIBE-xxx` | Behavioral Persona & Conversational Tonality | **WHO (Tone)** | `vibe_data.json` / `FeatureTracker.md` $\\rightarrow$ `vibe_dna` |\n| **Discoveries**| `DISC-xxx` | Distillation Insights & Subconscious Epiphanies | **WHAT (Insight)** | `discovery` collection $\\rightarrow$ `DISC` ledger |\n| **Sprint DNA** | `SPR-xxx` | Active Sprint Plans, Story Cards & Decoupled ASTs | **WHEN (Active)** | `SPRINT_PLAN_*.md` $\\rightarrow$ `sprint_dna` |\n| **Reverse DNA**| `RDNA-xxx` | Pre-Processed Question Space & HyDE Bypass | **WHEN / ASK** | `rdna_questions.json` $\\rightarrow$ `rdna` |\n| **Artifacts** | `ART-xxx` | External Google Drive / Doc Links & Assets | **WHERE (Asset)** | `artifact_vault` collection |\n\n### 3. The Invariant Rules\n1. **Separation of Bucket vs. Topic:** Never confuse the **DNA Bucket** (e.g. `BKM`) with the **Subject Topic Tag** (e.g. `#systems_architecture`, `#security`).\n2. **Polymorphic Aliasing (`INS` $\\leftrightarrow$ `PHL`):** The prefix `INS` (Inspirations & Insights) is the canonical domain identifier for epistemological axioms. To prevent historical document drift and ensure zero broken links across code comments and papers, all ingestion parsers, MCP servers, and UI components must support polymorphic aliasing where `PHL-xxx` seamlessly resolves to `INS-xxx` and vice versa.\n3. **Horizontal Re-Bucketing:** If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional `explicit_links` preserved.\n4. **JITC Retrieval Law:** Agents must query specific taxonomy buckets on-demand via `get_protocol(bkm_id=\"BKM-xxx\")` or `query_dna(collection=\"...\")` rather than loading global taxonomy tables into primary agent prompt context.\n\n---",
+        "narrative_context": "## BKM-060: Federated DNA Taxonomy & Horizontal Re-Bucketing Mandate\n**Feature Anchor:** `[FEAT-582]` / `[FEAT-585]` / `[BKM-060]`  \n**Domain:** Memory Architecture, DNA Curation, JITC Vector Grounding  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Principle\nFederated Lab memory is categorized into distinct, peer-level **DNA Buckets** that answer specific cognitive queries. Domains are equal horizontal peers, not a hierarchical ladder. Memory items that drift or are discovered in the wrong container must be horizontally migrated (re-bucketed) to preserve semantic retrieval precision across CLaRaDB port 8001.\n\n### 2. The Universal Taxonomy Matrix (How vs. Why vs. What vs. When)\n| Bucket | Prefix | Cognitive Purpose | Primary Question | Source of Record |\n| :--- | :--- | :--- | :--- | :--- |\n| **Inspirations** | `INS-xxx` *(alias: `PHL-xxx`)* | Conceptual Worldviews, Invariant Epistemology & Spark Insights | **WHY (First Principle)** | `inspiration_data.json` / `philosophy_data.json` $\\rightarrow$ `philosophy_dna` |\n| **Wisdom** | `WIS-xxx` | Practical Lessons, War Stories & Failure Scars | **WHY (Empirical)** | `stories.html` $\\rightarrow$ `wisdom_data.json` $\\rightarrow$ `wisdom_dna` |\n| **Protocols** | `BKM-xxx` | Prescriptive Rules & Actionable Directives | **HOW (Mandate)** | `Protocols.md` $\\rightarrow$ `behavioral_dna` |\n| **Features** | `FEAT-xxx` | Registered Capabilities & Architectural Specs | **WHAT (Mechanics)** | `FeatureTracker.md` $\\rightarrow$ `feature_dna` |\n| **Vibes** | `VIBE-xxx` | Behavioral Persona & Conversational Tonality | **WHO (Tone)** | `vibe_data.json` / `FeatureTracker.md` $\\rightarrow$ `vibe_dna` |\n| **Discoveries**| `DISC-xxx` | Distillation Insights & Subconscious Epiphanies | **WHAT (Insight)** | `discovery` collection $\\rightarrow$ `DISC` ledger |\n| **Sprint DNA** | `SPR-xxx` | Active Sprint Plans, Story Cards & Decoupled ASTs | **WHEN (Active)** | `SPRINT_PLAN_*.md` $\\rightarrow$ `sprint_dna` |\n| **Reverse DNA**| `RDNA-xxx` | Pre-Processed Question Space & HyDE Bypass | **WHEN / ASK** | `rdna_questions.json` $\\rightarrow$ `rdna` |\n| **Artifacts** | `ART-xxx` | External Google Drive / Doc Links & Assets | **WHERE (Asset)** | `artifact_vault` collection |\n\n### 3. The Invariant Rules\n1. **Separation of Bucket vs. Topic:** Never confuse the **DNA Bucket** (e.g. `BKM`) with the **Subject Topic Tag** (e.g. `#systems_architecture`, `#security`).\n2. **Polymorphic Aliasing (`INS` $\\leftrightarrow$ `PHL`):** The prefix `INS` (Inspirations & Insights) is the canonical domain identifier for epistemological axioms. To prevent historical document drift and ensure zero broken links across code comments and papers, all ingestion parsers, MCP servers, and UI components must support polymorphic aliasing where `PHL-xxx` seamlessly resolves to `INS-xxx` and vice versa.\n3. **Horizontal Re-Bucketing:** If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional `explicit_links` preserved.\n4. **JITC Retrieval Law:** Agents must query specific taxonomy buckets on-demand via `get_protocol(bkm_id=\"BKM-xxx\")` or `query_dna(collection=\"...\")` rather than loading global taxonomy tables into primary agent prompt context.\n5. **Single-Library & 24/7 ChromaDB Daemon Mesh:** All ambient vector retrieval for Layer 1 strategic planning (whether running via AGY CLI or Cloud OpenCode orchestrators like Prometheus/Sisyphus) MUST consume the single canonical library (`HomeLabAI/src/curator/ambient_recall.py`) querying the 24/7 resident ChromaDB service on port 8001 (`chroma-server.service`). Never fork duplicate hook scripts across `.agents/scripts/` or `config/hooks/`, and never attach pre-turn ambient hooks to Layer 2/3 local execution workers.\n\n---",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -38467,7 +39257,7 @@
         "immutable": true
       },
       "synthesis": {
-        "narrative_context": "## BKM-073: Document Spine Topology & Self-Contained Version Invariant\n**Feature Anchor:** `[FEAT-626]` / `[FEAT-627]` / `[FEAT-628]` / `[INS-041]`  \n**Colloquial Alias:** \"The Self-Contained Spine & Document-DNA Protocol\"  \n**Domain:** Architecture, Document Management, Projections, Writing Systems  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Principle\nDocuments are structured trees of conceptual nodes tracked across historical milestones. To prevent destructive overwrites while avoiding sparse micro-file fragmentation, document topology follows the **Self-Contained Milestone Architecture**:\n1. **Self-Contained Version Artifacts (`PAPER-<id>_<version>.json`):** Every certified major milestone (`v1`, `v2_recruiter`, `v3_executive`) is stored as a 100% self-contained, human-readable JSON artifact. The file *is* the verified artifact; no runtime reconstitution engine is required to read or publish a version.\n2. **The Master Spine Manifest (`PAPER-<id>_spine.json`):** Holds version ancestry lineage (`[\"v1\", \"v2\", \"v3\"]`), cross-version node coordinate mappings (`MOVE`, `REWORD`, `ADD`, `DELETE`), and the local **Document-Scoped DNA Archive** (`document_dna: []`).\n\n### 2. Document-Scoped DNA & Horizontal Lab Promotion Gate\n1. **Quarantine by Default:** Bullet-level lessons, citations, and draft notes are assigned local IDs (`DOC-<paper_slug>-<idx>`) and quarantined inside `PAPER-<id>_spine.json`. They never pollute global vector memory during active drafting.\n2. **The Graduation Gate (`BKM-060`):** When a document-scoped insight demonstrates broad, lab-wide architectural utility ($\\ge 0.85$ transfer score), a human or agent executes `promote_to_lab_dna()`. The record is minted as permanent global DNA (`WIS-xxx` or `INS-xxx`), appended to `wisdom_data.json`, and synced to ChromaDB `:8001`.\n\n### 3. Operational Invariants\n1. **Zero Sparse Micro-Files:** The filesystem stores complete paper AST versions and the spine manifest; fragmented single-node files (`bones/<node_id>.json`) are strictly barred.\n2. **Single-Node Sandbox Boundary:** Interactive LLM dialectics, revision blending, and \"Reason Why\" validations occur in the single-node sandbox (`projection_studio.html`) before approved mutations are stamped into complete paper versions.\n3. **Lens Projection Invariant:** Projections evaluate against the active Lens rubric; quality inversions (newer version worse than older) trigger immediate warnings regardless of lens.",
+        "narrative_context": "## BKM-073: Document Spine Topology & Self-Contained Version Invariant\n**Feature Anchor:** `[FEAT-626]` / `[FEAT-627]` / `[FEAT-628]` / `[INS-041]`  \n**Colloquial Alias:** \"The Self-Contained Spine & Document-DNA Protocol\"  \n**Domain:** Architecture, Document Management, Projections, Writing Systems  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Principle\nDocuments are structured trees of conceptual nodes tracked across historical milestones. To prevent destructive overwrites while avoiding sparse micro-file fragmentation, document topology follows the **Self-Contained Milestone Architecture**:\n1. **Self-Contained Version Artifacts (`PAPER-<id>_<version>.json`):** Every certified major milestone (`v1`, `v2_recruiter`, `v3_executive`) is stored as a 100% self-contained, human-readable JSON artifact. The file *is* the verified artifact; no runtime reconstitution engine is required to read or publish a version.\n2. **The Master Spine Manifest (`PAPER-<id>_spine.json`):** Holds version ancestry lineage (`[\"v1\", \"v2\", \"v3\"]`), cross-version node coordinate mappings (`MOVE`, `REWORD`, `ADD`, `DELETE`), and the local **Document-Scoped DNA Archive** (`document_dna: []`).\n\n### 2. Document-Scoped DNA & Horizontal Lab Promotion Gate\n1. **Quarantine by Default:** Bullet-level lessons, citations, and draft notes are assigned local IDs (`DOC-<paper_slug>-<idx>`) and quarantined inside `PAPER-<id>_spine.json`. They never pollute global vector memory during active drafting.\n2. **The Graduation Gate (`BKM-060`):** When a document-scoped insight demonstrates broad, lab-wide architectural utility ($\\ge 0.85$ transfer score), a human or agent executes `promote_to_lab_dna()`. The record is minted as permanent global DNA (`WIS-xxx` or `INS-xxx`), appended to `wisdom_data.json`, and synced to ChromaDB `:8001`.\n\n### 3. Operational Invariants\n1. **Zero Sparse Micro-Files:** The filesystem stores complete paper AST versions and the spine manifest; fragmented single-node files (`bones/<node_id>.json`) are strictly barred.\n2. **Single-Node Sandbox Boundary:** Interactive LLM dialectics, revision blending, and \"Reason Why\" validations occur in the single-node sandbox (`projection_studio.html`) before approved mutations are stamped into complete paper versions.\n3. **Lens Projection Invariant:** Projections evaluate against the active Lens rubric; quality inversions (newer version worse than older) trigger immediate warnings regardless of lens.\n\n---",
         "lab_anchors": [
           "HomeLabAI/docs/Protocols.md"
         ],
@@ -38483,9 +39273,294 @@
         "status": "APPROVED",
         "bucket_id": "bucket_4_rigor"
       }
+    },
+    {
+      "id": "BKM-077",
+      "title": "Conversational Anchor Tracking Protocol (ANCHOR_TRACK)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-077: Conversational Anchor Tracking Protocol (ANCHOR_TRACK)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-077: Conversational Anchor Tracking Protocol (ANCHOR_TRACK)\n**Feature Anchor:** `[FEAT-649]` / `[BKM-077]` / `[BKM-004]` / `[BKM-006]`  \n**Colloquial Alias:** \"The Conversational Anchor Ledger Protocol\"  \n**Domain:** Agent Coordination, Task Capture, Conversational Accountability, Sprints  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Operational Imperative\nDuring fast-paced, multi-turn pair-programming dialogues, actionable tasks, bug reports, and design inquiries are frequently raised across conversational turns. To prevent dropped topics, context-loss during truncation, or premature crystallization into sprint stories, the orchestrator MUST maintain a strict **ANCHOR_TRACK Ledger**.\n\n### 2. The 3 Lifecycle Phases\n1. **CAPTURE WITH USER (In-Conversation Stage):**\n   - Every identified triage item, bug, or design topic is assigned a discrete tracking tag (`ANCHOR-01`, `ANCHOR-02`, ...).\n   - Inquiries prefixed with `QQ` (`BKM-004`) remain informational lookups and do NOT generate work items unless explicitly converted by the user.\n   - Topics remain conversational anchors until verbally aligned and captured into a unified tabular ledger.\n2. **SPRINT CRYSTALLIZATION (The Planning Stage):**\n   - Once verbal consensus is reached, the anchors are mapped to sprint stories (`Story <N>.1`, `Story <N>.2`, ...).\n   - The sprint plan MUST include the verbatim ANCHOR_TRACK ledger table reflecting the exact state (`DONE`, `STAGED`, `DROPPED`, `DEFERRED`).\n3. **HEADS DOWN EXECUTION (The Delivery Stage):**\n   - Execution proceeds under `BKM-006` and `BKM-007` with assigned owner tags (`[AGY:PRIMARY]` vs `[SWARM:LOCAL]`).\n   - Every completed anchor transitions its state to `\u2705 DONE` in the sprint plan ledger.\n\n### 4. The 1:1 Numbered Swim Lane Invariant (Anti-Grouping Mandate)\n1. **The Invariant Law:**\n   * Numbered dialogue items ($1 \\dots N$) established during design alignment ARE the canonical, immutable swim lanes.\n   * Agents are **strictly forbidden** from merging, grouping, collapsing, or bunching multiple numbered items together (e.g. headers like \"1 & 2\", \"4, 5 & 11\", or \"6 & 7\").\n2. **Individual Lifetime:**\n   * Every single numbered item MUST be addressed in its own discrete, separate numbered section in responses and sprint plans.\n   * Swim lanes maintain their individual numbering until they naturally achieve full consensus, are certified, and peter out.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-077",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-078",
+      "title": "JIT_ONE_SHOT Protocol (The Single-Shot Worker & L2 Anti-Spiral Orchestration)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-078: JIT_ONE_SHOT Protocol (The Single-Shot Worker & L2 Anti-Spiral Orchestration)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-078: JIT_ONE_SHOT Protocol (The Single-Shot Worker & L2 Anti-Spiral Orchestration)\n**Feature Anchor:** `[FEAT-655]` / `[BKM-078]` / `[INS-042]` / `[WIS-482]`  \n**Colloquial Alias:** \"The Patch-Test-Diagnose-Recommend Protocol\"  \n**Domain:** Multi-Tier Agent Orchestration, Ephemeral Worker Lifecycles, Anti-Waffle Governance  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Philosophy\nIn multi-tier swarms, letting open-weights surgical workers ($L_3$) attempt recursive self-fixing when tests fail triggers the **\"Waffle Trap\" (`[INS-042]`)** and quadratic context accumulation. A worker's context degrades with every failed stack trace.\nThe `JIT_ONE_SHOT` protocol mandates that surgical workers operate as **ephemeral single-shot probes**:\n- Workers execute a single attempt: **Patch $\\to$ Test $\\to$ Diagnose $\\to$ Recommend $\\to$ Exit**.\n- Workers are strictly forbidden from attempting recursive self-fixing loops.\n- Terminal tracebacks and dirty intermediate diffs die with the worker session, shielding $L_2$ from context pollution.\n\n### 2. The Layer 3 Execution Contract (`AGENTS_L3.md`)\n1. **Turn 1 (Patch):** Ingest blueprint from JIT research tools and apply changes via `safe_patch()`.\n2. **Turn 2 (Test):** Run the verification command via `bash`.\n3. **Turn 3 (Resolve):**\n   - **On Pass:** Call `jit_checkpoint(\"SUCCESS\", ...)` and terminate cleanly.\n   - **On Fail:** Use in-context traceback and diff to diagnose root cause. Synthesize a concise 3-line diagnostic report:\n     * `[FAILURE]`: Specific failing assertion or error.\n     * `[ROOT_CAUSE]`: Exact causal hypothesis based on test output.\n     * `[RECOMMENDATION]`: Specific proposed blueprint adjustment.\n   - **Terminate Immediately:** Emit the 3-line report and exit. Do NOT modify files further.\n\n### 3. The Layer 2 Anti-Spiral Orchestration Role (`AGENTS_L2.md`)\nLayer 2 (Atlas) holds the macro plan and session trajectory. When receiving Layer 3's recommendation:\n1. **Anti-Spiral Verification:** Atlas inspects whether the recommendation is circular (proposing changes already tried or regressing to previous states).\n2. **Macro Judgment:** Atlas decides whether to adopt the recommendation, synthesize an alternative architectural fix, or modify test parameters.\n3. **Pristine Retry:** If retrying, Atlas updates the blueprint via `jit_stage()` and dispatches a **fresh, zero-mileage Layer 3 worker instance** via `task()`.\n4. **Stall Declaration:** If successive pristine workers fail the same assertion without progress, Atlas halts execution and escalates to Layer 1.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-078",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-079",
+      "title": "LiteLLM Kender Gateway & Native Ollama API Protocol",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-079: LiteLLM Kender Gateway & Native Ollama API Protocol",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-079: LiteLLM Kender Gateway & Native Ollama API Protocol\n**Feature Anchor:** `[LAB-115]` / `[LAB-116]` / `[BKM-079]`  \n**Colloquial Alias:** \"Standard Gateway Architecture\"  \n**Domain:** Local Silicon Integration, Gateway Proxying, Thinking Configuration  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Law\nCustom monkey-patch proxies that strip chunks from response streams create opaque black boxes and conceal agent activity from OpenCode. Thinking configuration on local silicon MUST be enforced via declarative API gateway translation to Ollama's native `/api/chat` endpoint, never via response-stream censorship.\n\n### 2. Architecture & Service\n1. **The Daemon (`litellm-kender.service`)**:\n   - Runs as a systemd user service on `127.0.0.1:11435`.\n   - Managed via `/home/jallred/Dev_Lab/HomeLabAI/config/litellm_kender.yaml`.\n   - Routes inbound OpenAI `/v1/chat/completions` directly to Node KENDER Ollama's native `/api/chat` (`http://192.168.1.26:11434`).\n2. **Native Thinking Control**:\n   - Configured with `extra_body.options.enable_thinking: false` for pure, direct execution without GPU reasoning stalls.\n   - Retains full, uncensored response transparency: tool calls, thought streams, and conversational text pass transparently to OpenCode.\n3. **OpenCode Invariant**:\n   - OpenCode mappings in `opencode.json` for `my-windows-4090` point to `http://127.0.0.1:11435/v1`.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-079",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-080",
+      "title": "Psychological Escalation & Clean-Kill Handback Protocol (Ask-Oracle)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-080: Psychological Escalation & Clean-Kill Handback Protocol (Ask-Oracle)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-080: Psychological Escalation & Clean-Kill Handback Protocol (Ask-Oracle)\n**Feature Anchor:** `[FEAT-656]` / `[BKM-080]` / `[BKM-004]` / `[BKM-049]`  \n**Colloquial Alias:** \"The Clean-Kill Oracle Escalation Protocol\"  \n**Domain:** Agent Coordination, Multi-Tier Escalation, Fast-Halt Governance  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Philosophy\nWhen open-weights conductor models ($L_2$ Atlas on Kender 4090) face under-specified specifications, contradictory policies, or missing schemas, leaving them without an authoritative escalation tool leads directly to hallucinated assumptions or infinite exploratory searching loops.\nThe `BKM-080` protocol equips conductors with an authoritative psychological safety escape hatch: **`ask_oracle`**.\n\n### 2. Implementation & Tool Contract\n1. **The Tool (`@mcp.tool() ask_oracle`)**:\n   - Exposed via `clara_dna_mcp_server.py`.\n   - Arguments: `question` (precise missing architectural clarification), `current_hypothesis` (conductor's proposed solution), and `code_inspected` (concrete files/lines analyzed).\n   - Writes the escalation payload to `.jit_cache/oracle_request.json`.\n2. **Clean-Kill Harness Intercept**:\n   - `delegate.py` polls for `oracle_request.json` during execution.\n   - When detected, the harness halts the OpenCode process cleanly, renders a high-visibility terminal escalation banner, caches session state to `.jit_cache/paused_session.json`, and exits immediately with **exit code 3 (`ORACLE_CONSULTATION_REQUESTED`)**.\n3. **Zero-Friction Resumption (`--feedback`)**:\n   - The operator or Strategic Guardian (AGY) can provide instant guidance via `delegate.py --feedback \"<guidance>\"`.\n   - The harness automatically injects the directive into the paused session, re-enters the active monitoring loop, and validates verification assertions to task certification.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-080",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-081",
+      "title": "The Sprint Append Ledger Protocol (The \"Sprint Log\")",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-081: The Sprint Append Ledger Protocol (The \"Sprint Log\")",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-081: The Sprint Append Ledger Protocol (The \"Sprint Log\")\n**Feature Anchor:** `[BKM-081]` / `[BKM-020]` / `[BKM-023]` / `[BKM-077]`  \n**Colloquial Alias:** \"The Sprint Log / Active Plan Append Invariant\"  \n**Domain:** Sprint Documentation, Real-Time Ledgers, Intent Preservation, Unified Artifacts  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Invariant Definition\nWhenever the operator or any agent says **\"sprint log\"**, **\"log to the sprint\"**, or **\"update the sprint log\"**, it **strictly and exclusively means appending a chronological execution narrative directly to the active sprint file (`SPRINT_PLAN_SPR_*.md`)**.\n\n### 2. Single-File Ground Truth Invariant\n1. **No Fragmented Satellite Files:** Agents are **STRICTLY FORBIDDEN** from creating separate, detached `SPRINT_LOG_*.md` files when asked to update the sprint log, unless explicitly requested by exact filename. \n2. **Unified Single Artifact:** The active sprint plan (`Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_<N>_0.md`) is the **sole authoritative document** for both planning specifications AND chronological execution history. Having execution logs in a detached file leads to context fragmentation and amnesia across sessions.\n\n### 3. Narrative Execution Chronicle (Not Rigid Story Duplication)\nThe Sprint Log is **not** a rigid tabular dump or formal re-hash of story specifications. Its core purpose is to be a **running narrative of what we did along the way**:\n- **Capture What Falls Between the Cracks:** Epistemic reflections, friction points, harness debugging, unexpected discoveries, tool-behavior breakthroughs, and the \"why\" behind mid-flight deviations.\n- **Chronological Timeline Trace:** A human- and agent-readable story of the session timeline so future sessions can review work done and understand the engineering journey without reading raw tool logs.\n- **Succinct Milestones & Verification:** Include the milestone title, timestamp, tier used, and literal verification trace (e.g. pytest output / git hash), woven naturally into the narrative.\n\n### 4. Phased Sprint Architecture Invariant (Phase \u2794 Log \u2794 Phase \u2794 Log)\nLarge sprints evolve in waves. Rather than maintaining a static monolithic plan, sprints support progressive phasing:\n1. **Appending Subsequent Phases After Logs:** A **new phase can be appended directly AFTER a sprint log section**.\n2. **Phase-Scoped Log Sections:** A **new sprint log section can be created and appended for each phase**.\n3. **Execution Pattern:**\n   ```\n   # Sprint Plan (Phase 1 Stories)\n   ## \ud83d\udcdc Sprint Log: Phase 1 Narrative Ledger\n      ... (narrative of what happened, friction, breakthroughs, certifications) ...\n   ## Phase 2 Stories (Refined from Phase 1 learnings)\n   ## \ud83d\udcdc Sprint Log: Phase 2 Narrative Ledger\n      ... (narrative of Phase 2 execution) ...\n   ```\nThis guarantees that lessons learned and harness calibrations from Phase $N$ immediately inform the concrete specifications of Phase $N+1$ in a single continuous on-disk artifact.\n\n### 5. Absolute Append-Only Law (No Compression)\nUnder `BKM-020` (\u00a73) and `BKM-023`, agents must **never** summarize, overwrite, or compress previous narrative entries to \"save space.\" Technical history and empirical traces are permanent records. New events are always appended additively at the bottom.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-081",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-082",
+      "title": "Sprint Grounding Run (Historical Anchoring & Horizon-Aware Pre-Flight Mandate)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-082: Sprint Grounding Run (Historical Anchoring & Horizon-Aware Pre-Flight Mandate)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-082: Sprint Grounding Run (Historical Anchoring & Horizon-Aware Pre-Flight Mandate)\n**Feature Anchor:** `[BKM-082]` / `[BKM-001]` / `[BKM-005]` / `[BKM-006]` / `[BKM-020]` / `[BKM-048]` / `[FEAT-659]` / `[INS-047]` (\"Live is King, History is Queen\")  \n**Colloquial Alias:** \"The Sprint Grounding Run / Historical Horizon Pre-Flight Invariant\"  \n**Domain:** Sprint Architecture, Diagnostic Horizon, Historical Invariants, Anti-Amnesia Governance  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Core Law: Grounding Before Action\nAgents are frequently tempted to treat new user prompts as greenfield tasks or to diagnose current system states by inspecting only the trailing 10\u201315 minutes of logs (the \"Short Horizon Trap\"). Under tight resources, overnight compute cycles, and distributed multi-tier orchestration, this short-sightedness leads directly to:\n- **Circular Fixing Traps (`[INS-042]`):** Re-attempting previously failed architectural shortcuts or re-inventing broken tools.\n- **Accidental Removal of Hard-Won Sentinels:** Stripping out critical hardware pacing delays, memory sentinels, or cgroups limits because they appear to slow down execution.\n- **Diagnostic Blindness to Log Horizon Effects:** Assuming a daemon crash was an instant OOM or prompt failure when it was actually a downstream consequence of a multi-hour nightly cascade (e.g. 02:00 AM LoRA training overrun or memory profiling races).\n\n### 2. The 5 Core Invariants of the Sprint Grounding Run\n\n1. **Mandatory 5-Sprint Lookback Before ANY Research or Proposal:**\n   - Before planning a new sprint, proposing refactors, or writing code, the Agent MUST inspect documentation and the **last 5 active/archived sprint plans and logs** (`Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_*.md`).\n   - Sprints are not passive human notes; they are the active forensic pedigree of the Federated Lab. Glossing over past sprint lessons or root-cause retrospectives is a protocol violation.\n\n2. **Expanded Log Horizon Diagnostic Mandate:**\n   - When the system is reported in a degraded or bad state, or when diagnosing overnight failures, the Agent is strictly forbidden from relying solely on `tail -n 50`, `journalctl -n 20`, or the last 15 minutes.\n   - The Agent MUST inspect the **full log horizon** spanning the entire operational cycle (e.g. from 02:00 AM Nightly Forge initiation through morning watchdog audits at 06:00 AM to the current hour), verifying journalctl, `dmesg`, process exit codes, and `daily_accountability_digest.json`.\n\n3. **Historical Correlation & Anti-Removal Law (The Hard-Won Code Mandate):**\n   - **Do NOT remove hard won code or features.** Every time you consider removing a feature or a step or changing the batching behavior or renaming files etc, you MUST correlate what you are doing with the most recent sprint that touched the features around that area.\n   - Use CLaRa DNA MCP tools (`query_dna`, `jit_read`, `jit_locate`) heavily to extract the original design rationale (`[FEAT-*]`, `[SCAR-*]`, `[LAB-*]`).\n   - If an operation overruns its time window (e.g., nightly adapter training running 28 minutes over its SLA), **adjust the payload percentage or step budget proportionally to fit the window**, rather than stripping features, removing pacing pauses, or deleting safety steps.\n\n4. **Mandatory \"Pre-Flight Mistakes Avoided\" Ledger & Dual-Delivery Reporting:**\n   - Every sprint proposal and work plan MUST include an explicit section: `## \ud83d\udeab Pre-Flight Mistake Ledger (Mistakes Avoided by Grounding)`.\n   - The Agent must list 3\u20135 specific errors, naive fixes, or architectural traps that *would* have been committed without this deep historical grounding (e.g. patching the wrong script, duplicating a file across directories, misattributing a race condition to an OOM).\n   - **Dual-Delivery Invariant:** The Agent MUST write the sprint plan to disk AND report the grounding findings and mistake ledger in chat text directly to the operator. Constructing this explicit friction ensures the Agent cannot gloss over past documentation.\n\n5. **Grounding Gap Declaration:**\n   - If the Agent is unable to ground any actionable item, error symptom, or code target in past sprint history or DNA records, it MUST NOT invent assumptions or execute speculative edits.\n   - The Agent must explicitly declare these items under `## \ud83e\udded Grounding Gap Audit` and pause to request operator clarification before taking action.\n\n6. **Positive Context Guidance Mandate (\"Do Y because Z context guides you to do it this way\"):**\n   - When specifying sprint stories, anti-regression cautions, and subagent prompt anchors, steer away from negative prohibitions (*\"Don't do X\"*).\n   - Formulate all cautions as positive context guidance: ***\"Do Y because Z context guides you to do it this way.\"*** Providing the affirmative action anchored in past historical context eliminates negative constraint inversion and guides autonomous subagents toward correct implementation without thrash.\n\n7. **Pre-Execution Housekeeping vs. In-Flight Harness Friction Mandate**:\n   - **Pre-Execution Housekeeping (Phase 0)**: Every sprint plan derived from a Sprint Grounding Run dedicates an upfront **\"Phase 0: Pre-Execution Housekeeping\"** section strictly bounded to addressing documentation debt, outdated script pointers, tool argument flags, and FEAT registrations identified *during planning and historical grounding*. Once story execution begins, Phase 0 is officially sealed.\n   - **In-Flight Harness Friction (Never Deferred)**: Any unforeseen tool failure, harness breakdown, or subagent bypass (e.g. `clara-dna_safe_patch` falling back to custom Python scripts) discovered *during* story execution is classified as **In-Flight Harness Friction**, NOT future housekeeping.\n   - **The Anti-Bypass / Harness Halt Mandate**: Per `BKM-048` (\u00a73), when a core harness tool stumbles mid-sprint, the orchestrator MUST NOT gloss over the failure because an internal worker fallback succeeded. The incident MUST be immediately appended to the live `\ud83d\udcdc Sprint Log` (`BKM-081`) and reported to the operator. If upcoming stories depend on that broken tool, the sprint MUST halt to fix the harness immediately rather than allowing tool debt to compound across subsequent dispatches.\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-082",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-083",
+      "title": "Decouple-and-Stitch Round Table Protocol (Live Unit Testing & Stage Isolation)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-083: Decouple-and-Stitch Round Table Protocol (Live Unit Testing & Stage Isolation)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-083: Decouple-and-Stitch Round Table Protocol (Live Unit Testing & Stage Isolation)\n**Feature Anchor:** `[BKM-083]` / `[FEAT-645]` / `[FEAT-489]` / `[FEAT-523]` / `[BKM-024]`  \n**Colloquial Alias:** \"The Decouple-and-Stitch Stage Protocol / Unstitching the Monolith\"  \n**Domain:** Cognitive Hub Orchestration, Modular Pipeline Architecture, Fast Offline Unit Testing  \n**Status:** ACTIVE / MANDATORY (Sprint 103)  \n\n### 1. The Core Law: Discrete Stage Isolation\nMonolithic cognitive loops (e.g., 3,000-line `cognitive_hub.py` files sharing mutable local variables across hundreds of lines) create severe diagnostic blindness. A prompt engineering failure in an upstream stage (such as HyDE returning an empty vector) starves downstream RAG retrieval, which starves the Information Gatekeeper, which silences Deep Thought. Diagnosing this failure via 30-second live websocket sessions burns tokens, risks timeouts, and causes thrash.\n\nUnder `BKM-083`, cognitive orchestration pipelines MUST adhere to the **Decouple-and-Stitch Invariants**:\n1. **Discrete Stage Methods:** Multi-stage cognitive pipelines MUST be authored as discrete, callable `step_*` methods on the orchestrator class:\n   - `step_pre_triage(query)`: Sub-20ms vector probe emitting continuous `semantic_affinity`.\n   - `step_triage(query, pre_triage)`: Speculative triage relay emitting decoupled intent and target domains.\n   - `step_hyde_rag(query, triage)`: HyDE synthesis with `search_required: bool` and unified ChromaDB retrieval.\n   - Macro Stage 3 Deliberation Micro-Stages:\n     - `step_brain_gatekeeper(query, rag_context, interest)`: Stage 3.1 Gatekeeper forwarding cohesive bedrock RAG + Curator Notes.\n     - `step_deep_thought(query, brain_bullets, interest)`: Stage 3.2 Deep Thought strategic synthesis with `FEAT-523` pacing.\n     - `step_pinky_voice(query, synthesis, interest)`: Stage 3.3 Pinky voice TL;DR, TTS delivery, and consensus telemetry.\n     - `step_grounding_critic(query, ...)`: Stage 3.4 Pinky Grounding Critic 4-key scorecard audit against evidence.\n2. **Zero Execution Divergence:** The live `process_turn()` loop in production MUST delegate directly and sequentially to these `step_*` methods. Standalone divergence (separate CLI tools with duplicate logic) is strictly prohibited.\n3. **Fast Offline Unit Testing:** Pytest test suites (such as `test_multi_stage_replay_pipeline.py` / `FEAT-645`) MUST be able to execute any single `step_*` method independently using frozen input fixtures, verifying prompts and JSON parsing in $< 500\\text{ms}$ without spinning up live websocket sessions.\n4. **Continuous Parameter Passing:** Stage methods pass continuous parameters (`interest: float`, `semantic_affinity: float`, `search_required: bool`) explicitly across boundaries rather than relying on mutable shared state or binary clamps (`vibe == 'CASUAL'`).\n\n---",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-083",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
+    },
+    {
+      "id": "BKM-084",
+      "title": "The Lettered Dropped Threads Protocol (ANCHOR_LETTER)",
+      "origin": {
+        "author": "Federated Lab",
+        "text": "BKM-084: The Lettered Dropped Threads Protocol (ANCHOR_LETTER)",
+        "source": "HomeLabAI/docs/Protocols.md",
+        "immutable": true
+      },
+      "synthesis": {
+        "narrative_context": "## BKM-084: The Lettered Dropped Threads Protocol (ANCHOR_LETTER)\n**Feature Anchor:** `[BKM-084]` / `[BKM-004]` / `[BKM-064]` / `[BKM-077]` / `[INS-016]`  \n**Colloquial Alias:** \"The Lettered Reminders Ledger\"  \n**Domain:** Conversational Accountability, Thread Preservation, Anti-Abandonment  \n**Status:** ACTIVE / MANDATORY  \n\n### 1. The Dual-Namespace Architecture\nTo prevent confusion between active work and pending reminders:\n* **Numbered Lanes ($1 \\dots N$):** Reserved exclusively for active, foreground conversational swim lanes under `BKM-064` / `BKM-077`.\n* **Lettered Ledger ($A \\dots Z$):** Reserved exclusively for unaddressed findings, paused ideas, or bugs uncovered under QQ (`BKM-004`) that lack active follow-up.\n\n### 2. The Lookback Horizon & Anti-Hijack Invariant\n1. **The Lookback Horizon:** Review the prior 2\u20134 turns (specifically turns $N-2$ through $N-4$). The immediate last turn ($N-1$) is active conversational context and is never treated as a dropped thread.\n2. **Never Hijack:** The agent MUST answer the user's current prompt first, completely, and with 100% focus. The lettered dropped threads ledger is rendered strictly as a compact tail addendum or footnote at the very end of the turn.\n3. **Empty Ledger Invariant:** If all items have exited or no pending items exist, omit the ledger section completely.\n\n### 3. Persistent Letter Tracking Across Turns\nDropped threads assigned a letter (A:, B:, ...) persist across turns with stable keys until they hit a **Valid Exit Gate**. An agent may not silently drop a lettered thread between turns.\n\n### 4. Valid Exit Gates (Silence is Never an Exit)\nA lettered item only clears from the ledger when one of four explicit gates is satisfied:\n1. **Addressed:** The item is actively implemented in the current turn or verified resolved in code/tests.\n2. **Documented:** The item is formally recorded into a sprint backlog (`SPRINT_PLAN_*.md`), general project backlog, feature tracker (`FeatureTracker.md`), or DNA card.\n3. **Integrated:** The operator directs the item into an active numbered topic (e.g., *\"Put A\u2013C into #3\"* $\\rightarrow$ absorbed into Topic 3's scope).\n4. **Explicitly Dismissed:** The operator explicitly commands *\"dismiss A\"*, *\"drop B\"*, or *\"not doing C\"*. Operator silence or conversational pivots NEVER clear the ledger.\n\n### 5. Format Standard\nWhen active pending threads exist, render the reminder at the very conclusion of the turn. Format each item using a capital letter with a colon followed by a concise, one-line description (e.g., `A: One-line description`). If no pending threads exist, omit the ledger entirely.",
+        "lab_anchors": [
+          "HomeLabAI/docs/Protocols.md"
+        ],
+        "review_notes": "Operational Protocol BKM-084",
+        "refinement_version": 1
+      },
+      "metadata": {
+        "tags": [
+          "bkm",
+          "behavioral-dna",
+          "protocol"
+        ],
+        "status": "APPROVED",
+        "bucket_id": "bucket_4_rigor"
+      }
     }
   ],
   "sprint": [
+    {
+      "id": "SPR-104.0",
+      "title": "The Unified Council of Hemispheres \u2014 Excision of the Casual Bifurcation & End-to-End Continuous Interest Orchestration",
+      "origin": {
+        "text": "Unification of the Cognitive Pipeline into a Single Invariant Council Flow, Complete Excision of the `vibe == \"CASUAL\"` Execution Bifurcation, Continuous Scalar Pacing of Pinky's Opening HyDE Turn, Pure Domain/Fact-Driven Vector Retrieval, and Elimination of Dual-Persona Fragmentations",
+        "source": "SPRINT_PLAN_SPR_104_0.md"
+      },
+      "synthesis": {
+        "narrative_context": "Unification of the Cognitive Pipeline into a Single Invariant Council Flow, Complete Excision of the `vibe == \"CASUAL\"` Execution Bifurcation, Continuous Scalar Pacing of Pinky's Opening HyDE Turn, Pure Domain/Fact-Driven Vector Retrieval, and Elimination of Dual-Persona Fragmentations",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_104_0.md"
+        ],
+        "review_notes": "Active sprint in execution."
+      },
+      "metadata": {
+        "tags": [
+          "sprint-104",
+          "sprint-plan"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "SPR-103.0",
+      "title": "Intercom Debug, Multi-Stage Replay Pipeline (FEAT-645), Un-Muting Deep Thought, and Decoupled Round Table Architecture",
+      "origin": {
+        "text": "Intercom Debug & Monologue Restoration, Multi-Stage Replay Pipeline Harness (`FEAT-645`), Decoupled Round Table Architecture (`BKM-083`), Excising Binary Casual Clamps, Un-Muting Deep Thought Live Backchannel, and Sovereign Swarm Cloud Delegation",
+        "source": "SPRINT_PLAN_SPR_103_0.md"
+      },
+      "synthesis": {
+        "narrative_context": "Intercom Debug & Monologue Restoration, Multi-Stage Replay Pipeline Harness (`FEAT-645`), Decoupled Round Table Architecture (`BKM-083`), Excising Binary Casual Clamps, Un-Muting Deep Thought Live Backchannel, and Sovereign Swarm Cloud Delegation",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_103_0.md"
+        ],
+        "review_notes": "Active sprint in execution."
+      },
+      "metadata": {
+        "tags": [
+          "sprint-103",
+          "sprint-plan"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
+    {
+      "id": "SPR-102.0",
+      "title": "Continuous Interest Multiplier Pacing, Brain Epistemic Gatekeeper & Narrative Steering, Sideband Consensus, and Meta-Vocabulary Prompt Decoupling",
+      "origin": {
+        "text": "Continuous Scalar Interest Multiplier Pacing (`FEAT-523` Redefinition), Brain Epistemic Gatekeeper & Unrelated RAG Filtering (`FEAT-635`), Two-Mice Sideband Consensus (`VIBE-015`), Prompt Meta-Vocabulary Decoupling (Intent Cleanliness), and Adversarial Oracle Pre-Grounding",
+        "source": "SPRINT_PLAN_SPR_102_0.md"
+      },
+      "synthesis": {
+        "narrative_context": "Continuous Scalar Interest Multiplier Pacing (`FEAT-523` Redefinition), Brain Epistemic Gatekeeper & Unrelated RAG Filtering (`FEAT-635`), Two-Mice Sideband Consensus (`VIBE-015`), Prompt Meta-Vocabulary Decoupling (Intent Cleanliness), and Adversarial Oracle Pre-Grounding",
+        "lab_anchors": [
+          "Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_102_0.md"
+        ],
+        "review_notes": "Active sprint in execution."
+      },
+      "metadata": {
+        "tags": [
+          "sprint-102",
+          "sprint-plan"
+        ],
+        "status": "ACTIVE",
+        "bucket_id": "bucket_5_infra"
+      }
+    },
     {
       "id": "SPR-101.0",
       "title": "02:00 AM Nightly Stability, Ignition Guardrails & Historical Grounding Hardening",

@@ -88,6 +88,7 @@
         .msg-source.system { color: #444; }
         .msg-body { display: block; color: #eee; word-wrap: break-word; }
         .msg-body p { margin: 2px 0; }
+        .thought-bubble { border-left: 2px solid #58a6ff; background: rgba(88, 166, 255, 0.05); padding: 8px 12px; margin-bottom: 8px; font-style: italic; color: #8b949e; }
 
         /* [FEAT-222] Simplified Message Density */
         .message.internal {
@@ -245,7 +246,8 @@
         .icon-btn.active { background: #f85149; }
         
         /* [FEAT-638] Response Feedback Buttons */
-        .resp-fb { display:inline-flex; gap:6px; margin-left:auto; margin-top:0; justify-content:flex-end; }
+        .resp-fb { display:inline-flex; gap:6px; margin-left:auto; margin-top:0; justify-content:flex-end; opacity:0; transition:opacity 0.2s ease; }
+        .message:hover .resp-fb, .resp-fb:has(.active-up), .resp-fb:has(.active-down) { opacity:1; }
         .fb-btn { background:none; border:1px solid #333; border-radius:3px; font-size:0.7rem; padding:1px 7px; cursor:pointer; opacity:0.55; transition:all 0.2s; }
         .fb-btn:hover { opacity:1; }
         .fb-btn.active-up { opacity:1; border-color:#3fb950; color:#3fb950; background:rgba(63,185,80,0.12); box-shadow:0 0 8px rgba(63,185,80,0.5); }
@@ -300,7 +302,7 @@
     </main>
 
     <script src="assets/marked.min.js"></script>
-    <script src="intercom_v2.js?v=42f2174f"></script>
+    <script src="intercom_v2.js?v=48d63057"></script>
     <script src="mission-control.js?v=9f1019d4"></script>
     <div id="intercom-toast" class="pg-toast" role="status" aria-live="polite" style="bottom:20px;"></div>
 </body>

@@ -573,6 +573,22 @@
 <li><strong>Validation</strong>: Every edit must be followed by <code>ruff check</code> to ensure code quality.</li>
 <li><strong>Conductor Delegation</strong>: For complex or high-volume tasks, the Agent should use the Conductor track to delegate work to sub-agents, preserving the primary context window for strategic orchestration.</li>
 </ul>
+<h3>5. Story ID Sequencing &amp; Uniqueness Invariant</h3>
+<ul>
+<li><strong>Strict Monotonic IDs:</strong> Story numbers within a sprint document MUST be strictly monotonic across all phases (e.g., if Phase 5 ends at Story 103.10, Phase 6 must start at 103.11). Re-using or shadowing an existing Story ID within the same sprint plan is strictly prohibited.</li>
+<li><strong>Pre-Authoring ID Scan:</strong> Before writing any new phase, the authoring agent MUST grep <code>^#+.*Story</code> across the active sprint plan to discover the maximum existing story ID and increment from there.</li>
+</ul>
+<h3>6. Mandatory Story Markdown Template</h3>
+<p>Every story section MUST adhere to this explicit structure:</p>
+<pre><code class="language-markdown">#### Story XX.X: &lt;Title&gt;
+* **Status:** 📋 PLANNED | 🔄 IN_PROGRESS | ✅ COMPLETED
+* **DNA / Feature Tag:** `[FEAT-xxx]` / `[BKM-xxx]`
+* **Assigned Owner:** `[SWARM:LOCAL]` | `[SWARM:CLOUD]` | `[AGY:PRIMARY]`
+* **Context &amp; Objective (The Why):** Technical rationale and architectural necessity.
+* **Symbol Anchors &amp; Touchpoints (The Where):** Absolute markdown file links with target functions and line numbers.
+* **Implementation Contract (The What):** Verbatim code diff blocks, function signatures, or prompt strings.
+* **Verification &amp; Test Command (The How):** Single-line bash/pytest command. Zero manual testing.
+</code></pre>
                             </div>
                         </td>
                     </tr>
@@ -2042,6 +2058,159 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 <li><strong>In-Flight Harness Friction (Never Deferred)</strong>: Any unforeseen tool failure, harness breakdown, or subagent bypass (e.g. <code>clara-dna_safe_patch</code> falling back to custom Python scripts) discovered <em>during</em> story execution is classified as <strong>In-Flight Harness Friction</strong>, NOT future housekeeping.</li>
 <li><strong>The Anti-Bypass / Harness Halt Mandate</strong>: Per <code>BKM-048</code> (§3), when a core harness tool stumbles mid-sprint, the orchestrator MUST NOT gloss over the failure because an internal worker fallback succeeded. The incident MUST be immediately appended to the live <code>📜 Sprint Log</code> (<code>BKM-081</code>) and reported to the operator. If upcoming stories depend on that broken tool, the sprint MUST halt to fix the harness immediately rather than allowing tool debt to compound across subsequent dispatches.</li>
 </ol>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-083</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Decouple-and-Stitch Round Table Protocol (Live Unit Testing & Stage Isolation)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-083]</code> / <code>[FEAT-645]</code> / <code>[FEAT-489]</code> / <code>[FEAT-523]</code> / <code>[BKM-024]</code><br />
+<strong>Colloquial Alias:</strong> "The Decouple-and-Stitch Stage Protocol / Unstitching the Monolith"<br />
+<strong>Domain:</strong> Cognitive Hub Orchestration, Modular Pipeline Architecture, Fast Offline Unit Testing<br />
+<strong>Status:</strong> ACTIVE / MANDATORY (Sprint 103)  </p>
+<h3>1. The Core Law: Discrete Stage Isolation</h3>
+<p>Monolithic cognitive loops (e.g., 3,000-line <code>cognitive_hub.py</code> files sharing mutable local variables across hundreds of lines) create severe diagnostic blindness. A prompt engineering failure in an upstream stage (such as HyDE returning an empty vector) starves downstream RAG retrieval, which starves the Information Gatekeeper, which silences Deep Thought. Diagnosing this failure via 30-second live websocket sessions burns tokens, risks timeouts, and causes thrash.</p>
+<p>Under <code>BKM-083</code>, cognitive orchestration pipelines MUST adhere to the <strong>Decouple-and-Stitch Invariants</strong>:
+1. <strong>Discrete Stage Methods:</strong> Multi-stage cognitive pipelines MUST be authored as discrete, callable <code>step_*</code> methods on the orchestrator class:
+   - <code>step_pre_triage(query)</code>: Sub-20ms vector probe emitting continuous <code>semantic_affinity</code>.
+   - <code>step_triage(query, pre_triage)</code>: Speculative triage relay emitting decoupled intent and target domains.
+   - <code>step_hyde_rag(query, triage)</code>: HyDE synthesis with <code>search_required: bool</code> and unified ChromaDB retrieval.
+   - Macro Stage 3 Deliberation Micro-Stages:
+     - <code>step_brain_gatekeeper(query, rag_context, interest)</code>: Stage 3.1 Gatekeeper forwarding cohesive bedrock RAG + Curator Notes.
+     - <code>step_deep_thought(query, brain_bullets, interest)</code>: Stage 3.2 Deep Thought strategic synthesis with <code>FEAT-523</code> pacing.
+     - <code>step_pinky_voice(query, synthesis, interest)</code>: Stage 3.3 Pinky voice TL;DR, TTS delivery, and consensus telemetry.
+     - <code>step_grounding_critic(query, ...)</code>: Stage 3.4 Pinky Grounding Critic 4-key scorecard audit against evidence.
+2. <strong>Zero Execution Divergence:</strong> The live <code>process_turn()</code> loop in production MUST delegate directly and sequentially to these <code>step_*</code> methods. Standalone divergence (separate CLI tools with duplicate logic) is strictly prohibited.
+3. <strong>Fast Offline Unit Testing:</strong> Pytest test suites (such as <code>test_multi_stage_replay_pipeline.py</code> / <code>FEAT-645</code>) MUST be able to execute any single <code>step_*</code> method independently using frozen input fixtures, verifying prompts and JSON parsing in $&lt; 500\text{ms}$ without spinning up live websocket sessions.
+4. <strong>Continuous Parameter Passing:</strong> Stage methods pass continuous parameters (<code>interest: float</code>, <code>semantic_affinity: float</code>, <code>search_required: bool</code>) explicitly across boundaries rather than relying on mutable shared state or binary clamps (<code>vibe == 'CASUAL'</code>).</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-084</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Lettered Dropped Threads Protocol (ANCHOR_LETTER)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-084]</code> / <code>[BKM-004]</code> / <code>[BKM-064]</code> / <code>[BKM-077]</code> / <code>[INS-016]</code><br />
+<strong>Colloquial Alias:</strong> "The Lettered Reminders Ledger"<br />
+<strong>Domain:</strong> Conversational Accountability, Thread Preservation, Anti-Abandonment<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Dual-Namespace Architecture</h3>
+<p>To prevent confusion between active work and pending reminders:
+* <strong>Numbered Lanes ($1 \dots N$):</strong> Reserved exclusively for active, foreground conversational swim lanes under <code>BKM-064</code> / <code>BKM-077</code>.
+* <strong>Lettered Ledger ($A \dots Z$):</strong> Reserved exclusively for unaddressed findings, paused ideas, or bugs uncovered under QQ (<code>BKM-004</code>) that lack active follow-up.</p>
+<h3>2. The Lookback Horizon &amp; Anti-Hijack Invariant</h3>
+<ol>
+<li><strong>The Lookback Horizon:</strong> Review the prior 2–4 turns (specifically turns $N-2$ through $N-4$). The immediate last turn ($N-1$) is active conversational context and is never treated as a dropped thread.</li>
+<li><strong>Never Hijack:</strong> The agent MUST answer the user's current prompt first, completely, and with 100% focus. The lettered dropped threads ledger is rendered strictly as a compact tail addendum or footnote at the very end of the turn.</li>
+<li><strong>Empty Ledger Invariant:</strong> If all items have exited or no pending items exist, omit the ledger section completely.</li>
+</ol>
+<h3>3. Persistent Letter Tracking Across Turns</h3>
+<p>Dropped threads assigned a letter (A:, B:, ...) persist across turns with stable keys until they hit a <strong>Valid Exit Gate</strong>. An agent may not silently drop a lettered thread between turns.</p>
+<h3>4. Valid Exit Gates (Silence is Never an Exit)</h3>
+<p>A lettered item only clears from the ledger when one of four explicit gates is satisfied:
+1. <strong>Addressed:</strong> The item is actively implemented in the current turn or verified resolved in code/tests.
+2. <strong>Documented:</strong> The item is formally recorded into a sprint backlog (<code>SPRINT_PLAN_*.md</code>), general project backlog, feature tracker (<code>FeatureTracker.md</code>), or DNA card.
+3. <strong>Integrated:</strong> The operator directs the item into an active numbered topic (e.g., <em>"Put A–C into #3"</em> $\rightarrow$ absorbed into Topic 3's scope).
+4. <strong>Explicitly Dismissed:</strong> The operator explicitly commands <em>"dismiss A"</em>, <em>"drop B"</em>, or <em>"not doing C"</em>. Operator silence or conversational pivots NEVER clear the ledger.</p>
+<h3>5. Format Standard</h3>
+<p>When active pending threads exist, render the reminder at the very conclusion of the turn. Format each item using a capital letter with a colon followed by a concise, one-line description (e.g., <code>A: One-line description</code>). If no pending threads exist, omit the ledger entirely.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-085</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">Historical Pre-Regression Correlation Protocol (ANCHOR_PROVENANCE)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-085]</code> / <code>[BKM-020]</code> / <code>[BKM-024]</code> / <code>[BKM-082]</code> / <code>[INS-047]</code><br />
+<strong>Colloquial Alias:</strong> "The Pre-Regression Archaeology &amp; Intent Triangulation Standard"<br />
+<strong>Domain:</strong> Defect Investigation, Architectural Root-Cause Analysis, Anti-Regression Engineering<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Core Law: Pre-Regression Excavation Before Surgery</h3>
+<p>Agents frequently suffer from "recency bias": when encountering a routing defect, execution bypass, or unintended failure mode, agents hyper-focus on the immediate code in front of them and patch symptoms in place. This creates circular regressions where an ad-hoc patch undoes a prior architectural fix.</p>
+<p>Under <code>BKM-085</code>, before modifying any control-plane routing, gate, or subsystem contract, an agent MUST perform a structured 3-phase investigation across <strong>Sprint History</strong>, <strong>Pre-Regression Git State</strong>, and <strong>DNA Intent</strong>.</p>
+<h3>2. The 3-Phase Correlation Methodology</h3>
+<h4>Phase 1: Sprint Discovery (The Intent / "Why")</h4>
+<ol>
+<li><strong>Query Sprint DNA &amp; Archives:</strong> Query <code>sprint_dna</code> and search active/archived sprint plans for the feature ID, subsystem name, or problem domain.</li>
+<li><strong>Excavate the Original Pressures:</strong> Identify the exact technical or operational requirement that prompted the original change. Determine what problem the author was solving.</li>
+<li><strong>Capture the Valid Invariant:</strong> Record the underlying invariant that must be preserved. A regression fix is invalid if it re-opens the original issue that the historical sprint solved.</li>
+</ol>
+<h4>Phase 2: Git Archaeology (The Code / "What")</h4>
+<ol>
+<li><strong>Locate the Pre-Regression Code:</strong> Use <code>git log -S</code> and <code>git blame</code> to find the exact commit that introduced the divergent behavior.</li>
+<li><strong>Inspect Pre-Regression Baseline:</strong> Check out or inspect the commit immediately <em>prior</em> to the divergence (<code>HEAD~1</code> relative to the commit). Establish what was already in place, how data flowed, and what baseline contracts were functioning cleanly before the change.</li>
+<li><strong>Evaluate the Regressing Commit With Merit:</strong> Inspect the commit that introduced the divergence. Do not dismiss it as a mere mistake—recognize the constraints, missing subsystems, or temporary scaffolding that existed at that specific moment in the project's evolution. Understand the big picture of why the author chose that specific mechanism at that time.</li>
+</ol>
+<h4>Phase 3: DNA Correlation (The Alignment / "How")</h4>
+<ol>
+<li><strong>Compare Grounded Intent Against Code Reality:</strong> Cross-reference the Phase 1 Intent and Phase 2 Git diff with current DNA (<code>FeatureTracker.md</code>, <code>Protocols.md</code>, <code>wisdom_data.json</code>).</li>
+<li><strong>Isolate the Architectural Gap:</strong> Formulate the gap explicitly: identify how current architectural capabilities (e.g., modern shared registries, continuous scalars, unified pipelines) can now satisfy the Phase 1 requirement cleanly, rendering the Phase 2 compromise or bypass obsolete.</li>
+<li><strong>Formulate the Pre-Flight Specification:</strong> Define unambiguous contracts (4-Anchor Standard per <code>BKM-043</code>) that restore baseline functionality while upholding the original design intent.</li>
+</ol>
+<h3>3. Execution &amp; Silicon Verification</h3>
+<p>Once the 3-phase correlation is complete and documented, implementation proceeds under Heads-Down delegation (<code>BKM-029</code>). Final certification mandates verifying against physical running silicon (<code>BKM-024</code> / <code>INS-047</code> <em>Live is King</em>).</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-086</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Paved-Path Sprint Protocol (AFK / Sovereign Execution)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-086]</code> / <code>[BKM-082]</code> / <code>[BKM-085]</code> / <code>[BKM-030]</code> / <code>[BKM-043]</code> / <code>[BKM-049]</code> / <code>[BKM-006]</code> / <code>[BKM-007]</code> / <code>[BKM-024]</code> / <code>[BKM-084]</code> / <code>[Law-9]</code><br />
+<strong>Colloquial Aliases:</strong> "AFK Sprint", "Paved Sprint", "The Grounded Sprint", "Sovereign Execution Pipeline"<br />
+<strong>Tags:</strong> <code>#afk_sprint</code>, <code>#paved_sprint</code>, <code>#grounded_sprint</code>, <code>#autonomous_execution</code>, <code>#bkm_049_anti_bypass</code>, <code>#tri_anchor</code><br />
+<strong>Domain:</strong> Autonomous Agentic Sprints, Long-Running Hands-Off Workflows, Multi-Agent Swarm Orchestration<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Core Law: Autonomy Through Paved Trust</h3>
+<p>When an operator commands an <strong>"AFK Sprint"</strong>, <strong>"Paved Sprint"</strong>, or <strong>"Grounded Sprint"</strong> (used interchangeably), the agent is granted full autonomous momentum to plan, delegate, execute, and certify a sprint without stopping for turn-by-turn conversational permission.</p>
+<p>This autonomy is NOT unconstrained liberty—it is earned and maintained strictly through the <strong>Four Invariant Pillars of Paved Trust</strong>:</p>
+<h4>Pillar 1: Explicit Grounding &amp; Pre-Regression Archaeology (<code>BKM-082</code> + <code>BKM-085</code>)</h4>
+<ul>
+<li><strong>Zero Speculative Editing:</strong> The agent MUST NOT guess or invent requirements. </li>
+<li><strong>The 3-Phase Excavation Mandate:</strong></li>
+<li><em>Phase 1 (Sprint Intent)</em>: Query <code>sprint_dna</code> to discover the original technical/business pressures before touching code.</li>
+<li><em>Phase 2 (Git Baseline &amp; Post-Commit Merit)</em>: Check out <code>HEAD~1</code> to inspect what worked cleanly before the divergence. Simultaneously, evaluate the regressing commit with merit to understand the historical constraints and temporary scaffolding that existed at that time.</li>
+<li><em>Phase 3 (DNA Invariant Alignment)</em>: Compare intent against <code>FeatureTracker.md</code> and <code>Protocols.md</code> to solve the original requirement using modern shared capabilities rather than ad-hoc bypasses.</li>
+</ul>
+<h4>Pillar 2: Deterministic 4-Anchor Planning &amp; Mistake Prevention (<code>BKM-030</code> + <code>BKM-043</code> + <code>BKM-081</code>)</h4>
+<ul>
+<li><strong>The 4-Anchor Standard is Mandatory on Every Story:</strong></li>
+<li><em>Anchor 1 (Target Files &amp; Line Numbers)</em>: Explicit file paths and exact line ranges.</li>
+<li><em>Anchor 2 (Verification Command)</em>: Concrete, executable test commands (e.g. <code>pytest ... -v</code>).</li>
+<li><em>Anchor 3 (Verbatim Code Specs)</em>: Exact function signatures, parameter names, and dictionary keys.</li>
+<li><em>Anchor 4 (DNA Links)</em>: Concrete <code>[FEAT-xxx]</code> and <code>[BKM-xxx]</code> tags.</li>
+<li><strong>Pre-Flight Mistakes Avoided Ledger (<code>BKM-081</code>)</strong>: Explicitly record what traps must be avoided based on past sprint retrospectives before authoring code.</li>
+</ul>
+<h4>Pillar 3: Structured Delegation &amp; The Strict Anti-Bypass Guard (<code>BKM-049</code> + <code>BKM-006</code>)</h4>
+<ul>
+<li><strong>Conscious Avoidance of the Self-Promotion Trap:</strong></li>
+<li><code>[SWARM:LOCAL]</code> (Atlas on RTX 4090 via port 4097): Preferred for targeted code surgery, parameter plumbing, and unit test assertions.</li>
+<li><code>[SWARM:CLOUD]</code> (Sisyphus / Nemotron / DeepSeek): Reserved for heavy cross-subsystem architectural refactoring.</li>
+<li><code>[AGY:PRIMARY]</code>: Strictly restricted to orchestrating git boundaries, hot-reloading daemons, and running live verification probes.</li>
+<li><strong>THE ANTI-BYPASS INVARIANT (Strictly Enforced):</strong>
+  When a story is tagged <code>[SWARM:LOCAL]</code> or <code>[SWARM:CLOUD]</code>, AGY:PRIMARY is <strong>STRICTLY FORBIDDEN from directly modifying the story's target codebase files using file-editing tools</strong>. Dispatch MUST execute through the delegation harness (<code>HomeLabAI/src/tests/delegate.py</code>). Direct code takeover (<code>[AGY:TAKEOVER]</code>) is only permissible after the assigned swarm tier has executed, failed its required diagnostic remediation rounds, and logged a diagnostic post-mortem.</li>
+</ul>
+<h4>Pillar 4: Adversarial Audit &amp; Physical Silicon Certification (<code>BKM-007</code> + <code>BKM-024</code> + <code>INS-047</code>)</h4>
+<ul>
+<li><strong>Pre-Flight Adversarial Review:</strong> Run Cloud Oracle audit on the sprint plan (<code>ask_oracle</code> / <code>ORACLE_REVIEW_SPRINT_*.md</code>) to challenge assumptions and expose blind spots before code dispatch.</li>
+<li><strong>Offline Harness Gate:</strong> Unit and replay test suites (<code>FEAT-645</code>) must pass 100% green without mocks masking live behavior.</li>
+<li><strong>LIVE IS KING (<code>BKM-024</code> / <code>INS-047</code>):</strong> Final story and sprint certification mandates testing against the physical running daemon (<code>lab-attendant.service</code> matching Git HEAD) and live reachable silicon endpoints via synthetic probe injection. Sandbox unit tests alone are never sufficient for sprint closure.</li>
+</ul>
+<h3>1.1 Checklist &amp; Artifact Currency Standard (The Idempotency &amp; Level-of-Entry Rule)</h3>
+<p><code>BKM-086</code> can be treated as an operational checklist:
+- <strong>Idempotent Execution</strong>: Paved paths do not need to be followed twice <strong>ONLY WHEN</strong> the BKM flow has <strong>ALREADY</strong> been followed and the corresponding artifacts (grounding, 4-anchor plans, delegation targets, and test harnesses) are <strong>CURRENT</strong>.
+- <strong>Level-of-Entry Flow-Down</strong>: Any additions, scope changes, or newly introduced stories <strong>MUST</strong> trigger a new path flow at the exact level they were added (e.g., introducing a new story mandates Grounding $\to$ 4-Anchor Specification $\to$ Delegation/Verification, rather than jumping directly to execution or skipping preceding BKM gates).</p>
+<h3>2. Operational Trigger &amp; Protocol Loop</h3>
+<p>When commanded to run an <strong>AFK Sprint</strong> or <strong>Paved Sprint</strong>:
+1. Check out an isolated sprint branch (<code>sprint-&lt;ID&gt;</code>).
+2. Execute the 4-Pillar Pipeline continuously until all stories are certified or an unresolvable grounding gap is reached.
+3. Maintain the Dropped Threads Ledger (<code>BKM-084</code>) and Conversational Continuity (<code>Law 9</code>) on all interim updates.
+4. Fast-forward merge back to <code>main</code> only after full regression verification and physical daemon certification.</p>
                             </div>
                         </td>
                     </tr>

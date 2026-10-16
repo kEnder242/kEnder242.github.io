@@ -1,18 +1,218 @@
 {
   "summary": {
-    "total_runs": 275,
-    "successful_runs": 178,
-    "total_tokens_blended": 16625246,
-    "total_conductor_tokens": 16488292,
-    "total_l3_tokens": 136954,
-    "total_cached_tokens": 9009112,
-    "total_wall_time_minutes": 2279.14,
-    "estimated_cloud_cost_usd": 62.086662,
-    "estimated_local_power_cost_usd": 1.13957,
-    "net_savings_usd": 60.947092,
+    "total_runs": 285,
+    "successful_runs": 185,
+    "total_tokens_blended": 17087746,
+    "total_conductor_tokens": 16919040,
+    "total_l3_tokens": 168706,
+    "total_cached_tokens": 9108184,
+    "total_wall_time_minutes": 2319.15,
+    "estimated_cloud_cost_usd": 63.101169,
+    "estimated_local_power_cost_usd": 1.159575,
+    "net_savings_usd": 61.941594,
     "local_offload_ratio_pct": 1.8
   },
   "runs": [
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Canonical JIT shakedown checkpoint",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-16T11:39:50"
+    },
+    {
+      "sprint": "104",
+      "story": "104.15",
+      "title": "Replay Pipeline Multi-Domain Retrieval Contract Assertion",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 350.35,
+      "duration_m": 5.84,
+      "tokens": {
+        "conductor": 46337,
+        "l3": 3746,
+        "total": 50083,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-16T11:29:23"
+    },
+    {
+      "sprint": "104",
+      "story": "104.14",
+      "title": "Forward target_domains from Cognitive Hub to Archive Node",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 290.81,
+      "duration_m": 4.85,
+      "tokens": {
+        "conductor": 49052,
+        "l3": 3814,
+        "total": 52866,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-16T11:22:55"
+    },
+    {
+      "sprint": "104",
+      "story": "104.13",
+      "title": "Consolidation of resolve_collection_scope & DNA Mapping",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 792.28,
+      "duration_m": 13.2,
+      "tokens": {
+        "conductor": 69609,
+        "l3": 14380,
+        "total": 83989,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-16T11:16:35"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "FEAT-659 backward-compatible resolve_collection_scope fix complete",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "FEAT-659 backward-compatible resolve_collection_scope fix complete",
+      "timestamp": "2026-10-16T11:15:06"
+    },
+    {
+      "sprint": "103",
+      "story": "103.18",
+      "title": "Single-Turn Conversational HyDE & Sovereign Interest Upvote",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "SUCCESS",
+      "duration_s": 125.32,
+      "duration_m": 2.09,
+      "tokens": {
+        "conductor": 61020,
+        "l3": 2002,
+        "total": 63022,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-15T15:25:19"
+    },
+    {
+      "sprint": "103",
+      "story": "103.13",
+      "title": "Pinky High-Level Grounding & Dynamic Era Compass Injection",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 72.61,
+      "duration_m": 1.21,
+      "tokens": {
+        "conductor": 42328,
+        "l3": 2002,
+        "total": 44330,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-15T13:26:11"
+    },
+    {
+      "sprint": "103",
+      "story": "103.12",
+      "title": "Intercom Monolithic <thought> Rendering & Critic Regex Stripping",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 359.19,
+      "duration_m": 5.99,
+      "tokens": {
+        "conductor": 52409,
+        "l3": 1790,
+        "total": 54199,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-15T13:24:12"
+    },
+    {
+      "sprint": "103",
+      "story": "103.3",
+      "title": "Extract Discrete step_* Methods on CognitiveHub (BKM-083)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 340.13,
+      "duration_m": 5.67,
+      "tokens": {
+        "conductor": 70423,
+        "l3": 2009,
+        "total": 72432,
+        "cache_read": 62464
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-14T15:16:34"
+    },
+    {
+      "sprint": "103",
+      "story": "103.2",
+      "title": "Adversarial Oracle Pre-Pass Audit on Decoupled Round Table Stages and Casual Scrub",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 69.45,
+      "duration_m": 1.16,
+      "tokens": {
+        "conductor": 39570,
+        "l3": 2009,
+        "total": 41579,
+        "cache_read": 36608
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-14T15:10:33"
+    },
     {
       "sprint": "102",
       "story": "102.21",

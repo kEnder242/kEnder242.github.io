@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-10-13 21:01:49",
+    "timestamp": "2026-10-16 06:00:25",
     "topic": "Nightly Accountability Sentinel (Watchdog)",
-    "content": "\ud83d\udea8 **[ACCOUNTABILITY AUDIT: FAIL]**\n\n**Checks Passed:** 6/8\n**Discrepancies:** Foyer state: OFFLINE, status: OFFLINE, engine: STANDBY/DOWN; Round Table Probe failed or timed out\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._"
+    "content": "\ud83d\udea8 **[ACCOUNTABILITY AUDIT: FAIL]**\n\n**Checks Passed:** 7/8\n**Discrepancies:** Nightly Forge did not complete successfully (Status: DEGRADED (Age: 999.0h))\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._"
 }
