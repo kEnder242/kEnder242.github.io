@@ -2002,6 +2002,16 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 <strong>Colloquial Alias:</strong> "The Sprint Grounding Run / Historical Horizon Pre-Flight Invariant"<br />
 <strong>Domain:</strong> Sprint Architecture, Diagnostic Horizon, Historical Invariants, Anti-Amnesia Governance<br />
 <strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<h3>🛑 PRE-FLIGHT CHECKLIST GATE (Mandatory Digital Paper Trail)</h3>
+<p>Before writing code or dispatching tools, the Agent MUST embed and check off this paper trail directly in the active sprint plan (<code>SPRINT_PLAN_SPR_*.md</code>):
+- [ ] <strong>1. 5-Sprint Lookback</strong>: Reviewed last 5 sprints for traps, anti-patterns, and sentinels (<code>BKM-082 §2.1</code>).
+- [ ] <strong>2. Mistakes-Avoided Ledger</strong>: Enumerate $\ge$ 3 concrete historical mistakes avoided (<code>BKM-082 §2.4</code>).
+- [ ] <strong>3. Oracle Review</strong>: Adversarial audit completed and appended (<code>BKM-007</code> / <code>BKM-080</code>).
+- [ ] <strong>4. Delegation Justification</strong>: Evaluated <code>LOCAL</code>/<code>CLOUD</code> first; documented rationale for any story assigned to <code>AGY:PRIMARY</code> (<code>Invariant 7</code> / <code>BKM-049</code>).
+<em>An agent MUST NOT mark these <code>[x]</code> without citing the corresponding section in the plan. Any unchecked box halts execution.</em></p>
+</blockquote>
 <h3>1. The Core Law: Grounding Before Action</h3>
 <p>Agents are frequently tempted to treat new user prompts as greenfield tasks or to diagnose current system states by inspecting only the trailing 10–15 minutes of logs (the "Short Horizon Trap"). Under tight resources, overnight compute cycles, and distributed multi-tier orchestration, this short-sightedness leads directly to:
 - <strong>Circular Fixing Traps (<code>[INS-042]</code>):</strong> Re-attempting previously failed architectural shortcuts or re-inventing broken tools.
@@ -2115,8 +2125,16 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 2. <strong>Documented:</strong> The item is formally recorded into a sprint backlog (<code>SPRINT_PLAN_*.md</code>), general project backlog, feature tracker (<code>FeatureTracker.md</code>), or DNA card.
 3. <strong>Integrated:</strong> The operator directs the item into an active numbered topic (e.g., <em>"Put A–C into #3"</em> $\rightarrow$ absorbed into Topic 3's scope).
 4. <strong>Explicitly Dismissed:</strong> The operator explicitly commands <em>"dismiss A"</em>, <em>"drop B"</em>, or <em>"not doing C"</em>. Operator silence or conversational pivots NEVER clear the ledger.</p>
+<h3>4.1 The Zero-Tombstone Pruning Law (No Completed Badges)</h3>
+<ol>
+<li><strong>Strictly an Unresolved Queue:</strong> The lettered ledger is exclusively for pending, unaddressed friction. It is NOT a completion changelog or tombstone ledger. Sprints track completions; the ledger tracks unaddressed omissions.</li>
+<li><strong>Immediate Eviction:</strong> The moment an item satisfies an Exit Gate (Addressed, Documented, Integrated, or Dismissed), its letter is released and it is immediately pruned from the turn footer.</li>
+<li><strong>Forbidden Tombstone Badges:</strong> Agents are strictly forbidden from rendering exited items in the footer with badges like <code>- **A:** ... — *Addressed*</code> or <code>— *Certified*</code>. Any narrative reporting of completed threads belongs exclusively in the response body.</li>
+<li><strong>Instant Integration Dissolution:</strong> When the operator commands <em>"Put A into #1"</em> (or an item is absorbed into an active lane), the letter dissolves immediately and must not appear in the ledger footer on that turn.</li>
+<li><strong>Strict Header Omission:</strong> When 0 unresolved threads exist, omit the <code>### Dropped Threads Ledger</code> header completely. Never render placeholder text (e.g., <code>*(None)*</code>), as placeholder headers trigger prompt-continuation mimicry across turns.</li>
+</ol>
 <h3>5. Format Standard</h3>
-<p>When active pending threads exist, render the reminder at the very conclusion of the turn. Format each item using a capital letter with a colon followed by a concise, one-line description (e.g., <code>A: One-line description</code>). If no pending threads exist, omit the ledger entirely.</p>
+<p>When active pending threads exist, render the reminder at the very conclusion of the turn. Format each item using a capital letter with a colon followed by a concise, one-line description (e.g., <code>A: One-line description</code>). If no pending threads exist, omit the ledger entirely (do not print the header or placeholder text).</p>
                             </div>
                         </td>
                     </tr>
@@ -2203,6 +2221,7 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 </ul>
 <h3>1.1 Checklist &amp; Artifact Currency Standard (The Idempotency &amp; Level-of-Entry Rule)</h3>
 <p><code>BKM-086</code> can be treated as an operational checklist:
+- <strong>Digital Checkbox Paper Trail</strong>: The AFK checklist lives directly inside the active sprint plan (<code>SPRINT_PLAN_*.md</code>) as an interactive markdown checklist (<code>- [ ] / - [x]</code>). Avoid standalone scratch files; digitally checking each box forces deliberate verification and creates a durable paper trail that prevents glossing over pre-flight gates.
 - <strong>Idempotent Execution</strong>: Paved paths do not need to be followed twice <strong>ONLY WHEN</strong> the BKM flow has <strong>ALREADY</strong> been followed and the corresponding artifacts (grounding, 4-anchor plans, delegation targets, and test harnesses) are <strong>CURRENT</strong>.
 - <strong>Level-of-Entry Flow-Down</strong>: Any additions, scope changes, or newly introduced stories <strong>MUST</strong> trigger a new path flow at the exact level they were added (e.g., introducing a new story mandates Grounding $\to$ 4-Anchor Specification $\to$ Delegation/Verification, rather than jumping directly to execution or skipping preceding BKM gates).</p>
 <h3>2. Operational Trigger &amp; Protocol Loop</h3>
@@ -2211,6 +2230,37 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 2. Execute the 4-Pillar Pipeline continuously until all stories are certified or an unresolvable grounding gap is reached.
 3. Maintain the Dropped Threads Ledger (<code>BKM-084</code>) and Conversational Continuity (<code>Law 9</code>) on all interim updates.
 4. Fast-forward merge back to <code>main</code> only after full regression verification and physical daemon certification.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-087</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Primer Protocol (Catalytic Stimulus & Single-Voice Evidentiary Pacing)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-087]</code> / <code>[FEAT-523]</code> / <code>[FEAT-657]</code> / <code>[FEAT-658]</code> / <code>[FEAT-659]</code> / <code>[BKM-015]</code> / <code>[BKM-082]</code> / <code>[BKM-085]</code><br />
+<strong>Colloquial Aliases:</strong> "The Primer Protocol", "Orienting Stimulus Vibe", "Continuous Fuel Pacing"<br />
+<strong>Tags:</strong> <code>#primer_protocol</code>, <code>#primer_vibe</code>, <code>#prompt_driven_pacing</code>, <code>#single_voice_brain</code>, <code>#context_fencing</code><br />
+<strong>Domain:</strong> Conversational Catalysis, Two-Mice Dynamics, Token Budgeting, Evidentiary Resonance<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Core Principle: The Primer Concept</h3>
+<p>In the Federated Lab, turns are not presumed to be interrogative questions from an operator (<em>"Jason's question"</em> or <code>user_query</code>). An input is a <strong>Primer</strong>—an orienting stimulus, catalyst, or situational prompt presented to the lab collective.
+1. <strong>The Primer as Catalyst:</strong> A primer may be a casual greeting, a forensic error trace, a philosophical inquiry, or an ambient event. It primes the council's bicameral attention.
+2. <strong>The "PRIMER" Vibe Archetype:</strong> Formally registered in <code>config/triage_policy.json</code> as a first-class declarative vibe (<code>enabled: true</code>, <code>default_domain: "social"</code>, <code>importance: 0.4</code>, <code>importance_floor: 0.3</code>).
+3. <strong>Lexicon &amp; Variable Plumbing:</strong> Prompts, schemas (<code>PINKY_HYDE_SCHEMA</code>), and stage builders use <code>[PRIMER]</code> / <code>primer</code> alongside backward-compatible <code>user_query</code> aliases.</p>
+<h3>2. Bicameral Persona Invariants Under the Primer</h3>
+<p>The lab's two mice respond to primers under strict behavioral boundaries:
+1. <strong>Pinky Always Speaks:</strong> Pinky is the intuitive, left-hemisphere voice of the lab. On greetings and low-interest banter, Pinky provides her authentic conversational take. She never adaptively yields or stays silent on an active turn unless explicitly instructed.
+2. <strong>Pinky Context Fencing:</strong> Pinky's directive is simple and invariant: <em>"Stay relevant to the primer and the actors before you."</em> Pinky does not unroll background laboratory telemetry, silicon specs, or tool checklists unless explicitly prompted.
+3. <strong>The Brain as Evidentiary Gatekeeper:</strong> The Brain maintains his cynical, high-standard persona as <strong>The Brain</strong> (never generic "curator"). He inspects <code>&lt;historical_record&gt;</code>, evaluates bedrock truth, and passes curated signals to Deep Thought.
+4. <strong>Single-Voice &amp; Escape Route (Anti-Scripting Invariant):</strong>
+   - The Brain speaks strictly in a single voice. The model must never generate multi-actor theatrical scripts (<code>[PINKY'S RESPONSE] ... [BRAIN'S RESPONSE]</code>).
+   - If Pinky is silent, Brain's Stage 1 prompt provides an explicit escape route: note Pinky's silence in character and evaluate the primer and evidence directly as The Brain.</p>
+<h3>3. Continuous Fuel Pacing vs Hardcoded Bloat Floors</h3>
+<p>Token expenditure and node activation are governed purely by continuous evidential fuel (<code>interest: 0.0 ... 1.0</code>):
+1. <strong>Prompt-Driven Pacing (<code>calculate_pacing_range</code>):</strong> Injected into system prompts as a fuzzy target guideline (<code>[PACING]: Target ~low to high tokens.</code>) to relax model verbosity. Pacing is prompt-driven, NOT a vLLM hard truncation or guillotine chop.
+2. <strong>Continuous Physical Budgets:</strong> Physical token budgets (<code>max_tokens</code>) scale smoothly with interest (<code>int(interest * multiplier)</code>). Arbitrary hardcoded floors (<code>max(250, ...)</code>, <code>max(500, ...)</code>, <code>+ 200</code>) are strictly forbidden; they defeat natural fuel exhaustion and bloat zero-context banter.
+3. <strong>Low-Interest Quiescence:</strong> On casual greetings or zero-context primers ($interest &lt; 0.30$), Deep Thought remains completely dormant (0 tokens, 0ms latency), and Brain operates with tight brevity (~40 tokens) or dormancy, allowing conversational fuel to exhaust naturally.</p>
                             </div>
                         </td>
                     </tr>

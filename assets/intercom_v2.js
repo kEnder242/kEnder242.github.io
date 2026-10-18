@@ -22,6 +22,9 @@ const CONFIG = {
 // [FEAT-089] Zero Trust Guest Expansion
 // a single audio rotate can never daisy-chain Int16 buffer expansion and
 // grow the browser heap without a bound.
+// [FEAT-638] Whitelist of sources that display in-line feedback buttons
+const VOTEABLE_SOURCES = ['pinky', 'brain', 'thought', 'triage', 'lab'];
+
 const PCM_CHUNK_CAP = 32768;
 
 let ws = null;
@@ -341,10 +344,11 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         `;
     }
     
-    // [FEAT-638] Response Feedback Buttons
+    // [FEAT-638 / FEAT-661] Response Feedback Buttons & In-Line Interest Hover Badge
     let respFbHtml = '';
+    const isVoteableSource = (typeof VOTEABLE_SOURCES !== 'undefined' ? VOTEABLE_SOURCES : ['pinky', 'brain', 'thought', 'triage', 'lab']).some(src => new RegExp(src, 'i').test(source || ''));
     if (channel === 'chat' && !isRestoringHistory && 
-        source && /pinky|brain|insight|thought|resident|shadow/i.test(source.toLowerCase()) && 
+        source && isVoteableSource && 
         sl_low !== 'system' && sl_low !== 'me' && 
         !isInternal && text) {
         // Store feedback data on the message element
@@ -352,8 +356,19 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         msg.setAttribute('data-fb-reqid', lastRequestId || (metadata && metadata.msg_id) || 'session-msg');
         msg.setAttribute('data-fb-response', text);
         
+        const turnInterest = (metadata && metadata.interest !== undefined && metadata.interest !== null)
+            ? metadata.interest
+            : (window._lastTurnInterest !== undefined && window._lastTurnInterest !== null ? window._lastTurnInterest : null);
+        if (turnInterest !== null && turnInterest !== undefined) {
+            msg.setAttribute('data-interest', turnInterest);
+        }
+        
+        const badge = (turnInterest !== null && turnInterest !== undefined)
+            ? `<span class="interest-badge" title="Deliberation Interest Fuel: ${turnInterest}">⚡ ${Number(turnInterest).toFixed(2)}</span>`
+            : '';
+        
         // Build feedback buttons HTML
-        respFbHtml = '<div class="resp-fb"><button type="button" class="fb-btn" data-fb="UP" onclick="submitResponseFeedback(this)">👍</button><button type="button" class="fb-btn" data-fb="DOWN" onclick="submitResponseFeedback(this)">👎</button></div>';
+        respFbHtml = `<div class="resp-fb">${badge}<button type="button" class="fb-btn" data-fb="UP" onclick="submitResponseFeedback(this)">👍</button><button type="button" class="fb-btn" data-fb="DOWN" onclick="submitResponseFeedback(this)">👎</button></div>`;
     }
     
     const isSystem = sl_low === 'system';
@@ -361,7 +376,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     const isSystemStrategic = (isSystem) && (text_low.includes('strategic') || text_low.includes('engaging'));
 
     // [Task 16.2] Markdown Pop via Marked.js
-    let formattedText = text;
+    let formattedText = text.replace(/<thought>([\s\S]*?)<\/thought>/g, '<div class="thought-bubble"><em>$1</em></div>');
     
     // Check if the response is a JSON block to pretty-print
     let isJSON = false;
@@ -421,10 +436,10 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
             <div class="msg-header">
                 <span class="msg-time">${time}</span>
                 <span class="msg-source ${sl}">[${isBuildingUpon ? '↳ ' : ''}${displaySource}]</span>
+                ${respFbHtml}
             </div>
             <div class="msg-body">${formattedText}</div>
             ${metaHtml}
-            ${respFbHtml}
         `;
     }
     
@@ -718,6 +733,9 @@ async function connect() {
         ws.onmessage = (e) => {
             const data = JSON.parse(e.data);
             console.log("[WS RECV]", data);
+            if (data.interest !== undefined && data.interest !== null) {
+                window._lastTurnInterest = data.interest;
+            }
             if (data.session_token) {
                 currentSocketId = data.session_token;
             } else if (data.socket_id && (!currentSocketId || currentSocketId === 'Unknown')) {
@@ -945,6 +963,71 @@ async function connect() {
                 try {
                     sessionStorage.setItem('acme_active_file', data.filename);
                 } catch (e) {}
+            } else if (data.type === 'thought_stream') {
+                // [FEAT-489] Dual-Console Thought Stream Handler
+                const channel = data.channel || 'chat';
+                const source = data.source || data.brain_source || 'Resident';
+                const isRight = channel === 'insight' || data.console === 'Right' || data.console === 'right' || data.console === 'center';
+                const targetConsole = isRight ? insightConsole : chatConsole;
+                const streamId = 'stream-' + channel + '-' + (data.console || 'def').toLowerCase();
+                let streamEl = document.getElementById(streamId);
+
+                if (!data.final) {
+                    if (!streamEl) {
+                        streamEl = document.createElement('div');
+                        streamEl.id = streamId;
+                        streamEl.className = 'message brain-msg stream-active';
+                        const time = new Date().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                        const sl = String(source).toLowerCase().replace(/[^a-z0-9_-]/g, '-');
+                        streamEl.innerHTML = `
+                            <div class="msg-header">
+                                <span class="msg-time">${time}</span>
+                                <span class="msg-source ${sl}">[${source}]</span>
+                            </div>
+                            <div class="msg-body" style="white-space: pre-wrap;"></div>
+                        `;
+                        targetConsole.appendChild(streamEl);
+                    }
+                    if (data.interest !== undefined && data.interest !== null) {
+                        streamEl.setAttribute('data-interest', data.interest);
+                    }
+                    const bodyEl = streamEl.querySelector('.msg-body');
+                    if (bodyEl && data.token) {
+                        bodyEl.textContent += data.token;
+                    }
+                    targetConsole.scrollTop = targetConsole.scrollHeight;
+                } else {
+                    if (streamEl) {
+                        streamEl.removeAttribute('id');
+                        streamEl.classList.remove('stream-active');
+                        const bodyEl = streamEl.querySelector('.msg-body');
+                        if (bodyEl && window.marked && bodyEl.textContent.trim()) {
+                            bodyEl.innerHTML = marked.parse(bodyEl.textContent);
+                        }
+                        // [FEAT-638 / FEAT-661] Attach in-line hover feedback and interest badge to stream message
+                        const turnInt = streamEl.getAttribute('data-interest') || (data.interest !== undefined && data.interest !== null ? data.interest : window._lastTurnInterest);
+                        const isVoteable = (typeof VOTEABLE_SOURCES !== 'undefined' ? VOTEABLE_SOURCES : ['pinky', 'brain', 'thought', 'triage', 'lab']).some(src => new RegExp(src, 'i').test(source || ''));
+                        if (isVoteable) {
+                            streamEl.setAttribute('data-fb-query', lastUserQuery || '');
+                            streamEl.setAttribute('data-fb-reqid', data.request_id || 'session-msg');
+                            streamEl.setAttribute('data-fb-response', bodyEl ? bodyEl.textContent : '');
+                            if (turnInt !== undefined && turnInt !== null) {
+                                streamEl.setAttribute('data-interest', turnInt);
+                            }
+                            const badge = (turnInt !== undefined && turnInt !== null)
+                                ? `<span class="interest-badge" title="Deliberation Interest Fuel: ${turnInt}">⚡ ${Number(turnInt).toFixed(2)}</span>`
+                                : '';
+                            const headerEl = streamEl.querySelector('.msg-header');
+                            if (headerEl && !headerEl.querySelector('.resp-fb')) {
+                                const fbContainer = document.createElement('div');
+                                fbContainer.className = 'resp-fb';
+                                fbContainer.innerHTML = `${badge}<button type="button" class="fb-btn" data-fb="UP" onclick="submitResponseFeedback(this)">👍</button><button type="button" class="fb-btn" data-fb="DOWN" onclick="submitResponseFeedback(this)">👎</button>`;
+                                headerEl.appendChild(fbContainer);
+                            }
+                        }
+                        targetConsole.scrollTop = targetConsole.scrollHeight;
+                    }
+                }
             } else if (data.brain) {
                 // [FEAT-453/480] Safety net: diagnostic-prefixed system lines go to the Crosstalk Bar.
                 // Do NOT intercept persona chat responses (Pinky/Brain) even if they contain bracketed text.
@@ -960,7 +1043,8 @@ async function connect() {
                     sources: data.sources,
                     is_internal: data.is_internal,
                     topic: data.topic,
-                    fuel: data.fuel
+                    fuel: data.fuel,
+                    interest: (data.interest !== undefined && data.interest !== null) ? data.interest : window._lastTurnInterest
                 });
             } else if (data.type === 'hearing') {
                 // [FEAT-233.2] Live Hearing Pipe: Update or create a temporary hearing bubble
@@ -1171,17 +1255,19 @@ function showToast(msg, kind) {
     toastTimer = setTimeout(() => { t.className = 'pg-toast ' + (kind === 'success' ? 'success' : 'error'); }, 2400);
 }
 
-// [FEAT-638] Global Response Feedback Handler
+// [FEAT-638 / FEAT-661] Global Response Feedback Handler
 window.submitResponseFeedback = function(btn) {
     const msg = btn.closest('.message'); if (!msg || btn.disabled) return;
     const rating = btn.getAttribute('data-fb');
     const base = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? 'http://127.0.0.1:8765' : 'https://acme.jason-lab.dev';
+    const interestVal = msg.getAttribute('data-interest');
     const payload = {
         rating: rating,
         query: msg.getAttribute('data-fb-query') || '',
         request_id: msg.getAttribute('data-fb-reqid') || 'session-msg',
         response: msg.getAttribute('data-fb-response') || '',
+        interest: (interestVal !== null && interestVal !== undefined && interestVal !== '') ? parseFloat(interestVal) : null,
         source: 'UI'
     };
     fetch(base + '/feedback', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
@@ -1191,8 +1277,8 @@ window.submitResponseFeedback = function(btn) {
             const row = msg.querySelector('.resp-fb');
             row.querySelectorAll('.fb-btn').forEach(b => { b.disabled = true; });
             btn.classList.add(rating === 'UP' ? 'active-up' : 'active-down');
-            console.log('[FEAT-638] feedback recorded:', d);
-            showToast((rating === 'UP' ? '👍' : '👎') + ' Feedback recorded', 'success');
+            console.log('[FEAT-638 / FEAT-661] feedback recorded:', d);
+            showToast((rating === 'UP' ? '👍' : '👎') + ' Feedback recorded' + (payload.interest !== null ? ` (⚡ ${payload.interest.toFixed(2)})` : ''), 'success');
         })
         .catch(err => { console.error('[FEAT-638] feedback failed:', err); showToast('Feedback capture failed — Foyer unreachable.', 'error'); });
 };

@@ -245,9 +245,10 @@
         .icon-btn { background: var(--accent-dim); color: #fff; border: none; padding: 8px; cursor: pointer; border-radius: 4px; }
         .icon-btn.active { background: #f85149; }
         
-        /* [FEAT-638] Response Feedback Buttons */
+        /* [FEAT-638 / FEAT-661] Response Feedback Buttons & Interest Micro-Telemetry */
         .resp-fb { display:inline-flex; gap:6px; margin-left:auto; margin-top:0; justify-content:flex-end; opacity:0; transition:opacity 0.2s ease; }
         .message:hover .resp-fb, .resp-fb:has(.active-up), .resp-fb:has(.active-down) { opacity:1; }
+        .interest-badge { font-family: monospace; font-size: 0.72rem; color: #e3b341; background: rgba(227, 179, 65, 0.12); border: 1px solid rgba(227, 179, 65, 0.35); border-radius: 3px; padding: 1px 5px; align-self: center; cursor: default; user-select: none; }
         .fb-btn { background:none; border:1px solid #333; border-radius:3px; font-size:0.7rem; padding:1px 7px; cursor:pointer; opacity:0.55; transition:all 0.2s; }
         .fb-btn:hover { opacity:1; }
         .fb-btn.active-up { opacity:1; border-color:#3fb950; color:#3fb950; background:rgba(63,185,80,0.12); box-shadow:0 0 8px rgba(63,185,80,0.5); }
@@ -302,7 +303,7 @@
     </main>
 
     <script src="assets/marked.min.js"></script>
-    <script src="intercom_v2.js?v=48d63057"></script>
+    <script src="intercom_v2.js?v=a85cbe53"></script>
     <script src="mission-control.js?v=9f1019d4"></script>
     <div id="intercom-toast" class="pg-toast" role="status" aria-live="polite" style="bottom:20px;"></div>
 </body>
