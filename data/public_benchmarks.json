@@ -196,9 +196,9 @@
       "evidence": "[RAW LOGS] - BMC23 module upgrade, EFS upgraded from 1.12 to 1.15.",
       "sensitivity": "Public",
       "tags": [
-        "EFS",
         "BMC23",
-        "upgrade"
+        "upgrade",
+        "EFS"
       ],
       "rank": 4
     },
@@ -208,9 +208,9 @@
       "evidence": "[SOLUTIONS] - Data integrity and system stability issues addressed by upgrade.",
       "sensitivity": "Public",
       "tags": [
+        "system_stability",
         "issue",
-        "data_integrity",
-        "system_stability"
+        "data_integrity"
       ],
       "rank": 4
     },
@@ -242,8 +242,8 @@
       "evidence": "HW BMC25/EFS1.15   EFS1.16",
       "sensitivity": "Public",
       "tags": [
-        "evaluation",
-        "tool_version"
+        "tool_version",
+        "evaluation"
       ],
       "rank": 4
     },
@@ -253,8 +253,8 @@
       "evidence": "RAW LOGS: Test run for FTF202, dated 09/19/06.",
       "sensitivity": "Public",
       "tags": [
-        "test_run",
-        "FTF202"
+        "FTF202",
+        "test_run"
       ],
       "rank": 4
     },
@@ -535,8 +535,8 @@
       "evidence": "[RAW LOGS: exception message mentioning UNSL0_SQIDI_GDTUNIT_0x9840 and CfgtoNOADFTR]",
       "sensitivity": "Public",
       "tags": [
-        "parsing issue",
-        "SNL expressions"
+        "SNL expressions",
+        "parsing issue"
       ],
       "rank": 4
     },
@@ -546,8 +546,8 @@
       "evidence": "[RAW LOGS: mention of HsxRegisterLib library]",
       "sensitivity": "Public",
       "tags": [
-        "debugging",
-        "HsxRegisterLib"
+        "HsxRegisterLib",
+        "debugging"
       ],
       "rank": 4
     },
@@ -557,8 +557,8 @@
       "evidence": "[RAW LOGS: PythonCLI script for NOA pins patgen, itp.devicelist() command, etc.]",
       "sensitivity": "Public",
       "tags": [
-        "VISA signals",
-        "pattern generators"
+        "pattern generators",
+        "VISA signals"
       ],
       "rank": 4
     },
@@ -1040,8 +1040,8 @@
       "evidence": "Corrected CT item selection in the VISA panel.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4
     },
@@ -1051,8 +1051,8 @@
       "evidence": "Corrected script generated from CEC register programs.",
       "sensitivity": "Public",
       "tags": [
-        "error_code",
-        "VISA"
+        "VISA",
+        "error_code"
       ],
       "rank": 4
     },
@@ -1084,8 +1084,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "exception",
-        "ITP Bug"
+        "ITP Bug",
+        "exception"
       ],
       "rank": 4
     },
@@ -1095,8 +1095,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "ITP Bug",
-        "BDW"
+        "BDW",
+        "ITP Bug"
       ],
       "rank": 4
     },
@@ -1117,8 +1117,8 @@
       "evidence": "RAW LOGS: ...",
       "sensitivity": "Public",
       "tags": [
-        "error codes",
-        "VISA"
+        "VISA",
+        "error codes"
       ],
       "rank": 4
     },
@@ -1139,8 +1139,8 @@
       "evidence": "NorthpeakApi* papi= new NorthpeakApi();\nREDACTED_PATH initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"REDACTED_PATH\"));",
       "sensitivity": "Public",
       "tags": [
-        "Northpeak API",
-        "configuration file"
+        "configuration file",
+        "Northpeak API"
       ],
       "rank": 4
     },
@@ -1172,8 +1172,8 @@
       "evidence": "TODO entry mentioning setup of BXT FPGA system",
       "sensitivity": "Public",
       "tags": [
-        "BXT FPGA",
-        "NPK SDK"
+        "NPK SDK",
+        "BXT FPGA"
       ],
       "rank": 4
     },
@@ -1183,8 +1183,8 @@
       "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
       "sensitivity": "Public",
       "tags": [
-        "LTB",
-        "NullPointerException"
+        "NullPointerException",
+        "LTB"
       ],
       "rank": 4
     },
@@ -1194,9 +1194,9 @@
       "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
       "sensitivity": "Public",
       "tags": [
+        "ISDBaseWin64",
         "BXTSupportPkWin64",
-        "IpcApiAccess",
-        "ISDBaseWin64"
+        "IpcApiAccess"
       ],
       "rank": 4
     },
@@ -1548,9 +1548,9 @@
       "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
       "sensitivity": "Public",
       "tags": [
+        "powercycle.py",
         "FPGAIntegration",
-        "init_soc.cmm",
-        "powercycle.py"
+        "init_soc.cmm"
       ],
       "rank": 4
     },
@@ -1561,8 +1561,8 @@
       "sensitivity": "Public",
       "tags": [
         "vcd_missing",
-        "msr_error",
-        "test_failure"
+        "test_failure",
+        "msr_error"
       ],
       "rank": 4
     },
@@ -1572,8 +1572,8 @@
       "evidence": "RAW LOGS: Error message indicating MSR access faulted.",
       "sensitivity": "Public",
       "tags": [
-        "msr_error",
-        "cpu_fault"
+        "cpu_fault",
+        "msr_error"
       ],
       "rank": 4
     },
@@ -1594,8 +1594,8 @@
       "evidence": "REDACTED_PATH:433: Failure Value of: rcv_msg.find(\"true\") != string::npos Actual: false Expected: true",
       "sensitivity": "Public",
       "tags": [
-        "failure",
-        "visa_patgen_manual_stop"
+        "visa_patgen_manual_stop",
+        "failure"
       ],
       "rank": 4
     },
@@ -1605,8 +1605,8 @@
       "evidence": "Test run on 3/27/2015, while code snippet mentions 'from user.iwagner1 import npk_basic_test' which suggests that the tool was released in 2022.",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "causality"
+        "causality",
+        "error"
       ],
       "rank": 4
     },
@@ -1628,9 +1628,9 @@
       "evidence": "RAW LOGS: P REDACTED_PATH --gtest_output=xml:REDACTED_PATH  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
       "sensitivity": "Public",
       "tags": [
-        "cfg_apitest64.exe",
         "tap2sb",
-        "probemode"
+        "probemode",
+        "cfg_apitest64.exe"
       ],
       "rank": 4
     },
@@ -1640,8 +1640,8 @@
       "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
       "sensitivity": "Public",
       "tags": [
-        "bugs",
-        "ITP"
+        "ITP",
+        "bugs"
       ],
       "rank": 4
     },
@@ -1685,7 +1685,15 @@
       "tags": [
         "DSD Tool Stack",
         "TODO"
-      ]
+      ],
+      "inferred_intent": "greeting",
+      "addressed_to": "NONE",
+      "vibe": "CASUAL",
+      "domain": "unknown",
+      "casual": 0.8,
+      "intrigue": 0.0,
+      "importance": 0.0,
+      "target_domains": []
     },
     {
       "date": "2015-06-25",
@@ -1704,8 +1712,8 @@
       "evidence": "Updates made to various XML files, including `visa_custom_og.xml`, `visa_custom_am.xml`, and `RedCover.cfg`.",
       "sensitivity": "Public",
       "tags": [
-        "SkyLake_M0",
         "EDRAM",
+        "SkyLake_M0",
         "VISA"
       ],
       "rank": 4
@@ -1738,8 +1746,8 @@
       "evidence": "A test was run on SV2K8122 using InstallPVT-BXTOEM.1.0.193.400 and it passed except for BIOS - IFWI issues.",
       "sensitivity": "Public",
       "tags": [
-        "PVT BXTOEM",
         "testing",
+        "PVT BXTOEM",
         "SV2K8122"
       ],
       "rank": 4
@@ -1750,8 +1758,8 @@
       "evidence": "The latest nightly build was fetched from https:REDACTED_PATH refs/changes/49/63649/2. The build script was run using REDACTED_PATH -64 -e and then REDACTED_PATH -64 -r -b",
       "sensitivity": "Public",
       "tags": [
-        "configuration",
         "NPK SDK",
+        "configuration",
         "installation"
       ],
       "rank": 4
@@ -1792,8 +1800,8 @@
       "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
       "sensitivity": "Public",
       "tags": [
-        "PVT",
         "testing",
+        "PVT",
         "validation"
       ],
       "rank": 4
@@ -1804,8 +1812,8 @@
       "evidence": "RAW LOGS: Host Interface Error with a WriteMemoryWithStreamer:Read ipc_msg_read() failed message.",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "host interface"
+        "host interface",
+        "error"
       ],
       "rank": 4
     },
@@ -1815,8 +1823,8 @@
       "evidence": "Installed BXT OEM toolstack from \\amr\\ec\\proj\\dp\\VT\\ITP\\releases_2\\DSD_Tool_Stack\\Installer-Test\\Orange-RC\\InstallPVT-BXTOEM.LTB.1.0.217.400.exe\n\nEvidence 2: Created a TraceProject and set up trace for BIOS or CSME. Ran REDACTED_PATH with the command import bxt_utils; bxt_utils.th_break()",
       "sensitivity": "Public",
       "tags": [
-        "system trace",
-        "BXT OEM toolstack"
+        "BXT OEM toolstack",
+        "system trace"
       ],
       "rank": 4
     },
@@ -1826,8 +1834,8 @@
       "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
       "sensitivity": "Public",
       "tags": [
-        "internal error",
-        "metadata file"
+        "metadata file",
+        "internal error"
       ],
       "rank": 4
     },
@@ -1837,8 +1845,8 @@
       "evidence": "Note dated August 25, 2015: '?Please move the BXTP target in Barnes Bay 4 - 4B to our JF5-3 lab. DSDJF-H066 DSDJF-H067 - lab_vtglab1 St@rL0rd'",
       "sensitivity": "Public",
       "tags": [
-        "BXTP",
-        "target relocation"
+        "target relocation",
+        "BXTP"
       ],
       "rank": 4
     },
@@ -1848,8 +1856,8 @@
       "evidence": "RAW LOGS: XMon version 2.7.3 release date and usage",
       "sensitivity": "Public",
       "tags": [
-        "causality error",
-        "tool"
+        "tool",
+        "causality error"
       ],
       "rank": 4
     },
@@ -2348,8 +2356,8 @@
       "evidence": "RAW LOGS: ... (reverting dc6.bl2)",
       "sensitivity": "Public",
       "tags": [
-        "bling",
         "dc6",
+        "bling",
         "pipes"
       ],
       "rank": 4
@@ -2360,8 +2368,8 @@
       "evidence": "RAW LOGS: ... (updating flags, copying gfxrandDisplay.gsf)",
       "sensitivity": "Public",
       "tags": [
-        "build process",
-        "dc6"
+        "dc6",
+        "build process"
       ],
       "rank": 4
     },
@@ -2382,8 +2390,8 @@
       "evidence": "REDACTED_PATH -p cnl\nrun_simics.py --rel_name PPR --rel_version CNL_A0_PPR_VP-HFPGA_16ww24_7 -p maestro_bios+fulsim+punit",
       "sensitivity": "Public",
       "tags": [
-        "Maestro",
-        "test environment"
+        "test environment",
+        "Maestro"
       ],
       "rank": 4
     },
@@ -2393,8 +2401,8 @@
       "evidence": "Nightly build contains unreleased fix for \"HSD GEN10LP [Bug_DE][1946333][Acknowledged (NAB)] Maestro tests crash after upgrading fulsim\"",
       "sensitivity": "Public",
       "tags": [
-        "bug fix",
-        "fulsim"
+        "fulsim",
+        "bug fix"
       ],
       "rank": 4
     },
@@ -2404,8 +2412,8 @@
       "evidence": "09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0xFFFFFFFF\n09:37:51. 9 : [PROXY   ] [Trace   ] : PCI Cfg write to 0:2:0 [0x24:4B] <- 0x00000000\n[titan1 info] ExecuteCallback Entered with command READ\n[titan2 info] ExecuteCallback Entered with command READ",
       "sensitivity": "Public",
       "tags": [
-        "executed callbacks",
-        "PCI Cfg writes"
+        "PCI Cfg writes",
+        "executed callbacks"
       ],
       "rank": 4
     },
@@ -2415,8 +2423,8 @@
       "evidence": "[LCR_Margining] Meet SCR EVQT Lead - [REDACTED]",
       "sensitivity": "Public",
       "tags": [
-        "SCR",
-        "Collaboration"
+        "Collaboration",
+        "SCR"
       ],
       "rank": 4
     },
@@ -2955,8 +2963,8 @@
       "sensitivity": "Public",
       "tags": [
         "PMEM",
-        "AEP",
-        "AppDirect Mode"
+        "AppDirect Mode",
+        "AEP"
       ],
       "rank": 4
     },
@@ -2966,8 +2974,8 @@
       "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
       "sensitivity": "Public",
       "tags": [
-        "bug",
-        "TODO"
+        "TODO",
+        "bug"
       ],
       "rank": 4
     },
@@ -2977,8 +2985,8 @@
       "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
       "sensitivity": "Public",
       "tags": [
-        "configuration",
-        "memory"
+        "memory",
+        "configuration"
       ],
       "rank": 4
     },
@@ -2988,8 +2996,8 @@
       "evidence": "RAW LOGS: 'The verification process initiated on June 29, 2018, had an error rate of 0/60397968 (0.000000%).'",
       "sensitivity": "Public",
       "tags": [
-        "verification",
-        "Cluster"
+        "Cluster",
+        "verification"
       ],
       "rank": 4
     },
@@ -2999,8 +3007,8 @@
       "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 REDACTED_PATH -i 100000 -m1024 -M65536 --time-init 1",
       "sensitivity": "Public",
       "tags": [
-        "configuration",
-        "SHMEM_SYMMETRIC_HEAP_SIZE"
+        "SHMEM_SYMMETRIC_HEAP_SIZE",
+        "configuration"
       ],
       "rank": 4
     },
@@ -3044,10 +3052,10 @@
       "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
       "sensitivity": "Public",
       "tags": [
-        "Proton2",
-        "Purley 4S",
+        "Proton1",
         "Purley 2S",
-        "Proton1"
+        "Proton2",
+        "Purley 4S"
       ],
       "rank": 4
     },
@@ -3057,8 +3065,8 @@
       "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
       "sensitivity": "Public",
       "tags": [
-        "stressapptest",
-        "FIO"
+        "FIO",
+        "stressapptest"
       ],
       "rank": 4
     },
@@ -3069,8 +3077,8 @@
       "sensitivity": "Public",
       "tags": [
         "CScripts",
-        "Purley 4S",
-        "Purley 2S"
+        "Purley 2S",
+        "Purley 4S"
       ],
       "rank": 4
     },
@@ -3113,8 +3121,8 @@
       "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
       "sensitivity": "Public",
       "tags": [
-        "Cold Reset",
-        "DC Cycling"
+        "DC Cycling",
+        "Cold Reset"
       ],
       "rank": 4
     },
@@ -3158,8 +3166,8 @@
       "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https:REDACTED_PATH\"",
       "sensitivity": "Public",
       "tags": [
-        "Testing",
-        "Error Injection"
+        "Error Injection",
+        "Testing"
       ],
       "rank": 4
     },
@@ -3202,8 +3210,8 @@
       "evidence": "git clone ssh:REDACTED_PATH@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
       "sensitivity": "Public",
       "tags": [
-        "repository",
         "Git",
+        "repository",
         "clone"
       ],
       "rank": 4
@@ -3214,8 +3222,8 @@
       "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
       "sensitivity": "Public",
       "tags": [
-        "Git",
-        "user configuration"
+        "user configuration",
+        "Git"
       ],
       "rank": 4
     },
@@ -3259,8 +3267,8 @@
       "evidence": "-Read https:REDACTED_PATH -review - verify_os_log_error_messages",
       "sensitivity": "Public",
       "tags": [
-        "APEI/EINJ",
-        "OS log error messages"
+        "OS log error messages",
+        "APEI/EINJ"
       ],
       "rank": 4
     },
@@ -3596,9 +3604,9 @@
       "evidence": "None explicitly mentioned, but likely related to an older version of Jenkins or a specific configuration issue.",
       "sensitivity": "Public",
       "tags": [
+        "pipeline",
         "error",
-        "jenkins",
-        "pipeline"
+        "jenkins"
       ],
       "rank": 4
     },
@@ -3608,9 +3616,9 @@
       "evidence": "Modification of Jenkinsfile to use the aws-ecr-credential-helper plugin.",
       "sensitivity": "Public",
       "tags": [
+        "aws-ecr-credential-helper",
         "docker",
-        "registry",
-        "aws-ecr-credential-helper"
+        "registry"
       ],
       "rank": 4
     },
@@ -3620,8 +3628,8 @@
       "evidence": "Update of Docker build process to utilize the --build-arg flag.",
       "sensitivity": "Public",
       "tags": [
-        "compose",
         "docker",
+        "compose",
         "build"
       ],
       "rank": 4
@@ -3708,10 +3716,10 @@
       "evidence": "Removing cipher suite ID `17` and changing the bridge command from `-b 0x01` to `-b 0x06`",
       "sensitivity": "Public",
       "tags": [
-        "ICX-HCC",
-        "IPMI",
         "ME",
-        "BMC"
+        "BMC",
+        "IPMI",
+        "ICX-HCC"
       ],
       "rank": 4
     },
@@ -3732,8 +3740,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "montana_testing",
-        "bist_errors"
+        "bist_errors",
+        "montana_testing"
       ],
       "rank": 4
     },
@@ -3743,8 +3751,8 @@
       "evidence": "RAW LOGS: ... (see above)",
       "sensitivity": "Public",
       "tags": [
-        "pmcapsweep",
-        "power_limit_accuracy"
+        "power_limit_accuracy",
+        "pmcapsweep"
       ],
       "rank": 4
     },
@@ -3754,9 +3762,9 @@
       "evidence": "RAW LOGS: Error code 0xAB (Wrong command code) for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.\n\nEvidence 2: RAW LOGS: Error code 0xAC for PeciPCIConfigRead, PeciPackageConfigRead, and cpuPackageConfigurationRead commands.",
       "sensitivity": "Public",
       "tags": [
-        "Error Code 0xAB",
-        "IPMI",
         "PCI",
+        "IPMI",
+        "Error Code 0xAB",
         "Error Code 0xAC"
       ],
       "rank": 4
@@ -3778,8 +3786,8 @@
       "sensitivity": "Public",
       "tags": [
         "error",
-        "IPMI",
-        "power limiting"
+        "power limiting",
+        "IPMI"
       ],
       "rank": 4
     },
@@ -3789,9 +3797,9 @@
       "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
       "sensitivity": "Public",
       "tags": [
+        "unknown return code",
         "ipmitool",
-        "PECI",
-        "unknown return code"
+        "PECI"
       ],
       "rank": 4
     },
@@ -3801,8 +3809,8 @@
       "evidence": "Line 1315: 03:12.8,INFO,montana.verification.usermsg,set power limit policies on domain 0",
       "sensitivity": "Public",
       "tags": [
-        "power management",
-        "policy"
+        "policy",
+        "power management"
       ],
       "rank": 4
     },
@@ -3823,8 +3831,8 @@
       "evidence": "Jason: debug verifysamepolicy.py",
       "sensitivity": "Public",
       "tags": [
-        "script",
-        "debug"
+        "debug",
+        "script"
       ],
       "rank": 4
     },
@@ -3834,8 +3842,8 @@
       "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
       "sensitivity": "Public",
       "tags": [
-        "policy #231",
-        "avgpowercmp"
+        "avgpowercmp",
+        "policy #231"
       ],
       "rank": 4
     },
@@ -3845,8 +3853,8 @@
       "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
       "sensitivity": "Public",
       "tags": [
-        "discrepancy detection",
-        "avgpowercmp"
+        "avgpowercmp",
+        "discrepancy detection"
       ],
       "rank": 4
     },
@@ -3878,9 +3886,9 @@
       "evidence": "MIV Wiki https:REDACTED_PATH\nManageability Spec Links - https:REDACTED_PATH:REDACTED_PATH%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
       "sensitivity": "Public",
       "tags": [
-        "Intel MIV",
+        "Manageability specifications",
         "MIV Wiki",
-        "Manageability specifications"
+        "Intel MIV"
       ],
       "rank": 4
     },
@@ -3890,10 +3898,10 @@
       "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager REDACTED_PATH xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https:REDACTED_PATH+and+Receiving+MCTP+Message+Payloads+over+Redfish",
       "sensitivity": "Public",
       "tags": [
-        "MCTP",
         "D-Bus",
+        "PECI",
         "Intel MIV",
-        "PECI"
+        "MCTP"
       ],
       "rank": 4
     },
@@ -3903,9 +3911,9 @@
       "evidence": "Simics dashboard - https:REDACTED_PATH%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https:REDACTED_PATH+Content+Developer+quick+start+guide",
       "sensitivity": "Public",
       "tags": [
+        "DTAF",
         "Intel MIV",
-        "Simics",
-        "DTAF"
+        "Simics"
       ],
       "rank": 4
     },
@@ -4409,8 +4417,8 @@
       "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4
     },
@@ -4420,8 +4428,8 @@
       "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "IPMI"
+        "IPMI",
+        "error"
       ],
       "rank": 4
     },
@@ -4431,8 +4439,8 @@
       "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
       "sensitivity": "Public",
       "tags": [
-        "CLX",
-        "MIV software"
+        "MIV software",
+        "CLX"
       ],
       "rank": 4
     },
@@ -4463,9 +4471,9 @@
       "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
       "sensitivity": "Public",
       "tags": [
-        "msr",
+        "pyghmi",
         "crypto",
-        "pyghmi"
+        "msr"
       ],
       "rank": 4
     },
@@ -4475,9 +4483,9 @@
       "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
       "sensitivity": "Public",
       "tags": [
+        "MIV",
         "Reset",
-        "Recovery",
-        "MIV"
+        "Recovery"
       ],
       "rank": 4
     },
@@ -4498,8 +4506,8 @@
       "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "Test",
-        "MIV"
+        "MIV",
+        "Test"
       ],
       "rank": 4
     },
@@ -4509,8 +4517,8 @@
       "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
       "sensitivity": "Public",
       "tags": [
-        "Recovery",
-        "MIV"
+        "MIV",
+        "Recovery"
       ],
       "rank": 4
     },
@@ -4564,8 +4572,8 @@
       "evidence": "[RAW LOGS] - pip install fabric",
       "sensitivity": "Public",
       "tags": [
-        "DTAF",
-        "MIV content readiness"
+        "MIV content readiness",
+        "DTAF"
       ],
       "rank": 4
     },
@@ -4608,8 +4616,8 @@
       "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
       "sensitivity": "Public",
       "tags": [
-        "test setup",
-        "domain 2"
+        "domain 2",
+        "test setup"
       ],
       "rank": 4
     },
@@ -4630,8 +4638,8 @@
       "evidence": "https:REDACTED_PATH Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
       "sensitivity": "Public",
       "tags": [
-        "L-BMC",
-        "BMC"
+        "BMC",
+        "L-BMC"
       ],
       "rank": 4
     },
@@ -4641,8 +4649,8 @@
       "evidence": "RAW LOGS text",
       "sensitivity": "Public",
       "tags": [
-        "validation",
-        "BMC"
+        "BMC",
+        "validation"
       ],
       "rank": 4
     },
@@ -4652,8 +4660,8 @@
       "evidence": "RAW LOGS text",
       "sensitivity": "Public",
       "tags": [
-        "recovery",
-        "MIV"
+        "MIV",
+        "recovery"
       ],
       "rank": 4
     },
@@ -4663,8 +4671,8 @@
       "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
       "sensitivity": "Public",
       "tags": [
-        "code review",
-        "issue investigation"
+        "issue investigation",
+        "code review"
       ],
       "rank": 4
     },
@@ -4685,8 +4693,8 @@
       "evidence": "IVL crash dump issue addressed on July 28, 2020",
       "sensitivity": "Public",
       "tags": [
-        "crash dump",
-        "IVL"
+        "IVL",
+        "crash dump"
       ],
       "rank": 4
     },
@@ -4708,8 +4716,8 @@
       "evidence": "https:REDACTED_PATH%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
       "sensitivity": "Public",
       "tags": [
-        "pptx",
-        "Manageability Ignition-Redfish Content Plan"
+        "Manageability Ignition-Redfish Content Plan",
+        "pptx"
       ],
       "rank": 4
     },
@@ -4730,10 +4738,10 @@
       "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
       "sensitivity": "Public",
       "tags": [
-        "master",
-        "PCH",
+        "BMC",
         "PECI",
-        "BMC"
+        "master",
+        "PCH"
       ],
       "rank": 4
     },
@@ -4743,8 +4751,8 @@
       "evidence": "https:REDACTED_PATH%20Power%20Cap%20OEM%20Schema.html",
       "sensitivity": "Public",
       "tags": [
-        "Research",
-        "TODO"
+        "TODO",
+        "Research"
       ],
       "rank": 4
     },
@@ -4774,8 +4782,8 @@
       "evidence": null,
       "sensitivity": "Public",
       "tags": [
-        "Era Registry",
-        "Troubleshooting"
+        "Troubleshooting",
+        "Era Registry"
       ],
       "rank": 4
     },
@@ -4796,8 +4804,8 @@
       "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
       "sensitivity": "Public",
       "tags": [
-        "performance",
-        "PECI"
+        "PECI",
+        "performance"
       ],
       "rank": 4
     },
@@ -4807,8 +4815,8 @@
       "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
       "sensitivity": "Public",
       "tags": [
-        "firmware",
-        "BMC"
+        "BMC",
+        "firmware"
       ],
       "rank": 4
     },
@@ -5266,8 +5274,8 @@
       "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
       "sensitivity": "Public",
       "tags": [
-        "PECI",
-        "connection_abort"
+        "connection_abort",
+        "PECI"
       ],
       "rank": 4
     },
@@ -5288,8 +5296,8 @@
       "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
       "sensitivity": "Public",
       "tags": [
-        "fuzzing",
-        "PECI"
+        "PECI",
+        "fuzzing"
       ],
       "rank": 4
     },
@@ -5311,8 +5319,8 @@
       "sensitivity": "Public",
       "tags": [
         "ptu",
-        "issue",
-        "calibration"
+        "calibration",
+        "issue"
       ],
       "rank": 4
     },
@@ -5322,8 +5330,8 @@
       "evidence": "https:REDACTED_PATH, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
       "sensitivity": "Public",
       "tags": [
-        "Research Link",
-        "Archer City Platform"
+        "Archer City Platform",
+        "Research Link"
       ],
       "rank": 4
     },
@@ -5365,8 +5373,8 @@
       "evidence": "RAW LOGS on 6/30/2021",
       "sensitivity": "Public",
       "tags": [
-        "team structure",
-        "collaboration"
+        "collaboration",
+        "team structure"
       ],
       "rank": 4
     },
@@ -5779,8 +5787,8 @@
       "evidence": "https:REDACTED_PATH#REDACTED_PATH",
       "sensitivity": "Public",
       "tags": [
-        "Research",
-        "TODO"
+        "TODO",
+        "Research"
       ],
       "rank": 4
     },
@@ -5864,8 +5872,8 @@
       "evidence": "show_access_info method output",
       "sensitivity": "Public",
       "tags": [
-        "crdefeature2_bs",
-        "I/O statistics"
+        "I/O statistics",
+        "crdefeature2_bs"
       ],
       "rank": 4
     },
@@ -5875,9 +5883,9 @@
       "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
       "sensitivity": "Public",
       "tags": [
-        "MSR register access issues",
+        "PECI tests",
         "unexpected return codes",
-        "PECI tests"
+        "MSR register access issues"
       ],
       "rank": 4
     },
@@ -6390,8 +6398,8 @@
       "evidence": "Developed telemetry software 'Blackbox recorder' used to debug RAPL failures...",
       "sensitivity": "Public",
       "tags": [
-        "RAPL",
-        "telemetry"
+        "telemetry",
+        "RAPL"
       ],
       "rank": 4
     },
@@ -6401,8 +6409,8 @@
       "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
       "sensitivity": "Public",
       "tags": [
-        "refactored code",
-        "negative testing"
+        "negative testing",
+        "refactored code"
       ],
       "rank": 4
     },
@@ -6412,8 +6420,8 @@
       "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
       "sensitivity": "Public",
       "tags": [
-        "exit criteria",
-        "Q1"
+        "Q1",
+        "exit criteria"
       ],
       "rank": 4
     },
@@ -6423,9 +6431,9 @@
       "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
       "sensitivity": "Public",
       "tags": [
-        "Python scripts",
+        "kayak framework",
         "TDF architecture",
-        "kayak framework"
+        "Python scripts"
       ],
       "rank": 4
     },
@@ -6446,8 +6454,8 @@
       "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
       "sensitivity": "Public",
       "tags": [
-        "Python scripts",
-        "kayak framework"
+        "kayak framework",
+        "Python scripts"
       ],
       "rank": 4
     },
@@ -6706,9 +6714,9 @@
       "sensitivity": "Public",
       "tags": [
         "busctl",
-        "MCTP",
+        "i2cget",
         "i2cdetect",
-        "i2cget"
+        "MCTP"
       ],
       "rank": 4
     },
@@ -6749,8 +6757,8 @@
       "evidence": "RAW LOGS mention MSR write with uncertainty about IMH",
       "sensitivity": "Public",
       "tags": [
-        "Research",
-        "TODO"
+        "TODO",
+        "Research"
       ],
       "rank": 4
     },
@@ -6760,8 +6768,8 @@
       "evidence": "RAW LOGS mention RdEndpointConfigPCILocal, RdEndpointConfigPCI, WrEndpointConfigPCILocal, WrEndpointConfigPCI, and WrEndpointConfigMMIO",
       "sensitivity": "Public",
       "tags": [
-        "Endpoints",
-        "Configuration"
+        "Configuration",
+        "Endpoints"
       ],
       "rank": 4
     },
@@ -6771,8 +6779,8 @@
       "evidence": "RAW LOGS mention peci_cmds and RdEndpointConfigPCILocal",
       "sensitivity": "Public",
       "tags": [
-        "MCTP",
-        "BMC"
+        "BMC",
+        "MCTP"
       ],
       "rank": 4
     },
@@ -6793,8 +6801,8 @@
       "evidence": "https:REDACTED_PATH and https:REDACTED_PATH%20and%20Telemetry/Telemetry_and_Manageability_HAS.html#tpmi-support",
       "sensitivity": "Public",
       "tags": [
-        "TPMI",
-        "Intel"
+        "Intel",
+        "TPMI"
       ],
       "rank": 4
     },
@@ -6847,8 +6855,8 @@
       "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
       "sensitivity": "Public",
       "tags": [
-        "management",
-        "inventory"
+        "inventory",
+        "management"
       ],
       "rank": 4
     },
@@ -6869,8 +6877,8 @@
       "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
       "sensitivity": "Public",
       "tags": [
-        "error",
-        "BIOS"
+        "BIOS",
+        "error"
       ],
       "rank": 4
     },

@@ -166,7 +166,7 @@
   },
   {
     "id": "RESUME-009",
-    "domain": "RESUME",
+    "domain": "unknown",
     "title": "Manageability Test Content Lead | Cloud SW Development Engineer Achievement (Intel Corporation)",
     "summary": "Mentored engineering teams and domain leads, fostering cross-functional leadership and guiding architectural decisions f...",
     "content": "Mentored engineering teams and domain leads, fostering cross-functional leadership and guiding architectural decisions for long-term code maintainability.",
@@ -181,11 +181,18 @@
       "title": "Manageability Test Content Lead | Cloud SW Development Engineer",
       "period": "Oct 2019 \u2013 Oct 2024",
       "node_id": "node_exp_intel_05"
-    }
+    },
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "id": "RESUME-010",
-    "domain": "RESUME",
+    "domain": "unknown",
     "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
     "summary": "Debugged BIOS and microcode-related issues during platform bring-up.",
     "content": "Debugged BIOS and microcode-related issues during platform bring-up.",
@@ -200,7 +207,14 @@
       "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
       "period": "Aug 2016 \u2013 Oct 2019",
       "node_id": "node_exp_pae_01"
-    }
+    },
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "id": "RESUME-011",
@@ -299,7 +313,7 @@
   },
   {
     "id": "RESUME-016",
-    "domain": "RESUME",
+    "domain": "unknown",
     "title": "Datacenter PAE | Platform Application Engineer (Intel Federal) Achievement (Intel Corporation)",
     "summary": "Shadowed RAS validation group to create automated RAS test libraries, leading to a transition to the Manageability Test ...",
     "content": "Shadowed RAS validation group to create automated RAS test libraries, leading to a transition to the Manageability Test team lead position.",
@@ -314,7 +328,14 @@
       "title": "Datacenter PAE | Platform Application Engineer (Intel Federal)",
       "period": "Aug 2016 \u2013 Oct 2019",
       "node_id": "node_exp_pae_07"
-    }
+    },
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "id": "RESUME-017",
@@ -432,7 +453,7 @@
   },
   {
     "id": "RESUME-023",
-    "domain": "RESUME",
+    "domain": "unknown",
     "title": "BMC Firmware Engineer Achievement (Intel Corporation)",
     "summary": "Identified a fundamental protocol-level vulnerability in IPMI 2.0 RAKP authentication (later classified as industry-wide...",
     "content": "Identified a fundamental protocol-level vulnerability in IPMI 2.0 RAKP authentication (later classified as industry-wide CVE-2013-4786) by patching Wireshark source code to debug and parse custom session negotiation packets.",
@@ -447,7 +468,14 @@
       "title": "BMC Firmware Engineer",
       "period": "Sep 2008 \u2013 Dec 2010",
       "node_id": "node_exp_bmc_03"
-    }
+    },
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "id": "RESUME-024",

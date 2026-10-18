@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-10-16 06:00:25",
+    "timestamp": "2026-10-17 07:50:26",
     "topic": "Nightly Accountability Sentinel (Watchdog)",
-    "content": "\ud83d\udea8 **[ACCOUNTABILITY AUDIT: FAIL]**\n\n**Checks Passed:** 7/8\n**Discrepancies:** Nightly Forge did not complete successfully (Status: DEGRADED (Age: 999.0h))\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._"
+    "content": "\ud83d\udea8 **[ACCOUNTABILITY AUDIT: FAIL]**\n\n**Checks Passed:** 5/8\n**Discrepancies:** Nightly Forge did not complete successfully (Status: FAIL (Age: 999.0h)); LoRA Multi-Adapter Pass failed (Status: FAILED); Status: DEGRADED, Critic Score: 0.00, Latency: 1.05ms\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._"
 }

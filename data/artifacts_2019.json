@@ -201,7 +201,15 @@
       "Viral State"
     ],
     "filename": "_06_02_03_cs_nvd_pcie_fatal.py",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "synopsis": "Inject PCIe CTO error to trigger viral",

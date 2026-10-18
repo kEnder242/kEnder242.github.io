@@ -6,8 +6,8 @@
     "sensitivity": "Public",
     "tags": [
       "error",
-      "IPMI",
-      "power limiting"
+      "power limiting",
+      "IPMI"
     ],
     "rank": 4
   },
@@ -17,9 +17,9 @@
     "evidence": "RAW LOGS: Return codes mentioned include 0x0 and 0x1, but not 0xAC.",
     "sensitivity": "Public",
     "tags": [
+      "unknown return code",
       "ipmitool",
-      "PECI",
-      "unknown return code"
+      "PECI"
     ],
     "rank": 4
   }

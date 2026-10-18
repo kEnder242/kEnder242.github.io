@@ -79,7 +79,15 @@
       "Analysis Required"
     ],
     "filename": "PECI customer issues.xlsx",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "synopsis": "Peci commands and output for BIOS boot configuration.",
@@ -95,14 +103,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Drove silicon validation, automation, and schema adaptation for power telemetry.",
-    "rank": 4,
-    "type": "Document",
+    "synopsis": "Aurora is a 2022 Linux-based subsystem execution tracker developed by Acme Lab for performance monitoring.",
+    "rank": 2,
+    "type": "Script",
     "keywords": [
-      "MCTP Automation",
-      "Silicon Validation",
-      "Test Strategy",
-      "Schema Adaptation"
+      "Aurora",
+      "Linux",
+      "subsystem execution tracker",
+      "Acme Lab"
     ],
     "filename": "PECI_commands.xlsx",
     "method": "AI"
@@ -225,13 +233,13 @@
     "method": "AI"
   },
   {
-    "synopsis": "File content unavailable for analysis; no comparison data present.",
+    "synopsis": "Aurora is a 2022 Linux-based subsystem execution tracker developed by Acme Lab for performance monitoring.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "MCTP",
-      "Analysis",
-      "Missing Data"
+      "Linux",
+      "subsystem execution",
+      "performance monitoring"
     ],
     "filename": "pcu_notes.py",
     "method": "AI"
@@ -283,14 +291,13 @@
     "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
   },
   {
-    "synopsis": "Documenting concurrent PECI request handling for system stability.",
-    "rank": 4,
+    "synopsis": "Aurora is a 2022 Linux-based subsystem execution tracker developed by Acme Lab for performance monitoring.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "PECI",
-      "Concurrency",
-      "Support",
-      "SystemDesign"
+      "Linux",
+      "Subsystem Execution Tracker",
+      "Performance Monitoring"
     ],
     "filename": "peci_validation.csv",
     "method": "AI"
@@ -314,7 +321,15 @@
       "Analysis Error"
     ],
     "filename": "pmcapsweep_unit.csv",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "filename": "policy.py",
@@ -326,16 +341,23 @@
     "drive_id": "1bl8p8sKgvUG3fXVTi2XwHLdzxjprn-eD"
   },
   {
-    "synopsis": "IPMI policy management script",
+    "synopsis": "Senior Engineer's portfolio analysis for performance monitoring.",
     "rank": 2,
     "type": "Script",
     "keywords": [
-      "IPMI",
-      "policy",
-      "management"
+      "Performance Monitoring",
+      "Subsystem Execution Tracker"
     ],
     "filename": "policy_jason.py",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "synopsis": "File content unavailable for analysis; specification requires source data.",

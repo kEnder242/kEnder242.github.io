@@ -47,13 +47,14 @@
     "method": "AI"
   },
   {
-    "synopsis": "Insight into Jason's work from April to November 2020.",
+    "synopsis": "Aurora is a 2022 Linux-based subsystem execution tracker developed by Acme Lab for performance monitoring.",
     "rank": 2,
-    "type": "Document",
-    "keywords": [
-      "Jason",
-      "insight",
-      "April-November 2020"
+    "type": "Script",
+    "keds": [
+      "Aurora",
+      "Linux",
+      "subsystem execution tracker",
+      "Acme Lab"
     ],
     "filename": "Jason Insight April-Nov 2020.xlsx",
     "method": "AI"
@@ -174,7 +175,15 @@
       "Development"
     ],
     "filename": "OOBMSM_worksheet.xlsx",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "filename": "PECI_Comparison.xlsx",
@@ -220,7 +229,15 @@
       "Analysis Failed"
     ],
     "filename": "Scrum Done right.pptx",
-    "method": "AI"
+    "method": "AI",
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
   },
   {
     "synopsis": "Demonstrates Redfish PECI stress testing and validation.",

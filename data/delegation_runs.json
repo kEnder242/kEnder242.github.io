@@ -1,18 +1,218 @@
 {
   "summary": {
-    "total_runs": 285,
-    "successful_runs": 185,
-    "total_tokens_blended": 17087746,
-    "total_conductor_tokens": 16919040,
-    "total_l3_tokens": 168706,
-    "total_cached_tokens": 9108184,
-    "total_wall_time_minutes": 2319.15,
-    "estimated_cloud_cost_usd": 63.101169,
-    "estimated_local_power_cost_usd": 1.159575,
-    "net_savings_usd": 61.941594,
-    "local_offload_ratio_pct": 1.8
+    "total_runs": 295,
+    "successful_runs": 195,
+    "total_tokens_blended": 17591546,
+    "total_conductor_tokens": 17396566,
+    "total_l3_tokens": 194980,
+    "total_cached_tokens": 9140216,
+    "total_wall_time_minutes": 2401.79,
+    "estimated_cloud_cost_usd": 64.482459,
+    "estimated_local_power_cost_usd": 1.200895,
+    "net_savings_usd": 63.281564,
+    "local_offload_ratio_pct": 1.83
   },
   "runs": [
+    {
+      "sprint": "105",
+      "story": "105.14",
+      "title": "Inclusive Multi-Tier Intake & Domain Tagging (Rollback of Intake Pruning)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 100.97,
+      "duration_m": 1.68,
+      "tokens": {
+        "conductor": 37922,
+        "l3": 2538,
+        "total": 40460,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-17T10:18:17"
+    },
+    {
+      "sprint": "105",
+      "story": "105.13",
+      "title": "Gem Quality Prompt Hardening & Unconditional Rank Promotion Excision",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 335.38,
+      "duration_m": 5.59,
+      "tokens": {
+        "conductor": 45897,
+        "l3": 0,
+        "total": 45897,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-17T08:58:21"
+    },
+    {
+      "sprint": "105",
+      "story": "105.12",
+      "title": "Dynamic Intake Target Resolver for Gem Extraction & Watchdog Coupling",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 591.17,
+      "duration_m": 9.85,
+      "tokens": {
+        "conductor": 53925,
+        "l3": 7626,
+        "total": 61551,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-17T08:51:21"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Canonical JIT shakedown checkpoint",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-17T02:14:14"
+    },
+    {
+      "sprint": "105",
+      "story": "105.11",
+      "title": "Continuous Ceiling-Only Headroom & Prompt De-Fluffing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 1458.99,
+      "duration_m": 24.32,
+      "tokens": {
+        "conductor": 81141,
+        "l3": 0,
+        "total": 81141,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T02:04:21"
+    },
+    {
+      "sprint": "105",
+      "story": "105.10",
+      "title": "Post-Waterfall Learning Target Queueing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 931.58,
+      "duration_m": 15.53,
+      "tokens": {
+        "conductor": 65541,
+        "l3": 10079,
+        "total": 75620,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T01:38:53"
+    },
+    {
+      "sprint": "105",
+      "story": "105.6",
+      "title": "RAG-First Ripgrep Expansion Pipeline",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 509.63,
+      "duration_m": 8.49,
+      "tokens": {
+        "conductor": 54503,
+        "l3": 870,
+        "total": 55373,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T01:20:15"
+    },
+    {
+      "sprint": "105",
+      "story": "105.8",
+      "title": "Accountability Watchdog Green Lie Excision & Freshness Verification",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 328.93,
+      "duration_m": 5.48,
+      "tokens": {
+        "conductor": 46814,
+        "l3": 0,
+        "total": 46814,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T01:10:48"
+    },
+    {
+      "sprint": "105",
+      "story": "105.7",
+      "title": "Nibbler McpClient Authentication & Groundhog Loop Unblock",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 601.06,
+      "duration_m": 10.02,
+      "tokens": {
+        "conductor": 50820,
+        "l3": 5161,
+        "total": 55981,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T01:04:44"
+    },
+    {
+      "sprint": "105",
+      "story": "105.0",
+      "title": "Adversarial Oracle Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 100.85,
+      "duration_m": 1.68,
+      "tokens": {
+        "conductor": 40963,
+        "l3": 0,
+        "total": 40963,
+        "cache_read": 32032
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-17T00:52:14"
+    },
     {
       "sprint": "",
       "story": "",

@@ -6,8 +6,8 @@
     "sensitivity": "Public",
     "tags": [
       "vcd_missing",
-      "msr_error",
-      "test_failure"
+      "test_failure",
+      "msr_error"
     ],
     "rank": 4
   },
@@ -17,8 +17,8 @@
     "evidence": "RAW LOGS: Error message indicating MSR access faulted.",
     "sensitivity": "Public",
     "tags": [
-      "msr_error",
-      "cpu_fault"
+      "cpu_fault",
+      "msr_error"
     ],
     "rank": 4
   },

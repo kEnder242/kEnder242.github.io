@@ -5,8 +5,8 @@
     "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
     "sensitivity": "Public",
     "tags": [
-      "repository",
       "Git",
+      "repository",
       "clone"
     ],
     "rank": 4
@@ -17,8 +17,8 @@
     "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
     "sensitivity": "Public",
     "tags": [
-      "Git",
-      "user configuration"
+      "user configuration",
+      "Git"
     ],
     "rank": 4
   },
