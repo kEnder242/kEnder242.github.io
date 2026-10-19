@@ -204,6 +204,14 @@
                     <div class="vital-label">Web Intercom <span class="vital-health-badge" id="intercom-health-badge"></span></div>
                     <div class="vital-value" id="intercom-status"><span class="status-led led-yielded"></span>HIBERNATING</div>
                 </div>
+                <div class="vital-card" id="forge-status-card" style="border-left-color: #a371f7;">
+                    <div class="vital-label">Nightly Forge & Rotation <span class="vital-health-badge" id="forge-health-badge"></span></div>
+                    <div class="vital-value" id="forge-status-val"><span class="status-led led-online"></span>COMPLETED</div>
+                    <div id="forge-meta" style="font-size: 0.72rem; color: #888; margin-top: 5px; font-family: monospace; line-height: 1.3;">
+                        <span id="forge-age">Completed: --</span> • <span id="forge-queue-vol">Active: 0 gems</span><br>
+                        <span id="forge-throughput">Throughput: 7/8 checks</span> • <span id="forge-lora">LoRA: OK</span>
+                    </div>
+                </div>
                 <div class="vital-card" id="job-hunt-card" style="display:none; border-left-color: #ffc107;">
                     <div class="vital-label">Recruiter Brief <span class="vital-health-badge" id="job-health-badge"></span></div>
                     <div class="vital-value" id="job-status"><span id="job-led" class="status-led led-online"></span>IDLE</div>
@@ -1046,18 +1054,60 @@
                             const auditDate = digest.timestamp ? new Date(digest.timestamp).getTime() : 0;
                             const ageHours = (now - auditDate) / (1000 * 3600);
                             const isNominal = digest.overall_status === 'PASS' && ageHours < 26.0;
+                            const isDegraded = digest.overall_status === 'DEGRADED' && ageHours < 26.0;
 
-                            const badgeText = isNominal ? '[HEALTH: NOMINAL]' : '[HEALTH: AUDIT_STALE]';
-                            const badgeStyle = isNominal 
-                                ? 'background:rgba(40,167,69,0.15);color:#28a745;border:1px solid rgba(40,167,69,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;'
-                                : 'background:rgba(227,179,65,0.15);color:#e3b341;border:1px solid rgba(227,179,65,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;';
+                            let badgeText = '[HEALTH: AUDIT_STALE]';
+                            let badgeStyle = 'background:rgba(248,81,73,0.15);color:#f85149;border:1px solid rgba(248,81,73,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;';
+
+                            if (isNominal) {
+                                badgeText = '[HEALTH: NOMINAL]';
+                                badgeStyle = 'background:rgba(40,167,69,0.15);color:#28a745;border:1px solid rgba(40,167,69,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;';
+                            } else if (isDegraded) {
+                                badgeText = `[HEALTH: DEGRADED (${ageHours.toFixed(1)}h)]`;
+                                badgeStyle = 'background:rgba(227,179,65,0.15);color:#e3b341;border:1px solid rgba(227,179,65,0.3);font-size:0.6rem;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:monospace;font-weight:normal;';
+                            }
 
                             const badgeHtml = `<span style="${badgeStyle}" title="6:00 AM Daily Sanity Check (${digest.timestamp || 'N/A'})">${badgeText}</span>`;
 
-                            ['scanner-health-badge', 'engine-health-badge', 'model-health-badge', 'intercom-health-badge', 'job-health-badge'].forEach(id => {
+                            ['scanner-health-badge', 'engine-health-badge', 'model-health-badge', 'intercom-health-badge', 'job-health-badge', 'forge-health-badge'].forEach(id => {
                                 const el = document.getElementById(id);
                                 if (el) el.innerHTML = badgeHtml;
                             });
+
+                            // [Story 106.9] Populate Nightly Forge & Knowledge Rotation Card
+                            const forgeCheck = (digest.checks || []).find(c => c.name && c.name.includes('Nightly Forge'));
+                            const dreamCheck = (digest.checks || []).find(c => c.name && c.name.includes('Dreaming'));
+                            const loraCheck = (digest.checks || []).find(c => c.name && c.name.includes('LoRA'));
+                            
+                            const forgeStatusEl = document.getElementById('forge-status-val');
+                            const forgeAgeEl = document.getElementById('forge-age');
+                            const forgeQueueEl = document.getElementById('forge-queue-vol');
+                            const forgeThroughputEl = document.getElementById('forge-throughput');
+                            const forgeLoraEl = document.getElementById('forge-lora');
+
+                            if (forgeCheck && forgeAgeEl) {
+                                const age = forgeCheck.age_hours !== undefined ? `${forgeCheck.age_hours.toFixed(1)}h ago` : (ageHours < 900 ? `${ageHours.toFixed(1)}h ago` : 'Active');
+                                forgeAgeEl.textContent = `Completed: ${age}`;
+                                if (forgeStatusEl) {
+                                    const led = forgeCheck.passed ? 'led-online' : 'led-busy';
+                                    forgeStatusEl.innerHTML = `<span class="status-led ${led}"></span>${forgeCheck.status || digest.overall_status}`;
+                                }
+                            }
+                            if (forgeThroughputEl) {
+                                forgeThroughputEl.textContent = `Throughput: ${digest.passed_checks}/${digest.total_checks} checks`;
+                            }
+                            if (loraCheck && forgeLoraEl) {
+                                forgeLoraEl.textContent = `LoRA: ${loraCheck.status || 'NOMINAL'}`;
+                            }
+
+                            // Fetch rotation queue count
+                            fetch('data/refinement_rotation_queue.json?t=' + Date.now())
+                                .then(r => r.ok ? r.json() : null)
+                                .then(q => {
+                                    if (q && forgeQueueEl) {
+                                        forgeQueueEl.textContent = `Rotation Queue: ${Array.isArray(q) ? q.length : Object.keys(q).length} gems`;
+                                    }
+                                }).catch(e => {});
                         }).catch(e => {});
                 })
                 .catch(err => console.error("Status poll failed", err));
