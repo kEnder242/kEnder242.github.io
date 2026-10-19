@@ -518,11 +518,11 @@
             animation: tronPulse 3s infinite alternate ease-in-out;
         }
 
-        /* Bone Collection Rack (Builder Shelf) */
-        .bone-rack-container {
+        /* Active Kabal Staging Shelf (Builder Shelf) */
+        .bone-rack-container, .kabal-staging-container {
             background: #0d1117;
             border: 1px solid #30363d;
-            border-top: 3px solid #56d364;
+            border-top: 3px solid #38bdf8;
             border-radius: 8px;
             padding: 14px 18px;
             margin-bottom: 20px;
@@ -544,11 +544,11 @@
             gap: 10px;
             flex-wrap: wrap;
         }
-        .bone-rack-badge {
+        .bone-rack-badge, .kabal-staging-badge {
             font-size: 0.72rem;
-            background: rgba(86, 211, 100, 0.15);
-            border: 1px solid #56d364;
-            color: #56d364;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
             padding: 2px 8px;
             border-radius: 4px;
             font-weight: 800;
@@ -566,7 +566,7 @@
             min-width: 240px;
         }
         .bone-rack-name-input:focus {
-            border-color: #56d364;
+            border-color: #38bdf8;
             outline: none;
         }
         .bone-count-badge {
@@ -767,7 +767,7 @@
             align-items: center;
             gap: 6px;
         }
-        .btn-card-rack, .btn-card-synapse {
+        .btn-card-stage, .btn-card-rack, .btn-card-synapse {
             background: #161b22;
             border: 1px solid #30363d;
             color: #c9d1d9;
@@ -778,10 +778,16 @@
             transition: all 0.15s ease;
             font-family: var(--font-stack);
         }
-        .btn-card-rack:hover {
-            border-color: #56d364;
-            color: #56d364;
-            background: rgba(86, 211, 100, 0.1);
+        .btn-card-stage:hover, .btn-card-rack:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.12);
+        }
+        .btn-card-stage.staged {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.2);
+            font-weight: 700;
         }
         .btn-card-synapse:hover {
             border-color: #58a6ff;
