@@ -517,8 +517,8 @@
             overflow: hidden;
         }
 
-        /* Bone Collections & Citations Containers */
-        .tier-bones-container {
+        /* Staging Collections & Citations Containers */
+        .tier-bones-container, .tier-staging-container {
             margin-top: 8px;
             padding: 8px;
             background: rgba(0, 0, 0, 0.25);
@@ -531,12 +531,12 @@
             min-height: 38px;
         }
 
-        .tier-bones-container.drag-over {
+        .tier-bones-container.drag-over, .tier-staging-container.drag-over {
             border-color: var(--accent-color);
             background: rgba(77, 170, 252, 0.1);
         }
 
-        .bone-collection-badge {
+        .bone-collection-badge, .citation-cluster-badge {
             background: var(--bone-bg);
             border: 1px solid var(--bone-border);
             border-radius: 6px;
@@ -547,7 +547,7 @@
             cursor: grab;
         }
 
-        .bone-collection-header {
+        .bone-collection-header, .citation-cluster-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -557,7 +557,7 @@
             gap: 8px;
         }
 
-        .bone-chips-wrap {
+        .bone-chips-wrap, .citation-chips-wrap {
             display: flex;
             flex-wrap: wrap;
             gap: 4px;
@@ -17976,6 +17976,7 @@ window.__WRITER_QUOTES__ = [
                 <button id="btn-revert-disk" class="action-btn" title="Revert all unsaved changes and reload pristine manuscript from disk">Revert</button>
                 <button id="btn-archive" class="action-btn" title="Archive current paper snapshot">Archive</button>
                 <button id="btn-validate" class="action-btn" title="Validate schema and citation syntax">Validate</button>
+                <button id="btn-publish-release" class="action-btn" style="border-color:rgba(163, 113, 247, 0.4); color:#d2a8ff;" title="Freeze named offline release AST (default 'v1' barred per VIBE-017)">🚀 Publish</button>
                 <button id="btn-save-all" class="action-btn btn-save" title="Save manuscript to disk">💾 Save</button>
             </div>
         </header>
@@ -18125,6 +18126,16 @@ window.__WRITER_QUOTES__ = [
                         <div id="review-attached-chips" class="review-chips-box"></div>
                     </div>
 
+                    <!-- [FEAT-664 / Story 106.17] Multi-Corpus Knowledge Ingestion (Anti-Clippy Grounding Lens) -->
+                    <div id="review-multi-corpus-wrap" style="margin-bottom:6px;">
+                        <div class="review-label" style="display:flex; justify-content:space-between; align-items:center;">
+                            <span>🌐 Cross-Corpus Knowledge Ingestion</span>
+                            <span id="corpus-status-badge" style="font-size:0.68rem; color:#8b949e;">Type to query</span>
+                        </div>
+                        <input type="text" id="corpus-search-input" class="paper-select" style="width:100%; box-sizing:border-box; font-size:0.75rem; margin-top:2px;" placeholder="Search Wisdom, Features, Philosophy, Gems, Kabals...">
+                        <div id="corpus-chips-results" style="display:flex; flex-wrap:wrap; gap:4px; margin-top:4px; max-height:80px; overflow-y:auto;"></div>
+                    </div>
+
                     <!-- [FEAT-614 / Story 106.10] Causal Operational Bedrock (Impact >= 3) -->
                     <div id="review-breadcrumbs-wrap">
                         <div class="review-label">🧬 Causal Operational Bedrock (Impact ≥ 3)</div>
@@ -18162,10 +18173,11 @@ window.__WRITER_QUOTES__ = [
                     <div style="display:flex; gap:8px; margin-bottom:8px;">
                         <button id="btn-synthesize-silicon" class="btn-synthesize" style="flex:1;" title="Generate draft prose using attached citations via Silicon engine">✨ Generate</button>
                         <button id="btn-accept-mutation" class="btn-synthesize" style="flex:1; border-color:rgba(63, 185, 80, 0.4); color:#3fb950; display:none;" title="Accept active candidate mutation into prose">✅ Accept</button>
-                        <button id="btn-discover-drawer" class="btn-synthesize" style="flex:1; border-color:rgba(77, 170, 252, 0.4); color:var(--accent-color);" title="Discover matching citations">🔍 Discover</button>
+                        <button id="btn-save-to-dna" class="btn-synthesize" style="flex:1; border-color:rgba(56, 189, 248, 0.4); color:#38bdf8;" title="Back-propagate certified text to underlying Kabal file">🧬 Save to DNA</button>
                     </div>
                     <div style="display:flex; gap:8px;">
-                        <button id="btn-discard-draft" class="btn-discard-drawer" style="flex:1;" title="Discard pending modifications and restore baseline">↩️ Discard</button>
+                        <button id="btn-discard-draft" class="btn-discard-drawer" style="flex:1;" title="Discard pending modifications and restore baseline">↩️ Revert</button>
+                        <button id="btn-snapshot-tag" class="btn-synthesize" style="flex:1; border-color:rgba(210, 153, 34, 0.4); color:#d29922;" title="Record named snapshot tag into Spine manifest">📸 Snapshot</button>
                         <button id="btn-kick-manuscript" class="btn-kick" style="flex:1;" title="Save draft prose to manuscript">💾 Save</button>
                     </div>
                 </div>
@@ -18407,6 +18419,25 @@ window.__WRITER_QUOTES__ = [
             <div class="modal-actions">
                 <button id="btn-cancel-new-paper" class="action-btn">Cancel</button>
                 <button id="btn-confirm-new-paper" class="action-btn btn-save">Create Paper</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🚀 Publish Release Modal (Story 106.14 / VIBE-017) -->
+    <div id="publish-release-modal-overlay" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-title">🚀 Publish Frozen Release (Offline AST)</div>
+            <p style="font-size:0.78rem; color:#8b949e; margin:6px 0 12px; line-height:1.4;">
+                Enter an explicit release name. Per <code>VIBE-017</code>, arbitrary defaults like 'v1' or 'default' are strictly barred to preserve the auditable paper trail.
+            </p>
+            <div class="modal-field">
+                <label for="publish-release-name-input">Explicit Release Slug</label>
+                <input type="text" id="publish-release-name-input" class="modal-input" placeholder="e.g. resume_oct2026_executive">
+            </div>
+            <div id="publish-modal-error" style="color:#f85149; font-size:0.75rem; display:none; margin-top:4px;"></div>
+            <div class="modal-actions">
+                <button id="btn-cancel-publish" class="action-btn">Cancel</button>
+                <button id="btn-confirm-publish" class="action-btn btn-save" style="background:#a371f7; border-color:#a371f7; color:#fff;">Publish Release</button>
             </div>
         </div>
     </div>
@@ -21686,6 +21717,191 @@ window.__WRITER_QUOTES__ = [
                 });
             }
 
+            // --- [FEAT-662 / FEAT-663 / FEAT-664] Kabal, Spine & Multi-Corpus State Machine Handlers ---
+            function initKabalSpineStateEvents() {
+                // 1. Save to DNA Handler (Back-propagation to Kabal)
+                var btnSaveDNA = document.getElementById('btn-save-to-dna');
+                if (btnSaveDNA) {
+                    btnSaveDNA.addEventListener('click', function() {
+                        var targetEl = document.getElementById('review-target-id');
+                        var cardId = (STATE.reviewTarget && STATE.reviewTarget.id) ? STATE.reviewTarget.id : (targetEl ? targetEl.textContent.trim() : '');
+                        var text = document.getElementById('review-prose-textarea') ? document.getElementById('review-prose-textarea').value : '';
+                        if (!cardId || !text) {
+                            showToast('Select a valid card and provide text before saving to DNA', 'error');
+                            return;
+                        }
+                        var slug = (STATE.activePaper && STATE.activePaper.slug) ? STATE.activePaper.slug : 'resume';
+                        btnSaveDNA.disabled = true;
+                        btnSaveDNA.textContent = 'Saving…';
+                        fetchJson('/paper/save_to_dna', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ slug: slug, card_id: cardId, text: text })
+                        })
+                        .then(function(res) {
+                            btnSaveDNA.disabled = false;
+                            btnSaveDNA.textContent = '🧬 Save to DNA';
+                            if (res.status === 'success') {
+                                showToast('🧬 Back-propagated certified text to ' + cardId + ' in ' + slug + '_kabal.json!', 'success');
+                                logSysConsole('[KABAL] Certified card ' + cardId + ' saved to ' + slug + '_kabal.json', 'success');
+                            } else {
+                                showToast('Save to DNA failed: ' + (res.message || 'Error'), 'error');
+                            }
+                        })
+                        .catch(function(err) {
+                            btnSaveDNA.disabled = false;
+                            btnSaveDNA.textContent = '🧬 Save to DNA';
+                            showToast('Error saving to DNA: ' + err.message, 'error');
+                        });
+                    });
+                }
+
+                // 2. Snapshot Tag Handler
+                var btnSnapshot = document.getElementById('btn-snapshot-tag');
+                if (btnSnapshot) {
+                    btnSnapshot.addEventListener('click', function() {
+                        var defaultTag = '@draft_' + new Date().toISOString().slice(5,10).replace('-','');
+                        var tagName = prompt('Enter named snapshot tag (e.g. @draft_oct18, @executive_2page):', defaultTag);
+                        if (!tagName) return;
+                        var slug = (STATE.activePaper && STATE.activePaper.slug) ? STATE.activePaper.slug : 'resume';
+                        fetchJson('/paper/snapshot_tag', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ slug: slug, tag: tagName, description: 'Author snapshot from Applied Writer' })
+                        })
+                        .then(function(res) {
+                            if (res.status === 'success') {
+                                showToast('📸 Recorded snapshot tag ' + res.tag + ' to spine manifest!', 'success');
+                                logSysConsole('[SPINE] Recorded tag ' + res.tag + ' into ' + slug + '_spine.json', 'success');
+                            } else {
+                                showToast('Snapshot failed: ' + (res.message || 'Error'), 'error');
+                            }
+                        })
+                        .catch(function(err) {
+                            showToast('Snapshot error: ' + err.message, 'error');
+                        });
+                    });
+                }
+
+                // 3. Publish Release Modal & Submission (Enforcing VIBE-017 anti-v1 rule)
+                var btnPublish = document.getElementById('btn-publish-release');
+                var publishModal = document.getElementById('publish-release-modal-overlay');
+                var btnCancelPublish = document.getElementById('btn-cancel-publish');
+                var btnConfirmPublish = document.getElementById('btn-confirm-publish');
+                var publishInput = document.getElementById('publish-release-name-input');
+                var publishError = document.getElementById('publish-modal-error');
+
+                if (btnPublish && publishModal) {
+                    btnPublish.addEventListener('click', function() {
+                        var slug = (STATE.activePaper && STATE.activePaper.slug) ? STATE.activePaper.slug : 'resume';
+                        if (publishInput) publishInput.value = slug + '_' + new Date().toISOString().slice(0,10).replace(/-/g,'') + '_release';
+                        if (publishError) publishError.style.display = 'none';
+                        publishModal.classList.add('open');
+                    });
+                }
+
+                if (btnCancelPublish && publishModal) {
+                    btnCancelPublish.addEventListener('click', function() {
+                        publishModal.classList.remove('open');
+                    });
+                }
+
+                if (btnConfirmPublish && publishModal) {
+                    btnConfirmPublish.addEventListener('click', function() {
+                        var val = publishInput ? publishInput.value.trim().toLowerCase() : '';
+                        if (!val || val === 'v1' || val === 'default') {
+                            if (publishError) {
+                                publishError.textContent = 'Explicit release name required. Default "v1" or "default" are strictly barred per VIBE-017.';
+                                publishError.style.display = 'block';
+                            }
+                            return;
+                        }
+                        var slug = (STATE.activePaper && STATE.activePaper.slug) ? STATE.activePaper.slug : 'resume';
+                        btnConfirmPublish.disabled = true;
+                        btnConfirmPublish.textContent = 'Publishing…';
+                        fetchJson('/paper/publish_release', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ slug: slug, release_name: val })
+                        })
+                        .then(function(res) {
+                            btnConfirmPublish.disabled = false;
+                            btnConfirmPublish.textContent = 'Publish Release';
+                            if (res.status === 'success') {
+                                publishModal.classList.remove('open');
+                                showToast('🚀 Published frozen release ' + res.release_name + ' (' + res.nodes_published + ' nodes)!', 'success');
+                                logSysConsole('[PUBLISH] Frozen offline AST release published to ' + res.release_name, 'success');
+                            } else {
+                                if (publishError) {
+                                    publishError.textContent = res.message || 'Publish failed';
+                                    publishError.style.display = 'block';
+                                }
+                            }
+                        })
+                        .catch(function(err) {
+                            btnConfirmPublish.disabled = false;
+                            btnConfirmPublish.textContent = 'Publish Release';
+                            if (publishError) {
+                                publishError.textContent = err.message;
+                                publishError.style.display = 'block';
+                            }
+                        });
+                    });
+                }
+
+                // 4. Multi-Corpus Knowledge Ingestion Search (FEAT-664 Anti-Clippy Grounding Lens)
+                var corpusInput = document.getElementById('corpus-search-input');
+                var corpusResults = document.getElementById('corpus-chips-results');
+                var corpusBadge = document.getElementById('corpus-status-badge');
+                var searchDebounce = null;
+
+                if (corpusInput && corpusResults) {
+                    corpusInput.addEventListener('input', function() {
+                        var q = this.value.trim();
+                        clearTimeout(searchDebounce);
+                        if (!q) {
+                            corpusResults.innerHTML = '';
+                            if (corpusBadge) corpusBadge.textContent = 'Type to query';
+                            return;
+                        }
+                        if (corpusBadge) corpusBadge.textContent = 'Searching…';
+                        searchDebounce = setTimeout(function() {
+                            fetchJson('/paper/multi_corpus_search?q=' + encodeURIComponent(q) + '&limit=8')
+                            .then(function(res) {
+                                if (res.status === 'success' && res.results) {
+                                    if (corpusBadge) corpusBadge.textContent = res.results.length + ' matches';
+                                    var html = '';
+                                    res.results.forEach(function(item) {
+                                        var domain = item.domain || 'DNA';
+                                        var color = domain === 'WIS' ? '#e3b341' : (domain === 'FEAT' ? '#58a6ff' : (domain === 'KABAL' ? '#38bdf8' : '#a371f7'));
+                                        html += '<button type="button" class="action-btn btn-corpus-chip" data-id="' + escapeHtml(item.id) + '" style="font-size:0.68rem; padding:2px 6px; border-color:' + color + '; color:' + color + '; background:rgba(0,0,0,0.3);" title="' + escapeHtml(item.title) + ': ' + escapeHtml(item.summary) + '">+' + escapeHtml(item.id) + '</button>';
+                                    });
+                                    corpusResults.innerHTML = html;
+
+                                    corpusResults.querySelectorAll('.btn-corpus-chip').forEach(function(btn) {
+                                        btn.addEventListener('click', function() {
+                                            var cid = this.dataset.id;
+                                            var textarea = document.getElementById('review-prose-textarea');
+                                            if (textarea) {
+                                                var start = textarea.selectionStart || textarea.value.length;
+                                                var end = textarea.selectionEnd || textarea.value.length;
+                                                var val = textarea.value;
+                                                textarea.value = val.substring(0, start) + ' [' + cid + '] ' + val.substring(end);
+                                                textarea.focus();
+                                                showToast('Attached citation chip [' + cid + ']', 'info');
+                                            }
+                                        });
+                                    });
+                                }
+                            })
+                            .catch(function(err) {
+                                if (corpusBadge) corpusBadge.textContent = 'Search error';
+                            });
+                        }, 250);
+                    });
+                }
+            }
+
             // --- Initialization ---
             function initStudio() {
                 // Ensure state is synchronized with global context
@@ -21704,6 +21920,7 @@ window.__WRITER_QUOTES__ = [
                 initLensDrawerEvents();
                 initVoiceDrawerEvents();
                 initActionHandlers();
+                initKabalSpineStateEvents();
                 renderAllViews();
                 checkFoyerStatus();
 
@@ -21717,6 +21934,24 @@ window.__WRITER_QUOTES__ = [
                 logSysConsole('[INIT] Mounted active paper: ' + (STATE.activePaper ? STATE.activePaper.title : 'None') + ' (' + secCount + ' sections, ' + parCount + ' paragraphs, ' + boneCount + ' root bones)', 'success');
                 logSysConsole('[INIT] Manifest indexed ' + (STATE.manifest && STATE.manifest.papers ? STATE.manifest.papers.length : 0) + ' manuscript(s)', 'info');
                 logSysConsole('[INIT] DNA citation index: ' + Object.keys(STATE.citationIndex || {}).length + ' anchors registered', 'info');
+
+                // [FEAT-665] Support incoming staged cards from DNA Forge
+                try {
+                    var params = new URLSearchParams(window.location.search);
+                    var stagedParam = params.get('staged');
+                    if (stagedParam) {
+                        var cardIds = stagedParam.split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+                        if (cardIds.length) {
+                            logSysConsole('[STAGING] Ingested ' + cardIds.length + ' staged card(s) from DNA Forge', 'success');
+                            showToast('📥 Loaded ' + cardIds.length + ' staged cards into Review Drawer', 'info');
+                            var corpusInput = document.getElementById('corpus-search-input');
+                            if (corpusInput) {
+                                corpusInput.value = cardIds[0];
+                                corpusInput.dispatchEvent(new Event('input'));
+                            }
+                        }
+                    }
+                } catch(e) {}
             }
 
             if (document.readyState === 'loading') {

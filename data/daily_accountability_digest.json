@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-18T14:08:00.335058",
-  "date": "2026-10-18",
+  "timestamp": "2026-10-19T06:00:53.064036",
+  "date": "2026-10-19",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
   "overall_status": "DEGRADED",
   "total_checks": 8,
-  "passed_checks": 7,
-  "failed_checks": 1,
+  "passed_checks": 8,
+  "failed_checks": 0,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
@@ -27,9 +27,9 @@
     {
       "name": "Nightly Forge Orchestration",
       "passed": true,
-      "detail": "Status: DEGRADED (Age: 9.1h)",
+      "detail": "Status: DEGRADED (Age: 1.0h)",
       "status": "DEGRADED",
-      "age_hours": 9.1
+      "age_hours": 1.0
     },
     {
       "name": "LoRA Fine-Tuning Multi-Adapter Pass",
@@ -40,25 +40,25 @@
     {
       "name": "Accountable Subconscious Dreaming",
       "passed": true,
-      "detail": "Fresh: 29.3h, Active Gems: 4",
+      "detail": "Fresh: 13.0h, Active Gems: 4",
       "count": 4
     },
     {
       "name": "Synthetic Morning Round Table Probe",
-      "passed": false,
-      "detail": "Status: DEGRADED, Critic Score: 0.00, Latency: 1.03ms",
-      "critic_score": 0.0
+      "passed": true,
+      "detail": "Status: PASS, Critic Score: 0.95, Latency: 2.1ms",
+      "critic_score": 0.95
     },
     {
       "name": "Cgroup Swap Pressure Monitor",
       "passed": true,
-      "detail": "Swap: 8362MB/8362MB peak (53.1%)",
-      "swap_peak_mb": 8362.17,
-      "swap_current_mb": 8362.17,
-      "swap_utilization_pct": 53.12
+      "detail": "Swap: 6594MB/6594MB peak (41.9%)",
+      "swap_peak_mb": 6594.39,
+      "swap_current_mb": 6594.39,
+      "swap_utilization_pct": 41.89
     }
   ],
   "discrepancies": [
-    "Status: DEGRADED, Critic Score: 0.00, Latency: 1.03ms"
+    "Nightly Forge completed with degraded status (Status: DEGRADED (Age: 1.0h))"
   ]
 }

@@ -56,7 +56,7 @@
     window.__focalBreadcrumbs = ['PHL-001'];
 
     try {
-        var saved = localStorage.getItem('dna_active_bone_rack');
+        var saved = localStorage.getItem('dna_active_staging_shelf') || localStorage.getItem('dna_active_bone_rack');
         if (saved) {
             activeBones = JSON.parse(saved);
             window.__activeBones = activeBones;
@@ -308,30 +308,43 @@
     }
 
     // -------------------------------------------------------------
-    // TAB 3: BONE RACK & REVIEW HUD [FEAT-593]
+    // TAB 3: ACTIVE KABAL STAGING & REVIEW HUD [FEAT-593 / FEAT-665]
     // -------------------------------------------------------------
     function updateBoneRackUi() {
         var rackEl = document.getElementById('boneDockItems');
         var badge = document.getElementById('boneCountBadge');
         if (!rackEl) return;
 
-        if (badge) badge.textContent = activeBones.length + ' Bones Docked';
+        if (badge) badge.textContent = activeBones.length + ' Cards Staged';
+
+        // Update card button states in DOM
+        var stagedIds = new Set(activeBones.map(function(b){ return b.id; }));
+        document.querySelectorAll('.btn-card-stage, .btn-card-rack').forEach(function(btn) {
+            var cid = btn.dataset.cid;
+            if (stagedIds.has(cid)) {
+                btn.classList.add('staged');
+                btn.textContent = '✓ Staged';
+            } else {
+                btn.classList.remove('staged');
+                btn.textContent = '+ Stage';
+            }
+        });
 
         if (activeBones.length === 0) {
-            rackEl.innerHTML = '<div class="bone-dock-empty">No DNA bones docked yet. Click <strong>+ Rack</strong> on any card below or hit <strong>Suggest Bones</strong> to build a track skeleton.</div>';
+            rackEl.innerHTML = '<div class="bone-dock-empty">No cards staged yet. Click <strong>+ Stage</strong> on any card below to build an active working caucus.</div>';
             return;
         }
 
         var html = '';
         activeBones.forEach(function(b, idx) {
-            var color = domainColors[b.domain] || '#58a6ff';
+            var color = domainColors[b.domain] || '#38bdf8';
             html += '<div class="bone-dock-card" data-cid="' + escapeHtml(b.id) + '">' +
                 '<div style="display:flex; align-items:center; gap:6px;">' +
                     '<span style="color:' + color + '; font-weight:800; font-family:monospace;">[' + escapeHtml(b.id) + ']</span>' +
                     '<span style="font-weight:600; font-size:0.78rem; color:#f0f6fc; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:220px;">' + escapeHtml(b.title) + '</span>' +
                 '</div>' +
                 '<div style="display:flex; align-items:center; gap:4px;">' +
-                    '<button class="bone-dock-remove" data-idx="' + idx + '" title="Remove from active rack">✖</button>' +
+                    '<button class="bone-dock-remove" data-idx="' + idx + '" title="Remove from staged shelf">✖</button>' +
                 '</div>' +
             '</div>';
         });
@@ -365,10 +378,12 @@
         updateBoneRackUi();
     }
     window.toggleBoneInRack = toggleBoneInRack;
+    window.toggleCardStaging = toggleBoneInRack;
 
     function saveActiveBones() {
         window.__activeBones = activeBones;
         try {
+            localStorage.setItem('dna_active_staging_shelf', JSON.stringify(activeBones));
             localStorage.setItem('dna_active_bone_rack', JSON.stringify(activeBones));
         } catch(e) {}
     }
@@ -688,7 +703,7 @@
             });
         }
 
-        document.querySelectorAll('.btn-card-rack').forEach(function(btn) {
+        document.querySelectorAll('.btn-card-stage, .btn-card-rack').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 toggleBoneInRack(this.dataset.cid);
@@ -704,7 +719,7 @@
 
         var btnClearRack = document.getElementById('btnClearBoneRack');
         if (btnClearRack) btnClearRack.addEventListener('click', function() {
-            if (confirm('Clear all bones from active rack?')) {
+            if (confirm('Clear all cards from active staging shelf?')) {
                 activeBones = [];
                 saveActiveBones();
                 updateBoneRackUi();
@@ -712,11 +727,23 @@
             }
         });
 
+        var btnStageToWriter = document.getElementById('btnStageToWriter');
+        if (btnStageToWriter) {
+            btnStageToWriter.addEventListener('click', function() {
+                if (activeBones.length === 0) {
+                    alert('⚠️ No cards currently staged. Click "+ Stage" on any card to assemble a working caucus.');
+                    return;
+                }
+                var stagedIds = activeBones.map(function(b){ return b.id; }).join(',');
+                window.location.href = 'writer.html?staged=' + encodeURIComponent(stagedIds);
+            });
+        }
+
         var btnSaveRack = document.getElementById('btnSaveBoneCollection');
         if (btnSaveRack) btnSaveRack.addEventListener('click', function() {
-            var name = (document.getElementById('boneCollectionName') || {}).value || 'Custom Rack';
+            var name = (document.getElementById('boneCollectionName') || {}).value || 'Active Working Caucus';
             if (activeBones.length === 0) {
-                alert('⚠️ No bones docked in active rack.');
+                alert('⚠️ No cards staged in active shelf.');
                 return;
             }
             fetch('http://127.0.0.1:8765/dna/save_bone_collection', {
@@ -725,10 +752,10 @@
                 body: JSON.stringify({ name: name, bones: activeBones })
             })
             .then(function(res) { return res.json(); })
-            .then(function() { alert('💾 Bone collection saved!'); })
+            .then(function() { alert('💾 Working Kabal collection saved!'); })
             .catch(function() {
                 BONE_COLLECTIONS.push({ id: 'COL-' + Date.now(), name: name, bones: activeBones.slice() });
-                alert('💾 Bone collection saved to local cache!');
+                alert('💾 Working Kabal collection saved to local cache!');
             });
         });
     }

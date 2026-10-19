@@ -1,18 +1,8 @@
 {
-  "pending_action": "DEEP_RESET",
-  "action_level": 2,
-  "timer_expiry_ts": 1792382304,
-  "triggered_at_ts": 1792380504,
-  "last_commit": "1dff5c9",
-  "repo": "HomeLabAI",
-  "reasons": [
-    "src/nodes/archive_node.py (Active Module)",
-    "src/logic/cognitive_hub.py (Active Module)",
-    "src/infra/standalone_accountability_watchdog.py (Deep Core/Infra Architecture)",
-    "src/forge/build_lora_datasets.py (Active Module)",
-    "src/tests/test_accountability_matrix_unit.py (Active Module)",
-    "src/dream_cycle.py (Active Module)",
-    "src/forge/training_data.jsonl (Active Module)",
-    "src/infra/nightly_forge.py (Deep Core/Infra Architecture)"
-  ]
+  "pending_action": "NONE",
+  "action_level": 0,
+  "timer_expiry_ts": 0,
+  "triggered_at_ts": 1792383105,
+  "last_commit": "cleared",
+  "reasons": []
 }

@@ -842,9 +842,15 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Static Site Synthesis (build_site.py)
+                                    Static Site Synthesis & Public Airlock Invariant (build_site.py)
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#airlock</code>, <code>#build_site</code>, <code>#www_deploy</code>, <code>#hash_parity</code>, <code>#anti_fake_fixes</code>, <code>[FEAT-461](#FEAT-461)</code>, <code>[FEAT-528](#FEAT-528)</code>, <code>[FEAT-549](#FEAT-549)</code></p>
+                </div>
+            </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Code</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
@@ -854,13 +860,25 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Automated pipeline that clears caches and prepares the <code>www_deploy</code> directory for public hosting.</p>
+                    <ol>
+<li><strong>The Airlock Derivative Invariant:</strong> <code>www_deploy</code> is an air-gapped, compiled public mirror and cache. It is NEVER the primary source of truth for application logic, scripts, or styles. Direct edits or manual patches to <code>www_deploy</code> are strictly classified as "Fake Fixes" because any subsequent build sweep will wipe or diverge from them.</li>
+<li><strong>Canonical Source Residency:</strong> All frontend application code, UI styling, and logic live exclusively in <code>Portfolio_Dev/field_notes/</code> (e.g., <code>benchmarks.js</code>, <code>benchmarks.html</code>, <code>style.css</code>, <code>script.js</code>).</li>
+<li><strong>Internal vs Public Segregation:</strong></li>
+<li><strong>Public Airlock Pages (<code>www.jason-lab.dev</code>):</strong> <code>index.html</code>, <code>stories.html</code>, <code>protocols.html</code>, <code>research.html</code>, and sanitized <code>public_benchmarks.html</code>. Only public assets are deployed to <code>www_deploy</code>.</li>
+<li><strong>Internal Mission Control Pages (<code>notes.jason-lab.dev</code>):</strong> <code>benchmarks.html</code>, <code>features.html</code>, <code>intercom.html</code>, <code>status.html</code>, <code>files.html</code>. These are served directly from live source on port 9001 and are NEVER mixed into <code>www_deploy</code>.</li>
+<li><strong>Automated Synthesis Pipeline (<code>build_site.py</code>):</strong></li>
+<li>Compiles dynamic markdown schemas (<code>research.html</code>, <code>protocols.html</code>, <code>features.html</code>, <code>dna_forge.html</code>, <code>wisdom.html</code>, <code>timeline.html</code>).</li>
+<li>Calculates MD5 cache-busting hashes for all <code>SOURCE_FILES</code> (<code>style.css</code>, <code>script.js</code>, <code>benchmarks.js</code>, <code>intercom_v2.js</code>, etc.) and injects <code>?v=&lt;hash&gt;</code> into all HTML asset references.</li>
+<li>Generates Git anchor telemetry (<code>git_anchor.json</code>).</li>
+<li>Enforces byte-level parity via <code>deploy_to_airlock()</code>, synchronizing root assets whenever destination is missing, mtime is newer, or content hash differs (<code>get_hash(src) != get_hash(dst)</code>).</li>
+<li><strong>Agent Working Rule:</strong> When addressing any UI issue, agents must edit <code>Portfolio_Dev/field_notes/</code> first, then run <code>python3 Portfolio_Dev/field_notes/build_site.py</code> to synthesize public assets. Direct edits to <code>www_deploy</code> are rejected in code review.</li>
+</ol>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Runs <code>python3 field_notes/build_site.py</code> to trigger versioned cache-busting and asset bundling.</p>
+                    <p>Runs <code>python3 field_notes/build_site.py</code> to trigger versioned cache-busting, dynamic markdown compilation, and airlock synchronization.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -6004,31 +6022,31 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Council of Hemispheres (Peer Vote)
+                                    Council of Hemispheres (Peer Vote & Dynamic Evidential Damping)
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Code</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L549" style="color:var(--accent-color); text-decoration:none;">src/logic/cognitive_hub.py</a>
+                    <p><a href="file:///home/jallred/Dev_Lab/HomeLabAI/src/logic/cognitive_hub.py#L3242-L3270"><code>HomeLabAI/src/logic/cognitive_hub.py</code></a>, <a href="file:///home/jallred/Dev_Lab/HomeLabAI/src/nodes/brain_node.py#L19"><code>HomeLabAI/src/nodes/brain_node.py</code></a> — Council of Hemispheres (Peer Vote &amp; Dynamic Evidential Damping).</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Enables mid-relay adjustment of the turn's importance level based on node-level reasoning.</p>
+                    <p>Enables mid-relay adjustment of the turn's fuel level based on node-level reasoning and evidence verification. Brain emits <code>&lt;boost_interest&gt;</code> (+0.20) when deep technical bedrock is discovered, or <code>&lt;damp_interest&gt;</code> (-0.25) when candidate evidence is absent, irrelevant, or on casual banter.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>The Lab Node may under-estimate a query (e.g. Pi as general knowledge). This feature allows Pinky to "Pull the Alarm" by recommending a fuel boost, or "Demote" a turn if she detects it's a joke or mistake.</p>
+                    <p>Prevents cascade runaway on casual turns (e.g. <em>"How are you and Brain?"</em>). If Brain discovers zero bedrock truth, it damps fuel below $0.35$, cleanly gating Deep Thought into quiescence (<code>dt_synthesis = ""</code>) and allowing Pinky to deliver a terse, single-sentence response without cascading.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>CognitiveHub</code> parses explicit steering signals from node responses and updates the session's fuel state before the Sovereign Brain check.</p>
+                    <p><code>CognitiveHub._run_two_mice_handover</code> parses discrete semantic tags (<code>&lt;boost_interest&gt;</code>, <code>&lt;damp_interest&gt;</code>, <code>&lt;upvote&gt;</code>, <code>&lt;downvote&gt;</code>), computes Dual-Channel Evidential Accounting, updates <code>self.current_interest</code>, and gates downstream Deep Thought synthesis.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -9809,7 +9827,7 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Status Details</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: #888; margin-left: 10px; margin-top: 2px;">
-                    <p>(Sprint 56)</p>
+                    <p>(Sprint 56 / Superseded Sprint 103)</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -13771,31 +13789,37 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Two-Mice Sequential Streaming Handover & Distillation Pipeline
+                                    Two-Mice Sequential Streaming Handover & Deliberation Circuit
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
+                <span class="field-label">Status Details</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: #888; margin-left: 10px; margin-top: 2px;">
+                    <p>(Augmented Sprint 103)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
                 <span class="field-label">Code</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L650" style="color:var(--accent-color); text-decoration:none;">src/logic/cognitive_hub.py</a>
+                    <a href="https://github.com/kEnder242/HomeLabAI/blob/main/src/logic/cognitive_hub.py#L2950" style="color:var(--accent-color); text-decoration:none;">src/logic/cognitive_hub.py</a>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Orchestrates high-interest historical turns into a sequential two-mice distillation funnel: Brain extracts 3-4 dense technical bullet points from raw RAG context to the Right Console, and Pinky receives Brain's extract to deliver a conversational in-character TL;DR directly to the user on the Left Console.</p>
+                    <p>Orchestrates high-interest turns into a sequential deliberation funnel under Macro Stage 3. Eliminates monolithic prompt confusion by decoupling extraction, synthesis, delivery, and audit into isolated micro-stages.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Replaces uncoordinated parallel essays with a true self-aware dialogue between the lab's analytical and conversational resident nodes.</p>
+                    <p>Replaces uncoordinated parallel essays with a true self-aware dialogue between the lab's analytical and conversational resident nodes, backed by live coherence verification.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/nodes/pinky_critic_persona.py</code>, <code>src/tests/test_two_mice_handover.py</code>.</p>
+                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/nodes/pinky_critic_persona.py</code>, <code>src/tests/test_two_mice_handover.py</code>, <code>src/tests/test_multi_stage_replay_pipeline.py</code>.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -14038,37 +14062,46 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    benchmarks.html 3-Tab Federated Silicon & ROI Workbench
+                                    benchmarks.html 3-Tab Federated Silicon Workbench
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
+                <span class="field-label">Status Details</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: #888; margin-left: 10px; margin-top: 2px;">
+                    <p>ED (Hypothetical ROI calculator DEFEATURED; superseded by <a href="#FEAT-525">FEAT-525</a> and <a href="#FEAT-552">FEAT-552</a> Empirical Telemetry)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-66.0</p>
+                    <p>SPR-66.0 / SPR-102.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Upgrades <code>benchmarks.html</code> from a single-node RTX 2080 Ti snapshot into a comprehensive 3-tab workbench: Tab 1 (Silicon Arena comparison), Tab 2 (Energy &amp; Financial ROI Calculator), Tab 3 (Intelligence Quotient &amp; CoT depth), plus an interactive live shakedown waterfall runner.</p>
+                    <p>Upgrades <code>benchmarks.html</code> from a single-node snapshot into a streamlined 3-tab workbench grounded entirely in authenticated physical data stores:
+- <strong>Tab 1 (Live Round Table Elapsed Time):</strong> Physical deliberation checkpoints backed by <code>Portfolio_Dev/field_notes/data/round_table_deltas.json</code> (<code>[FEAT-525](#FEAT-525)</code>).
+- <strong>Tab 2 (Model Throughput):</strong> Real-time generation throughput and workload events backed by <code>Portfolio_Dev/field_notes/data/live_usage_stream.jsonl</code> (<code>[FEAT-496](#FEAT-496)</code>).
+- <strong>Tab 3 (Sprint Delegation Gains):</strong> Swarm delegation volume and financial sovereign savings backed by <code>Portfolio_Dev/field_notes/data/delegation_runs.json</code> and <code>HomeLabAI/data/delegation_ledger.jsonl</code> (<code>[FEAT-552](#FEAT-552)</code>).</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Enables clear visualization of speed, cost, energy, and reasoning depth across all four federated hardware tiers.</p>
+                    <p>Eliminates misleading hypothetical estimations in favor of authenticated empirical telemetry from live homelab workloads.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>Portfolio_Dev/field_notes/benchmarks.html</code>, <code>Portfolio_Dev/field_notes/benchmarks_cache.json</code>.</p>
+                    <p><code>Portfolio_Dev/field_notes/benchmarks.html</code>, <code>Portfolio_Dev/field_notes/benchmarks.js</code>, <code>Portfolio_Dev/field_notes/data/round_table_deltas.json</code>, <code>Portfolio_Dev/field_notes/data/live_usage_stream.jsonl</code>, <code>Portfolio_Dev/field_notes/data/delegation_runs.json</code>.</p>
                 </div>
             </div>     </div>
                             </details>
                         </td>
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
-                            <span class="impact-badge impact-live">ACTIVE</span>
+                            <span class="impact-badge impact-stable">DEFEATURED</span>
                         </td>
                     </tr>
                     <tr id="FEAT-495">
@@ -14076,25 +14109,31 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Dynamic Auto-Discovery Benchmark Engine & Nightly Sweep Integration
+                                    Dynamic Auto-Discovery Benchmark Engine & Service De-escalation
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
+                <span class="field-label">Status Details</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: #888; margin-left: 10px; margin-top: 2px;">
+                    <p>/ DECOUPLED (Synthetic nightly sweep decoupled in Sprint 102 Story 102.20; superseded by <a href="#FEAT-496">FEAT-496</a> Continuous Passive Telemetry)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-66.0</p>
+                    <p>SPR-66.0 / SPR-102.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Overhauls <code>bench_models.py</code> to dynamically query endpoints (<code>:8000/v1/models</code>, <code>:11434/api/tags</code>, <code>:8088/v1/models</code>), discovering whatever model is currently resident on each hardware seat without hardcoded names. Automatically updates <code>benchmarks_cache.json</code> and Prometheus metrics.</p>
+                    <p>Originally dynamically queried model endpoints to discover resident models. In Sprint 102 (<code>Story 102.20</code>), synthetic nightly benchmark sweeps in <code>nightly_forge.py</code> were retired in favor of continuous passive telemetry harvested from real multi-seat production workloads (<code>[FEAT-496](#FEAT-496)</code>), eliminating synthetic token burn and needless endpoint wakes.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Ensures daily benchmarks automatically track resident model swaps and hardware changes without manual code edits.</p>
+                    <p>Real production dispatches provide higher-fidelity hardware calibration than synthetic probe pings.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -14106,7 +14145,7 @@
                             </details>
                         </td>
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
-                            <span class="impact-badge impact-live">ACTIVE</span>
+                            <span class="impact-badge impact-stable">RETIRED</span>
                         </td>
                     </tr>
                     <tr id="FEAT-496">
@@ -14120,13 +14159,13 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-66.0</p>
+                    <p>SPR-66.0 / SPR-102.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Automatically logs real-world task execution metrics (seat, model, duration, token volume, throughput) to <code>Portfolio_Dev/field_notes/data/live_usage_stream.jsonl</code> upon every <code>delegate.py</code> completion, rendering a live workload activity waterfall on <code>benchmarks.html</code>.</p>
+                    <p>Automatically logs real-world task execution metrics (seat, model, duration, token volume, throughput) to <code>Portfolio_Dev/field_notes/data/live_usage_stream.jsonl</code> upon every <code>delegate.py</code> completion, rendering a live workload activity waterfall and scatter plot on <code>benchmarks.html</code>. Full 83+ authentic record history displayed in reverse chronological order with sticky table headers.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -14138,7 +14177,7 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>HomeLabAI/src/tests/delegate.py</code>, <code>Portfolio_Dev/field_notes/benchmarks.html</code>.</p>
+                    <p><code>HomeLabAI/src/tests/delegate.py</code>, <code>Portfolio_Dev/field_notes/data/live_usage_stream.jsonl</code>, <code>Portfolio_Dev/field_notes/benchmarks.html</code>, <code>Portfolio_Dev/field_notes/benchmarks.js</code>.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -14532,31 +14571,31 @@
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Round Table Context Scoping & Blackboard Ledger DNA
+                                    Continuous Interest Multiplier Pacing
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-70.0</p>
+                    <p>SPR-70.0 / SPR-102.0 / SPR-105.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Replaces string-sniffing with explicit <code>ContextScope</code> enum (<code>ContextScope.TURN</code> vs <code>ContextScope.LONG</code>). Triage and Deep Thought receive isolated <code>TURN</code> scope. Mice (Pinky &amp; Brain) receive <code>LONG</code> scope with Blackboard Ledger + 1 prior turn. Brain writes distillation bullets; Pinky writes 1-line consensus; stored in ChromaDB <code>blackboard_ledger_dna</code>.</p>
+                    <p>Redefines conversational token budgeting from a discrete binary ternary step function into a continuous mathematical scalar multiplier: <code>max(0, int(current_interest * max_token_ceiling))</code>. In Sprint 105.0 post-stabilization, excised legacy arbitrary per-node base floors (<code>300</code> for Thought, <code>80</code> for Brain, <code>60</code> for Pinky) in <code>calculate_pacing_ceiling()</code> that previously prevented fuel from ever tapering to zero. Interest is restored as the sole universal currency shaping turn headroom across all sovereign personas; when interest remains flat, each persona receives the identical headroom ceiling.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Resolves long context bloat while keeping conversational agents self-aware across multi-turn sessions.</p>
+                    <p>Preserves conversational dynamism across the interest spectrum, eliminates the jarring runaway verbosity cliff when interest slightly crosses discrete thresholds, and guarantees that turns naturally conclude without residual unearned token floors.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/memory/blackboard_ledger.py</code>.</p>
+                    <p><code>HomeLabAI/config/infrastructure.json</code>, <code>HomeLabAI/src/logic/cognitive_hub.py</code> (<code>calculate_pacing_ceiling()</code>, <code>format_pacing_line()</code>), <code>HomeLabAI/src/tests/test_cognitive_hub_pacing.py</code>.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -14614,7 +14653,7 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-70.0</p>
+                    <p>SPR-70.0 / SPR-102.0 / SPR-103.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -14626,7 +14665,7 @@
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Physical silicon stopwatch telemetry engine tracking the 5 sequential deliberation stages (Triage $\rightarrow$ Pinky $\rightarrow$ Brain $\rightarrow$ Deep Thought / Oracle $\rightarrow$ Pinky Judgment / Summary). Telemetry recording is strictly and exclusively bounded to Full Round Table turns ($d_{\text{brain}} &gt; 0$ and $d_{\text{thought}} &gt; 0$), bypassing single-actor casual dialogue turns to maintain pure multi-actor benchmark fidelity. Rendered in <code>benchmarks.html</code> via cumulative canvas waterfall charts and expandable Blackboard Ledger cards.</p>
+                    <p>Physical silicon stopwatch telemetry engine tracking the 5 sequential deliberation stages (Triage $\rightarrow$ Pinky $\rightarrow$ Brain $\rightarrow$ Deep Thought / Oracle $\rightarrow$ Pinky Judgment / Summary). Telemetry recording is strictly and exclusively bounded to Full Round Table turns ($d_{\text{brain}} &gt; 0$ and $d_{\text{thought}} &gt; 0$), bypassing single-actor casual dialogue turns to maintain pure multi-actor benchmark fidelity. Rendered in <code>benchmarks.html</code> via cumulative canvas waterfall charts and expandable Blackboard Ledger cards. In Sprint 102, re-engineered turn sequencing to guarantee persistent monotonic integer indexing (<code>len(records) + 1</code>) across hub restarts, captured the operator's prompt into <code>round_table_deltas.json</code>, and rendered the prompt directly inside styled drawer cards.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -14741,15 +14780,24 @@ Foyer Router also pre-checks <code>X-Client-Commit</code> header (rejects with H
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
+                <span class="field-label">Status Details</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: #888; margin-left: 10px; margin-top: 2px;">
+                    <p>(Partially Superseded)</p>
+<blockquote>
+<p>[!NOTE] PARTIALLY SUPERSEDED (Sprint 102/103 / FEAT-523): The 150-token hardcoded clamp for <code>vibe == 'CASUAL'</code> and <code>importance &lt; 0.3</code> is excised in Sprint 103. Token budgeting across all turns is modulated smoothly by continuous scalar interest (<code>FEAT-523</code>) via <code>infrastructure.json:interest_pacing</code> ($\operatorname{clamp}(\operatorname{int}(\text{interest} \times 150), 32, 1500)$).</p>
+</blockquote>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-71.0</p>
+                    <p>SPR-71.0 / Superseded Sprint 103</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Dynamically bounds <code>ContextScope.TURN</code> and clamps token budget to 150 tokens for low-interest/casual queries (<code>importance &lt; 0.3</code> or <code>vibe == 'CASUAL'</code>). Sanitizes <code>round_table_memory</code> against unclosed JSON blocks, excessive whitespace, and bounds session memory to the last 10 turns. Refines domain taxonomy to cleanly distinguish between <code>work_history</code> (18-year Intel/silicon career archive) and <code>acme_lab_history</code> (internal Acme Lab system events &amp; DNA).</p>
+                    <p>Dynamically bounds <code>ContextScope.TURN</code> and modulates token budget via continuous interest pacing. Sanitizes <code>round_table_memory</code> against unclosed JSON blocks, excessive whitespace, and bounds session memory to the last 10 turns. Refines domain taxonomy to cleanly distinguish between <code>work_history</code> (18-year Intel/silicon career archive) and <code>acme_lab_history</code> (internal Acme Lab system events &amp; DNA).</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -15774,13 +15822,13 @@ Foyer Router also pre-checks <code>X-Client-Commit</code> header (rejects with H
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Structured Delegation Execution Ledger (`data/delegation_ledger.jsonl`)
+                                    Structured Delegation Execution Ledger & Auto-Live Web Feed Hook
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-82.0 / SPR-83.0</p>
+                    <p>SPR-82.0 / SPR-83.0 / SPR-101.0 / SPR-102.0</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -15792,19 +15840,19 @@ Foyer Router also pre-checks <code>X-Client-Commit</code> header (rejects with H
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Automatically records every swarm delegation attempt into a machine-readable JSONL ledger (<code>HomeLabAI/data/delegation_ledger.jsonl</code>). Captures session IDs, target stories, providers, models, duration, token metrics (input/output/reasoning/cache), finish statuses, and deep diagnostic message traces on failures. Provides a clean ASCII table view via <code>python3 delegate.py --ledger</code>.</p>
+                    <p>Automatically records every swarm delegation attempt into machine-readable JSONL ledgers (<code>delegation_ledger.jsonl</code>). To guarantee zero-delay dashboard freshness, <code>delegate.py</code> immediately triggers <code>export_web_telemetry()</code> upon run completion, regenerating <code>delegation_runs.json</code> in real time. Simultaneously, <code>build_site.py</code> executes the export hook prior to copying data to the public airlock (<code>www_deploy/data/</code>), establishing a dual live-and-deploy publishing pipeline with zero dependency on nightly batch windows.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Eliminates telemetry blindness across multi-attempt delegation loops, providing persistent auditability and forensic traceability for Tri-Loop governance.</p>
+                    <p>Eliminates telemetry blindness across multi-attempt delegation loops and ensures operators see up-to-the-second execution metrics on the web dashboard immediately upon story finish.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>_log_delegation_ledger</code> and <code>--ledger</code> CLI action in <code>delegate.py</code>.</p>
+                    <p><code>record_delegation()</code> in <code>delegate.py</code>, <code>export_web_telemetry()</code> in <code>sprint_telemetry.py</code>, and <code>deploy_to_airlock()</code> in <code>build_site.py</code>.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -18029,37 +18077,37 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
                         <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
                             <details class="feature-details">
                                 <summary>
-                                    Brain Information Gatekeeper & Curator Synergy Annotations
+                                    Brain Information Gatekeeper & Narrative Steering
                                 </summary>
                                 <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>SPR-96.0 (Active)</p>
+                    <p>SPR-96.0 / SPR-102.0 (Active)</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Code</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>HomeLabAI/src/nodes/brain_node.py</code>, <code>HomeLabAI/src/logic/cognitive_hub.py</code></p>
+                    <p><code>HomeLabAI/src/nodes/brain_node.py</code>, <code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/tests/test_brain_voice_replay.py</code></p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Transforms the local Brain node into an Information Gatekeeper. Brain evaluates candidate vectors collected by Pinky, drops ungrounded/tangential items without exposing negative distraction clutter to Deep Thought, forwards approved bedrock DNA text verbatim, and appends high-leverage <code>💡 Curator Note: [ID] connects with [ID]</code> annotations. Brain also audits conversation history to trim stale turns and attach prior context notes when relevant.</p>
+                    <p>Transforms the local Brain node into an Epistemic Gatekeeper and Narrative Reality Steerer. Brain evaluates candidate vectors collected by Pinky, prunes ungrounded/tangential items without exposing negative distraction clutter to Deep Thought, forwards approved bedrock DNA text verbatim, and appends high-leverage <code>💡 Curator Note: [ID] connects with [ID]</code> annotations. Critically, Brain steers the narrative back to concrete reality rather than downvoting interest or stalling the conversational turn. Brain also audits conversation history to trim stale turns and attach prior context notes when relevant.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Eliminates prompt pollution and hallucination cascades in Deep Thought by guaranteeing high-density, strictly grounded context injection.</p>
+                    <p>Eliminates prompt pollution, hallucination cascades, and artificial conversation stalls in Deep Thought by guaranteeing high-density, strictly grounded context injection while preserving dialogue momentum.</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Mechanism</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>BrainNode.curate_context()</code> and <code>CognitiveHub.build_deep_thought_context()</code>.</p>
+                    <p><code>BrainNode.curate_context()</code>, <code>CognitiveHub.build_two_mice_stage_prompt()</code>, and <code>CognitiveHub.build_deep_thought_context()</code>.</p>
                 </div>
             </div>     </div>
                             </details>
@@ -18356,6 +18404,9 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
                     <p>Deprecates the catch-all <code>CASUAL</code> vibe in favor of an expressive cognitive taxonomy (<code>SOCRATIC</code>, <code>FORENSIC</code>, <code>CHRONICLE</code>, <code>RETROSPECTIVE</code>, <code>ARCHITECTURAL</code>, <code>TACTICAL</code>, <code>STRATEGIC</code>, <code>PROVOCATIVE</code>, <code>METABOLIC</code>). Injects gentle <code>semantic_hint</code> vector priors from sub-15ms FastEmbed ChromaDB probes (<code>BKM-015</code>) and calibrates the speculative relay to ensure REST-probed M5 Air is granted its full dynamic EWMA lead window before local vLLM fallback racing.</p>
+<blockquote>
+<p>[!NOTE] REVIVED AS DESCRIPTIVE VIBE (Sprint 104 / FEAT-657): The categorical deprecation of <code>CASUAL</code> was superseded in Sprint 104. Because Sprint 104 completely abolished the execution bypass (<code>vibe == "CASUAL"</code>) in favor of a 100% unified Council waterfall modulated by continuous <code>interest</code> and <code>target_domains: []</code>, <code>CASUAL</code> has been safely re-enabled in <code>config/triage_policy.json</code> as an authentic descriptive archetype for social pleasantries without risking context blindness.</p>
+</blockquote>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
@@ -18963,40 +19014,450 @@ Emits authoritative <code>daily_accountability_digest.json</code> using atomic t
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Sprint</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Sprint 101</p>
+                    <p>Sprint 102</p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Tags</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p><code>#grounding</code>, <code>#sprint_architecture</code>, <code>#log_horizon</code>, <code>#historical_invariants</code>, <code>[BKM-082]</code>, <code>[BKM-020]</code>, <code>[BKM-006]</code>, <code>[BKM-005]</code>, <code>[BKM-048]</code>, <code>[INS-047]</code></p>
+                    <p><code>#vibe</code>, <code>#sideband_consensus</code>, <code>#two_mice</code>, <code>#narrative_steering</code>, <code>#curator_notes</code>, <code>[FEAT-635](#FEAT-635)</code>, <code>[FEAT-523](#FEAT-523)</code>, <code>[BKM-077]</code></p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Code</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <ul>
-<li><code>HomeLabAI/docs/Protocols.md</code> — Authoritative codification of <code>BKM-082</code>, mandating 5-sprint lookbacks, full log horizon inspection, anti-removal invariants, pre-flight mistake ledgers, and grounding gap audits across <code>BKM-005</code>, <code>BKM-006</code>, <code>BKM-020</code>, and <code>BKM-048</code>.</li>
-<li><code>Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_101_0.md</code> — Canonical exemplar sprint plan executing full pre-flight grounding, 02:00 AM log horizon diagnosis, and mistakes-avoided ledger.</li>
-</ul>
+                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/nodes/brain_node.py</code>, <code>HomeLabAI/src/tests/test_two_mice_handover.py</code>, <code>HomeLabAI/src/tests/test_brain_voice_replay.py</code></p>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Logic</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
                     <ol>
-<li><strong>The Short Horizon Trap:</strong> Under tight resources, overnight compute cascades (LoRA training, VRAM reallocation, daemon re-ignition), and distributed multi-tier orchestration, evaluating system state based only on the trailing 15 minutes of logs causes severe diagnostic blindness, circular fixes, and accidental deletion of hard-won hardware sentinels.</li>
-<li><strong>Mandatory 5-Sprint Lookback:</strong> Before proposing or modifying sprint plans or executing code changes, agents must review the preceding 5 sprint plans and logs to internalize historical failure modes and design constraints.</li>
-<li><strong>Anti-Removal Invariant:</strong> Hardware laws (e.g. 5.0s thermal pacing in <code>FEAT-160</code>, host memory gates in <code>LAB-110</code>, single-home runtime data in <code>FEAT-637</code>) must never be bypassed or deleted to solve time pressure; workloads must be proportionally calibrated instead.</li>
-<li><strong>Pre-Flight Mistakes Avoided Ledger:</strong> Every sprint specification must document concrete mistakes that would have occurred without deep historical grounding.</li>
-<li><strong>Grounding Gap Declaration:</strong> Any actionable item that cannot be anchored in past history or DNA must be declared as a gap and clarified with the operator before modifying code.</li>
+<li><strong>Dynamic Consensus over Static Categorization:</strong> Interest and context filtering are not rigid high/medium/low buckets. Pinky personifies speculative hypothesis generation (HyDE), while Brain personifies interest consensus and epistemic steering.</li>
+<li><strong>Sideband Curator Rationale:</strong> Brain audits candidate chunks from Pinky's retrieval, prunes tangential noise, and appends <code>💡 Curator Note: [ID] connects with [ID]</code> annotations.</li>
+<li><strong>No-Stall Distillation Funnel:</strong> Brain's steering guides the conversational narrative toward technical reality without stalling the pipeline or downvoting the turn.</li>
 </ol>
                 </div>
             </div>
             <div style="margin-bottom: 6px;">
                 <span class="field-label">Rationale</span>
                 <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
-                    <p>Transforms historical documentation from passive archives into active, mandatory JITC guardrails, immunizing autonomous agents against circular traps and architectural amnesia.</p>
+                    <p>Unifies conversational charm with rigorous technical ground truth, enabling emergent multi-agent dialogue that never loses grounding.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-645">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-645</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Multi-Stage Replay Pipeline Harness & Contract Assertion
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>SPR-103.0</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#architecture</code>, <code>#decoupling</code>, <code>#unit_testing</code>, <code>#stage_isolation</code>, <code>[FEAT-645](#FEAT-645)</code>, <code>[BKM-024]</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/docs/Protocols.md</code>, <code>HomeLabAI/src/logic/cognitive_hub.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <ol>
+<li><strong>Discrete Stage Methods:</strong> Multi-stage cognitive pipelines must be authored as discrete, callable <code>step_*</code> methods on <code>CognitiveHub</code>:</li>
+<li><code>step_pre_triage(query)</code>: Sub-20ms vector probe emitting continuous <code>semantic_affinity</code>.</li>
+<li><code>step_triage(query, pre_triage)</code>: Speculative triage relay emitting decoupled intent and target domains.</li>
+<li><code>step_hyde_rag(query, triage)</code>: HyDE synthesis with <code>search_required: bool</code> and unified ChromaDB retrieval.</li>
+<li>Macro Stage 3 Deliberation Micro-Stages:<ul>
+<li><code>step_brain_gatekeeper(query, rag_context, interest)</code>: Stage 3.1 Gatekeeper forwarding cohesive bedrock RAG + Curator Notes.</li>
+<li><code>step_deep_thought(query, brain_bullets, interest)</code>: Stage 3.2 Deep Thought strategic synthesis with <code>FEAT-523</code> pacing.</li>
+<li><code>step_pinky_voice(query, synthesis, interest)</code>: Stage 3.3 Pinky voice TL;DR, TTS delivery, and consensus telemetry.</li>
+<li><code>step_grounding_critic(query, ...)</code>: Stage 3.4 Pinky Grounding Critic 4-key scorecard audit against evidence.</li>
+</ul>
+</li>
+<li><strong>Zero Execution Divergence:</strong> The live <code>process_turn()</code> loop in production must call <code>step_*</code> methods sequentially without duplicate code paths or architectural divergence.</li>
+<li><strong>Offline Unit Testability:</strong> Pytest test suites must test individual <code>step_*</code> methods independently using frozen stage fixtures, enabling sub-second prompt and logic iteration without full-turn overhead.</li>
+<li><strong>Continuous Parameter Passing:</strong> Stage methods pass continuous parameters (<code>interest: float</code>, <code>semantic_affinity: float</code>, <code>search_required: bool</code>) rather than relying on mutable shared object state or binary clamps.</li>
+</ol>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates the "Monolithic Debug Trap" where diagnosing an upstream stage failure requires running 30-second multi-node websocket sessions.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-657">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-657</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Unified Council of Hemispheres (Zero-Bifurcation Pipeline)
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>SPR-104.0</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#unified_council</code>, <code>#continuous_interest</code>, <code>#bkm_015</code>, <code>#zero_bifurcation</code>, <code>[FEAT-233](#FEAT-233)</code>, <code>[FEAT-234](#FEAT-234)</code>, <code>[FEAT-523](#FEAT-523)</code>, <code>[FEAT-645](#FEAT-645)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/tests/test_multi_stage_replay_pipeline.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Unifies 100% of cognitive hub turns into a single sequential Council flow (Triage -&gt; Pinky Opening Voice &amp; Search Terms -&gt; Domain-Gated ChromaDB RAG -&gt; Brain Gatekeeper -&gt; Deep Thought -&gt; Pinky Spoken Verdict). Excises <code>lead_node == "both"</code> and eliminates the categorical <code>vibe == "CASUAL"</code> execution bypass. Modulates token budget and node dormancy purely via continuous scalar interest (<code>FEAT-523</code>) with prompt-driven pacing (<code>BKM-015</code>).</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eradicates the "Island of Green Illusion" and "Aurora Miss" where casual vibe bypassed RAG and severed Deep Thought.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-658">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-658</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Pure Waterfall Execution & Total Abolition of lead_node
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>SPR-104.0 (Phase 4)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#pure_waterfall</code>, <code>#abolish_lead_node</code>, <code>#single_interest_loop</code>, <code>[FEAT-233](#FEAT-233)</code>, <code>[FEAT-234](#FEAT-234)</code>, <code>[FEAT-418](#FEAT-418)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Completely excises the <code>lead_node</code> router block (lines 1890-2055) and the legacy July 2026 bifurcated branches (<code>elif lead_node == "both"</code> and <code>else: # pinky leads</code>). Treats <code>addressed_to</code> strictly as conversational metadata for persona guidance, never an execution switch. Every turn enters the staged handover Waterfall directly; execution cascades down the stack (Pinky HyDE -&gt; RAG -&gt; Brain Gatekeeper -&gt; Deep Thought -&gt; Pinky Critic) and naturally peters out based on continuous fluid fuel (interest).</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates the architectural flaw where addressing a turn to Pinky stranded the query in an isolated, amnesic loop that completely bypassed the Council of Hemispheres and Deep Thought.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-659">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-659</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Multi-Domain Evidential Resonance & Fluid DNA Scope Resolution
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>SPR-104.0 (Phase 5)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#multi_domain</code>, <code>#evidential_resonance</code>, <code>#positive_fuel</code>, <code>#dna_resolution</code>, <code>#clara_parity</code>, <code>[FEAT-540](#FEAT-540)</code>, <code>[FEAT-636](#FEAT-636)</code>, <code>[FEAT-658](#FEAT-658)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/src/logic/cognitive_hub.py</code>, <code>HomeLabAI/src/logic/traversal_dispatcher.py</code>, <code>HomeLabAI/src/nodes/archive_node.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Implements <strong>Domain Density Resonance</strong>: user turns begin at resting baseline interest (<code>current_interest = 0.05</code>), and each recognized factual domain hit (<code>target_domains</code>) injects continuous evidential fuel into <code>current_interest</code> (+0.20 for single domains, compounding for multi-domain cross-cutting inquiries). Queries with 0 domain hits remain at resting interest fuel, naturally petering out after Pinky's greeting without requiring negative abort clamps. Resolves semantic domain tokens (<code>bkm</code>, <code>feat</code>, <code>sprint</code>, <code>wisdom</code>, <code>infra</code>, <code>career</code>) into concrete ChromaDB collections while preserving Sprint 61/64 vibe-to-collection priority rankings (<code>HISTORICAL</code>, <code>TECHNICAL</code>, <code>META</code>) to achieve full conversational and grounding parity with AGY Clara hooks.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates negative filtering gates in favor of continuous interest fuel injection, while bridging the node boundary disconnect between Triage domain intent and Archive Node multi-collection retrieval.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-660">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-660</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Universal Bicameral Context Fencing (Anti-Unrolling Invariant)
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 105.0 (Phase 4)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#context_fencing</code>, <code>#anti_unrolling</code>, <code>#bicameral_invariants</code>, <code>#primer_protocol</code>, <code>[BKM-087]</code>, <code>[FEAT-658](#FEAT-658)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>HomeLabAI/src/nodes/loader.py</code>, <code>HomeLabAI/src/nodes/pinky_node.py</code>, <code>HomeLabAI/src/nodes/brain_node.py</code>, <code>HomeLabAI/src/nodes/thought_node.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Establishes a single authoritative constant <code>UNIVERSAL_CONTEXT_FENCE</code> in <code>nodes/loader.py</code>:
+<code>"CONTEXT FENCING: Stay relevant to the primer and the actors before you. Limit topics you talk about to topics in the conversation. Do not inject unprompted background history or meta-explanations of your persona."</code>
+Applied unconditionally to all resident node personas (Pinky, Brain, Deep Thought).</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates the negative-priming anti-pattern where prompts unrolled forbidden lists of domain keywords ("laboratory telemetry, silicon specs, or technical history"), which paradoxically prompted smaller instruction-tuned models to fixate on and recite those exact concepts. Providing a concise positive boundary ("stay relevant to the primer and the actors before you") prevents self-referential identity monologues.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-662">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-662</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    The Kabal: Emergent Ingestion Clusters & Manuscript Working Groups
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 106.0 (Phase 5)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#kabal</code>, <code>#emergent_affinity</code>, <code>#ingestion_cluster</code>, <code>#paper_writing</code>, <code>[VIBE-016]</code>, <code>[FEAT-614](#FEAT-614)</code>, <code>[BKM-060]</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>Portfolio_Dev/dna/vibe_data.json</code>, <code>Portfolio_Dev/field_notes/writer.html</code>, <code>Portfolio_Dev/field_notes/nibble_v2.py</code>, <code>Portfolio_Dev/field_notes/scan_queue.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Establishes <strong>The Kabal</strong> as an explicit architectural primitive representing an emergent middle tier between atomic DNA cards/gems and formal named collections or manuscripts.
+1. <strong>Ingestion Kabal (<code>import</code>)</strong>: Batches of co-occurring ideas or parsed note chunks that share temporal or technical affinity are tagged with an ephemeral or named <code>kabal_id</code>. Prevents newly ingested DNA from floating as disconnected unbaptized islands before formal taxonomy is established.
+2. <strong>Paper Kabal (<code>writer</code>)</strong>: Acts as a working caucus inside Applied Writer (<code>writer.html</code>). Groups paragraphs, citations, and causal operational errata (<code>focal_ledger.json</code>) conspiring together to defend a specific manuscript thesis or section objective.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Solves the semantic missing-link problem: ideas do not jump directly from raw unstructured logs into finished papers. The Kabal provides an intermediate grouping construct that preserves natural affinity during ingestion and gives active agency to co-conspiring ideas during synthesis.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-663">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-663</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Spine Version Tagging & Deterministic Snapshot Projections
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 106.0 (Phase 5)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#spine_tagging</code>, <code>#snapshot_projections</code>, <code>#deterministic_replay</code>, <code>[INS-041]</code>, <code>[BKM-073]</code>, <code>[FEAT-662](#FEAT-662)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>Portfolio_Dev/papers/*_spine.json</code>, <code>Portfolio_Dev/field_notes/replay_paper.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Adds explicit snapshot version tags (<code>@v1_master</code>, <code>@v2_recruiter</code>, <code>@executive_2page</code>) directly into the paper's Spine manifest. Decouples the live, evolving manuscript canvas from frozen published snapshots. Allows the Replay Engine to deterministically reconstruct exact historical documents word-for-word from their Kabal node coordinates.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates the risk of modifying a master document and inadvertently breaking the exact wording or citation sequence of a previously submitted/published artifact.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-664">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-664</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Multi-Corpus Knowledge Ingestion in Applied Writer (DNA & Gems in Manuscripts)
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 106.0 (Phase 5)</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#multi_corpus</code>, <code>#wisdom_integration</code>, <code>#gem_citations</code>, <code>#drawer_search</code>, <code>[VIBE-017]</code>, <code>[FEAT-614](#FEAT-614)</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>Portfolio_Dev/field_notes/writer.html</code>, <code>Portfolio_Dev/field_notes/js/writer.js</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Enhances the Applied Writer review drawer with cross-corpus search and drag-and-drop citation chips spanning Wisdom (<code>WIS-xxx</code>), Features (<code>FEAT-xxx</code>), Philosophy (<code>PHL-xxx</code>), and Gems (<code>focal_ledger.json</code> / <code>latest_synthesis_gems.json</code>). Employs a silent on-demand HyDE retrieval lens in the drawer rather than an intrusive conversational bot, preserving authorial sovereignty.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Unifies diverse lab knowledge corpuses into the manuscript authoring canvas without falling into the "Clippy" conversational chat-trap.</p>
+                </div>
+            </div>     </div>
+                            </details>
+                        </td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <span class="impact-badge impact-live">ACTIVE</span>
+                        </td>
+                    </tr>
+                    <tr id="FEAT-665">
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">FEAT-665</td>
+                        <td style="vertical-align: top; padding: 4px 8px; border-bottom: 1px solid var(--border-color);">
+                            <details class="feature-details">
+                                <summary>
+                                    Active Kabal Staging & Epistemic Bone Retirement
+                                </summary>
+                                <div style="margin-top: 6px; border-left: 2px solid var(--accent-dim); padding-left: 12px; padding-top: 2px; padding-bottom: 2px;">
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Sprint</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Sprint 107.0</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Tags</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>#kabal_staging</code>, <code>#bone_retirement</code>, <code>#active_staging_shelf</code>, <code>#ast_reconciliation</code>, <code>[FEAT-662](#FEAT-662)</code>, <code>[FEAT-663](#FEAT-663)</code>, <code>[BKM-086]</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Code</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p><code>Portfolio_Dev/dna_forge/</code>, <code>Portfolio_Dev/field_notes/writer.html</code>, <code>Portfolio_Dev/papers/jitc_intuition/</code>, <code>HomeLabAI/src/projection/ast_reconciliation.py</code></p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Logic</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Complete retirement of archaic "Bone Collection" terminology across the entire Federated Lab ecosystem. In DNA Forge and Applied Writer, introduces <code>+ Stage</code> (<code>.btn-card-stage</code>) and the <code>📑 ACTIVE KABAL STAGING</code> floating shelf (<code>#btnStageToWriter</code>), persisting staged cards across sessions (<code>dna_active_staging_shelf</code>) with seamless forward handoff to Applied Writer via URL parameter (<code>writer.html?staged=ID1,ID2</code>). Migrates legacy standalone bone files (<code>notes_jitc_bones.json</code>, <code>paper_jitc_intuition.json</code>) into canonical atomic bundles in <code>Portfolio_Dev/papers/jitc_intuition/</code> (<code>jitc_intuition_kabal.json</code> and <code>jitc_intuition_spine.json</code>), verified via deterministic replay. Archives legacy <code>field_notes/data/bones/</code>, deprecates <code>bone_collections.json</code>, and re-anchors <code>HomeLabAI/src/projection/bones.py</code> to <code>ast_reconciliation.py</code> with 100% backward-compatible alias deprecation wrappers.</p>
+                </div>
+            </div>
+            <div style="margin-bottom: 6px;">
+                <span class="field-label">Rationale</span>
+                <div class="feature-body" style="font-size: 0.8rem; color: var(--text-color); line-height: 1.3; margin-left: 10px; margin-top: 2px;">
+                    <p>Eliminates morbid and ambiguous "bones" terminology that caused developer and UI confusion, aligning all document-staging workflows cleanly around the canonical Kabal and Spine epistemic model established in Sprint 106.0.</p>
                 </div>
             </div>     </div>
                             </details>
