@@ -1,8 +1,23 @@
 {
-  "pending_action": "NONE",
-  "action_level": 0,
-  "timer_expiry_ts": 0,
-  "triggered_at_ts": 1792383105,
-  "last_commit": "cleared",
-  "reasons": []
+  "pending_action": "SOFT_RELOAD",
+  "action_level": 1,
+  "timer_expiry_ts": 1792425225,
+  "triggered_at_ts": 1792423425,
+  "last_commit": "a902d2e",
+  "repo": "Portfolio_Dev",
+  "reasons": [
+    "src/forge/refine_bones.py (Active Module)",
+    "src/projection/__init__.py (Active Module)",
+    "dna_forge/dna_forge_build.py (Portfolio Active Code)",
+    "field_notes/migrate_jitc_paper_to_kabal.py (Portfolio Active Code)",
+    "field_notes/js/dna_forge.js (Portfolio Active Code)",
+    "src/tests/test_projection_engine_unit.py (Active Module)",
+    "src/projection/engine.py (Active Module)",
+    "dna_forge/js/dna_forge.js (Portfolio Active Code)",
+    "src/projection/recommender.py (Active Module)",
+    "field_notes/dna_forge_build.py (Portfolio Active Code)",
+    "scripts/dna_macro_compiler.py (Portfolio Active Code)",
+    "src/projection/bones.py (Active Module)",
+    "src/projection/ast_reconciliation.py (Active Module)"
+  ]
 }
