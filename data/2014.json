@@ -12,54 +12,6 @@
     "id": "GEM-2a70"
   },
   {
-    "date": "2014-01-21",
-    "summary": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
-    "evidence": "Corrected CT item selection in the VISA panel.",
-    "sensitivity": "Public",
-    "tags": [
-      "VISA",
-      "error_code"
-    ],
-    "rank": 4,
-    "id": "GEM-def6"
-  },
-  {
-    "date": "2014-01-21",
-    "summary": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
-    "evidence": "Corrected script generated from CEC register programs.",
-    "sensitivity": "Public",
-    "tags": [
-      "VISA",
-      "error_code"
-    ],
-    "rank": 4,
-    "id": "GEM-40bb"
-  },
-  {
-    "date": "2014-01-21",
-    "summary": "Merged Main Visa with Skylake PO",
-    "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
-    "sensitivity": "Public",
-    "tags": [
-      "VISA",
-      "Skylake"
-    ],
-    "rank": 4,
-    "id": "GEM-29bc"
-  },
-  {
-    "date": "2014-01-24",
-    "summary": "Investigating logging for VISA on multiple dates (1/24/2014)",
-    "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
-    "sensitivity": "Public",
-    "tags": [
-      "logging",
-      "VISA"
-    ],
-    "rank": 4,
-    "id": "GEM-2f1c"
-  },
-  {
     "date": "2014-02-01",
     "summary": "SKL ODLAT enable feature and PEG8 NOA Compression feature relationship unknown",
     "evidence": "RAW LOGS: no direct evidence linking SKL ODLAT enable feature to PEG8 NOA Compression feature",
@@ -132,90 +84,6 @@
     "rank": 4
   },
   {
-    "date": "2014-04-24",
-    "summary": "Exception related to UNSL0_SQIDI_GDTUNIT_0x9840 not found, possibly investigating or debugging ITP Bug [5027277].",
-    "evidence": "RAW LOGS: ...",
-    "sensitivity": "Public",
-    "tags": [
-      "exception",
-      "ITP Bug"
-    ],
-    "rank": 4,
-    "id": "GEM-6c1c"
-  },
-  {
-    "date": "2014-04-28",
-    "summary": "ITP Bug [5027277] reported for a test case involving BDW (Block Data Width) 0x9840 on C1.",
-    "evidence": "RAW LOGS: ...",
-    "sensitivity": "Public",
-    "tags": [
-      "BDW",
-      "ITP Bug"
-    ],
-    "rank": 4,
-    "id": "GEM-3754"
-  },
-  {
-    "date": "2014-04-30",
-    "summary": "Accessing EDRAMBAR registers at addresses 0x6e_0_0_mem_regs, 0x6f_0_0_mem_regs, and 0x71_0_0_mem_regs for debugging or testing purposes.",
-    "evidence": "RAW LOGS: ...",
-    "sensitivity": "Public",
-    "tags": [
-      "debugging",
-      "EDRAMBAR"
-    ],
-    "rank": 4,
-    "id": "GEM-d19e"
-  },
-  {
-    "date": "2014-04-30",
-    "summary": "Encountering error codes EFALWAYS_CR_VISA_CTL_EFALWAYS (0x3210), EFALWAYS_CR_VISA_SLIDE_EFALWAYS (0x3214), and EFALWAYS_CR_VISA_XBAR_EFALWAYS (0x3218) related to VISA control and configuration.",
-    "evidence": "RAW LOGS: ...",
-    "sensitivity": "Public",
-    "tags": [
-      "VISA",
-      "error codes"
-    ],
-    "rank": 4,
-    "id": "GEM-e827"
-  },
-  {
-    "date": "2014-05-15",
-    "summary": "Role of pci module in accessing and modifying PCI configuration space",
-    "evidence": "pci.ShowPciCfg(0x02, 0x16, 0)\n+-----------------------------------------------------+\n|Bus: 02, device: 16, Function: 00                    |\n|##| x0|x1|x2|x3|x4|x5|x6|x7 | x8|x9|xA|xB|xC|xD|xE|xF|\n|-----------------------------------------------------|\n|... (register values) ...\n+-----------------------------------------------------+\n()\n\npci.WritePciCfg(4,6,1)\n()",
-    "sensitivity": "Public",
-    "tags": [
-      "pci module",
-      "PCI configuration space"
-    ],
-    "rank": 4,
-    "id": "GEM-f9ff"
-  },
-  {
-    "date": "2014-05-29",
-    "summary": "Initialization of Northpeak API using broxton_a0_red.xml configuration file",
-    "evidence": "NorthpeakApi* papi= new NorthpeakApi();\n// initialize the northpeak api\npapi->initialize(string(XmlFileDir) + string(\"/broxton_a0_red.xml\"));",
-    "sensitivity": "Public",
-    "tags": [
-      "configuration file",
-      "Northpeak API"
-    ],
-    "rank": 4,
-    "id": "GEM-6edb"
-  },
-  {
-    "date": "2014-05-29",
-    "summary": "Utilization of IpcApiTargetAccess class to access target devices via OpenIPC API",
-    "evidence": "IpcApiTargetAccess myacess(\"IpcApi_x64\",\"OpenIPC\");\nstring foo = myacess.description();",
-    "sensitivity": "Public",
-    "tags": [
-      "OpenIPC API",
-      "IpcApiTargetAccess"
-    ],
-    "rank": 4,
-    "id": "GEM-810a"
-  },
-  {
     "date": "2014-07-29",
     "summary": "TODO: Add PO support for BXT (Broadwell eXtended Thermal)",
     "evidence": "Future: TODO: add PO support for BXT",
@@ -250,52 +118,6 @@
     ],
     "id": "GEM-3c8c",
     "rank": 4
-  },
-  {
-    "date": "2014-10-01",
-    "summary": "TODO: Set up BXT FPGA system with NPK SDK using known working NPK_Raw_Tap_only_bxt_image",
-    "evidence": "TODO entry mentioning setup of BXT FPGA system",
-    "sensitivity": "Public",
-    "tags": [
-      "BXT FPGA",
-      "NPK SDK"
-    ],
-    "rank": 4,
-    "id": "GEM-be04"
-  },
-  {
-    "date": "2014-10-31",
-    "summary": "Resolved NullPointerException by changing connection type to LTB",
-    "evidence": "Log entry on 10/31/2014 mentioning change in connection type resolved NullPointerException",
-    "sensitivity": "Public",
-    "tags": [
-      "LTB",
-      "NullPointerException"
-    ],
-    "rank": 4,
-    "id": "GEM-7e3e"
-  },
-  {
-    "date": "2014-10-31",
-    "summary": "Manually installed IpcApiAccess, ISDBaseWin64, and BXTSupportPkWin64 due to their absence in NPK SDK",
-    "evidence": "Log entry on 10/31/2014 mentioning manual installation of missing tools",
-    "sensitivity": "Public",
-    "tags": [
-      "BXTSupportPkWin64",
-      "IpcApiAccess",
-      "ISDBaseWin64"
-    ],
-    "rank": 4,
-    "id": "GEM-c4a0"
-  },
-  {
-    "date": "2014-11-26",
-    "summary": "npk_cfg64.exe used to configure and stop tracing from FPGA",
-    "evidence": "RAW LOGS: npk_cfg64.exe being used to configure and stop tracing on November 26, 2014.",
-    "sensitivity": "Public",
-    "tags": [],
-    "rank": 4,
-    "id": "GEM-6074"
   },
   {
     "date": "2014-12-01",

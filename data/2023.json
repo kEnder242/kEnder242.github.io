@@ -111,46 +111,6 @@
     "rank": 4
   },
   {
-    "date": "2023-02-20",
-    "summary": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
-    "evidence": "MIV Wiki https://wiki.ith.intel.com/display/PlatformTech/Manageability\nManageability Spec Links - https://intel.sharepoint.com/:o:/r/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
-    "sensitivity": "Public",
-    "tags": [
-      "Manageability specifications",
-      "Intel MIV",
-      "MIV Wiki"
-    ],
-    "rank": 4,
-    "id": "GEM-11e9"
-  },
-  {
-    "date": "2023-02-22",
-    "summary": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
-    "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
-    "sensitivity": "Public",
-    "tags": [
-      "D-Bus",
-      "PECI",
-      "Intel MIV",
-      "MCTP"
-    ],
-    "rank": 4,
-    "id": "GEM-d149"
-  },
-  {
-    "date": "2023-02-25",
-    "summary": "Tools used to test manageability features: Simics, DTAF",
-    "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
-    "sensitivity": "Public",
-    "tags": [
-      "DTAF",
-      "Simics",
-      "Intel MIV"
-    ],
-    "rank": 4,
-    "id": "GEM-a33d"
-  },
-  {
     "date": "2023-02-27",
     "summary": "New test cases implemented, old journal data fixed by scanning in reverse order, and failure action added to abort tests when duplicate EIDs are found.",
     "evidence": "[SOLUTIONS] - Team's actions mentioned in the text.",
@@ -161,42 +121,6 @@
     ],
     "id": "GEM-8f3e",
     "rank": 4
-  },
-  {
-    "date": "2023-04-24",
-    "summary": "Blackbox recorder telemetry software developed to debug RAPL failures",
-    "evidence": "Developed telemetry software 'Blackbox recorder' used to debug RAPL failures...",
-    "sensitivity": "Public",
-    "tags": [
-      "telemetry",
-      "RAPL"
-    ],
-    "rank": 4,
-    "id": "GEM-c26e"
-  },
-  {
-    "date": "2023-04-24",
-    "summary": "Delivered negative BDF and MSR scan with refactored code for future testing",
-    "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
-    "sensitivity": "Public",
-    "tags": [
-      "negative testing",
-      "refactored code"
-    ],
-    "rank": 4,
-    "id": "GEM-48b5"
-  },
-  {
-    "date": "2023-04-24",
-    "summary": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
-    "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
-    "sensitivity": "Public",
-    "tags": [
-      "exit criteria",
-      "Q1"
-    ],
-    "rank": 4,
-    "id": "GEM-66c7"
   },
   {
     "date": "2023-06-27",
@@ -296,43 +220,6 @@
     ],
     "id": "GEM-97c0",
     "rank": 4
-  },
-  {
-    "date": "2023-10-01",
-    "summary": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
-    "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
-    "sensitivity": "Public",
-    "tags": [
-      "TDF architecture",
-      "Python scripts",
-      "kayak framework"
-    ],
-    "rank": 4,
-    "id": "GEM-4c34"
-  },
-  {
-    "date": "2023-10-01",
-    "summary": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
-    "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
-    "sensitivity": "Public",
-    "tags": [
-      "TDF architecture",
-      "MCTP failures"
-    ],
-    "rank": 4,
-    "id": "GEM-5cd4"
-  },
-  {
-    "date": "2023-10-01",
-    "summary": "Running Python scripts using kayak framework to install and test Montana code updates",
-    "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
-    "sensitivity": "Public",
-    "tags": [
-      "Python scripts",
-      "kayak framework"
-    ],
-    "rank": 4,
-    "id": "GEM-a274"
   },
   {
     "date": "2023-11-02",

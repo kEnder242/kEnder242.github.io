@@ -33,4 +33,13 @@ This ledger dynamically tracks, categorizes, and audits active, emerging, and re
 * **Lifecycle State:** `ACTIVE`
 * **Description:** Transforms novel vocal generation turns into permanently indexed RDNA exemplars, converting future $\sim 1.5\text{s}$ dynamic generation turns into $<10\text{ms}$ Tier-1 vector lookups.
 
+### `[LOOP-004]` Multi-Pass Epistemic Refinement & Rotational Connection Loop
+* **Vibe Driver:** `VIBE-009` (Feedback Loops as Complexity Engines) / `VIBE-008` (Living Metabolism & Continuous Pruning)
+* **Governing Protocols:** `BKM-069`, `FEAT-067`, `FEAT-101`, `FEAT-127`, `BKM-085`
+* **Signal Emitter (Source):** Nightly focused connection pass in `dream_cycle.py` acting on candidate gems in active rotation.
+* **Signal Consumer (Actuator / Gate):** Active Gem Rotation Ledger (`refinement_rotation_queue.json`) & Knowledge Graph Linker (`graph_relations.json`).
+* **Operational Horizon:** Multi-night epoch rotation (Gems stay on active rotation until consensus saturation).
+* **Lifecycle State:** `ACTIVE`
+* **Description:** Eliminates the monolithic single-pass refinement trap by decomposing consolidation into iterative, focused connection passes. Unrefined gems remain on rotation across nightly cycles; each pass increments refinement level, evaluates cross-references, updates topological edge density, and gates promotion into Level 3 (quiescent saturation) based on loop consensus.
+
 ---

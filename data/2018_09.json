@@ -18,8 +18,8 @@
     "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
     "sensitivity": "Public",
     "tags": [
-      "FIO",
-      "stressapptest"
+      "stressapptest",
+      "FIO"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
     "sensitivity": "Public",
     "tags": [
+      "Purley 4S",
       "CScripts",
-      "Purley 2S",
-      "Purley 4S"
+      "Purley 2S"
     ],
     "rank": 4
   },
@@ -52,8 +52,8 @@
     "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
     "sensitivity": "Public",
     "tags": [
-      "grub2-mkconfig",
-      "configuration"
+      "configuration",
+      "grub2-mkconfig"
     ],
     "rank": 4
   },

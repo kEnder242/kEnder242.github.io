@@ -1,0 +1,125 @@
+[
+  {
+    "date": "2021-07-27",
+    "summary": "ipmitool -I lanplus -H 10.219.165.176 -U debuguser -P 0openBmc1 -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 0x70 0x05 0x05 0xA1 0x00 0x00 0x00 0x00",
+    "evidence": "ipmitool -I lanplus -H 10.219.165.176 -U debuguse",
+    "domain": "vendor_comm",
+    "tags": [
+      "ipmitool"
+    ],
+    "document_date": "2021-07-27",
+    "event_era": "2021-07-27",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-07-28",
+    "summary": "pysv_checkout -l bigcore",
+    "evidence": "pysv_checkout -l bigcore",
+    "domain": "lab_operations",
+    "tags": [
+      "pysv_checkout"
+    ],
+    "document_date": "2021-07-28",
+    "event_era": "2021-07-28",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-07-29",
+    "summary": "phoenix TC WIP - will keep open for Kalpanas Beta plan",
+    "evidence": "phoenix TC WIP - will keep open for Kalpanas Beta plan",
+    "domain": "career_timeline",
+    "tags": [
+      "Kalpanas Beta"
+    ],
+    "document_date": "2021-07-29",
+    "event_era": "2021-07-29",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "Core wake on PECI - Test that PECI MSR reads can wake sleeping cores",
+    "evidence": "~Core wake on PECI - Test that PECI MSR reads can wake sleeping cores",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "MSR"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "PCS TMC IB Lock out - Test the PECI Platform Configuration Space Thermal Monitoring Control mailbox lock out bit",
+    "evidence": "~PCS TMC IB Lock out - Test the PECI Platform Configuration Space Thermal Monitoring Control mailbox lock out bit",
+    "domain": "hardware_debug",
+    "tags": [
+      "TMC",
+      "IB Lock"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "Verify MCTP discovery through BMC PCIeDevices",
+    "evidence": "~Verify MCTP discovery through BMC PCIeDevices",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "BMC"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  }
+]

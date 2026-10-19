@@ -403,6 +403,11 @@
             else if (currentFilter === 'rdna') matchesFilter = (domain === 'rdna');
             else if (currentFilter === 'sprint') matchesFilter = (domain === 'sprint');
             else if (currentFilter === 'gems') matchesFilter = (domain === 'gems');
+            else if (currentFilter === 'kabals') {
+                var kslug = (card.dataset.kabalSlug || '').toLowerCase();
+                var activeKabal = (window.__activeKabalFilter || 'all').toLowerCase();
+                matchesFilter = (domain === 'kabals' || domain === 'kabal') && (activeKabal === 'all' || kslug === activeKabal);
+            }
 
             var matchesSearch = true;
             if (q) {
@@ -487,6 +492,32 @@
 
         var insDomain = document.getElementById('insCardDomain');
         if (insDomain) { insDomain.textContent = domain; insDomain.style.border = '1px solid ' + color; insDomain.style.color = color; }
+
+        var meta = card.metadata || {};
+        var refLvl = card.refinement_level !== undefined ? card.refinement_level : (meta.refinement_level !== undefined ? meta.refinement_level : null);
+        var impLvl = card.impact_level !== undefined ? card.impact_level : (meta.impact_level !== undefined ? meta.impact_level : null);
+        var insEpistemicSec = document.getElementById('insEpistemicSection');
+        if (!insEpistemicSec && insDomain && insDomain.parentNode) {
+            insEpistemicSec = document.createElement('div');
+            insEpistemicSec.id = 'insEpistemicSection';
+            insEpistemicSec.style.margin = '4px 0 8px 0';
+            insDomain.parentNode.appendChild(insEpistemicSec);
+        }
+        if (insEpistemicSec) {
+            if (refLvl !== null || impLvl !== null) {
+                var rVal = parseInt(refLvl || 0);
+                var iVal = parseInt(impLvl || 1);
+                var rLabels = {0: "L0: RAW", 1: "L1: CANDIDATE", 2: "L2: CONNECTED", 3: "L3: SATURATED"};
+                var rColors = {0: "#8b949e", 1: "#58a6ff", 2: "#bc8cff", 3: "#3fb950"};
+                var iLabels = {1: "Impact 1 (Leaf)", 2: "Impact 2 (Branch)", 3: "Impact 3 (Cross-Platform)", 4: "Impact 4 (Trunk)"};
+                var iColors = {1: "#7d8590", 2: "#388bfd", 3: "#d29922", 4: "#f0883e"};
+                insEpistemicSec.innerHTML = '<span style="border:1px solid ' + (rColors[rVal]||'#8b949e') + '; color:' + (rColors[rVal]||'#8b949e') + '; font-size:0.7rem; font-weight:bold; padding:2px 6px; border-radius:3px; margin-right:6px;">' + (rLabels[rVal]||'L'+rVal) + '</span>' +
+                                            '<span style="border:1px solid ' + (iColors[iVal]||'#7d8590') + '; color:' + (iColors[iVal]||'#7d8590') + '; font-size:0.7rem; font-weight:bold; padding:2px 6px; border-radius:3px;">' + (iLabels[iVal]||'Imp '+iVal) + '</span>';
+                insEpistemicSec.style.display = 'block';
+            } else {
+                insEpistemicSec.style.display = 'none';
+            }
+        }
 
         var insTitle = document.getElementById('insCardTitle');
         if (insTitle) insTitle.textContent = card.title || (card.synthesis && card.synthesis.title) || cid;
@@ -633,14 +664,29 @@
             applyFilterAndSearch();
         });
 
+        var kabalDropdown = document.getElementById('kabalSelectorDropdown');
         document.querySelectorAll('.census-domain-pill').forEach(function(pill) {
             pill.addEventListener('click', function() {
                 document.querySelectorAll('.census-domain-pill').forEach(function(p){ p.classList.remove('active'); });
                 this.classList.add('active');
                 currentFilter = this.dataset.filter;
+                if (kabalDropdown) {
+                    if (currentFilter === 'kabals') {
+                        kabalDropdown.style.display = 'inline-block';
+                    } else {
+                        kabalDropdown.style.display = 'none';
+                    }
+                }
                 applyFilterAndSearch();
             });
         });
+
+        if (kabalDropdown) {
+            kabalDropdown.addEventListener('change', function() {
+                window.__activeKabalFilter = this.value;
+                applyFilterAndSearch();
+            });
+        }
 
         document.querySelectorAll('.btn-card-rack').forEach(function(btn) {
             btn.addEventListener('click', function(e) {

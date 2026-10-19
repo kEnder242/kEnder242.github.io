@@ -1,0 +1,768 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-18T14:19:22Z",
+  "epoch": 106,
+  "queue": [
+    {
+      "gem_id": "2024_07.json::0",
+      "file_path": "2024_07.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 1,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 106,
+      "priority": 19.02,
+      "anchors": [
+        "Redfish",
+        "API",
+        "authentication"
+      ]
+    },
+    {
+      "gem_id": "2024_07.json::2",
+      "file_path": "2024_07.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 1,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 106,
+      "priority": 19.02,
+      "anchors": [
+        "system architecture",
+        "MCTP",
+        "PECI"
+      ]
+    },
+    {
+      "gem_id": "2024_03.json::0",
+      "file_path": "2024_03.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 1,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 106,
+      "priority": 19.02,
+      "anchors": [
+        "Intel BMC",
+        "Simics test environment",
+        "busctl tree"
+      ]
+    },
+    {
+      "gem_id": "GEM-e96d",
+      "file_path": "2024.json",
+      "index": 11,
+      "refinement_level": 0,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 19.02,
+      "anchors": [
+        "PECI",
+        "MCTP"
+      ]
+    },
+    {
+      "gem_id": "2024_07.json::1",
+      "file_path": "2024_07.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 1,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 106,
+      "priority": 14.265,
+      "anchors": [
+        "PECI",
+        "peci_cmds"
+      ]
+    },
+    {
+      "gem_id": "2024_03.json::1",
+      "file_path": "2024_03.json",
+      "index": 1,
+      "refinement_level": 0,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 14.265,
+      "anchors": [
+        "PECI commands",
+        "peci_cmds"
+      ]
+    },
+    {
+      "gem_id": "2024_06.json::2",
+      "file_path": "2024_06.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "Python",
+        "PECI"
+      ]
+    },
+    {
+      "gem_id": "2024_04.json::2",
+      "file_path": "2024_04.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "MCTP",
+        "BMC"
+      ]
+    },
+    {
+      "gem_id": "GEM-ea62",
+      "file_path": "2024.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "strategy",
+        "anchor"
+      ]
+    },
+    {
+      "gem_id": "GEM-ce48",
+      "file_path": "2024.json",
+      "index": 3,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "MCTP",
+        "BMC"
+      ]
+    },
+    {
+      "gem_id": "GEM-75a5",
+      "file_path": "2024.json",
+      "index": 14,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "Python",
+        "PECI"
+      ]
+    },
+    {
+      "gem_id": "2023_10.json::0",
+      "file_path": "2023_10.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "kayak framework",
+        "Python scripts",
+        "TDF architecture"
+      ]
+    },
+    {
+      "gem_id": "GEM-b0ac",
+      "file_path": "2023.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "strategy",
+        "anchor"
+      ]
+    },
+    {
+      "gem_id": "GEM-6f4c",
+      "file_path": "2023.json",
+      "index": 3,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "ipmitool",
+        "PCS",
+        "RedfishAPI"
+      ]
+    },
+    {
+      "gem_id": "GEM-3473",
+      "file_path": "2023.json",
+      "index": 6,
+      "refinement_level": 1,
+      "impact_level": 4,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 12.68,
+      "anchors": [
+        "MCTP",
+        "busctl",
+        "PCI"
+      ]
+    },
+    {
+      "gem_id": "2024_08.json::2",
+      "file_path": "2024_08.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "BIOS",
+        "error"
+      ]
+    },
+    {
+      "gem_id": "2024_06.json::0",
+      "file_path": "2024_06.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "MTM",
+        "IPMI"
+      ]
+    },
+    {
+      "gem_id": "2024_04.json::0",
+      "file_path": "2024_04.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "Research",
+        "TODO"
+      ]
+    },
+    {
+      "gem_id": "2024_02.json::0",
+      "file_path": "2024_02.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "MCTP",
+        "busctl",
+        "i2cdetect",
+        "i2cget"
+      ]
+    },
+    {
+      "gem_id": "GEM-70a6",
+      "file_path": "2024.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "Research",
+        "TODO"
+      ]
+    },
+    {
+      "gem_id": "GEM-a8d4",
+      "file_path": "2024.json",
+      "index": 4,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "i2cdetect",
+        "busctl",
+        "MCTP",
+        "i2cget"
+      ]
+    },
+    {
+      "gem_id": "GEM-9be0",
+      "file_path": "2024.json",
+      "index": 5,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "RDEndpointConfig",
+        "peci_cmds"
+      ]
+    },
+    {
+      "gem_id": "GEM-6dd5",
+      "file_path": "2024.json",
+      "index": 6,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "error",
+        "peci_cmds"
+      ]
+    },
+    {
+      "gem_id": "GEM-b6aa",
+      "file_path": "2024.json",
+      "index": 7,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "remote_desktop",
+        "authentication_error"
+      ]
+    },
+    {
+      "gem_id": "GEM-721f",
+      "file_path": "2024.json",
+      "index": 12,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "MTM",
+        "IPMI"
+      ]
+    },
+    {
+      "gem_id": "GEM-c240",
+      "file_path": "2024.json",
+      "index": 17,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "error",
+        "BIOS"
+      ]
+    },
+    {
+      "gem_id": "2023_04.json::0",
+      "file_path": "2023_04.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "telemetry",
+        "RAPL"
+      ]
+    },
+    {
+      "gem_id": "2023_04.json::1",
+      "file_path": "2023_04.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "negative testing",
+        "refactored code"
+      ]
+    },
+    {
+      "gem_id": "2023_01.json::0",
+      "file_path": "2023_01.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "feature_issue",
+        "code_modification",
+        "power_limit_accuracy"
+      ]
+    },
+    {
+      "gem_id": "GEM-fcfa",
+      "file_path": "2023.json",
+      "index": 5,
+      "refinement_level": 1,
+      "impact_level": 3,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 9.51,
+      "anchors": [
+        "return codes",
+        "PECI"
+      ]
+    },
+    {
+      "gem_id": "2025.json::0",
+      "file_path": "2025.json",
+      "index": 0,
+      "refinement_level": 0,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 4.755,
+      "anchors": [
+        "AI",
+        "Gemini"
+      ]
+    },
+    {
+      "gem_id": "2024_03.json::2",
+      "file_path": "2024_03.json",
+      "index": 2,
+      "refinement_level": 0,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 4.755,
+      "anchors": [
+        "Intel appstore",
+        "research link"
+      ]
+    },
+    {
+      "gem_id": "GEM-fca5",
+      "file_path": "2024.json",
+      "index": 8,
+      "refinement_level": 0,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 4.755,
+      "anchors": [
+        "Kayak",
+        "Montana"
+      ]
+    },
+    {
+      "gem_id": "GEM-7994",
+      "file_path": "2024.json",
+      "index": 9,
+      "refinement_level": 0,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 4.755,
+      "anchors": [
+        "DMR"
+      ]
+    },
+    {
+      "gem_id": "GEM-394f",
+      "file_path": "2024.json",
+      "index": 10,
+      "refinement_level": 0,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 4.755,
+      "anchors": [
+        "CWF",
+        "DMR"
+      ]
+    },
+    {
+      "gem_id": "2024_08.json::0",
+      "file_path": "2024_08.json",
+      "index": 0,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "management",
+        "inventory"
+      ]
+    },
+    {
+      "gem_id": "2024_08.json::1",
+      "file_path": "2024_08.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "Oakstream",
+        "simulation"
+      ]
+    },
+    {
+      "gem_id": "2024_06.json::1",
+      "file_path": "2024_06.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "Intel",
+        "TPMI"
+      ]
+    },
+    {
+      "gem_id": "2024_04.json::1",
+      "file_path": "2024_04.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "Endpoints",
+        "Configuration"
+      ]
+    },
+    {
+      "gem_id": "GEM-3582",
+      "file_path": "2024.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "Endpoints",
+        "Configuration"
+      ]
+    },
+    {
+      "gem_id": "GEM-c9bc",
+      "file_path": "2024.json",
+      "index": 13,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "TPMI",
+        "Intel"
+      ]
+    },
+    {
+      "gem_id": "GEM-4e2e",
+      "file_path": "2024.json",
+      "index": 15,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "management",
+        "inventory"
+      ]
+    },
+    {
+      "gem_id": "GEM-e26d",
+      "file_path": "2024.json",
+      "index": 16,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "Oakstream",
+        "simulation"
+      ]
+    },
+    {
+      "gem_id": "GEM-737a",
+      "file_path": "2024.json",
+      "index": 18,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "prometheus",
+        "rapl"
+      ]
+    },
+    {
+      "gem_id": "2023_10.json::1",
+      "file_path": "2023_10.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "MCTP failures",
+        "TDF architecture"
+      ]
+    },
+    {
+      "gem_id": "2023_10.json::2",
+      "file_path": "2023_10.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "kayak framework",
+        "Python scripts"
+      ]
+    },
+    {
+      "gem_id": "2023_04.json::2",
+      "file_path": "2023_04.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "exit criteria",
+        "Q1"
+      ]
+    },
+    {
+      "gem_id": "GEM-307b",
+      "file_path": "2023.json",
+      "index": 1,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "NM S",
+        "PSU",
+        "MUX"
+      ]
+    },
+    {
+      "gem_id": "GEM-fe99",
+      "file_path": "2023.json",
+      "index": 2,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "ARTIFACT",
+        "EraRegistry"
+      ]
+    },
+    {
+      "gem_id": "GEM-7572",
+      "file_path": "2023.json",
+      "index": 4,
+      "refinement_level": 1,
+      "impact_level": 1,
+      "passes": 0,
+      "consecutive_zero_deltas": 0,
+      "last_touch_epoch": 105,
+      "priority": 3.17,
+      "anchors": [
+        "bus owners",
+        "EIDs"
+      ]
+    }
+  ]
+}

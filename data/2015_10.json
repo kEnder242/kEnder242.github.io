@@ -5,9 +5,9 @@
     "evidence": "RAW LOGS: Set up hosts & Targets for PVT validation testing",
     "sensitivity": "Public",
     "tags": [
-      "testing",
       "PVT",
-      "validation"
+      "validation",
+      "testing"
     ],
     "rank": 4
   },
@@ -39,8 +39,8 @@
     "evidence": "Missing metadata file PMC_NPK_sample_decoder.xml caused internal error during session tde_boot.",
     "sensitivity": "Public",
     "tags": [
-      "metadata file",
-      "internal error"
+      "internal error",
+      "metadata file"
     ],
     "rank": 4
   },

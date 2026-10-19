@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-18",
+  "focal_gems": [
+    {
+      "id": "FOCAL-2019-001",
+      "date": "2019-08-15",
+      "event_era": "2019-Q3",
+      "event_year": 2019,
+      "document_date": "2019-08-15",
+      "summary": "Transitioned to Manageability Test Content Lead; architected 100+ automated Python validation test suites for IPMI, Redfish, PECI, and MCTP",
+      "evidence": "Ice Lake (ICX) manageability bring-up: automated PECI 1.3 platform configuration reads, MSR telemetry, and MCTP PCIe discovery over BMC.",
+      "domain": "career_timeline",
+      "impact_level": 4,
+      "refinement_level": 3,
+      "status": "SATURATED",
+      "tags": ["peci", "icx", "redfish", "mctp", "manageability", "python"]
+    },
+    {
+      "id": "FOCAL-2019-002",
+      "date": "2019-10-22",
+      "event_era": "2019-Q4",
+      "event_year": 2019,
+      "document_date": "2019-10-22",
+      "summary": "Ice Lake Server (ICX) PECI 1.3 Core Wake & Platform Config Locking validation in SIMICS S3E/SSM virtual platforms",
+      "evidence": "Executed production-grade manageability test content on pre-silicon SIMICS virtual platforms; triaged PCS TMC IB lockout and PECI MSR core wake.",
+      "domain": "hardware_debug",
+      "impact_level": 4,
+      "refinement_level": 3,
+      "status": "SATURATED",
+      "tags": ["simics", "s3e", "peci", "msr", "pre-silicon"]
+    },
+    {
+      "id": "FOCAL-2018-001",
+      "date": "2018-06-12",
+      "event_era": "2018-Q2",
+      "event_year": 2018,
+      "document_date": "2018-06-12",
+      "summary": "Intel Federal Datacenter PAE: 100-node Mellanox cluster debug and Optane AEP persistent memory platform bring-up",
+      "evidence": "Triaged BIOS microcode regressions, thermal transient spikes via IPMI raw commands, and high-frequency mailbox timeouts on Aurora architecture testbeds.",
+      "domain": "hardware_debug",
+      "impact_level": 4,
+      "refinement_level": 3,
+      "status": "SATURATED",
+      "tags": ["optane", "aep", "mellanox", "microcode", "ipmi"]
+    },
+    {
+      "id": "FOCAL-2015-001",
+      "date": "2015-04-10",
+      "event_era": "2015-Q2",
+      "event_year": 2015,
+      "document_date": "2015-04-10",
+      "summary": "Post-Silicon Debug Software Lead: Owned Intel VISA (Visualization of Internal Signals Architecture) debug application",
+      "evidence": "Engineered automated internal signal trace visualization and SoC subsystem debug pipelines across multi-socket validation benches with TeamCity CI.",
+      "domain": "career_timeline",
+      "impact_level": 4,
+      "refinement_level": 3,
+      "status": "SATURATED",
+      "tags": ["intel_visa", "teamcity", "ci", "post-silicon", "debug"]
+    },
+    {
+      "id": "FOCAL-2009-001",
+      "date": "2009-03-14",
+      "event_era": "2009-Q1",
+      "event_year": 2009,
+      "document_date": "2009-03-14",
+      "summary": "BMC Firmware Engineer: Implemented IPMI 2.0, DCMI, Serial Over LAN (SOL), and RMCP socket libraries in embedded C",
+      "evidence": "Built low-level C networking stack and HECI communication interface for IA64 and x86 server baseboard management controllers.",
+      "domain": "hardware_debug",
+      "impact_level": 4,
+      "refinement_level": 3,
+      "status": "SATURATED",
+      "tags": ["ipmi", "dcmi", "sol", "rmcp", "heci", "c"]
+    }
+  ]
+}

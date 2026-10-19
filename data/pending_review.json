@@ -2,6 +2,34 @@
   "semantic_dedup_candidates": [
     {
       "card_a": {
+        "id": "WIS-004",
+        "title": "The Texas Power-On (Strategic Career Pivot)",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "WIS-024",
+        "title": "Estimates: High vs. Low (The Code Archaeologist)",
+        "source": "wisdom_data.json"
+      },
+      "similarity": 0.8222,
+      "flagged_at": "2026-10-18T11:44:00Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-248",
+        "title": "Unable to determine the tool used based on the provided evidence",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "WIS-249",
+        "title": "Unable to determine the error codes encountered based on the provided evidence",
+        "source": "wisdom_data.json"
+      },
+      "similarity": 0.8321,
+      "flagged_at": "2026-10-18T11:44:03Z"
+    },
+    {
+      "card_a": {
         "id": "WIS-288",
         "title": "Merging Montana into DTAF-content using git-filter-repo to preserve history",
         "source": "wisdom_data.json"
@@ -11,22 +39,8 @@
         "title": "Preserving history while merging Montana into DTAF-content using git-filter-repo",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8571,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-364",
-        "title": "Intel\u00ae Intelligent Power Node Manager 4.0 External Interface.pdf is a Engineerin",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-365",
-        "title": "For Engineering Tool, Jason developed Intel\u00ae Intelligent Power Node Manager 4.0 ",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.852,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8333,
+      "flagged_at": "2026-10-18T11:44:03Z"
     },
     {
       "card_a": {
@@ -35,26 +49,12 @@
         "source": "wisdom_data.json"
       },
       "card_b": {
-        "id": "WIS-371",
-        "title": "For Engineering Tool, Jason developed P12_03.15.02_SPS_PECI_Continuous_Peci_Call",
+        "id": "WIS-378",
+        "title": "presentation.txt is a Engineering Tool in Jason's technical portfolio. Purpose: ",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8356,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-374",
-        "title": "Stall Points (for bug fixing).pptx is a Engineering Tool in Jason's technical po",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-375",
-        "title": "For Engineering Tool, Jason developed Stall Points (for bug fixing).pptx. Synops",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8214,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8262,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -67,8 +67,22 @@
         "title": "For Engineering Tool, Jason developed Test Case Summary of RAS for Test Library ",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8981,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8792,
+      "flagged_at": "2026-10-18T11:44:04Z"
+    },
+    {
+      "card_a": {
+        "id": "WIS-378",
+        "title": "presentation.txt is a Engineering Tool in Jason's technical portfolio. Purpose: ",
+        "source": "wisdom_data.json"
+      },
+      "card_b": {
+        "id": "WIS-460",
+        "title": "HomeLabAI.md is a Engineering Tool in Jason's technical portfolio. Purpose: Engi",
+        "source": "wisdom_data.json"
+      },
+      "similarity": 0.8341,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -81,50 +95,8 @@
         "title": "linkedin.txt is a Engineering Tool in Jason's technical portfolio. Purpose: Deve",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.91,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-379",
-        "title": "For Engineering Tool, Jason developed presentation.txt. Synopsis: Engineered BMC",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-473",
-        "title": "For Engineering Tool, Jason developed linkedin.txt. Synopsis: Developed OpenBMC ",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8903,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-380",
-        "title": "ras-einj.txt is a Engineering Tool in Jason's technical portfolio. Purpose: Vali",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-381",
-        "title": "For Engineering Tool, Jason developed ras-einj.txt. Synopsis: Validated raw Peci",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8356,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-398",
-        "title": "PECI_Comparison.xlsx is a Engineering Tool in Jason's technical portfolio. Purpo",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-399",
-        "title": "For Engineering Tool, Jason developed PECI_Comparison.xlsx. Synopsis: Side-by-si",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8375,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.84,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -137,22 +109,8 @@
         "title": "For Engineering Tool, Jason developed SIV+MIV Sprint Review - new focus.docx. Sy",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8454,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-402",
-        "title": "Stressing Redfish PECI_demo.pptx is a Engineering Tool in Jason's technical port",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-403",
-        "title": "For Engineering Tool, Jason developed Stressing Redfish PECI_demo.pptx. Synopsis",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8357,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8406,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -165,190 +123,22 @@
         "title": "For Engineering Tool, Jason developed ipmi-second-gen-interface-spec-v2-rev1-1_q",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8442,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8299,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
-        "id": "WIS-414",
-        "title": "Jason Insight April-Nov 2022.xlsx is a Engineering Tool in Jason's technical por",
+        "id": "WIS-450",
+        "title": "DSP0236_1.3.0_MCTP_base.pdf is a Engineering Tool in Jason's technical portfolio",
         "source": "wisdom_data.json"
       },
       "card_b": {
-        "id": "WIS-415",
-        "title": "For Engineering Tool, Jason developed Jason Insight April-Nov 2022.xlsx. Synopsi",
+        "id": "WIS-451",
+        "title": "For Engineering Tool, Jason developed DSP0236_1.3.0_MCTP_base.pdf. Synopsis: Led",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8454,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-416",
-        "title": "MIV- Requirements for Automation.xlsx is a Engineering Tool in Jason's technical",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-417",
-        "title": "For Engineering Tool, Jason developed MIV- Requirements for Automation.xlsx. Syn",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8352,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-420",
-        "title": "PECI_experiments_WW31.3_1.txt is a Engineering Tool in Jason's technical portfol",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-421",
-        "title": "For Engineering Tool, Jason developed PECI_experiments_WW31.3_1.txt. Synopsis: L",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8405,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-422",
-        "title": "_Stressing Redfish PECI.pptx is a Engineering Tool in Jason's technical portfoli",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-423",
-        "title": "For Engineering Tool, Jason developed _Stressing Redfish PECI.pptx. Synopsis: Pr",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8504,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-428",
-        "title": "makechart.py is a Engineering Tool in Jason's technical portfolio. Purpose: Tele",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-429",
-        "title": "For Engineering Tool, Jason developed makechart.py. Synopsis: Telemetry visualiz",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8356,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-436",
-        "title": "pecistressor.py is a Engineering Tool in Jason's technical portfolio. Purpose: H",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-437",
-        "title": "For Engineering Tool, Jason developed pecistressor.py. Synopsis: High-throughput",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8262,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-444",
-        "title": "stats_unit.csv is a Engineering Tool in Jason's technical portfolio. Purpose: Se",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-445",
-        "title": "For Engineering Tool, Jason developed stats_unit.csv. Synopsis: Senior Engineer'",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8231,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-446",
-        "title": "10-24-2023-Insights.txt is a Engineering Tool in Jason's technical portfolio. Pu",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-447",
-        "title": "For Engineering Tool, Jason developed 10-24-2023-Insights.txt. Synopsis: Designi",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8375,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-448",
-        "title": "Backup -MIV Blackbox Recorder.pptx is a Engineering Tool in Jason's technical po",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-449",
-        "title": "For Engineering Tool, Jason developed Backup -MIV Blackbox Recorder.pptx. Synops",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8442,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-452",
-        "title": "MIV for Execution.pptx is a Engineering Tool in Jason's technical portfolio. Pur",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-453",
-        "title": "For Engineering Tool, Jason developed MIV for Execution.pptx. Synopsis: Strategi",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8235,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-454",
-        "title": "MCTP on DMR.docx is a Engineering Tool in Jason's technical portfolio. Purpose: ",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-455",
-        "title": "For Engineering Tool, Jason developed MCTP on DMR.docx. Synopsis: Designed a dis",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8402,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-454",
-        "title": "MCTP on DMR.docx is a Engineering Tool in Jason's technical portfolio. Purpose: ",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-468",
-        "title": "PnP Engineering Story- High-Fidelity Power Hysteresis Characterization.docx is a",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8344,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-456",
-        "title": "MCTP-Topology-DMR.vsdx is a Engineering Tool in Jason's technical portfolio. Pur",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-457",
-        "title": "For Engineering Tool, Jason developed MCTP-Topology-DMR.vsdx. Synopsis: Validate",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8239,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8468,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -361,36 +151,8 @@
         "title": "For Engineering Tool, Jason developed Jason Allred - OpenBMC Development experie",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.8544,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-464",
-        "title": "Jason Allred - War stories (Work).docx is a Engineering Tool in Jason's technica",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-465",
-        "title": "For Engineering Tool, Jason developed Jason Allred - War stories (Work).docx. Sy",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8544,
-      "flagged_at": "2026-10-17T09:37:25Z"
-    },
-    {
-      "card_a": {
-        "id": "WIS-466",
-        "title": "Philosophy and Learnings 2024.docx is a Engineering Tool in Jason's technical po",
-        "source": "wisdom_data.json"
-      },
-      "card_b": {
-        "id": "WIS-467",
-        "title": "For Engineering Tool, Jason developed Philosophy and Learnings 2024.docx. Synops",
-        "source": "wisdom_data.json"
-      },
-      "similarity": 0.8375,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8601,
+      "flagged_at": "2026-10-18T11:44:04Z"
     },
     {
       "card_a": {
@@ -403,9 +165,9 @@
         "title": "For Engineering Tool, Jason developed PnP Engineering Story- High-Fidelity Power",
         "source": "wisdom_data.json"
       },
-      "similarity": 0.885,
-      "flagged_at": "2026-10-17T09:37:25Z"
+      "similarity": 0.8452,
+      "flagged_at": "2026-10-18T11:44:04Z"
     }
   ],
-  "last_dedup_scan_ts": 1792229845
+  "last_dedup_scan_ts": 1792323844
 }

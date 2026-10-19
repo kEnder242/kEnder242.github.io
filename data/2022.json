@@ -37,42 +37,6 @@
     "rank": 4
   },
   {
-    "date": "2022-01-01",
-    "summary": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
-    "evidence": "https://hsdes.intel.com/appstore/article/#/18020163210",
-    "sensitivity": "Public",
-    "tags": [
-      "Research",
-      "TODO"
-    ],
-    "rank": 4,
-    "id": "GEM-d98c"
-  },
-  {
-    "date": "2022-01-01",
-    "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
-    "evidence": "/root/tester -y 0x010000C800800D -d 00",
-    "sensitivity": "Public",
-    "tags": [
-      "MCTP",
-      "PythonSV"
-    ],
-    "rank": 4,
-    "id": "GEM-7c0e"
-  },
-  {
-    "date": "2022-01-01",
-    "summary": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
-    "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
-    "sensitivity": "Public",
-    "tags": [
-      "PythonSV",
-      "pmdebug"
-    ],
-    "rank": 4,
-    "id": "GEM-e978"
-  },
-  {
     "date": "2022-01-02",
     "summary": "Preserving history while merging Montana into DTAF-content using git-filter-repo",
     "evidence": "git branch montana_merge_v2; git pull old-miv-repo master --allow-unrelated-histories",
@@ -234,42 +198,6 @@
     "rank": 4
   },
   {
-    "date": "2022-09-29",
-    "summary": "Review PECI-related issues and EGS DRAM ECS info over OOB PECI",
-    "evidence": "https://hsdes.intel.com/appstore/article/#/14017037890",
-    "sensitivity": "Public",
-    "tags": [
-      "PECI",
-      "EGS DRAM ECS"
-    ],
-    "rank": 4,
-    "id": "GEM-57bc"
-  },
-  {
-    "date": "2022-09-30",
-    "summary": "crdefeature2_bs accessed registers 21850h and 29850h across multiple channels",
-    "evidence": "showsearch method output",
-    "sensitivity": "Public",
-    "tags": [
-      "crdefeature2_bs",
-      "register access"
-    ],
-    "rank": 4,
-    "id": "GEM-8136"
-  },
-  {
-    "date": "2022-09-30",
-    "summary": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
-    "evidence": "show_access_info method output",
-    "sensitivity": "Public",
-    "tags": [
-      "crdefeature2_bs",
-      "I/O statistics"
-    ],
-    "rank": 4,
-    "id": "GEM-1914"
-  },
-  {
     "date": "2022-10-01",
     "summary": "Functions defined for accessing MMIO registers.",
     "evidence": "RAW LOGS on 10/24/2022",
@@ -306,19 +234,6 @@
     ],
     "id": "GEM-cfae",
     "rank": 4
-  },
-  {
-    "date": "2022-11-17",
-    "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
-    "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
-    "sensitivity": "Public",
-    "tags": [
-      "MSR register access issues",
-      "unexpected return codes",
-      "PECI tests"
-    ],
-    "rank": 4,
-    "id": "GEM-d90f"
   },
   {
     "date": "2022-12-01",

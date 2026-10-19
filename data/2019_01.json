@@ -18,8 +18,8 @@
     "sensitivity": "Public",
     "tags": [
       "aws-ecr-credential-helper",
-      "docker",
-      "registry"
+      "registry",
+      "docker"
     ],
     "rank": 4
   },
@@ -29,9 +29,9 @@
     "evidence": "Update of Docker build process to utilize the --build-arg flag.",
     "sensitivity": "Public",
     "tags": [
-      "docker",
       "compose",
-      "build"
+      "build",
+      "docker"
     ],
     "rank": 4
   }

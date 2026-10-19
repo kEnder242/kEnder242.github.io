@@ -1,55 +1,55 @@
 {
-  "source_file": "Performance review 2008-2018.txt",
-  "year": "2024",
+  "source_file": "notes_2024_PIAV.txt",
+  "year": "2021",
   "total_gems_extracted": 4,
   "gems": [
     {
-      "id": "GEM-ea62",
+      "id": "GEM-f822",
       "rank": 5,
-      "date": "2024-01-01",
+      "date": "2021-01-01",
       "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
       "evidence": "",
       "tags": [
         "strategy",
         "anchor"
       ],
-      "source_file": "Performance review 2008-2018.txt"
+      "source_file": "notes_2024_PIAV.txt"
     },
     {
-      "id": "GEM-737a",
+      "id": "GEM-12a5",
       "rank": 4,
-      "date": "2024-12-25",
-      "summary": "Set up a testing server for Prometheus metrics and telemetry",
-      "evidence": "used python mock\n\nEvidence 2: added custom rapl metrics",
+      "date": "2021-11-01",
+      "summary": "Critical issue identified with MIV framework, requires further investigation.",
+      "evidence": "RAW LOGS: A critical issue was identified... The issue is related to the MIV (Manageability Integration & Validation) framework and requires further investigation.",
       "tags": [
-        "prometheus",
-        "rapl"
+        "MIV",
+        "framework"
       ],
-      "source_file": "Performance review 2008-2018.txt"
+      "source_file": "notes_2024_PIAV.txt"
     },
     {
-      "id": "GEM-4e2e",
+      "id": "GEM-27ec",
       "rank": 4,
-      "date": "2024-08-01",
-      "summary": "Inventory management follow-up on SMNC75000143",
-      "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
+      "date": "2021-11-01",
+      "summary": "Error code reported on HSD-ES: 22013940445.",
+      "evidence": "RAW LOGS: The error code reported on HSD-ES is indeed 22013940445.",
       "tags": [
-        "management",
-        "inventory"
+        "error_code",
+        "HSD-ES"
       ],
-      "source_file": "Performance review 2008-2018.txt"
+      "source_file": "notes_2024_PIAV.txt"
     },
     {
-      "id": "GEM-e26d",
+      "id": "GEM-2a7d",
       "rank": 4,
-      "date": "2024-08-01",
-      "summary": "Simulation targeting Oakstream platform with specific configuration",
-      "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
+      "date": "2021-11-01",
+      "summary": "ipmitool used to troubleshoot issue, output identical to BMC console raw commands.",
+      "evidence": "RAW LOGS: The text states that ipmitool was used with the following command... The output was identical to the BMC console raw commands.",
       "tags": [
-        "Oakstream",
-        "simulation"
+        "BMC_console",
+        "ipmitool"
       ],
-      "source_file": "Performance review 2008-2018.txt"
+      "source_file": "notes_2024_PIAV.txt"
     }
   ]
 }
