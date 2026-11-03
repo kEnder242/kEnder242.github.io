@@ -8,7 +8,15 @@
       "pptx",
       "Manageability Ignition-Redfish Content Plan"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-09-10",
+    "event_era": "2020-09-10",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-09-10",
@@ -19,7 +27,18 @@
       "commands",
       "PECI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-09-10",
+    "event_era": "2020-09-10",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 4aab21ae secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETED**TECHNICAL TRUTH**: The debug condition or inquiry that activates this knowledge is likely triggered by a specific diagnostic tool or software used by Jason to retrieve the journal entries from BMC's LogServices/Journal/Entries e",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-09-16",
@@ -32,6 +51,17 @@
       "master",
       "BMC"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-09-16",
+    "event_era": "2020-09-16",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request feaf7219 secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, it sounds like you're exploring the intricacies of PECI command execution. I'm checking our logs from September 2020 to see if there were any notable discussions around setting the PECI master to PCH or BMC for ignition.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

@@ -1,468 +1,5 @@
 [
   {
-    "date": "2019-01-01",
-    "summary": "Release of various tools related to Purley RAS Gap Analysis, including _06_02_03_cs_nvd_pcie_fatal.py, helper.py, riv_common.py, workload_profile.py",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [
-      "Purley RAS Gap Analysis",
-      "Tool Release",
-      "Python Scripts"
-    ],
-    "technical_gem": "Introduction of new tools for Purley RAS Gap Analysis, specifically _06_02_03_cs_nvd_pcie_fatal.py and others",
-    "rank": 4
-  },
-  {
-    "date": "2019-01-01",
-    "summary": "Start of the investigation into INJC errors (71 einj 02) in functional memory/PCIe correctable errors, focusing on Linux-specific issues",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [],
-    "technical_gem": "[TOOL ERA REGISTRY]",
-    "rank": 4
-  },
-  {
-    "date": "2019-08-01",
-    "summary": "Development of startCscripts.py, SysCfg, and various scripts like peciXtor.py, peci_framework_ipmi_example.py, and pecistressor.py for the Purley RAS Gap Analysis",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [],
-    "technical_gem": "era registry",
-    "rank": 4
-  },
-  {
-    "date": "2020-08-25",
-    "summary": "Release of scan_NetFunction_8-25-2020.py for the Purley RAS Gap Analysis - Tool utilized: [TOOL ERA REGISTRY]",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [
-      "Silicon Validation",
-      "Release",
-      "Purley RAS Gap Analysis"
-    ],
-    "technical_gem": "[Specific error code or architectural nuance found in TOOL ERA REGISTRY]",
-    "rank": 4
-  },
-  {
-    "date": "2021-01-01",
-    "summary": "Release of pcidevices_unit.py, redfish_utils.py, and other tools for the Purley RAS Gap Analysis",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [
-      "tool_development",
-      "Purley_RAS_Gap_Analysis"
-    ],
-    "technical_gem": "Development and release of custom scripting tools (pcidevices_unit.py, redfish_utils.py) to aid in Purley RAS Gap Analysis",
-    "rank": 4
-  },
-  {
-    "date": "2022-00-00",
-    "summary": "Release of SensorSeverityThreshold_OpenBMC_longrun.py, blackbox.py, gethostcpudata.py, makechart.py, pcu_notes.py, peciXtor.py, peci_framework_ipmi_example.py, peci_redfish.py, pecistressor.py, policy.py, policy_jason.py, sensor_validator.py, statistics.py. This release includes several Python scripts for OpenBMC and Redfish interfaces.",
-    "evidence": "[TOOL ERA REGISTRY]...",
-    "sensitivity": "Public",
-    "tags": [
-      "OpenBMC",
-      "Redfish",
-      "Python scripts"
-    ],
-    "technical_gem": "[TOOL ERA REGISTRY]... (Possible specific tool name or error code found in the Evidence)",
-    "rank": 4
-  },
-  {
-    "date": "2022-01-01",
-    "summary": "Release of SensorSeverityThreshold_OpenBMC_longrun.py, blackbox.py, gethostcpudata.py, makechart.py, pcu_notes.py, peciXtor.py, peci_framework_ipmi_example.py, peci_redfish.py, pecistressor.py, policy.py, policy_jason.py, sensor_validator.py, and statistics.py for the Purley RAS Gap Analysis",
-    "evidence": "[TOOL ERA REGISTRY]",
-    "sensitivity": "Public",
-    "tags": [],
-    "technical_gem": "era registry tool used: [TOOL ERA REGISTRY]",
-    "rank": 4
-  },
-  {
-    "date": "2022-05-17",
-    "summary": "U-Boot starts and loads kernel, ramdisk, and device tree.",
-    "evidence": "The log shows the execution of U-Boot commands to load the kernel, ramdisk, and device tree. It also mentions the loading of environment from SPI Flash and the verification of hash integrity for each subimage.",
-    "sensitivity": "Public",
-    "tags": [
-      "boot",
-      "kernel",
-      "ramdisk",
-      "device_tree"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2022-05-17",
-    "summary": "U-Boot initializes memory and sets up the system.",
-    "evidence": "The log details the initialization of memory, DMA memory pools, and CMA memory pool. It also mentions the creation of a CMA memory pool at 0x9d000000, size 32 MiB, and a DMA memory pool at 0x99000000, size 64 MiB.",
-    "sensitivity": "Public",
-    "tags": [
-      "memory",
-      "DMA",
-      "CMA"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2022-05-17",
-    "summary": "U-Boot starts the Linux kernel.",
-    "evidence": "The log shows the execution of commands to start the Linux kernel. It mentions the loading of the kernel image, ramdisk, and device tree.",
-    "sensitivity": "Public",
-    "tags": [
-      "kernel",
-      "linux"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2022-11-06",
-    "summary": "Software initialization and core configuration.",
-    "evidence": "The log shows the execution of the 'montana' command with specific parameters, including a TDF file and an IPC configuration file. It also details the process of connecting to the IPC API, initializing it, and discovering cores using IPC.",
-    "sensitivity": "Public",
-    "tags": [
-      "Software Initialization",
-      "Core Configuration",
-      "IPC"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2022-11-06",
-    "summary": "Reconfiguration and core setup.",
-    "evidence": "The log records events related to reconfiguration, including the detection of IO_V1_CLTAP A0 on JTAG chain 0, warnings about missing TAP devices, and the use of XDPA as the OpenIPC connection. It also shows the process of setting up the SOC Core logical view, enumerating cores based on logical order, and Renumbering core taps.",
-    "sensitivity": "Public",
-    "tags": [
-      "Reconfiguration",
-      "Core Setup",
-      "JTAG",
-      "SOC"
-    ],
-    "rank": 3,
-    "inferred_intent": "greeting",
-    "addressed_to": "NONE",
-    "vibe": "CASUAL",
-    "domain": "unknown",
-    "casual": 0.8,
-    "intrigue": 0.0,
-    "importance": 0.0,
-    "target_domains": []
-  },
-  {
-    "date": "2022-11-06",
-    "summary": "Hardware and software patching.",
-    "evidence": "The log indicates the detection of PCUDATA component patching for io0 die, io1 die, and compute0 die. It also shows attempts to automatically load these patches using timestamp reading. This suggests a process of hardware and software patching.",
-    "sensitivity": "Public",
-    "tags": [
-      "Hardware Patching",
-      "Software Patching",
-      "PCUDATA"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2022-11-06",
-    "summary": "Core group manipulation.",
-    "evidence": "The log shows the 'GPC core group' halts and resumes on specific devices. This suggests a process of manipulating core groups for testing or debugging purposes.",
-    "sensitivity": "Public",
-    "tags": [
-      "Core Group Manipulation",
-      "Halt",
-      "Resume"
-    ],
-    "rank": 3,
-    "inferred_intent": "greeting",
-    "addressed_to": "NONE",
-    "vibe": "CASUAL",
-    "domain": "unknown",
-    "casual": 0.8,
-    "intrigue": 0.0,
-    "importance": 0.0,
-    "target_domains": []
-  },
-  {
-    "date": "2023-04-15",
-    "summary": "Performed Git operations for GitLab repository including SSH and HTTPS cloning, proxy configuration, SSL verification bypass, authorization issue resolution, user email and name setting, remote URL updating, and pulling to update local repository.",
-    "evidence": "git clone ssh://jallred@gitlab.devtools.intel.com:29418/dpv-pve/miv-mivsoftware.git\n git config --global http.https://proxy-us.intel.com.proxy proxy-us.intel.com:911\ngit config --global http.https://proxy-us.intel.com.sslVerify false\ngit clone https://jallred@gitlab.devtools.intel.com/dpv-pve/miv-mivsoftware.git\n Control Panel -> User Accounts -> Credential Manager - Windows Credentials, delete the git credentials\ngit config --global user.email \"jason.a.allred@intel.com\"\ngit config --global user.name \"jallred\"\ngit config remote.origin.url https://jallred@gitlab.devtools.intel.com/dpv-pve/miv-mivsoftware.git\ngit pull",
-    "sensitivity": "Public",
-    "technical_gem": "Utilized Git CLI commands such as 'git config' and 'git clone' for various operations.",
-    "rank": 4,
-    "tags": [
-      "Git",
-      "GitLab",
-      "SSH",
-      "HTTPS",
-      "Proxy Configuration",
-      "SSL Verification",
-      "Authorization",
-      "User Settings"
-    ]
-  },
-  {
-    "date": "2023-04-15",
-    "summary": "Installed Postman for Redfish API testing",
-    "evidence": "https://wiki.ith.intel.com/display/PlatformTech/Using+Postman+for+Redfish",
-    "sensitivity": "Public",
-    "tags": [
-      "Redfish",
-      "API Testing",
-      "Postman"
-    ],
-    "technical_gem": "Postman",
-    "rank": 4
-  },
-  {
-    "date": "2023-04-16",
-    "summary": "Analyzed technical events, compared findings with EXISTING ARCHIVE, enhanced descriptions for clarity, classified sensitivity level.",
-    "evidence": "",
-    "sensitivity": "Public",
-    "tags": [
-      "Analysis",
-      "Comparison",
-      "Improvement",
-      "Sensitivity"
-    ],
-    "technical_gem": "Utilized comparison tool 'Archive Comparison Tool' during analysis process",
-    "rank": 4
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "CSPs (Google, AWS, Oracle) planning to deploy PCH Ignition FW. ZBB feature will impact MCTP support for them.",
-    "evidence": "OOBMSM as MCTP bus owner \u2013 ZBB feature discussion\n... CSPs are identified as potential CSPs which are planning to deploy PCH Ignition FW.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "CSP",
-      "PCH Ignition FW",
-      "ZBB"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "MCTP is the transport layer enabling application protocols like PLDM and VDM for Node manager, Virtual RAID VROC OOB Mgmt, SDSi, Platform monitoring telemetry. ",
-    "evidence": "MCTP is the transport layer which allows application layer protocols like PLDM, vendor defined messages -VDM to abstract out physical layer functionalities.\n... These protocols in turn are used for enabling Node manager, Virtual RAID VROC OOB Mgmt \u2013 Enterprise (HP, Lenovo), SDSi, Platform monitoring telemetry -PMT, Persistent memory management etc.",
-    "sensitivity": "Public",
-    "tags": [
-      "MCTP",
-      "PLDM",
-      "VDM"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Google's plan to enable MCTP in DVT phase with CrowPass (CPS) DIMMs. Google faces challenges due to lack of OOB monitoring capabilities.",
-    "evidence": "Google feedback\n... Plan to start enabling MCTP in DVT phase with CrowPass (CPS) DIMMs. Use case around Out of Band Management over PCIe.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "DVT",
-      "CrowPass",
-      "OOB"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Google's OOB monitoring requirements and limitations.",
-    "evidence": "Google feedback\n... Google has hard time requirement of <1 min polling on OOB health and performance monitoring data (status, temp., % lifetime, bandwidth, etc.). \n... Polling modules on fully populated 2S system takes 22 sec. over PECI (<1s on MCTP)\n... Serial PECI won\u2019t be able to make use of OOBMSM HW Primary message router requiring oCode Mailbox handling.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "OOB",
-      "Polling",
-      "PECI"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Impact of dropping MCTP on various use cases.",
-    "evidence": "Google feedback\n... Google has hard time requirement of <1 min polling on OOB health and performance monitoring data (status, temp., % lifetime, bandwidth, etc.). \n... Polling modules on fully populated 2S system takes 22 sec. over PECI (<1s on MCTP)\n... Serial PECI prevents monitoring on more than 4S platforms (SPR supports up to 8S).",
-    "sensitivity": "Public",
-    "tags": [
-      "PECI",
-      "MCTP"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Impact of PECI implementation on FW update and Nlog collection.",
-    "evidence": "Google feedback\n... FW update on CPS, performed during \u201cdooms day\u201d or when modules are replaced and one in inventory have mis-matching FW versions, short update window removes validation-intensive requirement of supporting PMEM modules with mis-matched FW versions (we have to avoid it). \n... FW update takes ~10 min / module on PECI vs. 1-2 sec./ module over MCTP\n... Fully populated 2S system with 16 DIMMs takes almost 3h (unacceptable)\n... Nlog for debug \u2013 retrieved by customer for troubleshooting\n... takes ~15 minutes/module over PECI instead of ~ 2 sec./DIMM over MCTP",
-    "sensitivity": "Public",
-    "tags": [
-      "PECI",
-      "FW update",
-      "Nlog"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "AWS feedback on OOB Telemetry and Crashlog.",
-    "evidence": "AWS Feedback\n... Must have capabilities related to Intel PMT OOB Telemetry and expanding debuggability using Crashlog. Discovery of telemetry capabilities and crashlog agents presently managed over MCTP.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "PMT",
-      "Crashlog"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "AWS's backup interface for MCTP drop.",
-    "evidence": "AWS Feedback\n... Back up interface if we drop MCTP - \n... Discovery is possible using Serial PECI OOB. Limitations include PMT standard doesn\u2019t support streaming over Serial PECI. So streaming telemetry would be dropped.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "PECI",
-      "PMT"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Ocode team feedback on MCTP feature.",
-    "evidence": "Ocode team Feedback \u2013Lukasz\n... The feature is mature and is being validated. We don\u2019t have high concern of quality to make it to PRQ. WW 50 - No open bugs on OOBMSM as MCTP bus owner.\n",
-    "sensitivity": "Public",
-    "tags": [
-      "Ocode team"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Proposal to restructure SIV+MIV Sprint Review for improved collaboration and accountability.",
-    "evidence": "The current idea is to keep \u2018XPIV Retrospective\u2019 as a place to share knowledge and process feedback, and refocus \u2018SIV+MIV Sprint Review\u2019 to connect people inside and outside of our validation team.",
-    "sensitivity": "Public",
-    "tags": [
-      "Sprint Review",
-      "Collaboration",
-      "Technical Leadership"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Proposed approach for the technical details part of SIV+MIV Sprint Review.",
-    "evidence": "The idea is to move the review into two parts: first as a larger group and then split off for technical details.\n\nEvidence 2: Build up work groups of people needed for a SPRINT feature/story - technical leadership, customer vision, development, validation, execution\n\nEvidence 2: After this, we can split off to review technical details as separate work groups (welcome to use Sprint review timeslot if it works for the group)",
-    "sensitivity": "Public",
-    "tags": [
-      "Collaboration",
-      "Sprint Review",
-      "Technical Leadership"
-    ],
-    "rank": 4
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "BMC connection and Peci command execution.",
-    "evidence": "The script starts by enabling insecure server connections, then sets up BMC user credentials. It then executes PECI commands to send raw data to the crashdump service on the BMC IP address 10.23.20.143.\n\n The logs show multiple attempts to execute Peci commands with different parameters.",
-    "sensitivity": "Public",
-    "tags": [
-      "BMC",
-      "Peci",
-      "Crashdump"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Error/Trigger: PECI command response.",
-    "evidence": "The script executes Peci commands and sends raw data to the crashdump service. The logs show responses from the BMC with PECI command responses, including timestamps and PECIResponse arrays.\n\n  - Response 1:\n    PECIResponse: [144, 0, 0, 0, 0]\n  - Response 2:\n    PECIResponse: [64, 243, 6, 8, 0]\n",
-    "sensitivity": "Public",
-    "tags": [
-      "Peci",
-      "Crashdump"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Solution/Scars: Peci command execution.",
-    "evidence": "The script executes Peci commands to send raw data to the crashdump service. The logs show multiple attempts to execute Peci commands with different parameters.\n\n  - Command 1:\n    PECICommands: [[48, 5, 5, 165, 58, 0, 2, 102, 18, 192]]\n  - Command 2:\n    PECICommands: [[48, 5, 5, 161, 59, 0]]",
-    "sensitivity": "Public",
-    "tags": [
-      "Peci",
-      "Crashdump"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Build process initiated.",
-    "evidence": "redfish build",
-    "sensitivity": "Public",
-    "tags": [
-      "build"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-26",
-    "summary": "Setup tools used for the build.",
-    "evidence": "setuptools",
-    "sensitivity": "Public",
-    "tags": [
-      "setup",
-      "tools"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-27",
-    "summary": "Sending Peci commands to Crashdump service for system crash dumps.",
-    "evidence": "The log shows multiple instances of sending raw PECI commands to the Crashdump service. The commands are related to system crashes and include specific parameters like PPL (Process Load Level) and PECICommands. ",
-    "sensitivity": "Public",
-    "tags": [
-      "Technical Event",
-      "Crash Dump"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2023-10-27",
-    "summary": "Multiple requests to send raw Peci commands.",
-    "evidence": "The log shows multiple requests using the following curl command structure: \n`curl -k -u \"[REDACTED]:[REDACTED]\" -H \"Content-Type: application/json\" -X POST -d  \"{'PECICommands': [[49, 5, 5, 161, 0, 58, 0, 0]]}\" https://10.23.20.143/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci`\nThe commands are repeated multiple times.",
-    "sensitivity": "Public",
-    "tags": [
-      "Redfish",
-      "Peci",
-      "Crashdump"
-    ],
-    "rank": 3
-  },
-  {
-    "date": "2025-01-01",
-    "summary": "Started using agent-driven workflows with Gemini, Ollama, NVIDIA NeMo tooling, and custom agentic workflows to read documentation, untangle bugs, generate clean implementations, and handle environment setup efficiently.",
-    "evidence": "The text states: 'I use agent-driven workflows to read documentation, untangle bugs, generate clean implementations, and handle environment setup with ease.'",
-    "sensitivity": "Public",
-    "tags": [
-      "agent-driven workflows",
-      "Gemini",
-      "Ollama",
-      "NVIDIA NeMo"
-    ]
-  },
-  {
-    "date": "2025-01-15",
-    "summary": "Architecting a high-throughput AI systems testbed using vLLM with Liger fused CUDA kernels.",
-    "evidence": "The text states: 'Architecting a high-throughput AI systems testbed to evaluate and structure emerging AI software stacks against hardware constraints. Optimized LLM inference by integrating vLLM with Liger fused CUDA kernels and PyTorch-based model workflows...'",
-    "sensitivity": "Public",
-    "tags": [
-      "vLLM",
-      "Liger",
-      "CUDA kernels"
-    ]
-  },
-  {
-    "date": "2025-02-01",
-    "summary": "Engineered efficient multi-tenant LLM inference by integrating vLLM with Liger fused CUDA kernels and PyTorch-based model workflows.",
-    "evidence": "The text states: 'Optimized LLM inference by integrating vLLM with Liger fused CUDA kernels and PyTorch-based model workflows...'",
-    "sensitivity": "Public",
-    "tags": [
-      "vLLM",
-      "Liger",
-      "CUDA kernels"
-    ]
-  },
-  {
     "date": "Jan 2013 - Dec 2013",
     "summary": "Software Engineer Grade 5",
     "evidence": "Quote",
@@ -612,26 +149,6 @@
   },
   {
     "date": "Unknown-01-01",
-    "summary": "DC Cycling Cold Reset implemented with CFG and error checking.",
-    "evidence": "RAW LOGS mention DC Cycling Cold Reset - w/CFG & Error Checking - UEFI (55723.0).",
-    "sensitivity": "Public",
-    "tags": [
-      "CFG",
-      "Error Checking"
-    ]
-  },
-  {
-    "date": "Unknown-01-01",
-    "summary": "OS Restart Warm Reset implemented with CFG and error checking.",
-    "evidence": "RAW LOGS mention OS Restart Warm Reset - w/CFG & Error Checking - Linux (57580.6).",
-    "sensitivity": "Public",
-    "tags": [
-      "CFG",
-      "Error Checking"
-    ]
-  },
-  {
-    "date": "Unknown-01-01",
     "summary": "Data persistence and integrity test case for active cycle on Linux.",
     "evidence": "RAW LOGS mention CR - AC Cycling Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux (57553.6).",
     "sensitivity": "Public",
@@ -663,29 +180,14 @@
   },
   {
     "date": "Unknown-01-01",
-    "summary": "No specific TODO or research link is mentioned in the text.",
-    "evidence": "RAW LOGS",
-    "sensitivity": "Public",
-    "tags": []
-  },
-  {
-    "date": "Unknown-01-01",
-    "summary": "Proposed refocusing of 'SIV+MIV Sprint Review' to improve cross-functional collaboration.",
-    "evidence": "RAW LOGS",
-    "sensitivity": "Public",
-    "tags": [
-      "collaboration",
-      "agile"
-    ]
-  },
-  {
-    "date": "Unknown-01-01",
     "summary": "Use of SCRUM-like meetings, backlogs, burndown charts, and velocity metrics to promote accountability.",
     "evidence": "RAW LOGS",
     "sensitivity": "Public",
     "tags": [
+      "metrics",
+      "collaboration",
       "accountability",
-      "metrics"
+      "agile"
     ]
   },
   {
@@ -736,6 +238,90 @@
       "anchor"
     ],
     "rank": 5
+  },
+  {
+    "date": "Unknown-01-01",
+    "summary": "Slots B and D show failure/spare for nonexistent DIMM positions after each subsequent board is installed",
+    "evidence": "Same failure as seen in #41778  \"slot2 Get DIMM Status reports failure\" except memory board was not installed in slot2",
+    "domain": "hardware_debug",
+    "spatial_anchor": {
+      "source_file": "unknown",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "Unknown-01-01",
+      "year": null,
+      "quarter": "Unknown",
+      "precision": "EXACT"
+    },
+    "event_era": "Unknown-01-01",
+    "event_year": null,
+    "event_quarter": "Unknown",
+    "document_date": "Unknown-01-01",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "Unknown-01-01",
+    "summary": "BIOS EPS_0.90 : 8.1 Fault Resilient Booting timer settings",
+    "evidence": "The FRB-3 timer starts counting down whenever the system comes out of hard reset, Near the end of POST, the BIOS disables the FRB-2 timer.",
+    "domain": "hardware_debug",
+    "spatial_anchor": {
+      "source_file": "unknown",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "Unknown-01-01",
+      "year": null,
+      "quarter": "Unknown",
+      "precision": "EXACT"
+    },
+    "event_era": "Unknown-01-01",
+    "event_year": null,
+    "event_quarter": "Unknown",
+    "document_date": "Unknown-01-01",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "Unknown-01-01",
+    "summary": "Get Watchdog Timer (Decoded) settings",
+    "evidence": "DoNotLog              = 0, TimerStatus           = 1, TimerUseBits          = 0x01 ...",
+    "domain": "hardware_debug",
+    "spatial_anchor": {
+      "source_file": "unknown",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "Unknown-01-01",
+      "year": null,
+      "quarter": "Unknown",
+      "precision": "EXACT"
+    },
+    "event_era": "Unknown-01-01",
+    "event_year": null,
+    "event_quarter": "Unknown",
+    "document_date": "Unknown-01-01",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "YYYY-01-01",

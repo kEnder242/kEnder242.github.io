@@ -1,0 +1,23 @@
+{
+  "Variant A (Prose / Markdown)": {
+    "avg_ttft_ms": 201.3,
+    "avg_total_ms": 4205.8,
+    "avg_tokens": 95.0,
+    "parse_reliability": "100%",
+    "sample_output": "[ANALYSIS]\n- CHUNK-1: KEEP \u2014 Relevant to Aurora supercomputer nodes\n- CHUNK-2: KEEP \u2014 Provides information on PSYS power"
+  },
+  "Variant B (XML Tags)": {
+    "avg_ttft_ms": 106.4,
+    "avg_total_ms": 4052.6,
+    "avg_tokens": 94.0,
+    "parse_reliability": "100%",
+    "sample_output": "<analysis>\nCHUNK-1: KEEP \u2014 Relevant to Aurora supercomputer nodes\nCHUNK-2: KEEP \u2014 Provides information on PSYS power tel"
+  },
+  "Variant C (JSON Schema)": {
+    "avg_ttft_ms": 105.3,
+    "avg_total_ms": 3221.8,
+    "avg_tokens": 74.0,
+    "parse_reliability": "100%",
+    "sample_output": "{\n  \"analysis\": {\n    \"CHUNK-1\": \"PSYS power telemetry was routed through the server power management bus to measure agg"
+  }
+}

@@ -9,6 +9,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-afb0"
+    "id": "GEM-afb0",
+    "document_date": "2010-01-01",
+    "event_era": "2010-01-01",
+    "event_year": 2010,
+    "event_quarter": "2010-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 95791106 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Pinky (Triage) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROC",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "chunk_type": "FOCAL_DRAFT",
+    "spatial_anchor": {
+      "source_file": "2010.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2010-01-01",
+      "year": 2010,
+      "quarter": "2010-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   }
 ]

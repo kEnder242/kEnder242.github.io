@@ -8,7 +8,15 @@
       "CLX",
       "MIV software"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-01-27",
+    "event_era": "2020-01-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-01-27",
@@ -19,7 +27,18 @@
       "IPMI",
       "error"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-01-27",
+    "event_era": "2020-01-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request ced75326 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.It sounds like we're diving into some BMC PECI master functionality discussions from 2020. I'm going to check our logs to see if there were any notable events around that time.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-01-28",
@@ -30,6 +49,17 @@
       "CLX",
       "MIV software"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-01-28",
+    "event_era": "2020-01-28",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 9a960c9a secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

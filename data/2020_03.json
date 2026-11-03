@@ -9,7 +9,15 @@
       "Reset",
       "MIV"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-03-23",
+    "event_era": "2020-03-23",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2020-03-23",
@@ -20,7 +28,18 @@
       "BMC",
       "PECI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-03-23",
+    "event_era": "2020-03-23",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request f7eb7b2b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Proposed modular BMC support is related to existing BMC features; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: Access to BMC SMBus segments and PECI is enabled through updated L-BMC firmware; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP\n\n[USER_QUERY]: The debug condition or inquiry that activates this knowledge is: BMC SMBus segment and PECI access validation.\n\n[BLACKBOARD_LEDGER]:\n- [PINKY]: Proposed modular BMC support enables access to BMC SMBus segments and PECI through updated L-BMC firmware \ud83d\udca1 Curator Note: This is a key feature for validation teams.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-03-24",
@@ -31,7 +50,15 @@
       "Test",
       "MIV"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-03-24",
@@ -42,7 +69,15 @@
       "Recovery",
       "MIV"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-03-24",
@@ -53,6 +88,17 @@
       "BMC",
       "PECI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request b07f471e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Deep Thought (Strategy) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Initiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

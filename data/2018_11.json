@@ -5,7 +5,15 @@
     "evidence": "There is no specific TODO or research link mentioned in the logs.",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-01",
@@ -13,7 +21,15 @@
     "evidence": "echo 0x0 > /sys/kernel/debug/apei/einj/param1, echo 64 > /sys/kernel/debug/apei/einj/error_type, and echo 1 > /sys/kernel/debug/apei/einj/error_inject",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-01",
@@ -21,7 +37,15 @@
     "evidence": "WheaErrorInjSupportEn=1, WheaPcieErrInjEn=1, and IioErrorEn=1",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-13",
@@ -31,7 +55,15 @@
     "tags": [
       "biosKnobs"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-13",
+    "event_era": "2018-11-13",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-14",
@@ -42,7 +74,15 @@
       "Error Injection",
       "Testing"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-14",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-14",
@@ -53,7 +93,15 @@
       "SvBios",
       "CAUSALITY ERROR"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-14",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-15",
@@ -64,7 +112,15 @@
       "Error Injection",
       "biosKnobs"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-15",
+    "event_era": "2018-11-15",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2018-11-15",
@@ -75,6 +131,14 @@
       "Error Injection",
       "System Configuration"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-11-15",
+    "event_era": "2018-11-15",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

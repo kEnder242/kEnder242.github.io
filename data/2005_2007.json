@@ -8,7 +8,15 @@
       "FTF202",
       "test_run"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2005-2007-01",
+    "event_era": "2005-2007-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2005-2007-01",
@@ -18,7 +26,15 @@
     "tags": [
       "tool_release"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2005-2007-01",
+    "event_era": "2006-01-01",
+    "event_year": 2006,
+    "event_quarter": "2006-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2005-2007-01",
@@ -28,7 +44,18 @@
     "tags": [
       "SOL_update"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2005-2007-01",
+    "event_era": "2005-2007-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Update to SOL presentation and API doc...A customer or internal stakeholder inquires about the security posture of Serial Over LAN, specifically requesting clarification on how IPMI 2.0 encryption and authentication mechanisms are implemented within the SOL session lifecycle.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2005-2007-01",
@@ -38,7 +65,15 @@
     "tags": [
       "bug_fix"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2005-2007-01",
+    "event_era": "2005-2007-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2005-2007-01",
@@ -48,6 +83,14 @@
     "tags": [
       "SDK_update"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2005-2007-01",
+    "event_era": "2005-2007-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

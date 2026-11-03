@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "description": "Navigational Companion Map for Gap Notes File (FEAT-683)",
+  "source_file": "notes_2007_LAD.txt",
+  "source_file_hash": "64106f682cfbd571fe6a43ba91a8a3de",
+  "total_lines": 482,
+  "total_sections": 7,
+  "generated_at": "2026-11-02T15:37:36Z",
+  "sections": [
+    {
+      "section_id": "SEC-001",
+      "line_start": 1,
+      "line_end": 130,
+      "section_title": "Header / Environment Overview",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "hardware_setup"
+    },
+    {
+      "section_id": "SEC-002",
+      "line_start": 131,
+      "line_end": 181,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-003",
+      "line_start": 182,
+      "line_end": 251,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-004",
+      "line_start": 252,
+      "line_end": 338,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-005",
+      "line_start": 339,
+      "line_end": 403,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-006",
+      "line_start": 404,
+      "line_end": 447,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-007",
+      "line_start": 448,
+      "line_end": 482,
+      "section_title": "Log Section",
+      "platform": "LAD",
+      "implied_era": "2007-Q2",
+      "chunk_type": "diagnostic_log"
+    }
+  ]
+}

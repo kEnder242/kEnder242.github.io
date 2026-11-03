@@ -1,0 +1,2198 @@
+{
+  "version": "1.0.0",
+  "description": "Navigational Companion Map for Gap Notes File (FEAT-683)",
+  "source_file": "notes_2019_DPV.txt",
+  "source_file_hash": "df74d98237780c00cde47313c0f13acc",
+  "total_lines": 5654,
+  "total_sections": 243,
+  "generated_at": "2026-11-02T15:37:27Z",
+  "sections": [
+    {
+      "section_id": "SEC-001",
+      "line_start": 1,
+      "line_end": 14,
+      "section_title": "Header / Environment Overview",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "hardware_setup"
+    },
+    {
+      "section_id": "SEC-002",
+      "line_start": 15,
+      "line_end": 19,
+      "section_title": "Backlog",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-003",
+      "line_start": 20,
+      "line_end": 28,
+      "section_title": "TODO THIS WEEK",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-004",
+      "line_start": 29,
+      "line_end": 48,
+      "section_title": "Section at line 29",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-005",
+      "line_start": 49,
+      "line_end": 76,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-006",
+      "line_start": 77,
+      "line_end": 111,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-007",
+      "line_start": 112,
+      "line_end": 147,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-008",
+      "line_start": 148,
+      "line_end": 171,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-009",
+      "line_start": 172,
+      "line_end": 194,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-010",
+      "line_start": 195,
+      "line_end": 216,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-011",
+      "line_start": 217,
+      "line_end": 226,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-012",
+      "line_start": 227,
+      "line_end": 255,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-013",
+      "line_start": 256,
+      "line_end": 265,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-014",
+      "line_start": 266,
+      "line_end": 351,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-015",
+      "line_start": 352,
+      "line_end": 376,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-016",
+      "line_start": 377,
+      "line_end": 394,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-017",
+      "line_start": 395,
+      "line_end": 406,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-018",
+      "line_start": 407,
+      "line_end": 421,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-019",
+      "line_start": 422,
+      "line_end": 452,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-020",
+      "line_start": 453,
+      "line_end": 476,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-021",
+      "line_start": 477,
+      "line_end": 503,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-022",
+      "line_start": 504,
+      "line_end": 522,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-023",
+      "line_start": 523,
+      "line_end": 554,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-024",
+      "line_start": 555,
+      "line_end": 564,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-025",
+      "line_start": 565,
+      "line_end": 574,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-026",
+      "line_start": 575,
+      "line_end": 588,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-027",
+      "line_start": 589,
+      "line_end": 600,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-028",
+      "line_start": 601,
+      "line_end": 611,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-029",
+      "line_start": 612,
+      "line_end": 624,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-030",
+      "line_start": 625,
+      "line_end": 644,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-031",
+      "line_start": 645,
+      "line_end": 664,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-032",
+      "line_start": 665,
+      "line_end": 677,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-033",
+      "line_start": 678,
+      "line_end": 687,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-034",
+      "line_start": 688,
+      "line_end": 706,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-035",
+      "line_start": 707,
+      "line_end": 716,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-036",
+      "line_start": 717,
+      "line_end": 738,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-037",
+      "line_start": 739,
+      "line_end": 772,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-038",
+      "line_start": 773,
+      "line_end": 804,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-039",
+      "line_start": 805,
+      "line_end": 816,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-040",
+      "line_start": 817,
+      "line_end": 869,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-041",
+      "line_start": 870,
+      "line_end": 894,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-042",
+      "line_start": 895,
+      "line_end": 906,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-043",
+      "line_start": 907,
+      "line_end": 919,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-044",
+      "line_start": 920,
+      "line_end": 936,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-045",
+      "line_start": 937,
+      "line_end": 967,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-046",
+      "line_start": 968,
+      "line_end": 977,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-047",
+      "line_start": 978,
+      "line_end": 988,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-048",
+      "line_start": 989,
+      "line_end": 1006,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-049",
+      "line_start": 1007,
+      "line_end": 1019,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-050",
+      "line_start": 1020,
+      "line_end": 1029,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-051",
+      "line_start": 1030,
+      "line_end": 1059,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-052",
+      "line_start": 1060,
+      "line_end": 1094,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-053",
+      "line_start": 1095,
+      "line_end": 1104,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-054",
+      "line_start": 1105,
+      "line_end": 1115,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-055",
+      "line_start": 1116,
+      "line_end": 1130,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-056",
+      "line_start": 1131,
+      "line_end": 1145,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-057",
+      "line_start": 1146,
+      "line_end": 1169,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-058",
+      "line_start": 1170,
+      "line_end": 1186,
+      "section_title": "Section at line 1170",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-059",
+      "line_start": 1187,
+      "line_end": 1201,
+      "section_title": "Section at line 1187",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-060",
+      "line_start": 1202,
+      "line_end": 1235,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-061",
+      "line_start": 1236,
+      "line_end": 1246,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-062",
+      "line_start": 1247,
+      "line_end": 1259,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-063",
+      "line_start": 1260,
+      "line_end": 1280,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-064",
+      "line_start": 1281,
+      "line_end": 1293,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-065",
+      "line_start": 1294,
+      "line_end": 1303,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-066",
+      "line_start": 1304,
+      "line_end": 1324,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-067",
+      "line_start": 1325,
+      "line_end": 1338,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-068",
+      "line_start": 1339,
+      "line_end": 1351,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-069",
+      "line_start": 1352,
+      "line_end": 1370,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-070",
+      "line_start": 1371,
+      "line_end": 1403,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-071",
+      "line_start": 1404,
+      "line_end": 1441,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-072",
+      "line_start": 1442,
+      "line_end": 1456,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-073",
+      "line_start": 1457,
+      "line_end": 1466,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-074",
+      "line_start": 1467,
+      "line_end": 1480,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-075",
+      "line_start": 1481,
+      "line_end": 1493,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-076",
+      "line_start": 1494,
+      "line_end": 1503,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-077",
+      "line_start": 1504,
+      "line_end": 1518,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-078",
+      "line_start": 1519,
+      "line_end": 1542,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-079",
+      "line_start": 1543,
+      "line_end": 1555,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-080",
+      "line_start": 1556,
+      "line_end": 1566,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-081",
+      "line_start": 1567,
+      "line_end": 1581,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-082",
+      "line_start": 1582,
+      "line_end": 1603,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-083",
+      "line_start": 1604,
+      "line_end": 1616,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-084",
+      "line_start": 1617,
+      "line_end": 1627,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-085",
+      "line_start": 1628,
+      "line_end": 1650,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-086",
+      "line_start": 1651,
+      "line_end": 1686,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-087",
+      "line_start": 1687,
+      "line_end": 1710,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-088",
+      "line_start": 1711,
+      "line_end": 1728,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-089",
+      "line_start": 1729,
+      "line_end": 1738,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-090",
+      "line_start": 1739,
+      "line_end": 1763,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-091",
+      "line_start": 1764,
+      "line_end": 1796,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-092",
+      "line_start": 1797,
+      "line_end": 1825,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-093",
+      "line_start": 1826,
+      "line_end": 1835,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-094",
+      "line_start": 1836,
+      "line_end": 1853,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-095",
+      "line_start": 1854,
+      "line_end": 1870,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-096",
+      "line_start": 1871,
+      "line_end": 1897,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-097",
+      "line_start": 1898,
+      "line_end": 1950,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-098",
+      "line_start": 1951,
+      "line_end": 1955,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-099",
+      "line_start": 1956,
+      "line_end": 1968,
+      "section_title": "Section at line 1956",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-100",
+      "line_start": 1969,
+      "line_end": 1983,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-101",
+      "line_start": 1984,
+      "line_end": 2002,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-102",
+      "line_start": 2003,
+      "line_end": 2012,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-103",
+      "line_start": 2013,
+      "line_end": 2031,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-104",
+      "line_start": 2032,
+      "line_end": 2072,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-105",
+      "line_start": 2073,
+      "line_end": 2082,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-106",
+      "line_start": 2083,
+      "line_end": 2100,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-107",
+      "line_start": 2101,
+      "line_end": 2138,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-108",
+      "line_start": 2139,
+      "line_end": 2175,
+      "section_title": "Section at line 2139",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-109",
+      "line_start": 2176,
+      "line_end": 2194,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-110",
+      "line_start": 2195,
+      "line_end": 2228,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-111",
+      "line_start": 2229,
+      "line_end": 2242,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-112",
+      "line_start": 2243,
+      "line_end": 2256,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-113",
+      "line_start": 2257,
+      "line_end": 2272,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-114",
+      "line_start": 2273,
+      "line_end": 2289,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-115",
+      "line_start": 2290,
+      "line_end": 2305,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-116",
+      "line_start": 2306,
+      "line_end": 2317,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-117",
+      "line_start": 2318,
+      "line_end": 2349,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-118",
+      "line_start": 2350,
+      "line_end": 2369,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-119",
+      "line_start": 2370,
+      "line_end": 2410,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-120",
+      "line_start": 2411,
+      "line_end": 2423,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-121",
+      "line_start": 2424,
+      "line_end": 2441,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-122",
+      "line_start": 2442,
+      "line_end": 2456,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-123",
+      "line_start": 2457,
+      "line_end": 2470,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-124",
+      "line_start": 2471,
+      "line_end": 2509,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-125",
+      "line_start": 2510,
+      "line_end": 2530,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-126",
+      "line_start": 2531,
+      "line_end": 2553,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-127",
+      "line_start": 2554,
+      "line_end": 2587,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-128",
+      "line_start": 2588,
+      "line_end": 2602,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-129",
+      "line_start": 2603,
+      "line_end": 2635,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-130",
+      "line_start": 2636,
+      "line_end": 2645,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-131",
+      "line_start": 2646,
+      "line_end": 2683,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-132",
+      "line_start": 2684,
+      "line_end": 2715,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-133",
+      "line_start": 2716,
+      "line_end": 2732,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-134",
+      "line_start": 2733,
+      "line_end": 2755,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-135",
+      "line_start": 2756,
+      "line_end": 2788,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-136",
+      "line_start": 2789,
+      "line_end": 2798,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-137",
+      "line_start": 2799,
+      "line_end": 2816,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-138",
+      "line_start": 2817,
+      "line_end": 2837,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-139",
+      "line_start": 2838,
+      "line_end": 2849,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-140",
+      "line_start": 2850,
+      "line_end": 2861,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-141",
+      "line_start": 2862,
+      "line_end": 2874,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-142",
+      "line_start": 2875,
+      "line_end": 2890,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-143",
+      "line_start": 2891,
+      "line_end": 2926,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-144",
+      "line_start": 2927,
+      "line_end": 2957,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-145",
+      "line_start": 2958,
+      "line_end": 2980,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-146",
+      "line_start": 2981,
+      "line_end": 2997,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-147",
+      "line_start": 2998,
+      "line_end": 3023,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-148",
+      "line_start": 3024,
+      "line_end": 3054,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-149",
+      "line_start": 3055,
+      "line_end": 3097,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-150",
+      "line_start": 3098,
+      "line_end": 3131,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-151",
+      "line_start": 3132,
+      "line_end": 3141,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-152",
+      "line_start": 3142,
+      "line_end": 3152,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-153",
+      "line_start": 3153,
+      "line_end": 3164,
+      "section_title": "Section at line 3153",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-154",
+      "line_start": 3165,
+      "line_end": 3286,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-155",
+      "line_start": 3287,
+      "line_end": 3302,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-156",
+      "line_start": 3303,
+      "line_end": 3312,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-157",
+      "line_start": 3313,
+      "line_end": 3329,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-158",
+      "line_start": 3330,
+      "line_end": 3356,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-159",
+      "line_start": 3357,
+      "line_end": 3386,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-160",
+      "line_start": 3387,
+      "line_end": 3399,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-161",
+      "line_start": 3400,
+      "line_end": 3415,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-162",
+      "line_start": 3416,
+      "line_end": 3447,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-163",
+      "line_start": 3448,
+      "line_end": 3457,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-164",
+      "line_start": 3458,
+      "line_end": 3487,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-165",
+      "line_start": 3488,
+      "line_end": 3507,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-166",
+      "line_start": 3508,
+      "line_end": 3536,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-167",
+      "line_start": 3537,
+      "line_end": 3555,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-168",
+      "line_start": 3556,
+      "line_end": 3565,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-169",
+      "line_start": 3566,
+      "line_end": 3583,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-170",
+      "line_start": 3584,
+      "line_end": 3598,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-171",
+      "line_start": 3599,
+      "line_end": 4131,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-172",
+      "line_start": 4132,
+      "line_end": 4144,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-173",
+      "line_start": 4145,
+      "line_end": 4154,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-174",
+      "line_start": 4155,
+      "line_end": 4181,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-175",
+      "line_start": 4182,
+      "line_end": 4192,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-176",
+      "line_start": 4193,
+      "line_end": 4212,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-177",
+      "line_start": 4213,
+      "line_end": 4227,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-178",
+      "line_start": 4228,
+      "line_end": 4247,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-179",
+      "line_start": 4248,
+      "line_end": 4257,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-180",
+      "line_start": 4258,
+      "line_end": 4275,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-181",
+      "line_start": 4276,
+      "line_end": 4344,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-182",
+      "line_start": 4345,
+      "line_end": 4357,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-183",
+      "line_start": 4358,
+      "line_end": 4374,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-184",
+      "line_start": 4375,
+      "line_end": 4384,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-185",
+      "line_start": 4385,
+      "line_end": 4408,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-186",
+      "line_start": 4409,
+      "line_end": 4429,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-187",
+      "line_start": 4430,
+      "line_end": 4449,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-188",
+      "line_start": 4450,
+      "line_end": 4474,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-189",
+      "line_start": 4475,
+      "line_end": 4512,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-190",
+      "line_start": 4513,
+      "line_end": 4522,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-191",
+      "line_start": 4523,
+      "line_end": 4536,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-192",
+      "line_start": 4537,
+      "line_end": 4546,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-193",
+      "line_start": 4547,
+      "line_end": 4567,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-194",
+      "line_start": 4568,
+      "line_end": 4577,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-195",
+      "line_start": 4578,
+      "line_end": 4603,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-196",
+      "line_start": 4604,
+      "line_end": 4622,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-197",
+      "line_start": 4623,
+      "line_end": 4633,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-198",
+      "line_start": 4634,
+      "line_end": 4652,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-199",
+      "line_start": 4653,
+      "line_end": 4665,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-200",
+      "line_start": 4666,
+      "line_end": 4724,
+      "section_title": "Module.Subtest -----------   Pass   Fail Errors --- Last Updated",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-201",
+      "line_start": 4725,
+      "line_end": 4736,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-202",
+      "line_start": 4737,
+      "line_end": 4778,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-203",
+      "line_start": 4779,
+      "line_end": 4788,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-204",
+      "line_start": 4789,
+      "line_end": 4799,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-205",
+      "line_start": 4800,
+      "line_end": 4830,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-206",
+      "line_start": 4831,
+      "line_end": 4851,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-207",
+      "line_start": 4852,
+      "line_end": 4861,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-208",
+      "line_start": 4862,
+      "line_end": 4893,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-209",
+      "line_start": 4894,
+      "line_end": 4910,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-210",
+      "line_start": 4911,
+      "line_end": 4924,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-211",
+      "line_start": 4925,
+      "line_end": 4935,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-212",
+      "line_start": 4936,
+      "line_end": 4945,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-213",
+      "line_start": 4946,
+      "line_end": 4959,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-214",
+      "line_start": 4960,
+      "line_end": 5014,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-215",
+      "line_start": 5015,
+      "line_end": 5035,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-216",
+      "line_start": 5036,
+      "line_end": 5079,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-217",
+      "line_start": 5080,
+      "line_end": 5089,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-218",
+      "line_start": 5090,
+      "line_end": 5101,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-219",
+      "line_start": 5102,
+      "line_end": 5114,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-220",
+      "line_start": 5115,
+      "line_end": 5163,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-221",
+      "line_start": 5164,
+      "line_end": 5237,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-222",
+      "line_start": 5238,
+      "line_end": 5249,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-223",
+      "line_start": 5250,
+      "line_end": 5265,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-224",
+      "line_start": 5266,
+      "line_end": 5276,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-225",
+      "line_start": 5277,
+      "line_end": 5312,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-226",
+      "line_start": 5313,
+      "line_end": 5330,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-227",
+      "line_start": 5331,
+      "line_end": 5352,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-228",
+      "line_start": 5353,
+      "line_end": 5364,
+      "section_title": "Section at line 5353",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-229",
+      "line_start": 5365,
+      "line_end": 5383,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-230",
+      "line_start": 5384,
+      "line_end": 5393,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-231",
+      "line_start": 5394,
+      "line_end": 5403,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-232",
+      "line_start": 5404,
+      "line_end": 5431,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-233",
+      "line_start": 5432,
+      "line_end": 5490,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-234",
+      "line_start": 5491,
+      "line_end": 5504,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-235",
+      "line_start": 5505,
+      "line_end": 5563,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-236",
+      "line_start": 5564,
+      "line_end": 5575,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-237",
+      "line_start": 5576,
+      "line_end": 5587,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-238",
+      "line_start": 5588,
+      "line_end": 5597,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-239",
+      "line_start": 5598,
+      "line_end": 5607,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-240",
+      "line_start": 5608,
+      "line_end": 5617,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-241",
+      "line_start": 5618,
+      "line_end": 5632,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-242",
+      "line_start": 5633,
+      "line_end": 5652,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-243",
+      "line_start": 5653,
+      "line_end": 5654,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    }
+  ]
+}

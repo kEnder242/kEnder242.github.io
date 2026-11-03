@@ -8,7 +8,15 @@
       "Research Link",
       "Archer City Platform"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2021-03-01",
@@ -19,7 +27,15 @@
       "peci_flood.tdf",
       "PECI Throughput"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2021-03-01",
@@ -30,7 +46,18 @@
       "peci_poison.tdf",
       "PECI Command Rejection"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request ce288aea secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED\"spoken_take\": \"Let's dive into the Redfish OEM API validation meeting. I'm checking our BMC firmware logs to see if we have any records related to the CCB - BMC - OPEN event.\",\n  \"search_terms\": \n    \"[16014835461]\",\n    \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-03-01",
@@ -40,6 +67,14 @@
     "tags": [
       "Tool Release Years"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

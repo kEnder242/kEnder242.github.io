@@ -9,7 +9,15 @@
       "validation",
       "testing"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-01-01",
+    "event_era": "2015-01-01",
+    "event_year": 2015,
+    "event_quarter": "2015-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2015-01-15",
@@ -20,7 +28,15 @@
       "host interface",
       "error"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-01-15",
+    "event_era": "2015-01-15",
+    "event_year": 2015,
+    "event_quarter": "2015-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2015-06-15",
@@ -31,7 +47,15 @@
       "BXT OEM toolstack",
       "system trace"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-06-15",
+    "event_era": "2015-06-15",
+    "event_year": 2015,
+    "event_quarter": "2015-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2015-06-15",
@@ -42,7 +66,15 @@
       "internal error",
       "metadata file"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-06-15",
+    "event_era": "2015-06-15",
+    "event_year": 2015,
+    "event_quarter": "2015-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2015-08-25",
@@ -53,7 +85,15 @@
       "target relocation",
       "BXTP"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-08-25",
+    "event_era": "2015-08-25",
+    "event_year": 2015,
+    "event_quarter": "2015-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2015-10-01",
@@ -64,7 +104,18 @@
       "tool",
       "causality error"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2015-10-01",
+    "event_era": "2015-01-01",
+    "event_year": 2015,
+    "event_quarter": "2015-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request c222a6d0 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Voice) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite.\n\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2020-01-01] [STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.\nEVIDENCE: Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.\n\n[BLACKBOARD_LEDGER]:\nDistillation Bullets:\n- [PINKY]: {\n\"spoken_take\": \"Hey Jason, sounds like we're getting started on something new! I'm checking our Acme Lab telemetry to see how our latest experiments are running.\",\n\"search_terms\": \"Acme Lab\", \"upvotes\": 0\n- [PINKY]: [Two-Mice TL;DR delivered to Jason (52 tokens)]\n\n[BOOST_INTEREST]\n\n<boost_interest> \ud83d\udca1 Curator Note: The key accomplishment of enabling special user `root` with password `0penBmc1` is crucial for BMC provisioning BKM through host interface. This enables the system to access and configure BMC settings, ensuring proper operation of the BMC. \n\n<boost_interest>",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2016-03-16",
@@ -74,7 +125,15 @@
     "tags": [
       "Mailbox Timeout",
       "error"
-    ]
+    ],
+    "document_date": "2016-03-16",
+    "event_era": "2016-03-16",
+    "event_year": 2016,
+    "event_quarter": "2016-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
   },
   {
     "date": "2016-03-16",
@@ -85,6 +144,14 @@
       "GFXEMU",
       "job submission",
       "error"
-    ]
+    ],
+    "document_date": "2016-03-16",
+    "event_era": "2016-03-16",
+    "event_year": 2016,
+    "event_quarter": "2016-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
   }
 ]

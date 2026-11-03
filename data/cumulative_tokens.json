@@ -1,19 +1,21 @@
 {
-  "last_updated": "2026-10-19 06:01:18",
-  "lifetime_tokens_generated": 677871,
-  "lifetime_kwh_consumed": 2.51033,
-  "commercial_api_cost_usd": 1.836,
-  "actual_electricity_cost_usd": 0.3765,
-  "net_dollars_saved_usd": 1.4595,
-  "percent_saved": 79.5,
+  "last_updated": "2026-11-03 06:01:46",
+  "lifetime_tokens_generated": 398979,
+  "sovereign_tokens_generated": 331113,
+  "cloud_tokens_generated": 67866,
+  "lifetime_kwh_consumed": 14.7747,
+  "commercial_api_cost_usd": 0.9933,
+  "actual_electricity_cost_usd": 2.2162,
+  "net_dollars_saved_usd": 0.0,
+  "percent_saved": 0.0,
   "sources": {
     "swarm_delegations": {
-      "tokens": 122678,
-      "runs": 173
+      "tokens": 113782,
+      "runs": 123
     },
     "web_intercom": {
-      "tokens": 555193,
-      "runs": 1732
+      "tokens": 285197,
+      "runs": 4370
     },
     "nightly_forge": {
       "tokens": 0,
@@ -22,14 +24,12 @@
   },
   "tiers": {
     "sovereign_local": {
-      "tokens": 611555,
-      "runs": 1872
+      "tokens": 331113,
+      "runs": 4454
     },
     "cloud_swarm": {
-      "tokens": 65864,
-      "runs": 32
+      "tokens": 67866,
+      "runs": 39
     }
-  },
-  "sovereign_tokens_generated": 612007,
-  "cloud_tokens_generated": 65864
+  }
 }

@@ -8,7 +8,15 @@
       "BXT FPGA",
       "NPK SDK"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2014-10-01",
+    "event_era": "2014-10-01",
+    "event_year": 2014,
+    "event_quarter": "2014-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2014-10-31",
@@ -19,7 +27,15 @@
       "LTB",
       "NullPointerException"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2014-10-31",
+    "event_era": "2014-10-31",
+    "event_year": 2014,
+    "event_quarter": "2014-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2014-10-31",
@@ -31,6 +47,14 @@
       "BXTSupportPkWin64",
       "ISDBaseWin64"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2014-10-31",
+    "event_era": "2014-10-31",
+    "event_year": 2014,
+    "event_quarter": "2014-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

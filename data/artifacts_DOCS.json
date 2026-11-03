@@ -1,23 +1,26 @@
 [
   {
-    "synopsis": "Innovative AR experience for a fictional world.",
+    "synopsis": "InAWorld document analyzed for silicon validation context.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "AR",
-      "Augmented Reality",
-      "Innovation"
+      "InAWorld",
+      "docx",
+      "analysis"
     ],
     "filename": "AR - InAWorld.docx",
     "method": "AI"
   },
   {
-    "synopsis": "File content unavailable for portfolio analysis.",
-    "rank": 2,
+    "synopsis": "BMC firmware and telemetry automation portfolio",
+    "rank": 4,
     "type": "Document",
     "keywords": [
-      "Missing Data",
-      "Analysis Failure"
+      "BMC",
+      "OpenBMC",
+      "IPMI",
+      "Redfish",
+      "PLDM"
     ],
     "filename": "BMC experience bullets.txt",
     "method": "AI"
@@ -32,40 +35,40 @@
     "drive_id": "1sgbcpgviOaqb0p64LfwEHOD7XQnGKM0m"
   },
   {
-    "synopsis": "Reverse-engineering a Steam Deck plugin and overcoming development challenges.",
-    "rank": 2,
+    "synopsis": "Reverse-engineered Steam Deck plugin via custom tooling and UI debugging.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
+      "Embedded/Linux",
+      "React Reverse-Engineering",
       "Steam Deck",
-      "Plugin Development",
-      "React Reverse-Engineering"
+      "Deployment Automation",
+      "UI Debugging"
     ],
     "filename": "Decky_Trailers.md",
     "method": "AI"
   },
   {
-    "synopsis": "Engineered BMC firmware, telemetry systems, and automated validation frameworks.",
+    "synopsis": "Distributed agentic infrastructure for cross-OS LLM orchestration.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "OpenBMC",
-      "Firmware",
-      "Redfish",
-      "Automation",
-      "C++"
+      "MCP",
+      "agentic-orchestration",
+      "cross-platform",
+      "telemetry"
     ],
     "filename": "HomeLabAI.md",
     "method": "AI"
   },
   {
-    "synopsis": "Engineered complex plugin deployment by reverse-engineering proprietary constraints and building custom orchestration tools.",
+    "synopsis": "OpenBMC firmware and telemetry development portfolio.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "Embedded Linux",
-      "React Architecture",
-      "Build System",
-      "Agentic Orchestration"
+      "OpenBMC",
+      "firmware",
+      "telemetry"
     ],
     "filename": "Jason Allred - OpenBMC Development experience.rtf",
     "method": "AI"
@@ -79,33 +82,28 @@
     "method": "Expert Hardcode"
   },
   {
-    "synopsis": "Reference letter for Jason from 2016.",
-    "rank": 2,
+    "synopsis": "Reference letter from Jason, dated 2016.",
+    "rank": 3,
     "type": "Document",
     "keywords": [
       "reference",
       "letter",
+      "2016",
       "Jason"
     ],
     "filename": "Jason_Reference_Letter 2016.doc",
-    "method": "AI",
-    "inferred_intent": "greeting",
-    "addressed_to": "NONE",
-    "vibe": "CASUAL",
-    "domain": "unknown",
-    "casual": 0.8,
-    "intrigue": 0.0,
-    "importance": 0.0,
-    "target_domains": []
+    "method": "AI"
   },
   {
-    "synopsis": "Senior Platform Telemetry Engineer with datacenter scale expertise.",
-    "rank": 2,
+    "synopsis": "Senior platform telemetry engineer resume notes strategy.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
-      "NVIDIA",
-      "Platform Telemetry",
-      "Datacenter Scale"
+      "NVIDIA Screening Cheat Sheet",
+      "Senior Platform Telemetry Engineer",
+      "Datacenter scale",
+      "Telemetry diagnosis action",
+      "Firmware OOB observability"
     ],
     "filename": "NVIDIA_Screening_Cheat_Sheet.txt",
     "method": "AI"
@@ -119,272 +117,80 @@
     "method": "Expert Hardcode"
   },
   {
-    "synopsis": "Engineered a distributed AI system managing cross-OS agents and latency.",
-    "rank": 4,
+    "synopsis": "High-fidelity power hysteresis characterization for PnP engineering.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "Agentic Orchestration",
-      "Distributed Systems",
-      "Model Context Protocol",
-      "Latency Management"
+      "power hysteresis",
+      "PnP engineering",
+      "high-fidelity characterization"
     ],
     "filename": "PnP Engineering Story- High-Fidelity Power Hysteresis Characterization.docx",
     "method": "AI"
   },
   {
-    "filename": "War Stories 2015-2026 - Jason Allred.docx",
-    "synopsis": "Word Doc",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Heuristic"
-  },
-  {
-    "synopsis": "Developed OpenBMC firmware, telemetry services, and protocol validation frameworks.",
+    "synopsis": "War stories from a senior engineer's platform validation career.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "OpenBMC",
-      "Firmware",
-      "Telemetry",
-      "Redfish",
-      "PLDM"
+      "silicon-validation",
+      "PCIe-RAS",
+      "telemetry"
+    ],
+    "filename": "War Stories 2015-2026 - Jason Allred.docx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Senior validation engineer with 19 years of hardware-software integration experience.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "silicon validation",
+      "firmware automation",
+      "SoC debug",
+      "datacenter platform",
+      "telemetry"
     ],
     "filename": "linkedin.txt",
     "method": "AI"
   },
   {
-    "synopsis": "File content unavailable for analysis; data required.",
-    "rank": 2,
+    "synopsis": "Session summary and rules of engagement for remote execution automation.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
-      "Missing Data"
+      "Rules of Engagement",
+      "Magic Loop",
+      "Test Hygiene",
+      "SSH Discipline"
     ],
     "filename": "project_8149f759.md",
     "method": "AI"
   },
   {
-    "synopsis": "No file content provided for analysis.",
-    "rank": 2,
+    "synopsis": "HomeLabAI agentic prompt for self-hosted notes and resume automation.",
+    "rank": 4,
     "type": "Document",
     "keywords": [
-      "N/A"
+      "agentic",
+      "self-hosted",
+      "resume",
+      "notes",
+      "prompt"
     ],
     "filename": "prompt.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Expert in validating datacenter telemetry, firmware observability, and system reliability.",
-    "rank": 4,
+    "synopsis": "Secret project code is Blueberry.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "Platform Telemetry",
-      "Firmware Validation",
-      "Datacenter Scale",
-      "OOB Observability"
+      "secret",
+      "Blueberry",
+      "project code"
     ],
     "filename": "secret.txt",
     "method": "AI"
-  },
-  {
-    "filename": "ras-viral.txt",
-    "synopsis": "Technical notes and validation strategy for CPU Viral state handling.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1Q6SyKK4_qb4VSp0YozQnQ03URVbum7lv"
-  },
-  {
-    "filename": "riv_common.py",
-    "synopsis": "Core PythonSV utility for managing device naming and named nodes in Simics.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1Vgs_Gr9wdk8nc3ByEn4jH859jK29Yut5"
-  },
-  {
-    "filename": "MCTP Debug features.pptx",
-    "synopsis": "Technical deep-dive into MCTP discovery and debugging architecture.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1Zd14tG7tIabR1DOPXmPkrTg33Ds-vdW0"
-  },
-  {
-    "filename": "MIV DTAF integration.pptx",
-    "synopsis": "Architecture for integrating MIV with the Distributed Test Automation Framework.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1jQfX4aK3yvxzN_WxhPDKvv9QSQigAwc6"
-  },
-  {
-    "synopsis": "MIV Ignition-Redfish validation script for PowerPoint presentation",
-    "rank": 3,
-    "type": "Script",
-    "keywords": [
-      "MIV",
-      "Ignition",
-      "Redfish",
-      "Validation",
-      "PowerPoint",
-      "Presentation"
-    ],
-    "filename": "MIV Ignition-Redfish validation-Backup.pptx",
-    "method": "AI",
-    "drive_id": "1sLjcbrxM3Bi9HMWmkuQPQRTvmSbVmrFJ"
-  },
-  {
-    "filename": "PECI_Comparison.xlsx",
-    "synopsis": "Side-by-side technical comparison of PECI revisions and command support.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1Kc9DsqzyIYOgTUZ5R7rgVW3rtD-xNl42"
-  },
-  {
-    "synopsis": "Demonstrates stress testing of Redfish PECI for server hardware diagnostics",
-    "rank": 4,
-    "type": "Presentation",
-    "keywords": [
-      "Redfish",
-      "PECI",
-      "Server Diagnostics",
-      "Stress Testing",
-      "Power Management"
-    ],
-    "filename": "Stressing Redfish PECI_demo.pptx",
-    "method": "AI",
-    "drive_id": "1HUg9mETwcZF-KoFVw3hWlNcPlQ1tM7z5"
-  },
-  {
-    "filename": "pl1_pl2.txt",
-    "synopsis": "Automated power limit (PL1/PL2) sweep and validation results.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1yq2UOrpkjA1G5u_SIxxgbq1HfTAVb8KK"
-  },
-  {
-    "filename": "redfish_utils.py",
-    "synopsis": "Abstraction layer for scalable Redfish API interactions (GET/POST/PATCH).",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1ZSD1HM8ymIDtORFwW5DcImWdUunYqJtw"
-  },
-  {
-    "filename": "MIV- Requirements for Automation.xlsx",
-    "synopsis": "Comprehensive requirement matrix for manageability validation automation.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode"
-  },
-  {
-    "filename": "_Stressing Redfish PECI.pptx",
-    "synopsis": "Presentation on the methodology for high-load Redfish-to-PECI stress testing.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1-BeZ4N7l9ayq4XKZy-CslC3fOwN1V5Dm"
-  },
-  {
-    "filename": "blackbox.py",
-    "synopsis": "System telemetry recorder for capturing post-mortem diagnostic data.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1DVv5BQXU00Jyh22jZLQc6q8mVJCcKTxk"
-  },
-  {
-    "filename": "gethostcpudata.py",
-    "synopsis": "Utility for extracting host CPU telemetry via sideband interfaces.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1IwlHtWG8jVpIACM55hM63C3vQf6xriYk"
-  },
-  {
-    "filename": "makechart.py",
-    "synopsis": "Telemetry visualization tool converting raw PECI/RAPL logs into analytical charts.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1Rr684PJVPrXmIGe5fmmcR4fSUuyk4NHd"
-  },
-  {
-    "filename": "mctp_wrapper.cpp",
-    "synopsis": "C++ packet handling wrapper for low-latency MCTP communication.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1706VmAyfVN-DlZYT8jhagHUJOChFFl5N"
-  },
-  {
-    "filename": "peci_redfish.py",
-    "synopsis": "Tool for bridging and validating PECI commands through Redfish endpoints.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
-  },
-  {
-    "filename": "pecistressor.py",
-    "synopsis": "High-throughput PECI command stress tool, capable of ~5300 commands/sec.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1a95TKnx8eODfM5gdCSv6V07i0ZHL_3F1"
-  },
-  {
-    "filename": "policy.py",
-    "synopsis": "Platform power policy management and validation logic.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1bl8p8sKgvUG3fXVTi2XwHLdzxjprn-eD"
-  },
-  {
-    "filename": "sensor_validator.py",
-    "synopsis": "Automated validation of OpenBMC sensor thresholds against platform specs.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "17tWU4uGCSCcvyrU825KXm39uDfMg_FlX"
-  },
-  {
-    "filename": "Backup -MIV Blackbox Recorder.pptx",
-    "synopsis": "Documentation on flight recorder analysis for platform failures.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1LgjAPhFAFk2YmuCwJVhdZWeRKTgIHU7d"
-  },
-  {
-    "filename": "MIV for Execution.pptx",
-    "synopsis": "Strategic execution plan for large-scale manageability validation.",
-    "rank": 4,
-    "type": "Document",
-    "keywords": [],
-    "method": "Expert Hardcode",
-    "drive_id": "1byzuaJU1IwmJf2LZhVwCCWaigrCseGmW"
   }
 ]

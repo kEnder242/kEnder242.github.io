@@ -9,6 +9,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-085e"
+    "id": "GEM-085e",
+    "document_date": "2017-01-01",
+    "event_era": "2017-01-01",
+    "event_year": 2017,
+    "event_quarter": "2017-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 7e0d4734 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: Running `startCscripts.py` with specific arguments (`-a ipc` and `-c CLX_LBG_XDPA`) to engage BMC provisioning BKM functionality.\n\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n\n[CHUNK-2]:\n[RAG_CONTEXT]:\n\n[2018-2019-01] Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`\n\nEVIDENCE: c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA\n\n[BLACKBOARD_LEDGER]:\nDistillation Bullets:\n- BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`.\n- BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`.\n\n[PREVIOUS_DEBATE]:",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "chunk_type": "FOCAL_DRAFT",
+    "spatial_anchor": {
+      "source_file": "2017.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2017-01-01",
+      "year": 2017,
+      "quarter": "2017-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   }
 ]

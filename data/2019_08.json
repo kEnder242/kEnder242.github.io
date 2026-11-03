@@ -10,7 +10,18 @@
       "PCI",
       "IPMI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-01-01",
+    "event_era": "2019-01-01",
+    "event_year": 2019,
+    "event_quarter": "2019-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 7b351a62 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: BMC PECI master functionality discussion on 3/24/2020.\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2020-03-24] BMC PECI master functionality discussion\nEVIDENCE: [RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020\n\n</historical_record>\n\n[BLACKBOARD_LEDGER]:\nDistillation Bullets:\n- BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`.\n\n[PREVIOUS_DEBATE]:\n User: DREAM_PASS: Refine the technical artifact from 2020_08.json into a high-density 'Diamond' gem.\n\n[CONTEXT]: {\"date\": \"2020-08-27\", \"summary\": \"Opcode 0x2E found to be a common prefix for various NM and PLP functions.\", ...}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2022-01-01",
@@ -20,6 +31,14 @@
     "tags": [
       "Intel",
       "HSD Appstore"
-    ]
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0
   }
 ]

@@ -8,7 +8,15 @@
       "L-BMC",
       "BMC"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2020-07-01",
@@ -19,7 +27,18 @@
       "validation",
       "BMC"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 7d551951 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"\nAnchor Missing: no anchor => KEEP\n- CHUNK-2: Anchor Match: no anchor => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[ENGINEERING TRIGGER CONTEXT]\nDebug condition or inquiry: PECI master configuration check for optimal ignition.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-07-01",
@@ -30,7 +49,15 @@
       "recovery",
       "MIV"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-07-07",
@@ -41,7 +68,15 @@
       "code review",
       "issue investigation"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-07-07",
@@ -52,7 +87,18 @@
       "firmware update",
       "L-BMC"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-07-07",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 83134c99 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDLet me see if I can find some info on proposed modular BMC support. Can you tell me more about what you're looking for?",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-07-28",
@@ -63,6 +109,14 @@
       "crash dump",
       "IVL"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-07-28",
+    "event_era": "2020-07-28",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

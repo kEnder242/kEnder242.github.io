@@ -14,10 +14,11 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 3,
-    "refinement_level": 0,
-    "passes": 0,
+    "refinement_level": 1,
+    "passes": 1,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 32f2910f secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like you're looking into the MIV test case where Postman was used with IP address 10.23.20.135 and Redfish protocol. I'm checking our telemetry records to see how this interaction impacted our system.\",\n  \"search_terms\": \n    \"[['Redfish', 'Postman', 'IP address'], ['MIV test case', 'API interactions'], ['10.23.20.135', 'Redfish protocol']]\", \n  \"upvote\": true\n}"
   },
   {
     "date": "2021-07-28",
@@ -75,10 +76,11 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 3,
-    "refinement_level": 0,
-    "passes": 0,
+    "refinement_level": 1,
+    "passes": 1,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 4a7cd13e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a critical issue where MSR accesses are failing due to missing 0x40 responses from all 56 thread IDs. I'm checking our telemetry data to see if there's any correlation between this error and recent changes to the CPU or memory configurations.\",\n  \"search_terms\": \"MSR access errors, 0x40 responses, CR3.Punit, NCEVENTS_SCF_UBOX, thread ID failures\",\n  \"upvote\": true\n}"
   },
   {
     "date": "2021-07-30",
@@ -96,10 +98,11 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 3,
-    "refinement_level": 0,
-    "passes": 0,
+    "refinement_level": 1,
+    "passes": 1,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 4f43862f secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it seems like you're looking into a tool used to send raw PECI commands. I'm checking our records on how we've been using curl for debugging purposes.\",\n  \"search_terms\": \n    \"[['PECI', 'Redfish', 'curl'], ['Z87-Linux', 'Acme Lab', 'debug'], ['Linux', 'PCIe', 'System Management']]\",\n  \"upvote\": true\n}"
   },
   {
     "date": "2021-07-30",
@@ -117,9 +120,10 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 4,
-    "refinement_level": 0,
-    "passes": 0,
-    "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "refinement_level": 1,
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 23d2fd0a secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }"
   }
 ]

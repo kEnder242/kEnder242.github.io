@@ -8,7 +8,15 @@
       "MIV content readiness",
       "DTAF"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-05-15",
@@ -19,7 +27,15 @@
       "priority execution requests",
       "PCIE Whitley"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2020-05-21",
@@ -30,6 +46,14 @@
       "Crasdump/EINJ knobs",
       "DTAF"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-05-21",
+    "event_era": "2020-05-21",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

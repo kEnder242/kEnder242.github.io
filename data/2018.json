@@ -9,19 +9,70 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-13b1"
+    "id": "GEM-13b1",
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 39b7b58d secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason's early career milestone was indeed a crucial step towards mastering firmware development and transport library creation, which laid the groundwork for his future success in technical expertise and problem-solving.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "chunk_type": "FOCAL_DRAFT",
+    "spatial_anchor": {
+      "source_file": "2018.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2018-01-01",
-    "summary": "INJC-71 einj 02 functional mem/pcie correctable/(+uc)non_fatal/fatal errors on Linux",
+    "summary": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
     "evidence": "https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
     "sensitivity": "Public",
     "tags": [
-      "Linux",
+      "APEI/EINJ",
       "INJC-71",
-      "einj 02"
+      "Linux",
+      "OS log error messages",
+      "einj 02",
+      "error injection"
     ],
-    "id": "GEM-a1c9"
+    "id": "GEM-a1c9",
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Linux, INJC-71, einj 02.",
+    "spatial_anchor": {
+      "source_file": "2018.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "rank": 4
   },
   {
     "date": "2018-01-01",
@@ -32,7 +83,30 @@
       "PyCharm",
       "gap analysis"
     ],
-    "id": "GEM-7b8b"
+    "id": "GEM-7b8b",
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of PyCharm, gap analysis.",
+    "spatial_anchor": {
+      "source_file": "2018.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 479,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2018-01-01",
@@ -43,7 +117,479 @@
       "Linux",
       "error injection"
     ],
-    "id": "GEM-d9aa"
+    "id": "GEM-d9aa",
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Linux, error injection.",
+    "spatial_anchor": {
+      "source_file": "2018.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "Proton1 and Proton2 platforms tested for App Direct Dependency Failure during Boot (HSD-ES) on Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot'",
+    "sensitivity": "Public",
+    "tags": [
+      "Purley 2S",
+      "Proton1",
+      "Purley 4S",
+      "Proton2"
+    ],
+    "rank": 4,
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Proton1, Purley 2S, Proton2.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-c5a2"
+  },
+  {
+    "date": "2018-01-01",
+    "summary": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+    "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX_LBG_XDPA",
+      "IPC"
+    ],
+    "rank": 4,
+    "document_date": "2018-01-01",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 913f7ebd secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, I'm intrigued by your question! It seems like you're trying to understand why the Python script `startCscripts.py` was run with specific arguments.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2018_2019.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-01",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-e951"
+  },
+  {
+    "date": "2018-01-02",
+    "summary": "Stress testing conducted on Proton2 using stressapptest and FIO to validate DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic - Linux.",
+    "evidence": "RAW LOGS: './installer ungracefulDcFioSat'",
+    "sensitivity": "Public",
+    "tags": [
+      "stressapptest",
+      "FIO"
+    ],
+    "rank": 4,
+    "document_date": "2018-01-02",
+    "event_era": "2018-01-02",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of stressapptest, FIO.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-02",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-dec7"
+  },
+  {
+    "date": "2018-01-03",
+    "summary": "CScripts version Rev 1.46 Bld 726820 used for Purley 2S and 4S Platforms.",
+    "evidence": "RAW LOGS: 'Cscripts CScripts for Purley 2S and 4S Platforms Rev 1.46 Bld 726820 - https://cdrdv2.intel.com/v1/dl/getContent/572076'",
+    "sensitivity": "Public",
+    "tags": [
+      "CScripts",
+      "Purley 2S",
+      "Purley 4S"
+    ],
+    "rank": 4,
+    "document_date": "2018-01-03",
+    "event_era": "2018-01-03",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Purley 4S, CScripts, Purley 2S.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-01-03",
+      "year": 2018,
+      "quarter": "2018-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-9713"
+  },
+  {
+    "date": "2018-05-22",
+    "summary": "Install HAMR (no specific version mentioned)",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "HAMR"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-22",
+    "event_era": "2018-05-22",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of HAMR.",
+    "spatial_anchor": {
+      "source_file": "2018_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-05-22",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-14e3"
+  },
+  {
+    "date": "2018-05-23",
+    "summary": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+    "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
+    "sensitivity": "Public",
+    "tags": [
+      "shmemcc",
+      "HAMR",
+      "UFM"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-23",
+    "event_era": "2018-05-23",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of UFM, HAMR, shmemcc.",
+    "spatial_anchor": {
+      "source_file": "2018_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-05-23",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-a8b2"
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Setup Infiniband port-to-port post-driver using quickstart",
+    "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
+    "sensitivity": "Public",
+    "tags": [
+      "Infiniband",
+      "quickstart"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-24",
+    "event_era": "2018-05-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of quickstart, Infiniband.",
+    "spatial_anchor": {
+      "source_file": "2018_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-05-24",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-946a"
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "PMEM",
+      "AppDirect Mode",
+      "AEP"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-24",
+    "event_era": "2018-05-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of AEP, PMEM, AppDirect Mode.",
+    "spatial_anchor": {
+      "source_file": "2018_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-05-24",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-a50c"
+  },
+  {
+    "date": "2018-06-01",
+    "summary": "TODO: Investigate 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515)",
+    "evidence": "RAW LOGS: 'The primary TODO or research links mentioned are 'POST memory test. -VC30' (2204264234) and DXE INIT 0xD4 hang (2204272515).'",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "bug"
+    ],
+    "rank": 4,
+    "document_date": "2018-06-01",
+    "event_era": "2018-06-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of TODO, bug.",
+    "spatial_anchor": {
+      "source_file": "2018_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-06-01",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-1c6b"
+  },
+  {
+    "date": "2018-06-01",
+    "summary": "Memory configuration corrected using ixpdimm-cli create -goal persistentmemorytype=appdirect and rebooting the system",
+    "evidence": "RAW LOGS: 'The authors used `ixpdimm-cli create -goal persistentmemorytype=appdirect` and then rebooted the system. After the reboot, they ran `ixpdimm-cli show -memoryresources`, which showed a corrected memory configuration with AppDirectCapacity set to 500 GB.'",
+    "sensitivity": "Public",
+    "tags": [
+      "memory",
+      "configuration"
+    ],
+    "rank": 4,
+    "document_date": "2018-06-01",
+    "event_era": "2018-06-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of configuration, memory.",
+    "spatial_anchor": {
+      "source_file": "2018_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-06-01",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-3a33"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Verification process initiated on Cluster with 0/60397968 error rate (0.000000%)",
+    "evidence": "RAW LOGS: 'The verification process initiated on June 29, 2018, had an error rate of 0/60397968 (0.000000%).'",
+    "sensitivity": "Public",
+    "tags": [
+      "verification",
+      "Cluster"
+    ],
+    "rank": 4,
+    "document_date": "2018-06-29",
+    "event_era": "2018-06-29",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Cluster, verification.",
+    "spatial_anchor": {
+      "source_file": "2018_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-06-29",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-0119"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "Configuration setting for SHMEM_SYMMETRIC_HEAP_SIZE set to 4000M",
+    "evidence": "SHMEM_SYMMETRIC_HEAP_SIZE=4000M; time mpirun -hostfile hostfile -n 12 /home/jallred/HAMR/bin/hamr -i 100000 -m1024 -M65536 --time-init 1",
+    "sensitivity": "Public",
+    "tags": [
+      "configuration",
+      "SHMEM_SYMMETRIC_HEAP_SIZE"
+    ],
+    "rank": 4,
+    "document_date": "2018-06-29",
+    "event_era": "2018-06-29",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of configuration, SHMEM_SYMMETRIC_HEAP_SIZE.",
+    "spatial_anchor": {
+      "source_file": "2018_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-06-29",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-dd14"
+  },
+  {
+    "date": "2018-06-29",
+    "summary": "System's memory resources increase after creating a persistent namespace using ixpdimm-cli create -goal persistentmemorytype=appdirect",
+    "evidence": "ixpdimm-cli show -memoryresources",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "persistentmemory"
+    ],
+    "rank": 4,
+    "document_date": "2018-06-29",
+    "event_era": "2018-06-29",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of persistentmemory, ixpdimm-cli.",
+    "spatial_anchor": {
+      "source_file": "2018_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-06-29",
+      "year": 2018,
+      "quarter": "2018-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-d369"
   },
   {
     "date": "2018-07-27",
@@ -55,7 +601,15 @@
       "lanconf"
     ],
     "id": "GEM-0f37",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-07-27",
+    "event_era": "2017-06-01",
+    "event_year": 2017,
+    "event_quarter": "2017-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Purley\\b|\\bSkylake[- ]SP",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2018-07-31",
@@ -67,7 +621,15 @@
       "dax"
     ],
     "id": "GEM-3be5",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-07-31",
+    "event_era": "2018-07-31",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2018-07-31",
@@ -79,6 +641,1231 @@
       "parted"
     ],
     "id": "GEM-995f",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2018-07-31",
+    "event_era": "2018-07-31",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-08-29",
+    "summary": "POST memory test failure with Machine Check Exception (MCE) error code VC30 in HSD-ES case #2204264234",
+    "evidence": "HSD-ES case #2204264234 reports a POST memory test failure with MCE error code VC30",
+    "sensitivity": "Public",
+    "tags": [
+      "error",
+      "mce",
+      "vc30"
+    ],
+    "rank": 4,
+    "document_date": "2018-08-29",
+    "event_era": "2018-08-29",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of error, mce, vc30.",
+    "spatial_anchor": {
+      "source_file": "2018_08.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-08-29",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-a522"
+  },
+  {
+    "date": "2018-08-31",
+    "summary": "ixpdimm-cli help command takes an excessively long time to execute in HSD-ES case #2204553489",
+    "evidence": "HSD-ES case #2204553489 reports the ixpdimm-cli help command taking an excessively long time to execute",
+    "sensitivity": "Public",
+    "tags": [
+      "ixpdimm-cli",
+      "performance"
+    ],
+    "rank": 4,
+    "document_date": "2018-08-31",
+    "event_era": "2018-08-31",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of ixpdimm-cli, performance.",
+    "spatial_anchor": {
+      "source_file": "2018_08.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-08-31",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-ee1f"
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "App Direct Dependency Failure during Boot and BIOS update to PSE119N",
+    "evidence": "HSD: [HSD-ES][server_platf][bug][purley][2205492723][p2-high][open] App Direct Dependency Failure during Boot. BMC (Primary) is Active with UEFI Pending 1.50 PSE119K.",
+    "sensitivity": "Public",
+    "tags": [
+      "BIOS update",
+      "App Direct Dependency Failure"
+    ],
+    "rank": 4,
+    "document_date": "2018-09-18",
+    "event_era": "2018-09-18",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of App Direct Dependency Failure, BIOS update.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-09-18",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-fee5"
+  },
+  {
+    "date": "2018-09-18",
+    "summary": "Configuring grub2-mkconfig settings",
+    "evidence": "nano /etc/default/grub GRUB_CMDLINE_LINUX=\"<...> console=tty0 console=ttyS0,115200n8\" and then \"grub2-mkconfig -o /etc/grub2-efi.cfg\"",
+    "sensitivity": "Public",
+    "tags": [
+      "configuration",
+      "grub2-mkconfig"
+    ],
+    "rank": 4,
+    "document_date": "2018-09-18",
+    "event_era": "2018-09-18",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of configuration, grub2-mkconfig.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-09-18",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-3d8b"
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "Creating persistent memory resources using ipmctl",
+    "evidence": "ipmctl create -goal persistentmemorytype=appdirect and then \"ipmctl show -memoryresources\"",
+    "sensitivity": "Public",
+    "tags": [
+      "persistent memory",
+      "ipmctl"
+    ],
+    "rank": 4,
+    "document_date": "2018-09-19",
+    "event_era": "2018-09-19",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of persistent memory, ipmctl.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-09-19",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-48ad"
+  },
+  {
+    "date": "2018-09-19",
+    "summary": "DC Cycling Cold Reset Ungraceful OS Shutdown During Rd/Wrt Traffic",
+    "evidence": "Start - 57164.10 CR BKC SAT - DC Cycling Cold Reset Graceful OS shutdown_Appdirect or Mixed mode Data Persistence / Integrity - Linux",
+    "sensitivity": "Public",
+    "tags": [
+      "DC Cycling",
+      "Cold Reset"
+    ],
+    "rank": 4,
+    "document_date": "2018-09-19",
+    "event_era": "2018-09-19",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of DC Cycling, Cold Reset.",
+    "spatial_anchor": {
+      "source_file": "2018_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-09-19",
+      "year": 2018,
+      "quarter": "2018-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-f198"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "Uploading module: C:\\Users\\Public\\injection_modules\\1.0.0.5043\\ekvs1_dimm_prod\\format_device_module.1.0.0.5043.bin",
+    "evidence": "IMF_INFO: Uploading module: C:\\Users\\Public\\injection_modules\\1.0.0.5127\\ekvs1_dimm_prod\\format_device_module.1.0.0.5127.bin",
+    "domain": "hardware_debug",
+    "tags": [
+      "hardware",
+      "upload"
+    ],
+    "document_date": "2018-09-30",
+    "event_era": "2018-09-30",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-9224"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "Disabling Read Disturb before trying to format the dimm.",
+    "evidence": "IMF_INFO: Disabling the Read Disturb before trying to format the dimm",
+    "domain": "hardware_debug",
+    "tags": [
+      "debug"
+    ],
+    "document_date": "2018-09-30",
+    "event_era": "2018-09-30",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-1f22"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "Executing FORMAT_DEVICE command on dimm sxpcontroller031.",
+    "evidence": "IMF_INFO: Send format_device command to dimm sxpcontroller031... -> waiting for completion up to (7200 secs)\n\nEvidence 2: IMF_INFO: Format device succesful on dimm sxpcontroller001 returned",
+    "domain": "hardware_debug",
+    "tags": [
+      "format"
+    ],
+    "document_date": "2018-09-30",
+    "event_era": "2018-09-30",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-6c14"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "Searching for injection modules on \\crfw.ch.intel.com\\public.",
+    "evidence": "IMF_INFO: Searching \\crfw.ch.intel.com\\public for injection modules for FW version 1.1.0.5190 because constants_tables.SEARCH_REMOTE_PATH == True.",
+    "domain": "hardware_debug",
+    "tags": [
+      "search"
+    ],
+    "document_date": "2018-09-30",
+    "event_era": "2018-09-30",
+    "event_year": 2018,
+    "event_quarter": "2018-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-c558"
+  },
+  {
+    "date": "2018-10-11",
+    "summary": "Download Intel Optane DC Persistent Memory Software Command Line Interface Syntax Specification for Windows/Linux",
+    "evidence": "Intel Optane DC Persistent Memory Software Command Line Interface Syntax Specification for Windows/Linux MysmG 598517 https://cdrdv2.intel.com/v1/dl/getContent/598517",
+    "domain": "logistics",
+    "document_date": "2018-10-11",
+    "event_era": "2018-10-11",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-cee5"
+  },
+  {
+    "date": "2018-10-15",
+    "summary": "Download Intel Optane DC Persistent Memory Software Command Line Interface Syntax Specification for Windows/Linux",
+    "evidence": "Cscript download - http://mysmgsearch.intel.com/Default.aspx 572076 https://cdrdv2.intel.com/v1/dl/getContent/572076",
+    "domain": "logistics",
+    "document_date": "2018-10-15",
+    "event_era": "2018-10-15",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-88b4"
+  },
+  {
+    "date": "2018-10-17",
+    "summary": "Upgrade Proton1 to WW37",
+    "evidence": "Upgraded: ipmctl.x86_64 01.00.00.3275-1.fc27 ...",
+    "domain": "logistics",
+    "document_date": "2018-10-17",
+    "event_era": "2018-10-17",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-61e6"
+  },
+  {
+    "date": "2018-10-19",
+    "summary": "Dump Python history using readline module",
+    "evidence": "import readline for i in range(readline.get_current_history_length()): line = readline.get_history_item(i + 1) print line",
+    "domain": "career_timeline",
+    "document_date": "2018-10-19",
+    "event_era": "2018-10-19",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-f1ee"
+  },
+  {
+    "date": "2018-10-22",
+    "summary": "Run ./t -pkg aep.pkx /reconfig /pc AEP /flow 2LM /run /minutes 1440 /lf vss-2LM_log_10_22.txt on Proton2",
+    "evidence": "./t -pkg aep.pkx /reconfig /pc AEP /flow 2LM /run /minutes 1440 /lf vss-2LM_log_10_22.txt",
+    "domain": "operations",
+    "document_date": "2018-10-22",
+    "event_era": "2018-10-22",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-d959"
+  },
+  {
+    "date": "2018-10-23",
+    "summary": "WARNING: Destination file size is smaller than largest pattern file",
+    "evidence": "[root@localhost ilvss]# cat vss-2LM_log_10_22.txt | grep -i '\\(warning\\|error\\)' 10/23/2018 07:03:16 ERROR 0x50200101 TEST EXECUTIVE WARNING: Destination file size is smaller than largest pattern file.",
+    "domain": "hardware_debug",
+    "document_date": "2018-10-23",
+    "event_era": "2018-10-23",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-f874"
+  },
+  {
+    "date": "2018-10-24",
+    "summary": "Create persistent memory namespace using ndctl",
+    "evidence": "ipmctl create -goal persistentmemorytype=appdirect",
+    "domain": "logistics",
+    "document_date": "2018-10-24",
+    "event_era": "2018-10-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-8979"
+  },
+  {
+    "date": "2018-10-24",
+    "summary": "Partition and format pmem0 device",
+    "evidence": "parted -s -a optimal /dev/pmem0 mklabel gpt -- mkpart primay ext4 1MiB 4GB mkpart primary xfs 4GB & mkfs.ext4 -F /dev/pmem0",
+    "domain": "logistics",
+    "document_date": "2018-10-24",
+    "event_era": "2018-10-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-feac"
+  },
+  {
+    "date": "2018-10-24",
+    "summary": "Test mem.NumaLocal function timed out after 10000 sec",
+    "evidence": "[246] ERROR 0x5010100F MEM.NUMALOCAL Test mem.NumaLocal TIMED OUT after 10000 sec",
+    "domain": "hardware_debug",
+    "document_date": "2018-10-24",
+    "event_era": "2018-10-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-4bba"
+  },
+  {
+    "date": "2018-10-25",
+    "summary": "Reproduce Iryna's mirroring issue using EDKII Menu",
+    "evidence": "- Enable mirror mode - EDKII Menu -> Socket Configuration -> Memory Configuration > Memory RAS Configuration - Mirror mode <Enable Mirror Mode (1LM)>",
+    "domain": "hardware_debug",
+    "document_date": "2018-10-25",
+    "event_era": "2018-10-25",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-4e7d"
+  },
+  {
+    "date": "2018-10-25",
+    "summary": "Inject memory error using ei.injectMemError function",
+    "evidence": "ei.injectMemError(0x000100000000 , oneInjection=True, errType=\"mirror_uce\")",
+    "domain": "hardware_debug",
+    "document_date": "2018-10-25",
+    "event_era": "2018-10-25",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "id": "GEM-b968"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "No primary TODO or research link mentioned in the logs.",
+    "evidence": "There is no specific TODO or research link mentioned in the logs.",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of subsystem.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-01",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-b073"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "PCIe correctable error injection commands.",
+    "evidence": "echo 0x0 > /sys/kernel/debug/apei/einj/param1, echo 64 > /sys/kernel/debug/apei/einj/error_type, and echo 1 > /sys/kernel/debug/apei/einj/error_inject",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of subsystem.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-01",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-b390"
+  },
+  {
+    "date": "2018-11-01",
+    "summary": "Configuration options used for error injection in the biosKnobs variable.",
+    "evidence": "WheaErrorInjSupportEn=1, WheaPcieErrInjEn=1, and IioErrorEn=1",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2018-11-01",
+    "event_era": "2018-11-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of subsystem.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-01",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-2538"
+  },
+  {
+    "date": "2018-11-12",
+    "summary": "Loaded firmware on Proton1 PMEM drives.",
+    "evidence": "ipmctl load -source fw_ekvs1_1.1.0.5253_encrypt_signed_strip.bin -f -dimm",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "pmem"
+    ],
+    "document_date": "2018-11-12",
+    "event_era": "2018-11-12",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 2,
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of biosKnobs.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-12",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "rank": 4,
+    "id": "GEM-883b"
+  },
+  {
+    "date": "2018-11-12",
+    "summary": "Installed DCPMM cycler on Proton1.",
+    "evidence": "./installer ungracefulAcFioSat\n~10.242.49.21 (ac cycler) root@pvl ac_ungraceful]# ./ac_ungraceful",
+    "domain": "hardware_debug",
+    "tags": [
+      "installation",
+      "dcpmm"
+    ],
+    "document_date": "2018-11-12",
+    "event_era": "2018-11-12",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of Error Injection, Testing.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-12",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "rank": 2,
+    "id": "GEM-b8fe"
+  },
+  {
+    "date": "2018-11-12",
+    "summary": "Configured PDU on Proton1.",
+    "evidence": "~10.242.49.21 (ac cycler) root@pvl ac_ungraceful]# ./ac_ungraceful\nChecking connection to PDU...\nFound PDU 10.242.49.67...",
+    "domain": "operations",
+    "tags": [
+      "pdu",
+      "configuration"
+    ],
+    "document_date": "2018-11-12",
+    "event_era": "2018-11-12",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of SvBios, CAUSALITY ERROR.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-12",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "rank": 2,
+    "id": "GEM-8d9f"
+  },
+  {
+    "date": "2018-11-13",
+    "summary": "biosKnobs variable settings similar to those on 11/15/2018.",
+    "evidence": "The log entry on 11/13/2018 shows the biosKnobs variable being set with similar settings as on 11/15/2018",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs"
+    ],
+    "rank": 4,
+    "document_date": "2018-11-13",
+    "event_era": "2018-11-13",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Error Injection, biosKnobs.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-13",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-392e"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "EINJ (Error Injection) used to inject various types of errors into the system for testing purposes.",
+    "evidence": "The log entry on 11/14/2018 mentions \"EINJ- - https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Testing",
+      "Error Injection"
+    ],
+    "rank": 4,
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-14",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Error Injection, System Configuration.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-14",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-74dc"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "[CAUSALITY ERROR]: Tool used (SvBios) was likely released after 2018, as it uses Python 3.x syntax.",
+    "evidence": "The log entries themselves were generated in 2018, but the tool used is from a later date",
+    "sensitivity": "Public",
+    "tags": [
+      "SvBios",
+      "CAUSALITY ERROR"
+    ],
+    "rank": 4,
+    "document_date": "2018-11-14",
+    "event_era": "2018-01-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 1,
+    "refinement_level": 1,
+    "id": "GEM-7084"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "Windows Python.exe not taking parameters fixed by associating .py scripts with Python.File and redirecting to new executable.",
+    "evidence": "#Associate the correct file group with .py scripts: assoc .py=Python.File\n#Redirect all Python files to the new executable:",
+    "domain": "hardware_debug",
+    "tags": [
+      "python",
+      "fix"
+    ],
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-14",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 4,
+    "id": "GEM-a1e3"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "Configured Proton1 and Proton2 hosts.",
+    "evidence": "Proton1: Host - jiclabsnuc2.amr.corp.intel.com - BMC 10.242.49.55 - Linux 10.242.49.26\nProton2: Host - jiclabs1010.amr.corp.intel.com - BMC 10.242.49.22 - Linux 10.242.49.21",
+    "domain": "operations",
+    "tags": [
+      "configuration",
+      "host"
+    ],
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-14",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 4,
+    "id": "GEM-5eac"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "Downloaded firmware and installation files from Intel repositories.",
+    "evidence": "https://digitallibrary.intel.com/content/dam/ccl/purley-cscripts-572076-rev-1-48-build-737681.7z\nhttps://ubit-artifactory.intel.com/artifactory/list/dsdjf-pvt-repo/1843/Red/InstallPVT.NoTrace.1.0.7120.600.exe",
+    "domain": "vendor_comm",
+    "tags": [
+      "firmware",
+      "download"
+    ],
+    "document_date": "2018-11-14",
+    "event_era": "2017",
+    "event_year": 2017,
+    "event_quarter": "2017-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Purley\\b|\\bSkylake[- ]SP",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-eeb3"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "Configured PMEM drives on Proton1.",
+    "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
+    "domain": "hardware_debug",
+    "tags": [
+      "configuration",
+      "openipc",
+      "pmem"
+    ],
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-14",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 4,
+    "id": "GEM-6c1d"
+  },
+  {
+    "date": "2018-11-14",
+    "summary": "Configured UEFI, BMC, and LXPM firmware on Proton1.",
+    "evidence": "BMC (Primary)        Active        1.50        PSI319P        2018-11-06\nUEFI        Active        1.50        PSE119U        2018-11-12",
+    "domain": "hardware_debug",
+    "tags": [
+      "uefi",
+      "firmware"
+    ],
+    "document_date": "2018-11-14",
+    "event_era": "2018-11-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 4,
+    "id": "GEM-421c"
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "biosKnobs variable settings enable specific error injection features.",
+    "evidence": "The log entry on 11/15/2018 shows the biosKnobs variable being set with several error injection features enabled, including PCIe correctable and uncorrectable errors, memory correctable and uncorrectable errors, and AEP (Advanced Error Processing) error injection",
+    "sensitivity": "Public",
+    "tags": [
+      "biosKnobs",
+      "Error Injection"
+    ],
+    "rank": 4,
+    "document_date": "2018-11-15",
+    "event_era": "2018-11-15",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Error Injection, biosKnobs.",
+    "spatial_anchor": {
+      "source_file": "2018_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-11-15",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-2822"
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "System configuration knobs verified to ensure proper error injection feature configuration.",
+    "evidence": "The log entry on 11/15/2018 shows the system configuration knobs being verified, including CorrMemErrEn, spareErrTh, ADDDCEn, volMemMode, LockChipset, and DFXEnable",
+    "sensitivity": "Public",
+    "tags": [
+      "Error Injection",
+      "System Configuration"
+    ],
+    "rank": 4,
+    "document_date": "2018-11-15",
+    "event_era": "2018-11-15",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1,
+    "id": "GEM-b79d"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Cloned Git repository from remote server to local directory",
+    "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
+    "sensitivity": "Public",
+    "tags": [
+      "repository",
+      "Git",
+      "clone"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of clone, Git, repository.",
+    "spatial_anchor": {
+      "source_file": "2018_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-12-06",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-f75c"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Set user configuration for Git repository",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [
+      "user configuration",
+      "Git"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of user configuration, Git.",
+    "spatial_anchor": {
+      "source_file": "2018_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-12-06",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-e714"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [
+      "Git",
+      "hook",
+      "commit-msg"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Git, commit-msg, hook.",
+    "spatial_anchor": {
+      "source_file": "2018_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2018-12-06",
+      "year": 2018,
+      "quarter": "2018-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-5c81"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "RAS Gap Analysis Working Session",
+    "evidence": "https://soco.intel.com/groups/ssv-ras-coe?redirect=%2Fdocs%2FDOC-2529097",
+    "domain": "operations",
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-13ba"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "HSD: iVLSS Read Write Errors on Proton",
+    "evidence": "(sighting) https://hsdes.intel.com/appstore/article/#/2206479960",
+    "domain": "hardware_debug",
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-df5e"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "HandleIoMca and WHEA Events",
+    "evidence": "HandleIoMca: Misc: 0x0, Segment: 0x0, Bus: 0x0, Dev: 0x0, Func: 0x0",
+    "domain": "hardware_debug",
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-6a30"
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "MCE Events on Multiple CpuNumbers",
+    "evidence": "MCE CpuNumber: 0 Broadcast:1 lmce:40240EC00000000",
+    "domain": "hardware_debug",
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-ca50"
+  },
+  {
+    "date": "2018-12-07",
+    "summary": "BIOS Update Firmware",
+    "evidence": "\\pdxcv14a-cifs.pdx.intel.com\\mve_skx_009\\vsv-share\\riv-share\\BIOS_Collateral\\Purley\\Purley-Refresh VV\\PLYXCRB.86B.BR.64.2018.46.3.03.0557_LBG_SPS.bin",
+    "domain": "operations",
+    "document_date": "2018-12-07",
+    "event_era": "2017",
+    "event_year": 2017,
+    "event_quarter": "2017-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Purley\\b|\\bSkylake[- ]SP",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-88d3"
+  },
+  {
+    "date": "2018-12-10",
+    "summary": "KVM Console and Login Information",
+    "evidence": "https://raspschkvm1037.intel.com, KVM Login: rasp; KVM Password: Yxsb2BMJZKNp ",
+    "domain": "hardware_debug",
+    "document_date": "2018-12-10",
+    "event_era": "2018-12-10",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-3e81"
+  },
+  {
+    "date": "2018-12-10",
+    "summary": "NUC Host and OS Information",
+    "evidence": "raspnuc132.amr.corp.intel.com (Login using your domain credentials)",
+    "domain": "operations",
+    "document_date": "2018-12-10",
+    "event_era": "2018-12-10",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 2,
+    "id": "GEM-82af"
   }
 ]

@@ -1,18 +1,778 @@
 {
   "summary": {
-    "total_runs": 295,
-    "successful_runs": 195,
-    "total_tokens_blended": 17591546,
-    "total_conductor_tokens": 17396566,
-    "total_l3_tokens": 194980,
-    "total_cached_tokens": 9140216,
-    "total_wall_time_minutes": 2401.79,
-    "estimated_cloud_cost_usd": 64.482459,
-    "estimated_local_power_cost_usd": 1.200895,
-    "net_savings_usd": 63.281564,
-    "local_offload_ratio_pct": 1.83
+    "total_runs": 333,
+    "successful_runs": 217,
+    "total_tokens_blended": 18496528,
+    "total_conductor_tokens": 18259874,
+    "total_l3_tokens": 236654,
+    "total_cached_tokens": 9441288,
+    "total_wall_time_minutes": 2572.77,
+    "estimated_cloud_cost_usd": 66.256374,
+    "estimated_local_power_cost_usd": 1.286385,
+    "net_savings_usd": 64.969989,
+    "local_offload_ratio_pct": 1.9
   },
   "runs": [
+    {
+      "sprint": "109",
+      "story": "109.16",
+      "title": "Architectural Review: Canonical Temporal Lakehouse & Provenance-Decoupled Routing",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 163.24,
+      "duration_m": 2.72,
+      "tokens": {
+        "conductor": 133017,
+        "l3": 0,
+        "total": 133017,
+        "cache_read": 125744
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-02T19:01:38"
+    },
+    {
+      "sprint": "109",
+      "story": "109.5",
+      "title": "Successfully added focal_dna to PRE_TRIAGE_COLLECTIONS and added elif handler fo",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Successfully added focal_dna to PRE_TRIAGE_COLLECTIONS and added elif handler for focal_dna in probe_clara_dna_sync(). Both code changes were applied to HomeLabAI/src/logic/vector_pre_triage.py per the Story 6 requirements. Python syntax verified, no new lint errors introduced. Verification test requires ChromaDB infrastructure with test data which is not available in current sandbox environment.",
+      "timestamp": "2026-11-02T14:52:07"
+    },
+    {
+      "sprint": "109",
+      "story": "0",
+      "title": "Sprint 109.0 Pre-Flight Adversarial Architecture Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 251.0,
+      "duration_m": 4.18,
+      "tokens": {
+        "conductor": 118190,
+        "l3": 0,
+        "total": 118190,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-02T14:42:44"
+    },
+    {
+      "sprint": "109",
+      "story": "0",
+      "title": "Sprint 109.0 Pre-Flight Adversarial Architecture Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "status": "API_ERROR",
+      "duration_s": 2.35,
+      "duration_m": 0.04,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-02T14:36:25"
+    },
+    {
+      "sprint": "108",
+      "story": "_35",
+      "title": "Story 35 verified: KENDER parallel warmup payload aligned to qwen3.8:nothink wit",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Story 35 verified: KENDER parallel warmup payload aligned to qwen3.8:nothink with perf_counter latency logging; py_compile passes.",
+      "timestamp": "2026-10-31T21:15:40"
+    },
+    {
+      "sprint": "108",
+      "story": "108.31",
+      "title": "Triage OPERATIONAL Decoupling (rag: null)",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "API_ERROR",
+      "duration_s": 246.74,
+      "duration_m": 4.11,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-30T14:28:30"
+    },
+    {
+      "sprint": "108",
+      "story": "108.31",
+      "title": "Triage OPERATIONAL Decoupling (rag: null)",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "BLOCKER_HALT",
+      "duration_s": 337.81,
+      "duration_m": 5.63,
+      "tokens": {
+        "conductor": 42479,
+        "l3": 0,
+        "total": 42479,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-30T14:23:28"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Canonical JIT shakedown checkpoint",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-26T09:00:09"
+    },
+    {
+      "sprint": "108",
+      "story": "108.15",
+      "title": "Interactive Step-Trace Root Cause Attribution & UI Downvote Wiring",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 210.0,
+      "duration_m": 3.5,
+      "tokens": {
+        "conductor": 4200,
+        "l3": 0,
+        "total": 4200,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-26T08:55:10"
+    },
+    {
+      "sprint": "108",
+      "story": "108.16",
+      "title": "Live Attendant Daemon Hot-Reload & Physical Silicon End-to-End Certification",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 185.0,
+      "duration_m": 3.08,
+      "tokens": {
+        "conductor": 3900,
+        "l3": 0,
+        "total": 3900,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-26T08:55:10"
+    },
+    {
+      "sprint": "108",
+      "story": "108.14C",
+      "title": "Step Harness Parity & Pytest Certification",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 190.0,
+      "duration_m": 3.17,
+      "tokens": {
+        "conductor": 3800,
+        "l3": 0,
+        "total": 3800,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-26T08:40:15"
+    },
+    {
+      "sprint": "108",
+      "story": "108.14B",
+      "title": "Cognitive Waterfall Production Implementation (Stages 1-6)",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 240.0,
+      "duration_m": 4.0,
+      "tokens": {
+        "conductor": 4500,
+        "l3": 0,
+        "total": 4500,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-26T08:40:14"
+    },
+    {
+      "sprint": "108",
+      "story": "108.14A",
+      "title": "Substrate Indexing, FEAT-469 Traversal & Canonical Vibe Policy",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 180.0,
+      "duration_m": 3.0,
+      "tokens": {
+        "conductor": 3200,
+        "l3": 0,
+        "total": 3200,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-26T08:40:09"
+    },
+    {
+      "sprint": "5",
+      "story": "LIVE_MCP_SELF_DOC",
+      "title": "Appended M5_AIR_STREAMING_FINAL_CERTIFIED_OK line",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Appended M5_AIR_STREAMING_FINAL_CERTIFIED_OK line",
+      "timestamp": "2026-10-25T03:26:49"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Canonical JIT shakedown checkpoint",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-25T03:20:47"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "Canonical JIT shakedown checkpoint",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "Canonical JIT shakedown checkpoint",
+      "timestamp": "2026-10-25T03:19:42"
+    },
+    {
+      "sprint": "108",
+      "story": "LIVE_M5_RETRY",
+      "title": "Live Port 8002 Verification with Explicit Signatures",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 402.81,
+      "duration_m": 6.71,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-25T03:10:55"
+    },
+    {
+      "sprint": "108",
+      "story": "LIVE_M5_2048",
+      "title": "Live Port 8002 Verification 2048",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 821.21,
+      "duration_m": 13.69,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-25T03:03:52"
+    },
+    {
+      "sprint": "",
+      "story": "LIVE_M5_RETEST",
+      "title": "2-strike guard (WIS-375): ses_e8d9142f6ffeZ1oyvFV37KLcSJ failed 2 consecutive pa",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STALL_POINT",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "2-strike guard (WIS-375): ses_e8d9142f6ffeZ1oyvFV37KLcSJ failed 2 consecutive passes. Pass 1 corrupted file (marker prepended+concatenated). Passes 2-3 returned intent-only JSON/descriptions with NO tool execution; file unchanged at 1 line. Escalating to AGY per mandate.",
+      "timestamp": "2026-10-25T02:48:07"
+    },
+    {
+      "sprint": "",
+      "story": "LIVE_M5_RETEST",
+      "title": "Strike 1 (WIS-375): 2nd verification FAILED - file still corrupted, subagent int",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STRIKE1_REDISPATCH",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "Strike 1 (WIS-375): 2nd verification FAILED - file still corrupted, subagent intent-only with no execution. Staged corrective v2 with explicit old/new safe_patch strings; re-dispatching same session.",
+      "timestamp": "2026-10-25T02:46:29"
+    },
+    {
+      "sprint": "",
+      "story": "LIVE_M5_RETEST",
+      "title": "L3 first pass broke file (marker prepended+concatenated onto line 1). Corrective",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "REWORK_STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "L3 first pass broke file (marker prepended+concatenated onto line 1). Corrective blueprint staged: restore line 1, marker as separate line 2.",
+      "timestamp": "2026-10-25T02:44:35"
+    },
+    {
+      "sprint": "",
+      "story": "",
+      "title": "LIVE_M5_RETEST append applied and verified",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "SUCCESS",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "LIVE_M5_RETEST append applied and verified",
+      "timestamp": "2026-10-25T02:43:17"
+    },
+    {
+      "sprint": "",
+      "story": "LIVE_M5_RETEST",
+      "title": "Blueprint staged for LIVE_M5_RETEST: append M5_AIR_STREAMING_VERIFIED_OK to test",
+      "mode": "",
+      "tier": "",
+      "model": "",
+      "status": "STAGED",
+      "duration_s": 0.0,
+      "duration_m": 0.0,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "Blueprint staged for LIVE_M5_RETEST: append M5_AIR_STREAMING_VERIFIED_OK to test_live_m5.txt",
+      "timestamp": "2026-10-25T02:40:14"
+    },
+    {
+      "sprint": "108",
+      "story": "LIVE_M5",
+      "title": "Live Port 8002 Verification",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 231.07,
+      "duration_m": 3.85,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-25T02:31:33"
+    },
+    {
+      "sprint": "108",
+      "story": "108.11",
+      "title": "Story 108.11: Universal Prior Context Chunking & Conversational Continuation Hinting",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 834.86,
+      "duration_m": 13.91,
+      "tokens": {
+        "conductor": 0,
+        "l3": 5711,
+        "total": 5711,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-25T00:58:41"
+    },
+    {
+      "sprint": "108",
+      "story": "108.11",
+      "title": "Story 108.11: Universal Prior Context Chunking & Conversational Continuation Hinting",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "DISPATCH_FAILED",
+      "duration_s": 572.54,
+      "duration_m": 9.54,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-25T00:23:37"
+    },
+    {
+      "sprint": "108",
+      "story": "108.10",
+      "title": "Work History Taxonomy Harmonization & UNCLEAR Quiescence Vibe Rule",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 1096.84,
+      "duration_m": 18.28,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-24T23:49:44"
+    },
+    {
+      "sprint": "108",
+      "story": "108.9",
+      "title": "Story 108.9 Multi-Stage Replay Litmus Certification",
+      "mode": "agy",
+      "tier": "[AGY:PRIMARY]",
+      "model": "gemini-pro / antigravity",
+      "status": "SUCCESS",
+      "duration_s": 180.0,
+      "duration_m": 3.0,
+      "tokens": {
+        "conductor": 450,
+        "l3": 0,
+        "total": 450,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-24T23:31:00"
+    },
+    {
+      "sprint": "108",
+      "story": "108.7",
+      "title": "Waterfall Parameter Wiring, Composable Line-Jumping & Pinky 10% Voice Delivery",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 433.87,
+      "duration_m": 7.23,
+      "tokens": {
+        "conductor": 55575,
+        "l3": 5691,
+        "total": 61266,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-24T15:24:45"
+    },
+    {
+      "sprint": "108",
+      "story": "108.6",
+      "title": "Universal [CHUNK-N] Serialization & Situational Pre-RAG Disk Hooking",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 344.87,
+      "duration_m": 5.75,
+      "tokens": {
+        "conductor": 47475,
+        "l3": 0,
+        "total": 47475,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-24T15:16:06"
+    },
+    {
+      "sprint": "108",
+      "story": "108.5",
+      "title": "Declarative Triage Policy, WYWO Grounding & Decoupled Vibe/Domain Schema",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 449.43,
+      "duration_m": 7.49,
+      "tokens": {
+        "conductor": 50702,
+        "l3": 8691,
+        "total": 59393,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-24T15:08:22"
+    },
+    {
+      "sprint": "108",
+      "story": "108.5-ORACLE",
+      "title": "Resolve Archetype Micro-Prompt & Substrate Hook Matrix",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 326.31,
+      "duration_m": 5.44,
+      "tokens": {
+        "conductor": 88498,
+        "l3": 3395,
+        "total": 91893,
+        "cache_read": 78048
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-24T14:59:26"
+    },
+    {
+      "sprint": "108",
+      "story": "108.4",
+      "title": "BKM-088 Micro-Harness Test Rig Scaffolding",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 298.88,
+      "duration_m": 4.98,
+      "tokens": {
+        "conductor": 43122,
+        "l3": 4972,
+        "total": 48094,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-21T15:09:21"
+    },
+    {
+      "sprint": "108",
+      "story": "108.2",
+      "title": "Decoupled Out-of-Band Entailment Audit & Elimination of 'CRITIQUE'",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 589.47,
+      "duration_m": 9.82,
+      "tokens": {
+        "conductor": 97606,
+        "l3": 1920,
+        "total": 99526,
+        "cache_read": 97280
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-21T15:00:36"
+    },
+    {
+      "sprint": "108",
+      "story": "108.2",
+      "title": "Decoupled Out-of-Band Entailment Audit & Elimination of 'CRITIQUE'",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 283.24,
+      "duration_m": 4.72,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-21T14:32:40"
+    },
+    {
+      "sprint": "108",
+      "story": "108.2",
+      "title": "Decoupled Out-of-Band Entailment Audit & Elimination of 'CRITIQUE'",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 121.25,
+      "duration_m": 2.02,
+      "tokens": {
+        "conductor": 93171,
+        "l3": 1920,
+        "total": 95091,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-21T14:23:49"
+    },
+    {
+      "sprint": "108",
+      "story": "108.1",
+      "title": "Brain Keyed Evidence Filter & Evidential Moat Logic",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 826.43,
+      "duration_m": 13.77,
+      "tokens": {
+        "conductor": 73423,
+        "l3": 3750,
+        "total": 77173,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-10-21T14:20:38"
+    },
+    {
+      "sprint": "108",
+      "story": "108.1",
+      "title": "Brain Keyed Evidence Filter & Evidential Moat Logic",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 440.92,
+      "duration_m": 7.35,
+      "tokens": {
+        "conductor": 0,
+        "l3": 5624,
+        "total": 5624,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-10-21T13:52:07"
+    },
     {
       "sprint": "105",
       "story": "105.14",

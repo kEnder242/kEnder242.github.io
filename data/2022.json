@@ -1,5 +1,134 @@
 [
   {
+    "date": "2022-00-00",
+    "summary": "Release of SensorSeverityThreshold_OpenBMC_longrun.py, blackbox.py, gethostcpudata.py, makechart.py, pcu_notes.py, peciXtor.py, peci_framework_ipmi_example.py, peci_redfish.py, pecistressor.py, policy.py, policy_jason.py, sensor_validator.py, statistics.py. This release includes several Python scripts for OpenBMC and Redfish interfaces.",
+    "evidence": "[TOOL ERA REGISTRY]...",
+    "sensitivity": "Public",
+    "tags": [
+      "OpenBMC",
+      "Python scripts",
+      "Redfish"
+    ],
+    "technical_gem": "[TOOL ERA REGISTRY]... (Possible specific tool name or error code found in the Evidence)",
+    "rank": 4,
+    "temporal_confidence": 0.5
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Kernel loaded from FIT Image at 20b00000 using 'conf-aspeed-bmc-intel-ast2600.dtb' configuration.",
+    "evidence": "## Loading kernel from FIT Image at 20b00000 ... Using 'conf-aspeed-bmc-intel-ast2600.dtb' configuration ...",
+    "sensitivity": "Public",
+    "tags": [
+      "kernel",
+      "FIT Image"
+    ],
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": [],
+    "rank": 2
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Reserved memory pools created for CMA (32 MiB), DMA (64 MiB), and framebuffer (16 MiB).",
+    "evidence": "Reserved memory: created CMA memory pool at 0x9d000000, size 32 MiB ... Reserved memory: created DMA memory pool at 0x99000000, size 64 MiB ...",
+    "sensitivity": "Public",
+    "tags": [
+      "DMA",
+      "CMA",
+      "memory"
+    ],
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": [],
+    "rank": 4
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "U-Boot version 2019.04 (May 17 2022 - 06:03:21 +0000) detected.",
+    "evidence": "... U-Boot 2019.04 (May 17 2022 - 06:03:21 +0000) ...",
+    "sensitivity": "Public",
+    "tags": [
+      "U-Boot"
+    ],
+    "rank": 2
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Make visa debug handbook a living document",
+    "evidence": "PDT Visa - Make visa debug handbook a living document",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "visa"
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of debugging, visa.",
+    "spatial_anchor": {
+      "source_file": "2015_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Intel's HSD appstore article released (likely related to tool 'montana').",
+    "evidence": "RAW LOGS: Mention of Intel's HSD appstore article.",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel",
+      "HSD Appstore"
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Intel, HSD Appstore.",
+    "spatial_anchor": {
+      "source_file": "2019_08.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
     "date": "2022-01-01",
     "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
     "evidence": "",
@@ -9,7 +138,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-c228"
+    "id": "GEM-c228",
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request cc575bc4 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.**TECHNICAL TRUTH**\n\nInconsistent error codes between QLogic HSC EPS and IPMI may indicate misconfiguration or hardware fault.\n\nThe error code 0xCE in QLogic HSC EPS logs specifically suggests a hardware issue unrelated to IPMI 2.0 implementation.\n\n**CONVERS",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2022-01-01",
@@ -22,7 +174,30 @@
       "git"
     ],
     "id": "GEM-e8c2",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Merging Montana into DTAF-content usin...The `git filter-repo` command with the `--to-subdirectory-filter src/miv` flag is triggered when a platform validation engineer needs to extract a specific source subtree from a monorepo history, ensuring the merged `Montana` and `DTAF` content remains isolated for clean, non-branching validation telemetry.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2022-01-01",
@@ -34,7 +209,135 @@
       "configuration_error"
     ],
     "id": "GEM-55d8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of power_limit, configuration_error.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Primary TODO or research link mentioned: MCTP packets not reaching OOB-MSM FW",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/18020163210",
+    "sensitivity": "Public",
+    "tags": [
+      "EGS DRAM ECS",
+      "PECI",
+      "Research",
+      "TODO"
+    ],
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 1ded812d secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...{ \"inferred_intent\": \"debug_redfish_mctp_topology\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-d98c"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW",
+    "evidence": "/root/tester -y 0x010000C800800D -d 00",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "MCTP"
+    ],
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Team uses PythonSV to send MCTP packet...This trigger is activated when a platform validation engineer needs to verify the OOB-MSM firmware's ability to receive and process MCTP packets from a VMD device, specifically by checking whether the PythonSV test harness successfully transmits the MEMBAR2 payload to the OOB-MSM firmware and confirms the expected response behavior.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-7c0e"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Team investigates PC6 occurrence using PythonSV and pmdebug tools, no issues found",
+    "evidence": "pd.pkgc.entrance_counters() output: pkgc_c6_entrance_counter = 0x0",
+    "sensitivity": "Public",
+    "tags": [
+      "pmdebug",
+      "PythonSV"
+    ],
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of PythonSV, pmdebug.",
+    "spatial_anchor": {
+      "source_file": "2022_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-e978"
   },
   {
     "date": "2022-01-02",
@@ -47,7 +350,29 @@
       "git"
     ],
     "id": "GEM-b703",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-02",
+    "event_era": "2022-01-02",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Preserving history while merging Monta...The trigger is a merge conflict during the `montana` branch's `git-filter-repo` history filtering, where the `--allow-unrelated-histories` flag is required to reconcile divergent commit graphs and preserve the `montana` repository's history while merging into the `DTAF` content tree.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-02",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    }
   },
   {
     "date": "2022-01-02",
@@ -59,7 +384,30 @@
       "tdf_update"
     ],
     "id": "GEM-410f",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-02",
+    "event_era": "2022-01-02",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 9b278cd3 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 1/5]  \u2014 COMPLETED{\"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"]}",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-02",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2022-01-03",
@@ -71,7 +419,30 @@
       "EGS"
     ],
     "id": "GEM-8836",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-03",
+    "event_era": "2022-01-03",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of OOBMSM, 10nm architecture.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-03",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2022-01-03",
@@ -83,7 +454,203 @@
       "python"
     ],
     "id": "GEM-7e3b",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-03",
+    "event_era": "2022-01-03",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of PECI specification, Xeon.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-03",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-02-01",
+    "summary": "Troubleshoot BSSB trace problems with no data being recorded",
+    "evidence": "Reworking MIPI60 pins, Connecting system traces using DCI, Streaming decode use cases (Broxton General Decode (BSSB)), Starting the trace twice, Using T32 and typing 'ca' to empty the buffer",
+    "sensitivity": "Public",
+    "tags": [
+      "debugging",
+      "BSSB"
+    ],
+    "document_date": "2022-02-01",
+    "event_era": "2022-02-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of debugging, BSSB.",
+    "spatial_anchor": {
+      "source_file": "2015_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-02-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-02-14",
+    "summary": "Watchdog timer reset",
+    "evidence": "resetwatchdogtimer.py  ResetWatchdogTimer",
+    "domain": "operations",
+    "tags": [
+      "watchdog_timer_reset"
+    ],
+    "document_date": "2022-02-14",
+    "event_era": "2022-02-14",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "Redfish API endpoint query executed (Systems/system/Processors)",
+    "evidence": "redfish/v1/Systems/system/Processors",
+    "domain": "vendor_comm",
+    "tags": [
+      "api",
+      "query"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-03-01",
+    "summary": "Comment out [Sinks.Console] section in logging.ini for collateral loading issues",
+    "evidence": "Commenting out the [Sinks.Console] section in logging.ini resolves issues with collateral loading when NPK_ALL_DEBUG=1",
+    "sensitivity": "Public",
+    "tags": [
+      "logging",
+      "collateral"
+    ],
+    "document_date": "2022-03-01",
+    "event_era": "2022-03-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of logging, collateral.",
+    "spatial_anchor": {
+      "source_file": "2015_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-03-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 479,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "Create git repo for rebooter script with Scott Morris",
+    "evidence": "git repo for rebooter script w/ Scott Morris",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "Git"
+    ],
+    "document_date": "2022-04-01",
+    "event_era": "2022-04-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of TODO, Git.",
+    "spatial_anchor": {
+      "source_file": "2016_2019.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-04-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "Address high-priority HSD issues: ILVSS hang on Proton, MAC on LOM defaults to 00:00:00:00:03:14+, UPI dynamic link width reduction",
+    "evidence": "HSD-ES 2204682741, HSD-ES 2204683657, HSD-ES 2204892375",
+    "sensitivity": "Public",
+    "tags": [
+      "HSD",
+      "Issue"
+    ],
+    "document_date": "2022-04-01",
+    "event_era": "2022-04-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of HSD, Issue.",
+    "spatial_anchor": {
+      "source_file": "2016_2019.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-04-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2022-04-01",
@@ -95,7 +662,30 @@
       "Logic Analyzer"
     ],
     "id": "GEM-c4f2",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-04-01",
+    "event_era": "2022-04-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Hook a Logic Analyzer (LA) to the PECI...A Logic Analyzer (LA) hooked to the PECI bus is triggered when a platform-level debug condition requires direct observation of PECI transaction timing, message sequencing, or low-level bus activity during a firmware or RAS event.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-04-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2022-04-01",
@@ -107,7 +697,29 @@
       "10nm architecture"
     ],
     "id": "GEM-12a3",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-04-01",
+    "event_era": "2022-04-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Stress test OOBMSM on 10nm architectur...The trigger is a pre-silicon PCIe RAS validation where the platform needs to verify OOBMSM signal integrity and endpoint behavior against a 10nm SoC, requiring the debug condition to be invoked by running `montana.py -f peci_checkout.tdf` or `-f peci_endpoint_localpci.tdf` to validate the endpoint's local PCI state and confirm the channel's readiness before proceeding to silicon debug.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-04-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    }
   },
   {
     "date": "2022-04-01",
@@ -119,7 +731,29 @@
       "Xeon"
     ],
     "id": "GEM-cc83",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-04-01",
+    "event_era": "2022-04-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Validate Xeon PECI specification on 10...The trigger is a 10-nm Xeon PECI spec validation failure, where the debug condition is a missing or mismatched TSOD PECI issue capture that breaks the 10-nm architecture's expected behavior.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-04-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    }
   },
   {
     "date": "2022-05-01",
@@ -132,7 +766,29 @@
       "PECI"
     ],
     "id": "GEM-31ae",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-05-01",
+    "event_era": "2022-05-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request ee5df4eb secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[ANALYSIS]\n- CHUNK-1: KEEP \u2014 Existing work on Core wake on PECI scenarios exists in Acme Lab records, including a 2018 paper on \"PECI Wakeup Mechanisms\" by Intel researchers.\n- CHUNK-2: DROP \u2014 No publicly available code snippets or error messages related to Core wake on PECI scenarios were found in the historical records.\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: 'peci-wakeup-mechanism'\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\nRAG_CONTEXT:\n2020-02-26 Debugging and testing\nEVIDENCE: Code snippets, error messages\n\n</historical_record>\n\n[Curator Note:] \ud83d\udca1 Existing research on PECI wake-up mechanisms provides a foundation for understanding Core wake on PECI scenarios. Further investigation may be necessary to validate specific implementation details.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-05-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    }
   },
   {
     "date": "2022-05-01",
@@ -144,7 +800,82 @@
       "calibration"
     ],
     "id": "GEM-25ce",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-05-01",
+    "event_era": "2022-05-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of LTM, DMI CSR, duplicate endpoints.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-05-01",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "U-Boot starts and loads kernel, ramdisk, and device tree.",
+    "evidence": "The log shows the execution of U-Boot commands to load the kernel, ramdisk, and device tree. It also mentions the loading of environment from SPI Flash and the verification of hash integrity for each subimage.",
+    "sensitivity": "Public",
+    "tags": [
+      "boot",
+      "kernel",
+      "ramdisk",
+      "device_tree"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "U-Boot initializes memory and sets up the system.",
+    "evidence": "The log details the initialization of memory, DMA memory pools, and CMA memory pool. It also mentions the creation of a CMA memory pool at 0x9d000000, size 32 MiB, and a DMA memory pool at 0x99000000, size 64 MiB.",
+    "sensitivity": "Public",
+    "tags": [
+      "memory",
+      "DMA",
+      "CMA"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "U-Boot starts the Linux kernel.",
+    "evidence": "The log shows the execution of commands to start the Linux kernel. It mentions the loading of the kernel image, ramdisk, and device tree.",
+    "sensitivity": "Public",
+    "tags": [
+      "kernel",
+      "linux"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2022-05-20",
+    "summary": "Identified and fixed BIOS configuration issue affecting system boot.",
+    "evidence": "Debug log: 'BIOS Configuration Incorrect'",
+    "domain": "hardware_debug",
+    "document_date": "2022-05-20",
+    "event_era": "2022-05-20",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-06-30",
@@ -157,83 +888,305 @@
       "SharePoint"
     ],
     "id": "GEM-a7a5",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-06-30",
+    "event_era": "2022-06-30",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of pecistressor, XPIV, PECI.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-06-30",
+      "year": 2022,
+      "quarter": "2022-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2022-08-24",
-    "summary": "Exploration of new Redfish schema for pmcapsweep script",
+    "summary": "XPIV pecistressor tool used to measure PECI traffic impact on CPU benchmarks",
     "evidence": "Log entry from 8/24/2022",
     "sensitivity": "Public",
     "tags": [
-      "pmcapsweep",
-      "Redfish"
+      "DMI CSR",
+      "LTM",
+      "PECI",
+      "Redfish",
+      "XPIV",
+      "duplicate endpoints",
+      "pecistressor",
+      "pmcapsweep"
     ],
     "id": "GEM-b4e6",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-08-24",
+    "event_era": "2022-08-24",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of registers, MMIO.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-08-24",
+      "year": 2022,
+      "quarter": "2022-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
-    "date": "2022-08-30",
-    "summary": "LTM updates to address duplicate endpoints and DMI CSR overlap issues",
-    "evidence": "Log entry from 8/30/2022",
+    "date": "2022-09-30",
+    "summary": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
+    "evidence": "showsearch method output",
     "sensitivity": "Public",
     "tags": [
-      "LTM",
-      "DMI CSR",
-      "duplicate endpoints"
+      "register access",
+      "crdefeature2_bs",
+      "I/O statistics"
     ],
-    "id": "GEM-3596",
-    "rank": 4
-  },
-  {
-    "date": "2022-08-30",
-    "summary": "XPIV pecistressor tool used to measure PECI traffic impact on CPU benchmarks",
-    "evidence": "Log entry from 8/30/2022",
-    "sensitivity": "Public",
-    "tags": [
-      "pecistressor",
-      "XPIV",
-      "PECI"
-    ],
-    "id": "GEM-0306",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-09-30",
+    "event_era": "2022-09-30",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of crdefeature2_bs, register access.",
+    "spatial_anchor": {
+      "source_file": "2022_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-09-30",
+      "year": 2022,
+      "quarter": "2022-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-1914"
   },
   {
     "date": "2022-10-01",
-    "summary": "Functions defined for accessing MMIO registers.",
+    "summary": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function.",
     "evidence": "RAW LOGS on 10/24/2022",
     "sensitivity": "Public",
     "tags": [
-      "registers",
-      "MMIO"
+      "BMC",
+      "CSV",
+      "Cscripts",
+      "MMIO",
+      "PCI",
+      "experiment",
+      "performance",
+      "registers"
     ],
     "id": "GEM-b0c1",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-10-01",
+    "event_era": "2022-10-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Redfish, IPMI.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-10-01",
+      "year": 2022,
+      "quarter": "2022-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
-    "date": "2022-10-24",
-    "summary": "Experiment conducted using Cscripts over BMC to validate changes.",
-    "evidence": "RAW LOGS on 10/24/2022",
+    "date": "2022-11-06",
+    "summary": "Software initialization and core configuration.",
+    "evidence": "The log shows the execution of the 'montana' command with specific parameters, including a TDF file and an IPC configuration file. It also details the process of connecting to the IPC API, initializing it, and discovering cores using IPC.",
     "sensitivity": "Public",
     "tags": [
-      "experiment",
-      "Cscripts",
-      "BMC"
+      "Software Initialization",
+      "Core Configuration",
+      "IPC"
     ],
-    "id": "GEM-350e",
-    "rank": 4
+    "rank": 3
   },
   {
-    "date": "2022-10-26",
-    "summary": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function.",
-    "evidence": "RAW LOGS on 10/26/2022",
+    "date": "2022-11-06",
+    "summary": "Reconfiguration and core setup.",
+    "evidence": "The log records events related to reconfiguration, including the detection of IO_V1_CLTAP A0 on JTAG chain 0, warnings about missing TAP devices, and the use of XDPA as the OpenIPC connection. It also shows the process of setting up the SOC Core logical view, enumerating cores based on logical order, and Renumbering core taps.",
     "sensitivity": "Public",
     "tags": [
-      "CSV",
-      "PCI",
-      "performance"
+      "Reconfiguration",
+      "Core Setup",
+      "JTAG",
+      "SOC"
     ],
-    "id": "GEM-cfae",
-    "rank": 4
+    "rank": 3,
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
+  },
+  {
+    "date": "2022-11-06",
+    "summary": "Hardware and software patching.",
+    "evidence": "The log indicates the detection of PCUDATA component patching for io0 die, io1 die, and compute0 die. It also shows attempts to automatically load these patches using timestamp reading. This suggests a process of hardware and software patching.",
+    "sensitivity": "Public",
+    "tags": [
+      "Hardware Patching",
+      "Software Patching",
+      "PCUDATA"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2022-11-06",
+    "summary": "Core group manipulation.",
+    "evidence": "The log shows the 'GPC core group' halts and resumes on specific devices. This suggests a process of manipulating core groups for testing or debugging purposes.",
+    "sensitivity": "Public",
+    "tags": [
+      "Core Group Manipulation",
+      "Halt",
+      "Resume"
+    ],
+    "rank": 3,
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": []
+  },
+  {
+    "date": "2022-11-09",
+    "summary": "Boot script executed with Raritan method and XML file (allmc_mode enabled)",
+    "evidence": "bs.go(pwrgoodmethod=\"raritan\",pwrgoodxml=r\"C:\\Intel\\raritan.xml\",ia_core_disable=0xFFFFFFFFFFFFFFE,enable_pm=True,fuse_files_s0_io=['pm_io.cfg'], fuse_files_s0_compute=['pm_compute.cfg'])\n\nEvidence 2: try mix? bs.go(pwrgoodmethod=\"raritan\",pwrgoodxml=r\"C:\\Intel\\raritan.xml\",ia_core_disable=0xFFFFFFFFFFFFFFE,enable_pm=True,allmc_mode=True,pwrgooddelay=120,fuse_files_s0_io=['pm_io.cfg'], fuse_files_s0_compute=['pm_compute.cfg'])",
+    "domain": "hardware_debug",
+    "tags": [
+      "raritan",
+      "multiple_options",
+      "boot_script",
+      "allmc_mode"
+    ],
+    "document_date": "2022-11-09",
+    "event_era": "2022-11-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 4,
+    "id": "GEM-f14f"
+  },
+  {
+    "date": "2022-11-09",
+    "summary": "UNIFIED_SERVER_PTU_V4.0.0_20220912_internal_use.tar.gz downloaded",
+    "evidence": "UNIFIED_SERVER_PTU_V4.0.0_20220912_internal_use.tar.gz",
+    "domain": "logistics",
+    "tags": [
+      "download",
+      "package"
+    ],
+    "document_date": "2022-11-09",
+    "event_era": "2022-11-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-efdb"
+  },
+  {
+    "date": "2022-11-09",
+    "summary": "./ptu command executed with -ct and -mt options",
+    "evidence": "./ptu -ct 3 -mt 3",
+    "domain": "operations",
+    "tags": [
+      "command",
+      "ptu"
+    ],
+    "document_date": "2022-11-09",
+    "event_era": "2022-11-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "rank": 2,
+    "id": "GEM-2085"
+  },
+  {
+    "date": "2022-11-17",
+    "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+    "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI tests",
+      "MSR register access issues",
+      "unexpected return codes"
+    ],
+    "rank": 4,
+    "document_date": "2022-11-17",
+    "event_era": "2022-11-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MSR register access issues and unexpec...This trigger is activated when a PECI/BIOS debug sequence fails to read or write the expected MSR register, causing an unexpected return code that breaks the expected PECI handshake and halts the test.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-d90f"
   },
   {
     "date": "2022-12-01",
@@ -246,7 +1199,18 @@
       "Redfish"
     ],
     "id": "GEM-8141",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-12-01",
+    "event_era": "2022-12-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 0361f7a7 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Deep Thought (Strategy) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETEDJason, it sounds like we're dealing with a potential issue with Redfish API calls for power management. I'm going to check our telemetry records to see if there's any correlation between those API calls and power-related errors.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2022-12-01",
@@ -259,7 +1223,15 @@
       "pysvtools"
     ],
     "id": "GEM-b656",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-12-01",
+    "event_era": "2022-12-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2022-12-01",
@@ -270,7 +1242,15 @@
       "Causality Error"
     ],
     "id": "GEM-00f8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-12-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2022-12-13",
@@ -282,6 +1262,66 @@
       "IPMI"
     ],
     "id": "GEM-ab3d",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-12-13",
+    "event_era": "2022-12-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request a169154e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a potential issue with Redfish API calls for power management. I'm going to check our telemetry records to see if there's any correlation between those API calls and power-related errors.\",\n  \"search_terms\": \n    \"[Redfish API], [power management], [PLDM], [GetUUID], [GetEID], [communicate [1]]\",\n  \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2022-12-21",
+    "summary": "Modification made to code to resolve Power Limit Accuracy feature issue",
+    "evidence": "[{'log_entry': '2022-12-21 15:38:31.713,INFO,montana.nativemodules.pmcapsweep,Setting policy limit to 1975 watts'}, {'tool_used': 'PECI (Power capping and Efficiency Control Interface)'}]\n\nEvidence 2: [{'log_entry': '2022-12-21 15:38:31.713,INFO,montana.nativemodules.pmcapsweep,Setting policy limit to 1975 watts'}]",
+    "sensitivity": "Public",
+    "tags": [
+      "feature_issue",
+      "code_modification",
+      "power_limit_accuracy"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 3110a2c8 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...{\"inferred_intent\": \"teach_me_system_architecture\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"feature_dna\"]}",
+    "document_date": "2022-12-21",
+    "event_era": "2022-12-21",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "spatial_anchor": {
+      "source_file": "2023_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-12-21",
+      "year": 2022,
+      "quarter": "2022-Q4",
+      "precision": "EXACT"
+    },
+    "impact_level": 3,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2022-12-21",
+    "summary": "PECI tool used to diagnose PCS 8 incrementation issue",
+    "evidence": [
+      {
+        "log_entry": "miv peci wrpciconfig https://hsdes.intel.com/appstore/article/#/22016083833"
+      }
+    ],
+    "sensitivity": "Public",
+    "tags": [
+      "peci_tool",
+      "pcs_incrementation"
+    ]
   }
 ]

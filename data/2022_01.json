@@ -8,7 +8,18 @@
       "Research",
       "TODO"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 1ded812d secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...{ \"inferred_intent\": \"debug_redfish_mctp_topology\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2022-01-01",
@@ -19,7 +30,18 @@
       "MCTP",
       "PythonSV"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Team uses PythonSV to send MCTP packet...This trigger is activated when a platform validation engineer needs to verify the OOB-MSM firmware's ability to receive and process MCTP packets from a VMD device, specifically by checking whether the PythonSV test harness successfully transmits the MEMBAR2 payload to the OOB-MSM firmware and confirms the expected response behavior.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2022-01-01",
@@ -30,6 +52,14 @@
       "PythonSV",
       "pmdebug"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   }
 ]

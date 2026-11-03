@@ -9,7 +9,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-f822"
+    "id": "GEM-f822",
+    "document_date": "2021-01-01",
+    "event_era": "2021-01-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 92264660 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2021-01-01",
@@ -21,7 +44,30 @@
       "BMC"
     ],
     "id": "GEM-8934",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-01-01",
+    "event_era": "2021-01-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request da597893 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDtake\": \"That's fascinating, Jason! I'm checking in our records on the Kayak and Montana platforms, specifically around the successful integration of PECI+MCTP tests.\",\n  \"search_terms\": \"Kayak Montana PECI MCTP 2017\", \n  \"upvote\": true\n}",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2021-01-01",
@@ -33,7 +79,62 @@
       "peci_framework"
     ],
     "id": "GEM-a185",
+    "rank": 4,
+    "document_date": "2021-01-01",
+    "event_era": "2021-01-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of research, peci_framework.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2021-01-01",
+    "summary": "Release of pcidevices_unit.py, redfish_utils.py, and other tools for the Purley RAS Gap Analysis",
+    "evidence": "[TOOL ERA REGISTRY]",
+    "sensitivity": "Public",
+    "tags": [
+      "tool_development",
+      "Purley_RAS_Gap_Analysis"
+    ],
+    "technical_gem": "Development and release of custom scripting tools (pcidevices_unit.py, redfish_utils.py) to aid in Purley RAS Gap Analysis",
     "rank": 4
+  },
+  {
+    "date": "2021-01-01",
+    "summary": "System boot options set",
+    "evidence": "setsystembootoptions.py  SetSystemBootOptions",
+    "domain": "operations",
+    "tags": [
+      "system_boot_options"
+    ],
+    "document_date": "2021-01-01",
+    "event_era": "2021-01-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2021-01-02",
@@ -45,7 +146,30 @@
       "BMC"
     ],
     "id": "GEM-6283",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-01-02",
+    "event_era": "2021-01-02",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 2895be7b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-02",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2021-01-03",
@@ -58,7 +182,64 @@
       "OOB"
     ],
     "id": "GEM-0dca",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-01-03",
+    "event_era": "2021-01-03",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request dbe2bea2 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC for MCTP stack validation link shared; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: None; Anchor Missing: None => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n<boost_interest>\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: Platform enablement for CWF and DMR.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-03",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2021-01-11",
+    "summary": "PECI framework handles connection aborts by res-establishing the connection.",
+    "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
+    "sensitivity": "Public",
+    "tags": [
+      "connection_abort",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-11",
+    "event_era": "2021-01-11",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of connection_abort, PECI.",
+    "spatial_anchor": {
+      "source_file": "2021_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-11",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-d11c"
   },
   {
     "date": "2021-01-15",
@@ -72,7 +253,98 @@
       "mctp"
     ],
     "id": "GEM-a0c7",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-01-15",
+    "event_era": "2021-01-15",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request db4d8f55 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"spoken_take\": \"Jason, it sounds like you're looking into the MCTP bus owner selection configuration. I'm checking our records on how we handled this scenario in the past, specifically around using ipmitool to send raw commands.\",\n  \"search_terms\": \"MCTP bus owner selection, ipmitool, OOB MSMS, CSME, MCTP bus configuration\",\n  \"upvote\": true\n}",
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-15",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2021-01-20",
+    "summary": "MIV report Weldon/Hooper/Staff...",
+    "evidence": "...-MIV report Weldon/Hooper/Staff...",
+    "sensitivity": "Public",
+    "tags": [
+      "report",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-20",
+    "event_era": "2021-01-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of report, MIV.",
+    "spatial_anchor": {
+      "source_file": "2021_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-20",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-2efc"
+  },
+  {
+    "date": "2021-01-26",
+    "summary": "Fuzzing support added for PECI commands.",
+    "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
+    "sensitivity": "Public",
+    "tags": [
+      "fuzzing",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-26",
+    "event_era": "2021-01-26",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of fuzzing, PECI.",
+    "spatial_anchor": {
+      "source_file": "2021_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-01-26",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-3482"
   },
   {
     "date": "2021-02-01",
@@ -84,7 +356,276 @@
       "msr_addresses"
     ],
     "id": "GEM-d315",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-02-01",
+    "event_era": "2021-02-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of subsystem.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-02-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "PECI commands tested in Base category using peci_checkout",
+    "evidence": "rdpciconfig, rdendpointconfig, mmio (crashdump, protection, uncore_crashdump), 360_sweep",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "testing"
+    ],
+    "rank": 4,
+    "document_date": "2021-02-01",
+    "event_era": "2021-02-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of testing, peci.",
+    "spatial_anchor": {
+      "source_file": "2021_02.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-02-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-8cc4"
+  },
+  {
+    "date": "2021-02-01",
+    "summary": "Issue with PTU calibration identified during test plan execution",
+    "evidence": "PTU not running properly, incorrect power limits",
+    "sensitivity": "Public",
+    "tags": [
+      "issue",
+      "calibration",
+      "ptu"
+    ],
+    "rank": 4,
+    "document_date": "2021-02-01",
+    "event_era": "2021-02-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of ptu, calibration, issue.",
+    "spatial_anchor": {
+      "source_file": "2021_02.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-02-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-aa48"
+  },
+  {
+    "date": "2021-02-15",
+    "summary": "PCIe MCTP alignment with Jiang was discussed.",
+    "evidence": "[RE: HSIO/Manageability MCTP alignment] w/ Jiang, Fengming <fengming.jiang@intel.com>",
+    "domain": "vendor_comm",
+    "tags": [
+      "mctp_alignment"
+    ],
+    "document_date": "2021-02-15",
+    "event_era": "2021-02-15",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-02-15",
+    "summary": "Multiple PCIe MCTP test cases were identified.",
+    "evidence": "id\ttitle\n15012891228\tPCIe MCTP - Check allocation of MCTP discover for a 4x4 device over HSBP and a broadway riser",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp_test_cases"
+    ],
+    "document_date": "2021-02-15",
+    "event_era": "2021-02-15",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-02-18",
+    "summary": "Found and corrected register mapping error affecting system performance.",
+    "evidence": "Debug log: 'Register Mapping Error Found'",
+    "domain": "hardware_debug",
+    "document_date": "2021-02-18",
+    "event_era": "2021-02-18",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "Primary TODO or research link mentioned: Archer City Platform Architecture",
+    "evidence": "https://intel.sharepoint.com/sites/archercitypat, Section 13.4 PSYS SENSE CIRCUIT FOR SYSTEM POWER TELEMETRY in the Archer City Combined PAS document, etc.",
+    "sensitivity": "Public",
+    "tags": [
+      "Archer City Platform",
+      "Research Link"
+    ],
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Research Link, Archer City Platform.",
+    "spatial_anchor": {
+      "source_file": "2021_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-03-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-7ef8"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths",
+    "evidence": "RAW LOGS mention peci_flood.tdf is used to catch unexpected failures for high-throughput MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "peci_flood.tdf",
+      "PECI Command Rejection",
+      "PECI Throughput",
+      "peci_poison.tdf"
+    ],
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of peci_flood.tdf, PECI Throughput.",
+    "spatial_anchor": {
+      "source_file": "2021_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-03-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-a220"
+  },
+  {
+    "date": "2021-03-01",
+    "summary": "No conflicts found in the RAW LOGS regarding tool release years",
+    "evidence": "Tools mentioned are peci_flood.tdf, peci_poison.tdf, and xProd-runs.tdf, but their release years are not explicitly stated in the logs",
+    "sensitivity": "Public",
+    "tags": [
+      "Tool Release Years"
+    ],
+    "rank": 4,
+    "document_date": "2021-03-01",
+    "event_era": "2021-03-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Tool Release Years.",
+    "spatial_anchor": {
+      "source_file": "2021_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-03-01",
+      "year": 2021,
+      "quarter": "2021-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-f536"
+  },
+  {
+    "date": "2021-04-06",
+    "summary": "Python 3.8.9 environment setup",
+    "evidence": "Python 3.8.9 (tags/v3.8.9:a743f81, Apr 6 2021, 14:02:34) [MSC v.1928 64 bit (AMD64)] on win32",
+    "domain": "operations",
+    "document_date": "2021-04-06",
+    "event_era": "2021-04-06",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2021-04-26",
@@ -93,16 +634,30 @@
     "sensitivity": "Public",
     "tags": [],
     "id": "GEM-caf9",
-    "rank": 4
-  },
-  {
-    "date": "2021-04-26",
-    "summary": "MSR whitelisting updated in icx_peci_arrays.py and spr_peci_arrays.py with new functions or methods",
-    "evidence": "The log entry on 4/26/2021 mentions: ...",
-    "sensitivity": "Public",
-    "tags": [],
-    "id": "GEM-1af8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-04-26",
+    "event_era": "2021-04-26",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request cf967cff secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: /dev/peci-mctp and RdEndPointCfg (0xC1) match; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: ipmitool used to send raw commands match; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-04-26",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2021-04-27",
@@ -111,7 +666,29 @@
     "sensitivity": "Public",
     "tags": [],
     "id": "GEM-350f",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-04-27",
+    "event_era": "2021-04-27",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of SetNmPolicy, domain 0.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-04-27",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-05-01",
@@ -123,7 +700,29 @@
       "PECI framework update"
     ],
     "id": "GEM-d5aa",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-05-01",
+    "event_era": "2021-05-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of MIV, framework.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-05-01",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-05-01",
@@ -135,7 +734,29 @@
       "Exception handling"
     ],
     "id": "GEM-d576",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-05-01",
+    "event_era": "2021-05-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of error_code, HSD-ES.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-05-01",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-05-01",
@@ -147,7 +768,277 @@
       "PCI configuration"
     ],
     "id": "GEM-3405",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-05-01",
+    "event_era": "2021-05-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of BMC_console, ipmitool.",
+    "spatial_anchor": {
+      "source_file": "2021.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-05-01",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2021-06-30",
+    "summary": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities",
+    "evidence": "RAW LOGS on 6/30/2021",
+    "sensitivity": "Public",
+    "tags": [
+      "collaboration",
+      "team structure"
+    ],
+    "rank": 4,
+    "document_date": "2021-06-30",
+    "event_era": "2021-06-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of collaboration, team structure.",
+    "spatial_anchor": {
+      "source_file": "2021_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-06-30",
+      "year": 2021,
+      "quarter": "2021-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-4aac"
+  },
+  {
+    "date": "2021-07-27",
+    "summary": "ipmitool -I lanplus -H 10.219.165.176 -U debuguser -P 0openBmc1 -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 0x70 0x05 0x05 0xA1 0x00 0x00 0x00 0x00",
+    "evidence": "ipmitool -I lanplus -H 10.219.165.176 -U debuguse",
+    "domain": "vendor_comm",
+    "tags": [
+      "ipmitool"
+    ],
+    "document_date": "2021-07-27",
+    "event_era": "2021-07-27",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 32f2910f secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like you're looking into the MIV test case where Postman was used with IP address 10.23.20.135 and Redfish protocol. I'm checking our telemetry records to see how this interaction impacted our system.\",\n  \"search_terms\": \n    \"[['Redfish', 'Postman', 'IP address'], ['MIV test case', 'API interactions'], ['10.23.20.135', 'Redfish protocol']]\", \n  \"upvote\": true\n}",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-27",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "rank": 4,
+    "id": "GEM-f3dd"
+  },
+  {
+    "date": "2021-07-28",
+    "summary": "pysv_checkout -l bigcore",
+    "evidence": "pysv_checkout -l bigcore",
+    "domain": "lab_operations",
+    "tags": [
+      "pysv_checkout"
+    ],
+    "document_date": "2021-07-28",
+    "event_era": "2021-07-28",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 3,
+    "passes": 477,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of pysv_checkout.",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-28",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "rank": 4,
+    "status": "SATURATED",
+    "id": "GEM-993c"
+  },
+  {
+    "date": "2021-07-29",
+    "summary": "phoenix TC WIP - will keep open for Kalpanas Beta plan",
+    "evidence": "phoenix TC WIP - will keep open for Kalpanas Beta plan",
+    "domain": "career_timeline",
+    "tags": [
+      "Kalpanas Beta"
+    ],
+    "document_date": "2021-07-29",
+    "event_era": "2021-07-29",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of Kalpanas Beta.",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-29",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "rank": 2,
+    "status": "SATURATED",
+    "id": "GEM-4ad9"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "Core wake on PECI - Test that PECI MSR reads can wake sleeping cores",
+    "evidence": "~Core wake on PECI - Test that PECI MSR reads can wake sleeping cores",
+    "domain": "hardware_debug",
+    "tags": [
+      "MSR",
+      "PECI"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 4a7cd13e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a critical issue where MSR accesses are failing due to missing 0x40 responses from all 56 thread IDs. I'm checking our telemetry data to see if there's any correlation between this error and recent changes to the CPU or memory configurations.\",\n  \"search_terms\": \"MSR access errors, 0x40 responses, CR3.Punit, NCEVENTS_SCF_UBOX, thread ID failures\",\n  \"upvote\": true\n}",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-30",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "rank": 4,
+    "id": "GEM-85c0"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "PCS TMC IB Lock out - Test the PECI Platform Configuration Space Thermal Monitoring Control mailbox lock out bit",
+    "evidence": "~PCS TMC IB Lock out - Test the PECI Platform Configuration Space Thermal Monitoring Control mailbox lock out bit",
+    "domain": "hardware_debug",
+    "tags": [
+      "IB Lock",
+      "TMC"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 4f43862f secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it seems like you're looking into a tool used to send raw PECI commands. I'm checking our records on how we've been using curl for debugging purposes.\",\n  \"search_terms\": \n    \"[['PECI', 'Redfish', 'curl'], ['Z87-Linux', 'Acme Lab', 'debug'], ['Linux', 'PCIe', 'System Management']]\",\n  \"upvote\": true\n}",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-30",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "rank": 4,
+    "id": "GEM-5f68"
+  },
+  {
+    "date": "2021-07-30",
+    "summary": "Verify MCTP discovery through BMC PCIeDevices",
+    "evidence": "~Verify MCTP discovery through BMC PCIeDevices",
+    "domain": "hardware_debug",
+    "tags": [
+      "BMC",
+      "MCTP"
+    ],
+    "document_date": "2021-07-30",
+    "event_era": "2021-07-30",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "passes": 6,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "[FOYER] Request 23d2fd0a secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "spatial_anchor": {
+      "source_file": "2021_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-07-30",
+      "year": 2021,
+      "quarter": "2021-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "rank": 4,
+    "id": "GEM-ab64"
   },
   {
     "date": "2021-08-01",
@@ -159,7 +1050,15 @@
       "specification"
     ],
     "id": "GEM-e88d",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-08-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2021-08-01",
@@ -172,7 +1071,15 @@
       "IB Lock out"
     ],
     "id": "GEM-6ed1",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-08-01",
+    "event_era": "2021-08-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2021-08-01",
@@ -184,19 +1091,40 @@
       "power limiting"
     ],
     "id": "GEM-96b0",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-08-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2021-10-27",
-    "summary": "PECI v4.0 Commands Checkout (MCTP) research and development ongoing.",
+    "summary": "Minimum read time of 6000ms must be set for domain 0 in SetNmPolicy command.",
     "evidence": "[RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
     "sensitivity": "Public",
     "tags": [
-      "MCTP",
-      "PECI"
+      "PECI",
+      "domain 0",
+      "SetNmPolicy",
+      "MCTP"
     ],
     "id": "GEM-a5e4",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-10-27",
+    "event_era": "2021-10-27",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 22c3db4c secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-10-27",
@@ -208,19 +1136,18 @@
       "BMC"
     ],
     "id": "GEM-71bb",
-    "rank": 4
-  },
-  {
-    "date": "2021-10-27",
-    "summary": "Minimum read time of 6000ms must be set for domain 0 in SetNmPolicy command.",
-    "evidence": "[RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
-    "sensitivity": "Public",
-    "tags": [
-      "SetNmPolicy",
-      "domain 0"
-    ],
-    "id": "GEM-a0d8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-10-27",
+    "event_era": "2021-10-27",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request c847b3ce secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"spoken_take\": \"Jason, it sounds like you're looking into the BMC's LogServices/Journal/Entries endpoint using Redfish API. I'm checking our archives to see if we have any records related to a dumpJournal.py script.\",\n  \"search_terms\": \n    \"[era_marker: 2016-2021], BMC LogServices, Journal Entries, Redfish API, dumpJournal.py\",\n  \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2021-11-01",
@@ -232,7 +1159,15 @@
       "framework"
     ],
     "id": "GEM-12a5",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-11-01",
+    "event_era": "2021-11-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2021-11-01",
@@ -244,7 +1179,15 @@
       "HSD-ES"
     ],
     "id": "GEM-27ec",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-11-01",
+    "event_era": "2021-11-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2021-11-01",
@@ -256,6 +1199,118 @@
       "ipmitool"
     ],
     "id": "GEM-2a7d",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2021-11-01",
+    "event_era": "2021-11-01",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2021-12-15",
+    "summary": "Redfish OEM API validation meeting",
+    "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
+    "sensitivity": "Public",
+    "tags": [
+      "OEM API",
+      "Redfish"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-15",
+    "event_era": "2021-12-15",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 8b98a921 secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"inferred_intent\": \"debug_condition_inquiry\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2021_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-12-15",
+      "year": 2021,
+      "quarter": "2021-Q4",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-7ab0"
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+    "evidence": "Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared",
+    "sensitivity": "Public",
+    "tags": [
+      "IEH",
+      "Error Correction"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-20",
+    "event_era": "2021-12-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of IEH, Error Correction.",
+    "spatial_anchor": {
+      "source_file": "2021_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-12-20",
+      "year": 2021,
+      "quarter": "2021-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-103a"
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+    "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
+    "sensitivity": "Public",
+    "tags": [
+      "IFU MCA",
+      "Archer City"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-20",
+    "event_era": "2021-12-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of IFU MCA, Archer City.",
+    "spatial_anchor": {
+      "source_file": "2021_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2021-12-20",
+      "year": 2021,
+      "quarter": "2021-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-9db3"
   }
 ]

@@ -9,7 +9,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-b0ac"
+    "id": "GEM-b0ac",
+    "trigger_context": "[FOYER] Request 99b27757 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-01-01",
+    "event_era": "2023-01-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-01-01",
@@ -22,7 +45,29 @@
       "MUX"
     ],
     "id": "GEM-307b",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-01-01",
+    "event_era": "2023-01-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of NM S, PSU, MUX.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2023-01-01",
@@ -34,7 +79,29 @@
       "EraRegistry"
     ],
     "id": "GEM-fe99",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-01-01",
+    "event_era": "2023-01-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of ARTIFACT, EraRegistry.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2023-01-01",
@@ -47,7 +114,30 @@
       "RedfishAPI"
     ],
     "id": "GEM-6f4c",
-    "rank": 4
+    "rank": 4,
+    "trigger_context": "[FOYER] Request f81110f8 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"trigger_pcs_bmc_interaction\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-01-01",
+    "event_era": "2023-01-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-01-01",
@@ -59,7 +149,29 @@
       "EIDs"
     ],
     "id": "GEM-7572",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-01-01",
+    "event_era": "2023-01-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of bus owners, EIDs.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2023-01-02",
@@ -71,7 +183,30 @@
       "PECI"
     ],
     "id": "GEM-fcfa",
-    "rank": 4
+    "rank": 4,
+    "trigger_context": "[FOYER] Request af98a4e9 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"FORENSIC\", \"domain\": \"exp_for\", \"casual\": 0.0, \"intrigue\": 0.6, \"importance\": 0.8, \"target_domains\": [\"exp_for\"] }",
+    "document_date": "2023-01-02",
+    "event_era": "2023-01-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 3,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-02",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-01-03",
@@ -84,7 +219,30 @@
       "PCI"
     ],
     "id": "GEM-3473",
-    "rank": 4
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 489aba99 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...{ \"inferred_intent\": \"PCI Bus Configuration Issue\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-01-03",
+    "event_era": "2023-01-03",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-03",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-02-06",
@@ -96,7 +254,30 @@
       "device_discovery"
     ],
     "id": "GEM-dfb1",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-02-06",
+    "event_era": "2023-02-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Error codes encountered during device ...This knowledge is triggered when validating Montana test suite device discovery failures, specifically to correlate PCIe transaction timeouts and missing 0x40 responses with underlying link integrity or endpoint configuration errors.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-06",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-02-06",
@@ -108,7 +289,728 @@
       "troubleshooting"
     ],
     "id": "GEM-d4eb",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-02-06",
+    "event_era": "2023-02-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of MCTP, troubleshooting.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-06",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "NPK validation planning and debugging PTI bluewire rework",
+    "evidence": "TODO: NPK validation planning, including identifying core package features, mapping them to existing tests, and adding new tests to TeamCity. Debugging PTI bluewire rework using cAnalyzer tools on 9/25/2014.",
+    "sensitivity": "Public",
+    "tags": [
+      "NPK",
+      "PTI bluewire rework",
+      "cAnalyzer"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of NPK, PTI bluewire rework, cAnalyzer.",
+    "spatial_anchor": {
+      "source_file": "2014_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Updated DSD Tool Stack to version 1.0.30.400 and installed latest Trace Hub SDK (version 0.6.27757) to resolve issues with TPV Orange toolstack.",
+    "evidence": "[RAW LOGS] and [SOLUTIONS]",
+    "sensitivity": "Public",
+    "tags": [
+      "DSD Tool Stack",
+      "Trace Hub SDK",
+      "TPV Orange"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of DSD Tool Stack, Trace Hub SDK, TPV Orange.",
+    "spatial_anchor": {
+      "source_file": "2015_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Reverted to version 1518 of LTB software to resolve 'Could not stop the target' error.",
+    "evidence": "[SOLUTIONS]",
+    "sensitivity": "Public",
+    "tags": [
+      "LTB",
+      "Error Resolution"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of LTB, Error Resolution.",
+    "spatial_anchor": {
+      "source_file": "2015_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "TODO: Update DSD Tool Stack to version 1.0.30.400.",
+    "evidence": "[RAW LOGS]",
+    "sensitivity": "Public",
+    "tags": [
+      "DSD Tool Stack",
+      "TODO"
+    ],
+    "inferred_intent": "greeting",
+    "addressed_to": "NONE",
+    "vibe": "CASUAL",
+    "domain": "unknown",
+    "casual": 0.8,
+    "intrigue": 0.0,
+    "importance": 0.0,
+    "target_domains": [],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of DSD Tool Stack, TODO.",
+    "spatial_anchor": {
+      "source_file": "2015_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "TODO: Research SPS HSD issue with sighting ID 5388174 at https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174.",
+    "evidence": "https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "SPS HSD issue"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Used Postman with IP address 10.23.20.135 and Redfish protocol for API interactions during MIV test cases.",
+    "evidence": "Postman used with IP address 10.23.20.135 and Redfish protocol",
+    "sensitivity": "Public",
+    "tags": [
+      "API interactions",
+      "MIV test cases"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 1,
+    "trigger_context": "Initiating Pinky (Triage) intuition...[FOYER] Request 8e7ce1db secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Let me check on that for you, Jason. I'll see if we have any records of MCTP discovery through BMC PCIe devices.\",\n  \"search_terms\": \n    \"[['MCTP', 'BMC', 'PCIe'], ['MCTP Discovery', 'PCIe Devices'], ['BMC', 'PCIe', 'Discovery']]\", \n  \"upvote\": true\n}",
+    "passes": 3,
+    "consecutive_zero_deltas": 2
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Glasgow ID list on Sharepoint referenced for content readiness, IDs ranging from 58637 to 59211.",
+    "evidence": "Glasgow ID list on Sharepoint with IDs 58637-59211",
+    "sensitivity": "Public",
+    "tags": [
+      "Sharepoint",
+      "content readiness"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Primary TODO or research link mentioned: MIV Wiki and Manageability specifications",
+    "evidence": "MIV Wiki https://wiki.ith.intel.com/display/PlatformTech/Manageability\nManageability Spec Links - https://intel.sharepoint.com/:o:/r/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Docs-Specs/Manageability_specs_links",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "Manageability specifications",
+      "MIV Wiki"
+    ],
+    "rank": 4,
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Manageability specifications, Intel MIV, MIV Wiki.",
+    "spatial_anchor": {
+      "source_file": "2019_2024.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Primary TODO or research link mentioned: accessing artifactory repository",
+    "evidence": "https://ubit-artifactory.intel.com/artifactory/owr-repos/submissions/saf_blob/saf_blob_file_ww17-v2/saf_blob_file_ww17-v2.zip",
+    "sensitivity": "Public",
+    "tags": [
+      "artifactory",
+      "repository"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of artifactory, repository.",
+    "spatial_anchor": {
+      "source_file": "2022_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "MSR accesses missing 0x40 responses from all 56 thread IDs: CR3.Punit and NCEVENTS_SCF_UBOX",
+    "evidence": "FAIL: missing 0x40 response from all 56 thread ids for MSR ('rdIaMsr', '0x648', 'CR3.Punit', 0)",
+    "sensitivity": "Public",
+    "tags": [
+      "MSR",
+      "PECI"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 26c64067 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Let me check on that for you, Jason. I'll see if we have any records of MCTP discovery through BMC PCIe devices.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Tool used to send raw PECI commands: curl",
+    "evidence": "curl -sku \"admin:initial0\" -H \"Content-Type: application/json\" -X PATCH https://localhost:5443/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci",
+    "sensitivity": "Public",
+    "tags": [
+      "curl",
+      "PECI"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 79981c13 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2022_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Discovery of Intel BMC topology using busctl tree commands in Simics test environment.",
+    "evidence": "busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU1\nbusctl tree xyz.openbmc_project.MCTP_PCIe\nbusctl tree xyz.openbmc_project.MCTP_SMBus_HSBP",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel BMC",
+      "Simics test environment",
+      "busctl tree"
+    ],
+    "trigger_context": "[FOYER] Request 04c16bb6 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Pinky (Triage) intuition...{ \"inferred_intent\": \"debug_interface_query\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.6, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 6,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2024_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Execution of PECI commands using peci_cmds with specific payload values.",
+    "evidence": "peci_cmds -d /dev/peci-i3c RdEndpointConfigPCILocal 0 30 1 0 0\npeci_cmds -d /dev/peci-i3c RdIAMSR 1 0x401",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI commands",
+      "peci_cmds"
+    ],
+    "trigger_context": "[FOYER] Request 6aff6460 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"FORENSIC\", \"domain\": \"exp_for\", \"casual\": 0.0, \"intrigue\": 0.0, \"importance\": 0.0 }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 3,
+    "spatial_anchor": {
+      "source_file": "2024_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Research link to article on Intel's appstore.",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/16013235666",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel appstore",
+      "research link"
+    ],
+    "trigger_context": "[FOYER] Request 4a062df9 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"search_intel_appstore\", \"addressed_to\": \"NONE\", \"vibe\": \"HISTORICAL\", \"domain\": \"work_history\", \"casual\": 0.8, \"intrigue\": 0.6, \"importance\": 0.4 }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 5,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 1,
+    "spatial_anchor": {
+      "source_file": "2024_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Authentication method used for Redfish API queries in this system",
+    "evidence": "-sku option used to authenticate as \"debuguser:0penBmc1\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "API",
+      "authentication"
+    ],
+    "trigger_context": "[FOYER] Request 1946f4c8 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition_inquiry\", \"addressed_to\": \"NONE\", \"vibe\": \"HISTORICAL\", \"domain\": \"work_history\", \"casual\": 0.8, \"intrigue\": 0.7, \"importance\": 0.6, \"target_domains\": [\"work_history\"] }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 6,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2024_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "PECI commands executed and modified on the system using peci_cmds tool",
+    "evidence": "Examples of PECI commands being executed with different options and arguments",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "peci_cmds"
+    ],
+    "trigger_context": "[FOYER] Request bbefa6b9 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\"inferred_intent\": \"authentication method for Redfish API\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.3, \"intrigue\": 0.8, \"importance\": 0.9, \"target_domains\": [\"exp_tlm\", \"work_history\"]}",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 3,
+    "spatial_anchor": {
+      "source_file": "2024_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "System architecture mentioned in technical details, including interfaces supported by the system",
+    "evidence": "Intel-based system with MCTP and PECI interfaces",
+    "sensitivity": "Public",
+    "tags": [
+      "system architecture",
+      "MCTP",
+      "PECI"
+    ],
+    "trigger_context": "[FOYER] Request 071063e5 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it seems like you're looking into authentication methods for Redfish API queries. I'm checking our records on how we handled Redfish authentication in the past, specifically around the use of sku options.\",\n  \"search_terms\": \"Redfish API authentication, sku option, debuguser, OpenBMC, Intel VISA\",\n  \"upvote\": true\n}",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 6,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2024_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-20",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Failed to send PECI command: Input/output error (5)",
+    "evidence": "<7> sendReceiveUnified: Failed to send PECI command: Input/output error (5)",
+    "domain": "hardware_debug",
+    "tags": [
+      "input_error",
+      "peci_failure"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Unified PECI enabled: Transport Layer: 2",
+    "evidence": "<6> Unified PECI enabled: Transport Layer: 2",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci_enabled"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "PECI target[0x30]: Endpoint Local PCI Read of Seg:00 00:02:01 Reg 178",
+    "evidence": "PECI target[0x30]: Endpoint Local PCI Read of Seg:00 00:02:01 Reg 178",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci_command",
+      "pci_read"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "PECI Response received",
+    "evidence": "<6> PECI Response:\n   Response: 0x7E 0x80 0x86 0x00 0x02 0x40 0x00 0x00 0x00 0x02 \n\n cc:0x40 0x02000000",
+    "domain": "hardware_debug",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Modified 03-bmc-mctp to include new components",
+    "evidence": "Modify 03-bmc-mctp to include 1_socket_ucc-aunit-bmc-cbbpunit-ese-imhpunit-oobmsm-pfrprot-s3m",
+    "domain": "operations",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-02-22",
+    "summary": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus",
+    "evidence": "NM dump busctl  call xyz.openbmc_project.NodeManager /xyz/openbmc_project/NodeManager/Diagnostics xyz.openbmc_project.NodeManager.Status DumpToLog\nMCTP URI Sumanth - 'Redfish event subscription' - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
+    "sensitivity": "Public",
+    "tags": [
+      "D-Bus",
+      "MCTP",
+      "Intel MIV",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2023-02-22",
+    "event_era": "2023-02-22",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 43360587 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...That's fascinating, Jason! I'm checking our records on the Kayak and Montana platforms integration, specifically around the PECI+MCTP tests and platform enablement for CWF and DMR.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2019_2024.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-22",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-02-25",
+    "summary": "Tools used to test manageability features: Simics, DTAF",
+    "evidence": "Simics dashboard - https://pbiprovisioned.intel.com/reports/powerbi/PSC%20Platform%20Indicators/SIMICS/Server/PSC%20Integration%20Events_dev_SIMICS_All?rs:Embed=true\nDTAF quickstart https://wiki.ith.intel.com/display/PEVDEVOPS/DTAF+Content+Developer+quick+start+guide",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel MIV",
+      "Simics",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2023-02-25",
+    "event_era": "2023-02-25",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Intel MIV, Simics, DTAF.",
+    "spatial_anchor": {
+      "source_file": "2019_2024.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-25",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2023-02-27",
@@ -120,7 +1022,199 @@
       "test_cases"
     ],
     "id": "GEM-8f3e",
+    "rank": 4,
+    "document_date": "2023-02-27",
+    "event_era": "2023-02-27",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of gnr, peci, srf.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-27",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-04-15",
+    "summary": "Performed Git operations for GitLab repository including SSH and HTTPS cloning, proxy configuration, SSL verification bypass, authorization issue resolution, user email and name setting, remote URL updating, and pulling to update local repository.",
+    "evidence": "git clone ssh://jallred@gitlab.devtools.intel.com:29418/dpv-pve/miv-mivsoftware.git\n git config --global http.https://proxy-us.intel.com.proxy proxy-us.intel.com:911\ngit config --global http.https://proxy-us.intel.com.sslVerify false\ngit clone https://jallred@gitlab.devtools.intel.com/dpv-pve/miv-mivsoftware.git\n Control Panel -> User Accounts -> Credential Manager - Windows Credentials, delete the git credentials\ngit config --global user.email \"jason.a.allred@intel.com\"\ngit config --global user.name \"jallred\"\ngit config remote.origin.url https://jallred@gitlab.devtools.intel.com/dpv-pve/miv-mivsoftware.git\ngit pull",
+    "sensitivity": "Public",
+    "technical_gem": "Utilized Git CLI commands such as 'git config' and 'git clone' for various operations.",
+    "rank": 4,
+    "tags": [
+      "Git",
+      "GitLab",
+      "SSH",
+      "HTTPS",
+      "Proxy Configuration",
+      "SSL Verification",
+      "Authorization",
+      "User Settings"
+    ]
+  },
+  {
+    "date": "2023-04-15",
+    "summary": "Installed Postman for Redfish API testing",
+    "evidence": "https://wiki.ith.intel.com/display/PlatformTech/Using+Postman+for+Redfish",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "API Testing",
+      "Postman"
+    ],
+    "technical_gem": "Postman",
     "rank": 4
+  },
+  {
+    "date": "2023-04-16",
+    "summary": "Analyzed technical events, compared findings with EXISTING ARCHIVE, enhanced descriptions for clarity, classified sensitivity level.",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "Analysis",
+      "Comparison",
+      "Improvement",
+      "Sensitivity"
+    ],
+    "technical_gem": "Utilized comparison tool 'Archive Comparison Tool' during analysis process",
+    "rank": 4
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Blackbox recorder telemetry software developed to debug RAPL failures",
+    "evidence": "Developed telemetry software 'Blackbox recorder' used to debug RAPL failures...",
+    "sensitivity": "Public",
+    "tags": [
+      "telemetry",
+      "RAPL"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request a1fe68fa secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...{ \"inferred_intent\": \"debug_rapl_failures\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7 }",
+    "document_date": "2023-04-24",
+    "event_era": "2023-04-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 3,
+    "spatial_anchor": {
+      "source_file": "2023_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-04-24",
+      "year": 2023,
+      "quarter": "2023-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-c26e"
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Delivered negative BDF and MSR scan with refactored code for future testing",
+    "evidence": "delivered negative BDF and MSR scan with refactored code is for 'future negative testing'",
+    "sensitivity": "Public",
+    "tags": [
+      "negative testing",
+      "refactored code"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 85135221 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-04-24",
+    "event_era": "2023-04-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 3,
+    "spatial_anchor": {
+      "source_file": "2023_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-04-24",
+      "year": 2023,
+      "quarter": "2023-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-48b5"
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+    "evidence": "Granite Rapids X2/X3 (GNR SP) PO Plan exit criteria met by Q1",
+    "sensitivity": "Public",
+    "tags": [
+      "exit criteria",
+      "Q1"
+    ],
+    "rank": 4,
+    "document_date": "2023-04-24",
+    "event_era": "2023-04-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of exit criteria, Q1.",
+    "spatial_anchor": {
+      "source_file": "2023_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-04-24",
+      "year": 2023,
+      "quarter": "2023-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-66c7"
+  },
+  {
+    "date": "2023-05-14",
+    "summary": "HSIO IP address update for zz14l47002n1002 and zz14l47002n0502",
+    "evidence": "GNR HSIO zz14l47002n1002 ipaddress = 10.112.121.68 osip = 10.112.120.68\nGNR HSIO zz14l47002n0502 ipaddress = 10.112.121.51 osip = 10.112.120.51",
+    "domain": "hardware_debug",
+    "tags": [
+      "hsio"
+    ],
+    "document_date": "2023-05-14",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-06-27",
@@ -132,7 +1226,30 @@
       "ipmitool"
     ],
     "id": "GEM-3804",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-06-27",
+    "event_era": "2023-06-27",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Used ipmitool to set and get network m...The need to configure or verify BMC LAN channel parameters, such as IP address assignment and authentication levels, for remote out-of-band management access.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-06-27",
+      "year": 2023,
+      "quarter": "2023-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-06-28",
@@ -144,7 +1261,281 @@
       "enumerated_bus"
     ],
     "id": "GEM-b0af",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-06-28",
+    "event_era": "2023-06-28",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of MCTP, debugging, BMC.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-06-28",
+      "year": 2023,
+      "quarter": "2023-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-07-05",
+    "summary": "MIV IP address update for fl31ca102an0705",
+    "evidence": "GNR MIV? fl31ca102an0705 ipaddress = 10.45.228.208 osip = 10.45.228.201",
+    "domain": "hardware_debug",
+    "tags": [
+      "miv"
+    ],
+    "document_date": "2023-07-05",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-05",
+    "summary": "Peci Read and Gen4 peci exception lists investigation",
+    "evidence": "Does this correlate to Gen4 peci exception lists? - BEAT https://hsdes.intel.com/appstore/article/#/22015900995",
+    "domain": "operations",
+    "tags": [
+      "peci"
+    ],
+    "document_date": "2023-07-05",
+    "event_era": "2023-07-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-05",
+    "summary": "PythonSV and PECI moving to PythonSV - Deliver PECI technical presentation to XPIV team",
+    "evidence": "Moving PECI to PythonSV - Deliver PECI technical presentation to XPIV team",
+    "domain": "vendor_comm",
+    "tags": [
+      "pythonsv",
+      "peci"
+    ],
+    "document_date": "2023-07-05",
+    "event_era": "2023-07-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-06",
+    "summary": "Testing MCTP_PCIe endpoint using Redfish API on different IP address",
+    "evidence": "https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/",
+    "domain": "hardware_debug",
+    "document_date": "2023-07-06",
+    "event_era": "2023-07-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-11",
+    "summary": "Sending and receiving MCTP message payloads over Redfish",
+    "evidence": "https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
+    "domain": "hardware_debug",
+    "document_date": "2023-07-11",
+    "event_era": "2023-07-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-11",
+    "summary": "Testing MCTP_PCIe endpoint using Redfish API",
+    "evidence": "curl -k -u 'debuguser8:0penBmc1' -H 'Content-Type: application/json' -X GET https://10.45.228.208/redfish/v1/Managers/bmc/MctpService",
+    "domain": "hardware_debug",
+    "document_date": "2023-07-11",
+    "event_era": "2023-07-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-12",
+    "summary": "Successful download of unified_server_ptu.tar.gz from Intel Artifactory",
+    "evidence": "The command 'curl -f -u sys_degsi1:zaq1@wsxcde34rfvbgt5 --ssl-no-revoke -X GET https://ubit-artifactory.intel.com/artifactory/list/dcg-dea-srvplat-repos/Automation_Tools/CI_Tools/Generic/Linux/unified_server_ptu.tar.gz --output C:\\Automation\\Tools\\GNR\\Linux\\unified_server_ptu.tar.gz' executed successfully..",
+    "domain": "operations",
+    "document_date": "2023-07-12",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-14",
+    "summary": "Failed to send MCTP message payload using Redfish API",
+    "evidence": "curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST -d \"{\\\"dstEid\\\":29, \\\"payload\\\":[1,29,0,4], \\\"timeout\\\":1000}\" https://10.45.228.208/redfish/v1/Managers/bmc/MctpService/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload",
+    "domain": "hardware_debug",
+    "document_date": "2023-07-14",
+    "event_era": "2023-07-14",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-17",
+    "summary": "MCTP_PCIe send/receive message test",
+    "evidence": "POST https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload {'dstEid': 10, 'payload': [1, 129, 0, 4], 'timeout': 1000}\n curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST -d \"{\\\"dstEid\\\":10, \\\"payload\\\":[1, 129, 0, 4], \\\"timeout\\\":1000}\" https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload ",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "PCIe"
+    ],
+    "document_date": "2023-07-17",
+    "event_era": "2023-07-17",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-20",
+    "summary": "Data frame merge issues",
+    "evidence": "df1 = self.merge_eid_df_mctp\n df2 = newindexdata\ndf1 = self.merge_df_mctp\ndf2 = newdata\ndf2.set_index('EID').combine_first(df1.set_index('EID'))",
+    "domain": "operations",
+    "tags": [
+      "merge",
+      "dataframe"
+    ],
+    "document_date": "2023-07-20",
+    "event_era": "2023-07-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-20",
+    "summary": "Indexing and combining data frames",
+    "evidence": "df2.index.astype(object)\ndf2.combine_first(df1)",
+    "domain": "operations",
+    "tags": [
+      "indexing",
+      "combining"
+    ],
+    "document_date": "2023-07-20",
+    "event_era": "2023-07-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-20",
+    "summary": "Resetting data frame index and combining with new data",
+    "evidence": "self.df_mctp.set_index('EID')\nself.df_mctp = self.df_mctp.reset_index()\nnewdata = pandas.DataFrame.from_dict(redfish_eid_dictionary, orient='index', columns=['redfish_network'])\nnewdata.index.name = 'EID'\nnewdata = newdata.reset_index()",
+    "domain": "operations",
+    "tags": [
+      "reset",
+      "combine"
+    ],
+    "document_date": "2023-07-20",
+    "event_era": "2023-07-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-07-20",
+    "summary": "Updating data frame with new values",
+    "evidence": "new_df_mctp.update(newdata)",
+    "domain": "operations",
+    "tags": [
+      "update",
+      "values"
+    ],
+    "document_date": "2023-07-20",
+    "event_era": "2023-07-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-07-21",
@@ -157,7 +1548,30 @@
       "srf"
     ],
     "id": "GEM-d596",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-07-21",
+    "event_era": "2023-07-21",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Implementation of PECI stepping suppor...This knowledge is triggered when validating platform-specific PECI command compatibility or addressing sensor read failures on Sapphire Rapids (SRF) and Granite Rapids (GNR) silicon, requiring the execution of the 18-case stepping support suite to isolate firmware revision mismatches.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-07-21",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-07-21",
@@ -169,7 +1583,30 @@
       "mctp"
     ],
     "id": "GEM-294a",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-07-21",
+    "event_era": "2023-07-21",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of mctp_discovery.tdf, montana.py, mctp_reset_cold.tdf.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-07-21",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2023-07-28",
@@ -181,7 +1618,974 @@
       "csv"
     ],
     "id": "GEM-73e8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-07-28",
+    "event_era": "2023-07-28",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'CSV file creation and reading using pa...The specific debug condition is verifying data persistence integrity between the raw file I/O layer and the pandas DataFrame abstraction, specifically when `pandas.read_csv` returns an empty or malformed object after a preceding `open(..., 'w')` operation on the relative path `../nativemodules/unit/first_df.csv`.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-07-28",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2023-08-08",
+    "summary": "BMC credentials were retrieved from system details provider.",
+    "evidence": "from src.provider.system_details_provider import SystemDetailsProvider\nself._system_details = SystemDetailsProvider(self._log, cfg_opts, self._os)\nusername, password = self._system_details.get_bmc_creds()",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc_credentials"
+    ],
+    "document_date": "2023-08-08",
+    "event_era": "2023-08-08",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-09",
+    "summary": "BMC and SUT IP addresses and credentials were recorded.",
+    "evidence": "[Section0]\nipaddress = 10.112.121.68\nosip = 10.112.120.68\nsku = nm\ntargettype = intel\ninterface = lan\ncpuname = gnr\nbmcver = openbmc\nusername = debuguser\npassword = 0penBmc1",
+    "domain": "hardware_debug",
+    "tags": [
+      "hardware_config"
+    ],
+    "document_date": "2023-08-09",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-09",
+    "summary": "VNC and SP configuration were recorded for two systems.",
+    "evidence": "zz14l47002n1002.ccr.corp.intel.com\nNUC User: lab_RASPDCG  password: Pears@23456\nPDU IP: 10.112.98.59 Outlet: 6",
+    "domain": "hardware_debug",
+    "tags": [
+      "vnc_config"
+    ],
+    "document_date": "2023-08-09",
+    "event_era": "2023-08-09",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-09",
+    "summary": "PIP_INDEX_URL and proxy settings were updated.",
+    "evidence": "set PIP_INDEX_URL=https://intelpypi.intel.com/pythonsv/production\nset HTTPS_PROXY=http://proxy-dmz.intel.com:912",
+    "domain": "operations",
+    "tags": [
+      "pip_config"
+    ],
+    "document_date": "2023-08-09",
+    "event_era": "2023-08-09",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-09",
+    "summary": "Python packages were installed using pip.",
+    "evidence": "cd C:\\\\DTAF\\\\dtaf_montana\ncd C:\\\\Automation\\\\zz14l47002n1002.cfg\npip install -r requirements.txt",
+    "domain": "operations",
+    "tags": [
+      "python_install"
+    ],
+    "document_date": "2023-08-09",
+    "event_era": "2023-08-09",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-10",
+    "summary": "Planned setup of GNR Dev Env.",
+    "evidence": "Setup GNR Dev Env zz14l47002n1002 Setup GNR Dev Env zz14l47002n0502",
+    "domain": "operations",
+    "tags": [
+      "GNR",
+      "DevEnv"
+    ],
+    "document_date": "2023-08-10",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-10",
+    "summary": "Added routing source order TDF option.",
+    "evidence": "-Add routing source order TDF option ['console', 'redfish', 'journalctl'] (& 'offline')",
+    "domain": "operations",
+    "tags": [
+      "TDF",
+      "routing"
+    ],
+    "document_date": "2023-08-10",
+    "event_era": "2023-08-10",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-10",
+    "summary": "Indexed 'offline' handle_dict with instances.",
+    "evidence": "-index 'offline' handle_dict with instances don't ssh with offline mode",
+    "domain": "operations",
+    "tags": [
+      "handle_dict",
+      "offline"
+    ],
+    "document_date": "2023-08-10",
+    "event_era": "2023-08-10",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-10",
+    "summary": "Defined backup sources behavior.",
+    "evidence": "define backup soruces behavior warn/fail depending on primary",
+    "domain": "operations",
+    "tags": [
+      "backup",
+      "sources"
+    ],
+    "document_date": "2023-08-10",
+    "event_era": "2023-08-10",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-10",
+    "summary": "Imported comparemctpdata for use in mctputils.",
+    "evidence": "import comparemctpdata for use in mctp_bmcreset.tdf or mctp_reset_warm.tdf",
+    "domain": "operations",
+    "tags": [
+      "comparemctpdata",
+      "mctputils"
+    ],
+    "document_date": "2023-08-10",
+    "event_era": "2023-08-10",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-11",
+    "summary": "Updated structures.py with new format.",
+    "evidence": "memstruct.py FORMAT '@IBBBI16sI'",
+    "domain": "operations",
+    "tags": [
+      "structures.py",
+      "format"
+    ],
+    "document_date": "2023-08-11",
+    "event_era": "2023-08-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-11",
+    "summary": "Fetched code from GitHub repository.",
+    "evidence": "https://github.com/intel-innersource/libraries.validation.pypv",
+    "domain": "operations",
+    "tags": [
+      "github",
+      "libraries"
+    ],
+    "document_date": "2023-08-11",
+    "event_era": "2023-08-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-11",
+    "summary": "Parsed data in '0', '4', and '9' fields.",
+    "evidence": "'0': ay 53 0 1 10 0 4 6 1 29 160 2 13 2 0 24 1 29 161 255 0 2 0 130 1 29 162 6 48 1 9 1 28 1 255 0 2 32 130 1 27 1 255 0 2 72 130 1 26 1 255 0 2 80 130",
+    "domain": "operations",
+    "tags": [
+      "parsing",
+      "data"
+    ],
+    "document_date": "2023-08-11",
+    "event_era": "2023-08-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-17",
+    "summary": "Run fan at high speed by disabling phosphor-pid-control service and rebooting.",
+    "evidence": "run systemctl disable phosphor-pid-control sync reboot -fAutomatici",
+    "domain": "hardware_debug",
+    "tags": [
+      "systemctl",
+      "phosphor-pid-control"
+    ],
+    "document_date": "2023-08-17",
+    "event_era": "2023-08-17",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-17",
+    "summary": "Read PWM values from hwmon0.",
+    "evidence": "root@intel-obmc:~# cat /sys/class/hwmon/hwmon0/pwm16 255 root@intel-obmc:~# cat /sys/class/hwmon/hwmon0/pwm15 255",
+    "domain": "hardware_debug",
+    "tags": [
+      "hwmon",
+      "pwm"
+    ],
+    "document_date": "2023-08-17",
+    "event_era": "2023-08-17",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-21",
+    "summary": "Power consumption and RAPL data monitoring.",
+    "evidence": "self.sv.sockets[socket].io0.pcudata.pwrBdgtMngr.pmeterData.delta_power_1 # >> Check if its incrementing and below 0x4b000000,",
+    "domain": "hardware_debug",
+    "tags": [
+      "power",
+      "rapl"
+    ],
+    "document_date": "2023-08-21",
+    "event_era": "2023-08-21",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-22",
+    "summary": "__init__ and setup functions called.",
+    "evidence": "def __init__: self.setup_complete = False\ndef setup(self): self.setup_complete = True",
+    "domain": "operations",
+    "tags": [
+      "code",
+      "functions"
+    ],
+    "document_date": "2023-08-22",
+    "event_era": "2023-08-22",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-23",
+    "summary": "Python script to convert binary string to a float",
+    "evidence": "... def bin2float(b): ...",
+    "domain": "operations",
+    "tags": [
+      "python",
+      "script"
+    ],
+    "document_date": "2023-08-23",
+    "event_era": "2023-08-23",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-24",
+    "summary": "hwmon31 # ls /sys/bus/peci/devices/peci-0/0-30/peci-cpupower.0/hwmon/",
+    "evidence": "/hwmon31# ls0007e9346428:/sys/bus/peci/devices/peci-0/0-30/peci-cpupower.0/hwmon/\ndevice          name            power1_cap      power1_label\nenergy1_input   of_node         power1_cap_max  subsystem\nenergy1_label   power1_average  power1_cap_min  uevent",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-24",
+    "event_era": "2023-08-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-24",
+    "summary": "/sys/class/hwmon mctp_communication_test TypeError: argument of type 'float' is not iterable",
+    "evidence": "[Error]     internal = any(x for x in device_name_filters if x in device_name)\nTypeError: argument of type 'float' is not iterable",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-24",
+    "event_era": "2023-08-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-25",
+    "summary": "Completed vendor-supplied firmware update for storage devices.",
+    "evidence": "Vendor ticket #VND-1234: 'Firmware Update Available'",
+    "domain": "vendor_comm",
+    "document_date": "2023-08-25",
+    "event_era": "2023-08-25",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-26",
+    "summary": "[Error] Failure#1 - Fail - Redundant EID's found [29]",
+    "evidence": "[2023-08-26 00:56:24.455,ERROR  ,execute->_execute()                               :mctputils.py:962,Failure#1 - Fail - Redundant EID's found [29]]",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-26",
+    "event_era": "2023-08-26",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-28",
+    "summary": "MIV Blackbox Recorder presentation link shared",
+    "evidence": "https://intel-my.sharepoint.com/:p:/r/personal/jason_a_allred_intel_com/Documents/MIV%20Blackbox%20Recorder.pptx?d=wed83e1eca9d14be1bf684e0d680f61a5&csf=1&web=1&e=66pej0",
+    "domain": "career_timeline",
+    "tags": [],
+    "document_date": "2023-08-28",
+    "event_era": "2023-08-28",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "PCIE device b8:00.0 registered at EID 16",
+    "evidence": "journal_unit.csv: Expected \"pcie device\" found 2023-08-28T23:15:59.645674+00:00: mctpd: PCIe device b8:00.0 registered at EID 16",
+    "domain": "hardware_debug",
+    "tags": [
+      "pcie",
+      "eidevice"
+    ],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "Test Summary PASS with 0 errors and warnings",
+    "evidence": "journal_unit.csv: +-----------------------------------------+               Test Summary              +-----------------------------------------+,   Test Result:        Pass,   Number of errors:   0,   Number of warnings: 0",
+    "domain": "operations",
+    "tags": [
+      "test",
+      "summary"
+    ],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "Discovery test module reported an error: Console Eid list contains other Eids.",
+    "evidence": "[Error] #3 Failure - Fail - Console Eid list contains other Eids. {254}",
+    "domain": "hardware_debug",
+    "tags": [
+      "error",
+      "console eid"
+    ],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "Redfish journal test module reported an error: Found 4 unexpected matches searching through 7635 Journal Entries.",
+    "evidence": "[Error] FAIL - Found 4 unexpected matches searching through 7635 Journal Entries",
+    "domain": "hardware_debug",
+    "tags": [
+      "error",
+      "journal entry"
+    ],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "ModuleNotFoundError: No module named 'configobj'",
+    "evidence": "ModuleNotFoundError: No module named 'configobj' in mctp_reset_ac_20230829-073317.csv and mctp_reset_dc_20230829-073306.csv",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "Test module montana.nativemodules.sutprovider could not complete: [Error] SUT failed to shutdown.",
+    "evidence": "2023-08-29 07:33:06.076,INFO   ,testSummary->info()                               :logger.py:123,[Aborting] Test module montana.nativemodules.sutprovider could not complete:",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-29",
+    "summary": "[Failure10] montana.nativemodules.redfishjournal test module reported an error:",
+    "evidence": "[2023-08-29 07:30:51.317,INFO   ,testSummary->info()                               :logger.py:123,[Failure10] montana.nativemodules.redfishjournal test module reported an error:]",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-29",
+    "event_era": "2023-08-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "PCI device 95:00.0 registered at EID 13",
+    "evidence": "2023-08-29T19:36:22.418693+00:00: mctpd: PCIe device 95:00.0 registered at EID 13",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-30",
+    "event_era": "2023-08-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "Found 21 expected matches searching through 32561 Journal Entries",
+    "evidence": "2023-08-30 04:15:07.083,INFO   ,search_journal->search_journal()                  :redfish_utils.py:234,PASS - Found 21 expected matches searching through 32561 Journal Entries",
+    "domain": "hardware_debug",
+    "document_date": "2023-08-30",
+    "event_era": "2023-08-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "MCTP device discovery failed with errors",
+    "evidence": "[Failure1] montana.nativemodules.mctputils test module reported an error:",
+    "domain": "operations",
+    "document_date": "2023-08-30",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "Unmatched EIDs: Redfish: [23, 154, 155, 156] - console_bdf: {9, 17}",
+    "evidence": "[Error] Failure#2 - Fail: Unmatched EIDs: Redfish: [23, 154, 155, 156] - console_bdf: {9, 17}",
+    "domain": "operations",
+    "document_date": "2023-08-30",
+    "event_era": "2023-08-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "Test result: Pass with 0 errors and 0 warnings",
+    "evidence": "2023-08-30 04:15:07.130,INFO   ,testSummary->info()                               :logger.py:123,+-----------------------------------------+               Test Summary              +-----------------------------------------+\n   Test Result:        Pass\n   Number of errors:   0\n   Number of warnings: 0",
+    "domain": "operations",
+    "document_date": "2023-08-30",
+    "event_era": "2023-08-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "Test module could not complete: SUT failed to boot to OS.",
+    "evidence": "SUT failed to boot to OS.",
+    "domain": "hardware_debug",
+    "tags": [
+      "Debug",
+      "Boot Failure"
+    ],
+    "document_date": "2023-08-30",
+    "event_era": "2023-08-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "Montana exiting",
+    "evidence": "Montana exiting",
+    "domain": "operations",
+    "tags": [],
+    "document_date": "2023-08-30",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-08-30",
+    "summary": "mctp_reset_dc_20230830-054432 failed with TypeError",
+    "evidence": "C:\\\\montana\\\\montana\\\\bin>tail *.csv: returncode = sectionObj._execute(self.ip, cleanedUpOptions, self.errorType), File \"C:\\\\montana\\\\montana\\\\nativemodules\\\\chassiscontrol.py\", line 182, in _execute, runRC = self.Chassis(), File \"C:\\\\montana\\\\montana\\\\nativemodules\\\\chassiscontrol.py\", line 100, in Chassis, pbop_val = self.run_os_cmd.s3m_registers_read_write(operation=\"write\", register=\"PM_CFG2\", value=pbop_val)",
+    "domain": "hardware_debug",
+    "tags": [
+      "typeerror",
+      "mctpreset"
+    ],
+    "document_date": "2023-08-30",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-05",
+    "summary": "MCTP service code review and SendReceiveMctpPayload API call testing",
+    "evidence": "https://github.com/intel-innersource/frameworks.automation.dtaf.content.montana.miv-software-montana/blob/34027f3100c352cf1b6be8869e662b0f856f1225/montana/nativemodules/mctpservice.py",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-05",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-09",
+    "summary": "MCTP communication command setup using busctl and MCTP_PCIe interface",
+    "evidence": "self.mctp_communication_cmd = \"busctl call xyz.openbmc_project.MCTP_PCIe /xyz/openbmc_project/mctp xyz.openbmc_project.MCTP.Base SendReceiveMctpMessagePayload yayq {} 3 0 129 2 100\\n\"",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-09",
+    "event_era": "2023-09-09",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-09",
+    "summary": "IPMI user setup and access configuration",
+    "evidence": "ipmitool user set name 1 debuguser, ipmitool user set password 8 0penBmc1, ipmitool user enable 81, ipmitool channel setaccess 3 1 ipmi=on privilege=4",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-09",
+    "event_era": "2023-09-09",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-12",
+    "summary": "Simics BB User IC setup and reference to DMR documentation",
+    "evidence": "https://wiki.ith.intel.com/display/ITSOOBMSM/Architecture, https://docs.intel.com/documents/vp_simulation/vp_release/6.0/dmr/",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-12",
+    "event_era": "2023-09-12",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-15",
+    "summary": "SUT Failed to Shutdown (Multiple Systems)",
+    "evidence": "zz14l47002n1002.ccr.corp.intel.com mctp_reset_ac.tdf [Error] SUT failed to shutdown.",
+    "domain": "hardware_debug",
+    "tags": [
+      "sut",
+      "shutdown"
+    ],
+    "document_date": "2023-09-15",
+    "event_era": "2023-09-15",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-15",
+    "summary": "MCTP GNR for fl31ca102an0705.amr.corp.intel.com",
+    "evidence": "fl31ca102an0705.amr.corp.intel.com mctp_stress.bat - MCTP GNR fl31ca102an0705.zip",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "gnr"
+    ],
+    "document_date": "2023-09-15",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-15",
+    "summary": "TPM Error on zz14l47002n1002.ccr.corp.intel.com",
+    "evidence": "[ 1406.192271] tpm tpm0: A TPM error (256) occurred attempting get random",
+    "domain": "hardware_debug",
+    "tags": [
+      "tpm",
+      "error"
+    ],
+    "document_date": "2023-09-15",
+    "event_era": "2023-09-15",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-15",
+    "summary": "MCTP Device Discovery with SMBus MCTP",
+    "evidence": "SMBus MCTP device discovery - EID table/Device check - https://hsdes.intel.com/appstore/article/#/15012998835",
+    "domain": "operations",
+    "tags": [
+      "mctp",
+      "discovery"
+    ],
+    "document_date": "2023-09-15",
+    "event_era": "2023-09-15",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-18",
+    "summary": "MIV PECI MSR scan documentation link provided",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/22018184030",
+    "domain": "vendor_comm",
+    "document_date": "2023-09-18",
+    "event_era": "2023-09-18",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-21",
+    "summary": "Sending Get UUID for EID 10 over MCTP_PCIe network",
+    "evidence": "<bmc shell>busctl call {binding_bus} ... - MCTP payload",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-21",
+    "event_era": "2023-09-21",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-21",
+    "summary": "Failed to get endpoint UUID for EID 10",
+    "evidence": "newdata.loc[index,'get_endpoint_uuid'] = 'FAIL'",
+    "domain": "operations",
+    "document_date": "2023-09-21",
+    "event_era": "2023-09-21",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-09-25",
@@ -194,7 +2598,29 @@
       "busctl"
     ],
     "id": "GEM-a53c",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-09-25",
+    "event_era": "2023-09-25",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Sending/receiving MCTP messages using ...When validating MCTP transport over PCIe via Redfish, the specific debug condition is verifying that the BMC correctly routes and returns MCTP payloads through the `MctpPayload.SendReceiveMctpMessage` action endpoint on the target manager (10.23.20.160) using authenticated curl requests to isolate firmware-level message handling from host-side busctl discrepancies.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-09-25",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    }
   },
   {
     "date": "2023-09-29",
@@ -206,7 +2632,30 @@
       "compression"
     ],
     "id": "GEM-a137",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-09-29",
+    "event_era": "2023-09-29",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Compressing CSV files using 7z.exe' an...The operational trigger is the need to reduce transfer latency and storage footprint for large-scale CSV telemetry exports prior to offloading from local Windows workstations to remote analysis nodes.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-09-29",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2023-09-30",
@@ -219,7 +2668,1084 @@
       "BMC"
     ],
     "id": "GEM-97c0",
+    "rank": 4,
+    "document_date": "2023-09-30",
+    "event_era": "2023-09-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 1,
+    "trigger_context": "[FOYER] Request cc086175 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like we're looking into a Core wake on PECI scenario where MSR reads can wake sleeping cores. I'm checking our Acme Lab records to see if there's any existing work on this specific use case.\",\n  \"search_terms\": \n    \"[['PECI MSR', 'wake-on-latch', 'core-wake', 'sleeping-core'], ['Linux', 'x86', 'PCIe', 'MSR'], ['debug', 'condition', 'inquiry']]\",\n  \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-09-30",
+      "year": 2023,
+      "quarter": "2023-Q3",
+      "precision": "EXACT"
+    }
+  },
+  {
+    "date": "2023-09-30",
+    "summary": "Archival of CSV files using 7-Zip",
+    "evidence": "\"C:\\Program Files\\7-Zip\"\\7z.exe a 1002.zip *.csv",
+    "domain": "operations",
+    "tags": [
+      "archival"
+    ],
+    "document_date": "2023-09-30",
+    "event_era": "2023-09-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-30",
+    "summary": "MCTP messages not received for EIds 29, 28, 27, and 26",
+    "evidence": "get_routing_table_df->parse_console_routing_table():mctputils.py:233,EId 29 not found in binding bus",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-30",
+    "event_era": "2023-09-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-09-30",
+    "summary": "BMC remote debugging enabled for J2A2 (J9A6 Avenue City)",
+    "evidence": "busctl get-property xyz.openbmc_project.SpecialMode /xyz/openbmc_project/security/special_mode xyz.openbmc_project.Security.SpecialMode SpecialMode",
+    "domain": "hardware_debug",
+    "document_date": "2023-09-30",
+    "event_era": "2023-09-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
+    "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
+    "sensitivity": "Public",
+    "tags": [
+      "Python scripts",
+      "kayak framework",
+      "TDF architecture"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 9a196d03 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"It sounds like we're dealing with a tricky authentication issue here, Jason! I'm going to check our logs from the last server firmware update to see if there were any known issues with RDC connections.\",\n  \"search_terms\": \"RDC connection error 0xcaa20002, Remote Desktop Connection, Server firmware update 2018\",\n  \"upvote\": true\n}",
+    "document_date": "2023-10-01",
+    "event_era": "2023-10-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "impact_level": 4,
+    "spatial_anchor": {
+      "source_file": "2023_10.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-10-01",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-4c34"
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
+    "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "TDF architecture",
+      "MCTP failures"
+    ],
+    "rank": 4,
+    "document_date": "2023-10-01",
+    "event_era": "2023-10-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of MCTP failures, TDF architecture.",
+    "spatial_anchor": {
+      "source_file": "2023_10.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-10-01",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-5cd4"
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Running Python scripts using kayak framework to install and test Montana code updates",
+    "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
+    "sensitivity": "Public",
+    "tags": [
+      "kayak framework",
+      "Python scripts"
+    ],
+    "rank": 4,
+    "document_date": "2023-10-01",
+    "event_era": "2023-10-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of kayak framework, Python scripts.",
+    "spatial_anchor": {
+      "source_file": "2023_10.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-10-01",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-a274"
+  },
+  {
+    "date": "2023-10-02",
+    "summary": "Failed console calls with MCTP_I3C_MNG_CPU2 and MCTP_I3C_MNG_CPU1",
+    "evidence": "0   MCTP_I3C_MNG_CPU2 console    OwnEID              No            No             No  console: Call failed: Input/output error \n9   MCTP_I3C_MNG_CPU1 console    OwnEID              No            No             No  console: Call failed: Input/output error ",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-02",
+    "event_era": "2023-10-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-02",
+    "summary": "execute->_execute() with mctputils.py and lspci_device output",
+    "evidence": "2023-10-01 23:18:08.204,INFO   ,execute->_execute()                               :mctputils.py:1009,\n                                     uuid                                   redfish_network         routing_network journal_network redfish_bdf routing_bdf            redfish_location routing_location journal_location                                                                                                         lspci_device\n0                                     NaN                               [MCTP_I3C_MNG_CPU2]                     NaN             NaN         NaN         NaN                      OwnEID              NaN              NaN                                                                                                                  NaN",
+    "domain": "operations",
+    "document_date": "2023-10-02",
+    "event_era": "2023-10-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-02",
+    "summary": "lspci_device output with MCTP_I3C_MNG_CPU1 and MCTP_PCIe information",
+    "evidence": "8    01000000-0000-0000-0000-000000000000                 [MCTP_PCIe, MCTP_SMBus_PCIe_slot]             [MCTP_PCIe]          [PCIe]       b:0.0     0b:00.0                      OwnEID              NaN          0b:00.0  0b:00.0 Non-Volatile memory controller: Micron Technology Inc 7450 PRO NVMe SSD (rev 01) (prog-if 02 [NVM Express])",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-02",
+    "event_era": "2023-10-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Parent endpoints detected",
+    "evidence": "mctputils.py:1017, lspci_device output",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Child endpoints (Testable) detected",
+    "evidence": "mctputils.py:1018, lspci_device output for specific devices",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Intel Ethernet Controller E810-C for QSFP (rev 02) detected",
+    "evidence": "lspci_device: c9:00.0 Ethernet controller: Intel Corporation Ethernet Controller E810-C for QSFP (rev 02)",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 06) detected",
+    "evidence": "lspci_device: 2c:00.0 PCI bridge: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 06)",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Broadcom / LSI PCIe Switch management endpoint detected",
+    "evidence": "lspci_device: 56:00.0 Serial Attached SCSI controller: Broadcom / LSI PCIe Switch management endpoint (rev b0)",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Mellanox Technologies MT2910 Family [ConnectX-7] detected",
+    "evidence": "lspci_device: b8:00.0 Infiniband controller: Mellanox Technologies MT2910 Family [ConnectX-7]",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-05",
+    "summary": "Micron Technology Inc 7450 PRO NVMe SSD detected",
+    "evidence": "lspci_device: 2b:00.0 Non-Volatile memory controller: Micron Technology Inc 7450 PRO NVMe SSD (rev 01)",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-05",
+    "event_era": "2023-10-05",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-06",
+    "summary": "Python Path update",
+    "evidence": "setx /M PYTHONPATH $PYTHONPATH;C:\\pythonsv\\graniterapids;",
+    "domain": "operations",
+    "document_date": "2023-10-06",
+    "event_era": "2023-10-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-10",
+    "summary": "OKR and MCTP TC development updates",
+    "evidence": "oak stream - scope DTAF TC kayak TC POC Phase 1\noak stream - scope & deliver Montana TC POC Phase 1\nGNR execution tuning & automation support",
+    "domain": "career_timeline",
+    "document_date": "2023-10-10",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "System is not out of reset. Current reset phase NOT_SET",
+    "evidence": "Uarch Definitions successfully loaded; Running Graniterapids; Using XDPA as the OpenIPC connection.",
+    "domain": "hardware_debug",
+    "tags": [
+      "reset",
+      "system_state"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Creating core PHY taps failed",
+    "evidence": "Creating core PHY taps failed.",
+    "domain": "hardware_debug",
+    "tags": [
+      "debugging",
+      "error_message"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Show 'mcerrloggingreg' in uncore registers",
+    "evidence": "sv.sockets.uncore.ubox.ncevents.mcerrloggingreg.show()",
+    "domain": "hardware_debug",
+    "tags": [
+      "debugging",
+      "register_access"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Hardware inventory: list of endpoints and devices",
+    "evidence": "[...]",
+    "domain": "logistics",
+    "tags": [
+      "hardware_inventory",
+      "device_list"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Hardware inventory and PCIe device enumeration",
+    "evidence": "lspci_device: Intel Corporation Ethernet Controller E810-C for SFP (rev 02)",
+    "domain": "hardware_debug",
+    "tags": [
+      "pci",
+      "intel"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "MCTP I3C management endpoint discovery",
+    "evidence": "redfish_bdf: 00:00.18, {'Address': 224, 'Bus': 9}",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "i3c"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "PCIe bridge enumeration (ASPEED Technology AST1150)",
+    "evidence": "lspci_device: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge (rev 06) (prog-if 00 [Normal decode])",
+    "domain": "hardware_debug",
+    "tags": [
+      "pci",
+      "aspeed"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "System peripheral enumeration (Intel Ice Lake Memory Map/VT-d)",
+    "evidence": "lspci_device: Intel Corporation Ice Lake Memory Map/VT-d",
+    "domain": "hardware_debug",
+    "tags": [
+      "intel",
+      "vt-d"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Serial Attached SCSI controller enumeration (Broadcom / LSI PCIe Switch management endpoint)",
+    "evidence": "lspci_device: Broadcom / LSI PCIe Switch management endpoint (rev b0)",
+    "domain": "hardware_debug",
+    "tags": [
+      "sas",
+      "lsi"
+    ],
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-11",
+    "summary": "Python Path update",
+    "evidence": "setx /M PYTHONPATH $PYTHONPATH;C:\\DTAF\\dtaf_core\\src;",
+    "domain": "operations",
+    "document_date": "2023-10-11",
+    "event_era": "2023-10-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-13",
+    "summary": "Compressed CSV files into a ZIP archive using 7-Zip.",
+    "evidence": "\"C:\\Program Files\\7-Zip\"\\7z.exe a 1002_10-13.zip *.csv",
+    "domain": "operations",
+    "document_date": "2023-10-13",
+    "event_era": "2023-10-13",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-14",
+    "summary": "Performed ITP force reconfiguration, SV refresh, and ITP unlock.",
+    "evidence": "itp.forcereconfig();sv.refresh();itp.unlock()",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-14",
+    "event_era": "2023-10-14",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-16",
+    "summary": "I2C transfer executed",
+    "evidence": "root@bmc-mac0007e93443e9:~# i2ctransfer -y 10 w2@0x51 0x40 0x44 r4\n0xe7 0xff 0x0f 0x60",
+    "domain": "hardware_debug",
+    "tags": [
+      "i2c",
+      "transfer"
+    ],
+    "document_date": "2023-10-16",
+    "event_era": "2023-10-16",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-17",
+    "summary": "MCTP cycling tests initiated",
+    "evidence": "Attempting to run mctp cycling tests for 100 cycles per each test.  This could take several days.",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "testing"
+    ],
+    "document_date": "2023-10-17",
+    "event_era": "2023-10-17",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-18",
+    "summary": "SCM, CPU, and DEBUG CPLD versions checked",
+    "evidence": "Oct 18 17:49:22 bmc-mac0007e93443e9 scm-i2c-memory-map[375]: VERSION INFO - SCM CPLD - 4.11\nOct 18 17:49:22 bmc-mac0007e93443e9 scm-i2c-memory-map[375]: VERSION INFO - CPU CPLD - 0.22\nOct 18 17:49:22 bmc-mac0007e93443e9 scm-i2c-memory-map[375]: VERSION INFO - DEBUG CPLD - 0.22",
+    "domain": "hardware_debug",
+    "tags": [
+      "version",
+      "cpld"
+    ],
+    "document_date": "2023-10-18",
+    "event_era": "2023-10-18",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-18",
+    "summary": "PFR manager versions checked",
+    "evidence": "Oct 18 17:49:30 bmc-mac0007e93443e9 pfr-manager[509]: VERSION INFO - rot_fw_active - 3.0-a14f4a4ba7f69f22d50cb64669a27cb137220b77a131abd718591239362ff8d8\nOct 18 17:49:30 bmc-mac0007e93443e9 pfr-manager[509]: VERSION INFO - bmc_recovery - 23.37-3-gd19f4b",
+    "domain": "hardware_debug",
+    "tags": [
+      "version",
+      "pfr"
+    ],
+    "document_date": "2023-10-18",
+    "event_era": "2023-10-18",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-24",
+    "summary": "Install Montana package using pip with force-reinstall option",
+    "evidence": "PS C:\\\\miv-mivsoftware> pip install dist\\\\montana-0.1.dev866+gdbde4d9-py3-none-any.whl --no-input --force-reinstall",
+    "domain": "vendor_comm",
+    "tags": [
+      "package_install"
+    ],
+    "document_date": "2023-10-24",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-24",
+    "summary": "Triage with Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR",
+    "evidence": "Supported HSD triage with Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR",
+    "domain": "hardware_debug",
+    "tags": [
+      "triage"
+    ],
+    "document_date": "2023-10-24",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-24",
+    "summary": "Developed and delivered MCTP Stress tests for 19 out of 25 planned test cases",
+    "evidence": "Developed and delivered MCTP Stress tests for 19 out of 25 planned test cases.",
+    "domain": "hardware_debug",
+    "tags": [
+      "test_development"
+    ],
+    "document_date": "2023-10-24",
+    "event_era": "2023-10-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-24",
+    "summary": "Corelated 8 MCTP distinct failures caught by automation with known issues",
+    "evidence": "Correlated 8 MCTP distinct failures caught by automation with known issues, drove new issues discovered by automation.",
+    "domain": "hardware_debug",
+    "tags": [
+      "failure_analysis"
+    ],
+    "document_date": "2023-10-24",
+    "event_era": "2023-10-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-24",
+    "summary": "Leveraged TDF architecture to provide rapid test step changes for prototyping and triage",
+    "evidence": "Leveraged TDF architecture to provide rapid test step changes for prototyping and triage.",
+    "domain": "hardware_debug",
+    "tags": [
+      "architecture"
+    ],
+    "document_date": "2023-10-24",
+    "event_era": "2023-10-24",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-25",
+    "summary": "IPMI tool commands for user setup and channel configuration",
+    "evidence": "ipmitool user set name 2 debuguser\nipmitool user enable 2",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-25",
+    "event_era": "2023-10-25",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "CSPs (Google, AWS, Oracle) planning to deploy PCH Ignition FW. ZBB feature will impact MCTP support for them.",
+    "evidence": "OOBMSM as MCTP bus owner \u2013 ZBB feature discussion\n... CSPs are identified as potential CSPs which are planning to deploy PCH Ignition FW.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "CSP",
+      "PCH Ignition FW",
+      "ZBB"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "MCTP is the transport layer enabling application protocols like PLDM and VDM for Node manager, Virtual RAID VROC OOB Mgmt, SDSi, Platform monitoring telemetry. ",
+    "evidence": "MCTP is the transport layer which allows application layer protocols like PLDM, vendor defined messages -VDM to abstract out physical layer functionalities.\n... These protocols in turn are used for enabling Node manager, Virtual RAID VROC OOB Mgmt \u2013 Enterprise (HP, Lenovo), SDSi, Platform monitoring telemetry -PMT, Persistent memory management etc.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "PLDM",
+      "VDM"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Google's plan to enable MCTP in DVT phase with CrowPass (CPS) DIMMs. Google faces challenges due to lack of OOB monitoring capabilities.",
+    "evidence": "Google feedback\n... Plan to start enabling MCTP in DVT phase with CrowPass (CPS) DIMMs. Use case around Out of Band Management over PCIe.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "DVT",
+      "CrowPass",
+      "OOB"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Google's OOB monitoring requirements and limitations.",
+    "evidence": "Google feedback\n... Google has hard time requirement of <1 min polling on OOB health and performance monitoring data (status, temp., % lifetime, bandwidth, etc.). \n... Polling modules on fully populated 2S system takes 22 sec. over PECI (<1s on MCTP)\n... Serial PECI won\u2019t be able to make use of OOBMSM HW Primary message router requiring oCode Mailbox handling.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "Polling",
+      "OOB",
+      "PECI",
+      "MCTP"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Impact of PECI implementation on FW update and Nlog collection.",
+    "evidence": "Google feedback\n... FW update on CPS, performed during \u201cdooms day\u201d or when modules are replaced and one in inventory have mis-matching FW versions, short update window removes validation-intensive requirement of supporting PMEM modules with mis-matched FW versions (we have to avoid it). \n... FW update takes ~10 min / module on PECI vs. 1-2 sec./ module over MCTP\n... Fully populated 2S system with 16 DIMMs takes almost 3h (unacceptable)\n... Nlog for debug \u2013 retrieved by customer for troubleshooting\n... takes ~15 minutes/module over PECI instead of ~ 2 sec./DIMM over MCTP",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "FW update",
+      "Nlog"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "AWS feedback on OOB Telemetry and Crashlog.",
+    "evidence": "AWS Feedback\n... Must have capabilities related to Intel PMT OOB Telemetry and expanding debuggability using Crashlog. Discovery of telemetry capabilities and crashlog agents presently managed over MCTP.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "PMT",
+      "Crashlog"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "AWS's backup interface for MCTP drop.",
+    "evidence": "AWS Feedback\n... Back up interface if we drop MCTP - \n... Discovery is possible using Serial PECI OOB. Limitations include PMT standard doesn\u2019t support streaming over Serial PECI. So streaming telemetry would be dropped.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "PMT"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Ocode team feedback on MCTP feature.",
+    "evidence": "Ocode team Feedback \u2013Lukasz\n... The feature is mature and is being validated. We don\u2019t have high concern of quality to make it to PRQ. WW 50 - No open bugs on OOBMSM as MCTP bus owner.\n",
+    "sensitivity": "Public",
+    "tags": [
+      "Ocode team"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Proposal to restructure SIV+MIV Sprint Review for improved collaboration and accountability.",
+    "evidence": "The current idea is to keep \u2018XPIV Retrospective\u2019 as a place to share knowledge and process feedback, and refocus \u2018SIV+MIV Sprint Review\u2019 to connect people inside and outside of our validation team.",
+    "sensitivity": "Public",
+    "tags": [
+      "Sprint Review",
+      "Collaboration",
+      "Technical Leadership"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Proposed approach for the technical details part of SIV+MIV Sprint Review.",
+    "evidence": "The idea is to move the review into two parts: first as a larger group and then split off for technical details.\n\nEvidence 2: Build up work groups of people needed for a SPRINT feature/story - technical leadership, customer vision, development, validation, execution\n\nEvidence 2: After this, we can split off to review technical details as separate work groups (welcome to use Sprint review timeslot if it works for the group)",
+    "sensitivity": "Public",
+    "tags": [
+      "Collaboration",
+      "Sprint Review",
+      "Technical Leadership"
+    ],
     "rank": 4
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "BMC connection and Peci command execution.",
+    "evidence": "The script starts by enabling insecure server connections, then sets up BMC user credentials. It then executes PECI commands to send raw data to the crashdump service on the BMC IP address 10.23.20.143.\n\n The logs show multiple attempts to execute Peci commands with different parameters.",
+    "sensitivity": "Public",
+    "tags": [
+      "Peci",
+      "Crashdump",
+      "BMC"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Error/Trigger: PECI command response.",
+    "evidence": "The script executes Peci commands and sends raw data to the crashdump service. The logs show responses from the BMC with PECI command responses, including timestamps and PECIResponse arrays.\n\n  - Response 1:\n    PECIResponse: [144, 0, 0, 0, 0]\n  - Response 2:\n    PECIResponse: [64, 243, 6, 8, 0]\n",
+    "sensitivity": "Public",
+    "tags": [
+      "Peci",
+      "Crashdump"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Build process initiated.",
+    "evidence": "redfish build",
+    "sensitivity": "Public",
+    "tags": [
+      "build"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-26",
+    "summary": "Setup tools used for the build.",
+    "evidence": "setuptools",
+    "sensitivity": "Public",
+    "tags": [
+      "setup",
+      "tools"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-27",
+    "summary": "Sending Peci commands to Crashdump service for system crash dumps.",
+    "evidence": "The log shows multiple instances of sending raw PECI commands to the Crashdump service. The commands are related to system crashes and include specific parameters like PPL (Process Load Level) and PECICommands. ",
+    "sensitivity": "Public",
+    "tags": [
+      "Technical Event",
+      "Crash Dump"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-27",
+    "summary": "Multiple requests to send raw Peci commands.",
+    "evidence": "The log shows multiple requests using the following curl command structure: \n`curl -k -u \"[REDACTED]:[REDACTED]\" -H \"Content-Type: application/json\" -X POST -d  \"{'PECICommands': [[49, 5, 5, 161, 0, 58, 0, 0]]}\" https://10.23.20.143/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci`\nThe commands are repeated multiple times.",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "Peci",
+      "Crashdump"
+    ],
+    "rank": 3
+  },
+  {
+    "date": "2023-10-30",
+    "summary": "curl commands for Redfish API queries",
+    "evidence": "curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.112.121.68/redfish/v1/Systems/system?BootProgress",
+    "domain": "operations",
+    "document_date": "2023-10-30",
+    "event_era": "2023-10-30",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-31",
+    "summary": "System shutdown and power off sequence",
+    "evidence": "[  OK  ] Reached target System Shutdown.\n[  OK  ] Reached target Late Shutdown Services.",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-31",
+    "event_era": "2023-10-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-31",
+    "summary": "Unmounting of system file systems and stopping services",
+    "evidence": "[  OK  ] Unmounted /home.\n[  OK  ] Removed slice Slice /system/systemd-fsck.",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-31",
+    "event_era": "2023-10-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-10-31",
+    "summary": "Kernel messages indicating system shutdown and process termination",
+    "evidence": "[ 192.996954] dracut Warning: Killing all remaining processes\n[ 193.351207] dracut Warning: Unmounted /oldroot.",
+    "domain": "hardware_debug",
+    "document_date": "2023-10-31",
+    "event_era": "2023-10-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-11-02",
@@ -231,7 +3757,65 @@
       "PECI"
     ],
     "id": "GEM-05d0",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-11-02",
+    "event_era": "2023-11-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 1,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Sending PECI command over network usin...The need to execute out-of-band platform diagnostics on a remote BMC when local IPMI tools are unavailable, requiring authenticated Redfish API interaction via curl to query system state or inject PECI commands over the network.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-11-02",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    }
+  },
+  {
+    "date": "2023-11-02",
+    "summary": "Executing a script",
+    "evidence": "_execute->_execute() : testmctpdata.py:363,Using topology instance #2 mctpdiscovery_toplology df= ...",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2023-11-02",
+    "event_era": "2023-11-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-02",
+    "summary": "MCTP discovery topology",
+    "evidence": "... uuid redfish_network OwnEID routing_network journal_network redfish_bdf routing_bdf journal_bdf lspci_device ...",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2023-11-02",
+    "event_era": "2023-11-02",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-11-06",
@@ -244,7 +3828,272 @@
       "mctp_reset_cold.tdf"
     ],
     "id": "GEM-653f",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-11-06",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Execution of montana.py script with te...The `montana.py` execution with the `-f mctp_reset_cold.tdf` and `--loop 100` flags triggers a high-level MCTP (Manageable Component Transport Protocol) cold-reset discovery and state-transition validation, specifically validating the BMC firmware's ability to execute a full MCTP reset cycle and re-synchronize its internal state machine after a cold-reset event.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Reserved commands for chassis control",
+    "evidence": "[7:4] - reserved\n[3:0] - chassis control",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Force system into soft off (S4/S5) state",
+    "evidence": "0h = power down. Force system into soft off (S4/S45) state.",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Power up the system",
+    "evidence": "1h = power up.",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Optional: Power cycle with a minimum 1-second interval",
+    "evidence": "2h = power cycle (optional). This command provides a power off interval of at least 1 second following the deassertion of the systems POWERGOOD status from the main power subsystem.",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Hard reset with potential system impact",
+    "evidence": "3h = hard reset. In some implementations, the BMC may not know whether a reset will cause any particular effect and will pulse the system reset signal regardless of power state.",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Optional: Pulse Diagnostic Interrupt for OS diagnostic dump",
+    "evidence": "4h = pulse Diagnostic Interrupt. (optional) Pulse a version of a diagnostic interrupt that goes directly to the processor(s). This is typically used to cause the operating system to do a diagnostic dump (OS dependent). The interrupt is commonly an NMI on IA-32 systems and an INIT on Intel Itanium processor based systems.",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Optional: Initiate soft-shutdown of OS via ACPI by emulating fatal overtemperature",
+    "evidence": "5h = Initiate a soft-shutdown of OS via ACPI by emulating a fatal overtemperature. (optional)",
+    "domain": "hardware_debug",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Run python script montana.py with various TDF files",
+    "evidence": "py montana.py -f mctp_discovery.tdf\nif %errorlevel%==-1 exit /b %errorlevel%\n... (rest of the commands)",
+    "domain": "operations",
+    "document_date": "2023-11-06",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-06",
+    "summary": "Check return value and exit if it's not zero",
+    "evidence": "if %errorlevel% neq 0 exit /b %errorlevel%",
+    "domain": "operations",
+    "document_date": "2023-11-06",
+    "event_era": "2023-11-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-08",
+    "summary": "Attempted to install Montana package using pip with wildcard, but received error due to unsupported wildcard",
+    "evidence": "?python -m pip config set global.trusted-host=intelpypi.intel.com http://intelpypi.intel.com ?python -m pip config set global.trusted-host=devpi.intel.com https://devpi.intel.com/general/XPIV kayak -p kayak.plugins.montana.plugin tests/montana_content/montana_driver.py --file getdeviceid.tdf",
+    "domain": "operations",
+    "tags": [
+      "package_installation",
+      "pip_error"
+    ],
+    "document_date": "2023-11-08",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-10",
+    "summary": "Configured credentials for AMI (Advanced Management Interface) on fl31ca103bn0802.amr.corp.intel.com",
+    "evidence": "-SRF - fl31ca103bn0802.amr.corp.intel.com ipaddress = 10.45.167.77 10.45.167.77 osip =  10.45.167.70 sku = nm targettype = intel interface = lan cpuname = srf bmcver =openbmc username = debuguser password = 0penBmc1 os_password = intel@123",
+    "domain": "vendor_comm",
+    "tags": [
+      "AMI",
+      "credentials"
+    ],
+    "document_date": "2023-11-10",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q2",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Sierra Forest\\b|\\bSRF",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-13",
+    "summary": "Installed Montana package using pip with extra-index-url set to https://devpi.intel.com/general/XPIV",
+    "evidence": "pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV  --upgrade",
+    "domain": "logistics",
+    "tags": [
+      "package_installation",
+      "pip"
+    ],
+    "document_date": "2023-11-13",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-15",
+    "summary": "UUID sorted mismatch when comparing (mctpdiscovery_toplology:2 -> mctpdiscovery_toplology:3)",
+    "evidence": "FAIL: UUID sorted mismatch when comparing (mctpdiscovery_toplology:2 -> mctpdiscovery_toplology:3) => redfish_bdf routing_bdf lspci_device | self other self other self other| 8 b4:0.0 90:0.0 b4:00.0 90:00.0 b4:00.0 CXL: Montage Technology Co., Ltd. Device c001 (rev 01) (prog-if 10 [CXL Memory Device (CXL 2.x)]) 90:00.0 CXL: Montage Technology Co., Ltd. Device c001 (rev 01) (prog-if 10 [CXL Memory Device (CXL 2.x)]))",
+    "domain": "hardware_debug",
+    "tags": [
+      "UUID mismatch",
+      "redfish_bdf"
+    ],
+    "document_date": "2023-11-15",
+    "event_era": "2023-11-15",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-11-23",
+    "summary": "Python script execution using montana.py with MCTP BMC reset test data file",
+    "evidence": "py montana.py --loop 2 -s -f mctp_bmcreset.tdf",
+    "domain": "operations",
+    "document_date": "2023-11-23",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-12-01",
@@ -257,7 +4106,18 @@
       "System Topology"
     ],
     "id": "GEM-10bc",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-12-01",
+    "event_era": "2023-12-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request d17bdc2b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: DROP \u2014 No 0x40 responses indicate no pending MSI interrupts.\n- CHUNK-2: DROP \u2014 Missing 0x40 responses don't necessarily imply faulty MSR implementations.\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP \n\n[USER_QUERY]: \nGiven event summary: 'MSR accesses missing 0x40 responses from all 56 thread IDs: CR3.Punit and NCEVENTS_SCF_UBOX' and evidence: 'FAIL: missing 0x40 response from all 56 thread ids for MSR ('rdIaMsr', '0x648', 'CR3.Punit', 0)' \nEngineering Trigger Context: PECI MSR read failures may be related to core wake on PECI, but require further investigation.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2023-12-01",
@@ -269,7 +4129,15 @@
       "Hardware Enumeration"
     ],
     "id": "GEM-1354",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-12-01",
+    "event_era": "2023-12-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2023-12-01",
@@ -281,7 +4149,186 @@
       "Power Management"
     ],
     "id": "GEM-7504",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2023-12-01",
+    "event_era": "2023-12-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 7b6c8b87 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a PCS TMC IB Lock out issue on our PECI Platform Configuration Space. I'm going to check the thermal monitoring control mailbox lock out bit in our Acme Lab records.\",\n  \"search_terms\": \"PECI Thermal Monitoring Control mailbox lock out bit, PCS TMC IB Lock out, thermal monitoring control, PECI Platform Configuration Space\",\n  \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2023-12-11",
+    "summary": "VNC connection to fl31ca103bn0705.amr.corp.intel.com failed due to system down",
+    "evidence": "? fl31ca103bn0705.amr.corp.intel.com - system down",
+    "domain": "operations",
+    "document_date": "2023-12-11",
+    "event_era": "2023-12-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-11",
+    "summary": "Successful VNC connection to zz14l47002n1002.ccr.corp.intel.com",
+    "evidence": "? zz14l47002n1002.ccr.corp.intel.com",
+    "domain": "operations",
+    "document_date": "2023-12-11",
+    "event_era": "2023-12-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-11",
+    "summary": "Environment variables set for automation framework",
+    "evidence": "setx sys_user sys_degsi1, setx sys_pwd [REDACTED_JFROG_API_KEY]",
+    "domain": "logistics",
+    "document_date": "2023-12-11",
+    "event_era": "2023-12-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-11",
+    "summary": "Checkout of SPIVAUTO-59_fix branch from Git repository",
+    "evidence": "git checkout SPIVAUTO-59_fix",
+    "domain": "career_timeline",
+    "document_date": "2023-12-11",
+    "event_era": "2023-12-11",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-12",
+    "summary": "Discovering Topology and Running Commands via Sankeymatic Link",
+    "evidence": "https://sankeymatic.com/build/\ndiscover [1] redifsh topology\ndiscover [1] journal topology\ndiscover [1] redfish table \ndiscover [1] console table ",
+    "domain": "logistics",
+    "tags": [
+      "topology",
+      "commands"
+    ],
+    "document_date": "2023-12-12",
+    "event_era": "2023-12-12",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-12",
+    "summary": "Running Commands and Getting Results via Redfish API",
+    "evidence": "communicate [1] GetUUID\ngenerateUUID[1] Report Card\nGetEID [1] Report Card\ncommunicate [1] PLDM",
+    "domain": "operations",
+    "tags": [
+      "redfish",
+      "commands"
+    ],
+    "document_date": "2023-12-12",
+    "event_era": "2023-12-12",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-12",
+    "summary": "Getting Results for GetUUID, GetEID, and PLDM Commands",
+    "evidence": "GetUUID[1] Report Card\nGetEID [1] Report Card\nPLDM [1] Report Card",
+    "domain": "operations",
+    "tags": [
+      "results",
+      "commands"
+    ],
+    "document_date": "2023-12-12",
+    "event_era": "2023-12-12",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-12",
+    "summary": "Running Warm, Cold, AC, and DC Resets",
+    "evidence": "reset [1] warm\nreset [1] cold\nreset [1] ac\nreset [1] dc",
+    "domain": "operations",
+    "tags": [
+      "resets"
+    ],
+    "document_date": "2023-12-12",
+    "event_era": "2023-12-12",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2023-12-15",
+    "summary": "Resolved issue with memory corruption due to faulty RAM modules.",
+    "evidence": "Error report: 'Memory Corruption Error Detected'",
+    "domain": "operations",
+    "document_date": "2023-12-15",
+    "event_era": "2023-12-15",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2023-12-31",
@@ -297,7 +4344,30 @@
         "type": "milestone_of"
       }
     ],
-    "id": "GEM-bb7f"
+    "id": "GEM-bb7f",
+    "document_date": "2023-12-31",
+    "event_era": "2023-12-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of MCTP.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-12-31",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2023-12-31",
@@ -313,7 +4383,30 @@
         "type": "milestone_of"
       }
     ],
-    "id": "GEM-a7bc"
+    "id": "GEM-a7bc",
+    "document_date": "2023-12-31",
+    "event_era": "2023-12-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of SRF-SP.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-12-31",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2023-12-31",
@@ -329,7 +4422,30 @@
         "type": "milestone_of"
       }
     ],
-    "id": "GEM-339e"
+    "id": "GEM-339e",
+    "document_date": "2023-12-31",
+    "event_era": "2023-12-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of BA.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-12-31",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2023-12-31",
@@ -345,7 +4461,30 @@
         "type": "utilizes"
       }
     ],
-    "id": "GEM-2a3d"
+    "id": "GEM-2a3d",
+    "document_date": "2023-12-31",
+    "event_era": "2023-12-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Montana.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-12-31",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2023-12-31",
@@ -361,6 +4500,29 @@
         "type": "utilizes"
       }
     ],
-    "id": "GEM-1402"
+    "id": "GEM-1402",
+    "document_date": "2023-12-31",
+    "event_era": "2023-12-31",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Montana.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-12-31",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   }
 ]

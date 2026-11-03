@@ -9,6 +9,17 @@
       "unexpected return codes",
       "MSR register access issues"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2022-11-17",
+    "event_era": "2022-11-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MSR register access issues and unexpec...This trigger is activated when a PECI/BIOS debug sequence fails to read or write the expected MSR register, causing an unexpected return code that breaks the expected PECI handshake and halts the test.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

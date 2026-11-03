@@ -42,4 +42,13 @@ This ledger dynamically tracks, categorizes, and audits active, emerging, and re
 * **Lifecycle State:** `ACTIVE`
 * **Description:** Eliminates the monolithic single-pass refinement trap by decomposing consolidation into iterative, focused connection passes. Unrefined gems remain on rotation across nightly cycles; each pass increments refinement level, evaluates cross-references, updates topological edge density, and gates promotion into Level 3 (quiescent saturation) based on loop consensus.
 
+### `[LOOP-005]` Post-Turn Scorecard & Step-Trace Telemetry Loop
+* **Vibe Driver:** `VIBE-009` (Feedback Loops as Complexity Engines) / `PHL-008` (Self-Learning Memory Accumulation)
+* **Governing Protocols:** `BKM-069`, `BKM-035`, `BKM-084`, `FEAT-470`, `FEAT-645`
+* **Signal Emitter (Source):** Deep Thought out-of-band post-turn evaluation pass (`.round_table_evals.json`) and User Fourth Wall / Downvote interaction (`validation_ledger.jsonl`).
+* **Signal Consumer (Actuator / Gate):** Stage Step-Trace Auditor (traces turn failures back to Stage 2 Retrieval, Stage 3 Brain Gatekeeper, Stage 4 Deep Thought, or Stage 5 Pinky Summary) and Negative Exemplar Cache (`negative_exemplars.json`).
+* **Operational Horizon:** Post-turn execution boundary (non-blocking async) & interactive feedback event.
+* **Lifecycle State:** `STAGED`
+* **Description:** Closes the quality loop after Pinky's voice delivery without blocking streaming TTS. Deep Thought evaluates the turn using Chain-of-Evaluation (reasoning prose before scalar scoring), isolates stage failure origins via Step-Trace attribution, and auto-populates negative exemplars to permanently prevent recurrent hallucinations across turns.
+
 ---

@@ -9,7 +9,31 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-4a54"
+    "id": "GEM-4a54",
+    "document_date": "2013-01-01",
+    "event_era": "2013-01-01",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request b9acba0e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETEDThe local engine is warming its anchors right now. Re-connecting momentarily!",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "chunk_type": "FOCAL_DRAFT",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-01-01",
+      "year": 2013,
+      "quarter": "2013-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   },
   {
     "date": "2013-01-01",
@@ -22,7 +46,29 @@
       "micro-code patch"
     ],
     "id": "GEM-61a4",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-01-01",
+    "event_era": "2013-01-01",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Intel.DAL, Fuse, micro-code patch.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-01-01",
+      "year": 2013,
+      "quarter": "2013-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2013-01-02",
@@ -34,7 +80,29 @@
       "Intel.DAL.Services.Job"
     ],
     "id": "GEM-cedf",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-01-02",
+    "event_era": "2013-01-02",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of DAL MasterFrame, Intel.DAL.Services.Job.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-01-02",
+      "year": 2013,
+      "quarter": "2013-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2013-01-03",
@@ -46,7 +114,469 @@
       "Visa.Orange.Common"
     ],
     "id": "GEM-385c",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-01-03",
+    "event_era": "2013-01-03",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of VcuHookTraceTriggerWriter, Visa.Orange.Common.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-01-03",
+      "year": 2013,
+      "quarter": "2013-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Found successfully DFX Hook TRACE_TRIGGER",
+    "evidence": "Visa.Orange.Common.VcuHookTraceTriggerWriter writeTraceTriggerHook 48",
+    "domain": "vendor_comm",
+    "tags": [
+      "dfx",
+      "trace_trigger"
+    ],
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Attempt to access processor resources has failed",
+    "evidence": "Intel.DAL.Services.Job.AssertErrorOccuredInJobException: An attempt to access processor resources has failed.",
+    "domain": "vendor_comm",
+    "tags": [
+      "processor",
+      "access"
+    ],
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Updating DMI to x2 by resizing",
+    "evidence": "itp.threads[0].mem(\"0xFED1E238p\",4,0x00000940)  #0x2238 DMIHWAWC",
+    "domain": "hardware_debug",
+    "tags": [
+      "dmix2",
+      "resize"
+    ],
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Updating GT_CFG_DFT_RING by setting DISPPAR5_BANK6_SCAN to 1",
+    "evidence": "itp.uncores[0].state.regbus.DE_CFG_DFT_RING.DISPPAR5_BANK6_SCAN = 1",
+    "domain": "hardware_debug",
+    "tags": [
+      "gtcfg",
+      "dft_ring"
+    ],
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Exception rethrown at [0]",
+    "evidence": "at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg) ... at Intel.DAL.Services.Job.IExecutionReceipt.WaitCompletion()",
+    "domain": "hardware_debug",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Could not load file or assembly 'Intel.DAL.Builders.Fuse'",
+    "evidence": "The system cannot find the file specified.",
+    "domain": "logistics",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Selected GroupNum = 3",
+    "evidence": "Method SignalGroupXMLReader.FillSelectedGrpFromXML started",
+    "domain": "career_timeline",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Method writeTraceTriggerHook failed",
+    "evidence": "Starting to run writeTraceTriggerHook(DMI_X2IN_LTSSM)",
+    "domain": "hardware_debug",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Exception encountered when instantiating DAL MasterFrame",
+    "evidence": "no patch loaded yet",
+    "domain": "vendor_comm",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "TraceToolBar RunCommand asynchronous backgroundWorkerCallbackTask running",
+    "evidence": "MTA Thread ID 18: TraceToolBar RunCommand asynchronous backgroundWorkerCallbackTask running",
+    "domain": "operations",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Starting bgWorker_Process()",
+    "evidence": "Starting bgWorker_Process()",
+    "domain": "operations",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-01-16",
+    "summary": "Starting to run writeTraceTriggerHook(DMI_X2IN_LTSSM)",
+    "evidence": "writeTraceTriggerHook failed",
+    "domain": "hardware_debug",
+    "document_date": "2013-01-16",
+    "event_era": "2013-01-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-04-17",
+    "summary": "NoA pins written with specific values",
+    "evidence": "[Write] NOA_CR_VISA_XBAR_SANOAS_L_0_0_0_MCHBAR_NOA:(0x00006434) = 0x76543210\n[Write] SA_TAP_SA_NOALCCFG.GT:(0x0000001F) = 0x0001C001\n[Write] SA_TAP_SA_NOALCCFG.CBO3:(0x0000001A) = 0x00000001",
+    "domain": "hardware_debug",
+    "document_date": "2013-04-17",
+    "event_era": "2013-04-17",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-04-17",
+    "summary": "RC2 is running without errors, saw sticky trigger after running first trace",
+    "evidence": "RC2 is running without errors, saw sticky trigger after running first trace",
+    "domain": "hardware_debug",
+    "document_date": "2013-04-17",
+    "event_era": "2013-04-17",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-04-17",
+    "summary": "Issues with software/host/target below",
+    "evidence": "-\n::Run button - 05::\nInstalled 1316 RC2\nUpdated C:\\Intel\\PDT\\plugins\\tracecockpit\\Cfg\\Projects.xml to add CRW C1 to the System Trigger whitelist\nusing patch 05 (CRW C1) (did not update VCU to incremental with compression turned off or to patch 08)\nTracing inbound X2 DMI & LTSSM\nLTSSM Match Detect Quiet\n[Run] button used (not [Update Memory])\nDeskew, LTSSM, and Trigger ran with no errors\nIgnored silent error 4/17/2013 4:54:05 PM [Guard][Error] AttributeError : There are no nodes matching 'PMRDY'",
+    "domain": "logistics",
+    "document_date": "2013-04-17",
+    "event_era": "2013-04-17",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-15",
+    "summary": "Could not create IpcApiTargetAccess: ipc_svc_device->GetDeviceIdsOfTypes - IPC_NodeType_LogicalChipset",
+    "evidence": "[ERROR] Could not create IpcApiTargetAccess: ipc_svc_device->GetDeviceIdsOfTypes - IPC_NodeType_LogicalChipset IPC error code: (0x80000001): A pointer parameter was NULL when it should not have been.",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2013-05-15",
+    "event_era": "2013-05-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-15",
+    "summary": "odd behavior in ipc_baseaccess.py with self._refresh_devicelist()",
+    "evidence": "VTGJF-Coal -  odd behavior in ipc_baseaccess.py with self._refresh_devicelist()",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2013-05-15",
+    "event_era": "2013-05-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-15",
+    "summary": "Error occurred while refreshing device list",
+    "evidence": "self._create_devicelist() IndexError: list index out of range pythonSV cannot continue. Press enter to exit..",
+    "domain": "hardware_debug",
+    "tags": [],
+    "document_date": "2013-05-15",
+    "event_era": "2013-05-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-15",
+    "summary": "PythonSv running in interactive mode",
+    "evidence": "Current Working Dir: C:\\Users\\lab_VTGLAB2\\My Documents\\PythonSv Python 2.7.5 (default, May 15 2013, 22:44:16) [MSC v.1500 64 bit (AMD64)] on win32",
+    "domain": "operations",
+    "tags": [],
+    "document_date": "2013-05-15",
+    "event_era": "2013-05-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-15",
+    "summary": "IPC-CLI and OpenIPC versions displayed",
+    "evidence": "Connecting to IPC API.... IPC-CLI: 1.1441.67, OpenIPC : 0.1440.143",
+    "domain": "operations",
+    "tags": [],
+    "document_date": "2013-05-15",
+    "event_era": "2013-05-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-16",
+    "summary": "DAL 1.9.2663.600 built against rev ID 21122 [1320]",
+    "evidence": "Using Intel DAL 1.9.2663.600 Built 5/16/2013 against rev ID 21122 [1320]",
+    "domain": "hardware_debug",
+    "tags": [
+      "DAL",
+      "rev_ID"
+    ],
+    "document_date": "2013-05-16",
+    "event_era": "2013-05-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-05-16",
+    "summary": "Python and .NET versions used",
+    "evidence": "Using Python 2.6.6 (32bit), .NET 2.0.50727.5466, Python.NET 2.0.0.17, pyreadline 1.7",
+    "domain": "hardware_debug",
+    "tags": [
+      "Python",
+      ".NET"
+    ],
+    "document_date": "2013-05-16",
+    "event_era": "2013-05-16",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-07",
+    "summary": "[generic TAP programming]",
+    "evidence": "generic TAP programming",
+    "domain": "vendor_comm",
+    "tags": [
+      "programming"
+    ],
+    "document_date": "2013-06-07",
+    "event_era": "2013-06-07",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-11",
+    "summary": "HSD sighting: unselecting signal in final mux, cannot reselect",
+    "evidence": "https://vthsd.intel.com/hsd/itp/default.aspx#sighting/default.aspx?sighting_id=4723781",
+    "domain": "hardware_debug",
+    "document_date": "2013-06-11",
+    "event_era": "2013-06-11",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2013-06-12",
@@ -60,7 +590,218 @@
       "DfxProjects"
     ],
     "id": "GEM-07c6",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of BDW B0, SKL A0, SKL ULT A0.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-06-12",
+      "year": 2013,
+      "quarter": "2013-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Testing DAL Regbus definitions on BDW-ULT/SKL-ULT",
+    "evidence": "DAL Regbus definitions. 2 - testing",
+    "domain": "hardware_debug",
+    "tags": [
+      "testing",
+      "regbus"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Testing GTPO integration on SKL",
+    "evidence": "Modify .cfg file to point to GTPO collateral",
+    "domain": "hardware_debug",
+    "tags": [
+      "gtpo",
+      "integration"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Fixing SKL noa/tap register resource mismatch",
+    "evidence": "fix SKL noa/tap register resource mismatch",
+    "domain": "hardware_debug",
+    "tags": [
+      "register",
+      "resource"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Renaming files for SKL-ULT maintenance",
+    "evidence": "file rename. Some maintenance for SKL-ult",
+    "domain": "hardware_debug",
+    "tags": [
+      "maintenance",
+      "skl-ult"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Testing register definitions on BDW B0, SKL A0, and SKL ULT A0",
+    "evidence": "[Test BDW B0, SKL A0, SKL ULT A0 register definitions]",
+    "domain": "hardware_debug",
+    "tags": [
+      "register",
+      "definitions"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Investigating SKL_X0_Targsim issue",
+    "evidence": "SKL_X0_Targsim (not needed)",
+    "domain": "hardware_debug",
+    "tags": [
+      "issue",
+      "skl-x0"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Register bus investigation on SKL_ULT_UC and GT",
+    "evidence": "\\SKL_ULT_UC\\RegBus.Registers.A0.OA.xml, \\SKL_ULT_UC\\RegBus.Registers.A0.DE_DFT_RING.xml, \\SKL_GT\\RegBus.Registers.A0.GT_DFT_RING.xml",
+    "domain": "hardware_debug",
+    "tags": [
+      "register",
+      "bus"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Resetting itp state and changing logger level",
+    "evidence": "itp.unlock(), itp.loggerlevel('BuilderJtag','ALL')",
+    "domain": "hardware_debug",
+    "tags": [
+      "reset",
+      "logger"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-06-12",
+    "summary": "Investigating DE_DFT_RING issue on BDW_U_UC and GT",
+    "evidence": "itp.uncores[0].state.regbus.DE_DFT_RING.BDWDISPPAR1_0 = 0, itp.boxes[0].state.regbus.GT_DFT_RING.BDW_RCABOX1_VEPAR11_0 = 0",
+    "domain": "hardware_debug",
+    "tags": [
+      "issue",
+      "de-dft-ring"
+    ],
+    "document_date": "2013-06-12",
+    "event_era": "2013-06-12",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2013-08-19",
@@ -72,7 +813,29 @@
       "BDW_U_UC B0"
     ],
     "id": "GEM-95b8",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-08-19",
+    "event_era": "2013-08-19",
+    "event_year": 2013,
+    "event_quarter": "2013-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Visa plugin, BDW_U_UC B0.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-08-19",
+      "year": 2013,
+      "quarter": "2013-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2013-08-19",
@@ -84,7 +847,29 @@
       "4723781"
     ],
     "id": "GEM-0e56",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-08-19",
+    "event_era": "2013-08-19",
+    "event_year": 2013,
+    "event_quarter": "2013-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of HSD, 4723781.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-08-19",
+      "year": 2013,
+      "quarter": "2013-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2013-11-22",
@@ -97,7 +882,29 @@
       "GTPO"
     ],
     "id": "GEM-4a65",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-11-22",
+    "event_era": "2013-11-22",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of VISA, SKL PO, GTPO.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-11-22",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2013-11-22",
@@ -109,7 +916,30 @@
       "XML"
     ],
     "id": "GEM-aeef",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-11-22",
+    "event_era": "2013-11-22",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of GTPO, XML.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-11-22",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2013-11-22",
@@ -121,7 +951,73 @@
       "Online Converter"
     ],
     "id": "GEM-ce82",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-11-22",
+    "event_era": "2013-11-22",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Signal Assignment, Online Converter.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-11-22",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2013-11-25",
+    "summary": "Assigning Signal noa_freq_max_limit[0] to Output Group NOA_PINS_LANE0 with flop_delay=16",
+    "evidence": "- GTPO Abstract 16\nAssigning Signal noa_freq_max_limit[0] to Output Group NOA_PINS_LANE0, selected bit 0, flop_delay=16",
+    "domain": "hardware_debug",
+    "tags": [
+      "signal_assignment",
+      "flop_delay"
+    ],
+    "document_date": "2013-11-25",
+    "event_era": "2013-11-25",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-11-30",
+    "summary": "Legacy channel visa_sig files need to be updated",
+    "evidence": "/sa/msgutils/ncnoaupmuxs/channel0_lane0",
+    "domain": "hardware_debug",
+    "tags": [
+      "legacy_channel_update",
+      "pdm_mux_config",
+      "resolution",
+      "visa_sig_files"
+    ],
+    "document_date": "2013-11-30",
+    "event_era": "2013-11-30",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2013-12-02",
@@ -133,7 +1029,30 @@
       "visa_legacy_channel.xml"
     ],
     "id": "GEM-c2e7",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-12-02",
+    "event_era": "2013-12-02",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of PDM_Mux, visa_legacy_channel.xml.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-12-02",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2013-12-05",
@@ -146,7 +1065,30 @@
       "mux control"
     ],
     "id": "GEM-0b00",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-12-05",
+    "event_era": "2013-12-05",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of bypass controls, SKL GT architecture, mux control.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-12-05",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
   },
   {
     "date": "2013-12-05",
@@ -159,6 +1101,143 @@
       "UCRB32"
     ],
     "id": "GEM-4600",
-    "rank": 4
+    "rank": 4,
+    "document_date": "2013-12-05",
+    "event_era": "2013-12-05",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of PDM outbound enable, PCU DFX IO disconnect control, UCRB32.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-12-05",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED"
+  },
+  {
+    "date": "2013-12-05",
+    "summary": "SA_TAP_SA_NOAPINSMUXCFG register configuration",
+    "evidence": "itp.uncores[0].state.tap.SA_TAP_SA_NOAPINSMUXCFG.get()",
+    "domain": "hardware_debug",
+    "tags": [
+      "register",
+      "configuration"
+    ],
+    "document_date": "2013-12-05",
+    "event_era": "2013-12-05",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-12-09",
+    "summary": "Unsupported arch/stepping BDW_H_UC D0",
+    "evidence": "Visa plugin : Unsupported arch/stepping BDW_H_UC D0",
+    "domain": "vendor_comm",
+    "tags": [
+      "unsupported",
+      "arch"
+    ],
+    "document_date": "2013-12-09",
+    "event_era": "2013-12-09",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-12-09",
+    "summary": "Redcover.cfg configuration changes",
+    "evidence": "remove HSW dlls, remove visa_te_og.xml",
+    "domain": "operations",
+    "tags": [
+      "configuration",
+      "changes"
+    ],
+    "document_date": "2013-12-09",
+    "event_era": "2013-12-09",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-12-17",
+    "summary": "Investigate SKL B0 zip file and XML changes",
+    "evidence": "\\hsw-tb\\hsw\\Personal_Folders\\jallred\\skl\\SkyLake_ULT_B0.zip\nvisa_legacy_channel.xml (Lots of differences, if we use A0 then carefully replace / with /uncore)\nvisa_legacy_channel_og.xml (add constraints)\nvisa_legacy_channel_rs.xml (Has sa_noactls.pll_lock_cfg_mux ben removed for B0?)\nvisa_custom_uc_RedCover.xml (cbo naming, default values, does B0 have the same number of threads?)\nvisa_sig_map_RedCover.xml  sliding_window_mux -> lane_mux\nde_access_methods.xml: GTTMMADDR -> GTTMMADR, hswMsgCh\nde_mux_tree.xml (disp_edp_enabled.dhdcpedpnoa1 -> dhdcpedpnoa1)\n de_config_registers.xml (disp_edp_enabled.dhdcpedpnoa1 -> dhdcpedpnoa1)",
+    "domain": "hardware_debug",
+    "document_date": "2013-12-17",
+    "event_era": "2013-12-17",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-12-18",
+    "summary": "Remove non ULT skl projects from DfxProjects, investigate MCHBAR_CH0_CR_VISA_CTL_MCSCHEDS_0_0_0_MCHBAR::PATGENMODE and add constraints to visa_legacy_channel.xml",
+    "evidence": "Remove non ULT skl projects from DfxProjects\nManually add MCHBAR_CH0_CR_VISA_CTL_MCSCHEDS_0_0_0_MCHBAR::PATGENMODE to visa_custom_rs.xml, does this exist?\nMCHBAR_CH1_CR_VISA_CTL_MCSCHEDS_0_0_0_MCHBAR::PATGENMODE\n? Enable Q->D Demux - change is okay.\n? help in python and XMLs -PCU API BUG \nbug in the PCU solution -  remove constraints, get newer xml - No, keep old lane_mux fix until P0",
+    "domain": "hardware_debug",
+    "document_date": "2013-12-18",
+    "event_era": "2013-12-18",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2013-12-30",
+    "summary": "Debug DalScripts, merge PCU delay mux fixes to SKL A0 and B0",
+    "evidence": "debug DalScripts\nmerge PCU delay mux fixes to SKL A0 \nSKL A0 Check in PCU fixes to P4\nDebug SKL B0 in DfxProjects\nPCU fixes into B0",
+    "domain": "hardware_debug",
+    "document_date": "2013-12-30",
+    "event_era": "2013-12-30",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   }
 ]

@@ -8,7 +8,18 @@
       "PECI",
       "performance"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-01-01",
+    "event_era": "2020-01-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 9e4fcfea secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"spoken_take\": \"Jason, it sounds like you're interested in learning more about the PECI v4.0 Commands Checkout research and development efforts. I'm checking our logs from October 27th, 2021, to see if we have any records related to Chris Weldon's presentation.\",\n  \"search_terms\": \"MCTP, PECI v4.0, Chris Weldon, 2021, Acme Lab\",\n  \"upvote\": true\n}",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-01-15",
@@ -19,7 +30,18 @@
       "BMC",
       "firmware"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-01-15",
+    "event_era": "2020-01-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 6246fff3 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_mctp_communication\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7 }",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   },
   {
     "date": "2020-02-01",
@@ -30,6 +52,17 @@
       "BMC",
       "PECI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2020-02-01",
+    "event_era": "2020-02-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 20b76de6 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC firmware version supported by PECI components; Anchor Missing: BMC firmware version not supported => KEEP\n- CHUNK-2: Anchor Match: MCA Error Source Log via Redfish PECI; Anchor Missing: MCA Error Source Log not found via Redfish PECI => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]\nDebug condition or inquiry that activates this knowledge: BMC firmware version check via Redfish PECI.\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2021-10-27] PECI v4.0 Commands Checkout (MCTP) research and development ongoing.\nEVIDENCE: [RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

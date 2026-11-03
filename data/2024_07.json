@@ -16,9 +16,10 @@
     "event_quarter": "2023-Q1",
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
-    "passes": 1,
-    "consecutive_zero_deltas": 0,
-    "refinement_level": 1
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 1,
+    "impact_level": 4
   },
   {
     "date": "2023-02-20",
@@ -38,7 +39,8 @@
     "temporal_provenance": "document_date_fallback",
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "refinement_level": 1
+    "refinement_level": 1,
+    "impact_level": 3
   },
   {
     "date": "2023-02-20",
@@ -57,8 +59,9 @@
     "event_quarter": "2023-Q1",
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
-    "passes": 1,
-    "consecutive_zero_deltas": 0,
-    "refinement_level": 1
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 1,
+    "impact_level": 4
   }
 ]

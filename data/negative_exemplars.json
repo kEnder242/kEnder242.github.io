@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-30T21:56:08Z",
+  "exemplars": [
+    {
+      "ts": 1793029973.133367,
+      "request_id": "live-cert-108",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "What firmware did we upgrade on the ESB2 server?",
+      "response": "[BUDGET]: Headroom ceiling is 900 tokens. **TECHNICAL INTUITION**: Firmware v2.1.",
+      "attribution_reason": "Voice tone / formatting defect indicated by feedback",
+      "step_artifacts": {}
+    },
+    {
+      "ts": 1793030025.7619135,
+      "request_id": "live-cert-108",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "What firmware did we upgrade on the ESB2 server?",
+      "response": "[BUDGET]: Headroom ceiling is 900 tokens. **TECHNICAL INTUITION**: Firmware v2.1.",
+      "attribution_reason": "Voice tone / formatting defect indicated by feedback",
+      "step_artifacts": {}
+    },
+    {
+      "ts": 1793030401.1987078,
+      "request_id": "r2",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "q2",
+      "response": "not good",
+      "attribution_reason": "UI downvote registered",
+      "step_artifacts": {}
+    },
+    {
+      "ts": 1793030401.2091312,
+      "request_id": "r_down",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "q_down",
+      "response": "resp_bad",
+      "attribution_reason": "UI downvote registered",
+      "step_artifacts": {}
+    },
+    {
+      "ts": 1793055413.28642,
+      "request_id": "UI_z39exc",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "How are you guys?",
+      "response": "{ \n  \"inferred_intent\": \"casual_greeting\",\n  \"addressed_to\": \"NONE\",\n  \"vibe\": \"CASUAL\",\n  \"domain\": \"unknown\",\n  \"casual\": 0.9,\n  \"intrigue\": 0.1,\n  \"importance\": 0.0,\n  \"target_domains\": []\n}",
+      "attribution_reason": "User downvoted turn; defect mapped to leaf conversational delivery",
+      "step_artifacts": {
+        "request_id": "UI_4wxyw0",
+        "query": "I mean, while I was out.  WYWO",
+        "vibe": "WYWO",
+        "interest": 1.0,
+        "candidate_count": 3,
+        "kept_ids": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ],
+        "drop_ids": [],
+        "brain_grounding": "[ANALYSIS]\n- CHUNK-1: Anchor Match: **ACCOUNTABILITY AUDIT: DEGRADED**; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: Successfully integrated Kayak and Montana platforms; Anchor Missing: Error code reported on HSD-ES: 22013940445 => KEEP\n- CHUNK-3: Anchor Match: {\"found\": true, \"context\": \"[AGENTIC_R_GREP_PIVOT]\"}; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP\n- CHUNK-3: KEEP",
+        "bedrock_payload": "Source: nightly_dialogue.json\nTopic: Nightly Accountability Sentinel (Watchdog)\nDialogue: \ud83d\udea8 **[ACCOUNTABILITY AUDIT: DEGRADED]**\n\n**Checks Passed:** 7/8\n**Discrepancies:** Status: DEGRADED, Critic Score: 0.00, Latency: 1.33ms\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._\n\nSource: latest_synthesis_gems.json\n- [FOCAL] [STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\n- [PLATFORM] Critical issue identified with MIV framework, requires further investigation.\n- [PLATFORM] Error code reported on HSD-ES: 22013940445.\n- [PLATFORM] ipmitool used to troubleshoot issue, output identical to BMC console raw commands.\n\nSource: subconscious_dream_wisdom\n{\"found\": true, \"context\": \"[AGENTIC_R_GREP_PIVOT]:\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/2023.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/2022.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] **Expert in bridging the gap between complex systems and actionable insights.**\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Establishing Expert Career Strategist services, including analyzing documents and extracting core strategic anchors.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Emphasize platformization, transparency, and maintainability in software development to avoid technical debt and ensure sustainable code practices.\\\",\\n\\n[RELATIONAL_NEIGHBOR_EXPANSION]:\\n- 2024-06-13: Supported BA team by enabling Montana for CWF and DMR --[utilizes]--> Montana\\n- 2023-12-31: Maintained quality in Montana code base by proactively engaging pull requests & code reviews --[utilizes]--> Montana\\n- 2023-02-20: System architecture mentioned in technical details, includin --[anchored_to]--> MCTP\\n- 2023-02-20: System architecture mentioned in technical details, includin --[anchored_to]--> PECI\\n- 2023-02-20: PECI commands executed and modified on the system using peci --[anchored_to]--> PECI\\n---\\n[ACQUISITION Source: 2021_01.json]: Document anchor: [2021-01-01] [STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR....\\n---\\n[RELATIONAL_NEIGHBOR_EXPANSION]:\\n- 2024-08-01: Error code 0014.D.57 encountered during BIOS configuration --[anchored_to]--> error\\n- 2024-06-13: Supported BA team by enabling Montana for CWF and DMR --[anchored_to]--> error\\n---\\n[ACQUISITION Source: 2021_12.json Date: 2021-12-20 Rank: 4]: Summary: IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared | Evidence: Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared\", \"sources\": [\"2021_01.json\", \"2021_12.json\"]}",
+        "dt_synthesis": "The 2026-10-26 telemetry window shows the Accountability Watchdog flagged a degraded state: 7/8 checks passed, latency 1.33 ms, critic score 0.00. The HSD-ES error code 22013940445 and the ipmitool BMC console raw-command output are consistent with the 2021-01 and 2021-12 field notes in the Portfolio_Dev archive. The 2023 and 2024 field notes confirm the Kayak/Montana integration that enabled native PECI+MCTP execution and CWF/DMR enablement. The 2021-12 record shows IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared, which is the same error status cleared by the 2021-12-20 Rank 4 record. The 2024-08-01 BIOS configuration error code 0014.D.57 is the same as the HSD-ES error code in the latest_synthesis_gems record. The 2024-06-13 Montana CWF/DMR support and the 2023-12-31 code review qualityError: vLLM connection failed:",
+        "pinky_tldr": "[Two-Mice TL;DR delivered to Jason (51 tokens)]",
+        "audit": "No intercom pause record exists in the retrieved evidence, so I cannot confirm that behavior from the archive.\n\nThe archival evidence confirms a nightly `dream_cycle.py` pass in the `diamond dreaming` pipeline, where candidate gems are rotated through a closed JITC loop: DB classification, ambient micro-grounding injection, DNA compression save, and offline synthesis. The `Diamond Dreaming` title is explicitly tied to subconscious consolidation, not a live platform state."
+      }
+    },
+    {
+      "ts": 1793055427.8395815,
+      "request_id": "UI_07v0kn",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "any dreams?",
+      "response": "{ \n  \"inferred_intent\": \"dreams\",\n  \"addressed_to\": \"NONE\",\n  \"vibe\": \"HISTORICAL\",\n  \"domain\": \"work_history\",\n  \"casual\": 0.4,\n  \"intrigue\": 0.6,\n  \"importance\": 0.5,\n  \"target_domains\": [\n    \"career_ledger\"\n  ]\n}",
+      "attribution_reason": "User downvoted turn; defect mapped to leaf conversational delivery",
+      "step_artifacts": {
+        "request_id": "UI_4wxyw0",
+        "query": "I mean, while I was out.  WYWO",
+        "vibe": "WYWO",
+        "interest": 1.0,
+        "candidate_count": 3,
+        "kept_ids": [
+          1,
+          2,
+          3,
+          1,
+          2,
+          3
+        ],
+        "drop_ids": [],
+        "brain_grounding": "[ANALYSIS]\n- CHUNK-1: Anchor Match: **ACCOUNTABILITY AUDIT: DEGRADED**; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: Successfully integrated Kayak and Montana platforms; Anchor Missing: Error code reported on HSD-ES: 22013940445 => KEEP\n- CHUNK-3: Anchor Match: {\"found\": true, \"context\": \"[AGENTIC_R_GREP_PIVOT]\"}; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP\n- CHUNK-3: KEEP",
+        "bedrock_payload": "Source: nightly_dialogue.json\nTopic: Nightly Accountability Sentinel (Watchdog)\nDialogue: \ud83d\udea8 **[ACCOUNTABILITY AUDIT: DEGRADED]**\n\n**Checks Passed:** 7/8\n**Discrepancies:** Status: DEGRADED, Critic Score: 0.00, Latency: 1.33ms\n\n_Detected by Standalone Morning Accountability Watchdog (FEAT-619)._\n\nSource: latest_synthesis_gems.json\n- [FOCAL] [STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\n- [PLATFORM] Critical issue identified with MIV framework, requires further investigation.\n- [PLATFORM] Error code reported on HSD-ES: 22013940445.\n- [PLATFORM] ipmitool used to troubleshoot issue, output identical to BMC console raw commands.\n\nSource: subconscious_dream_wisdom\n{\"found\": true, \"context\": \"[AGENTIC_R_GREP_PIVOT]:\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/2023.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/2022.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] **Expert in bridging the gap between complex systems and actionable insights.**\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Establishing Expert Career Strategist services, including analyzing documents and extracting core strategic anchors.\\\",\\n- [STRATEGIC_ANCHOR] /home/jallred/Dev_Lab/Portfolio_Dev/field_notes/data/Unknown.json:    \\\"summary\\\": \\\"[STRATEGIC_ANCHOR] Emphasize platformization, transparency, and maintainability in software development to avoid technical debt and ensure sustainable code practices.\\\",\\n\\n[RELATIONAL_NEIGHBOR_EXPANSION]:\\n- 2024-06-13: Supported BA team by enabling Montana for CWF and DMR --[utilizes]--> Montana\\n- 2023-12-31: Maintained quality in Montana code base by proactively engaging pull requests & code reviews --[utilizes]--> Montana\\n- 2023-02-20: System architecture mentioned in technical details, includin --[anchored_to]--> MCTP\\n- 2023-02-20: System architecture mentioned in technical details, includin --[anchored_to]--> PECI\\n- 2023-02-20: PECI commands executed and modified on the system using peci --[anchored_to]--> PECI\\n---\\n[ACQUISITION Source: 2021_01.json]: Document anchor: [2021-01-01] [STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR....\\n---\\n[RELATIONAL_NEIGHBOR_EXPANSION]:\\n- 2024-08-01: Error code 0014.D.57 encountered during BIOS configuration --[anchored_to]--> error\\n- 2024-06-13: Supported BA team by enabling Montana for CWF and DMR --[anchored_to]--> error\\n---\\n[ACQUISITION Source: 2021_12.json Date: 2021-12-20 Rank: 4]: Summary: IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared | Evidence: Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared\", \"sources\": [\"2021_01.json\", \"2021_12.json\"]}",
+        "dt_synthesis": "The 2026-10-26 telemetry window shows the Accountability Watchdog flagged a degraded state: 7/8 checks passed, latency 1.33 ms, critic score 0.00. The HSD-ES error code 22013940445 and the ipmitool BMC console raw-command output are consistent with the 2021-01 and 2021-12 field notes in the Portfolio_Dev archive. The 2023 and 2024 field notes confirm the Kayak/Montana integration that enabled native PECI+MCTP execution and CWF/DMR enablement. The 2021-12 record shows IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared, which is the same error status cleared by the 2021-12-20 Rank 4 record. The 2024-08-01 BIOS configuration error code 0014.D.57 is the same as the HSD-ES error code in the latest_synthesis_gems record. The 2024-06-13 Montana CWF/DMR support and the 2023-12-31 code review qualityError: vLLM connection failed:",
+        "pinky_tldr": "[Two-Mice TL;DR delivered to Jason (51 tokens)]",
+        "audit": "No intercom pause record exists in the retrieved evidence, so I cannot confirm that behavior from the archive.\n\nThe archival evidence confirms a nightly `dream_cycle.py` pass in the `diamond dreaming` pipeline, where candidate gems are rotated through a closed JITC loop: DB classification, ambient micro-grounding injection, DNA compression save, and offline synthesis. The `Diamond Dreaming` title is explicitly tied to subconscious consolidation, not a live platform state."
+      }
+    },
+    {
+      "ts": 1793055924.4351168,
+      "request_id": "UI_b3zalh",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "But I thought I was working on other stuff before.  Like you said, 2019, but I was asking about 2018 and the transition",
+      "response": "You are correct to question the 2019 baseline. The 2018 record is not a transition into a new role; it is the exact point where the Manageability Test Content Lead role began. The 2018 work was the pre-silicon validation of the Intel VISA signal-trace debug app, which you owned and automated. The 2019 record is the Manageability Test Content Lead role, which you held from 2019 to 2024.\n\nThe 2018 record is not a transition into a new role; it is the exact point where the Manageability Test Conten",
+      "attribution_reason": "User downvoted turn; defect mapped to leaf conversational delivery",
+      "step_artifacts": {
+        "request_id": "UI_b3zalh",
+        "query": "But I thought I was working on other stuff before.  Like you said, 2019, but I was asking about 2018 and the transition",
+        "vibe": "HISTORICAL",
+        "interest": 1.0,
+        "candidate_count": 1,
+        "kept_ids": [
+          2,
+          2
+        ],
+        "drop_ids": [
+          1,
+          1
+        ],
+        "brain_grounding": "[ANALYSIS]\n- CHUNK-1: Anchor Match: \"2019\" matches; Anchor Missing: \"transition\" => DROP\n- CHUNK-2: Anchor Match: \"Manageability Test Content Lead\" matches; Anchor Missing: \"role\" => KEEP\n[BEDROCK SELECTION]\n- CHUNK-1: DROP\n- CHUNK-2: KEEP",
+        "bedrock_payload": "",
+        "dt_synthesis": "You are correct to question the 2019 baseline. The 2018 record is not a transition into a new role; it is the exact point where the Manageability Test Content Lead role began. The 2018 work was the pre-silicon validation of the Intel VISA signal-trace debug app, which you owned and automated. The 2019 record is the Manageability Test Content Lead role, which you held from 2019 to 2024. The 2018 work was not a transition; it was the foundation of the 2019 role. The 2018 work was not a transition; it was the foundation of the 2019 role. The 2018 work was not a transition; it was the foundation of the 2019 role.",
+        "pinky_tldr": "[Two-Mice TL;DR delivered to Jason (51 tokens)]",
+        "audit": ""
+      }
+    },
+    {
+      "ts": 1793056247.3788853,
+      "request_id": "live-cert-108",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "What firmware did we upgrade on the ESB2 server?",
+      "response": "[BUDGET]: Headroom ceiling is 900 tokens. **TECHNICAL INTUITION**: Firmware v2.1.",
+      "attribution_reason": "Voice tone / formatting defect indicated by feedback",
+      "step_artifacts": {}
+    },
+    {
+      "ts": 1793397368.7051845,
+      "request_id": "live-cert-108",
+      "defect_stage": "STAGE_5_VOICE_DRIFT",
+      "query": "What firmware did we upgrade on the ESB2 server?",
+      "response": "[BUDGET]: Headroom ceiling is 900 tokens. **TECHNICAL INTUITION**: Firmware v2.1.",
+      "attribution_reason": "Voice tone / formatting defect indicated by feedback",
+      "step_artifacts": {}
+    }
+  ]
+}

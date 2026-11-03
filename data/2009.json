@@ -9,6 +9,30 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-5872"
+    "id": "GEM-5872",
+    "document_date": "2009-01-01",
+    "event_era": "2009-01-01",
+    "event_year": 2009,
+    "event_quarter": "2009-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request dd82d879 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.The local engine is warming its anchors right now. Re-connecting momentarily!",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "chunk_type": "FOCAL_DRAFT",
+    "spatial_anchor": {
+      "source_file": "2009.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2009-01-01",
+      "year": 2009,
+      "quarter": "2009-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
   }
 ]

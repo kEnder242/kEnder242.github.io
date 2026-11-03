@@ -5,7 +5,15 @@
     "evidence": "git clone ssh://git-amr-7.devtools.intel.com/ptv-riv.git",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2019-05-07",
@@ -13,7 +21,15 @@
     "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2019-05-07",
@@ -21,7 +37,15 @@
     "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
     "sensitivity": "Public",
     "tags": [],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2023-02-20",
@@ -31,7 +55,15 @@
     "tags": [
       "TODO",
       "SPS HSD issue"
-    ]
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
   },
   {
     "date": "2023-02-20",
@@ -41,7 +73,18 @@
     "tags": [
       "API interactions",
       "MIV test cases"
-    ]
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 1,
+    "trigger_context": "Initiating Pinky (Triage) intuition...[FOYER] Request 8e7ce1db secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Let me check on that for you, Jason. I'll see if we have any records of MCTP discovery through BMC PCIe devices.\",\n  \"search_terms\": \n    \"[['MCTP', 'BMC', 'PCIe'], ['MCTP Discovery', 'PCIe Devices'], ['BMC', 'PCIe', 'Discovery']]\", \n  \"upvote\": true\n}",
+    "passes": 2,
+    "consecutive_zero_deltas": 1
   },
   {
     "date": "2023-02-20",
@@ -51,6 +94,14 @@
     "tags": [
       "Sharepoint",
       "content readiness"
-    ]
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
   }
 ]

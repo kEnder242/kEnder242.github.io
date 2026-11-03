@@ -8,7 +8,15 @@
       "Node Manager",
       "IPMI"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-06-01",
+    "event_era": "2019-06-01",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
   },
   {
     "date": "2019-06-01",
@@ -19,7 +27,15 @@
       "ipmitool",
       "error code"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-06-01",
+    "event_era": "2019-06-01",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
   },
   {
     "date": "2019-06-01",
@@ -32,6 +48,17 @@
       "IPMI",
       "BMC"
     ],
-    "rank": 4
+    "rank": 4,
+    "document_date": "2019-06-01",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 53cd65b7 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, it seems like we're looking at some advanced BMC protocols and communication methods. Can you tell me more about why you're interested in Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit?",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
   }
 ]

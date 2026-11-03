@@ -10,125 +10,601 @@
     "casual": 0.8,
     "intrigue": 0.0,
     "importance": 0.0,
-    "target_domains": []
+    "target_domains": [],
+    "tags": []
   },
   {
-    "source": "2024-06-13: Delivered and executed on Kayak+Montana transition plan",
-    "target": "Kayak+Montana transition plan",
-    "type": "milestone_of"
+    "source": "2022-03-01: Comment out [Sinks.Console] section in logging.ini for colla",
+    "target": "logging",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
-    "source": "2024-06-13: Delivered 8 Kayak+Montana test cases definition deltas for DMR",
-    "target": "Kayak+Montana transition plan",
-    "type": "milestone_of",
-    "inferred_intent": "greeting",
-    "addressed_to": "NONE",
-    "vibe": "CASUAL",
-    "domain": "unknown",
-    "casual": 0.8,
-    "intrigue": 0.0,
-    "importance": 0.0,
-    "target_domains": []
+    "source": "2022-03-01: Comment out [Sinks.Console] section in logging.ini for colla",
+    "target": "collateral",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
-    "source": "2024-06-13: Supported BA team by enabling Montana for CWF and DMR",
-    "target": "Montana",
-    "type": "utilizes"
+    "source": "2018-01-01: Gap analysis using PyCharm's startCscripts.py script",
+    "target": "PyCharm",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
-    "source": "2024-06-13: Defined and executed 2 PPO 0.8 test cases for PECI/MCTP",
-    "target": "PPO 0.8",
-    "type": "utilizes"
+    "source": "2018-01-01: Gap analysis using PyCharm's startCscripts.py script",
+    "target": "gap analysis",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
-    "source": "2023-12-31: Driving execution, escalation, debug, and triage of MCTP cycle tests",
-    "target": "MCTP cycle tests",
-    "type": "milestone_of"
+    "source": "2021-07-28: pysv_checkout -l bigcore",
+    "target": "pysv_checkout",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Memory board hot-add failure is likely related to system's h",
+    "target": "Harwich BIOS",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Memory board hot-add failure is likely related to system's h",
+    "target": "EPS_0.90",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Memory board hot-add failure is likely related to system's h",
+    "target": "watchdog timer",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: BMC26 and EFS1.17 issues with SEL pages causing cascading ef",
+    "target": "memory board",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: BMC26 and EFS1.17 issues with SEL pages causing cascading ef",
+    "target": "hot-add failure",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-02-01: Troubleshoot BSSB trace problems with no data being recorded",
+    "target": "debugging",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-02-01: Troubleshoot BSSB trace problems with no data being recorded",
+    "target": "BSSB",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Updated DSD Tool Stack to version 1.0.30.400 and installed l",
+    "target": "DSD Tool Stack",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Updated DSD Tool Stack to version 1.0.30.400 and installed l",
+    "target": "Trace Hub SDK",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Updated DSD Tool Stack to version 1.0.30.400 and installed l",
+    "target": "TPV Orange",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Reverted to version 1518 of LTB software to resolve 'Could n",
+    "target": "LTB",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Reverted to version 1518 of LTB software to resolve 'Could n",
+    "target": "Error Resolution",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: TODO: Update DSD Tool Stack to version 1.0.30.400.",
+    "target": "DSD Tool Stack",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: TODO: Update DSD Tool Stack to version 1.0.30.400.",
+    "target": "TODO",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: NPK validation planning and debugging PTI bluewire rework",
+    "target": "NPK",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: NPK validation planning and debugging PTI bluewire rework",
+    "target": "PTI bluewire rework",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: NPK validation planning and debugging PTI bluewire rework",
+    "target": "cAnalyzer",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: CRC mismatches between Lily and Simics",
+    "target": "Bug",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: CRC mismatches between Lily and Simics",
+    "target": "Mismatch",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Graphics FLR feature being worked on",
+    "target": "Feature",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Graphics FLR feature being worked on",
+    "target": "Work-in-progress",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-03-16: Mailbox Timeout error occurred after 30 seconds in test run",
+    "target": "Mailbox Timeout",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-03-16: Mailbox Timeout error occurred after 30 seconds in test run",
+    "target": "error",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-03-16: GFXEMU job submission failed due to slot configuration issue",
+    "target": "GFXEMU",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-03-16: GFXEMU job submission failed due to slot configuration issue",
+    "target": "job submission",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-03-16: GFXEMU job submission failed due to slot configuration issue",
+    "target": "error",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-01-01: Make visa debug handbook a living document",
+    "target": "debugging",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-01-01: Make visa debug handbook a living document",
+    "target": "visa",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2018-01-01: Renaming LINUX_RUNNER_EINJ_CE_ERROR_INJECT_CMD to mem_fatal_",
+    "target": "Linux",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2018-01-01: Renaming LINUX_RUNNER_EINJ_CE_ERROR_INJECT_CMD to mem_fatal_",
+    "target": "error injection",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-04-01: Create git repo for rebooter script with Scott Morris",
+    "target": "TODO",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-04-01: Create git repo for rebooter script with Scott Morris",
+    "target": "Git",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-04-01: Address high-priority HSD issues: ILVSS hang on Proton, MAC ",
+    "target": "HSD",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-04-01: Address high-priority HSD issues: ILVSS hang on Proton, MAC ",
+    "target": "Issue",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Ramp up on OSbv tests",
+    "target": "TODO",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Ramp up on OSbv tests",
+    "target": "Research",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Plane processing crashes",
+    "target": "Bug",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2016-01-01: Plane processing crashes",
+    "target": "Crash",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2021-07-29: phoenix TC WIP - will keep open for Kalpanas Beta plan",
+    "target": "Kalpanas Beta",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-01-01: Intel's HSD appstore article released (likely related to too",
+    "target": "Intel",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2022-01-01: Intel's HSD appstore article released (likely related to too",
+    "target": "HSD Appstore",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2019-05-16: SV BIOS -> XML CLI reference links provided.",
+    "target": "TODO",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2019-05-16: SV BIOS -> XML CLI reference links provided.",
+    "target": "SPS HSD issue",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2019-05-21: Cscripts work done and ready for launch options.",
+    "target": "Sharepoint",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2019-05-21: Cscripts work done and ready for launch options.",
+    "target": "content readiness",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2018-01-01: INJC-71 einj 02 functional mem/pcie correctable/(+uc)non_fat",
+    "target": "Linux",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2018-01-01: INJC-71 einj 02 functional mem/pcie correctable/(+uc)non_fat",
+    "target": "INJC-71",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2018-01-01: INJC-71 einj 02 functional mem/pcie correctable/(+uc)non_fat",
+    "target": "einj 02",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
     "source": "2023-12-31: Kickstarted execution and enabling of MCTP tests on SRF-SP",
-    "target": "MCTP cycle tests",
-    "type": "milestone_of"
+    "target": "SRF-SP",
+    "type": "anchored_to",
+    "epoch": 138
   },
   {
-    "source": "2023-12-31: Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise",
-    "target": "MCTP cycle tests",
-    "type": "milestone_of"
-  },
-  {
-    "source": "2023-12-31: Released Montana framework as a python package under XPIV devpi",
-    "target": "XPIV devpi",
-    "type": "utilizes"
-  },
-  {
-    "source": "2023-12-31: Maintained quality in Montana code base by proactively engaging pull requests & code reviews",
+    "source": "2023-12-31: Released Montana framework as a python package under XPIV de",
     "target": "Montana",
-    "type": "utilizes"
-  },
-  {
-    "source": "2023-02-20: Authentication method used for Redfish API queries in this s",
-    "target": "Redfish",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: Authentication method used for Redfish API queries in this s",
-    "target": "API",
+    "source": "2023-12-31: Maintained quality in Montana code base by proactively engag",
+    "target": "Montana",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: Authentication method used for Redfish API queries in this s",
-    "target": "authentication",
+    "source": "2023-02-20: Primary TODO or research link mentioned: accessing artifacto",
+    "target": "artifactory",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: System architecture mentioned in technical details, includin",
-    "target": "system architecture",
+    "source": "2023-02-20: Primary TODO or research link mentioned: accessing artifacto",
+    "target": "repository",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: System architecture mentioned in technical details, includin",
+    "source": "2023-12-31: Driving execution, escalation, debug, and triage of MCTP cyc",
     "target": "MCTP",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: System architecture mentioned in technical details, includin",
+    "source": "2005-03-01: DR#19435 was closed since 1/21/2005",
+    "target": "tracker titles",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: DR#19435 was closed since 1/21/2005",
+    "target": "prefix",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2024-12-25: Set up a testing server for Prometheus metrics and telemetry",
+    "target": "Kayak",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2024-12-25: Set up a testing server for Prometheus metrics and telemetry",
+    "target": "Montana",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Research link to article on Intel's appstore.",
+    "target": "Intel appstore",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2023-02-20: Research link to article on Intel's appstore.",
+    "target": "research link",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2025-01-01: Architecting a high-throughput, distributed AI ecosystem",
+    "target": "Gemini",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: BMC23 module upgrade and Embedded File System (EFS) update t",
+    "target": "BMC23",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: BMC23 module upgrade and Embedded File System (EFS) update t",
+    "target": "EFS",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: BMC23 module upgrade and Embedded File System (EFS) update t",
+    "target": "upgrade",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Addressing data integrity and system stability issues with B",
+    "target": "system_stability",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Addressing data integrity and system stability issues with B",
+    "target": "issue",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Addressing data integrity and system stability issues with B",
+    "target": "data_integrity",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: Prefix added to tracker titles for simplification",
+    "target": "HTTP_MTP",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: Prefix added to tracker titles for simplification",
+    "target": "FTF",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: HW BMC26/EFS1.17 recalled due to issues.",
+    "target": "BMC26",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: HW BMC26/EFS1.17 recalled due to issues.",
+    "target": "EFS1.17",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-03-01: HW BMC26/EFS1.17 recalled due to issues.",
+    "target": "SEL",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Tool release",
+    "target": "tool_release",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Fix to variable not found error in testResults_MAP(I2C)",
+    "target": "bug_fix",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-01-01: Update to SDK API with new information on escapes and licens",
+    "target": "SDK_update",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-02-01: Second evaluation run conducted using EFS1.16 due to observa",
+    "target": "performance",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2005-02-01: Second evaluation run conducted using EFS1.16 due to observa",
+    "target": "evaluation",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2024-06-13: Defined and executed 2 PPO 0.8 test cases for PECI/MCTP",
     "target": "PECI",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: Discovery of Intel BMC topology using busctl tree commands i",
-    "target": "Intel BMC",
+    "source": "2024-06-13: Defined and executed 2 PPO 0.8 test cases for PECI/MCTP",
+    "target": "MCTP",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: Discovery of Intel BMC topology using busctl tree commands i",
-    "target": "Simics test environment",
+    "source": "2024-06-13: Delivered 8 Kayak+Montana test cases definition deltas for D",
+    "target": "DMR",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: Discovery of Intel BMC topology using busctl tree commands i",
-    "target": "busctl tree",
+    "source": "2024-06-13: Supported BA team by enabling Montana for CWF and DMR",
+    "target": "CWF",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: PECI commands executed and modified on the system using peci",
-    "target": "PECI",
+    "source": "2024-06-13: Supported BA team by enabling Montana for CWF and DMR",
+    "target": "DMR",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
   },
   {
-    "source": "2023-02-20: PECI commands executed and modified on the system using peci",
-    "target": "peci_cmds",
+    "source": "2006-01-17: GCC build: Try Full (network etc) build",
+    "target": "Tao 126579",
     "type": "anchored_to",
-    "epoch": 106
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-17: GCC build: Try Full (network etc) build",
+    "target": "Health and Monitoring script",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-22: fwt-10 - i2c works, Alclu, SOL BMC33 (FWTest build) failed",
+    "target": "SolMsg.tcl",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-22: fwt-10 - i2c works, Alclu, SOL BMC33 (FWTest build) failed",
+    "target": "IPS",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-25: FWTest API runs under RMCPP! (working on fw-07)",
+    "target": "NIC",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-25: FWTest API runs under RMCPP! (working on fw-07)",
+    "target": "cygwin",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-26: PVCS Tracker http://swsvc.intel.com/tracker/setup.asp",
+    "target": "RPC",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-26: PVCS Tracker http://swsvc.intel.com/tracker/setup.asp",
+    "target": "BMC51",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2006-01-26: PVCS Tracker http://swsvc.intel.com/tracker/setup.asp",
+    "target": "device manager",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2013-12-05: Modify SKL GT architecture registers to enable bypass contro",
+    "target": "bypass controls",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2013-12-05: Modify SKL GT architecture registers to enable bypass contro",
+    "target": "SKL GT architecture",
+    "type": "anchored_to",
+    "epoch": 138
+  },
+  {
+    "source": "2013-12-05: Modify SKL GT architecture registers to enable bypass contro",
+    "target": "mux control",
+    "type": "anchored_to",
+    "epoch": 138
   }
 ]

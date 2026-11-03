@@ -9,6 +9,1737 @@
       "anchor"
     ],
     "rank": 5,
-    "id": "GEM-3fed"
+    "id": "GEM-3fed",
+    "document_date": "2020-01-01",
+    "event_era": "2020-01-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request a71a128e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Missing: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-01",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2020-01-01",
+    "summary": "Measuring internal PECI performance and network timing identified as a TODO or research link.",
+    "evidence": "RAW LOGS: 'measuring internal PECI performance and network timing'",
+    "sensitivity": "Public",
+    "tags": [
+      "performance",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-01-01",
+    "event_era": "2020-01-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 9e4fcfea secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"spoken_take\": \"Jason, it sounds like you're interested in learning more about the PECI v4.0 Commands Checkout research and development efforts. I'm checking our logs from October 27th, 2021, to see if we have any records related to Chris Weldon's presentation.\",\n  \"search_terms\": \"MCTP, PECI v4.0, Chris Weldon, 2021, Acme Lab\",\n  \"upvote\": true\n}",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-01",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-dc8d"
+  },
+  {
+    "date": "2020-01-15",
+    "summary": "BMC firmware updates with 250ms timeout implemented to improve existing PECI commands checkout.",
+    "evidence": "RAW LOGS: 'Jason B working on BMC firmware updates with 250ms timeout', Jason A adding timers to existing PECI commands checkout",
+    "sensitivity": "Public",
+    "tags": [
+      "firmware",
+      "BMC"
+    ],
+    "rank": 4,
+    "document_date": "2020-01-15",
+    "event_era": "2020-01-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 6246fff3 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_mctp_communication\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7 }",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-15",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-c85e"
+  },
+  {
+    "date": "2020-01-15",
+    "summary": "Fixtures preparation and cleanup",
+    "evidence": "https://github.com/DamonHolland/frameworks.automation.1paiv.kayak/blob/16099d4935285828b7706f668782db4b7a6d3b09/src/kayak/core/case_template/pytest_kayak.py#L22",
+    "domain": "operations",
+    "tags": [
+      "fixtures",
+      "cleanup"
+    ],
+    "document_date": "2020-01-15",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-01-27",
+    "summary": "TODO: Configure maximum non-turbo limit ratio and efficiency ratio for CLX (Cannon Lake-X)",
+    "evidence": "TODO: CLX - sv.socket0.uncore0.pcu_cr_platform_info_cfg.max_non_turbo_lim_ratio (15:08) in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV software",
+      "CLX"
+    ],
+    "rank": 4,
+    "document_date": "2020-01-27",
+    "event_era": "2020-01-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of CLX, MIV software.",
+    "spatial_anchor": {
+      "source_file": "2020_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-27",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-5f87"
+  },
+  {
+    "date": "2020-01-27",
+    "summary": "IPMI command failed with error code 'ab' due to wrong command codes and errors reading PCI device space",
+    "evidence": "IPMI Command Failed : ab Wrong command code in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "error"
+    ],
+    "rank": 4,
+    "document_date": "2020-01-27",
+    "event_era": "2020-01-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request ced75326 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.It sounds like we're diving into some BMC PECI master functionality discussions from 2020. I'm going to check our logs to see if there were any notable events around that time.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-27",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-53e9"
+  },
+  {
+    "date": "2020-01-28",
+    "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API",
+    "evidence": "log entries from 1/28/2020 and 1/27/2020 in RAW LOGS",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV software",
+      "CLX"
+    ],
+    "rank": 4,
+    "document_date": "2020-01-28",
+    "event_era": "2020-01-28",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 9a960c9a secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_01.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-01-28",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-c8ba"
+  },
+  {
+    "date": "2020-02-01",
+    "summary": "Using futurize tool as a workaround for resolving issues",
+    "evidence": "RAW LOGS: Command 'futurize -w --stage1' used as a workaround",
+    "sensitivity": "Public",
+    "tags": [
+      "futurize"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-01",
+    "event_era": "2020-02-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of futurize.",
+    "spatial_anchor": {
+      "source_file": "2020_02.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-02-01",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-e04e"
+  },
+  {
+    "date": "2020-02-01",
+    "summary": "Potential issues identified with certain PECI commands that may not be implemented on BMC.",
+    "evidence": "RAW LOGS: 'a few tests leverage some commands that there may be no plans to implement on BMC'",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-01",
+    "event_era": "2020-02-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 20b76de6 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC firmware version supported by PECI components; Anchor Missing: BMC firmware version not supported => KEEP\n- CHUNK-2: Anchor Match: MCA Error Source Log via Redfish PECI; Anchor Missing: MCA Error Source Log not found via Redfish PECI => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]\nDebug condition or inquiry that activates this knowledge: BMC firmware version check via Redfish PECI.\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2021-10-27] PECI v4.0 Commands Checkout (MCTP) research and development ongoing.\nEVIDENCE: [RAW LOGS] [10/27/2021] - MCTP - Highlights / Lowlights to Chris Weldon - ...",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-02-01",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-5b1f"
+  },
+  {
+    "date": "2020-02-10",
+    "summary": "Replaced faulty CPU due to excessive heat generation.",
+    "evidence": "Error log: 'CPU Temperature Critical'",
+    "domain": "hardware_debug",
+    "document_date": "2020-02-10",
+    "event_era": "2020-02-10",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "PECI RdIAMSR returns status 0x00",
+    "evidence": "[OKS][DMR][Manageability][PPO 0.8] PECI RdIAMSR  returns status 0x00",
+    "domain": "hardware_debug",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "MCTP busctl tree xyz.openbmc_project.MCTP_PCIe missing devices",
+    "evidence": "[OKS][DMR][Manageability][PPO 0.8] MCTP busctl  tree xyz.openbmc_project.MCTP_PCIe  missing devices",
+    "domain": "hardware_debug",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "Verify and stress Host CPU->BMC connection",
+    "evidence": "[Manageability][Placeholder][IPMI][MMBI] Verify and stress Host CPU->BMC connection",
+    "domain": "operations",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "Use dummy BDF and LTM to map to MMIO low",
+    "evidence": "[Manageability][Placeholder][PECI] Use dummy BDF and LTM to map to MMIO low",
+    "domain": "vendor_comm",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "Concurrent PECI support",
+    "evidence": "[Manageability][Placeholder][PECI] Concurrent PECI support",
+    "domain": "career_timeline",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "Rd/Wr PCICfg PECI cmd multi-segment support",
+    "evidence": "[Manageability][Placeholder][PECI] Rd/Wr PCICfg PECI cmd multi-segment support",
+    "domain": "hardware_debug",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "PCS to TPMI transition",
+    "evidence": "[Manageability][Placeholder][PECI] PCS to TPMI transition",
+    "domain": "logistics",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-15",
+    "summary": "post boot discovery",
+    "evidence": "[Manageability][Placeholder][MCTP] post boot discovery",
+    "domain": "logistics",
+    "document_date": "2020-02-15",
+    "event_era": "2020-02-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-16",
+    "summary": "Device selection is currently not supported for RdEndpointConfigPCILocal command",
+    "evidence": "root@intel-obmc:~# peci_cmds -d /dev/peci-i3c RdEndpointConfigPCILocal 0 30 1 0 0 Device selection is currently not supported <3> ERROR: PECI failed: Cannot assign requested address (99) ERROR 1: command failed cc:0x00",
+    "domain": "hardware_debug",
+    "document_date": "2020-02-16",
+    "event_era": "2020-02-16",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-20",
+    "summary": "pip install montana and iodval",
+    "evidence": "pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV --trusted-host devpi.intel.com --upgrade\npip install iodval --extra-index-url=https://devpi.intel.com/general/XPIV  --upgrade",
+    "domain": "operations",
+    "document_date": "2020-02-20",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-20",
+    "summary": "Content config for LTM - Auto mode",
+    "evidence": "https://github.com/DamonHolland/frameworks.automation.1paiv.kayak/tree/8cc3af46424043916eeb516154535888d0f3a38c/src/kayak/core/lib/datatypes/data_classes/domain_config_opts",
+    "domain": "vendor_comm",
+    "tags": [
+      "LTM",
+      "auto_mode"
+    ],
+    "document_date": "2020-02-20",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+    "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
+    "sensitivity": "Public",
+    "tags": [
+      "peci",
+      "ipmi_host"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-26",
+    "event_era": "2020-02-26",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of ipmi_host, peci.",
+    "spatial_anchor": {
+      "source_file": "2020_02.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-02-26",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-de4b"
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+    "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "crypto",
+      "msr",
+      "pyghmi"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-26",
+    "event_era": "2020-02-26",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of crypto, msr, pyghmi.",
+    "spatial_anchor": {
+      "source_file": "2020_02.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-02-26",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-599b"
+  },
+  {
+    "date": "2020-03-01",
+    "summary": "On-demand config options investigation",
+    "evidence": "https://github.com/DamonHolland/frameworks.automation.1paiv.kayak/blob/8cc3af46424043916eeb516154535888d0f3a38c/src/kayak/core/lib/datatypes/data_classes/domain_config_opts/on_demand.py",
+    "domain": "operations",
+    "tags": [
+      "on-demand",
+      "config_options"
+    ],
+    "document_date": "2020-03-01",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-03-15",
+    "summary": "pip install py-onebkc and kayak",
+    "evidence": "pip install py-onebkc --extra-index-url=https://ubit-artifactory-or.intel.com/artifactory/api/pypi/one-windows-pypi-local/simple/ --upgrade\npip install 'kayak[complete] @ git+https://github.com/intel-innersource/frameworks.automation.1paiv.kayak@1.6.0'",
+    "domain": "operations",
+    "document_date": "2020-03-15",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-03-20",
+    "summary": "OOBMSM = VCU",
+    "evidence": "OOBMSM = VCU",
+    "domain": "hardware_debug",
+    "document_date": "2020-03-20",
+    "event_era": "2020-03-20",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-03-23",
+    "summary": "MIV Reset and Recovery issues with Force ME recovery and Get Device ID return codes (CE, 0xc3, and 0xff)",
+    "evidence": "[RAW LOGS] discussion about MIV Reset and Recovery issues on 3/23/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "Recovery",
+      "Reset",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2020-03-23",
+    "event_era": "2020-03-23",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Recovery, Reset, MIV.",
+    "spatial_anchor": {
+      "source_file": "2020_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-03-23",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-959d"
+  },
+  {
+    "date": "2020-03-23",
+    "summary": "PECI commands and BMC PECI master functionality discussions",
+    "evidence": "[RAW LOGS] discussion about PECI commands on 3/23/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-03-23",
+    "event_era": "2020-03-23",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request f7eb7b2b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Proposed modular BMC support is related to existing BMC features; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: Access to BMC SMBus segments and PECI is enabled through updated L-BMC firmware; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP\n\n[USER_QUERY]: The debug condition or inquiry that activates this knowledge is: BMC SMBus segment and PECI access validation.\n\n[BLACKBOARD_LEDGER]:\n- [PINKY]: Proposed modular BMC support enables access to BMC SMBus segments and PECI through updated L-BMC firmware \ud83d\udca1 Curator Note: This is a key feature for validation teams.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-03-23",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-4808"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "MIV test cases fail strangely after do min_nm_dca test on Dell system",
+    "evidence": "[RAW LOGS] discussion about MIV test case failure on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "Test",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Test, MIV.",
+    "spatial_anchor": {
+      "source_file": "2020_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-03-24",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-c46c"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "ME RAS Force ME recovery issues",
+    "evidence": "[RAW LOGS] discussion about ME RAS Force ME recovery issues on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "Recovery",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Recovery, MIV.",
+    "spatial_anchor": {
+      "source_file": "2020_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-03-24",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-c77d"
+  },
+  {
+    "date": "2020-03-24",
+    "summary": "BMC PECI master functionality discussion",
+    "evidence": "[RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-03-24",
+    "event_era": "2020-03-24",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request b07f471e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Deep Thought (Strategy) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Initiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_03.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-03-24",
+      "year": 2020,
+      "quarter": "2020-Q1",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-70a7"
+  },
+  {
+    "date": "2020-04-01",
+    "summary": "Validation unsecure (MTM)",
+    "evidence": "ipmitool raw 0x30 0xB4 0x3 2",
+    "domain": "logistics",
+    "document_date": "2020-04-01",
+    "event_era": "2020-04-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-04-15",
+    "summary": "Power limit set",
+    "evidence": "policy.py  SetPowerLimit",
+    "domain": "operations",
+    "tags": [
+      "power_limit_set"
+    ],
+    "document_date": "2020-04-15",
+    "event_era": "2020-04-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-04-22",
+    "summary": "Higher-order PECI test cases were planned",
+    "evidence": "Higher-order PECI test cases were planned",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-04-22",
+    "event_era": "2020-04-22",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of PECI, DTAF.",
+    "spatial_anchor": {
+      "source_file": "2020_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-04-22",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-ef27"
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "DTAF Core installation guide needs update from Raveendra",
+    "evidence": "! DTAF Core Installation Guide.pdf - Needs update from Raveendra",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-04-27",
+    "event_era": "2020-04-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of PECI, DTAF.",
+    "spatial_anchor": {
+      "source_file": "2020_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-04-27",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-ba14"
+  },
+  {
+    "date": "2020-04-27",
+    "summary": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+    "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
+    "sensitivity": "Public",
+    "tags": [
+      "BMC",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-04-27",
+    "event_era": "2020-04-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request ecd49232 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDThat's fascinating, Jason! I'm checking in our archives to see how the updated L-BMC firmware impacted our validation team's ability to access BMC SMBus segments and PECI.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_04.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-04-27",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-f17d"
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+    "evidence": "[RAW LOGS] - pip install fabric",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV content readiness",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-05-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of MIV content readiness, DTAF.",
+    "spatial_anchor": {
+      "source_file": "2020_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-05-15",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-0043"
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+    "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
+    "sensitivity": "Public",
+    "tags": [
+      "PCIE Whitley",
+      "priority execution requests"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-05-15",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of priority execution requests, PCIE Whitley.",
+    "spatial_anchor": {
+      "source_file": "2020_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-05-15",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-cb8e"
+  },
+  {
+    "date": "2020-05-21",
+    "summary": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+    "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
+    "sensitivity": "Public",
+    "tags": [
+      "Crasdump/EINJ knobs",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-21",
+    "event_era": "2020-05-21",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Crasdump/EINJ knobs, DTAF.",
+    "spatial_anchor": {
+      "source_file": "2020_05.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-05-21",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-059d"
+  },
+  {
+    "date": "2020-05-31",
+    "summary": "Dengate policies retrieved",
+    "evidence": "getdengatepolicies.py  GetDengatePolicies",
+    "domain": "vendor_comm",
+    "tags": [
+      "dengate_policies"
+    ],
+    "document_date": "2020-05-31",
+    "event_era": "2020-05-31",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-06-05",
+    "summary": "Review of NM-4.0 External Interface Spec",
+    "evidence": "Review of NM-4.0 External Interface Spec (550710-nm-4-0-external-interface-spec)",
+    "sensitivity": "Public",
+    "tags": [
+      "nm-4.0",
+      "external interface spec"
+    ],
+    "rank": 4,
+    "document_date": "2020-06-05",
+    "event_era": "2020-06-05",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of nm-4.0, external interface spec.",
+    "spatial_anchor": {
+      "source_file": "2020_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-06-05",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-d939"
+  },
+  {
+    "date": "2020-06-08",
+    "summary": "Update test setup to install at least 4 DIMMs for Domain 2 (memory) power usage above 1W",
+    "evidence": "New External setup step: 'In order to bring Domain 2 (memory) power usage above 1W, at least 4 DIMMs should be installed (half or more populated is recommended)'",
+    "sensitivity": "Public",
+    "tags": [
+      "test setup",
+      "domain 2"
+    ],
+    "rank": 4,
+    "document_date": "2020-06-08",
+    "event_era": "2020-06-08",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of test setup, domain 2.",
+    "spatial_anchor": {
+      "source_file": "2020_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-06-08",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-756d"
+  },
+  {
+    "date": "2020-06-09",
+    "summary": "RAS+BKM Setup wiki page referenced",
+    "evidence": "https://wiki.ith.intel.com/display/PVELabs/RAS+BKM+Setup#RASBKMSetup-2.9Setupforpve-commonscriptsthatcallC-Scripts",
+    "domain": "vendor_comm",
+    "tags": [
+      "wiki",
+      "ras_bkm"
+    ],
+    "document_date": "2020-06-09",
+    "event_era": "2020-06-09",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 3,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of PECI tests, unexpected return codes, MSR register access issues.",
+    "spatial_anchor": {
+      "source_file": "2022_11.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-06-09",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED"
+  },
+  {
+    "date": "2020-06-11",
+    "summary": "Delete (NmPolicy 0x2E 0xC1) Returns 0x80 after disabling existing policy",
+    "evidence": "PM Cap Sweep failed to disable/delete policy (NmPolicy 0x2E 0xC1) and return error code 0x80",
+    "sensitivity": "Public",
+    "tags": [
+      "delete failure",
+      "nm-policy"
+    ],
+    "rank": 4,
+    "document_date": "2020-06-11",
+    "event_era": "2020-06-11",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of nm-policy, delete failure.",
+    "spatial_anchor": {
+      "source_file": "2020_06.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-06-11",
+      "year": 2020,
+      "quarter": "2020-Q2",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-780e"
+  },
+  {
+    "date": "2020-06-20",
+    "summary": "Intel Defect Search IDS",
+    "evidence": "http://dev-defectsearch.intel.com/#/home",
+    "domain": "vendor_comm",
+    "document_date": "2020-06-20",
+    "event_era": "2020-06-20",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-06-30",
+    "summary": "Thermal limit set",
+    "evidence": "setthermallimit.py  SetThermalLimit",
+    "domain": "operations",
+    "tags": [
+      "thermal_limit_set"
+    ],
+    "document_date": "2020-06-30",
+    "event_era": "2020-06-30",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+    "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "BMC"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of L-BMC, BMC.",
+    "spatial_anchor": {
+      "source_file": "2020_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-07-01",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-d328"
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "validation",
+      "recovery",
+      "BMC",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 7d551951 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"\nAnchor Missing: no anchor => KEEP\n- CHUNK-2: Anchor Match: no anchor => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[ENGINEERING TRIGGER CONTEXT]\nDebug condition or inquiry: PECI master configuration check for optimal ignition.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-07-01",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-72d8"
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Code review issue forwarded to Dave/Curtis for investigation",
+    "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
+    "sensitivity": "Public",
+    "tags": [
+      "code review",
+      "issue investigation"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-07-07",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of code review, issue investigation.",
+    "spatial_anchor": {
+      "source_file": "2020_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-07-07",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-05d3"
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+    "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "firmware update"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-07-07",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 83134c99 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDLet me see if I can find some info on proposed modular BMC support. Can you tell me more about what you're looking for?",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-07-07",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-ee96"
+  },
+  {
+    "date": "2020-07-28",
+    "summary": "IVL crash dump issue addressed",
+    "evidence": "IVL crash dump issue addressed on July 28, 2020",
+    "sensitivity": "Public",
+    "tags": [
+      "crash dump",
+      "IVL"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-28",
+    "event_era": "2020-07-28",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of crash dump, IVL.",
+    "spatial_anchor": {
+      "source_file": "2020_07.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-07-28",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-cd82"
+  },
+  {
+    "date": "2020-08-01",
+    "summary": "MCTP URI and Redfish event subscription",
+    "evidence": "Sumanth - \"Redfish event subscription\" - notes: https://wiki.ith.intel.com/display/openbmcPmci/Sending+and+Receiving+MCTP+Message+Payloads+over+Redfish",
+    "domain": "vendor_comm",
+    "document_date": "2020-08-01",
+    "event_era": "2020-08-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-08-25",
+    "summary": "Release of scan_NetFunction_8-25-2020.py for the Purley RAS Gap Analysis - Tool utilized: [TOOL ERA REGISTRY]",
+    "evidence": "[TOOL ERA REGISTRY]",
+    "sensitivity": "Public",
+    "tags": [
+      "Silicon Validation",
+      "Release",
+      "Purley RAS Gap Analysis"
+    ],
+    "technical_gem": "[Specific error code or architectural nuance found in TOOL ERA REGISTRY]",
+    "rank": 4
+  },
+  {
+    "date": "2020-08-27",
+    "summary": "Opcode 0x2E found to be a common prefix for various NM and PLP functions.",
+    "evidence": "utilities.py file used to find opcode 0x2E, associated with ForceMeRecovery, GetMEFactoryPresets, OnlineUpdateGetImageInventory, PeciSendRaw, PeciAggregatedSendRaw, and PeciPackageConfigRead functions.",
+    "sensitivity": "Public",
+    "tags": [
+      "Opcode 0x2E",
+      "Node Manager",
+      "Power Limiting Policy"
+    ],
+    "rank": 4,
+    "document_date": "2020-08-27",
+    "event_era": "2020-08-27",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 3,
+    "trigger_context": "Triggered during platform validation of Node Manager, Opcode 0x2E, Power Limiting Policy.",
+    "spatial_anchor": {
+      "source_file": "2020_08.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-08-27",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 3,
+    "consecutive_zero_deltas": 2,
+    "status": "SATURATED",
+    "id": "GEM-93e8"
+  },
+  {
+    "date": "2020-09-10",
+    "summary": "Manageability Ignition-Redfish Content Plan (pptx) referenced but not directly linked to in abstract.",
+    "evidence": "https://intel.sharepoint.com/sites/PlatformIntegrationValidation/Shared%20Documents/Security,%20Manageability,%20MemRAS%20Subsystem/Manageability/Manageability%20Ignition-Redfish%20Content%20Plan.pptx?web=1",
+    "sensitivity": "Public",
+    "tags": [
+      "Manageability Ignition-Redfish Content Plan",
+      "pptx"
+    ],
+    "rank": 4,
+    "document_date": "2020-09-10",
+    "event_era": "2020-09-10",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of pptx, Manageability Ignition-Redfish Content Plan.",
+    "spatial_anchor": {
+      "source_file": "2020_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-09-10",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-83e9"
+  },
+  {
+    "date": "2020-09-10",
+    "summary": "PECI commands tested and found to be supported or unsupported.",
+    "evidence": "log entry on 9/10/2020 lists supported and unsupported PECI commands",
+    "sensitivity": "Public",
+    "tags": [
+      "commands",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2020-09-10",
+    "event_era": "2020-09-10",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request 4aab21ae secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETED**TECHNICAL TRUTH**: The debug condition or inquiry that activates this knowledge is likely triggered by a specific diagnostic tool or software used by Jason to retrieve the journal entries from BMC's LogServices/Journal/Entries e",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-09-10",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-31ac"
+  },
+  {
+    "date": "2020-09-15",
+    "summary": "NPK trace and VISA Training",
+    "evidence": "https://wiki.ith.intel.com/display/fvcommon/GNR+ITH+Installation+Steps\nhttps://intel.sharepoint.com/sites/PDGTraining/_layouts/15/stream.aspx?id=%2Fsites%2FPDGTraining%2FGraniteRapidsTraining%2F6_2_22_Meeting+in+GNR+SRF+DAT+Community_mp4",
+    "domain": "operations",
+    "document_date": "2020-09-15",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-09-16",
+    "summary": "Architectural decisions regarding PECI command execution, specifically with regards to the PECI master being set to PCH or BMC for ignition.",
+    "evidence": "log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"",
+    "sensitivity": "Public",
+    "tags": [
+      "master",
+      "BMC",
+      "PECI",
+      "PCH"
+    ],
+    "rank": 4,
+    "document_date": "2020-09-16",
+    "event_era": "2020-09-16",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 3,
+    "trigger_context": "[FOYER] Request feaf7219 secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, it sounds like you're exploring the intricacies of PECI command execution. I'm checking our logs from September 2020 to see if there were any notable discussions around setting the PECI master to PCH or BMC for ignition.",
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "spatial_anchor": {
+      "source_file": "2020_09.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-09-16",
+      "year": 2020,
+      "quarter": "2020-Q3",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-fbf4"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Primary TODO or research link: Intel Redfish Power Cap OEM Schema",
+    "evidence": "https://docs.intel.com/documents/sms_archspecs/openbmc/nm_supporting_docs/api/Redfish%20Power%20Cap%20OEM%20Schema.html",
+    "sensitivity": "Public",
+    "tags": [
+      "Research",
+      "TODO"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 01f2102b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Deep Thought (Strategy) intuition... \"spoken_take\": \"Jason, it sounds like you're looking into MCTP communication with BMC, which is a crucial aspect of our lab's infrastructure. I'm checking the archives to see how we've utilized curl and ipmitool commands for this purpose.\",\n  \"search_terms\": \"MCTP, BMC, ipmitool, curl, debug_mctp_communication, Team Utilization\",\n  \"upvote\": true\n}",
+    "document_date": "2020-10-01",
+    "event_era": "2020-10-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "passes": 4,
+    "consecutive_zero_deltas": 2,
+    "refinement_level": 3,
+    "spatial_anchor": {
+      "source_file": "2020_10.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-10-01",
+      "year": 2020,
+      "quarter": "2020-Q4",
+      "precision": "EXACT"
+    },
+    "status": "SATURATED",
+    "id": "GEM-ec32"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "Architectural decisions regarding power management and capacity planning were likely made, but details are lacking",
+    "evidence": null,
+    "sensitivity": "Public",
+    "tags": [
+      "Power Management",
+      "Unknown Tool",
+      "Error Codes Unknown",
+      "Capacity Planning",
+      "Era Registry",
+      "Troubleshooting"
+    ],
+    "rank": 4,
+    "id": "GEM-f12c"
+  },
+  {
+    "date": "2020-10-01",
+    "summary": "unlocker and LTM",
+    "evidence": "https://wiki.ith.intel.com/display/ITSSPREE/ITP+unlock+-+PKP+service\nLTM",
+    "domain": "operations",
+    "document_date": "2020-10-01",
+    "event_era": "2020-10-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2020-12-02",
+    "summary": "Formulas updated to calculate inventory metrics",
+    "evidence": "Three formulas were modified: =IF(G5,SUM(G$3:G5)/5,\"\") was replaced with =IF(AND(G3<>\"\",ISBLANK($I3)),SUMIF($G$3:$G3)/5,\"\") and two additional formulas were added to calculate metrics for specific ranges.",
+    "sensitivity": "Public",
+    "tags": [
+      "inventory metric calculation",
+      "formula update"
+    ],
+    "rank": 4,
+    "document_date": "2020-12-02",
+    "event_era": "2020-12-02",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of formula update, inventory metric calculation.",
+    "spatial_anchor": {
+      "source_file": "2020_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-12-02",
+      "year": 2020,
+      "quarter": "2020-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-d9c0"
+  },
+  {
+    "date": "2020-12-02",
+    "summary": "Updated list of inventory requests available at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx in the 'DCG Inventory Alpha' list",
+    "evidence": "The updated list can be found in the 'DCG Inventory Alpha' list located at https://intel.sharepoint.com/sites/JF5SupportServices/JF/JF5/SupportServices/Lists/Inventory%20Requests/AllItems.aspx.",
+    "sensitivity": "Public",
+    "tags": [
+      "updated list",
+      "inventory requests"
+    ],
+    "rank": 4,
+    "document_date": "2020-12-02",
+    "event_era": "2020-12-02",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of updated list, inventory requests.",
+    "spatial_anchor": {
+      "source_file": "2020_12.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2020-12-02",
+      "year": 2020,
+      "quarter": "2020-Q4",
+      "precision": "EXACT"
+    },
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "id": "GEM-0527"
   }
 ]
