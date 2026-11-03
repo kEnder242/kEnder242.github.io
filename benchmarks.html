@@ -50,23 +50,7 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
-        /* Top Telemetry Banner */
-        .telemetry-banner {
-            display: flex;
-            gap: 20px;
-            background: #12161f;
-            border: 1px solid #1f242c;
-            border-radius: 6px;
-            padding: 12px 20px;
-            margin-bottom: 25px;
-            align-items: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-        }
-        .telemetry-item span {
-            color: #58a6ff;
-            font-weight: 600;
-        }
+
         .status-badge {
             display: inline-block;
             padding: 3px 8px;
@@ -84,37 +68,6 @@
             background: #4a1d1d;
             color: #f85149;
             border: 1px solid #da3633;
-        }
-
-        /* Controls bar */
-        .controls-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .console-btn {
-            background: #1f242c;
-            color: #c9d1d9;
-            border: 1px solid #30363d;
-            padding: 7px 14px;
-            border-radius: 4px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .console-btn:hover {
-            background: #30363d;
-            color: #fff;
-        }
-        .console-btn-primary {
-            background: #238636;
-            border-color: #2ea043;
-            color: #fff;
-        }
-        .console-btn-primary:hover {
-            background: #2ea043;
         }
 
         /* Persistent Seat Cards (Global Hardware Dashboard) */
@@ -182,12 +135,14 @@
             border: none;
             border-bottom: 2px solid transparent;
             color: #8b949e;
-            padding: 10px 18px;
+            padding: 6px 12px;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 600;
+            letter-spacing: normal;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
         }
         .tab-btn:hover {
             color: #c9d1d9;
@@ -465,6 +420,25 @@
                 padding: 80px 20px 40px 20px;
             }
         }
+        @media screen and (max-width: 768px) {
+            .delegation-summary-cards {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
+            }
+            .live-stream-table th, .live-stream-table td {
+                padding: 6px 6px !important;
+                font-size: 0.7rem !important;
+            }
+            .live-stream-table .col-chevron,
+            .live-stream-table .col-duration {
+                display: none !important;
+            }
+            .live-stream-table .col-title {
+                max-width: 160px !important;
+                white-space: normal !important;
+                word-break: break-word;
+            }
+        }
     </style>
 </head>
 <body>
@@ -477,15 +451,10 @@
     <main>
         <div class="console-header">
             <h1 class="console-title">Federated Silicon Benchmarks</h1>
-            <p class="console-subtitle">Multi-Seat Hardware & ROI Telemetry Workbench | v2.0</p>
+            <p class="console-subtitle">Live Federated Silicon Telemetry &amp; ROI Workbench</p>
         </div>
 
-        <div class="telemetry-banner">
-            <div class="telemetry-item">Last Nightly Silicon Sweep: <span id="telemetry-timestamp">Synchronizing...</span></div>
-            <div>
-                <span id="telemetry-status" class="status-badge status-online">FEDERATED ONLINE</span>
-            </div>
-        </div>
+
 
 
 
@@ -494,12 +463,11 @@
             <!-- Rendered dynamically via JS -->
         </div>
 
-        <!-- 3-Tab Navigation (Delta-T Default, Arena, ROI+CoT) -->
+        <!-- 3-Tab Navigation (Live Round Table, Model Throughput, Sprint Delegation) -->
         <div class="tab-nav">
-            <button class="tab-btn active" onclick="switchTab(event, 'tab-delta-t')">⏱️ LIVE ROUND TABLE ELAPSED TIME</button>
-            <button class="tab-btn" onclick="switchTab(event, 'tab-arena')">🏛️ SILICON ARENA & WORKLOAD</button>
-            <button class="tab-btn" onclick="switchTab(event, 'tab-roi')">⚡ ENERGY, ROI & CoT</button>
-            <button class="tab-btn" onclick="switchTab(event, 'tab-delegation')">🐝 SWARM DELEGATION & SOVEREIGN GAINS</button>
+            <button class="tab-btn active" onclick="switchTab(event, 'tab-delta-t')">Live Round Table</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-arena')">Model Throughput</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-delegation')">Sprint Delegation</button>
         </div>
 
         <!-- TAB 1 (DEFAULT): LIVE ROUND TABLE ELAPSED TIME & BLACKBOARD LEDGER [FEAT-525/526] -->
@@ -535,122 +503,35 @@
 
         <!-- TAB 2: SILICON ARENA & WORKLOAD STREAM (SPEED, LATENCY, LIVE RUNS) -->
         <div id="tab-arena" class="tab-pane hidden">
+            <!-- Live Model Throughput Canvas [STORY 102.18] -->
             <div class="chart-card">
                 <div class="chart-title">
-                    <span>Generation Throughput Comparison</span>
-                    <span class="chart-subtitle">Tokens per Second (Higher is faster)</span>
+                    <span>⚡ Live Model Throughput Trajectory (tok/s)</span>
                 </div>
-                <div id="throughput-bars"></div>
-            </div>
-
-            <div class="chart-card">
-                <div class="chart-title">
-                    <span>Time to First Token (TTFT)</span>
-                    <span class="chart-subtitle">Warm Prompt Cache Latency in ms (Lower is better)</span>
+                <div class="chart-subtitle" style="margin: 0 0 10px 0;">Live production receipts from data/live_usage_stream.jsonl overlaid across universal chronological timeline.</div>
+                <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>2080 Ti</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>M5 Air</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud</span>
                 </div>
-                <div id="ttft-bars"></div>
+                <canvas id="throughput-live-chart" width="1000" height="280" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
             </div>
 
             <!-- Live Swarm Workload Stream (Moved inside Arena tab) -->
-            <div class="chart-card" style="border-top: 2px solid #58a6ff;">
-                <div class="chart-title">
-                    <span>🔴 Real-Time Swarm Workload Stream (Live Telemetry)</span>
-                    <span class="chart-subtitle">Real production executions logged passively across all local silicon and cloud delegations</span>
+            <div style="margin-top: 28px; margin-bottom: 14px;">
+                <div class="chart-title" style="margin-bottom: 4px;">
+                    <span style="font-size: 0.95rem; font-weight: 700; color: #f0f3f6;">🔴 Real-Time Swarm Workload Stream (Live Telemetry)</span>
                 </div>
-                <div id="live-usage-container">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size:0.75rem; color:#8b949e;">
-                        Awaiting live workload events...
-                    </div>
+                <div class="chart-subtitle" style="color: #8b949e; font-size: 0.75rem;">Real production executions logged passively across all local silicon and cloud delegations</div>
+            </div>
+            <div id="live-usage-container" class="table-wrap">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size:0.75rem; color:#8b949e;">
+                    Awaiting live workload events...
                 </div>
             </div>
         </div>
 
-        <!-- TAB 3: ENERGY, FINANCIAL ROI & INTELLIGENCE (CoT) -->
-        <div id="tab-roi" class="tab-pane hidden">
-            <!-- Reasoning CoT Depth (Rolled into ROI tab per user directive) -->
-            <div class="chart-card">
-                <div class="chart-title">
-                    <span>🧠 Reasoning Depth Ratio (CoT Thinking Tokens vs Direct Output)</span>
-                    <span class="chart-subtitle">Percentage of generated tokens dedicated to internal reasoning / self-reflection (Test-Time Compute Scaling)</span>
-                </div>
-                <div id="reasoning-bars"></div>
-            </div>
-
-            <div class="chart-card">
-                <div class="chart-title">
-                    <span>⚡ Silicon Energy Efficiency (Tokens per Joule)</span>
-                    <span class="chart-subtitle">Tokens/Joule = (Throughput tok/s) / (Power Watts) (Higher is more efficient)</span>
-                </div>
-                <div id="tokens-joule-bars"></div>
-            </div>
-
-            <div class="chart-card">
-                <div class="chart-title">
-                    <span>💰 Local Electricity Cost per 1M Tokens vs. Cloud ($3.00/MTok Claude 3.5 Sonnet)</span>
-                    <span class="chart-subtitle">Calculated at $0.15/kWh residential rate (Lower cost / Higher multiplier is better)</span>
-                </div>
-                <div id="roi-multipliers-bars"></div>
-            </div>
-
-            <!-- Realized Lifetime ROI Counter -->
-            <div class="roi-calculator" style="border-left: 4px solid #3fb950;">
-                <div class="chart-title">
-                    <span>💎 Your Realized Sovereign ROI (Lifetime To-Date)</span>
-                    <span class="chart-subtitle" id="realized-sync-time">Tracking all lab dispatches, Intercom sessions & nightly scans</span>
-                </div>
-                <div class="calc-grid" style="margin-top: 10px;">
-                    <div class="calc-card">
-                        <div class="calc-label">Sovereign Tokens Generated</div>
-                        <div class="calc-num" id="realizedTokensVal" style="color:#d2a8ff;">0</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Total Workload Output</div>
-                    </div>
-                    <div class="calc-card">
-                        <div class="calc-label">Cloud API Equivalent</div>
-                        <div class="calc-num" id="realizedApiCostVal" style="color:#f78166;">$0.00</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Anthropic / OpenAI Cost</div>
-                    </div>
-                    <div class="calc-card">
-                        <div class="calc-label">Actual Power Cost</div>
-                        <div class="calc-num" id="realizedPowerCostVal" style="color:#58a6ff;">$0.00</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Residential Electricity ($0.15/kWh)</div>
-                    </div>
-                    <div class="calc-card">
-                        <div class="calc-label">Net Realized Savings</div>
-                        <div class="calc-num" id="realizedSavingsVal">$0.00</div>
-                        <div id="realizedPctVal" style="font-size:0.7rem; color:#3fb950;">100.0% Reduction</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roi-calculator">
-                <div class="chart-title">
-                    <span>🔮 Hypothetical Scaling Calculator</span>
-                    <span class="chart-subtitle">Calculated against Commercial API Rates ($3.00/MTok Claude 3.5 Sonnet Rate)</span>
-                </div>
-                <div style="display:flex; align-items:center; gap:15px; margin-top:10px;">
-                    <span style="font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:#8b949e;">Monthly Token Volume:</span>
-                    <input type="range" id="tokenVolumeSlider" min="1" max="100" value="25" style="flex-grow:1; accent-color:#3fb950;" oninput="updateRoiCalc(this.value)" />
-                    <span id="tokenVolumeLabel" style="font-family:'JetBrains Mono', monospace; font-size:0.85rem; color:#3fb950; font-weight:700; min-width:80px;">25 MTok</span>
-                </div>
-                <div class="calc-grid">
-                    <div class="calc-card">
-                        <div class="calc-label">Commercial API Cost</div>
-                        <div class="calc-num" id="apiCostVal" style="color:#f78166;">$75.00</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Anthropic/OpenAI API bill</div>
-                    </div>
-                    <div class="calc-card">
-                        <div class="calc-label">Local Electricity Cost</div>
-                        <div class="calc-num" id="localCostVal" style="color:#58a6ff;">$0.82</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Z87 + M5 power draw</div>
-                    </div>
-                    <div class="calc-card">
-                        <div class="calc-label">Net Monthly Savings</div>
-                        <div class="calc-num" id="savingsVal" style="color:#3fb950;">$74.18 (98.9%)</div>
-                        <div style="font-size:0.7rem; color:#6a737d;">Calculated net margin</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- TAB 4 (NEW): SWARM DELEGATION & SOVEREIGN GAINS [STORY 101.15] -->
         <div id="tab-delegation" class="tab-pane hidden">
@@ -696,14 +577,14 @@
                 <table class="live-stream-table" id="delegation-runs-table">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Sprint</th>
-                            <th>Story / Title</th>
-                            <th>Mode / Tier</th>
-                            <th>Status</th>
-                            <th>Tokens</th>
-                            <th>Duration</th>
-                            <th>Verified</th>
+                            <th class="col-chevron"></th>
+                            <th class="col-sprint">Sprint</th>
+                            <th class="col-title">Story / Title</th>
+                            <th class="col-tier">Tier</th>
+                            <th class="col-status">Status</th>
+                            <th class="col-tokens">Tokens</th>
+                            <th class="col-duration">Duration</th>
+                            <th class="col-verified">Verified</th>
                         </tr>
                     </thead>
                     <tbody id="delegation-runs-tbody"></tbody>
@@ -727,8 +608,14 @@
             if (tabId === 'tab-delta-t' && typeof initDeltaTView === 'function') {
                 setTimeout(initDeltaTView, 50);
             }
+            if (tabId === 'tab-arena' && typeof renderThroughputLiveChart === 'function' && window.cachedLiveRecords) {
+                setTimeout(() => renderThroughputLiveChart(window.cachedLiveRecords), 50);
+            }
+            if (tabId === 'tab-delegation' && typeof renderSwarmTokenChart === 'function' && window.cachedDelegationRuns) {
+                setTimeout(() => renderSwarmTokenChart(window.cachedDelegationRuns), 50);
+            }
         }
     </script>
-    <script src="benchmarks.js?v=spr70_2"></script>
+    <script src="benchmarks.js?v=spr107_truth_831"></script>
 </body>
 </html>

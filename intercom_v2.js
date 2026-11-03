@@ -287,7 +287,20 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     
     const time = new Date().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
     const sl = source ? source.toLowerCase() : "system";
-    let displaySource = source.toUpperCase();
+    // [Story 107.17] Canonical Persona Labeling & CSS Class Mapping
+    let cleanSource = source;
+    let baseClass = sl;
+    if (sl.includes('pinky')) {
+        cleanSource = 'Pinky (Voice)';
+        baseClass = 'pinky';
+    } else if (sl.includes('brain')) {
+        cleanSource = 'Brain (Archive)';
+        baseClass = 'brain';
+    } else if (sl.includes('deep thought') || sl.includes('thought')) {
+        cleanSource = sl.includes('triage') ? 'Deep Thought (Triage)' : 'Deep Thought (Strategy)';
+        baseClass = 'brain';
+    }
+    let displaySource = cleanSource;
 
     // [VISUAL THINK] Detect Building Upon state
     let isBuildingUpon = false;
@@ -419,6 +432,20 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     } else if (isJSON) {
         const esc = (unsafe) => unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
         formattedText = `<pre class="json-pretty-print" style="white-space: pre-wrap; font-family: monospace; background: var(--bg-card); padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); font-size: 0.85em; margin: 5px 0;">${esc(jsonFormatted)}</pre>`;
+    } else if ((channel === 'insight' || (source && /brain|insight|thought/i.test(source))) && text && text.includes('[ANALYSIS]') && text.includes('CHUNK-')) {
+        const esc = (unsafe) => String(unsafe).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        const countMatch = text.match(/CHUNK-\d+/g);
+        const chunkCount = countMatch ? new Set(countMatch).size : 0;
+        formattedText = `<details class="rag-eval-card brain-chunk-card" style="margin: 6px 0; border: 1px solid #3d2d54; background: #0c0814; border-left: 3px solid #a371f7; border-radius: 4px; padding: 5px 9px;">
+<summary style="cursor: pointer; color: #a371f7; font-size: 0.78rem; font-weight: bold; user-select: none;">
+🧠 [+] Evidence Chunks (${chunkCount} evaluated)
+</summary>
+<div class="rag-eval-body" style="padding: 8px 4px 4px 4px; font-size: 0.75rem; color: #d2a8ff; border-top: 1px solid #2d1e3e; margin-top: 5px;">
+<pre style="white-space: pre-wrap; font-family: monospace; background: #07040a; padding: 8px; border-radius: 3px; border: 1px solid #2d1e3e; max-height: 250px; overflow-y: auto; color: #d2a8ff; font-size: 0.72rem; line-height: 1.45;">${esc(text)}</pre>
+</div>
+</details>`;
+    } else if ((metadata && (metadata.is_raw_html || metadata.rawHtml)) || (text && text.trim().startsWith('<details'))) {
+        formattedText = text;
     } else if (!isSystem && window.marked) {
         formattedText = marked.parse(text);
     }
@@ -427,7 +454,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         msg.innerHTML = `
             <div class="msg-body system-inline">
                 <span class="msg-time">${time}</span>
-                <span class="msg-source ${sl}">[${displaySource}]</span>
+                <span class="msg-source ${baseClass}">[${displaySource}]</span>
                 ${formattedText}
             </div>
         `;
@@ -435,7 +462,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
         msg.innerHTML = `
             <div class="msg-header">
                 <span class="msg-time">${time}</span>
-                <span class="msg-source ${sl}">[${isBuildingUpon ? '↳ ' : ''}${displaySource}]</span>
+                <span class="msg-source ${baseClass}">[${isBuildingUpon ? '↳ ' : ''}${displaySource}]</span>
                 ${respFbHtml}
             </div>
             <div class="msg-body">${formattedText}</div>
@@ -445,13 +472,17 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
     
     // Fix: Routing Logic - [FEAT-222] Source-First Authority
     
-    // [FEAT-224] Brain (Signal or Result) and Shadow (Intuition) always go to the Right
-    const isBrain = sl_low.includes('brain') || sl_low.includes('shadow') || sl_low.includes('deep thought');
+    // [FEAT-058] Immutable Node-Anchored Hemispheric Routing (BKM-061 Oracle Hardened)
+    // [FEAT-224] Brain (Signal or Result) and Deep Thought always go to the Right
+    const isBrain = sl_low.includes('brain') || sl_low.includes('shadow') || sl_low.includes('deep thought') || sl_low.includes('audit');
     // Pinky (Triage or Reflex) always goes to the Left
     const isPinky = sl_low.includes('pinky');
-    // System strategic messages go to the Right
     
-    if (isBrain || isSystemStrategic || channel === 'insight') {
+    const explicitConsole = (metadata && metadata.console) || '';
+    const isRightNode = explicitConsole === 'Right' || explicitConsole === 'right' || explicitConsole === 'center' || channel === 'insight' || isBrain || isSystemStrategic;
+    const isLeftNode = explicitConsole === 'Left' || explicitConsole === 'left' || channel === 'pinky' || (isPinky && !isBrain);
+    
+    if (isRightNode && !isLeftNode) {
         insightConsole.appendChild(msg);
         insightConsole.scrollTop = insightConsole.scrollHeight;
     } else {
@@ -461,7 +492,7 @@ function appendMsg(text, type = 'system-msg', source = 'System', channel = 'chat
 }
 
 // [FEAT-453] Crosstalk Diagnostic Routing
-const DIAGNOSTIC_PREFIX_RE = /^\[(SYSTEM|HEARTBEAT|REMOTE|FOYER|INIT|LOCK|GOVERNOR|LAB|STAGE|PAGER)\]/i;
+const DIAGNOSTIC_PREFIX_RE = /^\[(SYSTEM|HEARTBEAT|REMOTE|FOYER|INIT|LOCK|GOVERNOR|LAB|STAGE|PAGER|CRITIC)\]/i;
 
 function getCrosstalkStatusLine() {
     const bar = document.getElementById('crosstalk-bar');
@@ -861,14 +892,14 @@ async function connect() {
                         } catch(e) { /* not JSON, fall through */ }
                     }
 
-                    // [Story 6] Pretty-print coherence critic JSON
-                    if (sl_low.includes('coherence') || sl_low.includes('critic')) {
+                    // [FEAT-058 / STORY 108.3] Pretty-print entailment audit JSON to Right Console
+                    if (sl_low.includes('coherence') || sl_low.includes('critic') || sl_low.includes('audit')) {
                         try {
                             const critic = JSON.parse(data.brain);
                             if (critic.retort) {
                                 const scoreStars = '★'.repeat(Math.min(critic.score || 0, 5)) + '☆'.repeat(5 - Math.min(critic.score || 0, 5));
                                 const formatted = scoreStars + ' ' + critic.retort;
-                                appendMsg(formatted, 'system-msg', 'Coherence Critic', data.channel || 'chat', false, { msg_id: data.msg_id });
+                                appendMsg(formatted, 'system-msg', 'Entailment Audit', 'insight', false, { msg_id: data.msg_id, console: 'Right' });
                                 return;
                             }
                         } catch(e) { /* not JSON, fall through */ }
@@ -932,31 +963,31 @@ async function connect() {
                     window.renderRagEvalCard(data);
                 } else {
                     const docRef = data.doc_id ? `Ref: ${esc(data.doc_id)}` : `${data.n_results || 3} docs`;
-                    const cardHtml = `
-                        <details class="rag-eval-card" style="margin: 6px 0; border: 1px solid #2a2a3a; background: #0b0c10; border-left: 3px solid #7ec8e3; border-radius: 4px; padding: 5px 9px;">
-                            <summary style="cursor: pointer; color: #7ec8e3; font-size: 0.78rem; font-weight: bold; user-select: none;">
-                                🔍 [RAG] ${docRef} (${data.n_results || 3} docs) <span style="color: #666; font-size: 0.7rem;">[Tier: ${esc(data.tier || '2')}]</span>
-                            </summary>
-                            <div class="rag-eval-body" style="padding: 8px 4px 4px 4px; font-size: 0.75rem; color: #aaa; border-top: 1px solid #1a1a2e; margin-top: 5px;">
-                                <div style="margin-bottom: 5px; color: #e6edf3; font-weight: bold; font-size: 0.76rem;">
-                                    📖 Raw Historical Archive Record:
-                                </div>
-                                <pre style="white-space: pre-wrap; font-family: monospace; background: #050508; padding: 8px; border-radius: 3px; border: 1px solid #1a1a2e; max-height: 250px; overflow-y: auto; color: #88c0d0; font-size: 0.72rem; line-height: 1.45;">${esc(data.full_context || data.snippet || '')}</pre>
-                                <div style="margin-top: 6px; font-size: 0.72rem; color: #8b949e; display: flex; justify-content: space-between; align-items: center;">
-                                    <span><strong>Query:</strong> "${esc(data.query || '')}"</span>
-                                    <span><strong>Doc ID:</strong> <a href="#" onclick="openFile('${esc(data.doc_id || '')}'); return false;" style="color: var(--accent-color); text-decoration: none;">[Ref: ${esc(data.doc_id || 'N/A')}]</a></span>
-                                </div>
-                                ${data.hyde ? `
-                                <details style="margin-top: 6px; padding: 4px 6px; border: 1px dashed #21262d; border-radius: 3px; background: #090d13;">
-                                    <summary style="cursor: pointer; color: #8b949e; font-size: 0.7rem; user-select: none;">
-                                        ▶ Show HyDE Generated Vector Text
-                                    </summary>
-                                    <pre style="white-space: pre-wrap; font-family: monospace; color: #7ee787; font-size: 0.7rem; margin-top: 4px; max-height: 150px; overflow-y: auto;">${esc(data.hyde)}</pre>
-                                </details>` : ''}
-                            </div>
-                        </details>
-                    `;
-                    appendMsg(cardHtml, 'system-msg', 'System');
+                    const cardHtml = `<details class="rag-eval-card" style="margin: 6px 0; border: 1px solid #2a2a3a; background: #0b0c10; border-left: 3px solid #7ec8e3; border-radius: 4px; padding: 5px 9px;">
+<summary style="cursor: pointer; color: #7ec8e3; font-size: 0.78rem; font-weight: bold; user-select: none;">
+🔍 [RAG] ${docRef} (${data.n_results || 3} docs) <span style="color: #666; font-size: 0.7rem;">[Tier: ${esc(data.tier || '2')}]</span>
+</summary>
+<div class="rag-eval-body" style="padding: 8px 4px 4px 4px; font-size: 0.75rem; color: #aaa; border-top: 1px solid #1a1a2e; margin-top: 5px;">
+<div style="margin-bottom: 5px; color: #e6edf3; font-weight: bold; font-size: 0.76rem;">
+📖 Raw Historical Archive Record:
+</div>
+<pre style="white-space: pre-wrap; font-family: monospace; background: #050508; padding: 8px; border-radius: 3px; border: 1px solid #1a1a2e; max-height: 250px; overflow-y: auto; color: #88c0d0; font-size: 0.72rem; line-height: 1.45;">${esc(data.full_context || data.snippet || '')}</pre>
+<div style="margin-top: 6px; font-size: 0.72rem; color: #8b949e; display: flex; justify-content: space-between; align-items: center;">
+<span><strong>Query:</strong> "${esc(data.query || '')}"</span>
+<span><strong>Doc ID:</strong> <a href="#" onclick="openFile('${esc(data.doc_id || '')}'); return false;" style="color: var(--accent-color); text-decoration: none;">[Ref: ${esc(data.doc_id || 'N/A')}]</a></span>
+</div>
+${data.hyde ? `
+<details style="margin-top: 6px; padding: 4px 6px; border: 1px dashed #21262d; border-radius: 3px; background: #090d13;">
+<summary style="cursor: pointer; color: #8b949e; font-size: 0.7rem; user-select: none;">
+▶ Show HyDE Generated Vector Text
+</summary>
+<pre style="white-space: pre-wrap; font-family: monospace; color: #7ee787; font-size: 0.7rem; margin-top: 4px; max-height: 150px; overflow-y: auto;">${esc(data.hyde)}</pre>
+</details>` : ''}
+</div>
+</details>`;
+                    const targetChannel = data.channel || 'chat';
+                    const targetSource = data.brain_source || 'Pinky (Scout)';
+                    appendMsg(cardHtml, 'system-msg', targetSource, targetChannel, false, { is_raw_html: true });
                 }
             } else if (data.type === 'file_content') {
                 activeFilename.textContent = data.filename;
@@ -1026,6 +1057,15 @@ async function connect() {
                             }
                         }
                         targetConsole.scrollTop = targetConsole.scrollHeight;
+                    } else if (data.token) {
+                        // [Story 107.17] Zero-Streaming Paragraph Pop:
+                        // When zero token chunks are streamed, the finalized thought arrives directly on final: true.
+                        appendMsg(data.token, 'brain-msg', source, channel, false, {
+                            interest: data.interest,
+                            msg_id: data.request_id,
+                            hub_pid: data.hub_pid || window._lastHubPid,
+                            console: data.console
+                        });
                     }
                 }
             } else if (data.brain) {
@@ -1040,6 +1080,7 @@ async function connect() {
                     msg_id: data.msg_id, // [FIX] Task 2.4: Bridge the ID
                     hub_pid: data.hub_pid, // [FIX] Task 2.5: Bridge the PID
                     oracle_category: data.oracle_category,
+                    console: data.console,
                     sources: data.sources,
                     is_internal: data.is_internal,
                     topic: data.topic,
