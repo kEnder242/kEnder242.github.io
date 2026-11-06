@@ -1,5 +1,28 @@
 [
   {
+    "id": "SPR-110.0",
+    "title": "\ud83d\udcd1 SPRINT PLAN 110.0: Dual-GPU Heterogeneous 27GB VRAM Engine & Unified Trust Boundary",
+    "origin": {
+      "text": "Full Conversational Roll-Up: Heterogeneous Multi-GPU Layer Splitting (Option A: 27GB Pooled VRAM via `llama.cpp` Vulkan Multi-Device), Zero-Downtime CUDA Fallback Architecture, Format-Agnostic LLM Intake Guardrails, Empirical Litmus Leak Probe (`INS-052`), Retroactive Secrets Scrub & Airlock Push, Balanced Sparse Intake Cadence with Foyer Intercom ",
+      "source": "SPRINT_PLAN_SPR_110_0.md"
+    },
+    "synthesis": {
+      "narrative_context": "Full Conversational Roll-Up: Heterogeneous Multi-GPU Layer Splitting (Option A: 27GB Pooled VRAM via `llama.cpp` Vulkan Multi-Device), Zero-Downtime CUDA Fallback Architecture, Format-Agnostic LLM Intake Guardrails, Empirical Litmus Leak Probe (`INS-052`), Retroactive Secrets Scrub & Airlock Push, Balanced Sparse Intake Cadence with Foyer Intercom Preemption (`FEAT-416`), and Operational Hardware",
+      "lab_anchors": [
+        "Portfolio_Dev/docs/sprints/active/SPRINT_PLAN_SPR_110_0.md"
+      ],
+      "review_notes": "Active sprint in execution."
+    },
+    "metadata": {
+      "tags": [
+        "sprint-110",
+        "sprint-plan"
+      ],
+      "status": "ACTIVE",
+      "bucket_id": "bucket_5_infra"
+    }
+  },
+  {
     "id": "SPR-109.0",
     "title": "\ud83d\udcd1 SPRINT PLAN 109.0: Always-Live Multi-Node Projection Studio & 4-Tier Epistemic Memory Architecture",
     "origin": {

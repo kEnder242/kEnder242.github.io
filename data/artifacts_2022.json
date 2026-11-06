@@ -1,16 +1,427 @@
 [
   {
-    "synopsis": "Document outlines MCTP implementation concerning DMR protocols.",
+    "synopsis": "Concurrent PECI request support for platform telemetry.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "concurrent",
+      "telemetry",
+      "validation"
+    ],
+    "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Intel Power Node Manager external interface specification document.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "MCTP",
-      "DMR",
-      "Protocol",
-      "Systems"
+      "Intel",
+      "Power Node Manager",
+      "External Interface",
+      "Spec",
+      "rev1p4"
     ],
-    "filename": "20190515 - Support Concurrent PECI Requests v3.pptx",
-    "method": "AI",
-    "tags": []
+    "filename": "641273_Intel Intelligent Power Node Manager External Interface Spec_rev1p4.pdf",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Tracks subsystem execution status and telemetry.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "execution",
+      "subsystem",
+      "telemetry"
+    ],
+    "filename": "Jason Aurora Subsystem Execution Tracker.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Personal career trajectory workbook for 2022 silicon validation work.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "silicon-validation",
+      "2022",
+      "career",
+      "xlsx"
+    ],
+    "filename": "Jason Insight April-Nov 2022.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "MIV- Requirements for Automation.xlsx",
+    "synopsis": "Comprehensive requirement matrix for manageability validation automation.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode"
+  },
+  {
+    "synopsis": "Redfish platform telemetry and manageability validation workbook.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "Redfish",
+      "manageability",
+      "telemetry",
+      "validation",
+      "platform"
+    ],
+    "filename": "NM Redfish.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Customer issue tracker for PECI platform validation.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "customer issues",
+      "validation",
+      "platform",
+      "telemetry"
+    ],
+    "filename": "PECI customer issues.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI BIOS boot telemetry trace",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "BIOS",
+      "boot",
+      "telemetry"
+    ],
+    "filename": "PECI_TO_BIOS_BOOT_WW31_2 (1).txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI command specification for platform telemetry",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "commands",
+      "specification"
+    ],
+    "filename": "PECI_commands.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "U-Boot AST2600 BMC boot log with serial noise.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "U-Boot",
+      "AST2600",
+      "BMC",
+      "serial",
+      "boot"
+    ],
+    "filename": "PECI_experiments_WW31.3_1.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Validates OpenBMC sensor severity thresholds via Redfish/KCS IPMI long-run test.",
+    "rank": 4,
+    "type": "Script",
+    "keywords": [
+      "OpenBMC",
+      "SensorSeverityThreshold",
+      "Redfish",
+      "KCS",
+      "IPMI"
+    ],
+    "filename": "SensorSeverityThreshold_OpenBMC_longrun.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI stress test deck for platform validation.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "stress",
+      "validation"
+    ],
+    "filename": "_PECI_stress.pptx",
+    "method": "AI"
+  },
+  {
+    "filename": "_Stressing Redfish PECI.pptx",
+    "synopsis": "Presentation on the methodology for high-load Redfish-to-PECI stress testing.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1-BeZ4N7l9ayq4XKZy-CslC3fOwN1V5Dm"
+  },
+  {
+    "filename": "blackbox.py",
+    "synopsis": "System telemetry recorder for capturing post-mortem diagnostic data.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1DVv5BQXU00Jyh22jZLQc6q8mVJCcKTxk"
+  },
+  {
+    "filename": "gethostcpudata.py",
+    "synopsis": "Utility for extracting host CPU telemetry via sideband interfaces.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1IwlHtWG8jVpIACM55hM63C3vQf6xriYk"
+  },
+  {
+    "filename": "makechart.py",
+    "synopsis": "Telemetry visualization tool converting raw PECI/RAPL logs into analytical charts.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1Rr684PJVPrXmIGe5fmmcR4fSUuyk4NHd"
+  },
+  {
+    "filename": "mctp_wrapper.cpp",
+    "synopsis": "C++ packet handling wrapper for low-latency MCTP communication.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1706VmAyfVN-DlZYT8jhagHUJOChFFl5N"
+  },
+  {
+    "synopsis": "Redfish power telemetry logs baseboard power control domains.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Redfish",
+      "PowerControl",
+      "Baseboard",
+      "Telemetry"
+    ],
+    "filename": "miv_nm_power_limit_accuracy_d0.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Montana power-range telemetry log from 2022-11-06.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "power-range",
+      "Montana",
+      "IPC-API",
+      "PCUDATA"
+    ],
+    "filename": "miv_package_power_range_20221106-230850.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Eagle Stream manageability validation readiness.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "manageability",
+      "Sapphire",
+      "Redfish",
+      "MCTP",
+      "PLDM"
+    ],
+    "filename": "okrs.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PCU RAPL power telemetry dump script.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PCU",
+      "RAPL",
+      "MSR",
+      "Pandas"
+    ],
+    "filename": "pcu_notes.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Python PECI command stubs for platform telemetry.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "Python",
+      "telemetry"
+    ],
+    "filename": "peciXtor.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PecI stressor logs MSR and PECI sweep validation.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "MSR",
+      "validation"
+    ],
+    "filename": "peci_check.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI IPMI host client for BMC telemetry.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "PECI",
+      "IPMI",
+      "BMC",
+      "PCIe"
+    ],
+    "filename": "peci_framework_ipmi_example.py",
+    "method": "AI"
+  },
+  {
+    "filename": "peci_redfish.py",
+    "synopsis": "Tool for bridging and validating PECI commands through Redfish endpoints.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1g482ua4P6Rj-g1NDMCGp3Sq3tuegQFEE"
+  },
+  {
+    "synopsis": "PECI raw command validation logs.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "IPMI",
+      "validation",
+      "telemetry"
+    ],
+    "filename": "peci_validation.csv",
+    "method": "AI"
+  },
+  {
+    "filename": "pecistressor.py",
+    "synopsis": "High-throughput PECI command stress tool, capable of ~5300 commands/sec.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1a95TKnx8eODfM5gdCSv6V07i0ZHL_3F1"
+  },
+  {
+    "synopsis": "Redfish REST telemetry logs platform power control metrics.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Redfish",
+      "Chassis Power",
+      "Telemetry"
+    ],
+    "filename": "pmcapsweep_unit.csv",
+    "method": "AI"
+  },
+  {
+    "filename": "policy.py",
+    "synopsis": "Platform power policy management and validation logic.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1bl8p8sKgvUG3fXVTi2XwHLdzxjprn-eD"
+  },
+  {
+    "synopsis": "Intel IPMI policy automation module for BMC power/correction statistics.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "BMC",
+      "policy",
+      "powerlimit",
+      "correctiontime"
+    ],
+    "filename": "policy_jason.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish REST telemetry logs platform power control and session state.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Redfish",
+      "Chassis",
+      "Power",
+      "Telemetry"
+    ],
+    "filename": "policy_unit.csv",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI command matrix for platform telemetry validation.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PECI",
+      "command matrix",
+      "platform telemetry"
+    ],
+    "filename": "rdiamsr_peci_cmd_matrix.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "sensor_validator.py",
+    "synopsis": "Automated validation of OpenBMC sensor thresholds against platform specs.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "17tWU4uGCSCcvyrU825KXm39uDfMg_FlX"
+  },
+  {
+    "synopsis": "PECI exception telemetry for platform validation.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "exceptions",
+      "telemetry"
+    ],
+    "filename": "spr_peci_exceptions.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Intel IPMI statistics protocol automation for BMC telemetry.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "IPMI",
+      "BMC",
+      "statistics",
+      "Python"
+    ],
+    "filename": "statistics.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish power telemetry logs voltage thresholds.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Redfish",
+      "power",
+      "voltage"
+    ],
+    "filename": "stats_unit.csv",
+    "method": "AI"
   }
 ]

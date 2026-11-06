@@ -1,18 +1,58 @@
 {
   "summary": {
-    "total_runs": 333,
-    "successful_runs": 217,
-    "total_tokens_blended": 18496528,
-    "total_conductor_tokens": 18259874,
-    "total_l3_tokens": 236654,
+    "total_runs": 335,
+    "successful_runs": 219,
+    "total_tokens_blended": 18583996,
+    "total_conductor_tokens": 18345448,
+    "total_l3_tokens": 238548,
     "total_cached_tokens": 9441288,
-    "total_wall_time_minutes": 2572.77,
-    "estimated_cloud_cost_usd": 66.256374,
-    "estimated_local_power_cost_usd": 1.286385,
-    "net_savings_usd": 64.969989,
+    "total_wall_time_minutes": 2575.12,
+    "estimated_cloud_cost_usd": 66.562704,
+    "estimated_local_power_cost_usd": 1.28756,
+    "net_savings_usd": 65.275144,
     "local_offload_ratio_pct": 1.9
   },
   "runs": [
+    {
+      "sprint": "110",
+      "story": "110.12",
+      "title": "Taxonomy Synchronization Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 101.12,
+      "duration_m": 1.69,
+      "tokens": {
+        "conductor": 43538,
+        "l3": 0,
+        "total": 43538,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-05T16:36:20"
+    },
+    {
+      "sprint": "110",
+      "story": "110.13",
+      "title": "Sprint 110 Phase 2 Cloud Oracle Adversarial Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 39.47,
+      "duration_m": 0.66,
+      "tokens": {
+        "conductor": 42036,
+        "l3": 1894,
+        "total": 43930,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-05T09:44:55"
+    },
     {
       "sprint": "109",
       "story": "109.16",

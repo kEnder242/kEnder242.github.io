@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-03T06:01:33.829020",
-  "date": "2026-11-03",
+  "timestamp": "2026-11-05T06:01:59.889545",
+  "date": "2026-11-05",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
-  "overall_status": "PASS",
+  "overall_status": "DEGRADED",
   "total_checks": 8,
-  "passed_checks": 8,
-  "failed_checks": 0,
+  "passed_checks": 7,
+  "failed_checks": 1,
   "checks": [
     {
       "name": "GPU Power Clamp (165W)",
@@ -40,23 +40,25 @@
     {
       "name": "Accountable Subconscious Dreaming",
       "passed": true,
-      "detail": "Fresh: 1.2h, Active Gems: 4",
+      "detail": "Fresh: 1.3h, Active Gems: 4",
       "count": 4
     },
     {
       "name": "Synthetic Morning Round Table Probe",
-      "passed": true,
-      "detail": "Status: PASS, Critic Score: 0.95, Latency: 1.46ms",
-      "critic_score": 0.95
+      "passed": false,
+      "detail": "Status: DEGRADED, Critic Score: 0.00, Latency: 0.99ms",
+      "critic_score": 0.0
     },
     {
       "name": "Cgroup Swap Pressure Monitor",
       "passed": true,
-      "detail": "Swap: 9390MB/9390MB peak (59.7%)",
-      "swap_peak_mb": 9390.33,
-      "swap_current_mb": 9390.33,
-      "swap_utilization_pct": 59.65
+      "detail": "Swap: 3593MB/3593MB peak (22.8%)",
+      "swap_peak_mb": 3592.59,
+      "swap_current_mb": 3592.59,
+      "swap_utilization_pct": 22.82
     }
   ],
-  "discrepancies": []
+  "discrepancies": [
+    "Status: DEGRADED, Critic Score: 0.00, Latency: 0.99ms"
+  ]
 }
