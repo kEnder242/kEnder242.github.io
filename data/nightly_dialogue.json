@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-04 21:54:44",
+    "timestamp": "2026-11-06 02:03:38",
     "topic": "Nightly Accountability Sentinel",
-    "content": "\ud83d\udea8 **[NIGHTLY FORGE ABORT / FAIL]**\n\n**Checks Passed:** 5/6\n**Discrepancies:** LoRA training produced only 0 adapters (expected >= 3).\n\n_Subconscious dreaming and downstream sweeps were halted to protect host and model state._"
+    "content": "\ud83d\udea8 **[NIGHTLY FORGE ABORT / FAIL]**\n\n**Checks Passed:** 4/6\n**Discrepancies:** VRAM was not evicted before LoRA training.; LoRA training produced only 0 adapters (expected >= 3).\n\n_Subconscious dreaming and downstream sweeps were halted to protect host and model state._"
 }

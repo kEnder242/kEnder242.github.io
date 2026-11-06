@@ -953,6 +953,27 @@
     "consecutive_zero_deltas": 0
   },
   {
+    "date": "2022-09-08",
+    "summary": "Montana native module pmdomain3 emitted limit violation events during 2022-09-08 telemetry run.",
+    "evidence": "Line 4342: 2022-09-08 11:42:16.778,ERROR,montana.nativemodules.pmdomain3,Above Limit : 40",
+    "domain": "hardware_debug",
+    "tags": [
+      "pmdomain3",
+      "limit_violation"
+    ],
+    "document_date": "2022-09-08",
+    "event_era": "2022-09-08",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
     "date": "2022-09-30",
     "summary": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
     "evidence": "showsearch method output",
@@ -1027,6 +1048,238 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED"
+  },
+  {
+    "date": "2022-10-05",
+    "summary": "Intel Trace Hub PVT build 4.22.19553.39600 installed via DSDJ artifact repository; J83920-A slot 1 board check confirmed.",
+    "evidence": "curl -H 'Authorization: [REDACTED]' https://dtspedia.intel.com/VISA",
+    "domain": "hardware_debug",
+    "tags": [
+      "PVT",
+      "DSDJ",
+      "install"
+    ],
+    "document_date": "2022-10-05",
+    "event_era": "2022-10-05",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-06",
+    "summary": "North BDF_BAR64 HBM MC_CHN0 register 0x1840 mapped to CrDefeature0_bs, MCHBM, and sprsp_top/mchbmss_mc_reg[4]/mcscheds_bs_crnode/MSG_MCSCHEDS_CSR with P_U_CODE, HOSTIA_UCODE_SAI, and PM_PCS_SAI policy.",
+    "evidence": "North BDF_BAR64 HBM MC_CHN0 0x1840 CrDefeature0_bs MCHBM sprsp_top/mchbmss_mc_reg[4]/mcscheds_bs_crnode/MSG_MCSCHEDS_CSR P_U_CODE HOSTIA_UCODE_SAI PM_PCS_SAI DFX_INTEL_MANUFACTURING_SAI DFX_INTEL_PRODUCTION_SAI UNCORE_PMA_SAOO_MSM_SAI",
+    "domain": "hardware_debug",
+    "tags": [
+      "North BDF_BAR64",
+      "HBM",
+      "MC_CHN0",
+      "0x1840",
+      "CrDefeature0_bs",
+      "MCHBM",
+      "sprsp_top/mchbmss_mc_reg[4]/mcscheds_bs_crnode/MSG_MCSCHEDS_CSR",
+      "P_U_CODE",
+      "HOSTIA_UCODE_SAI",
+      "PM_PCS_SAI",
+      "DFX_INTEL_MANUFACTURING_SAI",
+      "DFX_INTEL_PRODUCTION_SAI",
+      "UNCORE_PMA_SAI"
+    ],
+    "document_date": "2022-10-06",
+    "event_era": "2022-10-06",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-10",
+    "summary": "VISA training session executed on PDG Granite Rapids platform, with configuration telemetry from pred and sv modules.",
+    "evidence": "sv.socket0.uncore.memss.mc0.ch0.crdefeature0_bs.show",
+    "domain": "hardware_debug",
+    "tags": [
+      "VISA",
+      "PDG",
+      "MMIOBDF"
+    ],
+    "document_date": "2022-10-10",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-10",
+    "summary": "Pred configuration telemetry for MMIOBDF and CR Defeature.",
+    "evidence": "pred.rdEndPointConfig_MMIOBDF(0,0,0,0,6,0,0x7e,26,2,0x1840)",
+    "domain": "hardware_debug",
+    "tags": [
+      "MMIOBDF",
+      "CR Defeature"
+    ],
+    "document_date": "2022-10-10",
+    "event_era": "2022-10-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-12",
+    "summary": "BMC validation mechanism executed via Cscripts to validate changes; check_sys_errors used to locate MR configuration usage.",
+    "evidence": "http://goto/cscripts - check_sys_errors - find useages of mr_config?",
+    "domain": "hardware_debug",
+    "tags": [
+      "BMC",
+      "Cscripts",
+      "check_sys_errors"
+    ],
+    "document_date": "2022-10-12",
+    "event_era": "2022-10-12",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-12",
+    "summary": "Mode Register (MR) access pattern: periodic reads of MR15-MR20 and DRAM temperature updates from MR4; CID set via MR14 write for 3DS device.",
+    "evidence": "Usages are for periodically reading the ECS results from MR15 thru MR20 and the DRAM temperature updates from MR4. Access to ECS MRs also requires writing to MR14 to set the CID for 3DS devices.",
+    "domain": "hardware_debug",
+    "tags": [
+      "MR15-MR20",
+      "MR4",
+      "MR14",
+      "CID"
+    ],
+    "document_date": "2022-10-12",
+    "event_era": "2022-10-12",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-12",
+    "summary": "MR read result registers store last Mode Register read values; CHN0 and CHN1 variants use distinct base offsets.",
+    "evidence": "mr_read_result_dq12to0, mr_read_result_dq28to16, mr_read_result_dq44TO32, mr_read_result_dq60to48, mr_read_result_dq68to64 saves information from last Mode Register read",
+    "domain": "hardware_debug",
+    "tags": [
+      "MR_read_result",
+      "dq12to0",
+      "dq28to16"
+    ],
+    "document_date": "2022-10-12",
+    "event_era": "2022-10-12",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-20",
+    "summary": "Downloaded unified_server_ptu.tar.gz from Intel Artifactory to local automation tooling path.",
+    "evidence": "curl -f -u [REDACTED] -X GET https://ubit-artifactory.intel.com/artifactory/list/dcg-dea-srvplat-repos/Automation_Tools/SPR/Linux/unified_server_ptu.tar.gz --output C:\\Automation\\Tools\\SPR\\Linux\\unified_server_ptu.tar.gz",
+    "domain": "hardware_debug",
+    "tags": [
+      "download",
+      "SPR",
+      "Linux",
+      "unified_server_ptu"
+    ],
+    "document_date": "2022-10-20",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-20",
+    "summary": "Retrieved GNR PO X1 Phase 1 tracking workbook from SharePoint.",
+    "evidence": "https://intel.sharepoint.com/sites/bhsplatformpowg/Shared%20Documents/GNR%20AP%20PO/PO%20Plan%20-%20Phase%201/GNR_PO_X1_Phase1.xlsx?web=1",
+    "domain": "hardware_debug",
+    "tags": [
+      "GNR_PO_X1",
+      "Phase1",
+      "tracking",
+      "xlsx"
+    ],
+    "document_date": "2022-10-20",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-10-25",
+    "summary": "PECI stressor test execution completed with pass result on 2022-10-25.",
+    "evidence": "Line 74369: 2022-10-25 17:17:57.379,INFO,montana.nativemodules.pecistressor,(wrEndPointConfig_PCI) Passing: 4580",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "wrEndPointConfig_PCI",
+      "Passing"
+    ],
+    "document_date": "2022-10-25",
+    "event_era": "2022-10-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-11-06",
@@ -1165,6 +1418,70 @@
     "id": "GEM-2085"
   },
   {
+    "date": "2022-11-09",
+    "summary": "Executed PM compute calibration via bs.go with pwrgoodmethod=raritan, ia_core_disable=0xFFFFFFFFFFFFFFE, allmc_mode=True, and fuse_files_s0_io=['pm_io.cfg'].",
+    "evidence": "bs.go(pwrgoodmethod=\"raritan\",pwrgoodxml=r\"C:\\Intel\\raritan.xml\",ia_core_disable=0xFFFFFFFFFFFFFFE,enable_pm=True,allmc_mode=True,pwrgooddelay=120,fuse_files_s0_io=['pm_io.cfg'],fuse_files_s0_compute=['pm_compute.cfg'])",
+    "domain": "hardware_debug",
+    "tags": [
+      "pm-compute",
+      "calibration"
+    ],
+    "document_date": "2022-11-09",
+    "event_era": "2022-11-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-11-15",
+    "summary": "Applied group membership to AMR\\BA XPIV LAB VNC Users on iem2.intel.com.",
+    "evidence": "Apply for this group \"AMR\\BA XPIV LAB VNC Users\" from iem2.intel.com",
+    "domain": "operations",
+    "tags": [
+      "vnc",
+      "group-assignment"
+    ],
+    "document_date": "2022-11-15",
+    "event_era": "2022-11-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-11-16",
+    "summary": "Montana PECI sweep and flood validation runs executed against Araxis lab platform, confirming expected transaction counts and MSR register coverage.",
+    "evidence": "python montana.py -f peci_sweep.tdf -s",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci_sweep",
+      "montana",
+      "MSR"
+    ],
+    "document_date": "2022-11-16",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
     "date": "2022-11-17",
     "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
     "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
@@ -1187,6 +1504,28 @@
     "passes": 1,
     "consecutive_zero_deltas": 0,
     "id": "GEM-d90f"
+  },
+  {
+    "date": "2022-11-30",
+    "summary": "PUNIT platform power info and RAPL limit telemetry read from socket 0 uncore registers.",
+    "evidence": "sv.socket0.uncore.punit.platform_power_info.show",
+    "domain": "hardware_debug",
+    "tags": [
+      "punit",
+      "rapal",
+      "power_info"
+    ],
+    "document_date": "2022-11-30",
+    "event_era": "2022-11-30",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-12-01",
@@ -1253,6 +1592,49 @@
     "refinement_level": 1
   },
   {
+    "date": "2022-12-01",
+    "summary": "PCU data dump and PBM config vector power limit telemetry read via PySV scan compiler on Intel platform.",
+    "evidence": "sv.socket0.pcudata.pbm_resolved_cfg_pkg_pl1_mmiopcs.pbm_cfg_vector_pwr_lim/8.0",
+    "domain": "hardware_debug",
+    "tags": [
+      "pcudata",
+      "pbm_resolved_cfg",
+      "pwm"
+    ],
+    "document_date": "2022-12-01",
+    "event_era": "2022-12-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-12-06",
+    "summary": "Imported Python SV tooling and invoked component manager refresh; executed pcudata multi-list dump via socket0.",
+    "evidence": "import sys; import components; import ipccli; sys.path.insert(0, r'c:\\PythonSV'); sv = components.ComponentManager(); sv.refresh()",
+    "domain": "hardware_debug",
+    "tags": [
+      "pcudata",
+      "component_manager"
+    ],
+    "document_date": "2022-12-06",
+    "event_era": "2022-12-06",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
     "date": "2022-12-13",
     "summary": "New Redfish schema 2.0 mentioned, but primary TODO or research link not explicitly stated.",
     "evidence": "[{'text': 'New NM Redfish schema 2.0 - More compatible with IPMI NM Feature set.', 'source': 'RAW LOGS'}, {'text': 'Need to guide developer to use OOP examples.', 'source': 'RAW LOGS'}]\n\nEvidence 2: [{'text': 'New NM Redfish schema 2.0 - More compatible with IPMI NM Feature set.', 'source': 'RAW LOGS'}, {'text': 'Need to guide developer to use OOP examples.', 'source': 'RAW LOGS'}]",
@@ -1274,6 +1656,92 @@
     "trigger_context": "[FOYER] Request a169154e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a potential issue with Redfish API calls for power management. I'm going to check our telemetry records to see if there's any correlation between those API calls and power-related errors.\",\n  \"search_terms\": \n    \"[Redfish API], [power management], [PLDM], [GetUUID], [GetEID], [communicate [1]]\",\n  \"upvote\": true\n}",
     "passes": 1,
     "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2022-12-13",
+    "summary": "Tiger team collaboration with Articect and developers focused on collecting pCode telemetry, aligning new NM Redfish schema 2.0 with IPMI feature sets, and guiding developers to use OOP examples.",
+    "evidence": "Tiger teams - Collab with Articect & developers",
+    "domain": "hardware_debug",
+    "tags": [
+      "telemetry",
+      "redfish",
+      "pCode"
+    ],
+    "document_date": "2022-12-13",
+    "event_era": "2022-12-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-12-13",
+    "summary": "Negative testing of PECI stressor using pecistressor to validate protocol behavior.",
+    "evidence": "negative tests using pecistressor",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "stressor"
+    ],
+    "document_date": "2022-12-13",
+    "event_era": "2022-12-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-12-13",
+    "summary": "MCTP protocol stimulation via Redfish API and application trace evaluation.",
+    "evidence": "MCTP 1) Stimulate Protocol via Redfish API 2) Application->Trace->Evaluate",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "Redfish"
+    ],
+    "document_date": "2022-12-13",
+    "event_era": "2022-12-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-12-13",
+    "summary": "Global slow limits and RAPL power instrumentation using PBM limits, fast RAPL package total power, and PMeter platform total power.",
+    "evidence": "int(sv.socket0.pcudata.global_slow_limits_pbm_limit_0) int(sv.socket0.pcudata.fast_rapl_pkg_total_power)/2**20 int(sv.socket0.pcudata.pmeter_platform_total_power)/2**17",
+    "domain": "hardware_debug",
+    "tags": [
+      "RAPL",
+      "PBM",
+      "power"
+    ],
+    "document_date": "2022-12-13",
+    "event_era": "2022-12-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-12-21",
@@ -1323,5 +1791,26 @@
       "peci_tool",
       "pcs_incrementation"
     ]
+  },
+  {
+    "date": "2022-12-21",
+    "summary": "Montana native module sweep test failed with error count 9, above limit 7, below limit 2, and margin values 86.632911 above and 4.532803 below.",
+    "evidence": "montana.nativemodules.pmcapsweep Test Failed! Error count : 9, Above Limit : 7, Below Limit : 2, Max Error Margin Above : 86.632911, Max Error Margin Below : 4.532803",
+    "domain": "hardware_debug",
+    "tags": [
+      "montana.nativemodules.pmcapsweep",
+      "validation-failure"
+    ],
+    "document_date": "2022-12-21",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   }
 ]

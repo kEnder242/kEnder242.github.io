@@ -1,26 +1,26 @@
 [
   {
-    "synopsis": "InAWorld document analyzed for silicon validation context.",
+    "synopsis": "Silicon validation telemetry document for silicon validation.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "InAWorld",
-      "docx",
-      "analysis"
+      "silicon validation",
+      "PCIe RAS telemetry",
+      "RAPL power instrumentation"
     ],
     "filename": "AR - InAWorld.docx",
     "method": "AI"
   },
   {
-    "synopsis": "BMC firmware and telemetry automation portfolio",
+    "synopsis": "BMC firmware and telemetry automation portfolio.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "BMC",
       "OpenBMC",
-      "IPMI",
-      "Redfish",
-      "PLDM"
+      "firmware",
+      "telemetry",
+      "PLDM",
+      "MCTP"
     ],
     "filename": "BMC experience bullets.txt",
     "method": "AI"
@@ -35,40 +35,40 @@
     "drive_id": "1sgbcpgviOaqb0p64LfwEHOD7XQnGKM0m"
   },
   {
-    "synopsis": "Reverse-engineered Steam Deck plugin build system and UI injection.",
+    "synopsis": "Reverse-engineered Steam Deck plugin with custom deployment tooling.",
     "rank": 4,
-    "type": "Script",
+    "type": "Document",
     "keywords": [
-      "Embedded/Linux",
-      "React Reverse-Engineering",
       "Steam Deck",
-      "Deployment Automation",
-      "UI Debugging"
+      "Plugin",
+      "Deployment",
+      "Debugging"
     ],
     "filename": "Decky_Trailers.md",
     "method": "AI"
   },
   {
-    "synopsis": "Distributed agentic infrastructure for cross-OS LLM orchestration.",
+    "synopsis": "Distributed agentic infrastructure for cross-OS AI orchestration.",
     "rank": 4,
     "type": "Document",
     "keywords": [
+      "Agentic Infrastructure",
       "MCP",
-      "agentic-orchestration",
-      "cross-platform",
-      "telemetry"
+      "Cross-OS Orchestration",
+      "Latency Optimization"
     ],
     "filename": "HomeLabAI.md",
     "method": "AI"
   },
   {
-    "synopsis": "OpenBMC firmware and telemetry development portfolio.",
+    "synopsis": "OpenBMC firmware and telemetry validation portfolio.",
     "rank": 4,
     "type": "Document",
     "keywords": [
       "OpenBMC",
       "firmware",
-      "telemetry"
+      "telemetry",
+      "validation"
     ],
     "filename": "Jason Allred - OpenBMC Development experience.rtf",
     "method": "AI"
@@ -82,15 +82,13 @@
     "method": "Expert Hardcode"
   },
   {
-    "synopsis": "Reference letter from 2016 validating platform validation work.",
-    "rank": 4,
+    "synopsis": "Reference letter from Jason, dated 2016.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "reference",
-      "2016",
-      "validation",
-      "resume",
-      "portfolio"
+      "Reference",
+      "Letter",
+      "2016"
     ],
     "filename": "Jason_Reference_Letter 2016.doc",
     "method": "AI"
@@ -100,11 +98,11 @@
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "NVIDIA Screening Cheat Sheet",
-      "Senior Platform Telemetry Engineer",
-      "Datacenter scale",
-      "Telemetry diagnosis action",
-      "Firmware OOB observability"
+      "NVIDIA",
+      "Screening",
+      "Cheat_Sheet",
+      "Senior",
+      "Platform"
     ],
     "filename": "NVIDIA_Screening_Cheat_Sheet.txt",
     "method": "AI"
@@ -123,41 +121,41 @@
     "type": "Document",
     "keywords": [
       "power hysteresis",
-      "PnP engineering",
-      "high-fidelity characterization"
+      "silicon validation",
+      "telemetry",
+      "PCIe RAS"
     ],
     "filename": "PnP Engineering Story- High-Fidelity Power Hysteresis Characterization.docx",
     "method": "AI"
   },
   {
-    "synopsis": "War stories from a senior engineer's validation career.",
+    "synopsis": "War stories from 2015 to 2026 by Jason Allred.",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "Silicon Validation",
-      "PCIe RAS",
-      "Telemetry",
-      "DCGM",
-      "RAPL"
+      "war stories",
+      "Jason Allred",
+      "2015-2026"
     ],
     "filename": "War Stories 2015-2026 - Jason Allred.docx",
     "method": "AI"
   },
   {
-    "synopsis": "Senior validation engineer with 19 years of hardware-software integration experience.",
+    "synopsis": "Senior validation engineer with 19 years of experience in firmware, SoC, and datacenter platform debugging.",
     "rank": 4,
     "type": "Document",
     "keywords": [
       "silicon validation",
-      "firmware automation",
-      "SoC debug",
-      "manageability testing"
+      "firmware",
+      "SoC",
+      "datacenter",
+      "validation"
     ],
     "filename": "linkedin.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Session summary and rules of engagement for remote execution automation.",
+    "synopsis": "Session summary and rules of engagement for remote execution.",
     "rank": 2,
     "type": "Document",
     "keywords": [
@@ -170,7 +168,7 @@
     "method": "AI"
   },
   {
-    "synopsis": "HomeLabAI agentic prompt for self-hosted notes and resume automation.",
+    "synopsis": "Home lab AI prompt for self-hosted agentic notes and resume.",
     "rank": 4,
     "type": "Document",
     "keywords": [
@@ -178,7 +176,7 @@
       "self-hosted",
       "resume",
       "notes",
-      "prompt"
+      "linux"
     ],
     "filename": "prompt.txt",
     "method": "AI"
@@ -190,7 +188,7 @@
     "keywords": [
       "secret",
       "Blueberry",
-      "project code"
+      "project"
     ],
     "filename": "secret.txt",
     "method": "AI"

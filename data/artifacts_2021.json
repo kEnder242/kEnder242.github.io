@@ -1,16 +1,390 @@
 [
   {
-    "synopsis": "BMC Proxy Status report for October 2021.",
+    "synopsis": "BMC proxy status slide deck for October 2021.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "BMC",
+      "Proxy Status",
+      "October 2021"
+    ],
+    "filename": "BMC Proxy Status October 2021.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "BMC presentation file for silicon validation platform.",
     "rank": 4,
     "type": "Document",
     "keywords": [
       "BMC",
-      "Proxy",
-      "Status",
-      "Report"
+      "presentation",
+      ".pptx"
     ],
-    "filename": "BMC Proxy Status October 2021.pptx",
+    "filename": "BMC presentation.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Silicon validation platform overview for MCTP infrastructure.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "MCTP",
+      "Infrastructure",
+      "Validation",
+      "Telemetry"
+    ],
+    "filename": "Future of MCTP Infrastructure.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PECI telemetry workbook for silicon validation.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "PECI",
+      "silicon validation",
+      "telemetry",
+      "RAPL",
+      "DCGM"
+    ],
+    "filename": "HSDs_PECI.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Personal portfolio workbook tracking April-November 2020 work items.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "portfolio",
+      "workbook",
+      "personal",
+      "2020"
+    ],
+    "filename": "Jason Insight April-Nov 2020.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "MCTP Debug features.pptx",
+    "synopsis": "Technical deep-dive into MCTP discovery and debugging architecture.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1Zd14tG7tIabR1DOPXmPkrTg33Ds-vdW0"
+  },
+  {
+    "filename": "MIV DTAF integration.pptx",
+    "synopsis": "Architecture for integrating MIV with the Distributed Test Automation Framework.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1jQfX4aK3yvxzN_WxhPDKvv9QSQigAwc6"
+  },
+  {
+    "synopsis": "Redfish validation deck for MIV Ignition platform.",
+    "rank": 3,
+    "type": "Document",
+    "keywords": [
+      "Redfish",
+      "MIV",
+      "Validation",
+      "Ignition",
+      "PPTX"
+    ],
+    "filename": "MIV Ignition-Redfish validation-Backup.pptx",
     "method": "AI",
-    "tags": []
+    "drive_id": "1sLjcbrxM3Bi9HMWmkuQPQRTvmSbVmrFJ"
+  },
+  {
+    "synopsis": "Sprint planning workbook for silicon validation telemetry.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "MIV",
+      "Sprint Planning",
+      "Silicon Validation",
+      "Telemetry",
+      "PCIe RAS"
+    ],
+    "filename": "MIV_Sprint_Planning.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Manageability BKC test cases workbook.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "Manageability",
+      "BKC",
+      "TestCases",
+      "xlsx"
+    ],
+    "filename": "Manageability_BKC_TestCases.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Workbook containing validation telemetry data.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "validation",
+      "telemetry",
+      "xlsx"
+    ],
+    "filename": "Mentee-V3-jallred.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Workbook tracks migration telemetry across silicon validation phases.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "migration",
+      "telemetry",
+      "validation",
+      "silicon",
+      "xlsx"
+    ],
+    "filename": "Migration_TC.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Silicon validation presentation for MCTP bus owner discussion.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "MCTP",
+      "PCIe RAS",
+      "Silicon Validation",
+      "Telemetry",
+      "Platform Diagnostics"
+    ],
+    "filename": "OOBMSM MCTP Bus Owner MRC Discussion WW51_2021.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Defines MCTP bus ownership for OOBMSM validation.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "MCTP",
+      "OOBMSM",
+      "PCIe",
+      "validation"
+    ],
+    "filename": "OOBMSM as MCTP bus owner (2).docx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Workbook containing out-of-band memory management telemetry data.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "OOBMSM",
+      "memory",
+      "telemetry",
+      "validation",
+      "workbook"
+    ],
+    "filename": "OOBMSM_worksheet.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "PECI_Comparison.xlsx",
+    "synopsis": "Side-by-side technical comparison of PECI revisions and command support.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1Kc9DsqzyIYOgTUZ5R7rgVW3rtD-xNl42"
+  },
+  {
+    "synopsis": "BMC Redfish PECI crash dump telemetry script.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "BMC",
+      "Redfish",
+      "PECI",
+      "Crashdump",
+      "Telemetry"
+    ],
+    "filename": "PL1_PL2.bat.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "SIV+MIV sprint review with new focus.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "SIV",
+      "MIV",
+      "sprint review"
+    ],
+    "filename": "SIV+MIV Sprint Review - new focus.docx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Scrum Done right.pptx is a PowerPoint document.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "Scrum Done right.pptx",
+      "PowerPoint",
+      ".pptx"
+    ],
+    "filename": "Scrum Done right.pptx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish PECI power telemetry demo deck.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [
+      "Redfish",
+      "PECI",
+      "power telemetry"
+    ],
+    "filename": "Stressing Redfish PECI_demo.pptx",
+    "method": "AI",
+    "drive_id": "1HUg9mETwcZF-KoFVw3hWlNcPlQ1tM7z5"
+  },
+  {
+    "synopsis": "Debug report for a 2021 silicon validation platform.",
+    "rank": 3,
+    "type": "Document",
+    "keywords": [
+      "debug",
+      "report",
+      "2021",
+      "silicon",
+      "validation"
+    ],
+    "filename": "backup_MIV_Debug_Report_2021.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish crashdump PECI command payload",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "Redfish",
+      "PECI",
+      "Crashdump",
+      "Silicon",
+      "Telemetry"
+    ],
+    "filename": "curl_notes.txt",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Cross-validation telemetry workbook for silicon validation.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "silicon-validation",
+      "telemetry",
+      "validation",
+      "xlsx"
+    ],
+    "filename": "interop_EGS_SPRv1_jallred.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Second-generation interface specification for QCT silicon validation.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PCIe",
+      "RAS",
+      "telemetry"
+    ],
+    "filename": "ipmi-second-gen-interface-spec-v2-rev1-1_qct.pdf",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Redfish-driven PCIe device telemetry script.",
+    "rank": 2,
+    "type": "Script",
+    "keywords": [
+      "pcidevices_unit.py",
+      "RedfishUtil",
+      "PCIe",
+      "telemetry"
+    ],
+    "filename": "pcidevices_unit.py",
+    "method": "AI"
+  },
+  {
+    "synopsis": "PCI command matrix for silicon validation telemetry.",
+    "rank": 2,
+    "type": "Document",
+    "keywords": [
+      "PCI",
+      "validation",
+      "telemetry"
+    ],
+    "filename": "pcs_peci_cmd_matrix.xlsx",
+    "method": "AI"
+  },
+  {
+    "synopsis": "Performance summary workbook for silicon validation telemetry.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "performance_summary.xlsx",
+      "silicon validation",
+      "telemetry",
+      "RAPL",
+      "PCIe"
+    ],
+    "filename": "performance_summary.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "pl1_pl2.txt",
+    "synopsis": "Automated power limit (PL1/PL2) sweep and validation results.",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1yq2UOrpkjA1G5u_SIxxgbq1HfTAVb8KK"
+  },
+  {
+    "synopsis": "IPMI sensor telemetry for platform validation.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "IPMI",
+      "telemetry",
+      "sensor",
+      "validation"
+    ],
+    "filename": "psys_ipmi.xlsx",
+    "method": "AI"
+  },
+  {
+    "filename": "redfish_utils.py",
+    "synopsis": "Abstraction layer for scalable Redfish API interactions (GET/POST/PATCH).",
+    "rank": 4,
+    "type": "Document",
+    "keywords": [],
+    "method": "Expert Hardcode",
+    "drive_id": "1ZSD1HM8ymIDtORFwW5DcImWdUunYqJtw"
+  },
+  {
+    "synopsis": "Used-in spreadsheet tracking validation telemetry.",
+    "rank": 2,
+    "type": "Data",
+    "keywords": [
+      "validation",
+      "telemetry",
+      "xlsx",
+      "silicon",
+      "validation"
+    ],
+    "filename": "used_in.xlsx",
+    "method": "AI"
   }
 ]

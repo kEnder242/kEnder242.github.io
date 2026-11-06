@@ -1,13 +1,14 @@
 [
   {
-    "synopsis": "Telemetry captures Redfish power limit accuracy and domain discovery errors.",
-    "rank": 4,
-    "type": "Data",
+    "synopsis": "Scans directory for CSV files containing specific NetFunction tokens.",
+    "rank": 2,
+    "type": "Script",
     "keywords": [
-      "Redfish",
-      "PowerTelemetry",
-      "ErrorHandling",
-      "SystemMonitoring"
+      "Python",
+      "CSV",
+      "NetFunction",
+      "scan",
+      "validation"
     ],
     "filename": "scan_NetFunction_8-25-2020.py",
     "method": "AI"
