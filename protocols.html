@@ -1983,7 +1983,10 @@ The <code>BKM-080</code> protocol equips conductors with an authoritative psycho
                         <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
                             <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Sprint Append Ledger Protocol (The "Sprint Log")</div>
                             <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
-                                <p><strong>Feature Anchor:</strong> <code>[BKM-081]</code> / <code>[BKM-020]</code> / <code>[BKM-023]</code> / <code>[BKM-077]</code><br />
+                                <p><strong>Objective</strong>: Prevent context fragmentation and multi-session amnesia by mandating that all sprint execution history, chronicles, and milestones are appended directly to the active sprint plan rather than detached files.
+<strong>Trigger / Aliases</strong>: "Sprint Log", "The Sprint Log", "Update the Sprint Log", "Log to the Sprint", "Save to Sprint Log", "Add to Sprint Log", "Roll up Sprint Log", "Sprint Append Ledger", "Active Plan Append Invariant".
+<strong>Description</strong>: Governs the single-file ground-truth lifecycle for active sprints. Whenever the operator or any agent says "sprint log", it strictly and exclusively mandates appending the running chronological execution narrative, friction points, breakthroughs, and verification evidence directly to the active <code>SPRINT_PLAN_SPR_*.md</code> file. Agents are strictly forbidden from creating separate, detached <code>SPRINT_LOG_*.md</code> satellite files.
+<strong>Feature Anchor:</strong> <code>[BKM-081]</code> / <code>[BKM-020]</code> / <code>[BKM-023]</code> / <code>[BKM-077]</code><br />
 <strong>Colloquial Alias:</strong> "The Sprint Log / Active Plan Append Invariant"<br />
 <strong>Domain:</strong> Sprint Documentation, Real-Time Ledgers, Intent Preservation, Unified Artifacts<br />
 <strong>Status:</strong> ACTIVE / MANDATORY  </p>
@@ -2031,7 +2034,7 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 <p>Before writing code or dispatching tools, the Agent MUST embed and check off this paper trail directly in the active sprint plan (<code>SPRINT_PLAN_SPR_*.md</code>):
 - [ ] <strong>1. 5-Sprint Lookback</strong>: Reviewed last 5 sprints for traps, anti-patterns, and sentinels (<code>BKM-082 §2.1</code>).
 - [ ] <strong>2. Mistakes-Avoided Ledger</strong>: Enumerate $\ge$ 3 concrete historical mistakes avoided (<code>BKM-082 §2.4</code>).
-- [ ] <strong>3. Oracle Review</strong>: Adversarial audit completed and appended (<code>BKM-007</code> / <code>BKM-080</code>).
+- [ ] <strong>3. Oracle Review</strong>: Adversarial audit completed and appended via Cloud Synthesizer (<code>BKM-007</code> / <code>BKM-061</code> / <code>delegate.py --mode oracle</code>).
 - [ ] <strong>4. Delegation Justification</strong>: Evaluated <code>LOCAL</code>/<code>CLOUD</code> first; documented rationale for any story assigned to <code>AGY:PRIMARY</code> (<code>Invariant 7</code> / <code>BKM-049</code>).
 - [ ] <strong>5. Risk Assessment</strong>: Evaluated <code>LOCAL</code> tasks for promotion to <code>CLOUD</code> based on blast radius, file scale, or refactoring complexity.
 <em>An agent MUST NOT mark these <code>[x]</code> without citing the corresponding section in the plan. Any unchecked box halts execution.</em></p>
@@ -2240,7 +2243,7 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 </ul>
 <h4>Pillar 4: Adversarial Audit &amp; Physical Silicon Certification (<code>BKM-007</code> + <code>BKM-024</code> + <code>INS-047</code>)</h4>
 <ul>
-<li><strong>Pre-Flight Adversarial Review:</strong> Run Cloud Oracle audit on the sprint plan (<code>ask_oracle</code> / <code>ORACLE_REVIEW_SPRINT_*.md</code>) to challenge assumptions and expose blind spots before code dispatch.</li>
+<li><strong>Pre-Flight Adversarial Review:</strong> Run Cloud Oracle audit on the sprint plan via the delegation harness (<code>python3 HomeLabAI/src/tests/delegate.py --mode oracle --dir Portfolio_Dev</code> $\to$ <code>ORACLE_REVIEW_SPRINT_*.md</code>, governed by <code>[BKM-061]</code>) to challenge assumptions and expose blind spots before code dispatch. (Note: The FastMCP tool <code>clara-dna_ask_oracle</code> under <code>[BKM-080]</code> is strictly an L2 worker-to-Tier-1 clean-kill escalation tool, NOT the pre-flight sprint reviewer).</li>
 <li><strong>Offline Harness Gate:</strong> Unit and replay test suites (<code>FEAT-645</code>) must pass 100% green without mocks masking live behavior.</li>
 <li><strong>LIVE IS KING (<code>BKM-024</code> / <code>INS-047</code>):</strong> Final story and sprint certification mandates testing against the physical running daemon (<code>lab-attendant.service</code> matching Git HEAD) and live reachable silicon endpoints via synthetic probe injection. Sandbox unit tests alone are never sufficient for sprint closure.</li>
 </ul>

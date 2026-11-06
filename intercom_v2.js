@@ -25,6 +25,14 @@ const CONFIG = {
 // [FEAT-638] Whitelist of sources that display in-line feedback buttons
 const VOTEABLE_SOURCES = ['pinky', 'brain', 'thought', 'triage', 'lab'];
 
+// [FEAT-665] Markdown parser configuration: preserve line breaks and GFM formatting
+if (window.marked && typeof window.marked.setOptions === 'function') {
+    window.marked.setOptions({
+        gfm: true,
+        breaks: true
+    });
+}
+
 const PCM_CHUNK_CAP = 32768;
 
 let ws = null;
@@ -882,15 +890,6 @@ async function connect() {
                     
                     const sl_low = (data.brain_source || 'System').toLowerCase();
 
-                    // [Story 6] Pretty-print triage JSON instead of dumping raw
-                    if (sl_low.includes('triage')) {
-                        try {
-                            const triage = JSON.parse(data.brain);
-                            const formatted = 'Routed to ' + triage.addressed_to + ' | Vibe: ' + triage.vibe + ' | Domain: ' + (triage.domain || 'standard');
-                            appendMsg(formatted, 'system-msg', 'Triage', data.channel || 'chat', false, { msg_id: data.msg_id });
-                            return;
-                        } catch(e) { /* not JSON, fall through */ }
-                    }
 
                     // [FEAT-058 / STORY 108.3] Pretty-print entailment audit JSON to Right Console
                     if (sl_low.includes('coherence') || sl_low.includes('critic') || sl_low.includes('audit')) {
@@ -962,10 +961,13 @@ async function connect() {
                 if (window.renderRagEvalCard) {
                     window.renderRagEvalCard(data);
                 } else {
-                    const docRef = data.doc_id ? `Ref: ${esc(data.doc_id)}` : `${data.n_results || 3} docs`;
+                    const docCount = data.n_results !== undefined ? data.n_results : 3;
+                    const docRef = data.n_results === 0
+                        ? `0 docs matched`
+                        : (data.doc_id ? `Ref: ${esc(data.doc_id)} (${docCount} docs)` : `${docCount} docs`);
                     const cardHtml = `<details class="rag-eval-card" style="margin: 6px 0; border: 1px solid #2a2a3a; background: #0b0c10; border-left: 3px solid #7ec8e3; border-radius: 4px; padding: 5px 9px;">
 <summary style="cursor: pointer; color: #7ec8e3; font-size: 0.78rem; font-weight: bold; user-select: none;">
-🔍 [RAG] ${docRef} (${data.n_results || 3} docs) <span style="color: #666; font-size: 0.7rem;">[Tier: ${esc(data.tier || '2')}]</span>
+🔍 [RAG] ${docRef} <span style="color: #666; font-size: 0.7rem;">[Tier: ${esc(data.tier || '2')}]</span>
 </summary>
 <div class="rag-eval-body" style="padding: 8px 4px 4px 4px; font-size: 0.75rem; color: #aaa; border-top: 1px solid #1a1a2e; margin-top: 5px;">
 <div style="margin-bottom: 5px; color: #e6edf3; font-weight: bold; font-size: 0.76rem;">
@@ -977,7 +979,7 @@ async function connect() {
 <span><strong>Doc ID:</strong> <a href="#" onclick="openFile('${esc(data.doc_id || '')}'); return false;" style="color: var(--accent-color); text-decoration: none;">[Ref: ${esc(data.doc_id || 'N/A')}]</a></span>
 </div>
 ${data.hyde ? `
-<details style="margin-top: 6px; padding: 4px 6px; border: 1px dashed #21262d; border-radius: 3px; background: #090d13;">
+<details ${data.n_results === 0 ? 'open' : ''} style="margin-top: 6px; padding: 4px 6px; border: 1px dashed #21262d; border-radius: 3px; background: #090d13;">
 <summary style="cursor: pointer; color: #8b949e; font-size: 0.7rem; user-select: none;">
 ▶ Show HyDE Generated Vector Text
 </summary>
@@ -1034,6 +1036,7 @@ ${data.hyde ? `
                         const bodyEl = streamEl.querySelector('.msg-body');
                         if (bodyEl && window.marked && bodyEl.textContent.trim()) {
                             bodyEl.innerHTML = marked.parse(bodyEl.textContent);
+                            bodyEl.style.whiteSpace = 'normal';
                         }
                         // [FEAT-638 / FEAT-661] Attach in-line hover feedback and interest badge to stream message
                         const turnInt = streamEl.getAttribute('data-interest') || (data.interest !== undefined && data.interest !== null ? data.interest : window._lastTurnInterest);
