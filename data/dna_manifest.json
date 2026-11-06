@@ -40353,33 +40353,6 @@
       }
     },
     {
-      "id": "SPRINT_LOG_SPR_110",
-      "title": "\ud83d\udccb SPRINT LOG 110.0: Heterogeneous Dual-GPU Engine Transition, Option A 27GB Pooled VRAM & Waterfall Drop-In",
-      "origin": {
-        "author": "Federated Lab",
-        "text": "# \ud83d\udccb SPRINT LOG 110.0: Heterogeneous Dual-GPU Engine Transition, Option A 27GB Pooled VRAM & Waterfall Drop-In\n\n**Sprint ID:** `SPR_110_0`  \n**Parent Framework:** `BKM-005` (Design Studio Alignment), `BKM-006` / `BKM-007` (Work Completion Report), `BKM-020` (High-Fidelity Sprint Documentation), `BKM-024` (Live Silicon Verification), `BKM-077` (Conversational Anchor Tracking), `BKM-086` (Paved-Path Sprint Protocol), `BKM-088` (Empirical Pipeline Step Judgment Protocol), `INS-052` (The Litmus Leak ...",
-        "source": "docs/sprints/active/SPRINT_LOG_SPR_110.md",
-        "immutable": true
-      },
-      "synthesis": {
-        "narrative_context": "# \ud83d\udccb SPRINT LOG 110.0: Heterogeneous Dual-GPU Engine Transition, Option A 27GB Pooled VRAM & Waterfall Drop-In\n\n**Sprint ID:** `SPR_110_0`  \n**Parent Framework:** `BKM-005` (Design Studio Alignment), `BKM-006` / `BKM-007` (Work Completion Report), `BKM-020` (High-Fidelity Sprint Documentation), `BKM-024` (Live Silicon Verification), `BKM-077` (Conversational Anchor Tracking), `BKM-086` (Paved-Path Sprint Protocol), `BKM-088` (Empirical Pipeline Step Judgment Protocol), `INS-052` (The Litmus Leak Test & Unified Trust Boundary).  \n**Date:** November 4, 2026  \n**Status:** \ud83d\udfe2 **ALL STORIES & WATERFALL DELIVERABLES COMPLETED & CERTIFIED (100% GREEN)**  \n\n---\n\n## \ud83d\udcca 1. Story & Deliverables Execution Matrix\n\n| Story / Task ID | Owner | Mode | Target / Scope | Status | Evidence / Artifacts |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Story 110.1** | `[AGY:PRIMARY]` | Direct | Prompt Guardrails (`nibble_v2.py`) | **COMPLETED & CERTIFIED** | Scrubbed input buffer, machine boundary prompt block",
-        "lab_anchors": [
-          "docs/sprints/active/SPRINT_LOG_SPR_110.md"
-        ],
-        "review_notes": "Sprint document SPRINT_LOG_SPR_110",
-        "refinement_version": 1
-      },
-      "metadata": {
-        "tags": [
-          "sprint",
-          "planning",
-          "active"
-        ],
-        "status": "ACTIVE",
-        "bucket_id": "bucket_sprints"
-      }
-    },
-    {
       "id": "SPRINT_LOG_SPR_78",
       "title": "\ud83d\udcdc SPRINT LOG 78.0: Composable Writer Studio, Vocality Restoration & 5x5 Certification",
       "origin": {
