@@ -339,6 +339,9 @@
                     }
                     buffer += `    EVIDENCE: ${cleanEv}\n`;
                 }
+                if (e.tags && Array.isArray(e.tags) && e.tags.length > 0) {
+                    buffer += `    TAGS: [${e.tags.join(", ")}]\n`;
+                }
                 if (isDiamond && e.technical_gem) {
                     const cleanGem = e.technical_gem.replace(/\s+/g, " ").trim();
                     buffer += `    GEM: ${cleanGem}\n`;
