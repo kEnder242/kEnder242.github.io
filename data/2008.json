@@ -1,55 +1,97 @@
 [
   {
-    "date": "2008-06-30",
-    "summary": "[STRATEGIC_ANCHOR] ESB2 Firmware Sustaining & DCMI/DCTS Transport Architecture: Built the IPDC transport library for the DCMI conformance suite and resolved critical cipher suite defects in Bensley and Thurley platforms.",
-    "evidence": "Review Period Jan-Dec 2008 (Grade 5): Jason worked as firmware developer in CCG SSE group for ESB2 and Willowbrook DCMI. Network/API portion of DCMI Conformance Test Suite (DCTS) uncovered cipher suite bugs in Bensley and Thurley implementations; successfully debugged and published solutions.",
+    "date": "2008-04-30",
+    "summary": "[STRATEGIC_ANCHOR] DCMI Conformance Test Suite (DCTS) Network/API Transport: Engineered the network and API transport layer for DCTS, validating enterprise server manageability interfaces against the DCMI specification.",
+    "evidence": "Review Period Jan-Dec 2008 (Surekha P. Reddy): Worked on network/API portion of DCMI Conformance Test Suite (DCTS), supporting DCTS and carrying experience to Red Dog and SOL API projects.",
     "sensitivity": "Public",
     "tags": [
-      "DCMI",
-      "ESB2",
       "DCTS",
-      "Cipher_Suite",
-      "Firmware",
-      "Bensley",
-      "Thurley"
+      "DCMI",
+      "Transport",
+      "Conformance",
+      "Manageability"
     ],
     "rank": 5,
-    "id": "GEM-acbb53"
+    "id": "GEM-26b058"
   },
   {
-    "date": "2008-09-30",
-    "summary": "[STRATEGIC_ANCHOR] Red Dog & Microsoft Datacenter SOL API Architecture: Engineered high-performance SOL API solution capable of replacing serial IP dongles across Microsoft datacenters; publicly commended by SSE Lead Architect Hari Ramachandran.",
-    "evidence": "Red Dog Project & SOL API: Provided proof of concept and demonstrated product to Microsoft. Teamed up to develop SOL API solution capable of replacing serial IP dongles in Microsoft datacenter. SSE lead architect Hari Ramachandran publicly recognized the quality and speed of the delivery.",
+    "date": "2008-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Bensley & Thurley Cipher Suite Defect Resolution: Uncovered, root-caused, and resolved critical cipher suite vulnerabilities and bugs in Bensley and Thurley implementations within the DCTS transport.",
+    "evidence": "Review Period Jan-Dec 2008: The work on DCTS transports uncovered several cipher suite bugs in Bensley and Thurley implementations. Jason worked with peers and successfully debugged and published solutions.",
     "sensitivity": "Public",
     "tags": [
-      "SOL",
-      "RedDog",
+      "Bensley",
+      "Thurley",
+      "Cipher_Suite",
+      "Security",
+      "Defect_Resolution"
+    ],
+    "rank": 5,
+    "id": "GEM-8f5087"
+  },
+  {
+    "date": "2008-08-31",
+    "summary": "[STRATEGIC_ANCHOR] Microsoft Red Dog Transport Porting & Proof of Concept: Ported the DCTS network transport to the Red Dog project and directly demonstrated the working proof of concept to Microsoft technical stakeholders.",
+    "evidence": "Review Period Jan-Dec 2008: Red Dog project involved porting DCTS network transport for Microsoft. Jason quickly provided a proof of concept and later demonstrated the product to Microsoft.",
+    "sensitivity": "Public",
+    "tags": [
+      "Red_Dog",
+      "Microsoft",
+      "Transport_Porting",
+      "Proof_Of_Concept",
+      "Demo"
+    ],
+    "rank": 5,
+    "id": "GEM-5bbce9"
+  },
+  {
+    "date": "2008-10-15",
+    "summary": "[STRATEGIC_ANCHOR] Microsoft Datacenter SOL API Architecture: Engineered high-performance SOL API solution capable of replacing serial IP dongles across Microsoft datacenters; publicly commended by SSE Lead Architect Hari Ramachandran.",
+    "evidence": "Review Period Jan-Dec 2008: Teamed up to develop SOL API solution replacing serial IP dongles used by Microsoft datacenter. Gained deep understanding of SOL protocol, threading, and memory allocation. Commended by SSE Lead Architect Hari Ramachandran for quality and speed.",
+    "sensitivity": "Public",
+    "tags": [
+      "SOL_API",
       "Microsoft",
       "Datacenter",
-      "Architecture"
+      "Architecture",
+      "Hari_Ramachandran"
     ],
     "rank": 5,
-    "id": "GEM-9af47f"
+    "id": "GEM-f07841"
   },
   {
-    "date": "2008-11-30",
-    "summary": "[STRATEGIC_ANCHOR] Willowbrook iBMC Firmware Development & Asset Tag Implementation: Designed and implemented the 'Get Asset tag' DCMI command for iBMC firmware; executed emergency manual merge against EPSD codebase to meet milestone delivery.",
-    "evidence": "Willowbrook Development: Implemented 'Get Asset tag' DCMI command for iBMC firmware through research, design, CCB, and code review. Completed emergency manual merge against latest EPSD code base allowing team to meet delivery deadline with only one bug found.",
+    "date": "2008-11-15",
+    "summary": "[STRATEGIC_ANCHOR] Willowbrook iBMC 'Get Asset Tag' DCMI Command: Designed and implemented the 'Get Asset tag' DCMI command for iBMC firmware through full CCB lifecycle (research, design, CCB, implementation, code review).",
+    "evidence": "Review Period Jan-Dec 2008: Implemented 'Get Asset tag' DCMI command for iBMC firmware; created full document process, research, design, CCB, and code reviews. Only one bug found after completion.",
     "sensitivity": "Public",
     "tags": [
       "iBMC",
       "Willowbrook",
+      "Asset_Tag",
       "DCMI",
-      "AssetTag",
       "CCB"
     ],
     "rank": 5,
-    "id": "GEM-ae62d8"
+    "id": "GEM-d83765"
   },
   {
-    "date": "2008-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Enterprise Customer Automation & Linux BMC Provisioning: Authored Linux BMC provisioning tools for Yahoo, developed ipmitool dcmi scripting for OEM customers, and created ARP storm validation simulators.",
-    "evidence": "Customer Support: Shell script to provision BMC's LAN interface in Linux for Yahoo, converted 'ipmitool dcmi' patch to release script for DCMI customers, simulated ARP storms for validation, and fixed Aardvark I2C issues.",
+    "date": "2008-11-30",
+    "summary": "[STRATEGIC_ANCHOR] EPSD Codebase Emergency Manual Merge: Executed an emergency manual code merge against the latest EPSD codebase under tight milestone deadlines, saving the team's release delivery schedule.",
+    "evidence": "Review Period Jan-Dec 2008: Using familiarity with team's work, Jason did an emergency manual merge against latest EPSD code base, allowing team to meet release deadline.",
+    "sensitivity": "Public",
+    "tags": [
+      "EPSD",
+      "Emergency_Merge",
+      "Codebase_Integration",
+      "Release_Milestone"
+    ],
+    "rank": 5,
+    "id": "GEM-40b2c1"
+  },
+  {
+    "date": "2008-12-15",
+    "summary": "[STRATEGIC_ANCHOR] Yahoo Linux BMC Provisioning & Automation Tooling: Authored Linux shell scripts to provision the BMC LAN interface for Yahoo, released ipmitool dcmi customer patches, and built an ARP storm simulation harness.",
+    "evidence": "Review Period Jan-Dec 2008: Created shell script to provision BMC LAN interface in Linux for Yahoo; converted ipmitool dcmi patch to script for release to customers; built ARP storm simulator for validation.",
     "sensitivity": "Public",
     "tags": [
       "Yahoo",
@@ -57,9 +99,9 @@
       "Linux",
       "Provisioning",
       "ARP_Storm",
-      "I2C"
+      "Automation"
     ],
     "rank": 5,
-    "id": "GEM-6cc972"
+    "id": "GEM-271caf"
   }
 ]

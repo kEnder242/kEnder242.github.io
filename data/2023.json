@@ -1,7 +1,7 @@
 [
   {
     "date": "2023-04-24",
-    "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowledge into a 'blackbox recorder' flow that identified and resolved critical power-limiting failures.",
+    "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowledge into a 'blackbox recorder' flow that resolved critical power-limiting failures.",
     "evidence": "Q1/Q4 2023 Insights: Combined PECI, PythonSV, and pCode knowledge into a telemetry module called 'blackbox recorder'; flow of data has been central to debug and understanding of the Power Limiting issue between pCode, SPS FW, and IGN FW that could have escaped to customers.",
     "sensitivity": "Public",
     "tags": [
@@ -14,22 +14,49 @@
       "Power_Limiting"
     ],
     "rank": 5,
-    "id": "GEM-27f562"
+    "id": "GEM-62463e"
+  },
+  {
+    "date": "2023-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automated negative testing across manageability domains.",
+    "evidence": "Q1 2023 Insights: Delivered negative BDF and MSR scan with refactored code for future negative testing.",
+    "sensitivity": "Public",
+    "tags": [
+      "Negative_Testing",
+      "BDF",
+      "MSR",
+      "Scan_Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-8c66f5"
+  },
+  {
+    "date": "2023-08-31",
+    "summary": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases ahead of firmware CCB readiness.",
+    "evidence": "Q3 2023 Insights: Jason developed and delivered MCTP Stress tests for 19 out of 25 planned test cases; ready 2 weeks before firmware CCB made full automation possible.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "Stress_Testing",
+      "CCB",
+      "Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-7d96b9"
   },
   {
     "date": "2023-10-15",
-    "summary": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & SCRUM Governance: Led Sprint Planning & SCRUM for MCTP automation development; hosted informal 'show & tell' coding workshops to elevate team development standards.",
-    "evidence": "Q3/Q4 2023 Insights: Led Oregon MIV Tiger team for MCTP development; Hosted informal 'show & tell' meetings to improve coding skills throughout the team; Lead Sprint Planning & SCRUM; Delivered technical presentation on power limiting debug telemetry.",
+    "summary": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & Show & Tell Workshops: Led Oregon MIV Tiger team for MCTP development and hosted informal 'show & tell' coding workshops to elevate team development standards.",
+    "evidence": "Q3/Q4 2023 Insights: Led Oregon MIV Tiger team for MCTP development; Hosted informal 'show & tell' meetings to improve coding skills throughout the team; Lead Sprint Planning & SCRUM.",
     "sensitivity": "Public",
     "tags": [
       "SCRUM",
       "Tiger_Team",
       "Mentorship",
-      "Show_And_Tell",
-      "Agile_Leadership"
+      "Show_And_Tell"
     ],
     "rank": 5,
-    "id": "GEM-ad4993"
+    "id": "GEM-e803fc"
   },
   {
     "date": "2023-11-13",
@@ -48,7 +75,7 @@
     "id": "GEM-d3414b"
   },
   {
-    "date": "2023-12-31",
+    "date": "2023-12-15",
     "summary": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achieve 100 consecutive error-free cycles each on Granite Rapids (GNR) and Sierra Forest (SRF).",
     "evidence": "Q4 2023 Insights: Driving execution, escalation, debug, and triage of MCTP cycle tests to reach 100 cycles each on GNR; Kickstarted execution and enabling of MCTP tests on SRF-SP; Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise.",
     "sensitivity": "Public",
@@ -61,7 +88,22 @@
       "Triage"
     ],
     "rank": 5,
-    "id": "GEM-03f65b"
+    "id": "GEM-66e054"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-AP X1, and SRF SP X2 platform power-on milestones.",
+    "evidence": "Insights 2023: Ensured successful EMR XCC & GNR-AP X1 PO Exit for Manageability features through code development/reviews; met exit criteria for SRF SP and GNR SP.",
+    "sensitivity": "Public",
+    "tags": [
+      "Power_On",
+      "GNR",
+      "SRF",
+      "EMR",
+      "Exit_Criteria"
+    ],
+    "rank": 5,
+    "id": "GEM-32846e"
   },
   {
     "date": "2023-01-01",

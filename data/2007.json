@@ -1,5 +1,50 @@
 [
   {
+    "date": "2007-06-30",
+    "summary": "[STRATEGIC_ANCHOR] LAN Access Division (LAD) Automation & Lanconf Tooling: Maintained and expanded the Lanconf 1.8 and touch test utilities, automating network configuration and interface validation for server LAN hardware.",
+    "evidence": "Notes 2007 LAD: Developed Lanconf 1.8, iSCSIUtl, and touch automation scripts validating server network adapters and interface configurations.",
+    "sensitivity": "Public",
+    "tags": [
+      "LAD",
+      "Lanconf",
+      "Networking",
+      "iSCSI",
+      "Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-dd6ec7"
+  },
+  {
+    "date": "2007-11-15",
+    "summary": "[STRATEGIC_ANCHOR] Fox Cove Critical Customer Escalation Resolution: Reproduced and characterized a critical customer issue on Fox Cove platforms from day one; engineered network test setup providing groundwork for a confident fix.",
+    "evidence": "Review Period Oct'07-Dec'07 (Arun M. Preetham): Jason helped to reproduce and characterize critical customer issue on Fox Cove, laying groundwork for timely resolution. Jason's expertise in networking came in handy to recreate problem reported by key customer.",
+    "sensitivity": "Public",
+    "tags": [
+      "Fox_Cove",
+      "Customer_Escalation",
+      "Networking",
+      "Debug",
+      "ESB2"
+    ],
+    "rank": 5,
+    "id": "GEM-c65cf8"
+  },
+  {
+    "date": "2007-12-31",
+    "summary": "[STRATEGIC_ANCHOR] IPDC Transport Library for DCMI Conformance: Engineered the transport library for the DCMI conformance suite, collaborating with the Poland development team to define generic transport APIs for applications.",
+    "evidence": "Review Period Oct'07-Dec'07: Assigned to work on transport library for DCMI conformance suite. Collaborated with senior engineers and Poland team to define generic transport APIs; provided high quality working code in short time.",
+    "sensitivity": "Public",
+    "tags": [
+      "IPDC",
+      "DCMI",
+      "Transport_Library",
+      "Poland_Team",
+      "APIs"
+    ],
+    "rank": 5,
+    "id": "GEM-d628a4"
+  },
+  {
     "date": "2007-01-01",
     "summary": "TCL 8.4 loaded",
     "evidence": "ftf tcl 8.4",

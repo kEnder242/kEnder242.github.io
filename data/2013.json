@@ -1,32 +1,89 @@
 [
   {
+    "date": "2013-04-30",
+    "summary": "[STRATEGIC_ANCHOR] Skylake (SKL) VISA Power-On Readiness & IDC Collaboration: Discovered critical bugs in SKL VISA APIs; traveled to Intel Design Center (IDC) to collaborate with design teams and emulation owners, fixing bugs before silicon tape-in.",
+    "evidence": "Review Period Jan-Dec 2013 (Robert Prouty): Ensured VISA ready for SKL power-on. Discovered issues in SKL VISA APIs; traveled to IDC to collaborate with SKL team on solution and support emulation power-on, exiting emulation ready for silicon.",
+    "sensitivity": "Public",
+    "tags": [
+      "Skylake",
+      "IDC",
+      "Power_On",
+      "Emulation",
+      "Silicon_BringUp"
+    ],
+    "rank": 5,
+    "id": "GEM-d2b674"
+  },
+  {
     "date": "2013-06-30",
-    "summary": "[STRATEGIC_ANCHOR] PDT Trace Architecture & Primary VISA GUI Panel Ownership: Owned end-to-end design, development, and support for PDT Trace software and the primary VISA GUI panel, enabling hardware engineers to configure real-time signal capture.",
-    "evidence": "Review Period Jan-Dec 2013 (Grade 5): Software developer on PDT Trace team; new feature design, maintenance, and ownership of the PDT Trace software with focus on the VISA GUI panel.",
+    "summary": "[STRATEGIC_ANCHOR] Pre-Silicon VISA Legacy Channel Emulation Gap Resolution: Identified and resolved a critical pre-silicon test gap with VISA Legacy Channels during Skylake emulation power-on.",
+    "evidence": "Review Period Jan-Dec 2013: Worked with SKL design and emulation owner to fix bugs and cover pre-silicon test gap with VISA Legacy Channel found in emulation.",
+    "sensitivity": "Public",
+    "tags": [
+      "Legacy_Channel",
+      "Emulation_Gap",
+      "Skylake",
+      "Pre_Silicon"
+    ],
+    "rank": 5,
+    "id": "GEM-1f1aa3"
+  },
+  {
+    "date": "2013-08-31",
+    "summary": "[STRATEGIC_ANCHOR] Broadwell (BDW) VISA Enablement & TAP XML Generation: Owned end-to-end TAP register definition generation in XML across platform steppings, ensuring tool compatibility with Broadwell silicon.",
+    "evidence": "Resume 2008-2014 & Review 2013: Owned TAP Register definition generation in XML; refactored code and improved existing software across Broadwell and Skylake programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "TAP_Registers",
+      "XML_Generation",
+      "Broadwell",
+      "Tool_Compatibility"
+    ],
+    "rank": 5,
+    "id": "GEM-6359a9"
+  },
+  {
+    "date": "2013-10-31",
+    "summary": "[STRATEGIC_ANCHOR] Graphics Trace Tool Transition from GTPO to PDT: Guided transition of graphics trace diagnostics from legacy GTPO tools to PDT, unifying graphics validation under a single platform interface.",
+    "evidence": "Resume 2008-2014: Identified tool (GTPO) support gaps and guided transition to PDT for graphics trace debugging across server and client programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "GTPO",
+      "Graphics_Trace",
+      "PDT_Transition",
+      "Tooling"
+    ],
+    "rank": 5,
+    "id": "GEM-adc4d1"
+  },
+  {
+    "date": "2013-12-15",
+    "summary": "[STRATEGIC_ANCHOR] PDT Trace Software & Primary VISA GUI Panel Ownership: Owned end-to-end design, maintenance, and feature development for the PDT Trace software and primary VISA GUI panel in C#.",
+    "evidence": "Review Period Jan-Dec 2013: Software developer on PDT Trace team; new feature design, development, bug fixing, maintenance, and support of PDT Trace software with focus on VISA GUI panel.",
     "sensitivity": "Public",
     "tags": [
       "PDT_Trace",
-      "VISA",
-      "GUI",
-      "Signal_Capture",
-      "C_Sharp"
+      "VISA_GUI",
+      "C_Sharp",
+      "Feature_Design",
+      "Ownership"
     ],
     "rank": 5,
-    "id": "GEM-ce7c64"
+    "id": "GEM-4f080c"
   },
   {
     "date": "2013-12-31",
-    "summary": "[STRATEGIC_ANCHOR] High-Speed Signal Configuration Diagnostics: Architected trace signal capture and mux routing interfaces within PDT Trace, accelerating post-silicon electrical debug for server platforms.",
-    "evidence": "PDT Trace 2013: Maintained quality and high uptime for the VISA signal configuration panel used by silicon debug teams during server power-on.",
+    "summary": "[STRATEGIC_ANCHOR] DP PDT Team Agile SCRUM Master Governance: Served as Scrum Master for the DP PDT team, removing blocking developer impediments, leading daily standups, and facilitating sprint retrospectives.",
+    "evidence": "Review Period Jan-Dec 2013: Scrum master of DP PDT team; facilitated team success, aggressively removed developer impediments, and radiated sprint progress to stakeholders.",
     "sensitivity": "Public",
     "tags": [
-      "Post_Silicon",
-      "Electrical_Debug",
-      "Mux_Routing",
-      "Diagnostics"
+      "SCRUM_Master",
+      "Agile",
+      "Impediment_Removal",
+      "Sprint_Planning"
     ],
     "rank": 5,
-    "id": "GEM-39d82d"
+    "id": "GEM-6a52cd"
   },
   {
     "date": "2013-01-01",

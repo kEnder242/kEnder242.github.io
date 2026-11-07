@@ -1,8 +1,8 @@
 [
   {
-    "date": "2006-06-15",
-    "summary": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture: Executed white-box testing of internal firmware APIs and protocol state machines in C within the GreenHills Development Environment on ARC and ARM processor cores.",
-    "evidence": "Intel Intern: White box testing using GreenHills Development Environment (ARC/ARM) in C for low-level firmware API verification and memory integrity.",
+    "date": "2006-03-15",
+    "summary": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture in GreenHills: Executed white-box testing of internal firmware APIs and protocol state machines in C within the GreenHills Development Environment on ARC and ARM processor cores.",
+    "evidence": "Intel Intern: White box testing using GreenHills Development Environment (ARC/ARM) in C for low-level firmware API verification, memory integrity, and thread initialization.",
     "sensitivity": "Public",
     "tags": [
       "GreenHills",
@@ -12,12 +12,12 @@
       "Embedded_C"
     ],
     "rank": 5,
-    "id": "GEM-cb035e"
+    "id": "GEM-c55853"
   },
   {
-    "date": "2006-10-20",
-    "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Validation & Automation Acceleration: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored automated test harness compressing validation cycle from 1 week to 2 days, earning 'Exceeds Expectations' rating in exit review.",
-    "evidence": "Intel Intern (Hillsboro) Oct. 24, 2005 - Oct. 20, 2006: Validation, Testing, and Automation of IPMI and internal firmware APIs; White box testing using GreenHills Development Environment (ARC/ARM) in C; Low level TCP/IP validation: IPMI over LAN, RMCP+; Automation compressed Eval cycle from 1 week to 2 days; 'Exceeds expectations' in exit Review.",
+    "date": "2006-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Stack Validation: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored automated test harness compressing validation cycle from 1 week to 2 days, earning 'Exceeds Expectations' exit rating.",
+    "evidence": "Intel Intern (Hillsboro) Oct. 24, 2005 - Oct. 20, 2006: Validation, Testing, and Automation of IPMI and internal firmware APIs; Low level TCP/IP validation: IPMI over LAN, RMCP+; Automation compressed Eval cycle from 1 week to 2 days; 'Exceeds expectations' in exit Review.",
     "sensitivity": "Public",
     "tags": [
       "RMCP+",
@@ -28,7 +28,52 @@
       "TCP_IP"
     ],
     "rank": 5,
-    "id": "GEM-86834e"
+    "id": "GEM-133ae4"
+  },
+  {
+    "date": "2006-07-20",
+    "summary": "[STRATEGIC_ANCHOR] Wireshark / Ethereal IPMI 2.0 Protocol Dissector: Authored custom dissector patches for Wireshark/Ethereal to decode RMCP+ and IPMI 2.0 packet structures, simplifying network protocol debug across teams.",
+    "evidence": "Notes 2006: Developed IPMI 2.0 dissector patch for Ethereal/Wireshark; replaced ternary auth offsets with structured RMCPP offsets to decode complex manageability network packets.",
+    "sensitivity": "Public",
+    "tags": [
+      "Wireshark",
+      "Ethereal",
+      "Packet_Dissector",
+      "RMCP+",
+      "Networking"
+    ],
+    "rank": 5,
+    "id": "GEM-79a648"
+  },
+  {
+    "date": "2006-09-19",
+    "summary": "[STRATEGIC_ANCHOR] Session-Less Command Functional Validation Suite: Built automated test harness validating register handling for Get System GUID, Get Channel Authentication, Session Challenge, and Cypher Suites across Bridgeport platforms.",
+    "evidence": "Notes 2006: Session-less Commands Functional test on Bridgeport: automated testing for Get System GUID, Get Channel Authentication Capabilities, Session Challenge, PET Acknowledge, and Get Channel Cypher Suites.",
+    "sensitivity": "Public",
+    "tags": [
+      "Bridgeport",
+      "Sessionless",
+      "GUID",
+      "Cypher_Suites",
+      "Conformance"
+    ],
+    "rank": 5,
+    "id": "GEM-4d110b"
+  },
+  {
+    "date": "2006-10-20",
+    "summary": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, danger-level recovery procedures, and batch test execution.",
+    "evidence": "Notes 2006: Engineered MAP architecture in TCL with automated target discovery, runlevel checks, and recovery procedures across EPSD server platforms.",
+    "sensitivity": "Public",
+    "tags": [
+      "MAP",
+      "TCL",
+      "Test_Framework",
+      "Recovery",
+      "Batch_Execution"
+    ],
+    "rank": 5,
+    "id": "GEM-500e21"
   },
   {
     "date": "2006-01-01",

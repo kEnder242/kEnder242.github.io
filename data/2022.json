@@ -16,7 +16,7 @@
   },
   {
     "date": "2022-06-30",
-    "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication & BMC Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a validation engine' via MCTP APIs across server platforms.",
+    "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a validation engine' via MCTP APIs across server platforms.",
     "evidence": "3/30/2022 Insights: Delivered PLDM NIC communication using 'BMC as a validation engine' MCTP API; Guided Aurora Blade manual content execution (BMC, NM OpenBMC) for Phase 1 status.",
     "sensitivity": "Public",
     "tags": [
@@ -27,27 +27,40 @@
       "OpenBMC"
     ],
     "rank": 5,
-    "id": "GEM-527834"
+    "id": "GEM-9d30d5"
   },
   {
     "date": "2022-09-30",
-    "summary": "[STRATEGIC_ANCHOR] EMR Power-On Manageability Automation & DTAF Path Merge: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines, successfully merging Montana path into DTAF.",
+    "summary": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines.",
     "evidence": "Insights 2022: Recognized for support for PECI code during EMR PO to enable Montana code for EMR PO; enabled Manageability to run automated at EMR PO; merged Montana path into DTAF.",
     "sensitivity": "Public",
     "tags": [
       "EMR",
       "PECI",
       "Power_On",
-      "DTAF",
       "Montana",
       "SPR"
     ],
     "rank": 5,
-    "id": "GEM-b53209"
+    "id": "GEM-e03f7d"
+  },
+  {
+    "date": "2022-10-31",
+    "summary": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF automation harness, eliminating divergent test paths.",
+    "evidence": "Insights 2022: Merged Montana path into DTAF, establishing standard execution across server manageability programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "Montana",
+      "Codebase_Unification",
+      "Harness"
+    ],
+    "rank": 5,
+    "id": "GEM-466f04"
   },
   {
     "date": "2022-12-31",
-    "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints meeting Eagle Stream CCB requirements.",
+    "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and ECS OOB registers meeting Eagle Stream CCB requirements.",
     "evidence": "Insights 2022: Automated PECI write tests for all available CSR endpoints (2k), also meeting needs of EGS CCB; Developed test for ECS OOB register access.",
     "sensitivity": "Public",
     "tags": [
@@ -58,7 +71,7 @@
       "Endpoints"
     ],
     "rank": 5,
-    "id": "GEM-70a645"
+    "id": "GEM-baab0b"
   },
   {
     "date": "2022-00-00",

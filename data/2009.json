@@ -1,47 +1,91 @@
 [
   {
     "date": "2009-04-30",
-    "summary": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Validation Tool: Authored the SOL performance benchmarking tool reusing core libraries to accelerate manageability performance validation on Willowbrook.",
-    "evidence": "Review Period Jan-Dec 2009 (Grade 5): Jason delivered the Serial over LAN (SOL) performance tool in partnership with team member, enabling SSE to validate and quantify SOL manageability performance on Willowbrook.",
+    "summary": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Benchmarking Tool: Delivered the SOL performance tool reusing core SOL libraries to validate and quantify manageability feature performance on Willowbrook.",
+    "evidence": "Review Period Jan-Dec 2009 (Surekha P. Reddy): Jason delivered Serial over LAN performance tool in partnership with team member, enabling SSE to validate and quantify SOL manageability feature performance on Willowbrook.",
     "sensitivity": "Public",
     "tags": [
       "SOL",
       "Willowbrook",
       "Benchmarking",
-      "Manageability",
-      "Validation"
+      "Performance_Validation",
+      "Tooling"
     ],
     "rank": 5,
-    "id": "GEM-9ea396"
+    "id": "GEM-5e21e0"
   },
   {
-    "date": "2009-08-31",
+    "date": "2009-07-31",
     "summary": "[STRATEGIC_ANCHOR] Multi-Session DCTS Conformance Suite Delivery: Added multi-session network support to DCTS conformance libraries, enabling Intel to release DCTS as part of the official DCMI 1.0 errata update.",
-    "evidence": "DCTS: Jason added multi session support to DCTS conformance test suite libraries, enabling Intel to release DCTS with multi session support as part of DCMI 1.0 errata update release.",
+    "evidence": "Review Period Jan-Dec 2009: Added multi session support to DCTS conformance test suite libraries, helping Intel release DCTS with multi session support as part of DCMI 1.0 errata update release.",
     "sensitivity": "Public",
     "tags": [
       "DCTS",
       "DCMI",
       "Multi_Session",
-      "Conformance",
-      "Errata"
+      "Errata",
+      "Conformance"
     ],
     "rank": 5,
-    "id": "GEM-f198fc"
+    "id": "GEM-a32c70"
   },
   {
-    "date": "2009-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Westerlee Architecture & DCMI over HECI (DoH) Firmware: Designed and implemented the DCMI over HECI (DoH) module using ME Kernel HECI driver; counter-proposal for simplified SOL packet handling adopted as team standard.",
-    "evidence": "Westerlee: Counter-proposal to original SOL design was adopted for simplicity. Ramped on ME Kernel HECI driver and completed implementation of DoH module, providing developer and validation teams an interface to talk to ME Westerlee DM firmware.",
+    "date": "2009-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Validation Smoke Test Suite Pilot for Willowbrook: Piloted and established the validation smoke test suite for developer testing, enabling firmware developers to verify builds before formal check-in.",
+    "evidence": "Review Period Jan-Dec 2009: Piloted and used validation smoke test suite for Willowbrook developer testing, enabling firmware development team to smoke test code after proceeding into the build.",
+    "sensitivity": "Public",
+    "tags": [
+      "Smoke_Test",
+      "CI",
+      "Developer_Testing",
+      "Willowbrook"
+    ],
+    "rank": 5,
+    "id": "GEM-9aba5a"
+  },
+  {
+    "date": "2009-11-15",
+    "summary": "[STRATEGIC_ANCHOR] Westerlee FAS Architecture & Packet-Reuse Counter-Proposal: Provided critical architecture input during Westerlee FAS design sessions; counter-proposal for simplified SOL packet handling was adopted as the core stack concept.",
+    "evidence": "Review Period Jan-Dec 2009: Participated in early Westerlee FAS brainstorming; pointed out weakness of reused packets in command handler, which became a core concept for IPMI stack design. Counter-proposal to original SOL design was adopted for simplicity.",
     "sensitivity": "Public",
     "tags": [
       "Westerlee",
+      "FAS",
+      "IPMI_Stack",
+      "Architecture",
+      "SOL_Design"
+    ],
+    "rank": 5,
+    "id": "GEM-5dfa0d"
+  },
+  {
+    "date": "2009-12-15",
+    "summary": "[STRATEGIC_ANCHOR] DCMI over HECI (DoH) Low-Level Design & Implementation: Ramped on the ME Kernel HECI driver and authored the low-level design and firmware implementation of DCMI over HECI (DoH), bridging ME Westerlee DM firmware.",
+    "evidence": "Review Period Jan-Dec 2009: Ramped up on ME Kernel HECI driver and worked with team to finalize low level design of DCMI over HECI (DoH); completed implementation of DoH module providing developer and validation teams interface to ME Westerlee DM firmware.",
+    "sensitivity": "Public",
+    "tags": [
       "DoH",
       "HECI",
       "ME_Kernel",
-      "Low_Level_Design"
+      "Low_Level_Design",
+      "Firmware"
     ],
     "rank": 5,
-    "id": "GEM-1256b2"
+    "id": "GEM-be37b3"
+  },
+  {
+    "date": "2009-12-31",
+    "summary": "[STRATEGIC_ANCHOR] System Event Log (SEL) & Platform Configuration Control (PCC) LLDs: Delivered low-level designs for SEL and PCC components, identifying and driving resolution of IPMI packet length and database API gaps.",
+    "evidence": "Review Period Jan-Dec 2009: Delivered low level designs for SEL and PCC components; identified gaps with IPMI message packet length and platform database API usage, driving design owners to address gaps.",
+    "sensitivity": "Public",
+    "tags": [
+      "SEL",
+      "PCC",
+      "Low_Level_Design",
+      "Database_APIs",
+      "IPMI"
+    ],
+    "rank": 5,
+    "id": "GEM-e93bb1"
   }
 ]

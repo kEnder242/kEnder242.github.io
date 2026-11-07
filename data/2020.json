@@ -1,23 +1,21 @@
 [
   {
     "date": "2020-05-11",
-    "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establishing automated power-limiting and thermal telemetry test coverage.",
-    "evidence": "5/11/2020 & 11/13/2020 Insights: Data mined logs to provide key insights for OpenNM_IPMI requirements across teams; mapping IPMI commands to NM Redfish APIs and power limiting test cases.",
+    "summary": "[STRATEGIC_ANCHOR] Manageability Content Strategy & 94 HSD Triage Milestone: Established MIV domain content strategy, framework hotfix pipeline, and drove 94 manageability HSD defect tickets to completion.",
+    "evidence": "5/11/2020 Insights: Established content strategy for MIV domain and framework hot fixes, development, and debug; Delivered comprehensive training documentation for execution teams; Drove 94 MIV HSDs to completion.",
     "sensitivity": "Public",
     "tags": [
-      "Redfish",
-      "NodeManager",
-      "OpenNM",
-      "IPMI",
-      "Power_Limiting",
-      "Telemetry"
+      "MIV",
+      "HSD_Triage",
+      "Defect_Resolution",
+      "Hotfix_Pipeline"
     ],
     "rank": 5,
-    "id": "GEM-11081e"
+    "id": "GEM-163401"
   },
   {
     "date": "2020-08-31",
-    "summary": "[STRATEGIC_ANCHOR] Ignition-IPMI Architecture & Requirements Mining: Designed Ignition support model leveraging existing test content and mined platform logs to establish technical requirements for SPS/Ignition PMs.",
+    "summary": "[STRATEGIC_ANCHOR] Ignition-IPMI Support Model & Cross-Team Log Mining: Designed Ignition support model leveraging existing test content and mined platform logs to establish technical requirements for SPS/Ignition PMs.",
     "evidence": "11/13/2020 Insights: Designed Ignition support model to leverage existing test content; Data mined logs to provide key insights for OpenNM_IPMI requirements across teams; MIV 1.0 readiness by PO Exit.",
     "sensitivity": "Public",
     "tags": [
@@ -28,36 +26,50 @@
       "Architecture"
     ],
     "rank": 5,
-    "id": "GEM-4bac2e"
+    "id": "GEM-dcc225"
   },
   {
-    "date": "2020-11-13",
-    "summary": "[STRATEGIC_ANCHOR] Manageability Framework Hotfixes & 94 HSD Triage Milestone: Established MIV content strategy, framework hotfix pipeline, and drove 94 manageability HSD defect tickets to completion.",
-    "evidence": "5/11/2020 Insights: Established content strategy for MIV domain and framework hot fixes, development, and debug; Delivered comprehensive training documentation for execution teams; Drove 94 MIV HSDs to completion.",
+    "date": "2020-10-15",
+    "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establishing automated power-limiting and thermal telemetry test coverage.",
+    "evidence": "11/13/2020 Insights: Mapped IPMI commands to NM Redfish APIs and power limiting test cases; subject matter expert in NM-OpenBMC and DTAF.",
     "sensitivity": "Public",
     "tags": [
-      "HSD_Triage",
-      "MIV",
-      "Hotfix_Pipeline",
-      "Defect_Resolution"
+      "Redfish",
+      "NodeManager",
+      "OpenNM",
+      "IPMI",
+      "Telemetry"
     ],
     "rank": 5,
-    "id": "GEM-7992ca"
+    "id": "GEM-4284bb"
   },
   {
-    "date": "2020-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Inclusive Engineering Leadership & DTAF Integration: Bootstrapped team-wide SCRUM planning, delivered DTAF wrapper for Montana, and drove daily peer programming and 'Show & Tell' grassroots cross-training.",
-    "evidence": "11/13/2020 Insights: Delivered DTAF wrapper & provided expert guidance for Command center integration; Show & Tell grassroots movement to foster cooperation; daily peer programming and inclusive leadership through regular code reviews.",
+    "date": "2020-11-30",
+    "summary": "[STRATEGIC_ANCHOR] DTAF Wrapper for Montana & Command Center Integration: Delivered DTAF integration wrapper for Montana and provided expert guidance enabling Command Center test execution.",
+    "evidence": "11/13/2020 Insights: Delivered DTAF wrapper & provided expert guidance for Command center integration; developed DTAF developer quick start guide with domain experts.",
     "sensitivity": "Public",
     "tags": [
       "DTAF",
+      "Montana",
+      "Command_Center",
+      "Integration"
+    ],
+    "rank": 5,
+    "id": "GEM-c04484"
+  },
+  {
+    "date": "2020-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Grassroots Mentorship, SCRUM Planning & Code Review Culture: Bootstrapped team-wide SCRUM planning, drove daily peer programming, and founded 'Show & Tell' grassroots cross-training sessions.",
+    "evidence": "11/13/2020 Insights: Show & tell grassroots movement to foster cooperation and teamwork; daily peer programming and inclusive leadership through regular code reviews.",
+    "sensitivity": "Public",
+    "tags": [
       "SCRUM",
       "Mentorship",
       "Peer_Programming",
       "Show_And_Tell"
     ],
     "rank": 5,
-    "id": "GEM-b99b2b"
+    "id": "GEM-bfd0dd"
   },
   {
     "date": "2020-01-01",

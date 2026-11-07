@@ -1,38 +1,51 @@
 [
   {
     "date": "2019-06-30",
-    "summary": "[STRATEGIC_ANCHOR] Platformization of CLX PECI/RAPL Registers & Power Limiting: Engineered register abstraction for Cascade Lake (CLX) PECI/RAPL registers and implemented Setcap automated test cases for complex power limiting validation.",
-    "evidence": "11/18/2019 Insights: Platformization of CLX peci/rapl registers, Setcap code changes for power limiting tests (complex).",
+    "summary": "[STRATEGIC_ANCHOR] Cascade Lake (CLX) PECI/RAPL Registers Platformization: Engineered register abstraction for Cascade Lake PECI and RAPL registers, standardizing telemetry access across manageability stacks.",
+    "evidence": "11/18/2019 Insights: Platformization of CLX peci/rapl registers, establishing unified access across manageability tools.",
     "sensitivity": "Public",
     "tags": [
       "CLX",
       "PECI",
       "RAPL",
-      "Setcap",
-      "Power_Limiting",
-      "Platformization"
+      "Platformization",
+      "Telemetry"
     ],
     "rank": 5,
-    "id": "GEM-9d486e"
+    "id": "GEM-3a6ec2"
+  },
+  {
+    "date": "2019-08-31",
+    "summary": "[STRATEGIC_ANCHOR] Setcap Automated Power Limiting Test Architecture: Authored complex Setcap code changes enabling automated validation of power-limiting algorithms and threshold enforcement.",
+    "evidence": "11/18/2019 Insights: Setcap code changes for power limiting tests (complex), enabling automated validation of power limiting.",
+    "sensitivity": "Public",
+    "tags": [
+      "Setcap",
+      "Power_Limiting",
+      "Automation",
+      "Validation"
+    ],
+    "rank": 5,
+    "id": "GEM-691daa"
   },
   {
     "date": "2019-09-30",
-    "summary": "[STRATEGIC_ANCHOR] MIV Content 1.0 Platform Readiness: Drove manageability content 1.0 delivery across Ice Lake (ICX ~41 test cases) and Cooper City (CPX 13 test cases), establishing automated regression hooks.",
-    "evidence": "11/18/2019 Insights: Content 1.0 Readiness <ICX ~41, CPX 13>; Cleanup recovery and automation hooks using automation POC.",
+    "summary": "[STRATEGIC_ANCHOR] MIV Content 1.0 Platform Readiness (ICX & CPX): Drove manageability content 1.0 delivery across Ice Lake (ICX ~41 test cases) and Cooper City (CPX 13 test cases).",
+    "evidence": "11/18/2019 Insights: Content 1.0 Readiness <ICX ~41, CPX 13>; cleanup recovery and automation hooks using automation POC.",
     "sensitivity": "Public",
     "tags": [
       "MIV",
       "ICX",
       "CPX",
       "Content_Readiness",
-      "Regression_Automation"
+      "Test_Coverage"
     ],
     "rank": 5,
-    "id": "GEM-2ad202"
+    "id": "GEM-65f1ef"
   },
   {
     "date": "2019-11-18",
-    "summary": "[STRATEGIC_ANCHOR] PythonSV OEM Co-Validation Tool Architecture: Leveraged PythonSV and Ice Lake Power-On experience to author validation tools enabling co-validation teams to verify OEM features on Intel reference platforms.",
+    "summary": "[STRATEGIC_ANCHOR] PythonSV OEM Feature Co-Validation Tool: Leveraged PythonSV and Ice Lake Power-On experience to author validation tools enabling co-validation teams to verify OEM features on Intel reference platforms.",
     "evidence": "8/23/2019 Insights: Leveraged PythonSV and ICX PO experience to create a tool that enabled Co-validation team to validate OEM features on reference platforms.",
     "sensitivity": "Public",
     "tags": [
@@ -43,22 +56,22 @@
       "Power_On"
     ],
     "rank": 5,
-    "id": "GEM-9481db"
+    "id": "GEM-d19662"
   },
   {
-    "date": "2019-12-31",
-    "summary": "[STRATEGIC_ANCHOR] IPMI Protocol Triage & Multi-Product Fix: Led cross-disciplinary investigation root-causing IPMItool ME message packet handling failures, delivering customer-acceptable fix spanning multiple product families.",
-    "evidence": "8/23/2019 Insights: Used IPMI expert knowledge to root-cause and provide fix for issues seen with IPMItool when handling commands to ME ('N 5' workaround spanning several product families). Commended by management and peers.",
+    "date": "2019-12-15",
+    "summary": "[STRATEGIC_ANCHOR] IPMI ME Command Protocol Root-Cause & Customer Workaround: Root-caused and resolved critical packet handling failures in IPMItool when issuing commands to ME ('N 5' workaround spanning multiple product families).",
+    "evidence": "8/23/2019 Insights: Used IPMI expert knowledge to root-cause and provide fix for issues seen with IPMItool when handling commands to ME ('N 5' workaround spanning several products and families). Commended by management.",
     "sensitivity": "Public",
     "tags": [
       "IPMI",
       "IPMItool",
       "ME_Commands",
-      "Protocol_Debug",
-      "Root_Cause"
+      "Root_Cause",
+      "Protocol_Debug"
     ],
     "rank": 5,
-    "id": "GEM-ac8c67"
+    "id": "GEM-d660ea"
   },
   {
     "date": "2019-01-01",

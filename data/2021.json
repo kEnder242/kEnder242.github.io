@@ -1,7 +1,7 @@
 [
   {
     "date": "2021-06-30",
-    "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture & Platform Validation: Led manageability architecture and validation for Eagle Stream / Sapphire Rapids on Archer City (AC0195), integrating PythonSV namednodes, status_scope, and RASP cloud lab systems.",
+    "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture: Led manageability architecture and validation for Eagle Stream / Sapphire Rapids on Archer City (AC0195), integrating PythonSV namednodes and status_scope analyzers.",
     "evidence": "2021 Technical Notes & Logs: Maintained AC0195 reference platform, executed status_scope namednodes analyzers, resolved IFU MCA errors on CentOS boot, and maintained lab infrastructure via RASP Cloud.",
     "sensitivity": "Public",
     "tags": [
@@ -13,26 +13,40 @@
       "RASP"
     ],
     "rank": 5,
-    "id": "GEM-3f103b"
+    "id": "GEM-13fa07"
   },
   {
-    "date": "2021-09-30",
-    "summary": "[STRATEGIC_ANCHOR] Future of MCTP Infrastructure & OOBMSM Architecture: Authored and presented 'Future of MCTP Infrastructure' and architected 'OOBMSM as MCTP Bus Owner' for server management bus arbitration.",
-    "evidence": "2021 Technical Collateral: Future of MCTP Infrastructure.pptx (Dec 2021), OOBMSM as MCTP bus owner.docx, and OOBMSM MCTP Bus Owner MRC Discussion WW51_2021.pptx.",
+    "date": "2021-08-31",
+    "summary": "[STRATEGIC_ANCHOR] Future of MCTP Infrastructure & Architecture Blueprint: Authored and presented 'Future of MCTP Infrastructure' technical blueprint, defining out-of-band management topology for next-generation platforms.",
+    "evidence": "2021 Collateral: Future of MCTP Infrastructure.pptx (Dec 2021), MCTP Debug features.pptx, defining server management topology.",
     "sensitivity": "Public",
     "tags": [
       "MCTP",
-      "OOBMSM",
-      "Bus_Owner",
       "Architecture",
+      "Blueprint",
       "Infrastructure"
     ],
     "rank": 5,
-    "id": "GEM-9c73c8"
+    "id": "GEM-27ef07"
   },
   {
-    "date": "2021-11-30",
-    "summary": "[STRATEGIC_ANCHOR] Redfish-PECI Stress Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensive PECI command matrix across PCS/PECI registers.",
+    "date": "2021-09-30",
+    "summary": "[STRATEGIC_ANCHOR] OOBMSM as MCTP Bus Owner Architecture: Architected OOBMSM as MCTP Bus Owner and presented arbitration models at MRC forums for multi-endpoint server manageability.",
+    "evidence": "2021 Technical Artifacts: OOBMSM as MCTP bus owner.docx, OOBMSM MCTP Bus Owner MRC Discussion WW51_2021.pptx.",
+    "sensitivity": "Public",
+    "tags": [
+      "OOBMSM",
+      "MCTP",
+      "Bus_Owner",
+      "MRC",
+      "Arbitration"
+    ],
+    "rank": 5,
+    "id": "GEM-4889ae"
+  },
+  {
+    "date": "2021-10-31",
+    "summary": "[STRATEGIC_ANCHOR] Stressing Redfish PECI Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensive PECI command matrix across PCS/PECI registers.",
     "evidence": "2021 Technical Artifacts: Stressing Redfish PECI_demo.pptx, pcs_peci_cmd_matrix.xlsx, and automated Redfish REST validation utilities.",
     "sensitivity": "Public",
     "tags": [
@@ -43,22 +57,21 @@
       "Command_Matrix"
     ],
     "rank": 5,
-    "id": "GEM-8bb500"
+    "id": "GEM-8db257"
   },
   {
     "date": "2021-12-31",
-    "summary": "[STRATEGIC_ANCHOR] MIV Sprint Planning & Agile SCRUM Governance: Led daily standups, estimation, and sprint retrospectives for Manageability In-Target Validation (MIV), driving platform defect scrubs.",
-    "evidence": "2021 Sprint Documentation: MIV_Sprint_Planning.xlsx, SIV+MIV Sprint Review - new focus.docx, and HSD scrub closing 27 issues under manageability domain.",
+    "summary": "[STRATEGIC_ANCHOR] MIV Sprint Planning & Defect Scrub Leadership: Led daily standups, estimation, and sprint retrospectives for MIV, closing 27 critical defect tickets under the manageability domain.",
+    "evidence": "2021 Sprint Documentation: MIV_Sprint_Planning.xlsx, SIV+MIV Sprint Review - new focus.docx, closing 27 issues under manageability domain.",
     "sensitivity": "Public",
     "tags": [
       "SCRUM",
       "Sprint_Planning",
       "Agile",
-      "Defect_Scrub",
-      "Leadership"
+      "Defect_Scrub"
     ],
     "rank": 5,
-    "id": "GEM-0e02a9"
+    "id": "GEM-c2f077"
   },
   {
     "date": "2021-01-01",

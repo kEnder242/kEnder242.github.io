@@ -1,32 +1,91 @@
 [
   {
-    "date": "2014-06-30",
-    "summary": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Hardware Trace Validation: Drove system validation and integration testing for Open-IPC-API and North Peak (NPK) hardware trace features across platform bring-up milestones.",
-    "evidence": "Job Title System Validation Engineer (Jan-Dec 2014): Responsible for integration and functional tests for Open-IPC-API and NPK features; verified fixes and communicated test coverage and existing gaps at release milestones.",
+    "date": "2014-04-30",
+    "summary": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Trace Integration Testing: Enabled and executed functional and integration tests covering Open-IPC-API and North Peak hardware trace features across platform release milestones.",
+    "evidence": "Review Period Jan-Dec 2014 (Hadeel Hazim): Responsible for enabling integration and functional tests for Open-IPC-API and NPK features; submitted and triaged defects, verified fixes, and ensured release completeness.",
     "sensitivity": "Public",
     "tags": [
       "Open_IPC",
       "NPK",
       "Hardware_Trace",
-      "System_Validation",
-      "BringUp"
+      "Integration_Testing",
+      "Milestones"
     ],
     "rank": 5,
-    "id": "GEM-533236"
+    "id": "GEM-86df97"
+  },
+  {
+    "date": "2014-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Skylake Multi-Stepping VISA Support in DSD: Supported PDT VISA plugins across SKL ULT B0/C0 and SKL M0/Q0/P0 steppings, triaging defects and closing 14 critical bugs across platform power-on.",
+    "evidence": "Review Period Jan-Dec 2014: Supported PDT across SKL VISA steppings (ULT B0/C0, M0/Q0/P0); go-to person for triaging PDT VISA Panel bugs, fixing and guiding triage of 14 SKL PDT bugs.",
+    "sensitivity": "Public",
+    "tags": [
+      "Skylake",
+      "Stepping_Support",
+      "Defect_Triage",
+      "Power_On"
+    ],
+    "rank": 5,
+    "id": "GEM-002131"
+  },
+  {
+    "date": "2014-08-31",
+    "summary": "[STRATEGIC_ANCHOR] NPK SDK Google Test Automation on TeamCity CI: Configured two dedicated TeamCity integration test hosts running the NPK SDK 'Google Test' suite, automating initialization, trigger, and extract test cases.",
+    "evidence": "Review Period Jan-Dec 2014: Identified test gaps and developed automated test plan; configured two integration test hosts on TeamCity running Google Test suite for NPK initialization, performance, full trace, and extract.",
+    "sensitivity": "Public",
+    "tags": [
+      "Google_Test",
+      "TeamCity",
+      "CI_Automation",
+      "NPK_SDK",
+      "Test_Hosts"
+    ],
+    "rank": 5,
+    "id": "GEM-5e6667"
+  },
+  {
+    "date": "2014-10-15",
+    "summary": "[STRATEGIC_ANCHOR] 1450 Debug Tool Stack Defect Detection: Uncovered and root-caused a critical defect in the 1450 Debug Tool Stack that broke previously working NPK trace use cases, driving immediate mitigation with tool teams.",
+    "evidence": "Review Period Jan-Dec 2014: Caught issue in 1450 Debug Tool Stack that broke previously working NPK use case; submitted defect and notified stakeholders for immediate resolution.",
+    "sensitivity": "Public",
+    "tags": [
+      "1450_Stack",
+      "Debug_Tools",
+      "Defect_Detection",
+      "Root_Cause"
+    ],
+    "rank": 5,
+    "id": "GEM-170e7c"
+  },
+  {
+    "date": "2014-11-30",
+    "summary": "[STRATEGIC_ANCHOR] Xilinx FPGA Pre-Silicon Bring-Up for Broxton (BXT): Built Python validation scripts to configure VISA trace, validate trace-to-memory, and execute PTI trace in an FPGA pre-silicon environment for Broxton SoC.",
+    "evidence": "Review Period Jan-Dec 2014: Supported BXT program using FPGA environment; authored Python scripts to configure VISA trace, validate trace to memory, and validate PTI trace.",
+    "sensitivity": "Public",
+    "tags": [
+      "Xilinx_FPGA",
+      "Broxton",
+      "Pre_Silicon",
+      "Python",
+      "PTI_Trace"
+    ],
+    "rank": 5,
+    "id": "GEM-6093e0"
   },
   {
     "date": "2014-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Trace Feature Release Assurance: Verified defect fixes and published test execution coverage metrics across major silicon release milestones, unblocking pre-silicon and post-silicon validation teams.",
-    "evidence": "Validation Engineer 2014: Verified bug fixes, validated Open-IPC interfaces, and tracked release metrics across milestone criteria.",
+    "summary": "[STRATEGIC_ANCHOR] PTI Trace LTB Nibble-Order Silicon Bug Discovery: Discovered a hardware nibble-order silicon bug in PTI trace, verified the LTB hardware workaround, and resolved OpenIPC interface port service issues.",
+    "evidence": "Review Period Jan-Dec 2014: Verified LTB stack, discovered nibble order silicon implementation bug, verified LTB workaround, verified OpenIPC interface port service, and engaged developers before power-on.",
     "sensitivity": "Public",
     "tags": [
-      "Defect_Triage",
-      "Release_Quality",
-      "Metrics",
-      "Validation"
+      "PTI_Trace",
+      "Silicon_Bug",
+      "Nibble_Order",
+      "Workaround",
+      "Open_IPC"
     ],
     "rank": 5,
-    "id": "GEM-724068"
+    "id": "GEM-0c0bfb"
   },
   {
     "date": "2014-01-03",

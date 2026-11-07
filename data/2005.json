@@ -16,8 +16,8 @@
     "id": "GEM-510337"
   },
   {
-    "date": "2005-10-15",
-    "summary": "[STRATEGIC_ANCHOR] Multi-Interface Firmware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, and Watchdog hardware timers, standardizing platform smoke testing.",
+    "date": "2005-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, and Watchdog hardware timers, standardizing platform smoke testing.",
     "evidence": "Intel/Yurcor Validation contractor: Built test harnesses validating FTF firmware features across I2C, serial interfaces, and watchdog recovery on enterprise server hardware.",
     "sensitivity": "Public",
     "tags": [
@@ -28,7 +28,37 @@
       "Validation_Harness"
     ],
     "rank": 5,
-    "id": "GEM-5db9cf"
+    "id": "GEM-b774c9"
+  },
+  {
+    "date": "2005-09-15",
+    "summary": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncovering and tracking SEL page stability issues and DR#19435 NULL password resolution.",
+    "evidence": "Notes 2005: Hardware evaluation across HW BMC23/EFS1.12 to BMC26/EFS1.17; characterized SEL page defect clusters and verified DR tracker resolution across enterprise server builds.",
+    "sensitivity": "Public",
+    "tags": [
+      "Harwich",
+      "BMC",
+      "EFS",
+      "SEL",
+      "Firmware_Validation"
+    ],
+    "rank": 5,
+    "id": "GEM-ea3511"
+  },
+  {
+    "date": "2005-11-20",
+    "summary": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automating over 40% of the HTTP_MTP conformance test suite.",
+    "evidence": "Notes 2005: Developed FTF library allowing automation of 40+% of the HTTP_MTP test plan, verifying sensor status and chassis identification via advanced web server interfaces.",
+    "sensitivity": "Public",
+    "tags": [
+      "HTTP",
+      "MTP",
+      "FTF",
+      "Automation",
+      "Web_Server"
+    ],
+    "rank": 5,
+    "id": "GEM-25b97d"
   },
   {
     "date": "2005-01-01",

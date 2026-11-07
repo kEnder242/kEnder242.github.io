@@ -1,8 +1,52 @@
 [
   {
+    "date": "2018-05-30",
+    "summary": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knights Landing (KNL) cluster, proving single-rack thermal validation was applicable to real-world environments.",
+    "evidence": "Review Period 2018: Designed custom workloads and ran data collection on 100 node KNL cluster for thermal experiments. Concluded single rack heat validation was applicable in real world situations.",
+    "sensitivity": "Public",
+    "tags": [
+      "KNL",
+      "Cluster_Management",
+      "Thermal_Validation",
+      "Workloads",
+      "Knights_Landing"
+    ],
+    "rank": 5,
+    "id": "GEM-c7bf97"
+  },
+  {
     "date": "2018-06-30",
-    "summary": "[STRATEGIC_ANCHOR] 8-Socket Lenovo Proton Platform Optane AEP Validation: Led platform validation for Intel Optane DC Persistent Memory (AEP) on the Lenovo Proton 8-Socket system, establishing Purley-R coverage, uncovering 8-core DAL halting bug, and automating 32+ hours of test execution.",
-    "evidence": "Review Period 2018: Key validation engineer who led testing on Lenovo Proton 8S platform, enabling key 8S coverage for Purley-R/AEP and solidifying strategic relationship with Lenovo. Automated 32+ hours of testing, caught 8-core DAL halting bug, and aligned validation with BIOS development.",
+    "summary": "[STRATEGIC_ANCHOR] Cluster Network Stress Suite BKM: Delivered procedural BKM for compiling and running complex cluster network stress suites, ruling out test harness artifacts as the source of failures on STR platforms.",
+    "evidence": "Review Period 2018: Delivered BKM for compiling and running complex cluster network stress suite which ultimately ruled out stress suite as source of errors on STR platform.",
+    "sensitivity": "Public",
+    "tags": [
+      "Cluster_Stress",
+      "BKM",
+      "Networking",
+      "STR_Platform"
+    ],
+    "rank": 5,
+    "id": "GEM-90804e"
+  },
+  {
+    "date": "2018-07-31",
+    "summary": "[STRATEGIC_ANCHOR] Lab Capacity Doubling & 20+ Node Recovery Commendation: Revived 20+ offline cluster nodes, automated thermal telemetry collection, and leveraged ITP experience to double caged environment debug capacity.",
+    "evidence": "Review Period 2018: 'Thank you for covering for Jose on the KNL Rack thermal data collection. You not only brought 20+ nodes back to life but also found a way to automate the data collection.' Doubled caged debug capacity.",
+    "sensitivity": "Public",
+    "tags": [
+      "Lab_Champion",
+      "Node_Recovery",
+      "Automation",
+      "Thermal_Telemetry",
+      "ITP"
+    ],
+    "rank": 5,
+    "id": "GEM-e71f85"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Lenovo Proton 8-Socket Optane DC Persistent Memory (AEP) Validation: Led validation on the 8S Lenovo Proton platform, enabling Purley-R coverage, establishing regular system health telemetry, and solidifying customer collaboration.",
+    "evidence": "Review Period 2018: Key validation engineer who led testing on Lenovo Proton 8S platform, enabling key 8S coverage for Purley-R/AEP and solidifying strategic relationship with Lenovo. Provided baseline and health reports.",
     "sensitivity": "Public",
     "tags": [
       "Optane",
@@ -10,56 +54,69 @@
       "Lenovo",
       "Proton_8S",
       "Purley_R",
-      "DAL",
-      "Automation"
+      "Validation"
     ],
     "rank": 5,
-    "id": "GEM-bb9bda"
+    "id": "GEM-4aaf38"
   },
   {
-    "date": "2018-09-30",
-    "summary": "[STRATEGIC_ANCHOR] Optane AEP RAS Automation & Mailbox Protocol Validation: Developed 'AEP viral state PCIe fatal error' test case and authored reusable validation helper APIs for multi-register state checking and AEP mailbox verification.",
-    "evidence": "PVT RAS for AEP: Developed 'AEP viral state PCIe fatal error' test and verified on reference platform. Proposed and developed reusable helper functions: 1) multi-register state pass/fail API 2) generic AEP mailbox expected-value validation.",
+    "date": "2018-10-15",
+    "summary": "[STRATEGIC_ANCHOR] 8-Core DAL Halting Bug Discovery & BIOS Alignment: Uncovered a critical 8-core DAL halting bug during 8-socket testing, automated 32+ hours of test execution, and aligned validation directly with BIOS development.",
+    "evidence": "Review Period 2018: Drove test script development resulting in automation of 32+ hours of testing; caught 8-core DAL halting bug; brought visibility to PAE and Lenovo taskforce; aligned validation with BIOS development.",
+    "sensitivity": "Public",
+    "tags": [
+      "DAL_Bug",
+      "Automation",
+      "Lenovo_Taskforce",
+      "BIOS_Alignment",
+      "Purley_R"
+    ],
+    "rank": 5,
+    "id": "GEM-1da8de"
+  },
+  {
+    "date": "2018-11-15",
+    "summary": "[STRATEGIC_ANCHOR] PVT RAS for AEP 'Viral State PCIe Fatal Error' Test: Developed 'AEP viral state PCIe fatal error' test case and verified error propagation on Intel reference platforms.",
+    "evidence": "Review Period 2018: Developed 'AEP viral state PCIe fatal error' test and verified functionality on reference platform.",
     "sensitivity": "Public",
     "tags": [
       "RAS",
       "AEP",
       "PCIe_Fatal_Error",
-      "Mailbox_Validation",
-      "CScripts"
+      "Viral_State",
+      "Error_Injection"
     ],
     "rank": 5,
-    "id": "GEM-561d73"
+    "id": "GEM-f725c3"
   },
   {
     "date": "2018-11-30",
-    "summary": "[STRATEGIC_ANCHOR] Thermal Validation Automation & Lab Capacity Expansion: Automated thermal data collection across Knights Landing (KNL) rack systems, brought 20+ offline nodes back into service, and doubled caged environment debug capacity.",
-    "evidence": "Lab Champion 2018: Covered KNL Rack thermal data collection, revived 20+ offline nodes, automated thermal data logging, and leveraged ITP tools experience to double caged environment debug capacity.",
+    "summary": "[STRATEGIC_ANCHOR] Reusable Multi-Register & AEP Mailbox Verification APIs: Proposed and authored reusable helper APIs to read multiple register states against pass/fail criteria and generic methods to validate expected AEP mailbox values.",
+    "evidence": "Review Period 2018: Developed two API/Helper functions: 1) read multiple register states and pass/fail on expected values 2) generic method to validate expected AEP mailbox values.",
     "sensitivity": "Public",
     "tags": [
-      "KNL",
-      "Thermal_Automation",
-      "Lab_Capacity",
-      "ITP_Tools",
-      "Knights_Landing"
+      "APIs",
+      "Mailbox_Validation",
+      "Register_Verification",
+      "CScripts"
     ],
     "rank": 5,
-    "id": "GEM-b135f3"
+    "id": "GEM-6ecf19"
   },
   {
     "date": "2018-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Inclusion & Technical Knowledge Sharing: Founded regular 'AEP Script Hacking' and 'RAS working sessions', driving team-wide unblocks across mirroring, error injection, and klaxon; established AEP format BKM compressing 12+ hour operations to 15 minutes.",
-    "evidence": "Inclusion & Collaboration 2018: Formed regular 'AEP Script Hacking' and 'RAS working sessions' resulting in development unblocks (mirroring, injection, klaxon), 3 bugs filed, and identified new BKM that trims 12+ hour operations to 15 minutes.",
+    "summary": "[STRATEGIC_ANCHOR] AEP Script Hacking, RAS Working Sessions & Format BKM: Founded regular 'AEP Script Hacking' and 'RAS working sessions' across teams; established AEP format BKM compressing 12+ hour operations down to 15 minutes.",
+    "evidence": "Review Period 2018: Formed regular 'AEP Script Hacking' and 'RAS working sessions' resulting in development unblocks (mirroring, injection, klaxon), 3 bugs filed, and identified new BKM that trims 12+ hour operations to 15 minutes.",
     "sensitivity": "Public",
     "tags": [
       "BKM",
+      "AEP_Format",
+      "RAS",
       "Knowledge_Sharing",
-      "Script_Hacking",
-      "Error_Injection",
-      "Mentorship"
+      "Script_Hacking"
     ],
     "rank": 5,
-    "id": "GEM-6c58b4"
+    "id": "GEM-dccc47"
   },
   {
     "date": "2018-01-01",
