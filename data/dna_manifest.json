@@ -9863,15 +9863,15 @@
       "paper_order": 230,
       "origin": {
         "author": "jallred",
-        "text": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+        "text": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `[REDACTED_PASSWORD]`",
         "source": "Historical Journal Ledger (2020-04-27)",
-        "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
+        "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `[REDACTED_PASSWORD]`",
         "immutable": false,
         "created_at": "2026-09-18T18:21:45.391518+00:00"
       },
       "synthesis": {
         "title": "BMC provisioning BKM through host interface involves issuing a command to enable",
-        "narrative_context": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
+        "narrative_context": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `[REDACTED_PASSWORD]`",
         "lab_anchors": [
           "FEAT-592",
           "BKM-060"
@@ -13692,7 +13692,7 @@
         "author": "jallred",
         "text": "Platform Energy Counter (PCS) interaction with BMC and SUT using ipmitool and Redfish API",
         "source": "Historical Journal Ledger (2023-01-01)",
-        "evidence": "ipmitool raw 0x30 0xB4 0x3 2, curl -k -u \"debuguser1:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.228.208/redfish/v1/Managers/bmc/MctpService",
+        "evidence": "ipmitool raw 0x30 0xB4 0x3 2, curl -k -u \"debuguser1:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.45.228.208/redfish/v1/Managers/bmc/MctpService",
         "immutable": false,
         "created_at": "2026-09-18T18:21:45.403837+00:00"
       },
@@ -14466,7 +14466,7 @@
         "author": "jallred",
         "text": "Sending/receiving MCTP messages using curl and busctl",
         "source": "Historical Journal Ledger (2023-09-25)",
-        "evidence": "['curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload -d \"{\\\\\"dstEid\\\\\": 8, \\\\\"payload\\\\\":[10, 4, 0, 129, 3, 0, 100], \\\\\"timeout\\\\\": 1000}\"']",
+        "evidence": "['curl -k -u \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X POST https://10.23.20.160/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe/MctpPayload/Actions/MctpPayload.SendReceiveMctpMessagePayload -d \"{\\\\\"dstEid\\\\\": 8, \\\\\"payload\\\\\":[10, 4, 0, 129, 3, 0, 100], \\\\\"timeout\\\\\": 1000}\"']",
         "immutable": false,
         "created_at": "2026-09-18T18:21:45.406672+00:00"
       },
@@ -14724,7 +14724,7 @@
         "author": "jallred",
         "text": "Sending PECI command over network using curl",
         "source": "Historical Journal Ledger (2023-11-02)",
-        "evidence": "curl -k -u \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.112.121.142/redfish/v1/Sys",
+        "evidence": "curl -k -u \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X POST https://10.112.121.142/redfish/v1/Sys",
         "immutable": false,
         "created_at": "2026-09-18T18:21:45.407691+00:00"
       },
@@ -15240,7 +15240,7 @@
         "author": "jallred",
         "text": "Connected to target system using IPMI and MTM on DMR-7 platform",
         "source": "Historical Journal Ledger (2024-06-25)",
-        "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+        "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
         "immutable": false,
         "created_at": "2026-09-18T18:21:45.409629+00:00"
       },

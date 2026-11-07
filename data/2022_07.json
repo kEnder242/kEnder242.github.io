@@ -41,7 +41,7 @@
   {
     "date": "2023-02-20",
     "summary": "Tool used to send raw PECI commands: curl",
-    "evidence": "curl -sku \"admin:initial0\" -H \"Content-Type: application/json\" -X PATCH https://localhost:5443/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci",
+    "evidence": "curl -sku \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://localhost:5443/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci",
     "sensitivity": "Public",
     "tags": [
       "curl",

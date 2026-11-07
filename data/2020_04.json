@@ -39,8 +39,8 @@
   },
   {
     "date": "2020-04-27",
-    "summary": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`",
-    "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`",
+    "summary": "BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `[REDACTED_PASSWORD]`",
+    "evidence": "BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `[REDACTED_PASSWORD]`",
     "sensitivity": "Public",
     "tags": [
       "BMC",

@@ -411,7 +411,7 @@
   {
     "date": "2024-01-09",
     "summary": "MCTP SMBus PCIe Slot Tracing via Redfish API",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_SMBus_PCIe_slot/traces",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_SMBus_PCIe_slot/traces",
     "domain": "hardware_debug",
     "tags": [
       "redfish",
@@ -1045,7 +1045,7 @@
   {
     "date": "2024-02-26",
     "summary": "Redfish API GET request for MctpService",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "domain": "vendor_comm",
     "document_date": "2024-02-26",
     "event_era": "2024-02-26",
@@ -1392,7 +1392,7 @@
   {
     "date": "2024-03-06",
     "summary": "Redfish GET request to MCTP_I3C_MNG_CPU1",
-    "evidence": "url -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "url -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "domain": "vendor_comm",
     "document_date": "2024-03-06",
     "event_era": "2024-03-06",
@@ -1484,7 +1484,7 @@
   {
     "date": "2024-03-13",
     "summary": "Executing a GET request to the BMC's MCTP service.",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "domain": "vendor_comm",
     "tags": [],
     "document_date": "2024-03-13",
@@ -2928,7 +2928,7 @@
   {
     "date": "2024-06-14",
     "summary": "Redfish API requests executed to retrieve MCTP and chassis information",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "domain": "vendor_comm",
     "tags": [
       "redfish",
@@ -2949,7 +2949,7 @@
   {
     "date": "2024-06-14",
     "summary": "ipmitool command executed to retrieve system information",
-    "evidence": "ipmitool -I lanplus -H 10.45.167.144 -U debuguser -P 0penBmc1 ",
+    "evidence": "ipmitool -I lanplus -H 10.45.167.144 -U debuguser -P [REDACTED_PASSWORD] ",
     "domain": "vendor_comm",
     "tags": [
       "ipmitool",
@@ -3302,7 +3302,7 @@
   {
     "date": "2024-06-25",
     "summary": "Connected to target system using IPMI and MTM on DMR-7 platform",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "sensitivity": "Public",
     "tags": [
       "IPMI",
@@ -3587,7 +3587,7 @@
   {
     "date": "2024-07-01",
     "summary": "BMC FW Update execution",
-    "evidence": "curl -k -u \"admin:initial0\" -H \"Content-Type: application/octet-stream\" -X POST -T a21-supernode-bmc-updater-dev.tar.gz https://c001n0004bmc/redfish/v1/UpdateService",
+    "evidence": "curl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/octet-stream\" -X POST -T a21-supernode-bmc-updater-dev.tar.gz https://c001n0004bmc/redfish/v1/UpdateService",
     "domain": "operations",
     "tags": [
       "bmc_fw_update"
@@ -3628,7 +3628,7 @@
   {
     "date": "2024-07-08",
     "summary": "Get MctpService status via Redfish API",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "domain": "hardware_debug",
     "tags": [
       "redfish",
@@ -4355,7 +4355,7 @@
   {
     "date": "2024-07-30",
     "summary": "Node Manager API call via Redfish.",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/Oem/Intel/NodeManager",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/Oem/Intel/NodeManager",
     "domain": "operations",
     "tags": [
       "redfish",

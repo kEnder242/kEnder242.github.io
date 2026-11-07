@@ -2,7 +2,7 @@
   {
     "date": "2023-02-20",
     "summary": "Authentication method used for Redfish API queries in this system",
-    "evidence": "-sku option used to authenticate as \"debuguser:0penBmc1\"",
+    "evidence": "-sku option used to authenticate as \"debuguser:[REDACTED_PASSWORD]\"",
     "sensitivity": "Public",
     "tags": [
       "Redfish",

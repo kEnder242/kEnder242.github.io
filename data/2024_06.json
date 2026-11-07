@@ -2,7 +2,7 @@
   {
     "date": "2024-06-25",
     "summary": "Connected to target system using IPMI and MTM on DMR-7 platform",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://10.10.0.100:4099/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1",
     "sensitivity": "Public",
     "tags": [
       "IPMI",

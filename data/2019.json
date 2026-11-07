@@ -93,7 +93,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 4,
     "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 4b2546ee secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Missing: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
+    "trigger_context": "[FOYER] Request 4b2546ee secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Missing: BMC provisioning BKM through host interface involves enabling special user `root` with password `[REDACTED_PASSWORD]`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "spatial_anchor": {
@@ -323,7 +323,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 4,
     "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 7b351a62 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: BMC PECI master functionality discussion on 3/24/2020.\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2020-03-24] BMC PECI master functionality discussion\nEVIDENCE: [RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020\n\n</historical_record>\n\n[BLACKBOARD_LEDGER]:\nDistillation Bullets:\n- BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`.\n\n[PREVIOUS_DEBATE]:\n User: DREAM_PASS: Refine the technical artifact from 2020_08.json into a high-density 'Diamond' gem.\n\n[CONTEXT]: {\"date\": \"2020-08-27\", \"summary\": \"Opcode 0x2E found to be a common prefix for various NM and PLP functions.\", ...}",
+    "trigger_context": "[FOYER] Request 7b351a62 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `[REDACTED_PASSWORD]`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `[REDACTED_PASSWORD]`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: BMC PECI master functionality discussion on 3/24/2020.\n\n[historical_record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2020-03-24] BMC PECI master functionality discussion\nEVIDENCE: [RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020\n\n</historical_record>\n\n[BLACKBOARD_LEDGER]:\nDistillation Bullets:\n- BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `[REDACTED_PASSWORD]`.\n\n[PREVIOUS_DEBATE]:\n User: DREAM_PASS: Refine the technical artifact from 2020_08.json into a high-density 'Diamond' gem.\n\n[CONTEXT]: {\"date\": \"2020-08-27\", \"summary\": \"Opcode 0x2E found to be a common prefix for various NM and PLP functions.\", ...}",
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "spatial_anchor": {
@@ -372,8 +372,8 @@
   },
   {
     "date": "2019-01-01",
-    "summary": "BMC debug user access via KVM Rar_User password: intel123!",
-    "evidence": "JF53SPV0009 - BMC: 10.23.20.143 debuguser 0penBmc1 (KVM 10.23.20.32 Rar_User password: intel123!)",
+    "summary": "BMC debug user access via KVM Rar_User password: [REDACTED_PASSWORD]",
+    "evidence": "JF53SPV0009 - BMC: 10.23.20.143 debuguser [REDACTED_PASSWORD] (KVM 10.23.20.32 Rar_User password: [REDACTED_PASSWORD])",
     "domain": "hardware_debug",
     "tags": [
       "bmc",
@@ -616,7 +616,7 @@
   {
     "date": "2019-01-01",
     "summary": "Enable BMC console",
-    "evidence": "ipmitool lan print 3\nipmitool user set name 2 debuguser\nipmitool user set password 2 0penBmc1\nipmitool user enable 2\nipmitool channel setaccess 3 2 ipmi=on privilege=4 \nipmitool channel setaccess 1 2 ipmi=on privilege=4",
+    "evidence": "ipmitool lan print 3\nipmitool user set name 2 debuguser\nipmitool user set password 2 [REDACTED_PASSWORD]\nipmitool user enable 2\nipmitool channel setaccess 3 2 ipmi=on privilege=4 \nipmitool channel setaccess 1 2 ipmi=on privilege=4",
     "domain": "hardware_debug",
     "tags": [
       "bmc",
@@ -761,7 +761,7 @@
   {
     "date": "2019-01-01",
     "summary": "Sent raw PECI command to target system via Redfish API",
-    "evidence": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://localhost:4099/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci -d \"{...}\"",
+    "evidence": "curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X POST https://localhost:4099/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci -d \"{...}\"",
     "domain": "hardware_debug",
     "tags": [
       "peci",
@@ -5346,7 +5346,7 @@
   {
     "date": "2019-12-01",
     "summary": "Node Manager configuration check",
-    "evidence": "C:\\\\Users\\\\jallred>curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/Oem/Intel/NodeManager",
+    "evidence": "C:\\\\Users\\\\jallred>curl -sku \"debuguser:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X GET https://localhost:4099/redfish/v1/Managers/bmc/Oem/Intel/NodeManager",
     "domain": "operations",
     "tags": [
       "configuration",
