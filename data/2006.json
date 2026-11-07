@@ -1,5 +1,20 @@
 [
   {
+    "date": "2006-06-15",
+    "summary": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture: Executed white-box testing of internal firmware APIs and protocol state machines in C within the GreenHills Development Environment on ARC and ARM processor cores.",
+    "evidence": "Intel Intern: White box testing using GreenHills Development Environment (ARC/ARM) in C for low-level firmware API verification and memory integrity.",
+    "sensitivity": "Public",
+    "tags": [
+      "GreenHills",
+      "ARC",
+      "ARM",
+      "WhiteBox",
+      "Embedded_C"
+    ],
+    "rank": 5,
+    "id": "GEM-cb035e"
+  },
+  {
     "date": "2006-10-20",
     "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Validation & Automation Acceleration: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored automated test harness compressing validation cycle from 1 week to 2 days, earning 'Exceeds Expectations' rating in exit review.",
     "evidence": "Intel Intern (Hillsboro) Oct. 24, 2005 - Oct. 20, 2006: Validation, Testing, and Automation of IPMI and internal firmware APIs; White box testing using GreenHills Development Environment (ARC/ARM) in C; Low level TCP/IP validation: IPMI over LAN, RMCP+; Automation compressed Eval cycle from 1 week to 2 days; 'Exceeds expectations' in exit Review.",
@@ -9,7 +24,8 @@
       "IPMI",
       "Automation",
       "GreenHills",
-      "SOL"
+      "SOL",
+      "TCP_IP"
     ],
     "rank": 5,
     "id": "GEM-86834e"

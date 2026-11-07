@@ -1,19 +1,67 @@
 [
   {
-    "date": "2023-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Montana Devpi Package Release & Multi-Platform MCTP 100-Cycle Validation: Packaged and released the Montana framework as an official Python package under XPIV devpi in Q4 2023; achieved 100 consecutive MCTP cycle test completions on Granite Rapids (GNR) and enabled Sierra Forest (SRF) / EMR.",
-    "evidence": "Q4 2023 Insights & Build Logs (11/13/2023): Released Montana framework as python package under XPIV devpi (pip install montana --extra-index-url devpi.intel.com/general/XPIV); Drove MCTP cycle tests to reach 100 cycles on GNR and kickstarted SRF enablement.",
+    "date": "2023-04-24",
+    "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowledge into a 'blackbox recorder' flow that identified and resolved critical power-limiting failures.",
+    "evidence": "Q1/Q4 2023 Insights: Combined PECI, PythonSV, and pCode knowledge into a telemetry module called 'blackbox recorder'; flow of data has been central to debug and understanding of the Power Limiting issue between pCode, SPS FW, and IGN FW that could have escaped to customers.",
+    "sensitivity": "Public",
+    "tags": [
+      "Blackbox_Recorder",
+      "RAPL",
+      "PECI",
+      "PythonSV",
+      "pCode",
+      "Telemetry",
+      "Power_Limiting"
+    ],
+    "rank": 5,
+    "id": "GEM-27f562"
+  },
+  {
+    "date": "2023-10-15",
+    "summary": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & SCRUM Governance: Led Sprint Planning & SCRUM for MCTP automation development; hosted informal 'show & tell' coding workshops to elevate team development standards.",
+    "evidence": "Q3/Q4 2023 Insights: Led Oregon MIV Tiger team for MCTP development; Hosted informal 'show & tell' meetings to improve coding skills throughout the team; Lead Sprint Planning & SCRUM; Delivered technical presentation on power limiting debug telemetry.",
+    "sensitivity": "Public",
+    "tags": [
+      "SCRUM",
+      "Tiger_Team",
+      "Mentorship",
+      "Show_And_Tell",
+      "Agile_Leadership"
+    ],
+    "rank": 5,
+    "id": "GEM-ad4993"
+  },
+  {
+    "date": "2023-11-13",
+    "summary": "[STRATEGIC_ANCHOR] Montana Framework Python Package Release under XPIV devpi: Formatted, built, and released the Montana automation framework as an official Python wheel package distributed via XPIV devpi, enabling seamless CI/CD integration.",
+    "evidence": "Q4 2023 Insights & Build Logs (11/08/2023 - 11/13/2023): cd c:\\miv-software\\, python -m build, pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV --upgrade. Released Montana framework as python package under XPIV devpi; Maintained quality in Montana code base by proactively engaging PRs and code reviews.",
     "sensitivity": "Public",
     "tags": [
       "Montana",
       "Devpi",
       "Python_Package",
-      "MCTP",
-      "GNR",
-      "SRF"
+      "Wheel",
+      "CI_CD",
+      "Code_Review"
     ],
     "rank": 5,
-    "id": "GEM-26f9ad"
+    "id": "GEM-d3414b"
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achieve 100 consecutive error-free cycles each on Granite Rapids (GNR) and Sierra Forest (SRF).",
+    "evidence": "Q4 2023 Insights: Driving execution, escalation, debug, and triage of MCTP cycle tests to reach 100 cycles each on GNR; Kickstarted execution and enabling of MCTP tests on SRF-SP; Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "GNR",
+      "SRF",
+      "Endurance",
+      "Cycle_Testing",
+      "Triage"
+    ],
+    "rank": 5,
+    "id": "GEM-03f65b"
   },
   {
     "date": "2023-01-01",

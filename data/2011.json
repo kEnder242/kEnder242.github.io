@@ -1,18 +1,48 @@
 [
   {
-    "date": "2011-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Haswell Silicon Signal Visualization (VISA) Architecture: Delivered the Visualization of Internal Signals Architecture (VISA) in the Intel Platform Debug Toolkit for Haswell-Client, enabling deep pre-silicon and post-silicon signal routing.",
-    "evidence": "Review Period Jan 2011 - Dec 2011 (Job Title Software Engineer Grade 05): Joined Intel Platform Debug Toolkit (PDT) team; responsible for development of VISA (Visualization of Internal Signals Architecture) for Haswell-Client program and monitored engineer developing OEM VISA support. Rated Successful for 2012 assessment.",
+    "date": "2011-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Haswell Silicon Signal Visualization (VISA) Architecture: Developed the VISA Panel with DAL support in the Intel Platform Debug Toolkit (PDT) for Haswell-Client, integrating legacy Lakemore Dfx plug-in frameworks.",
+    "evidence": "Review Period Jan-Dec 2011 (Grade 05): Joined Intel Platform Debug Toolkit team; responsible for development of VISA (Visualization of Internal Signals Architecture) for Haswell-Client program using Lakemore Dfx framework with DAL support.",
     "sensitivity": "Public",
     "tags": [
       "VISA",
       "Haswell",
       "PDT",
-      "Silicon_Debug",
-      "Signal_Routing"
+      "DAL",
+      "Lakemore",
+      "Silicon_Debug"
     ],
     "rank": 5,
-    "id": "GEM-3b757c"
+    "id": "GEM-efe7a1"
+  },
+  {
+    "date": "2011-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Haswell X0/A0 Power-On Lab Bring-Up & XML Automation: Drove early emulator testing and daily VISA debug support during Haswell X0 and A0 power-on; automated register conversion tasks using XML style sheets.",
+    "evidence": "VISA Customer Support: Focused on light integration for early emulator testing before X0 power-on. Supported VISA Panel in lab during X0 and A0 power-on. Refactored VISA-DAL register converter to lower level builder and automated conversions via XML style sheets.",
+    "sensitivity": "Public",
+    "tags": [
+      "Haswell",
+      "Power_On",
+      "Emulation",
+      "X0_A0",
+      "XML_Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-643045"
+  },
+  {
+    "date": "2011-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Online Trace Decoration & OEM VISA Architecture: Coordinated with trace decoder team to enable VISA signal decoration on online traces; mentored and guided engineer delivering the OEM version of VISA.",
+    "evidence": "Trace Decoration & OEM VISA: Coordinated with trace decoder team and DAL hooks expert to add VISA decoration capability to online traces. Cross-trained co-worker on VISA/DAL development and monitored engineer developing OEM VISA support.",
+    "sensitivity": "Public",
+    "tags": [
+      "Trace_Decoration",
+      "OEM_VISA",
+      "Mentorship",
+      "DAL_Hooks"
+    ],
+    "rank": 5,
+    "id": "GEM-d6de59"
   },
   {
     "date": "2011-01-01",

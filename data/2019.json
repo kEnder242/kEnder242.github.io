@@ -1,18 +1,64 @@
 [
   {
-    "date": "2019-11-18",
-    "summary": "[STRATEGIC_ANCHOR] Datacenter Manageability & OpenBMC Architecture Transition: Established cross-functional telemetry and manageability validation frameworks bridging DPV and PIAV platforms.",
-    "evidence": "2019 Insights: Manageability automation, telemetry validation frameworks, and initial OpenBMC transition for datacenter platform architectures.",
+    "date": "2019-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Platformization of CLX PECI/RAPL Registers & Power Limiting: Engineered register abstraction for Cascade Lake (CLX) PECI/RAPL registers and implemented Setcap automated test cases for complex power limiting validation.",
+    "evidence": "11/18/2019 Insights: Platformization of CLX peci/rapl registers, Setcap code changes for power limiting tests (complex).",
     "sensitivity": "Public",
     "tags": [
-      "OpenBMC",
-      "PIAV",
-      "DPV",
-      "Telemetry",
-      "Datacenter"
+      "CLX",
+      "PECI",
+      "RAPL",
+      "Setcap",
+      "Power_Limiting",
+      "Platformization"
     ],
     "rank": 5,
-    "id": "GEM-e7699e"
+    "id": "GEM-9d486e"
+  },
+  {
+    "date": "2019-09-30",
+    "summary": "[STRATEGIC_ANCHOR] MIV Content 1.0 Platform Readiness: Drove manageability content 1.0 delivery across Ice Lake (ICX ~41 test cases) and Cooper City (CPX 13 test cases), establishing automated regression hooks.",
+    "evidence": "11/18/2019 Insights: Content 1.0 Readiness <ICX ~41, CPX 13>; Cleanup recovery and automation hooks using automation POC.",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "ICX",
+      "CPX",
+      "Content_Readiness",
+      "Regression_Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-2ad202"
+  },
+  {
+    "date": "2019-11-18",
+    "summary": "[STRATEGIC_ANCHOR] PythonSV OEM Co-Validation Tool Architecture: Leveraged PythonSV and Ice Lake Power-On experience to author validation tools enabling co-validation teams to verify OEM features on Intel reference platforms.",
+    "evidence": "8/23/2019 Insights: Leveraged PythonSV and ICX PO experience to create a tool that enabled Co-validation team to validate OEM features on reference platforms.",
+    "sensitivity": "Public",
+    "tags": [
+      "PythonSV",
+      "ICX",
+      "Co_Validation",
+      "OEM_Features",
+      "Power_On"
+    ],
+    "rank": 5,
+    "id": "GEM-9481db"
+  },
+  {
+    "date": "2019-12-31",
+    "summary": "[STRATEGIC_ANCHOR] IPMI Protocol Triage & Multi-Product Fix: Led cross-disciplinary investigation root-causing IPMItool ME message packet handling failures, delivering customer-acceptable fix spanning multiple product families.",
+    "evidence": "8/23/2019 Insights: Used IPMI expert knowledge to root-cause and provide fix for issues seen with IPMItool when handling commands to ME ('N 5' workaround spanning several product families). Commended by management and peers.",
+    "sensitivity": "Public",
+    "tags": [
+      "IPMI",
+      "IPMItool",
+      "ME_Commands",
+      "Protocol_Debug",
+      "Root_Cause"
+    ],
+    "rank": 5,
+    "id": "GEM-ac8c67"
   },
   {
     "date": "2019-01-01",

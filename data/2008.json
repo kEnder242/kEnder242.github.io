@@ -1,17 +1,65 @@
 [
   {
-    "date": "2008-12-31",
-    "summary": "[STRATEGIC_ANCHOR] ESB2 Firmware Sustaining & DCMI/SOL Transport Architecture: Built the IPDC transport library for the DCMI conformance suite, uncovered cipher suite defects in Bensley/Thurley, and demonstrated high-performance SOL API solution replacing serial dongles in Microsoft datacenters.",
-    "evidence": "Review Period January 2008 - December 2008 (Grade 5): Jason worked as firmware developer in CCG SSE group for ESB2 and Willowbrook DCMI. Uncovered cipher suite bugs in Bensley and Thurley. Demonstrated SOL API solution capable of replacing serial IP dongles in Microsoft datacenter. Rated Successful for 2008 focal.",
+    "date": "2008-06-30",
+    "summary": "[STRATEGIC_ANCHOR] ESB2 Firmware Sustaining & DCMI/DCTS Transport Architecture: Built the IPDC transport library for the DCMI conformance suite and resolved critical cipher suite defects in Bensley and Thurley platforms.",
+    "evidence": "Review Period Jan-Dec 2008 (Grade 5): Jason worked as firmware developer in CCG SSE group for ESB2 and Willowbrook DCMI. Network/API portion of DCMI Conformance Test Suite (DCTS) uncovered cipher suite bugs in Bensley and Thurley implementations; successfully debugged and published solutions.",
     "sensitivity": "Public",
     "tags": [
       "DCMI",
       "ESB2",
-      "SOL",
+      "DCTS",
+      "Cipher_Suite",
       "Firmware",
-      "Microsoft"
+      "Bensley",
+      "Thurley"
     ],
     "rank": 5,
-    "id": "GEM-138f54"
+    "id": "GEM-acbb53"
+  },
+  {
+    "date": "2008-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Red Dog & Microsoft Datacenter SOL API Architecture: Engineered high-performance SOL API solution capable of replacing serial IP dongles across Microsoft datacenters; publicly commended by SSE Lead Architect Hari Ramachandran.",
+    "evidence": "Red Dog Project & SOL API: Provided proof of concept and demonstrated product to Microsoft. Teamed up to develop SOL API solution capable of replacing serial IP dongles in Microsoft datacenter. SSE lead architect Hari Ramachandran publicly recognized the quality and speed of the delivery.",
+    "sensitivity": "Public",
+    "tags": [
+      "SOL",
+      "RedDog",
+      "Microsoft",
+      "Datacenter",
+      "Architecture"
+    ],
+    "rank": 5,
+    "id": "GEM-9af47f"
+  },
+  {
+    "date": "2008-11-30",
+    "summary": "[STRATEGIC_ANCHOR] Willowbrook iBMC Firmware Development & Asset Tag Implementation: Designed and implemented the 'Get Asset tag' DCMI command for iBMC firmware; executed emergency manual merge against EPSD codebase to meet milestone delivery.",
+    "evidence": "Willowbrook Development: Implemented 'Get Asset tag' DCMI command for iBMC firmware through research, design, CCB, and code review. Completed emergency manual merge against latest EPSD code base allowing team to meet delivery deadline with only one bug found.",
+    "sensitivity": "Public",
+    "tags": [
+      "iBMC",
+      "Willowbrook",
+      "DCMI",
+      "AssetTag",
+      "CCB"
+    ],
+    "rank": 5,
+    "id": "GEM-ae62d8"
+  },
+  {
+    "date": "2008-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Enterprise Customer Automation & Linux BMC Provisioning: Authored Linux BMC provisioning tools for Yahoo, developed ipmitool dcmi scripting for OEM customers, and created ARP storm validation simulators.",
+    "evidence": "Customer Support: Shell script to provision BMC's LAN interface in Linux for Yahoo, converted 'ipmitool dcmi' patch to release script for DCMI customers, simulated ARP storms for validation, and fixed Aardvark I2C issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "Yahoo",
+      "ipmitool",
+      "Linux",
+      "Provisioning",
+      "ARP_Storm",
+      "I2C"
+    ],
+    "rank": 5,
+    "id": "GEM-6cc972"
   }
 ]

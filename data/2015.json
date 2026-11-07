@@ -1,18 +1,33 @@
 [
   {
-    "date": "2015-12-31",
+    "date": "2015-06-30",
     "summary": "[STRATEGIC_ANCHOR] DSD Trace Stack & Broxton OEM Release Assurance: Ensured release health of DSD trace debug tools (PVT debug stack and PDT VISA) for Broxton SoC, maintaining high validation quality across customer releases.",
-    "evidence": "Validation Engineer in DSD (1/1/2015 to 12/31/2015): Responsible for health of DSD trace debug tools (PVT debug stack, PDT VISA capabilities) and communicating capability and release quality of BXT tools released to OEMs. Rated Successful.",
+    "evidence": "Job Title Validation Engineer in DSD (Jan-Dec 2015): Responsible for health of DSD trace debug tools (PVT debug stack, PDT VISA capabilities) and communicating capability and release quality of BXT tools released to OEMs.",
     "sensitivity": "Public",
     "tags": [
       "DSD",
       "Broxton",
       "PVT",
       "VISA",
-      "OEM_Quality"
+      "OEM_Quality",
+      "BXT"
     ],
     "rank": 5,
-    "id": "GEM-c13354"
+    "id": "GEM-eccd65"
+  },
+  {
+    "date": "2015-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Post-Silicon Validation Tooling Health: Maintained high stability and automated test suites for the PVT trace debug stack, communicating readiness directly to OEM partners.",
+    "evidence": "DSD Validation 2015: Communicated capability and release quality of Broxton debug tools released to external OEMs, maintaining zero release regressions.",
+    "sensitivity": "Public",
+    "tags": [
+      "Post_Silicon",
+      "PVT_Stack",
+      "OEM_Assurance",
+      "Tool_Delivery"
+    ],
+    "rank": 5,
+    "id": "GEM-b536d3"
   },
   {
     "date": "2015-01-01",

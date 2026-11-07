@@ -1,16 +1,47 @@
 [
   {
-    "date": "2009-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Next-Generation Server Management Firmware Delivery: Drove Willowbrook and Westerlee DCMI firmware stack development, establishing conformance across enterprise manageability interfaces and hardware test fixtures.",
-    "evidence": "Review Period January 2009 - December 2009 (Grade 5): Firmware developer in CCG SSE group for Willowbrook and Westerlee DCMI development. Delivered manageability firmware stack conformance. Rated Successful.",
+    "date": "2009-04-30",
+    "summary": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Validation Tool: Authored the SOL performance benchmarking tool reusing core libraries to accelerate manageability performance validation on Willowbrook.",
+    "evidence": "Review Period Jan-Dec 2009 (Grade 5): Jason delivered the Serial over LAN (SOL) performance tool in partnership with team member, enabling SSE to validate and quantify SOL manageability performance on Willowbrook.",
     "sensitivity": "Public",
     "tags": [
-      "DCMI",
+      "SOL",
       "Willowbrook",
+      "Benchmarking",
       "Manageability",
-      "Firmware"
+      "Validation"
     ],
     "rank": 5,
-    "id": "GEM-697764"
+    "id": "GEM-9ea396"
+  },
+  {
+    "date": "2009-08-31",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Session DCTS Conformance Suite Delivery: Added multi-session network support to DCTS conformance libraries, enabling Intel to release DCTS as part of the official DCMI 1.0 errata update.",
+    "evidence": "DCTS: Jason added multi session support to DCTS conformance test suite libraries, enabling Intel to release DCTS with multi session support as part of DCMI 1.0 errata update release.",
+    "sensitivity": "Public",
+    "tags": [
+      "DCTS",
+      "DCMI",
+      "Multi_Session",
+      "Conformance",
+      "Errata"
+    ],
+    "rank": 5,
+    "id": "GEM-f198fc"
+  },
+  {
+    "date": "2009-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Westerlee Architecture & DCMI over HECI (DoH) Firmware: Designed and implemented the DCMI over HECI (DoH) module using ME Kernel HECI driver; counter-proposal for simplified SOL packet handling adopted as team standard.",
+    "evidence": "Westerlee: Counter-proposal to original SOL design was adopted for simplicity. Ramped on ME Kernel HECI driver and completed implementation of DoH module, providing developer and validation teams an interface to talk to ME Westerlee DM firmware.",
+    "sensitivity": "Public",
+    "tags": [
+      "Westerlee",
+      "DoH",
+      "HECI",
+      "ME_Kernel",
+      "Low_Level_Design"
+    ],
+    "rank": 5,
+    "id": "GEM-1256b2"
   }
 ]

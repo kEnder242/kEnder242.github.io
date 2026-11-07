@@ -1,19 +1,65 @@
 [
   {
-    "date": "2018-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Apache Pass Optane (AEP) Memory Validation & RAS Automation: Drove Optane persistent memory platform validation in Datacenter Platform Validation (DPV), delivering automated RAS CScripts and customer collateral.",
-    "evidence": "Technical Mkt Engr / Software PAE in DCG (Review Period: 2018): Principal focus was supporting AEP Validation efforts in DEA/PEV org through DOT rotation into DPV team, as well as RAS CScript development. Rated Successful.",
+    "date": "2018-06-30",
+    "summary": "[STRATEGIC_ANCHOR] 8-Socket Lenovo Proton Platform Optane AEP Validation: Led platform validation for Intel Optane DC Persistent Memory (AEP) on the Lenovo Proton 8-Socket system, establishing Purley-R coverage, uncovering 8-core DAL halting bug, and automating 32+ hours of test execution.",
+    "evidence": "Review Period 2018: Key validation engineer who led testing on Lenovo Proton 8S platform, enabling key 8S coverage for Purley-R/AEP and solidifying strategic relationship with Lenovo. Automated 32+ hours of testing, caught 8-core DAL halting bug, and aligned validation with BIOS development.",
     "sensitivity": "Public",
     "tags": [
       "Optane",
       "AEP",
-      "DPV",
-      "RAS",
-      "CScripts",
-      "DCG"
+      "Lenovo",
+      "Proton_8S",
+      "Purley_R",
+      "DAL",
+      "Automation"
     ],
     "rank": 5,
-    "id": "GEM-78d363"
+    "id": "GEM-bb9bda"
+  },
+  {
+    "date": "2018-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Optane AEP RAS Automation & Mailbox Protocol Validation: Developed 'AEP viral state PCIe fatal error' test case and authored reusable validation helper APIs for multi-register state checking and AEP mailbox verification.",
+    "evidence": "PVT RAS for AEP: Developed 'AEP viral state PCIe fatal error' test and verified on reference platform. Proposed and developed reusable helper functions: 1) multi-register state pass/fail API 2) generic AEP mailbox expected-value validation.",
+    "sensitivity": "Public",
+    "tags": [
+      "RAS",
+      "AEP",
+      "PCIe_Fatal_Error",
+      "Mailbox_Validation",
+      "CScripts"
+    ],
+    "rank": 5,
+    "id": "GEM-561d73"
+  },
+  {
+    "date": "2018-11-30",
+    "summary": "[STRATEGIC_ANCHOR] Thermal Validation Automation & Lab Capacity Expansion: Automated thermal data collection across Knights Landing (KNL) rack systems, brought 20+ offline nodes back into service, and doubled caged environment debug capacity.",
+    "evidence": "Lab Champion 2018: Covered KNL Rack thermal data collection, revived 20+ offline nodes, automated thermal data logging, and leveraged ITP tools experience to double caged environment debug capacity.",
+    "sensitivity": "Public",
+    "tags": [
+      "KNL",
+      "Thermal_Automation",
+      "Lab_Capacity",
+      "ITP_Tools",
+      "Knights_Landing"
+    ],
+    "rank": 5,
+    "id": "GEM-b135f3"
+  },
+  {
+    "date": "2018-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Inclusion & Technical Knowledge Sharing: Founded regular 'AEP Script Hacking' and 'RAS working sessions', driving team-wide unblocks across mirroring, error injection, and klaxon; established AEP format BKM compressing 12+ hour operations to 15 minutes.",
+    "evidence": "Inclusion & Collaboration 2018: Formed regular 'AEP Script Hacking' and 'RAS working sessions' resulting in development unblocks (mirroring, injection, klaxon), 3 bugs filed, and identified new BKM that trims 12+ hour operations to 15 minutes.",
+    "sensitivity": "Public",
+    "tags": [
+      "BKM",
+      "Knowledge_Sharing",
+      "Script_Hacking",
+      "Error_Injection",
+      "Mentorship"
+    ],
+    "rank": 5,
+    "id": "GEM-6c58b4"
   },
   {
     "date": "2018-01-01",

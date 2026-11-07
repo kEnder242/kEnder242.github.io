@@ -1,18 +1,32 @@
 [
   {
-    "date": "2012-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Haswell-Server and Client Unified Debug Infrastructure: Expanded the PDT VISA engine across Haswell-Server and Haswell-Client programs, delivering platform-wide internal signal observation for complex multi-die topologies.",
-    "evidence": "Review Period Jan 2012 - Dec 2012 (Software Engineer Grade 05): Software developer in Intel Platform Debug Toolkit, responsible for VISA development for Haswell-Client and Haswell-Server programs. Rated Successful.",
+    "date": "2012-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Haswell-Server & Client Unified VISA Infrastructure: Expanded PDT VISA engine across Haswell-Server and Haswell-Client programs, enabling platform-wide internal signal observation for complex multi-die topologies.",
+    "evidence": "Review Period Jan-Dec 2012 (Grade 05): Software developer in Intel Platform Debug Toolkit, responsible for VISA development for Haswell-Client and Haswell-Server programs. Rated Successful.",
     "sensitivity": "Public",
     "tags": [
       "VISA",
       "Haswell_Server",
       "Haswell_Client",
-      "PDT",
-      "Debugging"
+      "Multi_Die",
+      "PDT"
     ],
     "rank": 5,
-    "id": "GEM-440d43"
+    "id": "GEM-a079c1"
+  },
+  {
+    "date": "2012-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Silicon Debug Framework Integration: Aligned VISA tool interfaces with VISA silicon architects, Lakemore panel developers, and DTS teams to unify validation diagnostics.",
+    "evidence": "Evaluation 2012: Collaborated with key VISA architects, Lakemore panel team, and DTS development teams to fully integrate VISA diagnostics into PDT.",
+    "sensitivity": "Public",
+    "tags": [
+      "DTS",
+      "Lakemore",
+      "Silicon_Validation",
+      "Cross_Functional"
+    ],
+    "rank": 5,
+    "id": "GEM-745199"
   },
   {
     "date": "2012-01-01",

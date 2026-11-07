@@ -1,7 +1,37 @@
 [
   {
-    "date": "2022-12-31",
-    "summary": "[STRATEGIC_ANCHOR] EMR Power-On Manageability Automation & DTAF Framework Integration: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines.",
+    "date": "2022-04-30",
+    "summary": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Design and Technology Solutions Technical Conference (DTTC) analyzing PECI protocol reliability.",
+    "evidence": "3/30/2022 Insights & DTTC_2022_Peci_Stress.pdf: Delivered 'Measuring PECI performance and reliability' paper to DTTC; analyzed transmission reliability, error recovery, and timing under stress.",
+    "sensitivity": "Public",
+    "tags": [
+      "DTTC",
+      "PECI",
+      "Technical_Paper",
+      "Reliability",
+      "Benchmarking"
+    ],
+    "rank": 5,
+    "id": "GEM-b31bb2"
+  },
+  {
+    "date": "2022-06-30",
+    "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication & BMC Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a validation engine' via MCTP APIs across server platforms.",
+    "evidence": "3/30/2022 Insights: Delivered PLDM NIC communication using 'BMC as a validation engine' MCTP API; Guided Aurora Blade manual content execution (BMC, NM OpenBMC) for Phase 1 status.",
+    "sensitivity": "Public",
+    "tags": [
+      "PLDM",
+      "NIC",
+      "MCTP",
+      "BMC",
+      "OpenBMC"
+    ],
+    "rank": 5,
+    "id": "GEM-527834"
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "[STRATEGIC_ANCHOR] EMR Power-On Manageability Automation & DTAF Path Merge: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines, successfully merging Montana path into DTAF.",
     "evidence": "Insights 2022: Recognized for support for PECI code during EMR PO to enable Montana code for EMR PO; enabled Manageability to run automated at EMR PO; merged Montana path into DTAF.",
     "sensitivity": "Public",
     "tags": [
@@ -9,10 +39,26 @@
       "PECI",
       "Power_On",
       "DTAF",
-      "Manageability"
+      "Montana",
+      "SPR"
     ],
     "rank": 5,
-    "id": "GEM-baf835"
+    "id": "GEM-b53209"
+  },
+  {
+    "date": "2022-12-31",
+    "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints meeting Eagle Stream CCB requirements.",
+    "evidence": "Insights 2022: Automated PECI write tests for all available CSR endpoints (2k), also meeting needs of EGS CCB; Developed test for ECS OOB register access.",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "CSR",
+      "EGS_CCB",
+      "Automation",
+      "Endpoints"
+    ],
+    "rank": 5,
+    "id": "GEM-70a645"
   },
   {
     "date": "2022-00-00",

@@ -1,19 +1,64 @@
 [
   {
-    "date": "2021-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture & PECI/MCTP Automation: Architected manageability validation for Eagle Stream / Sapphire Rapids on Archer City, authoring Redfish-PECI stress test suites, OOBMSM MCTP infrastructure, and leading MIV sprint planning.",
-    "evidence": "2021 Technical Notes & Presentations: Delivered 'Future of MCTP Infrastructure', OOBMSM MCTP Bus Owner architecture, Stressing Redfish PECI demo, and EGS/SPR manageability automation on Archer City reference systems.",
+    "date": "2021-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture & Platform Validation: Led manageability architecture and validation for Eagle Stream / Sapphire Rapids on Archer City (AC0195), integrating PythonSV namednodes, status_scope, and RASP cloud lab systems.",
+    "evidence": "2021 Technical Notes & Logs: Maintained AC0195 reference platform, executed status_scope namednodes analyzers, resolved IFU MCA errors on CentOS boot, and maintained lab infrastructure via RASP Cloud.",
     "sensitivity": "Public",
     "tags": [
       "Archer_City",
       "Eagle_Stream",
-      "PECI",
-      "MCTP",
-      "Redfish",
-      "Manageability"
+      "Sapphire_Rapids",
+      "PythonSV",
+      "Namednodes",
+      "RASP"
     ],
     "rank": 5,
-    "id": "GEM-53ee58"
+    "id": "GEM-3f103b"
+  },
+  {
+    "date": "2021-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Future of MCTP Infrastructure & OOBMSM Architecture: Authored and presented 'Future of MCTP Infrastructure' and architected 'OOBMSM as MCTP Bus Owner' for server management bus arbitration.",
+    "evidence": "2021 Technical Collateral: Future of MCTP Infrastructure.pptx (Dec 2021), OOBMSM as MCTP bus owner.docx, and OOBMSM MCTP Bus Owner MRC Discussion WW51_2021.pptx.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "OOBMSM",
+      "Bus_Owner",
+      "Architecture",
+      "Infrastructure"
+    ],
+    "rank": 5,
+    "id": "GEM-9c73c8"
+  },
+  {
+    "date": "2021-11-30",
+    "summary": "[STRATEGIC_ANCHOR] Redfish-PECI Stress Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensive PECI command matrix across PCS/PECI registers.",
+    "evidence": "2021 Technical Artifacts: Stressing Redfish PECI_demo.pptx, pcs_peci_cmd_matrix.xlsx, and automated Redfish REST validation utilities.",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "Redfish",
+      "Stress_Testing",
+      "Automation",
+      "Command_Matrix"
+    ],
+    "rank": 5,
+    "id": "GEM-8bb500"
+  },
+  {
+    "date": "2021-12-31",
+    "summary": "[STRATEGIC_ANCHOR] MIV Sprint Planning & Agile SCRUM Governance: Led daily standups, estimation, and sprint retrospectives for Manageability In-Target Validation (MIV), driving platform defect scrubs.",
+    "evidence": "2021 Sprint Documentation: MIV_Sprint_Planning.xlsx, SIV+MIV Sprint Review - new focus.docx, and HSD scrub closing 27 issues under manageability domain.",
+    "sensitivity": "Public",
+    "tags": [
+      "SCRUM",
+      "Sprint_Planning",
+      "Agile",
+      "Defect_Scrub",
+      "Leadership"
+    ],
+    "rank": 5,
+    "id": "GEM-0e02a9"
   },
   {
     "date": "2021-01-01",

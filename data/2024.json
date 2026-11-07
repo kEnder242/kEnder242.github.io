@@ -1,19 +1,64 @@
 [
   {
+    "date": "2024-04-01",
+    "summary": "[STRATEGIC_ANCHOR] DMR MMIO Adaptation & Pre-Silicon Simics Validation: Adapted PECI validation tests to the new MMIO register access model for Diamond Rapids (DMR) and authored executable pre-silicon test cases for PPO 0.8.",
+    "evidence": "Q1/Q2 2024 Coaching & Results: Adapt PECI tests to new MMIO model for DMR; Defined and executed 2 PPO 0.8 test cases for PECI/MCTP leveraging S3E/SSM SIMICS validation scripts.",
+    "sensitivity": "Public",
+    "tags": [
+      "MMIO",
+      "DMR",
+      "SIMICS",
+      "Pre_Silicon",
+      "PPO"
+    ],
+    "rank": 5,
+    "id": "GEM-f60dfb"
+  },
+  {
+    "date": "2024-05-15",
+    "summary": "[STRATEGIC_ANCHOR] Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability Enablement: Supported BA validation team enabling Montana manageability test collateral (40~70 NM+PECI+MCTP+IPMI+Redfish test cases per platform).",
+    "evidence": "Q2 2024 Insights: Supported BA team by enabling Montana for CWF and DMR (40~70 NM+PECI+MCTP+IPMI+Redfish TCD per platform); Defined and executed 2 PPO 0.8 test cases for PECI/MCTP leveraging S3E/SSM Simics scripts.",
+    "sensitivity": "Public",
+    "tags": [
+      "CWF",
+      "DMR",
+      "Clearwater_Forest",
+      "Diamond_Rapids",
+      "Enablement"
+    ],
+    "rank": 5,
+    "id": "GEM-f01521"
+  },
+  {
+    "date": "2024-06-01",
+    "summary": "[STRATEGIC_ANCHOR] Cross-Team Workgroup Leadership & Kayak Alignment: Hosted weekly cross-functional workgroup to facilitate Kayak transition conversations, accelerating developer productivity and aligning BA team ownership.",
+    "evidence": "Behaviors Q2 2024: Inclusion: Hosted workgroup to discuss Kayak conversations, gathered feedback from team to enable more expedient developer progress. Accelerated Kayak/Montana transition effort through collaboration.",
+    "sensitivity": "Public",
+    "tags": [
+      "Inclusion",
+      "Workgroup",
+      "Collaboration",
+      "Transition",
+      "Leadership"
+    ],
+    "rank": 5,
+    "id": "GEM-fc325b"
+  },
+  {
     "date": "2024-06-13",
-    "summary": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution for CWF and DMR: Successfully executed Kayak+Montana transition plan, importing 21 libraries, natively executing 29 PECI+MCTP tests, and enabling Clearwater Forest (CWF) and Diamond Rapids (DMR).",
-    "evidence": "6/13/2024 Q2 2024 Insights (draft): Delivered and executed on Kayak+Montana transition plan; Kayak able to import 21 Montana libraries and natively execute 29 PECI+MCTP tests; Supported BA team by enabling Montana for CWF and DMR.",
+    "summary": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution: Delivered and executed the Kayak+Montana transition plan, importing 21 Montana libraries and natively executing 29 PECI+MCTP test cases without TDF overhead.",
+    "evidence": "6/13/2024 Q2 2024 Insights: Delivered and executed on Kayak+Montana transition plan; Kayak is able to import 21 Montana libraries and natively execute 29 PECI+MCTP tests; Delivered 8 Kayak+Montana test cases definition deltas for DMR.",
     "sensitivity": "Public",
     "tags": [
       "Kayak",
       "Montana",
       "PECI",
       "MCTP",
-      "CWF",
-      "DMR"
+      "Transition",
+      "Native_Execution"
     ],
     "rank": 5,
-    "id": "GEM-a99ea0"
+    "id": "GEM-b57ca0"
   },
   {
     "date": "2024-01-01",

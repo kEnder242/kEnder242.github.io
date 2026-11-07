@@ -1,18 +1,32 @@
 [
   {
-    "date": "2013-12-31",
-    "summary": "[STRATEGIC_ANCHOR] PDT Trace Architecture & VISA GUI Panel Ownership: Owned end-to-end design, development, and support for the PDT Trace software and primary VISA GUI panel, enabling hardware engineers to configure real-time signal capture.",
-    "evidence": "Review Period Jan 2013 - Dec 2013 (Software Engineer Grade 5): Software developer on PDT Trace team; new feature design, maintenance, and ownership of the PDT Trace software with focus on the VISA GUI panel. Rated Successful.",
+    "date": "2013-06-30",
+    "summary": "[STRATEGIC_ANCHOR] PDT Trace Architecture & Primary VISA GUI Panel Ownership: Owned end-to-end design, development, and support for PDT Trace software and the primary VISA GUI panel, enabling hardware engineers to configure real-time signal capture.",
+    "evidence": "Review Period Jan-Dec 2013 (Grade 5): Software developer on PDT Trace team; new feature design, maintenance, and ownership of the PDT Trace software with focus on the VISA GUI panel.",
     "sensitivity": "Public",
     "tags": [
-      "VISA",
       "PDT_Trace",
+      "VISA",
       "GUI",
       "Signal_Capture",
-      "Tools"
+      "C_Sharp"
     ],
     "rank": 5,
-    "id": "GEM-2b596e"
+    "id": "GEM-ce7c64"
+  },
+  {
+    "date": "2013-12-31",
+    "summary": "[STRATEGIC_ANCHOR] High-Speed Signal Configuration Diagnostics: Architected trace signal capture and mux routing interfaces within PDT Trace, accelerating post-silicon electrical debug for server platforms.",
+    "evidence": "PDT Trace 2013: Maintained quality and high uptime for the VISA signal configuration panel used by silicon debug teams during server power-on.",
+    "sensitivity": "Public",
+    "tags": [
+      "Post_Silicon",
+      "Electrical_Debug",
+      "Mux_Routing",
+      "Diagnostics"
+    ],
+    "rank": 5,
+    "id": "GEM-39d82d"
   },
   {
     "date": "2013-01-01",

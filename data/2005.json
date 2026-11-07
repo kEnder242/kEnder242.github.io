@@ -9,10 +9,26 @@
       "IPMI",
       "Enterprise",
       "IA64",
-      "Validation"
+      "Validation",
+      "TCL_TK"
     ],
     "rank": 5,
     "id": "GEM-510337"
+  },
+  {
+    "date": "2005-10-15",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Interface Firmware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, and Watchdog hardware timers, standardizing platform smoke testing.",
+    "evidence": "Intel/Yurcor Validation contractor: Built test harnesses validating FTF firmware features across I2C, serial interfaces, and watchdog recovery on enterprise server hardware.",
+    "sensitivity": "Public",
+    "tags": [
+      "I2C",
+      "IOL",
+      "Watchdog",
+      "FRUSDR",
+      "Validation_Harness"
+    ],
+    "rank": 5,
+    "id": "GEM-5db9cf"
   },
   {
     "date": "2005-01-01",
