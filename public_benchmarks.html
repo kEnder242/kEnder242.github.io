@@ -305,7 +305,7 @@
                 <div class="seat-header">
                     <div>
                         <div class="seat-title">Z87 Linux Dual-Pool (2080Ti + B580)</div>
-                        <div class="seat-role">Node Pinky &bull; CUDA + RPC Zero-DDR3 MoE</div>
+                        <div class="seat-role">Node Pinky &bull; CUDA + RPC MoE Pool</div>
                     </div>
                     <span id="badge-z87_2080ti" style="font-size:0.68rem; font-weight:700; background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; border:1px solid #238636;">ONLINE</span>
                 </div>
@@ -409,7 +409,7 @@
         <div class="chart-card" style="margin-top: 30px;">
             <div class="chart-title">🔬 Slicing the Silicon: Architectural Exploration & Inference Strategies</div>
             <p style="font-size: 0.85rem; color: var(--sub-color); margin-bottom: 20px;">
-                Comprehensive empirical comparison of local execution architectures tested on the <code>z87-Linux</code> physical workstation, evaluating parameter capacity, memory bandwidth efficiency, and the critical avoidance of DDR3 host RAM bottlenecks.
+                Comprehensive empirical comparison of local execution architectures tested on the <code>z87-Linux</code> physical workstation, evaluating parameter capacity, memory bandwidth efficiency, and memory bandwidth scaling across heterogeneous silicon.
             </p>
 
             <div style="overflow-x: auto;">
@@ -450,7 +450,7 @@
                             <td style="padding: 10px 8px;"><span style="background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px;">HIGH ENTROPY DROP</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.08);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE 23GB Zero-DDR3 Pool</td>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE 23GB Dedicated VRAM Pool</td>
                             <td style="padding: 10px 8px;">Vulkan0 (2080 Ti) + Vulkan1 (B580)</td>
                             <td style="padding: 10px 8px;">Qwen3.6-35B-A3B (20.6GB Q4)</td>
                             <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (100% VRAM)</td>
@@ -472,7 +472,7 @@
             <!-- VRAM Allocation Diagram -->
             <div style="background: #0d1117; border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; margin-top: 15px;">
                 <div style="font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 10px;">
-                    🗺️ Strategy 4 Physical Memory Topology: 23GB Zero-DDR3 Allocation Blueprint
+                    🗺️ Strategy 4 Physical Memory Topology: 23GB Dedicated VRAM Allocation Blueprint
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: var(--mono-stack); font-size: 0.78rem;">
                     <div style="background: #161b22; border: 1px solid #238636; border-radius: 4px; padding: 12px;">
@@ -504,12 +504,12 @@
             <div style="background: rgba(210, 168, 255, 0.08); border: 1px solid #bc8cff; border-radius: 6px; padding: 16px; margin-top: 15px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                     <div style="font-size: 0.88rem; font-weight: 700; color: #d2a8ff;">
-                        ⚡ Verified: Strategy 6 (CUDA + RPC Hybrid Zero-DDR3 MoE)
+                        ⚡ Verified: Strategy 6 (CUDA + RPC Hybrid MoE Pool)
                     </div>
                     <span style="font-size:0.7rem; font-weight:700; background:#271052; color:#d2a8ff; padding:2px 8px; border-radius:4px; border:1px solid #bc8cff;">62.4 TOK/S PP • 35.9 TOK/S TG</span>
                 </div>
                 <div style="font-size: 0.8rem; color: #c9d1d9; font-family: var(--mono-stack); line-height: 1.5;">
-                    Decoupled heterogenous execution verified: Native CUDA with FlashAttention and Turing Tensor Cores on RTX 2080 Ti (10.0GB <code>CUDA0</code>), communicating over loopback RPC (<code>ggml-rpc-server</code>) with Intel Arc B580 (12.0GB <code>RPC0</code>). <strong>Prompt Prefill: 62.43 tok/s (+49% vs Vulkan)</strong> &bull; <strong>Generation: 35.87 tok/s (+25% vs Vulkan)</strong>. 100% inside GPU VRAM with zero host DDR3 degradation.
+                    Decoupled heterogenous execution verified: Native CUDA with FlashAttention and Turing Tensor Cores on RTX 2080 Ti (10.0GB <code>CUDA0</code>), communicating over loopback RPC (<code>ggml-rpc-server</code>) with Intel Arc B580 (12.0GB <code>RPC0</code>). <strong>Prompt Prefill: 62.43 tok/s (+49% vs Vulkan)</strong> &bull; <strong>Generation: 35.87 tok/s (+25% vs Vulkan)</strong>. 100% inside GPU VRAM with dedicated GDDR6 bandwidth.
                 </div>
             </div>
         </div>
@@ -551,7 +551,7 @@
                             <td style="padding: 10px 8px; color: #e3b341;">Balanced conversational floor; solid coding bedrock for routine lab tasks.</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">70B Dense (Llama-3.3-70B + DDR3)</td>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">70B Dense (Llama-3.3-70B Offload)</td>
                             <td style="padding: 10px 8px; color: #3fb950;">~1,320 Elo &bull; 85.0% MMLU</td>
                             <td style="padding: 10px 8px; color: #f85149;">70B params / token</td>
                             <td style="padding: 10px 8px; color: #f85149;">2.5 tok/s</td>
@@ -571,7 +571,7 @@
             </div>
 
             <div style="font-size: 0.8rem; color: #8b949e; font-family: var(--mono-stack); margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 10px;">
-                💡 <strong>The MoE ROI Asymmetry:</strong> Qwen3.6-35B-A3B captures <strong>99.6% of the perceived intelligence of a 70B model</strong> (1,315 vs 1,320 Arena Elo), but because it activates only 3B parameters per forward step within our 23GB zero-DDR3 pool, it delivers <strong>11.4x higher token velocity</strong> than running a 70B model over DDR3.
+                💡 <strong>The MoE ROI Asymmetry:</strong> Qwen3.6-35B-A3B captures <strong>99.6% of the perceived intelligence of a 70B model</strong> (1,315 vs 1,320 Arena Elo), but because it activates only 3B parameters per forward step within our 23GB dedicated VRAM pool, it delivers <strong>14.3x higher token velocity</strong> than running an offloaded 70B model.
             </div>
         </div>
 
