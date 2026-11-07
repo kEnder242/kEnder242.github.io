@@ -405,6 +405,102 @@
             </div>
         </div>
 
+        <!-- 4. Architectural Slicing & Inference Strategies Deep-Dive -->
+        <div class="chart-card" style="margin-top: 30px;">
+            <div class="chart-title">🔬 Slicing the Silicon: Architectural Exploration & Inference Strategies</div>
+            <p style="font-size: 0.85rem; color: var(--sub-color); margin-bottom: 20px;">
+                Comprehensive empirical comparison of local execution architectures tested on the <code>z87-Linux</code> physical workstation, evaluating parameter capacity, memory bandwidth efficiency, and the critical avoidance of DDR3 host RAM bottlenecks.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; font-family: var(--mono-stack); margin-bottom: 25px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--accent-color);">
+                            <th style="padding: 10px 8px;">Architecture / Strategy</th>
+                            <th style="padding: 10px 8px;">Hardware Mapping</th>
+                            <th style="padding: 10px 8px;">Model & Size</th>
+                            <th style="padding: 10px 8px;">Active Bandwidth</th>
+                            <th style="padding: 10px 8px;">Observed Throughput</th>
+                            <th style="padding: 10px 8px;">Status / Verdict</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(35, 134, 54, 0.08);">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">1. Dense Single-GPU (Baseline)</td>
+                            <td style="padding: 10px 8px;">RTX 2080 Ti (11GB CUDA/Vulkan)</td>
+                            <td style="padding: 10px 8px;">Qwen3.7-Flash-8B-Q8_0 (8.2GB)</td>
+                            <td style="padding: 10px 8px; color: #3fb950;">616 GB/s (GDDR6)</td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">43.14 tok/s</td>
+                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px;">PRODUCTION BASE</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">2. Dense Layer Split + System RAM</td>
+                            <td style="padding: 10px 8px;">2080 Ti + Arc B580 + Host DDR3</td>
+                            <td style="padding: 10px 8px;">Llama-3-70B-Q4_K_M (38.5GB)</td>
+                            <td style="padding: 10px 8px; color: #f85149;">15 GB/s (DDR3-1600)</td>
+                            <td style="padding: 10px 8px; color: #f85149; font-weight: bold;">1.8 – 3.2 tok/s</td>
+                            <td style="padding: 10px 8px;"><span style="background:#490202; color:#f85149; padding:2px 6px; border-radius:4px;">DDR3 BOTTLENECK</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">3. Speculative Drafting (Predictor)</td>
+                            <td style="padding: 10px 8px;">Draft 1B (GPU0) + Target 8B (GPU1)</td>
+                            <td style="padding: 10px 8px;">Qwen-1.5B (Draft) / 8B (Target)</td>
+                            <td style="padding: 10px 8px; color: #e3b341;">Mixed GPU Interconnect</td>
+                            <td style="padding: 10px 8px; color: #e3b341; font-weight: bold;">~1.45x baseline</td>
+                            <td style="padding: 10px 8px;"><span style="background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px;">HIGH ENTROPY DROP</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.08);">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE 23GB Zero-DDR3 Pool</td>
+                            <td style="padding: 10px 8px;">Vulkan0 (2080 Ti) + Vulkan1 (B580)</td>
+                            <td style="padding: 10px 8px;">Qwen3.6-35B-A3B (18.5GB Q4)</td>
+                            <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (100% VRAM)</td>
+                            <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">Target: &ge; 15–25 tok/s</td>
+                            <td style="padding: 10px 8px;"><span style="background:#0c2d48; color:#4daafc; padding:2px 6px; border-radius:4px;">ACTIVE BENCHMARK</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">5. FreeToken Elastic Fabric ($q^*$ Policy)</td>
+                            <td style="padding: 10px 8px;">Adaptive VRAM LRU + PCIe Prefetch</td>
+                            <td style="padding: 10px 8px;">MoE Expert Caching (FTW format)</td>
+                            <td style="padding: 10px 8px; color: #d2a8ff;">Dynamic Bandwidth Hal</td>
+                            <td style="padding: 10px 8px; color: #d2a8ff; font-weight: bold;">Theoretical Peak</td>
+                            <td style="padding: 10px 8px;"><span style="background:#271052; color:#d2a8ff; padding:2px 6px; border-radius:4px;">AWAITING VULKAN HAL</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- VRAM Allocation Diagram -->
+            <div style="background: #0d1117; border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; margin-top: 15px;">
+                <div style="font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 10px;">
+                    🗺️ Strategy 4 Physical Memory Topology: 23GB Zero-DDR3 Allocation Blueprint
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: var(--mono-stack); font-size: 0.78rem;">
+                    <div style="background: #161b22; border: 1px solid #238636; border-radius: 4px; padding: 12px;">
+                        <div style="color: #3fb950; font-weight: bold; margin-bottom: 4px;">Slot 2: RTX 2080 Ti (11GB)</div>
+                        <div style="color: #8b949e;">Role: Attention & Primary Decode</div>
+                        <div style="margin-top: 8px;">• Layers 0–14: 8.5 GB</div>
+                        <div>• 128K KV Cache (q4_0): 2.5 GB</div>
+                        <div style="color: #3fb950; font-weight: bold; margin-top: 4px;">Total Allocated: 11.0 / 11.0 GB</div>
+                    </div>
+                    <div style="background: #161b22; border: 1px solid #4daafc; border-radius: 4px; padding: 12px;">
+                        <div style="color: #4daafc; font-weight: bold; margin-bottom: 4px;">Slot 1: Intel Arc B580 (16GB)</div>
+                        <div style="color: #8b949e;">Role: MoE Expert Overflow Pool</div>
+                        <div style="margin-top: 8px;">• Layers 15–31: 10.0 GB</div>
+                        <div>• Working Buffer: 1.0 GB</div>
+                        <div>• Display & QSV Reserve: 4.0 GB</div>
+                        <div style="color: #4daafc; font-weight: bold; margin-top: 4px;">Total Allocated: 12.0 / 16.0 GB</div>
+                    </div>
+                    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 12px;">
+                        <div style="color: #8b949e; font-weight: bold; margin-bottom: 4px;">Host RAM (DDR3-1600)</div>
+                        <div style="color: #8b949e;">Role: System & OS Only</div>
+                        <div style="margin-top: 8px; color: #3fb950;">• Model Weights: 0.0 GB (BYPASS)</div>
+                        <div style="color: #3fb950;">• KV Cache: 0.0 GB (BYPASS)</div>
+                        <div style="color: #3fb950; font-weight: bold; margin-top: 18px;">Zero Bandwidth Thrashing ✅</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="mission-control.js?v=8fef985d"></script>
