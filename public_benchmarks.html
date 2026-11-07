@@ -305,14 +305,14 @@
                 <div class="seat-header">
                     <div>
                         <div class="seat-title">Z87 Linux Dual-Pool (2080Ti + B580)</div>
-                        <div class="seat-role">Node Pinky &bull; 23GB Zero-DDR3 MoE</div>
+                        <div class="seat-role">Node Pinky &bull; CUDA + RPC Zero-DDR3 MoE</div>
                     </div>
                     <span id="badge-z87_2080ti" style="font-size:0.68rem; font-weight:700; background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; border:1px solid #238636;">ONLINE</span>
                 </div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-z87_2080ti" style="color:#d2a8ff;">Qwen3.6-35B-A3B (20.6GB Q4)</span></div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">Throughput:</span><span id="tp-z87_2080ti" style="color:#3fb950; font-weight:700;">28.5 tok/s</span></div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">TTFT:</span><span id="ttft-z87_2080ti">598 ms</span></div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">Efficiency:</span><span id="eff-z87_2080ti" style="color:#e3b341;">0.259 Tok/J</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-z87_2080ti" style="color:#d2a8ff;">Qwen3.6-35B-A3B (CUDA+RPC)</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">Throughput:</span><span id="tp-z87_2080ti" style="color:#3fb950; font-weight:700;">35.9 tok/s</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">TTFT:</span><span id="ttft-z87_2080ti">180 ms (62.4 tok/s pp)</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">Efficiency:</span><span id="eff-z87_2080ti" style="color:#e3b341;">0.326 Tok/J</span></div>
             </div>
 
             <div class="seat-card" id="card-cloud_swarm">
@@ -344,9 +344,9 @@
                 <div class="bar-value" id="bar-val-cloud_swarm" style="color: #e3b341;">38.2 tok/s</div>
             </div>
             <div class="bar-row">
-                <div class="bar-label">Linux Dual-Pool (35B MoE 23GB)</div>
-                <div class="bar-wrapper"><div class="bar-fill" id="bar-fill-z87_2080ti" style="width: 48.8%; background: #1f6feb;"></div></div>
-                <div class="bar-value" id="bar-val-z87_2080ti" style="color: #4daafc;">28.5 tok/s</div>
+                <div class="bar-label">Linux Dual-Pool (35B MoE CUDA+RPC)</div>
+                <div class="bar-wrapper"><div class="bar-fill" id="bar-fill-z87_2080ti" style="width: 61.4%; background: #1f6feb;"></div></div>
+                <div class="bar-value" id="bar-val-z87_2080ti" style="color: #4daafc;">35.9 tok/s</div>
             </div>
             <div class="bar-row">
                 <div class="bar-label">Apple M5 Air (27B Resident)</div>
@@ -390,8 +390,8 @@
             </div>
             <div class="bar-row">
                 <div class="bar-label">Linux Dual-Pool (110W draw)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 43.0%; background: #1f6feb;"></div></div>
-                <div class="bar-value" style="color: #4daafc;">0.259 Tok/J</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 54.1%; background: #1f6feb;"></div></div>
+                <div class="bar-value" style="color: #4daafc;">0.326 Tok/J</div>
             </div>
             <div class="bar-row">
                 <div class="bar-label">Windows 4090 (280W draw)</div>
@@ -500,16 +500,16 @@
                 </div>
             </div>
 
-            <!-- Strategy 6: Upcoming CUDA + RPC Hybrid -->
-            <div style="background: rgba(210, 168, 255, 0.05); border: 1px solid #bc8cff; border-radius: 6px; padding: 16px; margin-top: 15px;">
+            <!-- Strategy 6: Verified CUDA + RPC Hybrid -->
+            <div style="background: rgba(210, 168, 255, 0.08); border: 1px solid #bc8cff; border-radius: 6px; padding: 16px; margin-top: 15px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                     <div style="font-size: 0.88rem; font-weight: 700; color: #d2a8ff;">
-                        ⚡ In-Flight Experiment: Strategy 6 (CUDA + RPC Hybrid)
+                        ⚡ Verified: Strategy 6 (CUDA + RPC Hybrid Zero-DDR3 MoE)
                     </div>
-                    <span style="font-size:0.7rem; font-weight:700; background:#271052; color:#d2a8ff; padding:2px 8px; border-radius:4px; border:1px solid #bc8cff;">COMPILING NVCC CC75</span>
+                    <span style="font-size:0.7rem; font-weight:700; background:#271052; color:#d2a8ff; padding:2px 8px; border-radius:4px; border:1px solid #bc8cff;">62.4 TOK/S PP • 35.9 TOK/S TG</span>
                 </div>
                 <div style="font-size: 0.8rem; color: #c9d1d9; font-family: var(--mono-stack); line-height: 1.5;">
-                    Decoupled heterogenous execution: Native CUDA with FlashAttention-2 and Turing Tensor Cores on RTX 2080 Ti (`cuda:0`), communicating over local loopback RPC (`ggml-rpc-server`) to offload trailing MoE layers onto Intel Arc B580 (`Vulkan1`). Target: Accelerate long-prompt prefill while maintaining 28+ tok/s decode.
+                    Decoupled heterogenous execution verified: Native CUDA with FlashAttention and Turing Tensor Cores on RTX 2080 Ti (10.0GB <code>CUDA0</code>), communicating over loopback RPC (<code>ggml-rpc-server</code>) with Intel Arc B580 (12.0GB <code>RPC0</code>). <strong>Prompt Prefill: 62.43 tok/s (+49% vs Vulkan)</strong> &bull; <strong>Generation: 35.87 tok/s (+25% vs Vulkan)</strong>. 100% inside GPU VRAM with zero host DDR3 degradation.
                 </div>
             </div>
         </div>
@@ -559,12 +559,12 @@
                             <td style="padding: 10px 8px; color: #f85149;">Terrible ROI on desktop hardware; high intelligence destroyed by unusable latency.</td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(63, 185, 80, 0.08);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">35B MoE Dual-Pool (Qwen3.6-35B-A3B)</td>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">35B MoE Hybrid (Qwen3.6-35B-A3B)</td>
                             <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">~1,315 Elo &bull; 84.2% MMLU</td>
                             <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">3B active params / token</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">28.5 tok/s</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">37.5</td>
-                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; font-weight: bold;">SWEET SPOT ROI</span></td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">35.9 tok/s (62.4 pp)</td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">47.2</td>
+                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; font-weight: bold;">SWEET SPOT ROI (CUDA+RPC)</span></td>
                         </tr>
                     </tbody>
                 </table>
