@@ -1,42 +1,6 @@
 [
   {
     "date": "2016-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
-    "sensitivity": "Public",
-    "tags": [
-      "strategy",
-      "anchor"
-    ],
-    "rank": 5,
-    "id": "GEM-5594",
-    "document_date": "2016-01-01",
-    "event_era": "2016-01-01",
-    "event_year": 2016,
-    "event_quarter": "2016-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request b0be074c secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Initiating Pinky (Triage) intuition...Sounds like we're dealing with a compatibility issue on the dc6.bl2 board, let me check our logs to see when it happened.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2016.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2016-01-01",
-      "year": 2016,
-      "quarter": "2016-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
-  },
-  {
-    "date": "2016-01-01",
     "summary": "TODO: Update and share bxt_utils.py code",
     "evidence": "send updated bxt_utils.py to Jo",
     "sensitivity": "Public",

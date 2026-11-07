@@ -1,5 +1,20 @@
 [
   {
+    "date": "2005-04-15",
+    "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI compliant firmware and enterprise server platforms (IA64/IA32, FRB timer, EFI), receiving formal commendation from Senior Validation leadership.",
+    "evidence": "Intel/Yurcor Student contractor (March 15, 2004 - April 15, 2005): Validation of IPMI compliant Firmware (FTF: I2C, IOL, Serial, FRUSDR, Watchdog); BIOS testing on Enterprise platforms IA64 IA32 (Recovery, FRB timer, EFI); Personal letter of recommendation from Senior Software Validation Engineer.",
+    "sensitivity": "Public",
+    "tags": [
+      "BIOS",
+      "IPMI",
+      "Enterprise",
+      "IA64",
+      "Validation"
+    ],
+    "rank": 5,
+    "id": "GEM-510337"
+  },
+  {
     "date": "2005-01-01",
     "summary": "Memory board hot-add failure is likely related to system's handling of memory boards during hot-add operations.",
     "evidence": "RAW LOGS: tracker ID 38099",

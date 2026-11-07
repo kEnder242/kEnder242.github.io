@@ -1,38 +1,19 @@
 [
   {
-    "date": "2024-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
-    "evidence": "",
+    "date": "2024-06-13",
+    "summary": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution for CWF and DMR: Successfully executed Kayak+Montana transition plan, importing 21 libraries, natively executing 29 PECI+MCTP tests, and enabling Clearwater Forest (CWF) and Diamond Rapids (DMR).",
+    "evidence": "6/13/2024 Q2 2024 Insights (draft): Delivered and executed on Kayak+Montana transition plan; Kayak able to import 21 Montana libraries and natively execute 29 PECI+MCTP tests; Supported BA team by enabling Montana for CWF and DMR.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "Kayak",
+      "Montana",
+      "PECI",
+      "MCTP",
+      "CWF",
+      "DMR"
     ],
     "rank": 5,
-    "id": "GEM-ea62",
-    "trigger_context": "[FOYER] Request c99b5586 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Error: vLLM returned 400: {\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, you requested 501 output tokens and your prompt contains at least 7692 input tokens, for a total of at least 8193 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=7692)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
-    "document_date": "2024-01-01",
-    "event_era": "2024-01-01",
-    "event_year": 2024,
-    "event_quarter": "2024-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "refinement_level": 3,
-    "impact_level": 4,
-    "spatial_anchor": {
-      "source_file": "2024.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2024-01-01",
-      "year": 2024,
-      "quarter": "2024-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-a99ea0"
   },
   {
     "date": "2024-01-01",

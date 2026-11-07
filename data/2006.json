@@ -1,5 +1,20 @@
 [
   {
+    "date": "2006-10-20",
+    "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Validation & Automation Acceleration: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored automated test harness compressing validation cycle from 1 week to 2 days, earning 'Exceeds Expectations' rating in exit review.",
+    "evidence": "Intel Intern (Hillsboro) Oct. 24, 2005 - Oct. 20, 2006: Validation, Testing, and Automation of IPMI and internal firmware APIs; White box testing using GreenHills Development Environment (ARC/ARM) in C; Low level TCP/IP validation: IPMI over LAN, RMCP+; Automation compressed Eval cycle from 1 week to 2 days; 'Exceeds expectations' in exit Review.",
+    "sensitivity": "Public",
+    "tags": [
+      "RMCP+",
+      "IPMI",
+      "Automation",
+      "GreenHills",
+      "SOL"
+    ],
+    "rank": 5,
+    "id": "GEM-86834e"
+  },
+  {
     "date": "2006-01-01",
     "summary": "Updated RPC.tcl to reflect MC's verbosity changes",
     "evidence": "TODO or research link mentioned in [SOLUTIONS] 1.",

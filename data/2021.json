@@ -1,38 +1,18 @@
 [
   {
-    "date": "2021-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
-    "evidence": "",
+    "date": "2021-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Montana Platform Validation Framework Package Delivery: Packaged and released the Montana automation framework under XPIV devpi, instituting code review standards and multi-platform manageability tests.",
+    "evidence": "Insights 2021: Released Montana framework as a python package under XPIV devpi; Maintained quality in Montana code base by proactively engaging pull requests & code reviews.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "Montana",
+      "Devpi",
+      "Automation",
+      "Python",
+      "Code_Review"
     ],
     "rank": 5,
-    "id": "GEM-f822",
-    "document_date": "2021-01-01",
-    "event_era": "2021-01-01",
-    "event_year": 2021,
-    "event_quarter": "2021-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 92264660 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition... \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "spatial_anchor": {
-      "source_file": "2021.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2021-01-01",
-      "year": 2021,
-      "quarter": "2021-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-cfd8e0"
   },
   {
     "date": "2021-01-01",

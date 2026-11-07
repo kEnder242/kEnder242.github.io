@@ -1,39 +1,18 @@
 [
   {
-    "date": "2014-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "date": "2014-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Trace Validation: Drove system validation and defect triage for Open-IPC-API and NPK hardware trace features across platform bring-up milestones.",
+    "evidence": "System Validation Engineer (January 2014 to December 2014): Responsible for integration and functional tests for Open-IPC-API and NPK features; verified fixes and communicated test coverage and existing gaps at release milestones. Rated Successful.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "Open_IPC",
+      "NPK",
+      "Trace",
+      "System_Validation",
+      "BringUp"
     ],
     "rank": 5,
-    "id": "GEM-2a70",
-    "document_date": "2014-01-01",
-    "event_era": "2014-01-01",
-    "event_year": 2014,
-    "event_quarter": "2014-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request ebfe1b83 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.It seems like we're dealing with a discrepancy between the tool version and its actual usage in our logs. I'm going to check if there were any specific error patterns or warnings related to this issue during that time period.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2014.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2014-01-01",
-      "year": 2014,
-      "quarter": "2014-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-1076bd"
   },
   {
     "date": "2014-01-03",

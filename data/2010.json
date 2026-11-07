@@ -1,38 +1,16 @@
 [
   {
-    "date": "2010-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "date": "2010-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Enterprise Manageability Firmware Conformance & Hardware Validation: Led test coverage expansion and firmware release validation across PCG/SSE server platforms, ensuring zero-defect customer deliverables.",
+    "evidence": "Job Title Firmware Engineer Grade 5 (PCG/SSE FW team): Responsible for Willowbrook/Westerlee firmware and DCMI Conformance verification across OEM customer requirements. Rated Successful.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "Firmware",
+      "DCMI",
+      "Validation",
+      "OEM"
     ],
     "rank": 5,
-    "id": "GEM-afb0",
-    "document_date": "2010-01-01",
-    "event_era": "2010-01-01",
-    "event_year": 2010,
-    "event_quarter": "2010-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 95791106 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Pinky (Triage) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROC",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2010.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2010-01-01",
-      "year": 2010,
-      "quarter": "2010-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-67fef4"
   }
 ]

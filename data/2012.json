@@ -1,39 +1,18 @@
 [
   {
-    "date": "2012-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "date": "2012-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Haswell-Server and Client Unified Debug Infrastructure: Expanded the PDT VISA engine across Haswell-Server and Haswell-Client programs, delivering platform-wide internal signal observation for complex multi-die topologies.",
+    "evidence": "Review Period Jan 2012 - Dec 2012 (Software Engineer Grade 05): Software developer in Intel Platform Debug Toolkit, responsible for VISA development for Haswell-Client and Haswell-Server programs. Rated Successful.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "VISA",
+      "Haswell_Server",
+      "Haswell_Client",
+      "PDT",
+      "Debugging"
     ],
     "rank": 5,
-    "id": "GEM-91b6",
-    "document_date": "2012-01-01",
-    "event_era": "2012-01-01",
-    "event_year": 2012,
-    "event_quarter": "2012-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 04ccd88b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Initiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n- CHUNK-2: Anchor Match: BMC provisioning BKM through host interface involves issuing a command from EFI shell to enable the special user `root` with password `0penBmc1`; Anchor Missing: None => KEEP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[USER_QUERY]: Debug condition or inquiry that activates this knowledge: BMC PECI master functionality discussion on 3/24/2020.\n\n[Historical Record]\n[CHUNK-1]:\nTriage Situation: \nTriage Hints:\n\n[CHUNK-2]:\n[RAG_CONTEXT]:\n[2020-03-24] BMC PECI master functionality discussion\nEVIDENCE: [RAW LOGS] discussion about BMC PECI master functionality on 3/24/2020\n\n[Blackboard Ledger]:\nDistillation Bullets:\n- BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`\n\n[Boost Interest]\n\n<boost_interest> BMC provisioning BKM through host interface involves issuing a command to enable special user `root` with password `0penBmc1`. This knowledge is crucial for understanding the BMC PECI master functionality discussion on 3/24/2020. \ud83d\udca1 Curator Note: This anchor match is essential for validating the BMC PECI master functionality discussion on 3/24/2020.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2012.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2012-01-01",
-      "year": 2012,
-      "quarter": "2012-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-440d43"
   },
   {
     "date": "2012-01-01",

@@ -1,39 +1,18 @@
 [
   {
-    "date": "2015-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "date": "2015-12-31",
+    "summary": "[STRATEGIC_ANCHOR] DSD Trace Stack & Broxton OEM Release Assurance: Ensured release health of DSD trace debug tools (PVT debug stack and PDT VISA) for Broxton SoC, maintaining high validation quality across customer releases.",
+    "evidence": "Validation Engineer in DSD (1/1/2015 to 12/31/2015): Responsible for health of DSD trace debug tools (PVT debug stack, PDT VISA capabilities) and communicating capability and release quality of BXT tools released to OEMs. Rated Successful.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "DSD",
+      "Broxton",
+      "PVT",
+      "VISA",
+      "OEM_Quality"
     ],
     "rank": 5,
-    "id": "GEM-abc1",
-    "document_date": "2015-01-01",
-    "event_era": "2015-01-01",
-    "event_year": 2015,
-    "event_quarter": "2015-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 0d503399 secured in queue. Igniting Brain...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.The local engine is warming its anchors right now. Re-connecting momentarily!",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2015.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2015-01-01",
-      "year": 2015,
-      "quarter": "2015-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-c13354"
   },
   {
     "date": "2015-01-01",

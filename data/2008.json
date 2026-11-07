@@ -1,38 +1,17 @@
 [
   {
-    "date": "2008-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to sustaining and enhancing ESB2 server management firmware stack, as well as creating a high-quality transport library for the DCMI conformance suite. This marked a significant shift in his focus towards technical expertise and problem-solving.",
-    "evidence": "Key accomplishments include reproducing and characterizing critical customer issues, collaborating with senior engineers to release the first cut of the transport library, and defining generic transport APIs for use by applications.",
+    "date": "2008-12-31",
+    "summary": "[STRATEGIC_ANCHOR] ESB2 Firmware Sustaining & DCMI/SOL Transport Architecture: Built the IPDC transport library for the DCMI conformance suite, uncovered cipher suite defects in Bensley/Thurley, and demonstrated high-performance SOL API solution replacing serial dongles in Microsoft datacenters.",
+    "evidence": "Review Period January 2008 - December 2008 (Grade 5): Jason worked as firmware developer in CCG SSE group for ESB2 and Willowbrook DCMI. Uncovered cipher suite bugs in Bensley and Thurley. Demonstrated SOL API solution capable of replacing serial IP dongles in Microsoft datacenter. Rated Successful for 2008 focal.",
     "sensitivity": "Public",
     "tags": [
-      "anchor",
-      "strategy"
+      "DCMI",
+      "ESB2",
+      "SOL",
+      "Firmware",
+      "Microsoft"
     ],
     "rank": 5,
-    "id": "GEM-4709",
-    "document_date": "2008-01-01",
-    "event_era": "2008-01-01",
-    "event_year": 2008,
-    "event_quarter": "2008-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: '[STRATEGIC_ANCHOR] Mastery of Firmware...When diagnosing IPMI 2.0 RMCP+ session failures or DCMI conformance gaps in ESB2 server firmware, specifically when isolating transport-layer protocol deviations from application-level logic errors.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "chunk_type": "FOCAL_DRAFT",
-    "spatial_anchor": {
-      "source_file": "2008.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2008-01-01",
-      "year": 2008,
-      "quarter": "2008-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-138f54"
   }
 ]

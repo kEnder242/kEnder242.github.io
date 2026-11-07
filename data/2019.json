@@ -1,38 +1,18 @@
 [
   {
-    "date": "2019-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
-    "evidence": "",
+    "date": "2019-11-18",
+    "summary": "[STRATEGIC_ANCHOR] Datacenter Manageability & OpenBMC Architecture Transition: Established cross-functional telemetry and manageability validation frameworks bridging DPV and PIAV platforms.",
+    "evidence": "2019 Insights: Manageability automation, telemetry validation frameworks, and initial OpenBMC transition for datacenter platform architectures.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "OpenBMC",
+      "PIAV",
+      "DPV",
+      "Telemetry",
+      "Datacenter"
     ],
     "rank": 5,
-    "document_date": "2019-01-01",
-    "event_era": "2019-01-01",
-    "event_year": 2019,
-    "event_quarter": "2019-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request 37b01f3f secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, it sounds like we're looking at some interesting interactions between the CLX platform and MIV software features. I'm checking our logs from January 2020 to see how these features interact with each other.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "spatial_anchor": {
-      "source_file": "2019_2024.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2019-01-01",
-      "year": 2019,
-      "quarter": "2019-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED",
-    "id": "GEM-4489"
+    "id": "GEM-e7699e"
   },
   {
     "date": "2019-01-01",

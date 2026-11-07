@@ -1,38 +1,17 @@
 [
   {
-    "date": "2020-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
-    "evidence": "",
+    "date": "2020-11-13",
+    "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establishing automated power-limiting and thermal telemetry test coverage.",
+    "evidence": "2020 Insights: Insights for OpenNM_IPMI requirements across teams; mapping IPMI commands to NM Redfish APIs and power limiting test cases.",
     "sensitivity": "Public",
     "tags": [
-      "strategy",
-      "anchor"
+      "Redfish",
+      "NodeManager",
+      "IPMI",
+      "Power_Limiting"
     ],
     "rank": 5,
-    "id": "GEM-3fed",
-    "document_date": "2020-01-01",
-    "event_era": "2020-01-01",
-    "event_year": 2020,
-    "event_quarter": "2020-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request a71a128e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: Updated L-BMC firmware enables BMC SMBus segment and PECI access; Anchor Missing: BMC provisioning BKM through host interface does not directly relate => DROP\n- CHUNK-2: Anchor Missing: BMC provisioning BKM through host interface involves enabling special user `root` with password `0penBmc1`; Anchor Missing: This chunk is irrelevant to Jason's query => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: DROP",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "spatial_anchor": {
-      "source_file": "2020.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2020-01-01",
-      "year": 2020,
-      "quarter": "2020-Q1",
-      "precision": "EXACT"
-    },
-    "status": "SATURATED"
+    "id": "GEM-74523c"
   },
   {
     "date": "2020-01-01",

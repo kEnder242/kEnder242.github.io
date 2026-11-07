@@ -1,5 +1,20 @@
 [
   {
+    "date": "2022-12-31",
+    "summary": "[STRATEGIC_ANCHOR] EMR Power-On Manageability Automation & DTAF Framework Integration: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines.",
+    "evidence": "Insights 2022: Recognized for support for PECI code during EMR PO to enable Montana code for EMR PO; enabled Manageability to run automated at EMR PO; merged Montana path into DTAF.",
+    "sensitivity": "Public",
+    "tags": [
+      "EMR",
+      "PECI",
+      "Power_On",
+      "DTAF",
+      "Manageability"
+    ],
+    "rank": 5,
+    "id": "GEM-baf835"
+  },
+  {
     "date": "2022-00-00",
     "summary": "Release of SensorSeverityThreshold_OpenBMC_longrun.py, blackbox.py, gethostcpudata.py, makechart.py, pcu_notes.py, peciXtor.py, peci_framework_ipmi_example.py, peci_redfish.py, pecistressor.py, policy.py, policy_jason.py, sensor_validator.py, statistics.py. This release includes several Python scripts for OpenBMC and Redfish interfaces.",
     "evidence": "[TOOL ERA REGISTRY]...",
@@ -126,41 +141,6 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
-  },
-  {
-    "date": "2022-01-01",
-    "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platform enablement for CWF and DMR.",
-    "evidence": "",
-    "sensitivity": "Public",
-    "tags": [
-      "strategy",
-      "anchor"
-    ],
-    "rank": 5,
-    "id": "GEM-c228",
-    "document_date": "2022-01-01",
-    "event_era": "2022-01-01",
-    "event_year": 2022,
-    "event_quarter": "2022-Q1",
-    "temporal_confidence": 0.9,
-    "temporal_provenance": "document_date",
-    "impact_level": 4,
-    "refinement_level": 3,
-    "trigger_context": "[FOYER] Request cc575bc4 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.**TECHNICAL TRUTH**\n\nInconsistent error codes between QLogic HSC EPS and IPMI may indicate misconfiguration or hardware fault.\n\nThe error code 0xCE in QLogic HSC EPS logs specifically suggests a hardware issue unrelated to IPMI 2.0 implementation.\n\n**CONVERS",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "spatial_anchor": {
-      "source_file": "2022.json",
-      "line_start": 1,
-      "line_end": 1
-    },
-    "temporal_anchor": {
-      "era": "2022-01-01",
-      "year": 2022,
-      "quarter": "2022-Q1",
-      "precision": "EXACT"
-    },
     "status": "SATURATED"
   },
   {
