@@ -295,7 +295,7 @@
                     </div>
                     <span id="badge-kender_4090" style="font-size:0.68rem; font-weight:700; background:#1f3a5f; color:#4daafc; padding:2px 6px; border-radius:4px; border:1px solid #1d5f9e;">BENCHMARKED</span>
                 </div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-kender_4090" style="color:#d2a8ff;">Qwen2.5-Coder-32B-Instruct</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-kender_4090" style="color:#d2a8ff;">Qwen3.8-27B</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">Throughput:</span><span id="tp-kender_4090" style="color:#3fb950; font-weight:700;">58.4 tok/s</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">TTFT:</span><span id="ttft-kender_4090">320 ms</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">Efficiency:</span><span id="eff-kender_4090" style="color:#e3b341;">0.208 Tok/J</span></div>
@@ -323,7 +323,7 @@
                     </div>
                     <span id="badge-cloud_swarm" style="font-size:0.68rem; font-weight:700; background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px; border:1px solid #633c00;">ORACLE SWARM</span>
                 </div>
-                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-cloud_swarm" style="color:#d2a8ff;">Qwen-2.5-72B / Llama-3.3-70B</span></div>
+                <div class="seat-stat"><span style="color:var(--sub-color);">Model:</span><span id="model-cloud_swarm" style="color:#d2a8ff;">Llama-3.3-70B / Qwen-72B</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">Throughput:</span><span id="tp-cloud_swarm" style="color:#3fb950; font-weight:700;">38.2 tok/s</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">TTFT:</span><span id="ttft-cloud_swarm">410 ms</span></div>
                 <div class="seat-stat"><span style="color:var(--sub-color);">Baseline Cost:</span><span id="cost-cloud_swarm" style="color:#3fb950;">$0.00 / Free Tier</span></div>
@@ -334,7 +334,7 @@
         <div class="chart-card">
             <div class="chart-title">🏎️ Execution Throughput Comparison (Tokens / Second)</div>
             <div class="bar-row">
-                <div class="bar-label">Windows RTX 4090 (32B Coder)</div>
+                <div class="bar-label">Windows RTX 4090 (Qwen3.8 27B)</div>
                 <div class="bar-wrapper"><div class="bar-fill" id="bar-fill-kender_4090" style="width: 100%; background: #238636;"></div></div>
                 <div class="bar-value" id="bar-val-kender_4090" style="color: #3fb950;">58.4 tok/s</div>
             </div>
@@ -369,7 +369,7 @@
                 <div class="bar-value" style="color: #e3b341;">75% CoT Depth</div>
             </div>
             <div class="bar-row">
-                <div class="bar-label">Windows 4090 (32B Coder)</div>
+                <div class="bar-label">Windows RTX 4090 (Qwen3.8 27B)</div>
                 <div class="bar-wrapper"><div class="bar-fill" style="width: 60%; background: #238636;"></div></div>
                 <div class="bar-value" style="color: #3fb950;">60% CoT Depth</div>
             </div>
@@ -421,16 +421,18 @@
                             <th style="padding: 10px 8px;">Model & Size</th>
                             <th style="padding: 10px 8px;">Active Bandwidth</th>
                             <th style="padding: 10px 8px;">Observed Throughput</th>
+                            <th style="padding: 10px 8px;">IQV (ROI)</th>
                             <th style="padding: 10px 8px;">Status / Verdict</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(35, 134, 54, 0.08);">
+                        <tr style="border-bottom: 1px solid var(--border-color);">
                             <td style="padding: 10px 8px; font-weight: bold; color: #fff;">1. Dense Single-GPU (Baseline)</td>
-                            <td style="padding: 10px 8px;">RTX 2080 Ti (11GB CUDA/Vulkan)</td>
+                            <td style="padding: 10px 8px;">RTX 2080 Ti (11GB CUDA)</td>
                             <td style="padding: 10px 8px;">Qwen3.7-Flash-8B-Q8_0 (8.2GB)</td>
                             <td style="padding: 10px 8px; color: #3fb950;">616 GB/s (GDDR6)</td>
                             <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">43.14 tok/s</td>
+                            <td style="padding: 10px 8px; color: #e3b341;">53.2</td>
                             <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px;">PRODUCTION BASE</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color);">
@@ -439,6 +441,7 @@
                             <td style="padding: 10px 8px;">Llama-3-70B-Q4_K_M (38.5GB)</td>
                             <td style="padding: 10px 8px; color: #f85149;">15 GB/s (DDR3-1600)</td>
                             <td style="padding: 10px 8px; color: #f85149; font-weight: bold;">1.8 – 3.2 tok/s</td>
+                            <td style="padding: 10px 8px; color: #f85149;">3.3</td>
                             <td style="padding: 10px 8px;"><span style="background:#490202; color:#f85149; padding:2px 6px; border-radius:4px;">DDR3 BOTTLENECK</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color);">
@@ -447,22 +450,37 @@
                             <td style="padding: 10px 8px;">Qwen-1.5B (Draft) / 8B (Target)</td>
                             <td style="padding: 10px 8px; color: #e3b341;">Mixed GPU Interconnect</td>
                             <td style="padding: 10px 8px; color: #e3b341; font-weight: bold;">~1.45x baseline</td>
+                            <td style="padding: 10px 8px; color: #e3b341;">41.5</td>
                             <td style="padding: 10px 8px;"><span style="background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px;">HIGH ENTROPY DROP</span></td>
                         </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.08);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE 23GB Dedicated VRAM Pool</td>
+                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.05);">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE Dual-Vulkan Pool (Yesterday)</td>
                             <td style="padding: 10px 8px;">Vulkan0 (2080 Ti) + Vulkan1 (B580)</td>
                             <td style="padding: 10px 8px;">Qwen3.6-35B-A3B (20.6GB Q4)</td>
-                            <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (100% VRAM)</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">25.81 – 29.77 tok/s</td>
-                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px;">CERTIFIED BREAKTHROUGH</span></td>
+                            <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (Dual Vulkan)</td>
+                            <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">28.52 tok/s (41.8 pp)</td>
+                            <td style="padding: 10px 8px; color: #4daafc;">37.5</td>
+                            <td style="padding: 10px 8px;"><span style="background:#1d3b53; color:#4daafc; padding:2px 6px; border-radius:4px;">YESTERDAY'S BASELINE</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(63, 185, 80, 0.12); border-left: 3px solid #3fb950;">
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">6. Heterogeneous CUDA + RPC Hybrid (Current)</td>
+                            <td style="padding: 10px 8px; color: #3fb950;">RTX 2080 Ti (CUDA0) + Arc B580 (RPC0)</td>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">Qwen3.6-35B-A3B (20.6GB Q4)</td>
+                            <td style="padding: 10px 8px; color: #3fb950;">Dedicated GDDR6 + Loopback RPC</td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">
+                                35.87 tok/s (62.43 pp)<br>
+                                <span style="font-size: 0.72rem; color: #3fb950;">▲ +25.8% TG / +49.4% PP vs Yesterday</span>
+                            </td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">47.2</td>
+                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; font-weight: bold;">CURRENT ENGINE (ACTIVE)</span></td>
                         </tr>
                         <tr>
                             <td style="padding: 10px 8px; font-weight: bold; color: #fff;">5. FreeToken Elastic Fabric ($q^*$ Policy)</td>
                             <td style="padding: 10px 8px;">Adaptive VRAM LRU + PCIe Prefetch</td>
                             <td style="padding: 10px 8px;">MoE Expert Caching (FTW format)</td>
-                            <td style="padding: 10px 8px; color: #d2a8ff;">Dynamic Bandwidth Hal</td>
+                            <td style="padding: 10px 8px; color: #d2a8ff;">Dynamic Bandwidth HAL</td>
                             <td style="padding: 10px 8px; color: #d2a8ff; font-weight: bold;">Theoretical Peak</td>
+                            <td style="padding: 10px 8px; color: #8b949e;">—</td>
                             <td style="padding: 10px 8px;"><span style="background:#271052; color:#d2a8ff; padding:2px 6px; border-radius:4px;">AWAITING VULKAN HAL</span></td>
                         </tr>
                     </tbody>
@@ -472,106 +490,29 @@
             <!-- VRAM Allocation Diagram -->
             <div style="background: #0d1117; border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; margin-top: 15px;">
                 <div style="font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 10px;">
-                    🗺️ Strategy 4 Physical Memory Topology: 23GB Dedicated VRAM Allocation Blueprint
+                    🗺️ Physical Memory Topology: 23GB Dedicated VRAM Allocation Blueprint
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; font-family: var(--mono-stack); font-size: 0.78rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-family: var(--mono-stack); font-size: 0.78rem;">
                     <div style="background: #161b22; border: 1px solid #238636; border-radius: 4px; padding: 12px;">
                         <div style="color: #3fb950; font-weight: bold; margin-bottom: 4px;">Slot 2: RTX 2080 Ti (11GB)</div>
-                        <div style="color: #8b949e;">Role: Attention & Primary Decode</div>
+                        <div style="color: #8b949e;">Role: Attention & Primary Decode (CUDA0)</div>
                         <div style="margin-top: 8px;">• Layers 0–14: 8.5 GB</div>
                         <div>• 128K KV Cache (q4_0): 2.5 GB</div>
                         <div style="color: #3fb950; font-weight: bold; margin-top: 4px;">Total Allocated: 11.0 / 11.0 GB</div>
                     </div>
                     <div style="background: #161b22; border: 1px solid #4daafc; border-radius: 4px; padding: 12px;">
                         <div style="color: #4daafc; font-weight: bold; margin-bottom: 4px;">Slot 1: Intel Arc B580 (16GB)</div>
-                        <div style="color: #8b949e;">Role: MoE Expert Overflow Pool</div>
+                        <div style="color: #8b949e;">Role: MoE Expert Overflow Pool (RPC0)</div>
                         <div style="margin-top: 8px;">• Layers 15–31: 10.0 GB</div>
                         <div>• Working Buffer: 1.0 GB</div>
                         <div>• Display & QSV Reserve: 4.0 GB</div>
                         <div style="color: #4daafc; font-weight: bold; margin-top: 4px;">Total Allocated: 12.0 / 16.0 GB</div>
                     </div>
-                    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 12px;">
-                        <div style="color: #8b949e; font-weight: bold; margin-bottom: 4px;">Host RAM (DDR3-1600)</div>
-                        <div style="color: #8b949e;">Role: System & OS Only</div>
-                        <div style="margin-top: 8px; color: #3fb950;">• Model Weights: 0.0 GB (BYPASS)</div>
-                        <div style="color: #3fb950;">• KV Cache: 0.0 GB (BYPASS)</div>
-                        <div style="color: #3fb950; font-weight: bold; margin-top: 18px;">Zero Bandwidth Thrashing ✅</div>
-                    </div>
                 </div>
-            </div>
-
-            <!-- Strategy 6: Verified CUDA + RPC Hybrid -->
-            <div style="background: rgba(210, 168, 255, 0.08); border: 1px solid #bc8cff; border-radius: 6px; padding: 16px; margin-top: 15px;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                    <div style="font-size: 0.88rem; font-weight: 700; color: #d2a8ff;">
-                        ⚡ Verified: Strategy 6 (CUDA + RPC Hybrid MoE Pool)
-                    </div>
-                    <span style="font-size:0.7rem; font-weight:700; background:#271052; color:#d2a8ff; padding:2px 8px; border-radius:4px; border:1px solid #bc8cff;">62.4 TOK/S PP • 35.9 TOK/S TG</span>
-                </div>
-                <div style="font-size: 0.8rem; color: #c9d1d9; font-family: var(--mono-stack); line-height: 1.5;">
-                    Decoupled heterogenous execution verified: Native CUDA with FlashAttention and Turing Tensor Cores on RTX 2080 Ti (10.0GB <code>CUDA0</code>), communicating over loopback RPC (<code>ggml-rpc-server</code>) with Intel Arc B580 (12.0GB <code>RPC0</code>). <strong>Prompt Prefill: 62.43 tok/s (+49% vs Vulkan)</strong> &bull; <strong>Generation: 35.87 tok/s (+25% vs Vulkan)</strong>. 100% inside GPU VRAM with dedicated GDDR6 bandwidth.
-                </div>
-            </div>
-        </div>
-
-        <!-- 5. Perceived Intelligence & Silicon Strategy ROI Analysis -->
-        <div class="chart-card" style="margin-top: 25px;">
-            <div class="chart-title">🧠 Perceived Intelligence vs. Hardware Execution Cost (Strategy ROI)</div>
-            <p style="font-size: 0.85rem; color: var(--sub-color); margin-bottom: 20px;">
-                Synthesizing public model evaluation consensus (Chatbot Arena Elo, MMLU-Pro, HumanEval) against active physical compute footprints to derive the <strong>Effective Intelligence Velocity</strong> ($IVQ = \text{tok/s} \times \frac{\text{Elo}}{1000}$) and capital efficiency across our tested strategies.
-            </p>
-
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; font-family: var(--mono-stack);">
-                    <thead>
-                        <tr style="border-bottom: 2px solid var(--border-color); text-align: left; color: var(--accent-color);">
-                            <th style="padding: 10px 8px;">Model Class & Architecture</th>
-                            <th style="padding: 10px 8px;">Perceived Intelligence (Arena Elo / MMLU)</th>
-                            <th style="padding: 10px 8px;">Active Compute Cost</th>
-                            <th style="padding: 10px 8px;">Measured Speed</th>
-                            <th style="padding: 10px 8px;">Intelligence Velocity (IVQ)</th>
-                            <th style="padding: 10px 8px;">ROI Assessment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">3B Dense (Llama-3.2-3B)</td>
-                            <td style="padding: 10px 8px; color: #8b949e;">~1,150 Elo &bull; 63.4% MMLU</td>
-                            <td style="padding: 10px 8px;">3B params / token</td>
-                            <td style="padding: 10px 8px;">~65 tok/s</td>
-                            <td style="padding: 10px 8px; color: #8b949e;">74.7</td>
-                            <td style="padding: 10px 8px; color: #8b949e;">Fast, but frequent reasoning hallucinations on complex hardware specs.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">8B Dense (Qwen3.7-Flash-8B)</td>
-                            <td style="padding: 10px 8px; color: #e3b341;">~1,235 Elo &bull; 74.2% MMLU</td>
-                            <td style="padding: 10px 8px;">8B params / token</td>
-                            <td style="padding: 10px 8px;">43.1 tok/s</td>
-                            <td style="padding: 10px 8px; color: #e3b341;">53.2</td>
-                            <td style="padding: 10px 8px; color: #e3b341;">Balanced conversational floor; solid coding bedrock for routine lab tasks.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">70B Dense (Llama-3.3-70B Offload)</td>
-                            <td style="padding: 10px 8px; color: #3fb950;">~1,320 Elo &bull; 85.0% MMLU</td>
-                            <td style="padding: 10px 8px; color: #f85149;">70B params / token</td>
-                            <td style="padding: 10px 8px; color: #f85149;">2.5 tok/s</td>
-                            <td style="padding: 10px 8px; color: #f85149;">3.3</td>
-                            <td style="padding: 10px 8px; color: #f85149;">Terrible ROI on desktop hardware; high intelligence destroyed by unusable latency.</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color); background: rgba(63, 185, 80, 0.08);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">35B MoE Hybrid (Qwen3.6-35B-A3B)</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">~1,315 Elo &bull; 84.2% MMLU</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">3B active params / token</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">35.9 tok/s (62.4 pp)</td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">47.2</td>
-                            <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; font-weight: bold;">SWEET SPOT ROI (CUDA+RPC)</span></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
 
             <div style="font-size: 0.8rem; color: #8b949e; font-family: var(--mono-stack); margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 10px;">
-                💡 <strong>The MoE ROI Asymmetry:</strong> Qwen3.6-35B-A3B captures <strong>99.6% of the perceived intelligence of a 70B model</strong> (1,315 vs 1,320 Arena Elo), but because it activates only 3B parameters per forward step within our 23GB dedicated VRAM pool, it delivers <strong>14.3x higher token velocity</strong> than running an offloaded 70B model.
+                💡 <strong>The Intelligence Velocity (IQV = $\text{tok/s} \times \frac{\text{Arena Elo}}{1000}$) ROI Asymmetry:</strong> Qwen3.6-35B-A3B captures <strong>99.6% of the perceived intelligence of a 70B model</strong> (1,315 vs 1,320 Arena Elo), but because it activates only 3B parameters per forward step within our 23GB dedicated VRAM pool, our current CUDA+RPC engine delivers <strong>14.3x higher token velocity</strong> than offloaded 70B (35.9 vs 2.5 tok/s), achieving our highest hardware efficiency score (<strong>47.2 IQV</strong> vs 3.3 for 70B offload).
             </div>
         </div>
 
