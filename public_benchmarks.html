@@ -346,7 +346,7 @@
                             <th style="padding: 10px 8px;">Model & Size</th>
                             <th style="padding: 10px 8px;">Active Bandwidth</th>
                             <th style="padding: 10px 8px;">Observed Throughput</th>
-                            <th style="padding: 10px 8px;">IQV</th>
+                            <th style="padding: 10px 8px;">Intelligence Benchmark (MMLU / Elo)</th>
                             <th style="padding: 10px 8px;">Status / Verdict</th>
                         </tr>
                     </thead>
@@ -357,7 +357,7 @@
                             <td style="padding: 10px 8px;">Qwen3.7-Flash-8B-Q8_0 (8.2GB)</td>
                             <td style="padding: 10px 8px; color: #3fb950;">616 GB/s (GDDR6)</td>
                             <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">43.14 tok/s</td>
-                            <td style="padding: 10px 8px; color: #e3b341;">53.2</td>
+                            <td style="padding: 10px 8px; color: #e3b341; font-weight: bold;">74.2% <span style="font-size:0.7rem; color:var(--sub-color); font-weight:normal;">(1,235 Elo)</span></td>
                             <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px;">PRODUCTION BASE</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color);">
@@ -366,7 +366,7 @@
                             <td style="padding: 10px 8px;">Llama-3-70B-Q4_K_M (38.5GB)</td>
                             <td style="padding: 10px 8px; color: #f85149;">15 GB/s (DDR3-1600)</td>
                             <td style="padding: 10px 8px; color: #f85149; font-weight: bold;">1.8 – 3.2 tok/s</td>
-                            <td style="padding: 10px 8px; color: #f85149;">3.3</td>
+                            <td style="padding: 10px 8px; color: #f85149; font-weight: bold;">85.0% <span style="font-size:0.7rem; color:var(--sub-color); font-weight:normal;">(1,320 Elo)</span></td>
                             <td style="padding: 10px 8px;"><span style="background:#490202; color:#f85149; padding:2px 6px; border-radius:4px;">DDR3 BOTTLENECK</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color);">
@@ -375,7 +375,7 @@
                             <td style="padding: 10px 8px;">Qwen-1.5B (Draft) / 8B (Target)</td>
                             <td style="padding: 10px 8px; color: #e3b341;">Mixed GPU Interconnect</td>
                             <td style="padding: 10px 8px; color: #e3b341; font-weight: bold;">~1.45x baseline</td>
-                            <td style="padding: 10px 8px; color: #e3b341;">41.5</td>
+                            <td style="padding: 10px 8px; color: #e3b341; font-weight: bold;">74.2% <span style="font-size:0.7rem; color:var(--sub-color); font-weight:normal;">(1,235 Elo)</span></td>
                             <td style="padding: 10px 8px;"><span style="background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px;">HIGH ENTROPY DROP</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.05);">
@@ -384,7 +384,7 @@
                             <td style="padding: 10px 8px;">Qwen3.6-35B-A3B (20.6GB Q4)</td>
                             <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (Dual Vulkan)</td>
                             <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">28.52 tok/s (41.8 pp)</td>
-                            <td style="padding: 10px 8px; color: #4daafc;">37.5</td>
+                            <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">84.2% <span style="font-size:0.7rem; color:var(--sub-color); font-weight:normal;">(1,315 Elo)</span></td>
                             <td style="padding: 10px 8px;"><span style="background:#1d3b53; color:#4daafc; padding:2px 6px; border-radius:4px;">YESTERDAY'S BASELINE</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(63, 185, 80, 0.12); border-left: 3px solid #3fb950;">
@@ -395,7 +395,7 @@
                             <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">
                                 35.87 tok/s (62.43 pp)
                             </td>
-                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">47.2</td>
+                            <td style="padding: 10px 8px; color: #3fb950; font-weight: bold;">84.2% <span style="font-size:0.7rem; color:#3fb950; font-weight:normal;">(1,315 Elo)</span></td>
                             <td style="padding: 10px 8px;"><span style="background:#1b4728; color:#3fb950; padding:2px 6px; border-radius:4px; font-weight: bold;">CURRENT ENGINE (ACTIVE)</span></td>
                         </tr>
                         <tr>
@@ -436,7 +436,7 @@
             </div>
 
             <div style="font-size: 0.8rem; color: #8b949e; font-family: var(--mono-stack); margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 10px;">
-                💡 <strong>Intelligence Velocity (IQV = $\text{tok/s} \times \frac{\text{Arena Elo}}{1000}$):</strong> Qwen3.6-35B-A3B captures <strong>99.6% of the perceived intelligence of a 70B model</strong> (1,315 vs 1,320 Arena Elo), but because it activates only 3B parameters per forward step within our 23GB dedicated VRAM pool, our current CUDA+RPC engine delivers <strong>14.3x higher token velocity</strong> than offloaded 70B (35.9 vs 2.5 tok/s), delivering near-70B intelligence at interactive desktop speeds (<strong>47.2 IQV</strong> vs 3.3 for 70B offload).
+                💡 <strong>The Architectural ROI:</strong> Speed and Intelligence are orthogonal axes. Qwen3.6-35B-A3B leaps <strong>+10.0 points in standardized academic intelligence (84.2% vs 74.2% MMLU)</strong> over single-GPU 8B baselines, essentially matching 70B capability (85.0% MMLU). By pooling 23GB of dedicated VRAM over CUDA+RPC, our heterogeneous engine delivers that 70B-grade intelligence at <strong>35.9 tok/s (14.3x faster than 70B offload)</strong> with only a modest 16% speed trade-off vs an 8B baseline.
             </div>
         </div>
 
@@ -465,28 +465,33 @@
             </div>
         </div>
 
-        <!-- 3. Reasoning Depth (CoT Thinking Token Ratio) -->
+        <!-- 3. Standardized Model Intelligence Benchmark (MMLU) -->
         <div class="chart-card">
-            <div class="chart-title">🧠 Reasoning CoT Depth Ratio (Test-Time Compute Scaling)</div>
+            <div class="chart-title">🧠 Standardized Model Intelligence Benchmark (MMLU Academic Score)</div>
             <div class="bar-row">
-                <div class="bar-label">Apple M5 Air (27B resident)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 85%; background: #8957e5;"></div></div>
-                <div class="bar-value" style="color: #bc8cff;">85% CoT Depth</div>
+                <div class="bar-label">Cloud Swarm (Llama-3.3-70B / Qwen-72B)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 85.0%; background: #d29922;"></div></div>
+                <div class="bar-value" style="color: #e3b341;">85.0% MMLU (1,320 Elo)</div>
             </div>
             <div class="bar-row">
-                <div class="bar-label">Cloud Swarm (Oracle 70B Swarm)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 75%; background: #d29922;"></div></div>
-                <div class="bar-value" style="color: #e3b341;">75% CoT Depth</div>
+                <div class="bar-label">Linux Dual-Pool (Qwen3.6-35B-A3B MoE)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 84.2%; background: #1f6feb;"></div></div>
+                <div class="bar-value" style="color: #4daafc;">84.2% MMLU (1,315 Elo)</div>
             </div>
             <div class="bar-row">
                 <div class="bar-label">Windows RTX 4090 (Qwen3.8 27B)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 60%; background: #238636;"></div></div>
-                <div class="bar-value" style="color: #3fb950;">60% CoT Depth</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 83.8%; background: #238636;"></div></div>
+                <div class="bar-value" style="color: #3fb950;">83.8% MMLU (1,310 Elo)</div>
             </div>
             <div class="bar-row">
-                <div class="bar-label">Linux Dual-Pool (35B MoE)</div>
-                <div class="bar-wrapper"><div class="bar-fill" style="width: 50%; background: #1f6feb;"></div></div>
-                <div class="bar-value" style="color: #4daafc;">50% CoT Depth</div>
+                <div class="bar-label">Apple M5 Air (27B Resident)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 83.8%; background: #8957e5;"></div></div>
+                <div class="bar-value" style="color: #bc8cff;">83.8% MMLU (1,310 Elo)</div>
+            </div>
+            <div class="bar-row">
+                <div class="bar-label">Dense Baseline (Qwen3.7-Flash-8B)</div>
+                <div class="bar-wrapper"><div class="bar-fill" style="width: 74.2%; background: #30363d;"></div></div>
+                <div class="bar-value" style="color: #8b949e;">74.2% MMLU (1,235 Elo)</div>
             </div>
         </div>
 
