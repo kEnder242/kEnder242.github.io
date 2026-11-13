@@ -379,13 +379,13 @@
                             <td style="padding: 10px 8px;"><span style="background:#3b2300; color:#e3b341; padding:2px 6px; border-radius:4px;">HIGH ENTROPY DROP</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(77, 170, 252, 0.05);">
-                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE Dual-Vulkan Pool (Yesterday)</td>
+                            <td style="padding: 10px 8px; font-weight: bold; color: #fff;">4. Sparse MoE Dual-Vulkan Pool (Vulkan Baseline)</td>
                             <td style="padding: 10px 8px;">Vulkan0 (2080 Ti) + Vulkan1 (B580)</td>
                             <td style="padding: 10px 8px;">Qwen3.6-35B-A3B (20.6GB Q4)</td>
                             <td style="padding: 10px 8px; color: #4daafc;">~530 GB/s (Dual Vulkan)</td>
                             <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">28.52 tok/s (41.8 pp)</td>
                             <td style="padding: 10px 8px; color: #4daafc; font-weight: bold;">84.2% <span style="font-size:0.7rem; color:var(--sub-color); font-weight:normal;">(1,315 Elo)</span></td>
-                            <td style="padding: 10px 8px;"><span style="background:#1d3b53; color:#4daafc; padding:2px 6px; border-radius:4px;">YESTERDAY'S BASELINE</span></td>
+                            <td style="padding: 10px 8px;"><span style="background:#1d3b53; color:#4daafc; padding:2px 6px; border-radius:4px;">VULKAN BASELINE</span></td>
                         </tr>
                         <tr style="border-bottom: 1px solid var(--border-color); background: rgba(63, 185, 80, 0.12); border-left: 3px solid #3fb950;">
                             <td style="padding: 10px 8px; font-weight: bold; color: #fff;">6. Heterogeneous CUDA + RPC Hybrid (Current)</td>
@@ -419,18 +419,17 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-family: var(--mono-stack); font-size: 0.78rem;">
                     <div style="background: #161b22; border: 1px solid #238636; border-radius: 4px; padding: 12px;">
                         <div style="color: #3fb950; font-weight: bold; margin-bottom: 4px;">Slot 2: RTX 2080 Ti (11GB)</div>
-                        <div style="color: #8b949e;">Role: Attention & Primary Decode (CUDA0)</div>
-                        <div style="margin-top: 8px;">• Layers 0–14: 8.5 GB</div>
-                        <div>• 128K KV Cache (q4_0): 2.5 GB</div>
-                        <div style="color: #3fb950; font-weight: bold; margin-top: 4px;">Total Allocated: 11.0 / 11.0 GB</div>
+                        <div style="color: #8b949e;">Role: Primary Display + Attention & Decode (CUDA0, -ts 10,12)</div>
+                        <div style="margin-top: 8px;">• Display & Desktop Reserve: ~0.6 GB</div>
+                        <div>• Layers (10/22 split) + 32K KV (q4_0): ~10.0 GB</div>
+                        <div style="color: #3fb950; font-weight: bold; margin-top: 4px;">Total Allocated: ~10.6 / 11.0 GB</div>
                     </div>
                     <div style="background: #161b22; border: 1px solid #4daafc; border-radius: 4px; padding: 12px;">
                         <div style="color: #4daafc; font-weight: bold; margin-bottom: 4px;">Slot 1: Intel Arc B580 (16GB)</div>
-                        <div style="color: #8b949e;">Role: MoE Expert Overflow Pool (RPC0)</div>
-                        <div style="margin-top: 8px;">• Layers 15–31: 10.0 GB</div>
-                        <div>• Working Buffer: 1.0 GB</div>
-                        <div>• Display & QSV Reserve: 4.0 GB</div>
-                        <div style="color: #4daafc; font-weight: bold; margin-top: 4px;">Total Allocated: 12.0 / 16.0 GB</div>
+                        <div style="color: #8b949e;">Role: MoE Expert Overflow Pool & QSV (RPC0, -ts 10,12)</div>
+                        <div style="margin-top: 8px;">• Layers (12/22 split): ~11.0 GB</div>
+                        <div>• Working Buffer & QSV Reserve: ~1.0–4.0 GB</div>
+                        <div style="color: #4daafc; font-weight: bold; margin-top: 4px;">Total Allocated: ~12.0 / 16.0 GB</div>
                     </div>
                 </div>
             </div>
