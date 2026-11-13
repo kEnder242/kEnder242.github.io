@@ -2,6 +2,21 @@
   "strategic_layer": [
     {
       "year": "2007",
+      "anchor": "[STRATEGIC_ANCHOR] LAN Access Division (LAD) Automation & Lanconf Tooling: Maintained and expanded the Lanconf 1.8 and touch test utilities, automatin",
+      "gem": ""
+    },
+    {
+      "year": "2007",
+      "anchor": "[STRATEGIC_ANCHOR] Fox Cove Critical Customer Escalation Resolution: Reproduced and characterized a critical customer issue on Fox Cove platforms from",
+      "gem": ""
+    },
+    {
+      "year": "2007",
+      "anchor": "[STRATEGIC_ANCHOR] IPDC Transport Library for DCMI Conformance: Engineered the transport library for the DCMI conformance suite, collaborating with th",
+      "gem": ""
+    },
+    {
+      "year": "2007",
       "anchor": "Oplin testing with Lanconf 1.5.21.0 on various platforms",
       "gem": ""
     },
@@ -16,8 +31,63 @@
       "gem": ""
     },
     {
-      "year": "2017",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "year": "2019_2024::SEC_184",
+      "anchor": "Clarification on LTM update validation process and MCTP backup interface risks",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_184",
+      "anchor": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_184",
+      "anchor": "Identification of LTM and PCI config space gaps including security and access control issues",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_184",
+      "anchor": "Investigation of EGS DRAM ECS information retrieval over Out-of-Band (OOB) PECI",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_184",
+      "anchor": "PECI write operation analysis",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_184",
+      "anchor": "Review of IPMI PECI Proxy command request from LISO DM customer issue",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2021",
+      "anchor": "",
       "gem": ""
     },
     {
@@ -32,7 +102,32 @@
     },
     {
       "year": "2013",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Skylake (SKL) VISA Power-On Readiness & IDC Collaboration: Discovered critical bugs in SKL VISA APIs; traveled to Intel Design Cent",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "[STRATEGIC_ANCHOR] Pre-Silicon VISA Legacy Channel Emulation Gap Resolution: Identified and resolved a critical pre-silicon test gap with VISA Legacy ",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "[STRATEGIC_ANCHOR] Broadwell (BDW) VISA Enablement & TAP XML Generation: Owned end-to-end TAP register definition generation in XML across platform st",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "[STRATEGIC_ANCHOR] Graphics Trace Tool Transition from GTPO to PDT: Guided transition of graphics trace diagnostics from legacy GTPO tools to PDT, uni",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "[STRATEGIC_ANCHOR] PDT Trace Software & Primary VISA GUI Panel Ownership: Owned end-to-end design, maintenance, and feature development for the PDT Tr",
+      "gem": ""
+    },
+    {
+      "year": "2013",
+      "anchor": "[STRATEGIC_ANCHOR] DP PDT Team Agile SCRUM Master Governance: Served as Scrum Master for the DP PDT team, removing blocking developer impediments, lea",
       "gem": ""
     },
     {
@@ -107,11 +202,6 @@
     },
     {
       "year": "2022",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
-      "gem": ""
-    },
-    {
-      "year": "2022",
       "anchor": "Merging Montana into DTAF-content using git-filter-repo to preserve history",
       "gem": ""
     },
@@ -172,12 +262,22 @@
     },
     {
       "year": "2022",
+      "anchor": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Des",
+      "gem": ""
+    },
+    {
+      "year": "2022",
       "anchor": "Unexpected PECI return codes during base GPU frequency check",
       "gem": ""
     },
     {
       "year": "2022",
       "anchor": "Setting power control policy to limit power consumption to 0W using PATCH method on /redfish/v1/Chassis/Baseboard/Power#/PowerControl/0",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a valida",
       "gem": ""
     },
     {
@@ -192,12 +292,22 @@
     },
     {
       "year": "2022",
+      "anchor": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR)",
+      "gem": ""
+    },
+    {
+      "year": "2022",
       "anchor": "I/O statistics revealed by show_access_info method for crdefeature2_bs on mc3.ch0",
       "gem": ""
     },
     {
       "year": "2022",
       "anchor": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function.",
+      "gem": ""
+    },
+    {
+      "year": "2022",
+      "anchor": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF auto",
       "gem": ""
     },
     {
@@ -236,8 +346,8 @@
       "gem": ""
     },
     {
-      "year": "2016",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "year": "2022",
+      "anchor": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and ",
       "gem": ""
     },
     {
@@ -446,13 +556,33 @@
       "gem": ""
     },
     {
-      "year": "artifacts_2020",
-      "anchor": "",
+      "year": "2012",
+      "anchor": "[STRATEGIC_ANCHOR] VISA Framework Topology Services & Automation: Integrated PDT Framework topology services to eliminate manual project selection at ",
       "gem": ""
     },
     {
       "year": "2012",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Python Scripts Service & Graphical Trace MCI Setup: Added Python Scripts Service to PDT VISA panel, developed the MCI setup script ",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "[STRATEGIC_ANCHOR] Haswell-Server & Client Unified VISA Infrastructure: Expanded the PDT VISA engine across Haswell-Server and Haswell-Client programs",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "[STRATEGIC_ANCHOR] Orange VISA (PCIe-LTSSM-DMI) VCU Patch Reduction: Discovered patch space exhaustion in HSW-C & CRW C0 production patches; optimized",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "[STRATEGIC_ANCHOR] DAL Signal Decoration Hooks & VISA TAP NOA Routing: Authored DAL Hooks for signal decoration in trace decodes and configured VISA T",
+      "gem": ""
+    },
+    {
+      "year": "2012",
+      "anchor": "[STRATEGIC_ANCHOR] Observation & Analysis (OA) Counter API Integration: Defined register structures used by OA APIs, allowing the PDT VISA panel to mo",
       "gem": ""
     },
     {
@@ -571,13 +701,38 @@
       "gem": "Note on code review process improvements"
     },
     {
-      "year": "artifacts_2024",
-      "anchor": "",
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowled",
       "gem": ""
     },
     {
       "year": "2023",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "anchor": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automate",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases ",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & Show & Tell Workshops: Led Oregon MIV Tiger team for MCTP development and hosted informal 'show ",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] Montana Framework Python Package Release under XPIV devpi: Formatted, built, and released the Montana automation framework as an of",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achi",
+      "gem": ""
+    },
+    {
+      "year": "2023",
+      "anchor": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-",
       "gem": ""
     },
     {
@@ -757,6 +912,31 @@
     },
     {
       "year": "2006",
+      "anchor": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture in GreenHills: Executed white-box testing of internal firmware APIs and protocol state mac",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Stack Validation: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored au",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "[STRATEGIC_ANCHOR] Wireshark / Ethereal IPMI 2.0 Protocol Dissector: Authored custom dissector patches for Wireshark/Ethereal to decode RMCP+ and IPMI",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "[STRATEGIC_ANCHOR] Session-Less Command Functional Validation Suite: Built automated test harness validating register handling for Get System GUID, Ge",
+      "gem": ""
+    },
+    {
+      "year": "2006",
+      "anchor": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, dang",
+      "gem": ""
+    },
+    {
+      "year": "2006",
       "anchor": "Updated RPC.tcl to reflect MC's verbosity changes",
       "gem": ""
     },
@@ -926,13 +1106,123 @@
       "gem": ""
     },
     {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2019",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_185",
+      "anchor": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re",
+      "gem": ""
+    },
+    {
+      "year": "2019_2024::SEC_185",
+      "anchor": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
+      "year": "artifacts_2022",
+      "anchor": "",
+      "gem": ""
+    },
+    {
       "year": "artifacts_2022",
       "anchor": "",
       "gem": ""
     },
     {
       "year": "2014",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Trace Integration Testing: Enabled and executed functional and integration tests covering Open-IPC-",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "[STRATEGIC_ANCHOR] Skylake Multi-Stepping VISA Support in DSD: Supported PDT VISA plugins across SKL ULT B0/C0 and SKL M0/Q0/P0 steppings, triaging de",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "[STRATEGIC_ANCHOR] NPK SDK Google Test Automation on TeamCity CI: Configured two dedicated TeamCity integration test hosts running the NPK SDK 'Google",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "[STRATEGIC_ANCHOR] 1450 Debug Tool Stack Defect Detection: Uncovered and root-caused a critical defect in the 1450 Debug Tool Stack that broke previou",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "[STRATEGIC_ANCHOR] Xilinx FPGA Pre-Silicon Bring-Up for Broxton (BXT): Built Python validation scripts to configure VISA trace, validate trace-to-memo",
+      "gem": ""
+    },
+    {
+      "year": "2014",
+      "anchor": "[STRATEGIC_ANCHOR] PTI Trace LTB Nibble-Order Silicon Bug Discovery: Discovered a hardware nibble-order silicon bug in PTI trace, verified the LTB har",
       "gem": ""
     },
     {
@@ -1057,12 +1347,32 @@
     },
     {
       "year": "2010",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Shared Build Infrastructure & Primary Build Engineer Coverage: Provided back-up coverage for primary build engineer, maintaining co",
       "gem": ""
     },
     {
-      "year": "2021",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "year": "2010",
+      "anchor": "[STRATEGIC_ANCHOR] BVT & Non-Target Execution (NTE) Milestone Support: Debugged build verification and non-target execution failures across Westerlee ",
+      "gem": ""
+    },
+    {
+      "year": "2010",
+      "anchor": "[STRATEGIC_ANCHOR] Lab KVM, Networking & Domain Host Administration: Served as key resource defining lab host requirements, OS images, domain enrollme",
+      "gem": ""
+    },
+    {
+      "year": "2010",
+      "anchor": "[STRATEGIC_ANCHOR] RAKP+ & RMCP+ Protocol Defect Resolution: Resolved complex LAN defects by deep-diving into RAKP+ and RMCP+ protocol state machines,",
+      "gem": ""
+    },
+    {
+      "year": "2010",
+      "anchor": "[STRATEGIC_ANCHOR] SOL on Linux Configuration & Product Enabling: Investigated and identified the system configuration required for Serial Over LAN fu",
+      "gem": ""
+    },
+    {
+      "year": "2010",
+      "anchor": "[STRATEGIC_ANCHOR] DCTS 1.0 Conformance Recovery & Enabling: Investigated initial firmware failures with DCTS 1.0, partnered with system architect on ",
       "gem": ""
     },
     {
@@ -1167,6 +1477,11 @@
     },
     {
       "year": "2021",
+      "anchor": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture: Led manageability architecture and validation for Eagle Stream / Sapphire Ra",
+      "gem": ""
+    },
+    {
+      "year": "2021",
       "anchor": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities",
       "gem": ""
     },
@@ -1212,12 +1527,27 @@
     },
     {
       "year": "2021",
+      "anchor": "[STRATEGIC_ANCHOR] Future of MCTP Infrastructure & Architecture Blueprint: Authored and presented 'Future of MCTP Infrastructure' technical blueprint,",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "[STRATEGIC_ANCHOR] OOBMSM as MCTP Bus Owner Architecture: Architected OOBMSM as MCTP Bus Owner and presented arbitration models at MRC forums for mult",
+      "gem": ""
+    },
+    {
+      "year": "2021",
       "anchor": "Minimum read time of 6000ms must be set for domain 0 in SetNmPolicy command.",
       "gem": ""
     },
     {
       "year": "2021",
       "anchor": "Team utilizes MCTP stack for communication with BMC through various commands.",
+      "gem": ""
+    },
+    {
+      "year": "2021",
+      "anchor": "[STRATEGIC_ANCHOR] Stressing Redfish PECI Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensi",
       "gem": ""
     },
     {
@@ -1251,13 +1581,83 @@
       "gem": ""
     },
     {
+      "year": "2021",
+      "anchor": "[STRATEGIC_ANCHOR] MIV Sprint Planning & Defect Scrub Leadership: Led daily standups, estimation, and sprint retrospectives for MIV, closing 27 critic",
+      "gem": ""
+    },
+    {
       "year": "2008",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] DCMI Conformance Test Suite (DCTS) Network/API Transport: Engineered the network and API transport layer for DCTS, validating enter",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] Bensley & Thurley Cipher Suite Defect Resolution: Uncovered, root-caused, and resolved critical cipher suite vulnerabilities and bu",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] Microsoft Red Dog Transport Porting & Proof of Concept: Ported the DCTS network transport to the Red Dog project and directly demon",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] Microsoft Datacenter SOL API Architecture: Engineered high-performance SOL API solution capable of replacing serial IP dongles acro",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] Willowbrook iBMC 'Get Asset Tag' DCMI Command: Designed and implemented the 'Get Asset tag' DCMI command for iBMC firmware through ",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] EPSD Codebase Emergency Manual Merge: Executed an emergency manual code merge against the latest EPSD codebase under tight mileston",
+      "gem": ""
+    },
+    {
+      "year": "2008",
+      "anchor": "[STRATEGIC_ANCHOR] Yahoo Linux BMC Provisioning & Automation Tooling: Authored Linux shell scripts to provision the BMC LAN interface for Yahoo, relea",
       "gem": ""
     },
     {
       "year": "2018",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knigh",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] Cluster Network Stress Suite BKM: Delivered procedural BKM for compiling and running complex cluster network stress suites, ruling ",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] Lab Capacity Doubling & 20+ Node Recovery Commendation: Revived 20+ offline cluster nodes, automated thermal telemetry collection, ",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] Lenovo Proton 8-Socket Optane DC Persistent Memory (AEP) Validation: Led validation on the 8S Lenovo Proton platform, enabling Purl",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] 8-Core DAL Halting Bug Discovery & BIOS Alignment: Uncovered a critical 8-core DAL halting bug during 8-socket testing, automated 3",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] PVT RAS for AEP 'Viral State PCIe Fatal Error' Test: Developed 'AEP viral state PCIe fatal error' test case and verified error prop",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] Reusable Multi-Register & AEP Mailbox Verification APIs: Proposed and authored reusable helper APIs to read multiple register state",
+      "gem": ""
+    },
+    {
+      "year": "2018",
+      "anchor": "[STRATEGIC_ANCHOR] AEP Script Hacking, RAS Working Sessions & Format BKM: Founded regular 'AEP Script Hacking' and 'RAS working sessions' across teams",
       "gem": ""
     },
     {
@@ -1477,6 +1877,26 @@
     },
     {
       "year": "2005",
+      "anchor": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI complia",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, an",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncove",
+      "gem": ""
+    },
+    {
+      "year": "2005",
+      "anchor": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automa",
+      "gem": ""
+    },
+    {
+      "year": "2005",
       "anchor": "BMC23 module upgrade and Embedded File System (EFS) update to version 1.15.",
       "gem": ""
     },
@@ -1577,197 +1997,42 @@
     },
     {
       "year": "2019",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "anchor": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Montana tool experiencing issues establishing IPMI v2/RMCP+ sessions",
+      "anchor": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Maximum number of retries for Get Device ID command not specified",
+      "anchor": "Clarification on LTM update validation process and MCTP backup interface risks",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces.",
+      "anchor": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Release of various tools related to Purley RAS Gap Analysis, including _06_02_03_cs_nvd_pcie_fatal.py, helper.py, riv_common.py, workload_profile.py",
-      "gem": "Introduction of new tools for Purley RAS Gap Analysis, specifically _06_02_03_cs_nvd_pcie_fatal.py and others"
-    },
-    {
-      "year": "2019",
-      "anchor": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout",
+      "anchor": "Identification of LTM and PCI config space gaps including security and access control issues",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin",
+      "anchor": "Investigation of EGS DRAM ECS information retrieval over Out-of-Band (OOB) PECI",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Misconfigured docker-compose.yml file causing Docker build process issues",
+      "anchor": "PECI write operation analysis",
       "gem": ""
     },
     {
       "year": "2019",
-      "anchor": "Parted and formatted PMEM devices on Proton1.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Advisory MEM.NUMALOCAL error on Proton1.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "-PECI JVL RAS and porting Curtis recipe manually",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "EEUPDATE64E.EFI command and IPMItool commands for configuration and power cycling",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Power cycling the system using IPMItool",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Executed raw command on JF04WVAW4113",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Executed raw command on JF04WVAW0228",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Configured local repository with user name and email address.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Retrieved commit-msg hook from remote server via SCP.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Investigation into IPMI commands related to Node Manager",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Initial error code received when using `ipmitool` with specific options and parameters",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Change made to resolve IPMI communication issue between ME and BMC on ICX-HCC",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "CF9 reset detection script executed.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Reset commands documented.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "HPR_CAUSE0 MSR read: 0x00000002.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Power limit accuracy issue across domains reported",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Command execution using ipmitool to retrieve system information",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Development of startCscripts.py, SysCfg, and various scripts like peciXtor.py, peci_framework_ipmi_example.py, and pecistressor.py for the Purley RAS ",
-      "gem": "era registry"
-    },
-    {
-      "year": "2019",
-      "anchor": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Policy #231 sets expected average power limit to 312W.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Kernel panic due to out-of-memory (OOM) condition and subsequent reboot in 10 seconds",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Debugging verifysamepolicy.py script",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Repeated attempts to send IPMI commands using GetDeviceID and ForceMeRecovery fail with an 'Unable to establish IPMI v2 / RMCP+ session' error.",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Causality error: Log entries conflict with the release year of the tool (ipmitool).",
-      "gem": ""
-    },
-    {
-      "year": "2019",
-      "anchor": "Investigate IPMI configuration and ensure ME is properly configured to accept IPMI commands.",
-      "gem": ""
-    },
-    {
-      "year": "2024",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "anchor": "Review of IPMI PECI Proxy command request from LISO DM customer issue",
       "gem": ""
     },
     {
@@ -1792,6 +2057,16 @@
     },
     {
       "year": "2024",
+      "anchor": "[STRATEGIC_ANCHOR] DMR MMIO Adaptation & Pre-Silicon Simics Validation: Adapted PECI validation tests to the new MMIO register access model for Diamon",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "[STRATEGIC_ANCHOR] Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability Enablement: Supported BA validation team enabling Montana manageabilit",
+      "gem": ""
+    },
+    {
+      "year": "2024",
       "anchor": "Executed PECI commands using peci_cmds tool",
       "gem": ""
     },
@@ -1807,7 +2082,17 @@
     },
     {
       "year": "2024",
+      "anchor": "[STRATEGIC_ANCHOR] Cross-Team Workgroup Leadership & Kayak Alignment: Hosted weekly cross-functional workgroup to facilitate Kayak transition conversa",
+      "gem": ""
+    },
+    {
+      "year": "2024",
       "anchor": "Successful PECI target MSR Read of Thread 00 MSR 0017 with cc:0x40 and value 0x003c039000000000",
+      "gem": ""
+    },
+    {
+      "year": "2024",
+      "anchor": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution: Delivered and executed the Kayak+Montana transition plan, importing 21 Mont",
       "gem": ""
     },
     {
@@ -1861,13 +2146,18 @@
       "gem": ""
     },
     {
-      "year": "artifacts_2023",
-      "anchor": "",
+      "year": "2015",
+      "anchor": "[STRATEGIC_ANCHOR] Broxton SoC PVT Debug Stack OEM Release Assurance: Ensured release health of DSD trace debug tools (PVT debug stack and PDT VISA) f",
       "gem": ""
     },
     {
       "year": "2015",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Multi-Architecture GTPO Graphics Trace Architecture: Acted as expert consultant delivering graphics GTPO trace capabilities across ",
+      "gem": ""
+    },
+    {
+      "year": "2015",
+      "anchor": "[STRATEGIC_ANCHOR] Trace Debug Training Sessions & OEM Power-On Enablement: Led technical training sessions for trace teams and provided direct custom",
       "gem": ""
     },
     {
@@ -2012,7 +2302,32 @@
     },
     {
       "year": "2011",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Intel Platform Debug Toolkit (PDT) C# & DAL Ramp: Ramped on C#, PDT architecture, and Dfx Abstraction Layer (DAL); leveraged legacy",
+      "gem": ""
+    },
+    {
+      "year": "2011",
+      "anchor": "[STRATEGIC_ANCHOR] Haswell-Client VISA Architecture Delivery: Delivered Visualization of Internal Signals Architecture (VISA) in PDT for Haswell-Clien",
+      "gem": ""
+    },
+    {
+      "year": "2011",
+      "anchor": "[STRATEGIC_ANCHOR] Haswell X0/A0 Power-On Lab Bring-Up & Emulation Support: Supported VISA Panel in lab during Haswell X0 and A0 power-on; implemented",
+      "gem": ""
+    },
+    {
+      "year": "2011",
+      "anchor": "[STRATEGIC_ANCHOR] XML Stylesheet Automation & VISA-DAL Register Converter: Authored XSLT stylesheets to automate register conversions and refactored ",
+      "gem": ""
+    },
+    {
+      "year": "2011",
+      "anchor": "[STRATEGIC_ANCHOR] Online Trace Signal Decoration Architecture: Coordinated with trace decoder team and DAL hooks experts to add VISA signal decoratio",
+      "gem": ""
+    },
+    {
+      "year": "2011",
+      "anchor": "[STRATEGIC_ANCHOR] OEM VISA Tool Architecture & Engineer Mentorship: Architected the OEM version of VISA and cross-trained and monitored a junior engi",
       "gem": ""
     },
     {
@@ -2027,7 +2342,27 @@
     },
     {
       "year": "2020",
-      "anchor": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf",
+      "anchor": "[STRATEGIC_ANCHOR] Manageability Content Strategy & 94 HSD Triage Milestone: Established MIV domain content strategy, framework hotfix pipeline, and d",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "[STRATEGIC_ANCHOR] Ignition-IPMI Support Model & Cross-Team Log Mining: Designed Ignition support model leveraging existing test content and mined pla",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establish",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "[STRATEGIC_ANCHOR] DTAF Wrapper for Montana & Command Center Integration: Delivered DTAF integration wrapper for Montana and provided expert guidance ",
+      "gem": ""
+    },
+    {
+      "year": "2020",
+      "anchor": "[STRATEGIC_ANCHOR] Grassroots Mentorship, SCRUM Planning & Code Review Culture: Bootstrapped team-wide SCRUM planning, drove daily peer programming, a",
       "gem": ""
     },
     {
@@ -2217,27 +2552,32 @@
     },
     {
       "year": "2009",
-      "anchor": "[STRATEGIC_ANCHOR] Mastery of Firmware Development and Transport Library Creation: Jason's early career milestone was his successful contribution to s",
+      "anchor": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Benchmarking Tool: Delivered the SOL performance tool reusing core SOL libraries to v",
       "gem": ""
     },
     {
-      "year": "artifacts_DOCS",
-      "anchor": "",
+      "year": "2009",
+      "anchor": "[STRATEGIC_ANCHOR] Multi-Session DCTS Conformance Suite Delivery: Added multi-session network support to DCTS conformance libraries, enabling Intel to",
       "gem": ""
     },
     {
-      "year": "artifacts_DOCS",
-      "anchor": "",
+      "year": "2009",
+      "anchor": "[STRATEGIC_ANCHOR] Validation Smoke Test Suite Pilot for Willowbrook: Piloted and established the validation smoke test suite for developer testing, e",
       "gem": ""
     },
     {
-      "year": "artifacts_DOCS",
-      "anchor": "",
+      "year": "2009",
+      "anchor": "[STRATEGIC_ANCHOR] Westerlee FAS Architecture & Packet-Reuse Counter-Proposal: Provided critical architecture input during Westerlee FAS design sessio",
       "gem": ""
     },
     {
-      "year": "artifacts_DOCS",
-      "anchor": "",
+      "year": "2009",
+      "anchor": "[STRATEGIC_ANCHOR] DCMI over HECI (DoH) Low-Level Design & Implementation: Ramped on the ME Kernel HECI driver and authored the low-level design and f",
+      "gem": ""
+    },
+    {
+      "year": "2009",
+      "anchor": "[STRATEGIC_ANCHOR] System Event Log (SEL) & Platform Configuration Control (PCC) LLDs: Delivered low-level designs for SEL and PCC components, identif",
       "gem": ""
     },
     {
@@ -2283,6 +2623,16 @@
   ],
   "analytical_layer": {
     "validation": [
+      {
+        "year": "2007",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] LAN Access Division (LAD) Automation & Lanconf Tooling: Maintained and expanded the Lanconf 1.8 and touch test utilities, automatin"
+      },
+      {
+        "year": "2007",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Fox Cove Critical Customer Escalation Resolution: Reproduced and characterized a critical customer issue on Fox Cove platforms from"
+      },
       {
         "year": "2007",
         "gem": "",
@@ -2399,6 +2749,36 @@
         "summary": "Celo tests and Longhorn IA64 install issues"
       },
       {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "Clarification on LTM update validation process and MCTP backup interface risks"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "Identification of LTM and PCI config space gaps including security and access control issues"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "Review of Montana/FAI/thermal test cases for missed legacy TMF/TMC/TMS coverage"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Pre-Silicon VISA Legacy Channel Emulation Gap Resolution: Identified and resolved a critical pre-silicon test gap with VISA Legacy "
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Graphics Trace Tool Transition from GTPO to PDT: Guided transition of graphics trace diagnostics from legacy GTPO tools to PDT, uni"
+      },
+      {
         "year": "2013",
         "gem": "",
         "summary": "Analyze stack trace to identify specific exception causing DAL MasterFrame instantiation failure."
@@ -2431,12 +2811,87 @@
       {
         "year": "2022",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW"
       },
       {
         "year": "2022",
         "gem": "",
-        "summary": "Team uses PythonSV to send MCTP packets from MEMBAR2 of the VMD device to OOB-MSM FW"
+        "summary": "Framework archaeology and code learning for silicon validation platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP collaboration and PECI fuzz testing for hardware debug."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP packet validation from MEMBAR2 VMD device to OOB-MSM firmware."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP protocol test frame exchange executed via pecistressor module on /dev/peci-mctp, validating DUT connection ID 20 against hardcoded capability val"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "rdPciConfig telemetry endpoint returned 0x90 PECI_CC_FAIL during PCIe RAS validation on Montana native module."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "rdPciConfig test execution on lab machine (4S) with grouped Offset mode; 10816/10882 passed, 66 failed; FlexBus LogPhy 0x40 response missing on fe:00:"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCIe Gen5 FlexBus LogPhy telemetry failures during PECI stress validation"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Unexpected PECI return codes detected for FlexBus LogPhy variants, indicating protocol mismatch in PCIe Gen4/Gen5 RAS validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "IA32_MCi_STATUS MSR validation and error reporting telemetry from Intel MCI platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Fork and branch flow for testing sandbox in OpenBMC MCTP project."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMEM mailbox register sequence validated against CWV FMC top CSR documentation; write and read sequences confirmed with command/status/payload registe"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Platform validation telemetry from PECI Redfish CPU temperature measurement and IPMI BMC remote access benchmarking."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Submit DTTC paper with PECI stress test findings."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCA detection triggered by MSR read during peci_checkout; no prior run logs available for context."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Validation of PECI v4.0 command checkout against MIV Node Manager on the Montana platform, with power limit accuracy checks and Redfish remote access "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Remote Access (Redfish) verification via OOB for server turn Off/On and ForceOn commands, confirming Redfish command execution on the MIV platform."
       },
       {
         "year": "2022",
@@ -2451,6 +2906,26 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "PCIe RAS telemetry and BIOS boot override configuration recorded during 2019-2024 era validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PTU Aurora PTU validation using SSH terminal on c001n004 with password 0penBmc"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Des"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Execute Scrum retrospective to drive 3 examples of multi-discipline code re-use between testing frameworks."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Unexpected PECI return codes during base GPU frequency check"
       },
       {
@@ -2461,7 +2936,67 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "System telemetry and power control operations recorded during platform validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "BIOS SKU configuration set to MCTP Bus Owner CPU/OOBMSM; IPMI policy split validation confirmed."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "U-Boot starts and loads kernel, ramdisk, and device tree."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "DRM debug parameter override and modprobe reset to suppress i915 hang check, enabling safe PCIe RAS telemetry capture during GPU validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCAPSweep module executed a power-cap sweep across three domains, logging domain 0 as 1262W-1281W with a 1264W low threshold and 1279W high threshold"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Test passed with warnings; PMCAPSWEEP module confirmed operational."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a valida"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCI enumeration and MMIO stressor validation runs executed against the MIV platform, confirming sv object availability and PCI enumerated bus state."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCI DMTF validation telemetry and MCTP service configuration recorded in 2019-2024 era notes."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Intel Trace Hub PVT build 4.22.19553.39600 installed via DSDJ artifact repository; J83920-A slot 1 board check confirmed."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "BMC validation mechanism executed via Cscripts to validate changes; check_sys_errors used to locate MR configuration usage."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PECI stressor test execution completed with pass result on 2022-10-25."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF auto"
       },
       {
         "year": "2022",
@@ -2471,7 +3006,27 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "Montana PECI sweep and flood validation runs executed against Araxis lab platform, confirming expected transaction counts and MSR register coverage."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "MSR register access issues and unexpected return codes encountered during PECI tests."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Negative testing of PECI stressor using pecistressor to validate protocol behavior."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Montana native module sweep test failed with error count 9, above limit 7, below limit 2, and margin values 86.632911 above and 4.532803 below."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and "
       },
       {
         "year": "2016",
@@ -3519,14 +4074,114 @@
         "summary": "Error in MAP test: Encountered an issue during MAP (Memory Access Protocol) testing."
       },
       {
+        "year": "2019_2024::SEC_341",
+        "gem": "",
+        "summary": "Debugged PECI framework unit tests involving Redfish crashdump raw packet transmission and wake-on-PECI configuration. Identified that wake-on-PECI re"
+      },
+      {
+        "year": "2019_2024::SEC_341",
+        "gem": "",
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
+      },
+      {
         "year": "2023",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automate"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases "
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achi"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Q1 2023 validation of SPR power limiting feature failure via sysdebug, pcode, and NM teams; combined PECI, PythonSV, and pCode knowledge into a blackb"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MIV retro: MIV PECI WRC config and WRENDPOINT PCI validation; MIV retro documentation of PECI coverage from Source & EDS to testing."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Coaching and goal alignment: Reviewed PECI customer issues, collaborated with teams to provide test plan enhancements, guided Si and Security teams al"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MCTP utility verification and PECI failure review on Intel platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Updated MIV validation status and triage queue for platform defect resolution."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe Gen4 and Gen5 sweep configuration validation passed with Chassis_CXPSMBUS, UPI/Phy0, and PF.CPM register values."
       },
       {
         "year": "2023",
         "gem": "",
         "summary": "Error codes encountered during device discovery in Montana test suite: discovery error: timeout, missing 0x40 responses in PCIe transactions."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "BMC console journaling and device reset operations for PCIe telemetry validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe device reset via sysfs echo to verify bus state."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe MCTP endpoint device reset testing executed via systemd service management and lspci BDF enumeration to validate PCIe link status, driver state, "
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PECI endpoint validation failed on Chassis_CXPSMBUS, DSA, IAX, North Peak, PF.CPM, PF.HQM0, VF.HQM0, b.PCIEGen5_RP.PI5, d.PCIEGen5_RP.PI5 due to unexp"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana automation binary executed with power limit accuracy test against SRR4PIVR25B06H5 platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Non-persistent global patch revision value retrieved for topology personality present check."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana native module PECI stressor logs 17538 passing commands and 1494 unexpected CC return codes during checkout."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Unexpected PECI return codes recorded for DSA, IAX, PF.CPM, VF.HQM0, and PCIeGen5 RP PI5 targets."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana PECI stressor runs on 2023-02-16 generated 20954 passing and 1396 unexpected PECI return codes, with 10 skipped BROADCAST_GROUP0/CHASIS_CXPSMB"
       },
       {
         "year": "2023",
@@ -3556,12 +4211,67 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "PCIe Gen5 and Gen4 RAS telemetry failures during platform stress test"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana native PECI stressor module failed to load due to missing 'peci' module, triggering endpoint_localpci and endpoint_pci validation failures wit"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Tools used to test manageability features: Simics, DTAF"
       },
       {
         "year": "2023",
         "gem": "",
         "summary": "New test cases implemented, old journal data fixed by scanning in reverse order, and failure action added to abort tests when duplicate EIDs are found"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Silicon validation telemetry suppression and logging configuration for platform modules."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PMCApSweep test failed with 15 errors, 11 above-limit violations, and 4 below-limit violations; margin thresholds recorded at 69.370147 and 9.020817."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Retrieved the policy object with ID 0 from the Intel Node Manager Policy API to verify the current limit value."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCI bus scan from 0:0:0 to FF:1F:7; Fn 0 and Fn 4 validation flags for vendor/DID error detection."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Delivered PECI performance and reliability paper to DTTC for validation review."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Unexpected PECI return codes observed in SCF_MDFS_CR validation on EGS SPR MCC platform. MSR availability gap in MCC chop caused inconsistent PECI tel"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PECI Checkout FAIL on EGS SPR S0/B1 Windows platform. Missing 0x40 in rdIaMsrEx, rdPkgConfig, and missing 0x40 in rdIaMsrEx caused failure. C6 disable"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PECI endpoint stressor test executed against local PCI and MMIO endpoints. Initial endpoint returned unexpected PECI return code 0x90, triggering a Fa"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MMIO endpoint stressor test executed. Unexpected PECI return codes detected for MS2IOSF DFx, M2IAL, MMAP/IOMMU, RAS, and VMD CFGBAR. Result: Fail."
       },
       {
         "year": "2023",
@@ -3577,6 +4287,46 @@
         "year": "2023",
         "gem": "",
         "summary": "Delivered negative BDF and MSR scan with refactored code for future testing"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "VNC scan test against EMR XCC ES2 on Intel AMR platform"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MCTP GNR stress test execution with lab telemetry and EID data processing."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Chassis DFX fuse indexing and MCTP stress test execution on Intel platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Silicon validation tooling executed a DFX (Design-for-X) fuse extraction routine on the platform, invoking the fuser utility to parse DFX register val"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MCTP device scan detected duplicate EID entries across multiple PCI port mappings, triggering validation error in check_duplicate_eidport."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Duplicate EID port detection and error count increment for topology validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe BDF whitelist lookup and shared memory topology synchronization completed during platform telemetry validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Injected fastestmirror flag into DNF config to enable mirror auto-selection."
       },
       {
         "year": "2023",
@@ -3731,6 +4481,11 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "System ID 120197 assigned to OneCloud for RAS validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Executing a script"
       },
       {
@@ -3772,6 +4527,26 @@
         "year": "2023",
         "gem": "",
         "summary": "Kickstarted execution and enabling of MCTP tests on SRF-SP"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture in GreenHills: Executed white-box testing of internal firmware APIs and protocol state mac"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Stack Validation: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored au"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Session-Less Command Functional Validation Suite: Built automated test harness validating register handling for Get System GUID, Ge"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, dang"
       },
       {
         "year": "2006",
@@ -3929,6 +4704,11 @@
         "summary": "LAN testing on BMC51 encountered map problems; RPC installed in rack, help provided with device manager issues"
       },
       {
+        "year": "2019_2024::SEC_185",
+        "gem": "",
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
+      },
+      {
         "year": "resume_data",
         "gem": "",
         "summary": "Architected and maintained a 100% automated Python validation framework for server manageability. Built standardized mod..."
@@ -3982,6 +4762,21 @@
         "year": "2025",
         "gem": "",
         "summary": "Architecting a high-throughput AI systems testbed using vLLM with Liger fused CUDA kernels."
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Trace Integration Testing: Enabled and executed functional and integration tests covering Open-IPC-"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] NPK SDK Google Test Automation on TeamCity CI: Configured two dedicated TeamCity integration test hosts running the NPK SDK 'Google"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Xilinx FPGA Pre-Silicon Bring-Up for Broxton (BXT): Built Python validation scripts to configure VISA trace, validate trace-to-memo"
       },
       {
         "year": "2014",
@@ -4459,9 +5254,24 @@
         "summary": "FPGA register testing"
       },
       {
-        "year": "2021",
+        "year": "2010",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] BVT & Non-Target Execution (NTE) Milestone Support: Debugged build verification and non-target execution failures across Westerlee "
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lab KVM, Networking & Domain Host Administration: Served as key resource defining lab host requirements, OS images, domain enrollme"
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] RAKP+ & RMCP+ Protocol Defect Resolution: Resolved complex LAN defects by deep-diving into RAKP+ and RMCP+ protocol state machines,"
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DCTS 1.0 Conformance Recovery & Enabling: Investigated initial firmware failures with DCTS 1.0, partnered with system architect on "
       },
       {
         "year": "2021",
@@ -4496,12 +5306,187 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "CPU stress testing on 144-core system using stress-ng with varying load levels."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Execution of montana test suite xProd-runs_unit.tdf showing test statistics and timing metrics."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Code snippet from peci_redfish.py checking for ElapsedTimeMs in JSON response."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PMCAP sweep calibration failure on domain 0 due to Min power (414W) exceeding Max power (410W)."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI cc/data telemetry collection showing multiple test runs with varying pass/fail counts; consistent failure code 0x90 and retry code 0x82/0x80 obse"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MIV HSD test failure triage and fix turnaround analysis; PECI diagnostic results showing 89 passing, 43 retries (CC 0x82), and 181 failures (CC 0x90, "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI sweep validation to verify thread-level access to core MSR registers."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Execution of PCIe stressor test suite including MMIO, PCI config, and endpoint validation with memory poisoning enabled for 32/64-bit MMIO, PCS, and c"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI throughput benchmarking and stress testing via xProd-runs.tdf to measure impact on MSR read cmd/sec and benchmark stability."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Core enable mask verification against package config MSR; hardware p-state status check (0x7xx vs 0x90); OOB telemetry distinction from crash dumps."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MSR register enumeration recorded for silicon validation telemetry."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Calibration power telemetry recorded for RAPL instrumentation."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI return code validation logic identified in checkout script; failNames array population and error logging for non-good PECI return codes."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI checkout failure due to missing IPC/ITP2 setup preventing c-state disable script execution; resolution involves updating git repo and verifying B"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Commit a9fb76951fa047496f768719b8247d0d1b23fa9f: Backwards compatibility fix for PECI library to handle REDFISH_CC TypeError by checking key existence"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Montana test suite execution for C-state and PECI MSR validation"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Preinsert validation failure due to missing owner_team field"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI API checkout and validation test suite execution via Montana framework"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI/OOBMSM enumeration and whitelist configuration for Icelake-X and Sapphire Rapids platforms; BMC Journal log retrieval via Redfish API."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Adapt MIV tests to use spr_peci_arrays and spr_peci_exceptions instead of deprecated pecirand library."
       },
       {
         "year": "2021",
         "gem": "",
+        "summary": "MCTP Platform Level Validation: Bus owner proxy verification, telemetry attestation, and PECI over MCTP proxy configuration. BMC validation jumper con"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Enhanced warning logged on Socket 0, Channel 1, Dimm 0. Major Warning Code 0x39, Minor Warning Code 0x03. Checkpoints: Major 0xB7, Minor 0x11."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Integration of PECI tests into Phoenix database, EGS Alpha plan migration, and MCTP/i3c/pmem validation tasks."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI endpoint PCI enumeration test execution with populated bus configuration and inband disabled."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed montana.py against peci_endpoint_pci.tdf to validate rdEndPointConfig_PCI enumeration. Confirmed whitelist filtering logic using bdf_cfg_whit"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "SV checkout of Sapphire Rapids and Emmitsburg components"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI core enable mask read package config count verification against CORE_MSR."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI hotfix merge request and git amend for pythonsv ComponentManager, ICX backwards compatibility, and rdPciConfigLocal hardening for SPR+."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI core enable mask validation and rdEndPointConfig_LocalPCI reads for resolved_cores_cfg."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Validation of OOBMSM MCTP features and proxy routing via SoC for Sapphire Rapids (SPR) and Ice Lake-X (ICX) platforms, focusing on synthetic ingredien"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "QXB4 C-Step thermal filtering subroutine validation; IPMI root password configuration via raw command; openbmc-node-managerd release egs-0.62-0-gdbc0c"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture: Led manageability architecture and validation for Eagle Stream / Sapphire Ra"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Redfish PECI crash dump verification for correctable errors"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Power limit accuracy validation across domains d0 and d1"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Configuration of PCIe capability margin sweep parameters including min_stat_margin, min_cap_margin, and guardrails."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "pysv_checkout -l bigcore"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "BMC MCTP discovery validation for add-in cards via Redfish"
       },
       {
         "year": "2021",
@@ -4526,12 +5511,142 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "Baseline PECI stress test: 2,676 rdIaMsr and 60 rdIaMsrEx transactions passed; throughput recorded at 19.8 tx/sec with 13.2s Python elapsed time."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "EM100 system validation with BIOS image EGSDCRB1.E9I.0062.D12.2108061620.bin; verified SPI flash removal, ribbon cable orientation (J6D150), and AC po"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI Platform Configuration Space Thermal Monitoring Control (TMC) mailbox validation and IB_LOCK bit manipulation via Redfish and PythonSV."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Verification of TMC mailbox writability and IB_LOCK bit (bit 30) state via Redfish PECI PCS interface."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "NVMe drive thermal sensor validation via IPMI."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Investigation of Package Thermal Status and MCA error sources on SKX platform. Read MSR 1B1h (PACKAGE_THERM_STATUS) to check TCC, PROCHOT, and Critica"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MMIO read operations and PECI mailbox stress testing via PythonSV framework"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCA error handling loop detected on Socket 0, Bank 0. System logged corrected memory errors (MC status 0x8000024000050005 and 0x8000028000050005) foll"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Planning session for enabling MCTP testing for OpenBMC on SPR/EGS platforms, involving BMC firmware validation and PECI/i3c/MCTP protocols."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Montana NM capability module repeatedly returned Min=0 on domain 0 during Gold Release C/D stepping for IFWI 2021.41.5.03, triggering repeated MCA sta"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Repeated ERROR entries from montana.nativemodules.getnmcapabilities module showing Get NM Capabilities unexpectedly returned Min=0 on domain 0, with D"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "RdPkgConfig (0xA1) and RdEndPointCfg (0xC1) register writes were used to configure MCTP bus ID rules and endpoint configuration for Intel platform val"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PTTI POC implementation based on PMIC Test Tools interface DMTF spec. Draft specification review with Patrick Kutch."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Stressing Redfish PECI Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensi"
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Critical issue identified with MIV framework, requires further investigation."
       },
       {
         "year": "2021",
         "gem": "",
+        "summary": "Cloned repository and created branch jallred_mivpatch for MIV validation framework."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Configured namespace.yml and repos.yml for MIV validation framework."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Redfish OEM API validation meeting"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "BMC Redfish OEM API validation for MCTP RAW packet issuance."
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DCMI Conformance Test Suite (DCTS) Network/API Transport: Engineered the network and API transport layer for DCTS, validating enter"
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] EPSD Codebase Emergency Manual Merge: Executed an emergency manual code merge against the latest EPSD codebase under tight mileston"
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Yahoo Linux BMC Provisioning & Automation Tooling: Authored Linux shell scripts to provision the BMC LAN interface for Yahoo, relea"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knigh"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Cluster Network Stress Suite BKM: Delivered procedural BKM for compiling and running complex cluster network stress suites, ruling "
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lenovo Proton 8-Socket Optane DC Persistent Memory (AEP) Validation: Led validation on the 8S Lenovo Proton platform, enabling Purl"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 8-Core DAL Halting Bug Discovery & BIOS Alignment: Uncovered a critical 8-core DAL halting bug during 8-socket testing, automated 3"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PVT RAS for AEP 'Viral State PCIe Fatal Error' Test: Developed 'AEP viral state PCIe fatal error' test case and verified error prop"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Reusable Multi-Register & AEP Mailbox Verification APIs: Proposed and authored reusable helper APIs to read multiple register state"
       },
       {
         "year": "2018",
@@ -4591,6 +5706,26 @@
       {
         "year": "2005",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI complia"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, an"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncove"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automa"
+      },
+      {
+        "year": "2005",
+        "gem": "",
         "summary": "Test run for FTF202"
       },
       {
@@ -4626,217 +5761,22 @@
       {
         "year": "2019",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Debugged PECI framework unit tests involving Redfish crashdump raw packet transmission and wake-on-PECI configuration. Identified that wake-on-PECI re"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "Updated TC and verified profile."
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "Running Simics setup tests"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Copying test files to release directory"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Running Simics test for BMC MCTP protocol"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Test target changed to '1_socket_lcc-bmc.target.yml'"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Run tests from 'System Simulation and Modeling' team to verify MCTP functionality"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Find \"DMR\" (Latest WW, recommend silver if available for current WW) -> Create project"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Read test results: Serial output (oakstream.mb.bmc.com)"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Search for \"(peci_cmd =|\\{peci_cmd\\}|0x40)\" in C:\\Simics\\simics-diamondrapids-6.0.pre539\\win64\\lib\\python-py3\\simmod\\srv_tests\\bmc_tester.py"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Deprecate PCS and replaced with TPMI"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Remove PECI-Wire"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Created a new branch for iod migration and checked out the new branch"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Added old IOD repo as a remote repository"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Pre-PO 0.5 TCD test step details documented in Phoenix"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Pre-PO 0.5 Test plan (TC list with dependencies tracked)"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MCTP Stress tests developed and delivered for 19 out of 25 planned test cases."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "TDF architecture leveraged for rapid test step changes in prototyping and debug."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "UUID (Universally Unique Identifier) checked"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Get self-test results"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Test MCTP data"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Machine Check info with peci_cmds rdPkgConfig 0x88 0x08"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MCTP feature en/disabled test planned"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MCTP test device installed"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MCTP feature en/disabled test executed"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Function test passed for PCIe MCTP devices"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Ran test on Proton2 with SEL indicated problems with DIMM configuration."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Proton2 reproduced NUMA.LOCAL with fixed DIMM config and checked kernel/sel logs."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "-PECI JVL RAS and porting Curtis recipe manually"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "New DDI request and hardware reservation for DHCP"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Scheduled RAS validation on Intel scheduler"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "BIOS settings for HPE's Workload Profiles were set up and validated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Git repository for workload profile updated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "HPE system available for checking out Power Limiting options."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Request to re-run AC cycle with parameter added"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Initiated lab operations and testing schedule for new hardware setup."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Debugging verifysamepolicy.py script"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Node Manager configuration check"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "DMR deltas to Phoenix - template + Oakstream DMR 1&2"
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
       },
       {
         "year": "2024",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Redfish chassis power state verification on node c001n0008bmc"
       },
       {
         "year": "2024",
@@ -4847,6 +5787,16 @@
         "year": "2024",
         "gem": "",
         "summary": "MCTP cycle tests on GNR and SRF"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "PECI register read/write operations for 0x14 config register and BIOS mailbox status verification."
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Configuration of machine check break via IPC halt and CV register manipulation."
       },
       {
         "year": "2024",
@@ -4896,12 +5846,22 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Montana native module stress test produced 13,770 sent and 13,220 passed transactions with 550 failed and 640 skipped events. Network throughput peake"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "MCTP stress testing was performed (BMC reset cycling)"
       },
       {
         "year": "2024",
         "gem": "",
         "summary": "MCTP stress testing was performed (i3c function/i3c traffic)"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DMR MMIO Adaptation & Pre-Silicon Simics Validation: Adapted PECI validation tests to the new MMIO register access model for Diamon"
       },
       {
         "year": "2024",
@@ -4946,7 +5906,32 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Driver test plan development for Windows and Linux platforms"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability Enablement: Supported BA validation team enabling Montana manageabilit"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "[ERROR] PythonSV library not available, check configuration"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCTP ACL Update Start command specification: Request payload includes Intel Manufacturer ID (000157h) and Requester PCIe BDF. Response validates compl"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Validation of S3M SB mailbox alignment requirements for IOSF-SB protocol; recommendation to enforce DW or QW access (4 or 8 bytes) to prevent firmware"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCTP validation requirements defined for SPR, including Bus Owner, Bus Owner Proxy, multi-segment, and bridging capabilities."
       },
       {
         "year": "2024",
@@ -4977,6 +5962,11 @@
         "year": "2024",
         "gem": "",
         "summary": "Simics project directory and test target setup"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution: Delivered and executed the Kayak+Montana transition plan, importing 21 Mont"
       },
       {
         "year": "2024",
@@ -5051,7 +6041,22 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Status check of ASD container on c001n0004bmc via Redfish DebugService status endpoint."
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "Set up a testing server for Prometheus metrics and telemetry"
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Broxton SoC PVT Debug Stack OEM Release Assurance: Ensured release health of DSD trace debug tools (PVT debug stack and PDT VISA) f"
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Trace Debug Training Sessions & OEM Power-On Enablement: Led technical training sessions for trace teams and provided direct custom"
       },
       {
         "year": "2015",
@@ -6301,6 +7306,16 @@
       {
         "year": "2011",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell-Client VISA Architecture Delivery: Delivered Visualization of Internal Signals Architecture (VISA) in PDT for Haswell-Clien"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell X0/A0 Power-On Lab Bring-Up & Emulation Support: Supported VISA Panel in lab during Haswell X0 and A0 power-on; implemented"
+      },
+      {
+        "year": "2011",
+        "gem": "",
         "summary": "PTI training demo with Problem State Recorder"
       },
       {
@@ -6886,7 +7901,17 @@
       {
         "year": "2020",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] Ignition-IPMI Support Model & Cross-Team Log Mining: Designed Ignition support model leveraging existing test content and mined pla"
+      },
+      {
+        "year": "2020",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establish"
+      },
+      {
+        "year": "2020",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DTAF Wrapper for Montana & Command Center Integration: Delivered DTAF integration wrapper for Montana and provided expert guidance "
       },
       {
         "year": "2020",
@@ -6952,9 +7977,34 @@
         "year": "2020",
         "gem": "",
         "summary": "PECI commands tested and found to be supported or unsupported."
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Benchmarking Tool: Delivered the SOL performance tool reusing core SOL libraries to v"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Session DCTS Conformance Suite Delivery: Added multi-session network support to DCTS conformance libraries, enabling Intel to"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Validation Smoke Test Suite Pilot for Willowbrook: Piloted and established the validation smoke test suite for developer testing, e"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DCMI over HECI (DoH) Low-Level Design & Implementation: Ramped on the ME Kernel HECI driver and authored the low-level design and f"
       }
     ],
     "automation": [
+      {
+        "year": "2007",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] LAN Access Division (LAD) Automation & Lanconf Tooling: Maintained and expanded the Lanconf 1.8 and touch test utilities, automatin"
+      },
       {
         "year": "2007",
         "gem": "",
@@ -6999,6 +8049,21 @@
         "year": "2007",
         "gem": "",
         "summary": "Alpha test pass and tool fixes"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Broadwell (BDW) VISA Enablement & TAP XML Generation: Owned end-to-end TAP register definition generation in XML across platform st"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Graphics Trace Tool Transition from GTPO to PDT: Guided transition of graphics trace diagnostics from legacy GTPO tools to PDT, uni"
       },
       {
         "year": "2013",
@@ -7048,7 +8113,37 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "MCTP message payload and event subscription telemetry from OpenBMC."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Git clone of Intel inner-source framework automation with credential redaction."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Validation of PECI v4.0 command checkout against MIV Node Manager on the Montana platform, with power limit accuracy checks and Redfish remote access "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Remote Access (Redfish) verification via OOB for server turn Off/On and ForceOn commands, confirming Redfish command execution on the MIV platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Build and release pipeline for montana module with pip, build, and twine."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Create git repo for rebooter script with Scott Morris"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCIe RAS telemetry and RAPL power instrumentation: Executed PECI command sequence for local PCIe endpoint configuration and IASR register reads, then "
       },
       {
         "year": "2022",
@@ -7058,7 +8153,37 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR)"
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Analysis of CSV files revealed performance of `wrEndPointConfig_PCI` function."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCI DMTF validation telemetry and MCTP service configuration recorded in 2019-2024 era notes."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Intel Trace Hub PVT build 4.22.19553.39600 installed via DSDJ artifact repository; J83920-A slot 1 board check confirmed."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "BMC validation mechanism executed via Cscripts to validate changes; check_sys_errors used to locate MR configuration usage."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Downloaded unified_server_ptu.tar.gz from Intel Artifactory to local automation tooling path."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF auto"
       },
       {
         "year": "2022",
@@ -7078,12 +8203,22 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "Imported Python SV tooling and invoked component manager refresh; executed pcudata multi-list dump via socket0."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Modification made to code to resolve Power Limit Accuracy feature issue"
       },
       {
         "year": "2022",
         "gem": "",
         "summary": "PECI tool used to diagnose PCS 8 incrementation issue"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and "
       },
       {
         "year": "2016",
@@ -7778,6 +8913,21 @@
       {
         "year": "2012",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] VISA Framework Topology Services & Automation: Integrated PDT Framework topology services to eliminate manual project selection at "
+      },
+      {
+        "year": "2012",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Python Scripts Service & Graphical Trace MCI Setup: Added Python Scripts Service to PDT VISA panel, developed the MCI setup script "
+      },
+      {
+        "year": "2012",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Observation & Analysis (OA) Counter API Integration: Defined register structures used by OA APIs, allowing the PDT VISA panel to mo"
+      },
+      {
+        "year": "2012",
+        "gem": "",
         "summary": "Debug tools configuration"
       },
       {
@@ -7838,7 +8988,42 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automate"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases "
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Montana Framework Python Package Release under XPIV devpi: Formatted, built, and released the Montana automation framework as an of"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Platform Energy Counter (PCS) interaction with BMC and SUT using ipmitool and Redfish API"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Installed PySV tooling with trusted-host flag and isolated proxy chain to establish reproducible build pipeline for platform telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana bin directory navigation and device ID extraction."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana automation binary executed with power limit accuracy test against SRR4PIVR25B06H5 platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Sapphire Rapids BKC Release 2.0.30.04.030.0 v2 finalized for EagleStream platform; CMC release build 77 deployed to production."
       },
       {
         "year": "2023",
@@ -7877,6 +9062,21 @@
       },
       {
         "year": "2023",
+        "gem": "",
+        "summary": "Montana base IPMI tool executed raw command sequence with policy ID 20 and domain 0x2E, generating correction time limit telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Verbose PCIe sweep on Intel innersource automation framework triggered performance warning due to fragmented DataFrame operations."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Blackbox module AttributeError during Run execution in montana automation pipeline; blackbox.export() called with NoneType object, indicating missing "
+      },
+      {
+        "year": "2023",
         "gem": "Utilized Git CLI commands such as 'git config' and 'git clone' for various operations.",
         "summary": "Performed Git operations for GitLab repository including SSH and HTTPS cloning, proxy configuration, SSL verification bypass, authorization issue reso"
       },
@@ -7888,7 +9088,37 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "Silicon validation tooling executed a DFX (Design-for-X) fuse extraction routine on the platform, invoking the fuser utility to parse DFX register val"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "User credential provisioning completed with ipmitool user set name 8 debuguser1 and password [REDACTED_PASSWORD], then channel access enabled for ipmi"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Non-Volatile memory controller detected as Micron Technology Inc 7450 PRO NVMe SSD (rev 01) with NVM Express programming."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PTU tool executed with PTU application running and started successfully."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "IPMI SetNmPolicy command executed with raw parameters."
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Used ipmitool to set and get network management policy settings."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Pulled Intel Linux mirror scripts and patched DNF config to redirect baseurl from CentOS mirrors to Intel internal linux-ftp mirrors."
       },
       {
         "year": "2023",
@@ -8018,6 +9248,21 @@
       {
         "year": "2006",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Low-Level Network Protocol Stack Validation: Validated IPMI over LAN, Serial Over LAN (SOL), and RMCP+ protocol stacks; authored au"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Session-Less Command Functional Validation Suite: Built automated test harness validating register handling for Get System GUID, Ge"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, dang"
+      },
+      {
+        "year": "2006",
+        "gem": "",
         "summary": "GCC build: Try Full (network etc) build"
       },
       {
@@ -8091,6 +9336,11 @@
         "summary": "Execute Health and Monitoring script (Tao 126579)"
       },
       {
+        "year": "2019_2024::SEC_185",
+        "gem": "",
+        "summary": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up"
+      },
+      {
         "year": "resume_data",
         "gem": "",
         "summary": "Developed a Recursive RAG (Retrieval-Augmented Generation) pipeline with iterative context refinement and retrieval disc..."
@@ -8144,6 +9394,21 @@
         "year": "2025",
         "gem": "",
         "summary": "Engineered efficient multi-tenant LLM inference by integrating vLLM with Liger fused CUDA kernels and PyTorch-based model workflows."
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] NPK SDK Google Test Automation on TeamCity CI: Configured two dedicated TeamCity integration test hosts running the NPK SDK 'Google"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 1450 Debug Tool Stack Defect Detection: Uncovered and root-caused a critical defect in the 1450 Debug Tool Stack that broke previou"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Xilinx FPGA Pre-Silicon Bring-Up for Broxton (BXT): Built Python validation scripts to configure VISA trace, validate trace-to-memo"
       },
       {
         "year": "2014",
@@ -8451,6 +9716,16 @@
         "summary": "Software version and build information"
       },
       {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Shared Build Infrastructure & Primary Build Engineer Coverage: Provided back-up coverage for primary build engineer, maintaining co"
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] BVT & Non-Target Execution (NTE) Milestone Support: Debugged build verification and non-target execution failures across Westerlee "
+      },
+      {
         "year": "2021",
         "gem": "Development and release of custom scripting tools (pcidevices_unit.py, redfish_utils.py) to aid in Purley RAS Gap Analysis",
         "summary": "Release of pcidevices_unit.py, redfish_utils.py, and other tools for the Purley RAS Gap Analysis"
@@ -8463,7 +9738,32 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "Configured IPMI LAN channels 1 and 3 to use DHCP and verified settings."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Created and enabled IPMI user 'debuguser' with privilege level 4 on channels 1 and 3."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "No conflicts found in the RAW LOGS regarding tool release years"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI return code validation logic identified in checkout script; failNames array population and error logging for non-good PECI return codes."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI checkout failure due to missing IPC/ITP2 setup preventing c-state disable script execution; resolution involves updating git repo and verifying B"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Configured BMC network interfaces (dedicated port 3 and shared port 1) with static IP 10.10.10.103/24 and executed raw IPMI command for chassis identi"
       },
       {
         "year": "2021",
@@ -8478,7 +9778,72 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "MCTP Platform Level Validation: Bus owner proxy verification, telemetry attestation, and PECI over MCTP proxy configuration. BMC validation jumper con"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "SDSi_installer_notes.xlsx script execution data. PECI/SoftSKU interaction logs."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "QXB4 C-Step thermal filtering subroutine validation; IPMI root password configuration via raw command; openbmc-node-managerd release egs-0.62-0-gdbc0c"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "DPG build copy operation"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Ignition example script logic for deleting policy 254 via Open BMC native module."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Sapphire Rapids BIOS patch application and Pcode debug variable loading via PythonSV automation framework."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "ipmitool -I lanplus -H 10.219.165.176 -U debuguser -P 0openBmc1 -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 0x70 0x05 0x05 0xA1 0x00 0x00 0x00 "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PeciSendRaw IPMI command execution on BMC 10.23.20.238"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI raw read sequence via ipmitool for pkg_cfg register access"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Sent IPMI raw command 0x2E 0xC1 (SetNmPolicy) to configure Network Manager power limiting on Archer City platform. Configured CorrectionTime to 30000 "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "SPI flash component inventory for EM100: Macronix MX25L51245G (Cooper City, Wilson City, Archer City) and Micron MT25QL01GBBB8ESF-0SIT."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Setup of Intel System Debugger NDA tools and PythonSV environment for white cover error injection and crashlog toolchain."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Investigated IFU hang during OS boot following DIMM exchange; verified C-state control via Montana tool and reverted DIMM configuration to isolate har"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed status_scope capture on Sapphire Rapids platform with namednodes collectors and overview analyzers; Axon upload failed with specific UUID."
       },
       {
         "year": "2021",
@@ -8488,7 +9853,47 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "PTTI POC implementation based on PMIC Test Tools interface DMTF spec. Draft specification review with Patrick Kutch."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Stressing Redfish PECI Automation & Command Matrix: Authored 'Stressing Redfish PECI' automation demo and developed the comprehensi"
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "ipmitool used to troubleshoot issue, output identical to BMC console raw commands."
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Yahoo Linux BMC Provisioning & Automation Tooling: Authored Linux shell scripts to provision the BMC LAN interface for Yahoo, relea"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knigh"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lab Capacity Doubling & 20+ Node Recovery Commendation: Revived 20+ offline cluster nodes, automated thermal telemetry collection, "
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 8-Core DAL Halting Bug Discovery & BIOS Alignment: Uncovered a critical 8-core DAL halting bug during 8-socket testing, automated 3"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Reusable Multi-Register & AEP Mailbox Verification APIs: Proposed and authored reusable helper APIs to read multiple register state"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] AEP Script Hacking, RAS Working Sessions & Format BKM: Founded regular 'AEP Script Hacking' and 'RAS working sessions' across teams"
       },
       {
         "year": "2018",
@@ -8553,6 +9958,26 @@
       {
         "year": "2005",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI complia"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, an"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncove"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automa"
+      },
+      {
+        "year": "2005",
+        "gem": "",
         "summary": "Tool release"
       },
       {
@@ -8568,197 +9993,7 @@
       {
         "year": "2019",
         "gem": "",
-        "summary": "Montana tool experiencing issues establishing IPMI v2/RMCP+ sessions"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Maximum number of retries for Get Device ID command not specified"
-      },
-      {
-        "year": "2019",
-        "gem": "Introduction of new tools for Purley RAS Gap Analysis, specifically _06_02_03_cs_nvd_pcie_fatal.py and others",
-        "summary": "Release of various tools related to Purley RAS Gap Analysis, including _06_02_03_cs_nvd_pcie_fatal.py, helper.py, riv_common.py, workload_profile.py"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Goal setting and expectation review for DOT assignment"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Configuring BMC console settings using IPMItool"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Enabling MTM using IPMITOOL"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Enable BMC console"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Merged Montana from C drive local repo to DTAF content preserving history"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Linked to iod_kayak_driver.py on GitHub"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "OKS-DMR New TCDs title/descriptions in Phoenix"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MCTP Stress tests developed and delivered for 19 out of 25 planned test cases."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "8 distinct MCTP failures correlated with existing issues from manual execution."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "TDF architecture leveraged for rapid test step changes in prototyping and debug."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Build Python package using miv-software-montana directory"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Docker registry connection issue resolved using aws-ecr-credential-helper plugin"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Misconfigured docker-compose.yml file causing Docker build process issues"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "+HSD: Feature request - Allow IPC to pass physical memory addresses with TME VM KeyID bits"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "-PECI JVL RAS and porting Curtis recipe manually"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "EEUPDATE64E.EFI command and IPMItool commands for configuration and power cycling"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power cycling the system using IPMItool"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Executed raw command on JF04WVAW4113"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Configured IPMI settings on JF04WVAW0228"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Enabled IPMI user and set password on JF04WVAW0228"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Executed raw command on JF04WVAW0228"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Retrieved commit-msg hook from remote server via SCP."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Workload profile loaded and BIOS knobs written."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Cscripts work done and ready for launch options."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "VMWare login credentials updated and git fetch performed."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Initial error code received when using `ipmitool` with specific options and parameters"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "CF9 reset detection script executed."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power cycling scripts to be updated by Scott Morris."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Git repository for workload profile updated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Command execution using ipmitool to retrieve system information"
-      },
-      {
-        "year": "2019",
-        "gem": "era registry",
-        "summary": "Development of startCscripts.py, SysCfg, and various scripts like peciXtor.py, peci_framework_ipmi_example.py, and pecistressor.py for the Purley RAS "
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Attempt to send raw PECI commands using `ipmitool` resulted in unknown return code 0xAC."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Debugging verifysamepolicy.py script"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Causality error: Log entries conflict with the release year of the tool (ipmitool)."
+        "summary": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up"
       },
       {
         "year": "2024",
@@ -8774,6 +10009,11 @@
         "year": "2024",
         "gem": "",
         "summary": "Simics simulation run with test script s-test.py"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "IPMI user configuration and network interface setup for BMC management channel 3."
       },
       {
         "year": "2024",
@@ -8818,6 +10058,11 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DMR MMIO Adaptation & Pre-Silicon Simics Validation: Adapted PECI validation tests to the new MMIO register access model for Diamon"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "Jason's concerns and questions regarding peciframework, LTM tools, DMR, PV intersection, and SIMICS."
       },
       {
@@ -8853,7 +10098,17 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Driver test plan development for Windows and Linux platforms"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "Retry logic and IPMITool.py issues"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCTP raw command execution for package configuration read and restart discovery on Intel SPS FW via IPMI LANplus interface."
       },
       {
         "year": "2024",
@@ -8904,6 +10159,11 @@
         "year": "2024",
         "gem": "",
         "summary": "Checked test plans and automation on wiki page"
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Broxton SoC PVT Debug Stack OEM Release Assurance: Ensured release health of DSD trace debug tools (PVT debug stack and PDT VISA) f"
       },
       {
         "year": "2015",
@@ -9833,6 +11093,26 @@
       {
         "year": "2011",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Intel Platform Debug Toolkit (PDT) C# & DAL Ramp: Ramped on C#, PDT architecture, and Dfx Abstraction Layer (DAL); leveraged legacy"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell-Client VISA Architecture Delivery: Delivered Visualization of Internal Signals Architecture (VISA) in PDT for Haswell-Clien"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] XML Stylesheet Automation & VISA-DAL Register Converter: Authored XSLT stylesheets to automate register conversions and refactored "
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] OEM VISA Tool Architecture & Engineer Mentorship: Architected the OEM version of VISA and cross-trained and monitored a junior engi"
+      },
+      {
+        "year": "2011",
+        "gem": "",
         "summary": "Starting custom script for test step 19/26"
       },
       {
@@ -10188,6 +11468,16 @@
       {
         "year": "2020",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Manageability Content Strategy & 94 HSD Triage Milestone: Established MIV domain content strategy, framework hotfix pipeline, and d"
+      },
+      {
+        "year": "2020",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establish"
+      },
+      {
+        "year": "2020",
+        "gem": "",
         "summary": "Fixtures preparation and cleanup"
       },
       {
@@ -10234,9 +11524,24 @@
         "year": "2020",
         "gem": "",
         "summary": "Architectural decisions regarding power management and capacity planning were likely made, but details are lacking"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Willowbrook Serial Over LAN (SOL) Performance Benchmarking Tool: Delivered the SOL performance tool reusing core SOL libraries to v"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Validation Smoke Test Suite Pilot for Willowbrook: Piloted and established the validation smoke test suite for developer testing, e"
       }
     ],
     "architecture": [
+      {
+        "year": "2007",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Fox Cove Critical Customer Escalation Resolution: Reproduced and characterized a critical customer issue on Fox Cove platforms from"
+      },
       {
         "year": "2007",
         "gem": "",
@@ -10251,6 +11556,41 @@
         "year": "2007",
         "gem": "",
         "summary": "Sent touch.zip to Mark and updated installation instructions"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "Identification of LTM and PCI config space gaps including security and access control issues"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Skylake (SKL) VISA Power-On Readiness & IDC Collaboration: Discovered critical bugs in SKL VISA APIs; traveled to Intel Design Cent"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Pre-Silicon VISA Legacy Channel Emulation Gap Resolution: Identified and resolved a critical pre-silicon test gap with VISA Legacy "
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Broadwell (BDW) VISA Enablement & TAP XML Generation: Owned end-to-end TAP register definition generation in XML across platform st"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Graphics Trace Tool Transition from GTPO to PDT: Guided transition of graphics trace diagnostics from legacy GTPO tools to PDT, uni"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PDT Trace Software & Primary VISA GUI Panel Ownership: Owned end-to-end design, maintenance, and feature development for the PDT Tr"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DP PDT Team Agile SCRUM Master Governance: Served as Scrum Master for the DP PDT team, removing blocking developer impediments, lea"
       },
       {
         "year": "2013",
@@ -10280,7 +11620,52 @@
       {
         "year": "2022",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Security vulnerability search and platform component audit across PCH, RAM, BMC, locks, DDR5, OOBMSM."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Framework archaeology and code learning for silicon validation platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP DDRT configuration and telemetry setup by Sobocinski, Nalborski, and Krithivas; platform arch for managability framework and telemetry."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP PCIe telemetry payload construction and dispatch via busctl for content development on K90583-114 platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "IA32_MCi_STATUS MSR validation and error reporting telemetry from Intel MCI platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCI configuration command execution on Socket 0x30 and 0x31 with offset offsets 0x3E and 0xF23 respectively."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "BMC performance benchmarking across six platform nodes with throughput and latency measurements."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Platform validation telemetry from PECI Redfish CPU temperature measurement and IPMI BMC remote access benchmarking."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Validation of PECI v4.0 command checkout against MIV Node Manager on the Montana platform, with power limit accuracy checks and Redfish remote access "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Remote Access (Redfish) verification via OOB for server turn Off/On and ForceOn commands, confirming Redfish command execution on the MIV platform."
       },
       {
         "year": "2022",
@@ -10295,7 +11680,52 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Des"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Achieve Wave-1 Platform Production-Candidate of Manageability features with 0-critical 1-high."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Execute Scrum retrospective to drive 3 examples of multi-discipline code re-use between testing frameworks."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "System telemetry and power control operations recorded during platform validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a valida"
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Accessed meeting recording via Intel's SharePoint platform for partner training purposes."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Stopped and disabled the OpenBMC NodeManager service to isolate platform telemetry from the node controller."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCI enumeration and MMIO stressor validation runs executed against the MIV platform, confirming sv object availability and PCI enumerated bus state."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "VISA training session executed on PDG Granite Rapids platform, with configuration telemetry from pred and sv modules."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Retrieved GNR PO X1 Phase 1 tracking workbook from SharePoint."
       },
       {
         "year": "2022",
@@ -10310,7 +11740,27 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "Montana PECI sweep and flood validation runs executed against Araxis lab platform, confirming expected transaction counts and MSR register coverage."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "MSR register access issues and unexpected return codes encountered during PECI tests."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PUNIT platform power info and RAPL limit telemetry read from socket 0 uncore registers."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCU data dump and PBM config vector power limit telemetry read via PySV scan compiler on Intel platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Global slow limits and RAPL power instrumentation using PBM limits, fast RAPL package total power, and PMeter platform total power."
       },
       {
         "year": "2016",
@@ -10695,6 +12145,21 @@
       {
         "year": "2012",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] VISA Framework Topology Services & Automation: Integrated PDT Framework topology services to eliminate manual project selection at "
+      },
+      {
+        "year": "2012",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell-Server & Client Unified VISA Infrastructure: Expanded the PDT VISA engine across Haswell-Server and Haswell-Client programs"
+      },
+      {
+        "year": "2012",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Observation & Analysis (OA) Counter API Integration: Defined register structures used by OA APIs, allowing the PDT VISA panel to mo"
+      },
+      {
+        "year": "2012",
+        "gem": "",
         "summary": "No enabled processor threads found in the platform"
       },
       {
@@ -10723,14 +12188,74 @@
         "summary": "Dropping MCTP impacts Google's hard requirement for OOB health and performance monitoring data polling"
       },
       {
+        "year": "2019_2024::SEC_341",
+        "gem": "",
+        "summary": "Debugged PECI framework unit tests involving Redfish crashdump raw packet transmission and wake-on-PECI configuration. Identified that wake-on-PECI re"
+      },
+      {
+        "year": "2019_2024::SEC_341",
+        "gem": "",
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
+      },
+      {
         "year": "2023",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowled"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-"
       },
       {
         "year": "2023",
         "gem": "",
         "summary": "Platform Energy Counter (PCS) interaction with BMC and SUT using ipmitool and Redfish API"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MCTP utility verification and PECI failure review on Intel platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Updated MIV validation status and triage queue for platform defect resolution."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Installed PySV tooling with trusted-host flag and isolated proxy chain to establish reproducible build pipeline for platform telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "HBM import error workaround executed by module loader to bypass HBM-specific CPU code names and load alternative non-HBM modules."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana automation binary executed with power limit accuracy test against SRR4PIVR25B06H5 platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Non-persistent global patch revision value retrieved for topology personality present check."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe endpoint configuration for legacy EMR XCC and new EMR XCC platform, including Chassis_CXPSMBUS, DSA, IAX, North Peak, PF.CPM, PF.HQM0, VF.HQM0, a"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Sapphire Rapids BKC Release 2.0.30.04.030.0 v2 finalized for EagleStream platform; CMC release build 77 deployed to production."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Cold Reset 20.2 App 02h and Warm Reset 20.3 App 03h power state transitions logged for platform reset sequence."
       },
       {
         "year": "2023",
@@ -10755,12 +12280,92 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "PCIe Gen5 and Gen4 RAS telemetry failures during platform stress test"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Tools used to test manageability features: Simics, DTAF"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Silicon validation telemetry suppression and logging configuration for platform modules."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Unexpected PECI return codes observed in SCF_MDFS_CR validation on EGS SPR MCC platform. MSR availability gap in MCC chop caused inconsistent PECI tel"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PECI Checkout FAIL on EGS SPR S0/B1 Windows platform. Missing 0x40 in rdIaMsrEx, rdPkgConfig, and missing 0x40 in rdIaMsrEx caused failure. C6 disable"
       },
       {
         "year": "2023",
         "gem": "Postman",
         "summary": "Installed Postman for Redfish API testing"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "VNC scan test against EMR XCC ES2 on Intel AMR platform"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Chassis DFX fuse indexing and MCTP stress test execution on Intel platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Silicon validation tooling executed a DFX (Design-for-X) fuse extraction routine on the platform, invoking the fuser utility to parse DFX register val"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Host, SUT, and BMC nodes resolved to fl31ca102an0705.amr.corp.intel.com, fl31ca102as0705.deacluster.intel.com, and fl31ca102ab0705.deacluster.intel.co"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Retrieved DMR-SIMICS model telemetry and BMC webinars from Intel Diamond Rapids shared documentation, validating platform diagnostics against the 2023"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Topology migration from saved_topology to mctp_topology with PCI EID routing and BDF device discovery."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCI topology read from console via get_pci_eid_from_console, storing interface as console and logging eid data."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Duplicate EID port detection and error count increment for topology validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Topology save for next TDF loop and TODO markers for SMBUS, i3c, and comparable topology."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Request to monitor DRAM power-limit registers and parametric register offsets in platform telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Reproduce power-limit behavior by varying RAPL and PBM limits across platform power telemetry registers."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe BDF whitelist lookup and shared memory topology synchronization completed during platform telemetry validation."
       },
       {
         "year": "2023",
@@ -10820,6 +12425,16 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "Provisioned VNC access for platform telemetry node."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "System ID 120197 assigned to OneCloud for RAS validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Executing a script"
       },
       {
@@ -10836,6 +12451,26 @@
         "year": "2023",
         "gem": "",
         "summary": "Discovering Topology and Running Commands via Sankeymatic Link"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Embedded Firmware White-Box Architecture in GreenHills: Executed white-box testing of internal firmware APIs and protocol state mac"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Wireshark / Ethereal IPMI 2.0 Protocol Dissector: Authored custom dissector patches for Wireshark/Ethereal to decode RMCP+ and IPMI"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Session-Less Command Functional Validation Suite: Built automated test harness validating register handling for Get System GUID, Ge"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, dang"
       },
       {
         "year": "2006",
@@ -10871,6 +12506,11 @@
         "year": "2006",
         "gem": "",
         "summary": "IPMI dissector patch update"
+      },
+      {
+        "year": "2019_2024::SEC_185",
+        "gem": "",
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
       },
       {
         "year": "resume_data",
@@ -10921,6 +12561,16 @@
         "year": "2025",
         "gem": "",
         "summary": "Architecting a high-throughput AI systems testbed using vLLM with Liger fused CUDA kernels."
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Open-IPC API & North Peak (NPK) Trace Integration Testing: Enabled and executed functional and integration tests covering Open-IPC-"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Skylake Multi-Stepping VISA Support in DSD: Supported PDT VISA plugins across SKL ULT B0/C0 and SKL M0/Q0/P0 steppings, triaging de"
       },
       {
         "year": "2014",
@@ -11003,9 +12653,19 @@
         "summary": "IPC error code: (0x800e0001)"
       },
       {
-        "year": "2021",
+        "year": "2010",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] Shared Build Infrastructure & Primary Build Engineer Coverage: Provided back-up coverage for primary build engineer, maintaining co"
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] BVT & Non-Target Execution (NTE) Milestone Support: Debugged build verification and non-target execution failures across Westerlee "
+      },
+      {
+        "year": "2010",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lab KVM, Networking & Domain Host Administration: Served as key resource defining lab host requirements, OS images, domain enrollme"
       },
       {
         "year": "2021",
@@ -11020,7 +12680,47 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "OpenBMC Node Manager specification review for external interfaces, HAS, and LLD components."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI/OOBMSM enumeration and whitelist configuration for Icelake-X and Sapphire Rapids platforms; BMC Journal log retrieval via Redfish API."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP Platform Level Validation: Bus owner proxy verification, telemetry attestation, and PECI over MCTP proxy configuration. BMC validation jumper con"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed montana.py against peci_endpoint_pci.tdf to validate rdEndPointConfig_PCI enumeration. Confirmed whitelist filtering logic using bdf_cfg_whit"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI endpoint configuration failures on socket 0 functions 0-8; AC0195 platform boot failure with CPS DIMMs after BKC20 to BKC28 upgrade requiring fir"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Validation of OOBMSM MCTP features and proxy routing via SoC for Sapphire Rapids (SPR) and Ice Lake-X (ICX) platforms, focusing on synthetic ingredien"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Eagle Stream (Archer City) Manageability Architecture: Led manageability architecture and validation for Eagle Stream / Sapphire Ra"
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Implementing a 'Tiger Team' structure to improve collaboration and reduce siloed activities"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "DCMI command deprecation notice for EGS (SPR) and BHS (GNR) platforms."
       },
       {
         "year": "2021",
@@ -11040,7 +12740,127 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "AC0195 D0 upgrade firmware artifacts identified for SPR EBG SPS platform"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Sent IPMI raw command 0x2E 0xC1 (SetNmPolicy) to configure Network Manager power limiting on Archer City platform. Configured CorrectionTime to 30000 "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Applied Pcode patch revision on Sapphire Rapids (SPR) D0 platform using ITP and debug libraries; verified persistent/non-persistent patch states via d"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Future of MCTP Infrastructure & Architecture Blueprint: Authored and presented 'Future of MCTP Infrastructure' technical blueprint,"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI Platform Configuration Space Thermal Monitoring Control (TMC) mailbox validation and IB_LOCK bit manipulation via Redfish and PythonSV."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP daemon configuration for trace logging and bus inspection."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP bus controller inspection for active endpoints."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Investigation of Package Thermal Status and MCA error sources on SKX platform. Read MSR 1B1h (PACKAGE_THERM_STATUS) to check TCC, PROCHOT, and Critica"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] OOBMSM as MCTP Bus Owner Architecture: Architected OOBMSM as MCTP Bus Owner and presented arbitration models at MRC forums for mult"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Planning session for enabling MCTP testing for OpenBMC on SPR/EGS platforms, involving BMC firmware validation and PECI/i3c/MCTP protocols."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed status_scope capture on Sapphire Rapids platform with namednodes collectors and overview analyzers; Axon upload failed with specific UUID."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP telemetry filtering via journalctl and uncore register inspection for socket0"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Uncore search and DRAM power info retrieval for socket0"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "RdPkgConfig (0xA1) and RdEndPointCfg (0xC1) register writes were used to configure MCTP bus ID rules and endpoint configuration for Intel platform val"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PTTI POC implementation based on PMIC Test Tools interface DMTF spec. Draft specification review with Patrick Kutch."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MC follow-up on BIOS serial log MCA error during EFI-to-CentOS boot; debug context for AC0195 platform."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "IFU MCA error in BIOS Serial logs related to Archer City board design"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] MIV Sprint Planning & Defect Scrub Leadership: Led daily standups, estimation, and sprint retrospectives for MIV, closing 27 critic"
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DCMI Conformance Test Suite (DCTS) Network/API Transport: Engineered the network and API transport layer for DCTS, validating enter"
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Microsoft Datacenter SOL API Architecture: Engineered high-performance SOL API solution capable of replacing serial IP dongles acro"
+      },
+      {
+        "year": "2008",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Willowbrook iBMC 'Get Asset Tag' DCMI Command: Designed and implemented the 'Get Asset tag' DCMI command for iBMC firmware through "
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knigh"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Cluster Network Stress Suite BKM: Delivered procedural BKM for compiling and running complex cluster network stress suites, ruling "
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lenovo Proton 8-Socket Optane DC Persistent Memory (AEP) Validation: Led validation on the 8S Lenovo Proton platform, enabling Purl"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PVT RAS for AEP 'Viral State PCIe Fatal Error' Test: Developed 'AEP viral state PCIe fatal error' test case and verified error prop"
       },
       {
         "year": "2018",
@@ -11075,6 +12895,16 @@
       {
         "year": "2005",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI complia"
+      },
+      {
+        "year": "2005",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, an"
+      },
+      {
+        "year": "2005",
+        "gem": "",
         "summary": "Second evaluation run conducted using EFS1.16 due to observation that platform does not affect performance."
       },
       {
@@ -11095,102 +12925,32 @@
       {
         "year": "2019",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Debugged PECI framework unit tests involving Redfish crashdump raw packet transmission and wake-on-PECI configuration. Identified that wake-on-PECI re"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "Maximum number of retries for Get Device ID command not specified"
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "Invalid command response (0xAB) when attempting to read data from specific PCI device spaces."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Access to SMRR region when not in SMM mode at 0xd8000000."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Loaded BMC firmware with specific version"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MSR PLATFORM_ID read and write operations"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "[Manageability/OOB Feature discussion] w/ Frank https://wiki.ith.intel.com/display/ITSOOBMSM/Architecture - WW39"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "TDF architecture leveraged for rapid test step changes in prototyping and debug."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Test MCTP data"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Intel designed HW board and official BKC package installed"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Jenkins CI/CD pipeline error: ECONNRESET due to socket timeout"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "-PECI JVL RAS and porting Curtis recipe manually"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "BIOS settings for HPE's Workload Profiles were set up and validated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Whitley system setup and reference links provided."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Initial error code received when using `ipmitool` with specific options and parameters"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power cycling scripts to be updated by Scott Morris."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Received new stock of memory modules with improved specifications."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Causality error: Log entries conflict with the release year of the tool (ipmitool)."
-      },
-      {
-        "year": "2024",
-        "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
       },
       {
         "year": "2024",
         "gem": "",
         "summary": "Failed to introspect object for MCTP SMBus HSBP service."
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCA error debugging session with Gonzales Jaimes, Daniel; PCH SMBus and PCIe device status inspection."
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "PECI command execution and response analysis on Intel Ice Lake platform; CPU2017 benchmark execution for 523.xalancbmk_r with AVX-512 configuration."
       },
       {
         "year": "2024",
@@ -11235,7 +12995,27 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Driver test plan development for Windows and Linux platforms"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "CWF execution and platform support in Montana"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability Enablement: Supported BA validation team enabling Montana manageabilit"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCTP ACL Update Start command specification: Request payload includes Intel Manufacturer ID (000157h) and Requester PCIe BDF. Response validates compl"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Kayak Platform Transition & Native PECI+MCTP Execution: Delivered and executed the Kayak+Montana transition plan, importing 21 Mont"
       },
       {
         "year": "2024",
@@ -11291,6 +13071,21 @@
         "year": "2024",
         "gem": "",
         "summary": "Simulation targeting Oakstream platform with specific configuration"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Intel ME Firmware Health Event: MCTP interface failure detected (Event Data 2 = 0Eh). Indicates MCTP interface is non-functional, potentially due to B"
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Architecture GTPO Graphics Trace Architecture: Acted as expert consultant delivering graphics GTPO trace capabilities across "
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Trace Debug Training Sessions & OEM Power-On Enablement: Led technical training sessions for trace teams and provided direct custom"
       },
       {
         "year": "2015",
@@ -11470,6 +13265,26 @@
       {
         "year": "2011",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Intel Platform Debug Toolkit (PDT) C# & DAL Ramp: Ramped on C#, PDT architecture, and Dfx Abstraction Layer (DAL); leveraged legacy"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell-Client VISA Architecture Delivery: Delivered Visualization of Internal Signals Architecture (VISA) in PDT for Haswell-Clien"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Online Trace Signal Decoration Architecture: Coordinated with trace decoder team and DAL hooks experts to add VISA signal decoratio"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] OEM VISA Tool Architecture & Engineer Mentorship: Architected the OEM version of VISA and cross-trained and monitored a junior engi"
+      },
+      {
+        "year": "2011",
+        "gem": "",
         "summary": "Failed to run Optional_IPC_DOA_dll test"
       },
       {
@@ -11585,7 +13400,7 @@
       {
         "year": "2020",
         "gem": "",
-        "summary": "[STRATEGIC_ANCHOR] Successfully integrated Kayak and Montana platforms, enabling native execution of PECI+MCTP tests and supporting BA team with platf"
+        "summary": "[STRATEGIC_ANCHOR] Ignition-IPMI Support Model & Cross-Team Log Mining: Designed Ignition support model leveraging existing test content and mined pla"
       },
       {
         "year": "2020",
@@ -11636,6 +13451,21 @@
         "year": "2020",
         "gem": "",
         "summary": "Formulas updated to calculate inventory metrics"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Westerlee FAS Architecture & Packet-Reuse Counter-Proposal: Provided critical architecture input during Westerlee FAS design sessio"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] DCMI over HECI (DoH) Low-Level Design & Implementation: Ramped on the ME Kernel HECI driver and authored the low-level design and f"
+      },
+      {
+        "year": "2009",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] System Event Log (SEL) & Platform Configuration Control (PCC) LLDs: Delivered low-level designs for SEL and PCC components, identif"
       }
     ],
     "telemetry": [
@@ -11658,6 +13488,26 @@
         "year": "2007",
         "gem": "",
         "summary": "System frozen with Orange LED after loading Springport (4 port Zoar) OS"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement"
+      },
+      {
+        "year": "2019_2024::SEC_184",
+        "gem": "",
+        "summary": "Review of Montana/FAI/thermal test cases for missed legacy TMF/TMC/TMS coverage"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Skylake (SKL) VISA Power-On Readiness & IDC Collaboration: Discovered critical bugs in SKL VISA APIs; traveled to Intel Design Cent"
+      },
+      {
+        "year": "2013",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Pre-Silicon VISA Legacy Channel Emulation Gap Resolution: Identified and resolved a critical pre-silicon test gap with VISA Legacy "
       },
       {
         "year": "2013",
@@ -11692,12 +13542,102 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "PECI stressor telemetry logs show endpoint PCI passing 1616, unexpected 0, skipped 336; rdpciconfig passing 1614, unexpected 4 with CC 0x90, skipped 3"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP DDRT configuration and telemetry setup by Sobocinski, Nalborski, and Krithivas; platform arch for managability framework and telemetry."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP PCIe telemetry payload construction and dispatch via busctl for content development on K90583-114 platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "rdPciConfig telemetry endpoint returned 0x90 PECI_CC_FAIL during PCIe RAS validation on Montana native module."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Endpoint PCI and localPCI telemetry show 10880.0 passed, 66 failed, and 1412 skipped cycles with network latency 0.737-1.613 seconds."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCIe Gen5 FlexBus LogPhy telemetry failures during PECI stress validation"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "IA32_MCi_STATUS MSR validation and error reporting telemetry from Intel MCI platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP message payload and event subscription telemetry from OpenBMC."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMEM mailbox register sequence validated against CWV FMC top CSR documentation; write and read sequences confirmed with command/status/payload registe"
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Comment out [Sinks.Console] section in logging.ini for collateral loading issues"
       },
       {
         "year": "2022",
         "gem": "",
+        "summary": "PCIe RAS telemetry and RAPL power instrumentation: package power SKU limits 0xaf0 (350W) and 0x17e0 (6112/8 = 764W) define min/max thresholds for sock"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "HSD-ES bug tracker entry for missing CPU domain in NM Redfish baseboard power response."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Platform validation telemetry from PECI Redfish CPU temperature measurement and IPMI BMC remote access benchmarking."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCA detection triggered by MSR read during peci_checkout; no prior run logs available for context."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Validation of PECI v4.0 command checkout against MIV Node Manager on the Montana platform, with power limit accuracy checks and Redfish remote access "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Redfish power telemetry probe and baseboard power control PATCH request."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCIe RAS telemetry and BIOS boot override configuration recorded during 2019-2024 era validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Aurora PV04 surrogate node telemetry configuration and policy retrieval."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Setting power control policy to limit power consumption to 0W using PATCH method on /redfish/v1/Chassis/Baseboard/Power#/PowerControl/0"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "System telemetry and power control operations recorded during platform validation."
       },
       {
         "year": "2022",
@@ -11712,6 +13652,96 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "DRM debug parameter override and modprobe reset to suppress i915 hang check, enabling safe PCIe RAS telemetry capture during GPU validation."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Montana stack trace exposed a ZeroDivisionError in the RAPL power-limit policy sweep, triggered by an empty LimitInWatts value during a Redfish PATCH "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PVC card detection detected 5 cards, with thermal and power telemetry showing SOC0 at 45C, SOC1 at 49C, and base frequency at 199 MHz."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "HBM DRAM temperature telemetry recorded 31C to 33C across all tiles, with GT0 and GT1 power at 43W each."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCAPSweep module executed a power-cap sweep across three domains, logging domain 0 as 1262W-1281W with a 1264W low threshold and 1279W high threshold"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCAPSWEEP telemetry recorded power error margin exceeding target limit and below threshold at 01:51:31 UTC, triggering warning state."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Power target limit 1281.542853445227 applied 3 attepmt(s) to correct error margin."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Stopped and disabled the OpenBMC NodeManager service to isolate platform telemetry from the node controller."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCIe RAS telemetry and RAPL power instrumentation: Executed PECI command sequence for local PCIe endpoint configuration and IASR register reads, then "
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Bulk API MSR reads rejected by BMC; single-command configuration required to return MSR data."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Montana native module pmdomain3 emitted limit violation events during 2022-09-08 telemetry run."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR)"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PMCI DMTF validation telemetry and MCTP service configuration recorded in 2019-2024 era notes."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP service telemetry endpoints and PCIe slot configuration documented."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "MCTP payload actions and OID mapping recorded for NIC configuration."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "VISA training session executed on PDG Granite Rapids platform, with configuration telemetry from pred and sv modules."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Pred configuration telemetry for MMIOBDF and CR Defeature."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Downloaded unified_server_ptu.tar.gz from Intel Artifactory to local automation tooling path."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "Hardware and software patching."
       },
       {
@@ -11722,7 +13752,32 @@
       {
         "year": "2022",
         "gem": "",
+        "summary": "Montana PECI sweep and flood validation runs executed against Araxis lab platform, confirming expected transaction counts and MSR register coverage."
+      },
+      {
+        "year": "2022",
+        "gem": "",
         "summary": "MSR register access issues and unexpected return codes encountered during PECI tests."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PUNIT platform power info and RAPL limit telemetry read from socket 0 uncore registers."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "PCU data dump and PBM config vector power limit telemetry read via PySV scan compiler on Intel platform."
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Tiger team collaboration with Articect and developers focused on collecting pCode telemetry, aligning new NM Redfish schema 2.0 with IPMI feature sets"
+      },
+      {
+        "year": "2022",
+        "gem": "",
+        "summary": "Global slow limits and RAPL power instrumentation using PBM limits, fast RAPL package total power, and PMeter platform total power."
       },
       {
         "year": "2022",
@@ -12232,6 +14287,11 @@
       {
         "year": "2012",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Observation & Analysis (OA) Counter API Integration: Defined register structures used by OA APIs, allowing the PDT VISA panel to mo"
+      },
+      {
+        "year": "2012",
+        "gem": "",
         "summary": "Target reset has occurred due to power restore"
       },
       {
@@ -12280,6 +14340,26 @@
         "summary": "Blackbox Recorder (BBR) helped address power overshoots by providing more detailed telemetry data."
       },
       {
+        "year": "2019_2024::SEC_341",
+        "gem": "",
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowled"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automate"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-"
+      },
+      {
         "year": "2023",
         "gem": "",
         "summary": "PSU MUX fix needed to allow NM S (NM power limit sweep) to function correctly"
@@ -12287,7 +14367,67 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "Q1 2023 validation of SPR power limiting feature failure via sysdebug, pcode, and NM teams; combined PECI, PythonSV, and pCode knowledge into a blackb"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "`busctl` commands used to send and receive MCTP payloads, as well as for PCI device scanning and configuration"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Cloned Intel sandbox application repository for manageability and BMC proxy telemetry integration."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Installed PySV tooling with trusted-host flag and isolated proxy chain to establish reproducible build pipeline for platform telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "RAML floor discount and power telemetry calibration in DCGM RAPL channel."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "BIOS safety net enable and power limit accuracy calibration."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "BMC console journaling and device reset operations for PCIe telemetry validation."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe MCTP endpoint device reset testing executed via systemd service management and lspci BDF enumeration to validate PCIe link status, driver state, "
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "HBM import error workaround executed by module loader to bypass HBM-specific CPU code names and load alternative non-HBM modules."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana automation binary executed with power limit accuracy test against SRR4PIVR25B06H5 platform."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Rapl safety net configuration set to zero for second log capture with fast RAPL disabled."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana native module Redfish journal emitted repeated WARNING events for mctpd routing table and UUID retrieval failures during 2023-02-15 telemetry "
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Cold Reset 20.2 App 02h and Warm Reset 20.3 App 03h power state transitions logged for platform reset sequence."
       },
       {
         "year": "2023",
@@ -12302,6 +14442,16 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "PCIe Gen5 and Gen4 RAS telemetry failures during platform stress test"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana native PECI stressor module failed to load due to missing 'peci' module, triggering endpoint_localpci and endpoint_pci validation failures wit"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Protocols used for communication between BMC, I3C, OOBMSM, LTM, SB, and iMHPUnit: PECI, MCTP, D-Bus"
       },
       {
@@ -12312,12 +14462,87 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "Silicon validation telemetry suppression and logging configuration for platform modules."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe RAS telemetry and power instrumentation configuration for OOBMSM debug control."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Inband flag write and routing table payload configuration for CTP message."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Montana base IPMI tool executed raw command sequence with policy ID 20 and domain 0x2E, generating correction time limit telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Sweep telemetry recorded a pass state at 15:03 with mixed pass/fail outcomes."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Unexpected PECI return codes observed in SCF_MDFS_CR validation on EGS SPR MCC platform. MSR availability gap in MCC chop caused inconsistent PECI tel"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PECI Checkout FAIL on EGS SPR S0/B1 Windows platform. Missing 0x40 in rdIaMsrEx, rdPkgConfig, and missing 0x40 in rdIaMsrEx caused failure. C6 disable"
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Blackbox recorder telemetry software developed to debug RAPL failures"
       },
       {
         "year": "2023",
         "gem": "",
         "summary": "Delivered negative BDF and MSR scan with refactored code for future testing"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "MCTP GNR stress test execution with lab telemetry and EID data processing."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PMCAPSweep policy limit set to 369 W with aggressive CPU power correction disabled; NM Statistics returned average 366 W."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Retrieved DMR-SIMICS model telemetry and BMC webinars from Intel Diamond Rapids shared documentation, validating platform diagnostics against the 2023"
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCI topology read from console via get_pci_eid_from_console, storing interface as console and logging eid data."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCI endpoint telemetry logs show repeated rdEndPointConfig_PCI and MMIOBDF pass events with 5999/5653 counts."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Request to monitor DRAM power-limit registers and parametric register offsets in platform telemetry."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "Reproduce power-limit behavior by varying RAPL and PBM limits across platform power telemetry registers."
+      },
+      {
+        "year": "2023",
+        "gem": "",
+        "summary": "PCIe BDF whitelist lookup and shared memory topology synchronization completed during platform telemetry validation."
       },
       {
         "year": "2023",
@@ -12427,6 +14652,11 @@
       {
         "year": "2023",
         "gem": "",
+        "summary": "Provisioned VNC access for platform telemetry node."
+      },
+      {
+        "year": "2023",
+        "gem": "",
         "summary": "Force system into soft off (S4/S5) state"
       },
       {
@@ -12448,6 +14678,11 @@
         "year": "2023",
         "gem": "",
         "summary": "Potential causality error: Redfish API calls for power management exploration"
+      },
+      {
+        "year": "2006",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] FTF Test Map & Target Automation Architecture: Engineered the MAP test framework (_MAP.tcl) enabling automated target loading, dang"
       },
       {
         "year": "2006",
@@ -12490,6 +14725,16 @@
         "summary": "Execute Health and Monitoring script (Tao 126579)"
       },
       {
+        "year": "2019_2024::SEC_185",
+        "gem": "",
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
+      },
+      {
+        "year": "2019_2024::SEC_185",
+        "gem": "",
+        "summary": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up"
+      },
+      {
         "year": "resume_data",
         "gem": "",
         "summary": "15+ years server manageability, firmware integration, and telemetry debug spanning silicon, BIOS, and BMC."
@@ -12503,6 +14748,16 @@
         "year": "resume_data",
         "gem": "",
         "summary": "Developed C++ and PECI/IPMI-based automation scripts for thermal, power transient, and firmware validation."
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Skylake Multi-Stepping VISA Support in DSD: Supported PDT VISA plugins across SKL ULT B0/C0 and SKL M0/Q0/P0 steppings, triaging de"
+      },
+      {
+        "year": "2014",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] PTI Trace LTB Nibble-Order Silicon Bug Discovery: Discovered a hardware nibble-order silicon bug in PTI trace, verified the LTB har"
       },
       {
         "year": "2014",
@@ -12662,12 +14917,167 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "CPU stress testing on 144-core system using stress-ng with varying load levels."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Unlock attempt on ICX CLTAP registers failed with Authorization_Failure 0x80140002; key acquired but authorization level did not change. Power cycle r"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Execution of montana test suite xProd-runs_unit.tdf showing test statistics and timing metrics."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PMCAP sweep calibration failure on domain 0 due to Min power (414W) exceeding Max power (410W)."
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Primary TODO or research link mentioned: Archer City Platform Architecture"
       },
       {
         "year": "2021",
         "gem": "",
         "summary": "Running peci_poison.tdf with bad payload/lengths simulates a scenario where all PECI commands are rejected due to invalid payloads or lengths"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI cc/data telemetry collection showing multiple test runs with varying pass/fail counts; consistent failure code 0x90 and retry code 0x82/0x80 obse"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MIV HSD test failure triage and fix turnaround analysis; PECI diagnostic results showing 89 passing, 43 retries (CC 0x82), and 181 failures (CC 0x90, "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI poison status logging and sweep pass confirmation."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI sweep validation to verify thread-level access to core MSR registers."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Execution of PCIe stressor test suite including MMIO, PCI config, and endpoint validation with memory poisoning enabled for 32/64-bit MMIO, PCS, and c"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI throughput benchmarking and stress testing via xProd-runs.tdf to measure impact on MSR read cmd/sec and benchmark stability."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Core enable mask verification against package config MSR; hardware p-state status check (0x7xx vs 0x90); OOB telemetry distinction from crash dumps."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MSR register enumeration recorded for silicon validation telemetry."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Calibration power telemetry recorded for RAPL instrumentation."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI return code validation logic identified in checkout script; failNames array population and error logging for non-good PECI return codes."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PM Capsweep calibration and power domain telemetry execution"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Montana test suite execution for C-state and PECI MSR validation"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed Python cProfile on montana.py to profile PECI RDI AMSR telemetry data extraction."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI/OOBMSM enumeration and whitelist configuration for Icelake-X and Sapphire Rapids platforms; BMC Journal log retrieval via Redfish API."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "UCODE retrieval via MSR 0x8b and rdPkgConfig parameter 4"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI array configuration: spr_uncore_mc_banks replacement for pecirand.msr_whitelist2"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP Platform Level Validation: Bus owner proxy verification, telemetry attestation, and PECI over MCTP proxy configuration. BMC validation jumper con"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI core enable mask read package config count verification against CORE_MSR."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI core enable mask validation and rdEndPointConfig_LocalPCI reads for resolved_cores_cfg."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Validation of OOBMSM MCTP features and proxy routing via SoC for Sapphire Rapids (SPR) and Ice Lake-X (ICX) platforms, focusing on synthetic ingredien"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Efficient Performance Indication (EPI) instrumentation for power distribution; PCS Index 0x7E OOB Thermal Monitor Command; MSR 1B1h PACKAGE_THERM_STAT"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "QXB4 C-Step thermal filtering subroutine validation; IPMI root password configuration via raw command; openbmc-node-managerd release egs-0.62-0-gdbc0c"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Commit 45c9461f32cd50f3786c1b3d97830e55f1d94bc5: Refactored tpb.py and settotalpowerbudget.py to handle all return code cases using self.errorhandling"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Power limit accuracy validation across domains d0 and d1"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "DCMI command deprecation notice for EGS (SPR) and BHS (GNR) platforms."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Sapphire Rapids BIOS patch application and Pcode debug variable loading via PythonSV automation framework."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Configuration of PCIe capability margin sweep parameters including min_stat_margin, min_cap_margin, and guardrails."
       },
       {
         "year": "2021",
@@ -12682,12 +15092,142 @@
       {
         "year": "2021",
         "gem": "",
+        "summary": "ITP debug session: halt, patch load, resume, and pcode debug variable injection"
+      },
+      {
+        "year": "2021",
+        "gem": "",
         "summary": "Issue with PCS TMF IB Lock out causing average power consumption not to be limited as expected"
       },
       {
         "year": "2021",
         "gem": "",
         "summary": "Power limiting issue on various systems, including Archer City with broken support model"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "JTAG trigger timeout during UCODE patch load on CPUID 0x806f3; workaround applied via IPC config to handle PRDY# pulse latency."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Baseline PECI stress test: 2,676 rdIaMsr and 60 rdIaMsrEx transactions passed; throughput recorded at 19.8 tx/sec with 13.2s Python elapsed time."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Sent IPMI raw command 0x2E 0xC1 (SetNmPolicy) to configure Network Manager power limiting on Archer City platform. Configured CorrectionTime to 30000 "
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "EM100 system validation with BIOS image EGSDCRB1.E9I.0062.D12.2108061620.bin; verified SPI flash removal, ribbon cable orientation (J6D150), and AC po"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Applied Pcode patch revision on Sapphire Rapids (SPR) D0 platform using ITP and debug libraries; verified persistent/non-persistent patch states via d"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI Platform Configuration Space Thermal Monitoring Control (TMC) mailbox validation and IB_LOCK bit manipulation via Redfish and PythonSV."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Verification of TMC mailbox writability and IB_LOCK bit (bit 30) state via Redfish PECI PCS interface."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP daemon configuration for trace logging and bus inspection."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP bus controller inspection for active endpoints."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "NVMe drive thermal sensor validation via IPMI."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Investigation of Package Thermal Status and MCA error sources on SKX platform. Read MSR 1B1h (PACKAGE_THERM_STATUS) to check TCC, PROCHOT, and Critica"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Package thermal status lock state and mailbox data register writes"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MMIO read operations and PECI mailbox stress testing via PythonSV framework"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI MSR 0xca0 re-addition and fatal MCA event 0x94 triggering McaDetectAndHandle with CMCI notification for Socket 0 Core 0xD."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Executed status_scope capture on Sapphire Rapids platform with namednodes collectors and overview analyzers; Axon upload failed with specific UUID."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Commit of _thread_id_for_core_msr_list setup function to master branch."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Execution of status_scope.run() for Axon data collection; upload completed with failure uuid 19ba6693-f167-af09-43d6-fddc3c3e8782."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MCTP telemetry filtering via journalctl and uncore register inspection for socket0"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "Uncore search and DRAM power info retrieval for socket0"
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PECI telemetry stats indicating transaction throughput and latency metrics for /dev/peci-wire interface."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "MSR 0x401 (MCA status) scan triggered when capabilities = 0, indicating domain-level capability failure during Gold Release C/D stepping."
+      },
+      {
+        "year": "2021",
+        "gem": "",
+        "summary": "PTTI POC implementation based on PMIC Test Tools interface DMTF spec. Draft specification review with Patrick Kutch."
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] 100-Node KNL Cluster Thermal Validation Automation: Designed custom workloads and ran automated data collection on a 100-node Knigh"
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lab Capacity Doubling & 20+ Node Recovery Commendation: Revived 20+ offline cluster nodes, automated thermal telemetry collection, "
+      },
+      {
+        "year": "2018",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Lenovo Proton 8-Socket Optane DC Persistent Memory (AEP) Validation: Led validation on the 8S Lenovo Proton platform, enabling Purl"
       },
       {
         "year": "2018",
@@ -12752,177 +15292,17 @@
       {
         "year": "2019",
         "gem": "",
-        "summary": "Researched HPE Power Regulator questions."
-      },
-      {
-        "year": "2019",
-        "gem": "Introduction of new tools for Purley RAS Gap Analysis, specifically _06_02_03_cs_nvd_pcie_fatal.py and others",
-        "summary": "Release of various tools related to Purley RAS Gap Analysis, including _06_02_03_cs_nvd_pcie_fatal.py, helper.py, riv_common.py, workload_profile.py"
+        "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) w"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "PECI command failed: RdIAMSR -d pcie 0 1067 -i 8"
+        "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Re"
       },
       {
         "year": "2019",
         "gem": "",
-        "summary": "Failed to read IAMSREx using PECI due to No message of desired type"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Call MCTP function"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Get RD IAMSR"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Loaded BMC firmware with specific version"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "PECI command to read IAMSREx endpoint configuration"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MSR PLATFORM_ID read and write operations"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "PECI 32 Bit MSR Support"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "MIV PECI MSR scan performed"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "RdIAMSR with peci_cmds -d /dev/peci-0 RdIAMSR 1 0x17A"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "UART and log file configuration"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "EEUPDATE64E.EFI command and IPMItool commands for configuration and power cycling"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power cycling the system using IPMItool"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power Regulator set to Dynamic Power Savings"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Minimum Processor Idle Power Core C-state set to C6"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Collaborative Power Control enabled"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Workload profile loaded and BIOS knobs written."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "BIOS settings for HPE's Workload Profiles were set up and validated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Whitley system setup and reference links provided."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "ProcessorHWPMEnable MSR documented."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power cycling scripts to be updated by Scott Morris."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Git repository for workload profile updated."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "HPR_CAUSE0 MSR read: 0x00000002."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "HPE system available for checking out Power Limiting options."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power limit accuracy issue across domains reported"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Power limiting tests using IPMI commands resulted in an error due to incorrect policy ID."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Policy #231 sets expected average power limit to 312W."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range."
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Setting power limits on domain 0 using montana.FAI.RAPL.setcap policy"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Log message: C:\\\\temp\\\\crash.log"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Log message: C:\\\\temp\\\\history.log"
-      },
-      {
-        "year": "2019",
-        "gem": "",
-        "summary": "Search for 'mcerrlogging' in uncore registers"
+        "summary": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up"
       },
       {
         "year": "2024",
@@ -12942,12 +15322,27 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Redfish chassis power state verification on node c001n0008bmc"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "I3C status and DIMM thermal sensor register offsets"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "Running Python Scripts for MIV NM Power Limit and MCTP BMC Reset"
       },
       {
         "year": "2024",
         "gem": "",
         "summary": "PECI commands executed with RdIAMSR and RdIAMSREx"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "PECI in-band mailbox configuration: read status, enable thermal monitor filter with decay factor, and attempt lock."
       },
       {
         "year": "2024",
@@ -13002,6 +15397,11 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Montana native module stress test produced 13,770 sent and 13,220 passed transactions with 550 failed and 640 skipped events. Network throughput peake"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "MCTP topology was retrieved using busctl call command"
       },
       {
@@ -13048,6 +15448,11 @@
         "year": "2024",
         "gem": "",
         "summary": "NM porting issues, Makechart and Blackbox telemetry"
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "MCTP ACL Update Start command specification: Request payload includes Intel Manufacturer ID (000157h) and Requester PCIe BDF. Response validates compl"
       },
       {
         "year": "2024",
@@ -13172,7 +15577,22 @@
       {
         "year": "2024",
         "gem": "",
+        "summary": "Chassis power control telemetry: PowerControl member IDs for System Power Control and Accelerator0 Power Control."
+      },
+      {
+        "year": "2024",
+        "gem": "",
+        "summary": "Stopped OpenBMC sensor, PCIe, CUPS, CPU info, and NodeManager services to quiet PECI activity; enabled debug logging for PECI driver modules via dynam"
+      },
+      {
+        "year": "2024",
+        "gem": "",
         "summary": "Set up a testing server for Prometheus metrics and telemetry"
+      },
+      {
+        "year": "2015",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Trace Debug Training Sessions & OEM Power-On Enablement: Led technical training sessions for trace teams and provided direct custom"
       },
       {
         "year": "2015",
@@ -13682,6 +16102,16 @@
       {
         "year": "2011",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Haswell X0/A0 Power-On Lab Bring-Up & Emulation Support: Supported VISA Panel in lab during Haswell X0 and A0 power-on; implemented"
+      },
+      {
+        "year": "2011",
+        "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] OEM VISA Tool Architecture & Engineer Mentorship: Architected the OEM version of VISA and cross-trained and monitored a junior engi"
+      },
+      {
+        "year": "2011",
+        "gem": "",
         "summary": "Power splitter turned off for 30 seconds"
       },
       {
@@ -13902,6 +16332,11 @@
       {
         "year": "2020",
         "gem": "",
+        "summary": "[STRATEGIC_ANCHOR] Node Manager OpenNM & Redfish API Modernization: Mapped legacy IPMI command surfaces to modern Node Manager Redfish APIs, establish"
+      },
+      {
+        "year": "2020",
+        "gem": "",
         "summary": "CLX platform being tested with MIV software features: Node Manager (NM), Power Limit, RAPL, and Redfish API"
       },
       {
@@ -13957,47 +16392,50 @@
     ]
   },
   "tactical_layer": {
-    "total_events": 4960,
+    "total_events": 6118,
     "year_distribution": {
-      "2007": 45,
+      "2007": 48,
       "round_table_deltas": 50,
-      "sprint_data": 79,
-      "2017": 1,
-      "artifacts_2021": 1,
+      "2019_2024::SEC_184": 7,
+      "sprint_data": 81,
+      "2017": 0,
+      "artifacts_2021": 31,
       "artifacts_EXPERTISE": 1,
-      "2013": 54,
-      "2022": 49,
-      "pager_activity": 32,
+      "2013": 59,
+      "2022": 143,
+      "pager_activity": 890,
       "timeline_outliers": 1,
-      "2016": 1130,
+      "2016": 1129,
       "artifacts_2020": 1,
-      "2012": 98,
+      "2012": 103,
       "Unknown": 28,
       "artifacts_2024": 4,
-      "2023": 206,
-      "2006": 85,
+      "2019_2024::SEC_341": 4,
+      "2023": 290,
+      "2006": 90,
       "dead_air_deltas": 1,
-      "artifacts_2019": 1,
+      "artifacts_2019": 24,
+      "2019_2024::SEC_185": 3,
       "resume_data": 26,
       "bone_collections": 1,
       "2025": 4,
       "buckets": 5,
-      "artifacts_2022": 1,
-      "2014": 402,
-      "graph_relations": 100,
-      "2010": 1,
-      "2021": 44,
-      "2008": 1,
+      "artifacts_2022": 36,
+      "2014": 407,
+      "graph_relations": 124,
+      "2010": 6,
+      "2021": 164,
+      "2008": 7,
       "1970": 0,
-      "2018": 67,
-      "2005": 65,
-      "2019": 227,
-      "2024": 218,
+      "2018": 74,
+      "2005": 69,
+      "2019": 14,
+      "2024": 246,
       "artifacts_2023": 6,
-      "2015": 1257,
-      "2011": 588,
-      "2020": 63,
-      "2009": 1,
+      "2015": 1259,
+      "2011": 593,
+      "2020": 67,
+      "2009": 6,
       "artifacts_DOCS": 16
     },
     "description": "Raw chronological technical evidence."
@@ -14005,6 +16443,6 @@
   "meta_layer": {
     "resonance_score": 0.0,
     "active_themes": [],
-    "last_refactor": "2026-11-04T02:05:14.948323"
+    "last_refactor": "2026-11-11T02:04:01.122478"
   }
 }

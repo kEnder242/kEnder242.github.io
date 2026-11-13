@@ -1,66 +1,5 @@
 [
   {
-    "date": "2005-04-15",
-    "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI compliant firmware and enterprise server platforms (IA64/IA32, FRB timer, EFI), receiving formal commendation from Senior Validation leadership.",
-    "evidence": "Intel/Yurcor Student contractor (March 15, 2004 - April 15, 2005): Validation of IPMI compliant Firmware (FTF: I2C, IOL, Serial, FRUSDR, Watchdog); BIOS testing on Enterprise platforms IA64 IA32 (Recovery, FRB timer, EFI); Personal letter of recommendation from Senior Software Validation Engineer.",
-    "sensitivity": "Public",
-    "tags": [
-      "BIOS",
-      "IPMI",
-      "Enterprise",
-      "IA64",
-      "Validation",
-      "TCL_TK"
-    ],
-    "rank": 5,
-    "id": "GEM-510337"
-  },
-  {
-    "date": "2005-06-30",
-    "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, and Watchdog hardware timers, standardizing platform smoke testing.",
-    "evidence": "Intel/Yurcor Validation contractor: Built test harnesses validating FTF firmware features across I2C, serial interfaces, and watchdog recovery on enterprise server hardware.",
-    "sensitivity": "Public",
-    "tags": [
-      "I2C",
-      "IOL",
-      "Watchdog",
-      "FRUSDR",
-      "Validation_Harness"
-    ],
-    "rank": 5,
-    "id": "GEM-b774c9"
-  },
-  {
-    "date": "2005-09-15",
-    "summary": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncovering and tracking SEL page stability issues and DR#19435 NULL password resolution.",
-    "evidence": "Notes 2005: Hardware evaluation across HW BMC23/EFS1.12 to BMC26/EFS1.17; characterized SEL page defect clusters and verified DR tracker resolution across enterprise server builds.",
-    "sensitivity": "Public",
-    "tags": [
-      "Harwich",
-      "BMC",
-      "EFS",
-      "SEL",
-      "Firmware_Validation"
-    ],
-    "rank": 5,
-    "id": "GEM-ea3511"
-  },
-  {
-    "date": "2005-11-20",
-    "summary": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automating over 40% of the HTTP_MTP conformance test suite.",
-    "evidence": "Notes 2005: Developed FTF library allowing automation of 40+% of the HTTP_MTP test plan, verifying sensor status and chassis identification via advanced web server interfaces.",
-    "sensitivity": "Public",
-    "tags": [
-      "HTTP",
-      "MTP",
-      "FTF",
-      "Automation",
-      "Web_Server"
-    ],
-    "rank": 5,
-    "id": "GEM-25b97d"
-  },
-  {
     "date": "2005-01-01",
     "summary": "Memory board hot-add failure is likely related to system's handling of memory boards during hot-add operations.",
     "evidence": "RAW LOGS: tracker ID 38099",
@@ -84,7 +23,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of Harwich BIOS, EPS_0.90, watchdog timer.",
+    "trigger_context": "Triggered during platform validation of Harwich BIOS, EPS_0.90, watchdog timer. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005.json",
       "line_start": 1,
@@ -98,7 +37,8 @@
     },
     "passes": 245,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -119,7 +59,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of BMC23, EFS, upgrade.",
+    "trigger_context": "Triggered during platform validation of BMC23, EFS, upgrade. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005_01.json",
       "line_start": 1,
@@ -134,7 +74,8 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED",
-    "id": "GEM-329f"
+    "id": "GEM-329f",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -170,7 +111,8 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED",
-    "id": "GEM-7509"
+    "id": "GEM-7509",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -190,7 +132,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of FTF202, test_run.",
+    "trigger_context": "Triggered during platform validation of FTF202, test_run. (Automated 80% of manual NIC testing using Expect scripts and custom test routines)",
     "spatial_anchor": {
       "source_file": "2005_2007.json",
       "line_start": 1,
@@ -204,7 +146,8 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-5014"
+    "id": "GEM-5014",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines"
   },
   {
     "date": "2005-01-01",
@@ -223,7 +166,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of tool_release.",
+    "trigger_context": "Triggered during platform validation of tool_release. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005_2007.json",
       "line_start": 1,
@@ -238,7 +181,8 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED",
-    "id": "GEM-72b3"
+    "id": "GEM-72b3",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -272,7 +216,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-8cd8"
+    "id": "GEM-8cd8",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -291,7 +236,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of bug_fix.",
+    "trigger_context": "Triggered during platform validation of bug_fix. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005_2007.json",
       "line_start": 1,
@@ -306,7 +251,8 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED",
-    "id": "GEM-2753"
+    "id": "GEM-2753",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-01-01",
@@ -325,7 +271,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of SDK_update.",
+    "trigger_context": "Triggered during platform validation of SDK_update. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005_2007.json",
       "line_start": 1,
@@ -340,7 +286,902 @@
     "passes": 4,
     "consecutive_zero_deltas": 2,
     "status": "SATURATED",
-    "id": "GEM-2b69"
+    "id": "GEM-2b69",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "IPMI 2.0 Chassis Control command 0x20 (Graceful OS Shutdown) request/response analysis. Request 0x20 0xC0 0x70 0x00 returned Response 0x00 0x01 (Operation Failed, no OS agent).",
+    "evidence": "Request:  0x20 0xC0 0x70 0x00\n   Response: 0x00 0x01  (Operation Failed, no OS agent)",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "chassis_control",
+      "shutdown",
+      "os_agent"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "LANDesk/ISM installation requirement for OS shutdown verification via CLI",
+    "evidence": "LANDesk/ISM needs to be installed, to check:\nAt a CLI prompt type \"shutdown\", if the LANDesk service is running windows will shut itself down.",
+    "domain": "operations",
+    "tags": [
+      "landesk",
+      "ism",
+      "windows",
+      "cli"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "HSC 1.05/1.11 testing: Get Enclosure Status decoded data analysis",
+    "evidence": "======Get Enclosure Status (Decoded)======\nEnclosure Status Data  = 0x20 0x00 0x80 0x00 0x01 0x02 0x03 0x04 0x01 0x00 0x25 0x00 0x00\n Power Supply 0 status = 0x20 ( not present )\n Power Supply 1 status = 0x00 ( operational and on )\n Power Supply 2 status = 0x80 ( unknown or not reportable )\n Slot 0 SCSI Id        = 0x00\n Slot 1 SCSI Id        = 0x01\n Slot 2 SCSI Id        = 0x02\n Slot 3 SCSI Id        = 0x03\n Slot 4 SCSI Id        = 0x04\n Door Lock status      = 0x25 ( no status returned )\n Audible Alarm status  = 0x00 ( speaker off or no speaker installed )\n Temp Sensor 0 Reading = 0x00\n Temp Out-Of-Range 1   = \n Temp Out-Of-Range 2   =",
+    "domain": "hardware_debug",
+    "tags": [
+      "hsc",
+      "enclosure_status",
+      "power_supply",
+      "scsi",
+      "sensor"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "System Harwich (Bios 13, BMC23, IMM 403) unable to reproduce issue; observed 'Unhandled ARM Exception: Data Abort' (self-test EE 04)",
+    "evidence": "Could not reproduce on the same system (Harwich, Bios 13, BMC23, IMM 403)\nHowever, I still get \"Unhandled ARM Exception: Data Abort\" (self-test EE 04)\nThis appears to be related to tracker #41426",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "arm",
+      "exception",
+      "self-test"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "SDR Record ID 0086 line 5519: Remove tab and space from Entity 4 Instance / Range 2 Last Entity Instance",
+    "evidence": "remove tab and space from line 5519 (near end of record ID 0086)\n\" 00 // Entity 4 Instance / Range 2 Last Entity Instance\n<tab><space> \n_SDR_TYPE 08\n_REC_LEN 0010\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "sdr",
+      "record",
+      "formatting"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "SDR File 0.0B line 7957: Delete third newline between SDR Version Records",
+    "evidence": "delete third newline on line 7957 between SDR Version Records\n\" 'SDR File 0.0B' //String Bytes\n\n\n<newline>\n_SDR_TYPE C0\n_REC_LEN 0019\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "sdr",
+      "record",
+      "formatting"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "DIMM and RAS sensor register values observed",
+    "evidence": "DIMM\n0x20 0x30 0 0x21\n \nRAS\n0x20 0x30 0 0x8C",
+    "domain": "hardware_debug",
+    "tags": [
+      "sensor",
+      "register",
+      "dimms",
+      "ras"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Fan speed register values observed during hardware debug",
+    "evidence": "0x20 0x30 0 0x15 0x05 0x00 0x01 0x35\n0x20 0xC0 0x15 0x05 0x00 0x01 0x35",
+    "domain": "hardware_debug",
+    "tags": [
+      "hardware_debug",
+      "registers"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "SMTP API test script and command/response analysis for parameter parsing fix",
+    "evidence": "C:\\_data\\FTF\\tests\\fwtests\\LAN\\API\\2.0\\apiSMTPAlert.tcl\nGetSMTPConfig\n   Request:  0x20 0x30 0x00 0xB2 0x80 0x05 0x03 0x04\n   Response: 0x00 0x11\nparameter data (byte3) missing",
+    "domain": "operations",
+    "tags": [
+      "operations",
+      "logistics"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Harwich Memory validation BIOS/FW RAS testing",
+    "evidence": "Harwich Memory validation BIOS/FW\nRAS",
+    "domain": "hardware_debug",
+    "tags": [
+      "hardware_debug",
+      "logistics"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 39869: Memory Hot Add not reflected in BMC commands",
+    "evidence": "39869 - Memory Hot Add not reflected in BMC commands",
+    "domain": "operations",
+    "tags": [
+      "operations",
+      "logistics"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 19751: Change HTTP port, scw works fine (firefox only?)",
+    "evidence": "change http port (#19751) scw works fine (firefox only?) how?",
+    "domain": "operations",
+    "tags": [
+      "operations",
+      "logistics"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 41419: Chassis name blank in Web server - Harwich BMC23 EFS 1.12 BIOS B13",
+    "evidence": "tracker#41419\nTitle:  Chassis name blank in Web server\n\n\tHarwich\n\tBMC23\n\tEFS 1.12\n\tBIOS B13\n\n\tThe system summary page on the Advanced IMM web server displays a blank chassis name when it is not.\n\n\t Chassis \t\n\t Part #: \tpart01 \t\tSerial #: \tserial01 \t\n\t Name: \t\t \tType:  Rack Mount Chassis \n\n\tThe chassis name can be get/set with LCD or IPMI commands\n\t   cmdtool 20 C0 91 04 53 54 55 56 (STUV)\n\t   cmdtool 20 C0 90\n\t   20 C4 90 00 10 53 54 55 56 00 00 00 00 00 00 00 00 00 00 00 00\n\n\tThere was no change after clearing cache",
+    "domain": "operations",
+    "tags": [
+      "operations",
+      "logistics"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "IPMI User Privilege Configuration Tests via cmdtool",
+    "evidence": "cmdtool 20 18 43 93 01 02 00\nREM Configuring User 1 as \"User\"\ncmdtool 20 18 43 93 02 03 00\nREM Configuring User 2 as \"Operator\"\ncmdtool 20 18 43 93 03 04 00\nREM Configuring User 3 as \"Administrator\"\ncmdtool 20 18 43 93 0 02 00",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "cmdtool",
+      "user_privileges",
+      "authentication"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 41429: Advanced Web Server IMPI command fails with appended space",
+    "evidence": "tracker - 41429\nTitle: Advanced Web Server IMPI command fails with a space appended.\n\"20 18 01\"\nCompletion Code: 0x0\nResponse: 20 01 00 23 02 9F 57 01 00 04 01 00 11 00 3D\n\"20 18 01 \"\nCompletion Code: 0x0\nResponse: 00 00 00 00 00 \nPrompt \"An error occured during processing of this request. The error occurred before IMPI comman processing so it was likely an incorrect request. No valid completion code was recieved",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "41429",
+      "web_server",
+      "ipmi",
+      "browser_compatibility"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Browser Compatibility Test: Firefox vs IE6 Firmware Version Display",
+    "evidence": "tracker - Browser compatibility Firefox (Mozilla) sidebar \"Firmware:&bsprev&bsp0.23\"\nMozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.5) Gecko/20041107 Firefox/1.0 :\n\"Firmware:&nbspRev&nbsp0.23\"\nIE6:\n\"Firmware: Rev 0.23 \"\nsource:\n<span id='SysName'>Unknown Host fw_intel 222.222.222.98  Firmware:&nbspRev&nbsp0.23</span>",
+    "domain": "operations",
+    "tags": [
+      "browser_compatibility",
+      "firefox",
+      "ie6",
+      "ui_rendering"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "HTTP_MTP Dashboard Status: Chassis and Product Area Failures",
+    "evidence": "HTTP_MTP status:\n\"Dashboard\" (I'm assuming the first screen \"System Summary\") \nChassis - Fail\nPart No., Serial No., and Chassis Name do not update (changed through frusdr.exe LCD and SetChassisName (0x91) )\nBoard Area - Pass\nProduct Area - Fail",
+    "domain": "operations",
+    "tags": [
+      "dashboard",
+      "frusdr",
+      "chassis_info",
+      "setchassisname"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "IPMI Command testing: Space appended causes error, 0 vs 00 formatting issues",
+    "evidence": "space appended causes error \"... incorrect request\", command is not sent\ncan not use 0 in place of 00, \"20 0 0\" give an error but \"20 00 00\" works",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "command_syntax"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Web Server Security Configuration: User privilege setup via cmdtool",
+    "evidence": "cmdtool 20 18 43 93 01 02 00\ncmdtool 20 18 43 93 02 03 00\ncmdtool 20 18 43 93 03 04 00",
+    "domain": "operations",
+    "tags": [
+      "web_server",
+      "security",
+      "cmdtool"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 41416: Advanced features lost with telnet 'console' command",
+    "evidence": "41416  Advanced features lost with telnet 'console'",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "telnet",
+      "console"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Telnet session to GCM 222.222.222.98 causing system state loss",
+    "evidence": "telnet into GCM (222.222.222.98)\nrun>telnet 222.222.222.98\n\tlogin:two\n\trun>telnet 222.222.222.98\n\tlogin:three",
+    "domain": "operations",
+    "tags": [
+      "telnet",
+      "gcm",
+      "network"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Self test failure after telnet console access: Unhandled ARM Exception",
+    "evidence": "cmdtool 20 18 04\n20 1C 00 EE 04 (Unhandled ARM Exception: Data Abort)",
+    "domain": "hardware_debug",
+    "tags": [
+      "self_test",
+      "arm_exception",
+      "cmdtool"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tiger2 BMC GetFruinfo returns 0x00 (Good) instead of 0xCB for invalid device IDs 10-12; Device 10 reports incorrect FRU Size of 0x1000 bytes. Issue present in BMC23 and earlier, absent in BMC15.",
+    "evidence": "Get FRU Inventory Area Info should return 0xCB (Requested sensor, data or record not found) instead returns 0x00 (Good)\n\nfor Device 10-12 \n\n   Request:  0x20 0x0A 0 0x10 9\n   Response: 0x00 0x00 0x01 0x00\n\n   Request:  0x20 0x0A 0 0x10 10\n   Response: 0x00 0x00 0x10 0x00\n\n   Request:  0x20 0x0A 0 0x10 11\n   Response: 0x00 0x00 0x00 0x00\n\n   Request:  0x20 0x0A 0 0x10 12\n   Response: 0x00 0x00 0x00 0x00\n\n   Request:  0x20 0x0A 0 0x10 13\n   Response: 0xCB\n\nFound in BMC23 (not in BMC15)",
+    "domain": "hardware_debug",
+    "tags": [
+      "tiger2_bmc",
+      "fru_inventory",
+      "ipmi",
+      "defect"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "IPMI command response analysis for power supply voltage jumper configuration on Goblin and Tiger4 systems",
+    "evidence": "Sent ipmi command to Goblin and Tiger4\nRequest: 0x20 0x32 0 0x67\nResponse: 0x00 0x00\nAfter changing PDB jumper j2 to pins 2-3 on the goblin\nRequest: 0x20 0x32 0 0x67\nResponse: 0x00 0x01\nConfirmed that Goblin only boots with 220V when jumper is installed / response is 0x01.",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "jumper_configuration",
+      "power_supply",
+      "goblin",
+      "tiger4"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Defect: MCAviewer.efi unable to inject errors in BIOS PR6.2 build 182+ on Tiger2 platform",
+    "evidence": "Title: Unable to inject errors with MCAviewer.efi\nVersion where Found: BIOS PR6.2, MCAviewer 3.02\nPlatform: Tiger2\nSteps to reproduce:\nselview /clear\ndel *.evt\nMcaViewer.efi\nclear->all types\ninject error\nno message showing that the error was injected\nget->all types\nall records are empty\nTrace->Trace Log\nError: LibGetChipsetName: Error: Unknown Chipset Host Bridge device ID.\nError: LibGetChipsetName: Error: LibGetChipsetName() Call failed!",
+    "domain": "hardware_debug",
+    "tags": [
+      "mcaviewer",
+      "bios_pr6.2",
+      "error_injection",
+      "tiger2",
+      "chipset",
+      "sel"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "HSC Drive Status Sensors protocol violation: Get Sensor Hysteresis and Get Sensor Threshold return 0xCE (Command response could not be provided) instead of 0xCD (Command illegal for specified sensor or record type).",
+    "evidence": "Get Sensor Hysteresis and Get Sensor Threshold on DriveStatusSensors should have a compcode of 0xCD (Command illegal for specified sensor or record type)\n\nThe new HSC firmware for both Tiger and Tiger2 instead return 0xCE (Command response could not be provided).\n\nGet Sensor Threshold for slot 1 (02h)\n   Request:  0xC0 0x10 0x27 0x02\n   Response: 0xCE\n\nGet Sensor Hysteresis for slot 1 (02h), mask 0xFF\n   Request: 0xC0 0x10 0x25 0x02 0xFF\n   Response: 0xCE",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "hsc",
+      "sensor",
+      "protocol"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Manual/safte2k tests: Read/WriteDeviceSlotStatus fails on first start. Unable to test invalid LUN/sense with safte2k utility (Tracker SSPD 29619).",
+    "evidence": "Manual/safte2k tests :\nRead/WriteDeviceSlotStatus does not work the first time the program is started.\nUnable to test invalid LUN/sense with safte2k utility (tracker SSPD 29619)",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "safte2k",
+      "test_failure"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "MTP_hsc_safte_rb.doc defect: FTF GetEnclosureStatus response skips a byte starting at 'Door lock status'.",
+    "evidence": "MTP_hsc_safte_rb.doc\n\tFTF GetEnclosureStatus response skips a byte starting at \"Door lock status\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "documentation",
+      "ftf",
+      "defect"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "FTF HSC (QLogic tests) results: hsc_main.tcl fixed typo. hsc_GetDevID.tcl passed but fixed trace error for Tiger4 HSC regarding missing variable 'HSCDevIdString'.",
+    "evidence": "passed\nhsc_main.tcl -fixed typo so it will run\nhsc_GetSetFaultLight.tcl\nhsc_GetSelfTest.tcl\n\ntests unable to run:\nhsc_GetDevID.tcl  - passed\n\tfixed trace for tiger4 HSC \" ERROR - can't read \"HSCDevIdString\": no such variable: test_main\"",
+    "domain": "operations",
+    "tags": [
+      "test_results",
+      "hsc",
+      "qlogic",
+      "fix"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "T2G2 LAN configuration parameters retrieved",
+    "evidence": "Parameter Revision           = 0x11\nConfiguration Parameter Data = 0xA9 0xFE 0x0B 0x24\n\n0xDE 0xDE 0xDE 0x59\n222.222.222.89\n\n======Get Lan Configuration Parameters (Decoded)======\nParameter Revision           = 0x11\nConfiguration Parameter Data = 0x00 0x07 0xE9 0x06 0x9C 0xE4",
+    "domain": "hardware_debug",
+    "tags": [
+      "lan",
+      "configuration",
+      "registers"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "OS agent verification: IPMI command failure and OEM command status codes",
+    "evidence": "OS agent does not respond to IPMI command (tested on I2C, IOS, IOL*)\nOEM command accepts power off/reset, status returns 0x2h (Operation in progress).\nAfter 2 seconds status changes to 0x01h (Operation Failed - no OS agent).\n*IPMI Over Lan returns C1",
+    "domain": "hardware_debug",
+    "tags": [
+      "os_agent",
+      "ipmi",
+      "oem",
+      "i2c"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "BMC accepts OEM command over I2C verified with PEF action and CLI",
+    "evidence": "Verified  with PEF action and CLI\nBMC accapets OEM command over I2C",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc",
+      "oem",
+      "i2c",
+      "pef"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tracker 21355 verification attempt on tiger4 during SDR update",
+    "evidence": "Tried to verify #21355 (closed) on the tiger4, while updating SDR from 19 to 20.",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "sdr",
+      "tiger4"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "One-Boot Flash Update Utility execution",
+    "evidence": "Using OFU v1.6.1 Build 8:\nc:\\ofu\\flashupdt -i -u\nOne-Boot Flash Update Utility Ver 1.6.1 Build 8\nCopyright (c) Intel Corporation 2003-2004",
+    "domain": "operations",
+    "tags": [
+      "flash_update",
+      "ofu",
+      "utility"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "System BIOS and FW Version verification via OFU",
+    "evidence": "System BIOS and FW Versions\n---------------------------\nBIOS Version.......... S870BN4A.86B.0924.P09\nBMC Version:\n  Op Code............. 0.30\n  PIA................. 1.30\n  Boot Code........... 0.13\nSDR Version........... (No information available)\nSDR Package Version... (No information available)",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "bios",
+      "bmc"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Confirmation of OFU SDR update and persistent -i flag issue",
+    "evidence": "I was able to confirm that OFU did update the SDR after a reset, but -i still did not return any information.",
+    "domain": "hardware_debug",
+    "tags": [
+      "debug",
+      "sdr",
+      "issue"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "BIOS Version string recorded",
+    "evidence": "S870BH2A.86B.0182.P06.0407191440\nS870BH2A.86B.0182.P06.0407191440",
+    "domain": "hardware_debug",
+    "tags": [
+      "bios",
+      "version"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "System error codes and definitions",
+    "evidence": "0 - IERR\n1 - Thermal Trip\n2 - FRB1/BIST Failure\n3 - FRB2/POST Hang Failure\n4 - FRB3/Processor Startup Failure\n5 - Configuration Error\n6 - SMBIOS Uncorrectable CPU-complex error\n8 - Processor Disabled",
+    "domain": "hardware_debug",
+    "tags": [
+      "error_codes",
+      "post",
+      "hardware"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Enhancement request: Ability to poll Bridge Agent to determine if system is in winders.",
+    "evidence": "enhancement - ability to poll Bridge Agent to find out if we're in winders",
+    "domain": "operations",
+    "tags": [
+      "enhancement",
+      "bridge_agent",
+      "feature_request"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-01",
+    "summary": "Tool release paths identified for apiProcessorState.tcl in FTF170 and FTF_174.",
+    "evidence": "F:\\TOOLS\\FTF170\\tests\\fwtests\\FRB&Processors\\API\\apiProcessorState.tcl\nC:\\ftf_174\\tests\\fwtests\\FRB&Processors\\API\\apiProcessorState.tcl",
+    "domain": "logistics",
+    "tags": [
+      "tool_release",
+      "file_paths",
+      "ftf170",
+      "ftf_174"
+    ],
+    "document_date": "2005-01-01",
+    "event_era": "2005-01-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2005-01-24",
@@ -360,7 +1201,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-7c25"
+    "id": "GEM-7c25",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-01-24",
@@ -380,7 +1223,148 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "rank": 4,
-    "id": "GEM-15c1"
+    "id": "GEM-15c1",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-01-26",
+    "summary": "Compcode handling fixed and checked into CVS; debug logs for BMC Self Test Result 0xEE (Unhandled ARM Exception) implemented.",
+    "evidence": "Compcode handling fixed, Checked into CVS 1-26-05\nC:\\_data\\FTF\\libs\\BMC\\OR-XXXX\\lib_gapp.tcl\nftf_msg \"  Sahalee Error.  Unhandled ARM Exception:\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc",
+      "self_test",
+      "arm_exception",
+      "cvs"
+    ],
+    "document_date": "2005-01-26",
+    "event_era": "2005-01-26",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-26",
+    "summary": "Tracker 35698: mca_L1D_2.txt issue does not appear to depend on the BIOS used.",
+    "evidence": "Tracker 35698 \nmca_L1D_2.txt\nThis does not appear to depend on the BIOS used.",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "mca",
+      "l1d",
+      "bios"
+    ],
+    "document_date": "2005-01-26",
+    "event_era": "2005-01-26",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-26",
+    "summary": "Tracker 39991: Get Sensor Event Status only returns 2bytes when 3 bytes are required.",
+    "evidence": "39991  Title:  Get Sensor Event Status only returns 2bytes when 3 bytes are required",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "sensor_event_status",
+      "protocol"
+    ],
+    "document_date": "2005-01-26",
+    "event_era": "2005-01-26",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-26",
+    "summary": "Tracker 39993: Device Slot Status returns the wrong values for a drive inserted.",
+    "evidence": "39993  Title:  Device Slot Status returns the wrong values for a drive inserted",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "device_slot_status",
+      "drive"
+    ],
+    "document_date": "2005-01-26",
+    "event_era": "2005-01-26",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-26",
+    "summary": "Lab diagnostics: Verify PS trackers by comparing Power & Chassis with T2BMC28/30; NMI core ratio tests on T2BMC30; FRB & Processor checks.",
+    "evidence": "verify PS trackers: Power&Chasis compare with T2BMC28/30\nNMI \ncore ratio tests : T2BMC30\nFRB&Proccessor",
+    "domain": "operations",
+    "tags": [
+      "lab_diagnostics",
+      "power",
+      "chassis",
+      "nmi",
+      "frb"
+    ],
+    "document_date": "2005-01-26",
+    "event_era": "2005-01-26",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-01-27",
+    "summary": "BMC38/HTTP: BMC enters node busy state when commands sent from web browser; requires AC cycle to recover. Suggestion to disable IPMI command entry support via web page pending PME check.",
+    "evidence": "BMC38/HTTP: BMC is entering node busy state when i send commands from web browse",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "web_server",
+      "ipmi",
+      "node_busy"
+    ],
+    "document_date": "2005-01-27",
+    "event_era": "2005-01-27",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up",
+    "trigger_context": "Triggered during validation (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)."
   },
   {
     "date": "2005-02-01",
@@ -403,7 +1387,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of performance, evaluation.",
+    "trigger_context": "Triggered during platform validation of performance, evaluation. (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)",
     "spatial_anchor": {
       "source_file": "2005_02.json",
       "line_start": 1,
@@ -417,7 +1401,8 @@
     },
     "passes": 2,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-3d9c"
+    "id": "GEM-3d9c",
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up"
   },
   {
     "date": "2005-02-01",
@@ -437,7 +1422,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of tool_version, evaluation.",
+    "trigger_context": "Triggered during platform validation of tool_version, evaluation. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005_02.json",
       "line_start": 1,
@@ -451,7 +1436,210 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-ac44"
+    "id": "GEM-ac44",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
+  },
+  {
+    "date": "2005-02-03",
+    "summary": "Issues with automatic refresh of SEL pages and default number of entries. Display not updated after SEL is filled. Tag-3 High.",
+    "evidence": "Issues with automatic refresh of SEL pages and default no. of entries. Display is not updated after the SEL is filled.",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "sel",
+      "web_server",
+      "refresh_issue"
+    ],
+    "document_date": "2005-02-03",
+    "event_era": "2005-02-03",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-02-03",
+    "summary": "SEL pages not working after few hours of loading BMC 1.39, EFS 1.13. Checked into 4.39 and will test in SLT.",
+    "evidence": "SEL pages not working after few hours of loading BMC 1.39, EFS 1.13",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "sel",
+      "efs",
+      "bmc_1.39"
+    ],
+    "document_date": "2005-02-03",
+    "event_era": "2005-02-03",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
+  },
+  {
+    "date": "2005-02-04",
+    "summary": "Embedded web server gives error if CLI accessing BMC.",
+    "evidence": "embedded web server gives error if cli accessing BMC",
+    "domain": "hardware_debug",
+    "tags": [
+      "firmware",
+      "imm",
+      "web_server",
+      "cli_conflict"
+    ],
+    "document_date": "2005-02-04",
+    "event_era": "2005-02-04",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-02-04",
+    "summary": "Tracker 8300: Reproduce with debug builds; run on IOS & SMS; fix test to run on IOL",
+    "evidence": "8300 - reproduce with debug builds\n8300 - run on IOS & SMS, fix test to run on IOL?",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "debug",
+      "ios",
+      "sms",
+      "iol"
+    ],
+    "document_date": "2005-02-04",
+    "event_era": "2005-02-04",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
+  },
+  {
+    "date": "2005-02-04",
+    "summary": "IOS/IOL lack chassis control support; I2C, SMS (sioproxy.exe), and SMBus support the command",
+    "evidence": "it is not possible to test using IOS,IOL, due to lack of support for chassis control,\nI2C,SMS(sioproxy.exe),and SMBus do suppor the command.",
+    "domain": "hardware_debug",
+    "tags": [
+      "ios",
+      "iol",
+      "chassis_control",
+      "sioproxy"
+    ],
+    "document_date": "2005-02-04",
+    "event_era": "2005-02-04",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
+  },
+  {
+    "date": "2005-02-04",
+    "summary": "SMBus command on 7th PCI card fails with Sahalee Error: Private I2C Bus 0x02 not responding",
+    "evidence": "Using SMBus on the 7th PCI card:\n   Request:  0x20 0x06 0 0x04\n   Response: 0x00 0xC1 0x02 (Sahalee Error.  Private I2C Bus 0x02 is not responding.)",
+    "domain": "hardware_debug",
+    "tags": [
+      "smbus",
+      "i2c",
+      "pci",
+      "sahalee",
+      "register_dump"
+    ],
+    "document_date": "2005-02-04",
+    "event_era": "2005-02-04",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-02-04",
+    "summary": "Get DIMM State does not report errors in redundant or any config; state only changes during boot",
+    "evidence": "\"Get DIMM State\" does not report errors with a redundant config ^H^H^H any config\nDIMM state is only changed during boot.",
+    "domain": "hardware_debug",
+    "tags": [
+      "dimm",
+      "memory",
+      "sel",
+      "bios"
+    ],
+    "document_date": "2005-02-04",
+    "event_era": "2005-02-04",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-02-13",
+    "summary": "Hardware debug investigation into Fujitsu PCI error injection (PAR/RAR64) causing burst errors on RXI300 systems with Itanium processors. BIOS version S87BH2A.86B.0165.P05.0402131046. SEL entries compliant with IPMI 1.5. Tracker 29781 pending update for PCI I/O results.",
+    "evidence": "Tracker: 29781 - update tracker with pci i/o results\n\nSystem Config:\nRXI300:#13 (OS: W2K3)\nBIOS :S87BH2A.86B.0165.P05.0402131046\nCPU  :Itanium 1.5GHz x2\nMem  :2GB x8\nPCI-1:PCI bus ITS(Error injection tool)\nPCI-2:PG-142E1 - S30\nPCI-3:PG-1882\n\nError Injection Results:\nFujitsu injected PAR and RAR64 (PCI) error using PCI tester.\nIt cause error on correct phase, but cause burst error.\nSEL: Bus Uncorrectable error at cabinet 0\nError count: bust error\n\nSystem Config 2:\nRXI300: #15(OS: Linux AS3.0)\nBIOS :S87BH2A.86B.0165.P05.0402131046\nCPU  :Itanium 1.5GHz x2\nMem  :2GB x8\nPCI-1:PCI bus ITS(Error injection tool)\nPCI-2:PG-142E1 - S30\nPCI-3:PG-1882",
+    "domain": "hardware_debug",
+    "tags": [
+      "hardware_debug",
+      "operations",
+      "itium",
+      "pci",
+      "sel",
+      "ipmi"
+    ],
+    "document_date": "2005-02-13",
+    "event_era": "2005-02-13",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2005-03-01",
@@ -473,7 +1661,9 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 1,
-    "refinement_level": 1
+    "refinement_level": 1,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -495,7 +1685,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of memory board, hot-add failure.",
+    "trigger_context": "Triggered during platform validation of memory board, hot-add failure. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005.json",
       "line_start": 1,
@@ -509,7 +1699,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-03-01",
@@ -530,7 +1721,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of HTTP_MTP, FTF.",
+    "trigger_context": "Triggered during platform validation of HTTP_MTP, FTF. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005.json",
       "line_start": 1,
@@ -544,7 +1735,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-03-01",
@@ -569,7 +1761,7 @@
     "sensitivity": "Public",
     "id": "GEM-586b",
     "rank": 2,
-    "trigger_context": "Triggered during platform validation of BMC26, EFS1.17, SEL.",
+    "trigger_context": "Triggered during platform validation of BMC26, EFS1.17, SEL. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005.json",
       "line_start": 1,
@@ -581,7 +1773,8 @@
       "quarter": "2005-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-03-01",
@@ -605,7 +1798,7 @@
     "sensitivity": "Public",
     "id": "GEM-75f1",
     "rank": 2,
-    "trigger_context": "Triggered during platform validation of tracker titles, prefix.",
+    "trigger_context": "Triggered during platform validation of tracker titles, prefix. (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)",
     "spatial_anchor": {
       "source_file": "2005.json",
       "line_start": 1,
@@ -617,7 +1810,8 @@
       "quarter": "2005-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation"
   },
   {
     "date": "2005-03-01",
@@ -640,7 +1834,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-f124",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -663,7 +1859,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-6b42",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -686,7 +1884,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-4378",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -709,7 +1909,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-8b01",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -732,7 +1934,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-edc9",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up",
+    "trigger_context": "Triggered during validation (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)."
   },
   {
     "date": "2005-03-01",
@@ -755,7 +1959,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-c7e5",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -778,7 +1984,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-2674",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
   },
   {
     "date": "2005-03-01",
@@ -801,7 +2009,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-9202",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -824,7 +2034,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-4db3",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -847,7 +2059,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-685d",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -870,7 +2084,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-ea04",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -893,7 +2109,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-fa1e",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -917,7 +2135,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-1bca",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -940,7 +2160,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-2044",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -963,7 +2185,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-195c",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -986,7 +2210,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-12d1",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -1009,7 +2235,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-c3a1",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-01",
@@ -1032,7 +2260,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "id": "GEM-c386",
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-23",
@@ -1054,7 +2284,9 @@
     "passes": 0,
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
-    "id": "GEM-a088"
+    "id": "GEM-a088",
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up",
+    "trigger_context": "Triggered during validation (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)."
   },
   {
     "date": "2005-03-23",
@@ -1076,7 +2308,9 @@
     "passes": 0,
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
-    "id": "GEM-f06b"
+    "id": "GEM-f06b",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-23",
@@ -1097,7 +2331,9 @@
     "passes": 0,
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
-    "id": "GEM-abb8"
+    "id": "GEM-abb8",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-03-23",
@@ -1114,7 +2350,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up",
+    "trigger_context": "Triggered during validation (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)."
   },
   {
     "date": "2005-03-23",
@@ -1131,7 +2369,538 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-03-23",
+    "summary": "HTTP server configuration via advanced NIC resulted in Fan and Memory sensors reporting 'Power Off' or 'Not Installed' despite correct SDR loading; SEL entries confirmed physical fan presence toggling.",
+    "evidence": "sethttp.bat; telnet.bat; laninit.tcl; SEL: Wed Mar 23 14:10:35 2005 Sensor name: Fan 2 Present, type: Entity Presence(Digital), action: Deassertion",
+    "domain": "hardware_debug",
+    "tags": [
+      "http_server",
+      "ipmi_sensors",
+      "sel_log",
+      "fan_presence"
+    ],
+    "document_date": "2005-03-23",
+    "event_era": "2005-03-23",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-03-23",
+    "summary": "BMC firmware regression testing revealed sensor visibility instability across versions; BMC26 restored memory sensors but left fan status as 'Power Off', while BMC28 reverted to non-functional state for both.",
+    "evidence": "BMC26: memory sensors working, fan still reports \"Power Off\"; BMC28: fan/memory sensors not working",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc_firmware",
+      "regression_test",
+      "sensor_visibility"
+    ],
+    "document_date": "2005-03-23",
+    "event_era": "2005-03-23",
+    "event_year": 2005,
+    "event_quarter": "2005-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
+  },
+  {
+    "date": "2005-04-15",
+    "summary": "[STRATEGIC_ANCHOR] Enterprise Platform BIOS & IPMI Conformance Tooling: Developed and maintained validation tools in C/C++ and TCL/TK for IPMI compliant firmware and enterprise server platforms (IA64/IA32, FRB timer, EFI), receiving formal commendation from Senior Validation leadership.",
+    "evidence": "Intel/Yurcor Student contractor (March 15, 2004 - April 15, 2005): Validation of IPMI compliant Firmware (FTF: I2C, IOL, Serial, FRUSDR, Watchdog); BIOS testing on Enterprise platforms IA64 IA32 (Recovery, FRB timer, EFI); Personal letter of recommendation from Senior Software Validation Engineer.",
+    "sensitivity": "Public",
+    "tags": [
+      "BIOS",
+      "IPMI",
+      "Enterprise",
+      "IA64",
+      "Validation",
+      "TCL_TK"
+    ],
+    "rank": 5,
+    "id": "GEM-510337",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tracker 37674: Inconsistent FP status LED behavior relating to power state confirmed fixed with new BMC/SDR",
+    "evidence": "Id:  37674  \nTitle:  Inconsistent FP status LED behavior relating to power state  \n\nConfirmed that status LED returns to green after all scenarios with new BMC/SDR.  LED's worked consistantly but not at expected as outlined in test matrix.",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "led",
+      "bmc",
+      "sdr"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
     "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tiger2 HSC EPS v1.02 Section 7.1.7 WRITE BUFFER validation failure: Expected CHECK CONDITION but received Good status",
+    "evidence": "Tiger2 HSC EPS v1.02 :\n7.1.7\tWRITE BUFFER - Upload Firmware (04h)\nA CHECK CONDITION shall be issued upon receipt of this command, with a response of Sense Key 05h, ASC 24h, and ASCQ 00h.\n\n1) could not confirm \"(Invalid Field in CDB)\" while writing to buffer as described in the tracker, but \"Good\" status also violates the EPS.\nCDB: [ 3B 04 00 00 00 00 00 00 00 00 ]\nStatus:    00h (Good)\n\n2) Writing with a non zero length (20h) should also return ASC 24h:\nCDB: [ 3B 04 00 00 00 00 00 00 20 00 ]\n  Status:    02h      (Check Condition)\n  Sense Key: 05h      (Illegal Request)\n  ASC/ASCQ:  26h 02h  (Parameter Value Invalid)\n  Raw Sense: [ F0 00 05 00 00 00 00 06 00 00 00 00 26 02 ]",
+    "domain": "hardware_debug",
+    "tags": [
+      "eps",
+      "scsi",
+      "firmware",
+      "validation"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tracker 37473: WW34 SEL Log not updated with HSC BP Temp events (closed, fixed in T4 HSC13)",
+    "evidence": "37473 Title: WW34 SEL Log is not updated with HSC BP Temp events (closed, fixed in T4 HSC13)",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "SEL",
+      "HSC",
+      "thermal"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tracker 37738: Tiger 2 - HSC SCSI BP no SEL Thermal event (fixed in HSC12)",
+    "evidence": "37738 Title: Tiger 2 - HSC SCSI BP - no SEL Thermal event - noncritical to OK (fixed in HSC12",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "HSC",
+      "SCSI",
+      "thermal"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tracker 37168: BMC update to allow system test to check PDB jumper position",
+    "evidence": "37168 Title: BMC update to allow system test to check PDB jumper position.",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "BMC",
+      "PDB",
+      "jumper"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "IPMI Command 0x67: Get 220V/110V PS Jumper status implementation details",
+    "evidence": "67h - Get 220V/110V PS Jumper status\nRequest: N/A\nResponse:\nByte 1: completion code\nByte 2: status\n00h = 110V PS jumper is installed\n01h = 220V PS jumper is installed",
+    "domain": "hardware_debug",
+    "tags": [
+      "IPMI",
+      "command_0x67",
+      "power_supply",
+      "jumper"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "Tiger4 HSC13 and Goblin HSC12/13 diagnostic test results for hsc_drvStatusSensors.tcl",
+    "evidence": "Tiger4 HSC13\tPass count.......9\tFail count.......27\nGoblin HSC12\tPass count.......15\tFail count.......21\nGoblin HSC13\tPass count.......9\tFail count.......27",
+    "domain": "hardware_debug",
+    "tags": [
+      "diagnostics",
+      "hsc",
+      "tiger4",
+      "goblin"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "hsc_GetDevID.tcl passed on Tiger2 HSC 12",
+    "evidence": "Tiger2 HSC 12\nhsc_GetDevID.tcl - passed",
+    "domain": "hardware_debug",
+    "tags": [
+      "diagnostics",
+      "hsc",
+      "tiger2"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-05-01",
+    "summary": "SEND DIAGNOSTIC and TEST UNIT READY command validation notes",
+    "evidence": "7.1.4\tSEND DIAGNOSTIC\n7.1.5\tTEST UNIT READY\n\n  Invalid LUN does not change sense?",
+    "domain": "hardware_debug",
+    "tags": [
+      "scsi",
+      "commands",
+      "validation"
+    ],
+    "document_date": "2005-05-01",
+    "event_era": "2005-05-01",
+    "event_year": 2005,
+    "event_quarter": "2005-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Interface Hardware Validation Harness: Engineered automated test routines across I2C, IPMI Over LAN (IOL), Serial, FRUSDR, and Watchdog hardware timers, standardizing platform smoke testing.",
+    "evidence": "Intel/Yurcor Validation contractor: Built test harnesses validating FTF firmware features across I2C, serial interfaces, and watchdog recovery on enterprise server hardware.",
+    "sensitivity": "Public",
+    "tags": [
+      "I2C",
+      "IOL",
+      "Watchdog",
+      "FRUSDR",
+      "Validation_Harness"
+    ],
+    "rank": 5,
+    "id": "GEM-b774c9",
+    "career_bedrock_anchor": "Built automated IPMI recovery test suites for IA64 and x86 platform bring-up",
+    "trigger_context": "Triggered during validation (Built automated IPMI recovery test suites for IA64 and x86 platform bring-up)."
+  },
+  {
+    "date": "2005-07-15",
+    "summary": "HSC 'Set Event Receiver' generates unexpected SEL entries. Steps: Clear SEL, Set Event Reciever to 20 (bmc). With no drives, 'Device Removed/Device Absent' SEL entry seen for each bay. Regression from T4HSC12.",
+    "evidence": "HSC: \"Set Event Receiver\" generates unexpected SEL entries.\nSteps to reproduce:\n-Clear SEL\n-Set Event Reciever to 20 (bmc)\ncmdtool c0 10 00 20 00\nWith no drives in the bays, a \"Device Removed/Device Absent\" SEL entry is seen for each bay.\nThis did not occur w/ T4HSC12",
+    "domain": "hardware_debug",
+    "tags": [
+      "SEL",
+      "event_receiver",
+      "regression",
+      "cmdtool"
+    ],
+    "document_date": "2005-07-15",
+    "event_era": "2005-07-15",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-07-15",
+    "summary": "Tracker 38453 for T2HSC12, similar to Jarrell tracker 19297 (EXTERNAL). Related to unexpected SEL entries.",
+    "evidence": "Also tracker #38453 for T2HSC12, similar to Jarrell tracker #19297 (EXTERNAL)",
+    "domain": "operations",
+    "tags": [
+      "tracker_38453",
+      "tracker_19297",
+      "T2HSC12",
+      "SEL"
+    ],
+    "document_date": "2005-07-15",
+    "event_era": "2005-07-15",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-17",
+    "summary": "RPC version comparison and fix required; HTTP round 2 tests blocked by RPC",
+    "evidence": "HTTP round 2 tests blocked by RPC RPC - compare versions, fix",
+    "domain": "operations",
+    "tags": [
+      "rpc",
+      "http",
+      "operations"
+    ],
+    "document_date": "2005-08-17",
+    "event_era": "2005-08-17",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-17",
+    "summary": "BMC30 A00 (Mad9M) I2C and SMS test matrix results for gobin",
+    "evidence": "gobin: BMC30 A00 (Mad9M) Test Name Filename I2C SMS IPMB Discovery ipmb_discovery.tcl Pass Pass Sensors sensor_func.tcl Fail N/A PEF & Alerting pef_func.tcl Fail N/A IPMI/LAN lan_func.tcl Pass N/A IPMI/Serial Basic Mode serial_func.tcl Pass N/A Serial Mux serial_mux.tcl Fail N/A Terminal Mode Serial tms_func.tcl N/A N/A Config API configapi_func.tcl Pass Pass IPM Global Application app_func.tcl Pass Pass FRU File fru_file.tcl Fail Fail SDR File sdr_file.tcl Fail Fail Chassis chassis_func.tcl Pass N/A AC Power power_func.tcl Pass N/A System Interface miscapp_func.tcl N/A N/A Watchdog Timer watchdog_flags.tcl Fail N/A Watchdog Actions watchdog_actions.tcl Pass N/A FRU Device fru_func.tcl TRACE Pass SDR Repository sdr_func.tcl Fail Pass SEL Device sel_func.tcl Pass Pass Serial/LAN sol_func.tcl Fail N/A",
+    "domain": "hardware_debug",
+    "tags": [
+      "test_matrix",
+      "bmc",
+      "ipmi",
+      "i2c",
+      "sms"
+    ],
+    "document_date": "2005-08-17",
+    "event_era": "2005-08-17",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-29",
+    "summary": "Investigation of PAR64 memory read error injection causing system hang and bus error; query regarding SEL logging for processor uncorrectable errors.",
+    "evidence": "PAR64 Command: Memory read\nSystem behavior: OS does not respond (only mouse is able to move.)\nError injected data phase\nError count: bust error\nQuad issue 263682\nProcessor #0x00 Uncorrectable error in Processor CPU1 - J2E1",
+    "domain": "hardware_debug",
+    "tags": [
+      "PAR64",
+      "error_injection",
+      "SEL",
+      "bus_error"
+    ],
+    "document_date": "2005-08-29",
+    "event_era": "2005-08-29",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-29",
+    "summary": "Tracker 637712: SMBIOS table CPU max Speed incorrect; verify release.",
+    "evidence": "637712 Title: SMBIOS table CPU max Speed incorrect Verify Release",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "SMBIOS",
+      "BIOS"
+    ],
+    "document_date": "2005-08-29",
+    "event_era": "2005-08-29",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-29",
+    "summary": "HSC tracker issues: 33396 (device faulty/critical array error state), 35574 (Tiger 2 invalid Platform ID in FW transfer mode), 34140 (Mode bit check failure).",
+    "evidence": "33396 - HSC 07 With device faulty, and In critical array, No error should not be set.\n35574 - Tiger 2 HSC returns invalid Platform ID when the HSC is in FW transfer mode.\n34140 - HSC 11: Mode bit not being checked correctly.",
+    "domain": "hardware_debug",
+    "tags": [
+      "HSC",
+      "tracker",
+      "firmware"
+    ],
+    "document_date": "2005-08-29",
+    "event_era": "2005-08-29",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-29",
+    "summary": "BIOS Eval for Tiger2, Tiger4, and Goblin platforms; tracking SMBIOS CPU speed (37711) and memory size (37977) errors across PR versions.",
+    "evidence": "Tiger2: PR2.1 (Mad9M DP H1 stepping)\nTracker #37711 - WW35 SMBIOS table CPU max Speed incorrect\nTracker #37861 Error running some EFI shell scripts: Cannot read from file - Device Error\nTiger4: 0929.P01 (Madison -9M PR 1.3 BIOS )\nTracker #37711 - WW35 SMBIOS table CPU max Speed incorrect\nTracker #37977 - SMBIOS table type 16 max memory wrong\nGoblin: 0021.A00 ( DELL A00 Madison-9M BIOS ) (aka A00.001)\nTracker #37711 - WW35 SMBIOS table CPU max Speed incorrect\nTracker #37977 - SMBIOS table type 16 max memory wrong",
+    "domain": "operations",
+    "tags": [
+      "BIOS",
+      "SMBIOS",
+      "tracker",
+      "Tiger2",
+      "Tiger4",
+      "Goblin"
+    ],
+    "document_date": "2005-08-29",
+    "event_era": "2005-08-29",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-08-29",
+    "summary": "Tracker 38160: Unable to inject errors with MCAviewer.efi.",
+    "evidence": "38160 Title: Unable to inject errors with MCAviewer.efi",
+    "domain": "hardware_debug",
+    "tags": [
+      "tracker",
+      "error_injection",
+      "MCAviewer"
+    ],
+    "document_date": "2005-08-29",
+    "event_era": "2005-08-29",
+    "event_year": 2005,
+    "event_quarter": "2005-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2005-09-15",
+    "summary": "[STRATEGIC_ANCHOR] Harwich BMC & EFS Conformance Verification: Executed firmware validation across Harwich BMC23 to BMC26 and EFS 1.12 to 1.17, uncovering and tracking SEL page stability issues and DR#19435 NULL password resolution.",
+    "evidence": "Notes 2005: Hardware evaluation across HW BMC23/EFS1.12 to BMC26/EFS1.17; characterized SEL page defect clusters and verified DR tracker resolution across enterprise server builds.",
+    "sensitivity": "Public",
+    "tags": [
+      "Harwich",
+      "BMC",
+      "EFS",
+      "SEL",
+      "Firmware_Validation"
+    ],
+    "rank": 5,
+    "id": "GEM-ea3511",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
+  },
+  {
+    "date": "2005-11-20",
+    "summary": "[STRATEGIC_ANCHOR] Automated HTTP MTP Validation Library: Authored an FTF automated test library that compressed manual web-server execution by automating over 40% of the HTTP_MTP conformance test suite.",
+    "evidence": "Notes 2005: Developed FTF library allowing automation of 40+% of the HTTP_MTP test plan, verifying sensor status and chassis identification via advanced web server interfaces.",
+    "sensitivity": "Public",
+    "tags": [
+      "HTTP",
+      "MTP",
+      "FTF",
+      "Automation",
+      "Web_Server"
+    ],
+    "rank": 5,
+    "id": "GEM-25b97d",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1151,7 +2920,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-63c9"
+    "id": "GEM-63c9",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1171,7 +2942,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-b82e"
+    "id": "GEM-b82e",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1191,7 +2964,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-7081"
+    "id": "GEM-7081",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1211,7 +2986,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-da0a"
+    "id": "GEM-da0a",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1231,7 +3008,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-fe1d"
+    "id": "GEM-fe1d",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1251,7 +3030,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-bd1a"
+    "id": "GEM-bd1a",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-11-30",
@@ -1271,7 +3052,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 4,
-    "id": "GEM-a0fc"
+    "id": "GEM-a0fc",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-12",
@@ -1291,7 +3074,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-755c"
+    "id": "GEM-755c",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-13",
@@ -1311,7 +3096,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-6450"
+    "id": "GEM-6450",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-14",
@@ -1331,7 +3118,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-7538"
+    "id": "GEM-7538",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-15",
@@ -1351,7 +3140,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-f1b0"
+    "id": "GEM-f1b0",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-16",
@@ -1371,7 +3162,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-072a"
+    "id": "GEM-072a",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-17",
@@ -1391,7 +3184,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-fed7"
+    "id": "GEM-fed7",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-18",
@@ -1411,7 +3206,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-7883"
+    "id": "GEM-7883",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-19",
@@ -1431,7 +3228,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-ca27"
+    "id": "GEM-ca27",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-20",
@@ -1451,7 +3250,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-4742"
+    "id": "GEM-4742",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-21",
@@ -1471,7 +3272,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-6333"
+    "id": "GEM-6333",
+    "career_bedrock_anchor": "Automated 80% of manual NIC testing using Expect scripts and custom test routines",
+    "trigger_context": "Triggered during validation (Automated 80% of manual NIC testing using Expect scripts and custom test routines)."
   },
   {
     "date": "2005-12-22",
@@ -1491,7 +3294,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-14a6"
+    "id": "GEM-14a6",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-22",
@@ -1511,7 +3316,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-acc1"
+    "id": "GEM-acc1",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-22",
@@ -1531,7 +3338,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-6ed9"
+    "id": "GEM-6ed9",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-22",
@@ -1551,7 +3360,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-16fc"
+    "id": "GEM-16fc",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-22",
@@ -1571,7 +3382,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-4c16"
+    "id": "GEM-4c16",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-27",
@@ -1591,7 +3404,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-52e0"
+    "id": "GEM-52e0",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-28",
@@ -1611,7 +3426,9 @@
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-da40"
+    "id": "GEM-da40",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Triggered during validation (Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation)."
   },
   {
     "date": "2005-12-29",
@@ -1622,15 +3439,28 @@
     "event_era": "2005-12-29",
     "event_year": 2005,
     "event_quarter": "2005-Q4",
-    "temporal_confidence": 0.5,
-    "temporal_provenance": "document_date_fallback",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
     "impact_level": 1,
-    "refinement_level": 0,
-    "passes": 0,
+    "refinement_level": 1,
+    "passes": 1,
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "tags": [],
     "rank": 2,
-    "id": "GEM-d4c2"
+    "id": "GEM-d4c2",
+    "career_bedrock_anchor": "Validation Engineer: Server firmware, EFI/Windows/Linux network tools, Perl/TCL automation",
+    "trigger_context": "Trigger: Inquiry into server firmware debugging or BIOS version validation activities. Type: FOCAL_DRAFT, Tier 2 Milestone: Firmware Validation & Automation.",
+    "spatial_anchor": {
+      "source_file": "2005.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2005-12-29",
+      "year": 2005,
+      "quarter": "2005-Q4",
+      "precision": "EXACT"
+    }
   }
 ]

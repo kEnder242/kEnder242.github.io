@@ -1,79 +1,5 @@
 [
   {
-    "date": "2022-04-30",
-    "summary": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Design and Technology Solutions Technical Conference (DTTC) analyzing PECI protocol reliability.",
-    "evidence": "3/30/2022 Insights & DTTC_2022_Peci_Stress.pdf: Delivered 'Measuring PECI performance and reliability' paper to DTTC; analyzed transmission reliability, error recovery, and timing under stress.",
-    "sensitivity": "Public",
-    "tags": [
-      "DTTC",
-      "PECI",
-      "Technical_Paper",
-      "Reliability",
-      "Benchmarking"
-    ],
-    "rank": 5,
-    "id": "GEM-b31bb2"
-  },
-  {
-    "date": "2022-06-30",
-    "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a validation engine' via MCTP APIs across server platforms.",
-    "evidence": "3/30/2022 Insights: Delivered PLDM NIC communication using 'BMC as a validation engine' MCTP API; Guided Aurora Blade manual content execution (BMC, NM OpenBMC) for Phase 1 status.",
-    "sensitivity": "Public",
-    "tags": [
-      "PLDM",
-      "NIC",
-      "MCTP",
-      "BMC",
-      "OpenBMC"
-    ],
-    "rank": 5,
-    "id": "GEM-9d30d5"
-  },
-  {
-    "date": "2022-09-30",
-    "summary": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines.",
-    "evidence": "Insights 2022: Recognized for support for PECI code during EMR PO to enable Montana code for EMR PO; enabled Manageability to run automated at EMR PO; merged Montana path into DTAF.",
-    "sensitivity": "Public",
-    "tags": [
-      "EMR",
-      "PECI",
-      "Power_On",
-      "Montana",
-      "SPR"
-    ],
-    "rank": 5,
-    "id": "GEM-e03f7d"
-  },
-  {
-    "date": "2022-10-31",
-    "summary": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF automation harness, eliminating divergent test paths.",
-    "evidence": "Insights 2022: Merged Montana path into DTAF, establishing standard execution across server manageability programs.",
-    "sensitivity": "Public",
-    "tags": [
-      "DTAF",
-      "Montana",
-      "Codebase_Unification",
-      "Harness"
-    ],
-    "rank": 5,
-    "id": "GEM-466f04"
-  },
-  {
-    "date": "2022-12-31",
-    "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and ECS OOB registers meeting Eagle Stream CCB requirements.",
-    "evidence": "Insights 2022: Automated PECI write tests for all available CSR endpoints (2k), also meeting needs of EGS CCB; Developed test for ECS OOB register access.",
-    "sensitivity": "Public",
-    "tags": [
-      "PECI",
-      "CSR",
-      "EGS_CCB",
-      "Automation",
-      "Endpoints"
-    ],
-    "rank": 5,
-    "id": "GEM-baab0b"
-  },
-  {
     "date": "2022-00-00",
     "summary": "Release of SensorSeverityThreshold_OpenBMC_longrun.py, blackbox.py, gethostcpudata.py, makechart.py, pcu_notes.py, peciXtor.py, peci_framework_ipmi_example.py, peci_redfish.py, pecistressor.py, policy.py, policy_jason.py, sensor_validator.py, statistics.py. This release includes several Python scripts for OpenBMC and Redfish interfaces.",
     "evidence": "[TOOL ERA REGISTRY]...",
@@ -85,7 +11,9 @@
     ],
     "technical_gem": "[TOOL ERA REGISTRY]... (Possible specific tool name or error code found in the Evidence)",
     "rank": 4,
-    "temporal_confidence": 0.5
+    "temporal_confidence": 0.5,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-01-01",
@@ -104,7 +32,9 @@
     "intrigue": 0.0,
     "importance": 0.0,
     "target_domains": [],
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-01-01",
@@ -124,7 +54,30 @@
     "intrigue": 0.0,
     "importance": 0.0,
     "target_domains": [],
-    "rank": 4
+    "rank": 4,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Reserved memory pools created for CMA ...Trigger: Investigating early-boot memory layout conflicts or DMA allocation failures on embedded Linux targets where CMA/DMA pools are statically reserved below the 4 GiB boundary.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "document_date": "2022-01-01",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
   },
   {
     "date": "2022-01-01",
@@ -134,7 +87,9 @@
     "tags": [
       "U-Boot"
     ],
-    "rank": 2
+    "rank": 2,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-01-01",
@@ -153,7 +108,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of debugging, visa.",
+    "trigger_context": "Triggered during platform validation of debugging, visa. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2015_09.json",
       "line_start": 1,
@@ -167,7 +122,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-01",
@@ -185,8 +141,8 @@
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
     "impact_level": 1,
-    "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of Intel, HSD Appstore.",
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of Intel, HSD Appstore. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2019_08.json",
       "line_start": 1,
@@ -198,9 +154,10 @@
       "quarter": "2022-Q1",
       "precision": "EXACT"
     },
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-01",
@@ -221,10 +178,10 @@
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
     "impact_level": 3,
-    "refinement_level": 3,
+    "refinement_level": 2,
     "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Merging Montana into DTAF-content usin...The `git filter-repo` command with the `--to-subdirectory-filter src/miv` flag is triggered when a platform validation engineer needs to extract a specific source subtree from a monorepo history, ensuring the merged `Montana` and `DTAF` content remains isolated for clean, non-branching validation telemetry.",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -236,7 +193,8 @@
       "quarter": "2022-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-01",
@@ -257,7 +215,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of power_limit, configuration_error.",
+    "trigger_context": "Triggered during platform validation of power_limit, configuration_error. (Validated PCIe, memory controller, power management, and platform RAS mechanisms)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -270,7 +228,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
   },
   {
     "date": "2022-01-01",
@@ -307,7 +266,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-d98c"
+    "id": "GEM-d98c",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-01",
@@ -342,7 +302,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-7c0e"
+    "id": "GEM-7c0e",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-01",
@@ -362,7 +323,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of PythonSV, pmdebug.",
+    "trigger_context": "Triggered during platform validation of PythonSV, pmdebug. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022_01.json",
       "line_start": 1,
@@ -376,7 +337,110 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-e978"
+    "id": "GEM-e978",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Security vulnerability search and platform component audit across PCH, RAM, BMC, locks, DDR5, OOBMSM.",
+    "evidence": "Security vulnerability search (i.e. MKTME) and platform components PCH, ram, BMC, locks, DDR5, OOBMSM",
+    "domain": "hardware_debug",
+    "tags": [
+      "security",
+      "platform_components"
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Security vulnerability search and plat...FOCAL_DRAFT; Tier 2: Platform Security & RAS Telemetry Integration. Trigger context: A security audit inquiry regarding MKTME key isolation or a platform component vulnerability scan across PCH, DDR5, BMC, and OOBMSM interfaces activates this knowledge.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "Framework archaeology and code learning for silicon validation platform.",
+    "evidence": "Boris working with opensource chipsec framework github, driver mode linux, Redfish API BMC OOBMSM",
+    "domain": "operations",
+    "tags": [
+      "framework_archaeology",
+      "opensource"
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 2,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Framework archaeology and code learnin...FOCAL_DRAFT (Tier 2: Platform Telemetry & Silicon Validation Foundation). This knowledge activates when diagnosing out-of-band management failures or validating firmware integrity, specifically requiring cross-referencing of Redfish BMC OOBMSM telemetry with chipsec driver-mode execution to isolate silicon-level RAS events from host-side OS artifacts.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-01-01",
+    "summary": "MCTP collaboration and PECI fuzz testing for hardware debug.",
+    "evidence": "MCTP collab like PECI fuzz testing",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "PECI_fuzzing"
+    ],
+    "document_date": "2022-01-01",
+    "event_era": "2022-01-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MCTP collaboration and PECI fuzz testi...FOCAL_DRAFT; Tier 2: MCTP/PECI Fuzzing Integration. Trigger context: Activates when diagnosing unresponsive BMC sideband channels or validating robustness of PECI transaction boundaries against malformed payloads during silicon bring-up.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-01",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-02",
@@ -399,7 +463,7 @@
     "impact_level": 3,
     "refinement_level": 2,
     "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Preserving history while merging Monta...The trigger is a merge conflict during the `montana` branch's `git-filter-repo` history filtering, where the `--allow-unrelated-histories` flag is required to reconcile divergent commit graphs and preserve the `montana` repository's history while merging into the `DTAF` content tree.",
-    "passes": 1,
+    "passes": 2,
     "consecutive_zero_deltas": 0,
     "spatial_anchor": {
       "source_file": "2022.json",
@@ -411,7 +475,8 @@
       "year": 2022,
       "quarter": "2022-Q1",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-02",
@@ -431,10 +496,10 @@
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
     "impact_level": 4,
-    "refinement_level": 3,
+    "refinement_level": 2,
     "trigger_context": "[FOYER] Request 9b278cd3 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 1/5]  \u2014 COMPLETED{\"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"]}",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -446,7 +511,8 @@
       "quarter": "2022-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-03",
@@ -466,8 +532,8 @@
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
     "impact_level": 1,
-    "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of OOBMSM, 10nm architecture.",
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of OOBMSM, 10nm architecture. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -479,9 +545,10 @@
       "quarter": "2022-Q1",
       "precision": "EXACT"
     },
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-01-03",
@@ -501,8 +568,8 @@
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
     "impact_level": 1,
-    "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of PECI specification, Xeon.",
+    "refinement_level": 2,
+    "trigger_context": "Triggered during platform validation of PECI specification, Xeon. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -514,9 +581,139 @@
       "quarter": "2022-Q1",
       "precision": "EXACT"
     },
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-01-06",
+    "summary": "PECI stressor telemetry logs show endpoint PCI passing 1616, unexpected 0, skipped 336; rdpciconfig passing 1614, unexpected 4 with CC 0x90, skipped 336; endpoint_localpci passing 1616, unexpected 0, skipped 336.",
+    "evidence": "2022-01-06 10:02:04.245,INFO,montana.nativemodules.pecistressor,(endpoint_pci) Passing: 1616, Unexpected: 0, Skipped: 336; 2022-01-06 10:04:54.740,INFO,montana.nativemodules.pecistressor,(rdpciconfig) Passing: 1614, Unexpected: 4 CC: ['0x90'], Skipped: 336; 2022-01-06 10:04:54.740,ERROR,montana.nativemodules.pecistressor,(rdpciconfig) Unexpected: 4 CC: ['0x90']; 2022-01-06 10:04:54.740,INFO,montana.nativemodules.pecistressor,(rdpciconfig) Unexpected: 4 CC: ['0x90'] Skipped: 336; 2022-01-06 10:06:17.741,INFO,montana.nativemodules.pecistressor,(endpoint_localpci) Passing: 1616, Unexpected: 0, Skipped: 336",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "PCI",
+      "telemetry"
+    ],
+    "document_date": "2022-01-06",
+    "event_era": "2022-01-06",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'PECI stressor telemetry logs show endp...This telemetry snapshot from January 6, 2022, serves as the baseline for diagnosing intermittent PECI configuration space read failures on the Montana platform, specifically isolating the four unexpected `rdpciconfig` responses with Completion Code 0x90 (Unsupported Request) against a clean endpoint PCI pass rate.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-06",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-01-19",
+    "summary": "MCTP packet validation from MEMBAR2 VMD device to OOB-MSM firmware.",
+    "evidence": "MCTP packets from MEMBAR2 of the VMD device does not reach OOB-MSM FW",
+    "domain": "hardware_debug",
+    "tags": [
+      "MEMBAR2",
+      "VMD",
+      "OOBMSM"
+    ],
+    "document_date": "2022-01-19",
+    "event_era": "2022-01-19",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-01-24",
+    "summary": "MCTP DDRT configuration and telemetry setup by Sobocinski, Nalborski, and Krithivas; platform arch for managability framework and telemetry.",
+    "evidence": "MCTP DDRT - Sobocinski, Konrad; MCTP DDRT - Nalborski, Andrzej; Krithivas, Ramamurthy <ramamurthy.krithivas@intel.com> - Platform arch for managability framework and telemetry",
+    "domain": "operations",
+    "tags": [
+      "MCTP",
+      "DDRT",
+      "Telemetry"
+    ],
+    "document_date": "2022-01-24",
+    "event_era": "2022-01-24",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MCTP DDRT configuration and telemetry ...FOCAL_DRAFT; Tier 2: MCTP DDRT Configuration & Managability Framework Architecture. Trigger context: Investigating MCTP/DDRT telemetry gaps or managability framework integration issues on Intel platforms where Sobocinski, Nalborski, or Krithivas are the designated owners for platform architecture and debug configuration.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-24",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-01-28",
+    "summary": "Sapphire Rapids-SP-XCC inventory request initiated at JF5-3 Lab 5324 South/Bay 3, with requestor comments referencing Weldon staging listing.",
+    "evidence": "Requestor Comments: Pleas borrow from Chris Weldon staging listing; Materials managed by: Weldon, Christopher C",
+    "domain": "operations",
+    "tags": [
+      "Inventory",
+      "Sapphire",
+      "JF5"
+    ],
+    "document_date": "2022-01-28",
+    "event_era": "2022-01-28",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Sapphire Rapids-SP-XCC inventory reque...The operational trigger is an inventory reconciliation query for Sapphire Rapids-SP-XCC hardware at JF5-3 Lab 5324 South/Bay 3, specifically activating the protocol to source materials from Christopher C Weldon's staging listing rather than standard lab stock.",
+    "spatial_anchor": {
+      "source_file": "2022.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2022-01-28",
+      "year": 2022,
+      "quarter": "2022-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-02-01",
@@ -535,7 +732,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of debugging, BSSB.",
+    "trigger_context": "Triggered during platform validation of debugging, BSSB. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2015_09.json",
       "line_start": 1,
@@ -549,7 +746,80 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-02-08",
+    "summary": "MCTP PCIe telemetry payload construction and dispatch via busctl for content development on K90583-114 platform.",
+    "evidence": "busctl call xyz.openbmc_project.MCTP_PCIe /xyz/openbmc_project/mctp Base SendReceiveMctpMessagePayload yayq 29 0x0c 0x7e 0x80 0x86 0x80 0x3 0 0 0 0 0 0xc0 1000",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "pcie",
+      "busctl"
+    ],
+    "document_date": "2022-02-08",
+    "event_era": "2022-02-08",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-09",
+    "summary": "MCTP protocol test frame exchange executed via pecistressor module on /dev/peci-mctp, validating DUT connection ID 20 against hardcoded capability values.",
+    "evidence": "montana.nativemodules.pecistressor,{'PECICommands': [[49, 5, 9, 177, 0, 60, 1, 4], [49, 5, 9, 177, 0, 61, 1, 4], [49, 5, 9, 177, 0, 62, 1, 4], [49, 5, 9, 177, 0, 63, 1, 4], [49, 5, 9, 177, 0, 64, 1, 4], [49, 5, 9, 177, 0, 65, 1, 4], [49, 5, 9, 177, 0, 66, 1, 4], [49, 5, 9, 177, 0, 67, 1, 4], [49, 5, 9, 177, 0, 68, 1, 4], [49, 5, 9, 177, 0, 69, 1, 4]], 'PECIDevice': '/dev/peci-mctp'}",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp-frame",
+      "pecistressor",
+      "DUT-connection"
+    ],
+    "document_date": "2022-02-09",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-09",
+    "summary": "CPX6 host JF04WVAW4294 (Raratin JF04WVAW0008) BMC access configuration recorded.",
+    "evidence": "https://10.23.20.29 Admin [REDACTED_PASSWORD]",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc",
+      "cpx6",
+      "raratin"
+    ],
+    "document_date": "2022-02-09",
+    "event_era": "2022-02-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-02-14",
@@ -569,7 +839,132 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-15",
+    "summary": "rdPciConfig telemetry endpoint returned 0x90 PECI_CC_FAIL during PCIe RAS validation on Montana native module.",
+    "evidence": "rdPciConfig[62] fe:00:00->00:01:00:[O] returned 0x90 PECI_CC_FAIL",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCIe-RAS",
+      "PECI-CC_FAIL",
+      "Montana-Native"
+    ],
+    "document_date": "2022-02-15",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-02-15",
+    "summary": "Endpoint PCI and localPCI telemetry show 10880.0 passed, 66 failed, and 1412 skipped cycles with network latency 0.737-1.613 seconds.",
+    "evidence": "endpoint_pci 10880.0 10880.0 0.0 1412.0 36.236401 0.737693 7.337 14748.690715",
+    "domain": "hardware_debug",
+    "tags": [
+      "endpoint_pci",
+      "latency",
+      "telemetry"
+    ],
+    "document_date": "2022-02-15",
+    "event_era": "2022-02-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-02-15",
+    "summary": "rdPciConfig test execution on lab machine (4S) with grouped Offset mode; 10816/10882 passed, 66 failed; FlexBus LogPhy 0x40 response missing on fe:00:00->00:01:00, 00:05, 00:03, 00:07; elapsed time 6.05s Bmc, 12556 PECI transactions/sec",
+    "evidence": "PASS rdPciConfig / PASS rdEndPointConfig_PCI; fe:00:00->00:01:00:[0] a.PCIEGen5_RP.FlexBus LogPhy - 0x40 response missing; fe:00:00->00:05:00:[0] c.PCIEGen5_RP.FlexBus LogPhy - 0x40 response missing; fe:00:00->00:03:00:[0] b.PCIEGen5_RP.FlexBus LogPhy - 0x40 response missing; fe:00:00->00:07:00:[0] d.PCIEGen5_RP.FlexBus LogPhy - 0x40 response missing; 65.168722 Start time, 66.035390 End time, 35.332908 Elapsed (python) in seconds, 0.866668 Elapsed (Redfish Tx/Rx) in seconds, 0.000080 seconds per PECI transaction, 12556.140324 PECI transactions per second",
+    "domain": "hardware_debug",
+    "tags": [
+      "rdPciConfig",
+      "FlexBus LogPhy",
+      "0x40 response missing",
+      "rdPciConfig",
+      "FlexBus LogPhy",
+      "0x40 response missing"
+    ],
+    "document_date": "2022-02-15",
+    "event_era": "2022-02-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-15",
+    "summary": "PCIe Gen5 FlexBus LogPhy telemetry failures during PECI stress validation",
+    "evidence": "2022-02-15 08:47:24.090,INFO,montana.nativemodules.pecistressor,Saving rdpciconfig_peci_cmd_matrix.xlsx",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCIe Gen5",
+      "FlexBus LogPhy",
+      "PECI stressor"
+    ],
+    "document_date": "2022-02-15",
+    "event_era": "2022-02-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-02-15",
+    "summary": "Unexpected PECI return codes detected for FlexBus LogPhy variants, indicating protocol mismatch in PCIe Gen4/Gen5 RAS validation.",
+    "evidence": "2022-02-15 08:25:48.693,ERROR,montana.nativemodules.pecistressor,(rdpciconfig) Unexpected: 33 CC: ['0x90']",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "CC",
+      "FlexBus"
+    ],
+    "document_date": "2022-02-15",
+    "event_era": "2022-02-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-02-22",
@@ -590,7 +985,198 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "IA32_MCi_STATUS MSR validation and error reporting telemetry from Intel MCI platform.",
+    "evidence": "IA32_MCi_STATUS (MSR 0x401+(BANK_NUMBER*4))",
+    "domain": "hardware_debug",
+    "tags": [
+      "MSR",
+      "IA32_MCi_STATUS"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "MCTP message payload and event subscription telemetry from OpenBMC.",
+    "evidence": "POST \"msgType\": [126] = 0x7E = Intel",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "EventService"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "Busctl emit for MCTP message received signal with type and source ID.",
+    "evidence": "busctl emit /xyz/openbmc_project/mctp xyz.openbmc_project.MCTP.Base MessageReceivedSignal yyybay 0x81 5 27",
+    "domain": "hardware_debug",
+    "tags": [
+      "busctl",
+      "MCTP"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "Fork and branch flow for testing sandbox in OpenBMC MCTP project.",
+    "evidence": "Can we host testing_sandbox on dedicated fork just for testing?",
+    "domain": "operations",
+    "tags": [
+      "fork",
+      "branch"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-22",
+    "summary": "Repo size concern and maintenance risk in OpenBMC MCTP project.",
+    "evidence": "One large repo is a risk. Why dont we keep small repositories?",
+    "domain": "operations",
+    "tags": [
+      "repo",
+      "maintenance"
+    ],
+    "document_date": "2022-02-22",
+    "event_era": "2022-02-22",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-23",
+    "summary": "PMEM mailbox register sequence validated against CWV FMC top CSR documentation; write and read sequences confirmed with command/status/payload register polling.",
+    "evidence": "Poll Command register until doorbell bit is clear; write data into payload region; write command register with Opcode, Subopcode, doorbell bit; read Status register for Comp/Fail bits.",
+    "domain": "hardware_debug",
+    "tags": [
+      "PMEM",
+      "mailbox",
+      "CWV",
+      "CSR"
+    ],
+    "document_date": "2022-02-23",
+    "event_era": "2022-02-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-02-25",
+    "summary": "PCI configuration command execution on Socket 0x30 and 0x31 with offset offsets 0x3E and 0xF23 respectively.",
+    "evidence": "peci_cmds -a 0x30 rdpciconfig 0 1 0 0x3e; peci_cmds -a 0x31 rdpciconfig 0x80 1 0 0x3e",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCI",
+      "rdpciconfig",
+      "Socket 0x30",
+      "Socket 0x31"
+    ],
+    "document_date": "2022-02-25",
+    "event_era": "2022-02-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-02-25",
+    "summary": "RdPCIConfig command execution with CC 0x93 and Data 0x0, offset 0xF23.",
+    "evidence": "Socket: 0x30, Bus: 38, Device: 1, Function: 0, Offset: 0xF23; CC: 0x93, Data: 0x0",
+    "domain": "hardware_debug",
+    "tags": [
+      "RdPCIConfig",
+      "CC 0x93",
+      "Offset 0xF23"
+    ],
+    "document_date": "2022-02-25",
+    "event_era": "2022-02-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-03-01",
@@ -609,7 +1195,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 2,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of logging, collateral.",
+    "trigger_context": "Triggered during platform validation of logging, collateral. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2015_09.json",
       "line_start": 1,
@@ -623,7 +1209,432 @@
     },
     "passes": 479,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-03-02",
+    "summary": "PCIe RAS telemetry and RAPL power instrumentation: package power SKU limits 0xaf0 (350W) and 0x17e0 (6112/8 = 764W) define min/max thresholds for socket power telemetry.",
+    "evidence": "sv.socket0.uncore.punit.package_power_sku.pkg_min_pwr=0xaf0; pkg_max_pwr=0x17e0",
+    "domain": "hardware_debug",
+    "tags": [
+      "rapl-power",
+      "dcgm-metric",
+      "package-power-sku"
+    ],
+    "document_date": "2022-03-02",
+    "event_era": "2022-03-02",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-03-10",
+    "summary": "PecI framework client instantiated with Redfish target; configuration and random read operations executed against remote BMC endpoint.",
+    "evidence": "pred.peci_xtor.config_bmc(\"10.23.187.214:10443\":[REDACTED_PASSWORD])",
+    "domain": "hardware_debug",
+    "tags": [
+      "bmc-configuration",
+      "redfish-client"
+    ],
+    "document_date": "2022-03-10",
+    "event_era": "2022-03-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-10",
+    "summary": "Random read operations performed against socket with bulk iteration counts and inband flag.",
+    "evidence": "pr.random_reads(pred,sv.socket0,20000,bulkIterations=100,inband=False,seed=2,verbose=True)",
+    "domain": "hardware_debug",
+    "tags": [
+      "random-reads",
+      "bulk-iterations"
+    ],
+    "document_date": "2022-03-10",
+    "event_era": "2022-03-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-10",
+    "summary": "HSD-ES bug tracker entry for missing CPU domain in NM Redfish baseboard power response.",
+    "evidence": "[HSD-ES][server_platf][bug][eagle_stream][14016220723][p3-medium][open] [OMC][Aurora] Missing CPU Domain in NM Redfish Baseboard/Power response",
+    "domain": "hardware_debug",
+    "tags": [
+      "bug-tracker",
+      "redfish-baseboard"
+    ],
+    "document_date": "2022-03-10",
+    "event_era": "2022-03-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-12",
+    "summary": "BMC performance benchmarking across six platform nodes with throughput and latency measurements.",
+    "evidence": "cmd per second 120.125743, tx kbps 57.314943, rx kbps 0.287565",
+    "domain": "hardware_debug",
+    "tags": [
+      "BMC",
+      "throughput",
+      "latency"
+    ],
+    "document_date": "2022-03-12",
+    "event_era": "2022-03-12",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-03-16",
+    "summary": "Platform validation telemetry from PECI Redfish CPU temperature measurement and IPMI BMC remote access benchmarking.",
+    "evidence": "cpulist=0",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI",
+      "Redfish",
+      "BMC",
+      "IPMI"
+    ],
+    "document_date": "2022-03-16",
+    "event_era": "2022-03-16",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-17",
+    "summary": "Submit DTTC paper with PECI stress test findings.",
+    "evidence": "Date: 3/17 (DTTC paper submission)",
+    "domain": "operations",
+    "tags": [
+      "dttc",
+      "peci",
+      "stress-test"
+    ],
+    "document_date": "2022-03-17",
+    "event_era": "2022-03-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-18",
+    "summary": "MCA detection triggered by MSR read during peci_checkout; no prior run logs available for context.",
+    "evidence": "MSR read known to trigger machine check; peci_checkout pre-run logs missing",
+    "domain": "hardware_debug",
+    "tags": [
+      "MSR",
+      "machine-check",
+      "peci_checkout"
+    ],
+    "document_date": "2022-03-18",
+    "event_era": "2022-03-18",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-18",
+    "summary": "Git clone of Intel inner-source framework automation with credential redaction.",
+    "evidence": "git clone https://jallred:[REDACTED_PASSWORD]@github.com/intel-innersource/frameworks.automation.dtaf.content.montana.miv-software-montana.git",
+    "domain": "operations",
+    "tags": [
+      "git-clone",
+      "credential-redacted"
+    ],
+    "document_date": "2022-03-18",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-18",
+    "summary": "Invert-paths filter applied to remove unwanted files from git history.",
+    "evidence": "git-filter-repo --invert-paths --paths-from-file filesIDontWantAnymore.txt",
+    "domain": "operations",
+    "tags": [
+      "git-filter-repo",
+      "invert-paths"
+    ],
+    "document_date": "2022-03-18",
+    "event_era": "2022-03-18",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-18",
+    "summary": "Validation of PECI v4.0 command checkout against MIV Node Manager on the Montana platform, with power limit accuracy checks and Redfish remote access verification.",
+    "evidence": "18014067137 miv nm power limit accuracy d0 MIV Node Manager Automated Montana Not started",
+    "domain": "hardware_debug",
+    "tags": [
+      "PECI v4.0",
+      "power limit accuracy",
+      "Node Manager"
+    ],
+    "document_date": "2022-03-18",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-18",
+    "summary": "Remote Access (Redfish) verification via OOB for server turn Off/On and ForceOn commands, confirming Redfish command execution on the MIV platform.",
+    "evidence": "18020858118 Remote Access (Redfish) To verify via OOB that the server can be turn Off/On via RedFish MIV Redfish Not Automated Passed",
+    "domain": "hardware_debug",
+    "tags": [
+      "Redfish",
+      "OOB",
+      "turn Off/On"
+    ],
+    "document_date": "2022-03-18",
+    "event_era": "2022-03-18",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-21",
+    "summary": "Build and release pipeline for montana module with pip, build, and twine.",
+    "evidence": "python -m pip install --upgrade build; python -m build --no-isolation --sdist --wheel --outdir dist; pip install montana.whl; twine - .github/workflows/python-release.yml",
+    "domain": "operations",
+    "tags": [
+      "pip",
+      "build",
+      "twine",
+      "montana"
+    ],
+    "document_date": "2022-03-21",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-28",
+    "summary": "Redfish power telemetry probe and baseboard power control PATCH request.",
+    "evidence": "curl -k -u debuguser:[REDACTED_PASSWORD] -H 'Content-Type: application/json' -X GET https://10.23.20.189/redfish/v1/Chassis/Baseboard/Power",
+    "domain": "hardware_debug",
+    "tags": [
+      "redfish",
+      "power-control",
+      "baseboard"
+    ],
+    "document_date": "2022-03-28",
+    "event_era": "2022-03-28",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-31",
+    "summary": "Functional delta analysis between MCC and XCC functional modes, including CAPID3 read via RdEndpointConfigPCILocal.",
+    "evidence": "RdEndpointConfigPCILocal 0 31 30 3 0x90",
+    "domain": "hardware_debug",
+    "tags": [
+      "RdEndpointConfigPCILocal",
+      "CAPID3"
+    ],
+    "document_date": "2022-03-31",
+    "event_era": "2022-03-31",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-31",
+    "summary": "PUNIT_CR register read via SPR top PUNIT CR0 and CAPID3 configuration.",
+    "evidence": "CR16.Punit 0x100c CAPID0 PUNIT_CR",
+    "domain": "hardware_debug",
+    "tags": [
+      "PUNIT_CR",
+      "CR16"
+    ],
+    "document_date": "2022-03-31",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-31",
+    "summary": "PCU_FUNC_3 configuration read via SPR top PUNIT CR3.",
+    "evidence": "CR3.Punit 0x90 CAPID3_CFG",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCU_FUNC_3",
+      "CR3"
+    ],
+    "document_date": "2022-03-31",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-03-31",
+    "summary": "RdEndpointConfigPCILocal command execution with cc:0x40 0x07804000 output.",
+    "evidence": "cc:0x40 0x07804000",
+    "domain": "hardware_debug",
+    "tags": [
+      "RdEndpointConfigPCILocal"
+    ],
+    "document_date": "2022-03-31",
+    "event_era": "2022-03-31",
+    "event_year": 2022,
+    "event_quarter": "2022-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-04-01",
@@ -642,7 +1653,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of TODO, Git.",
+    "trigger_context": "Triggered during platform validation of TODO, Git. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2016_2019.json",
       "line_start": 1,
@@ -656,7 +1667,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-04-01",
@@ -675,7 +1687,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of HSD, Issue.",
+    "trigger_context": "Triggered during platform validation of HSD, Issue. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2016_2019.json",
       "line_start": 1,
@@ -689,7 +1701,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-04-01",
@@ -724,7 +1737,8 @@
       "quarter": "2022-Q2",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-04-01",
@@ -758,7 +1772,8 @@
       "year": 2022,
       "quarter": "2022-Q2",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-04-01",
@@ -792,7 +1807,262 @@
       "year": 2022,
       "quarter": "2022-Q2",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-04-01",
+    "summary": "PCIe RAS telemetry and BIOS boot override configuration recorded during 2019-2024 era validation.",
+    "evidence": "curl -k -u \"[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -d \"{\\\"Boot\": {\\\"BootSourceOverrideEnabled\": \\\"Once\", \\\"BootSourceOverrideTarget\": \\\"BiosSetup\\\"}\" -X PATCH https://10.23.20.191/redfish/v1/Systems/system",
+    "domain": "hardware_debug",
+    "tags": [
+      "redfish",
+      "bios-override",
+      "patch"
+    ],
+    "document_date": "2022-04-01",
+    "event_era": "2019-01-01",
+    "event_year": 2019,
+    "event_quarter": "2019-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Collaborated with RAS validation group on AEP persistent memory platform bring-up",
+    "trigger_context": "Triggered during validation (Collaborated with RAS validation group on AEP persistent memory platform bring-up)."
+  },
+  {
+    "date": "2022-04-15",
+    "summary": "Aurora PV04 surrogate node telemetry configuration and policy retrieval.",
+    "evidence": "RA2AuroraPV04 A21-surrogate20.jf.intel.com:c001n004 For node 7 RA2AuroraPV07.amr.corp.intel.com",
+    "domain": "hardware_debug",
+    "tags": [
+      "aurora-pv04",
+      "surrogate-node"
+    ],
+    "document_date": "2022-04-15",
+    "event_era": "2022-04-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-04-21",
+    "summary": "PTU Aurora PTU validation using SSH terminal on c001n004 with password 0penBmc",
+    "evidence": "ssh -p 2022 root@localhost >>> password: [REDACTED_PASSWORD] >>> this opens up the serial output",
+    "domain": "hardware_debug",
+    "tags": [
+      "PTU",
+      "Aurora",
+      "PTU",
+      "SSH"
+    ],
+    "document_date": "2022-04-21",
+    "event_era": "2022-04-21",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-04-25",
+    "summary": "Python code snippet attempting to patch power limits via DMTF object for specific power control entries.",
+    "evidence": "body = {'PowerControl': [{},{},{},{},{},{},{},{},{},{},{'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 550}}]}\nbody = {'PowerControl': [{'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 550}}]}\ndomain_power_uri = '/redfish/v1/Chassis/Baseboard/Power'\nresponse = self.DMTF_obj.patch(domain_power_uri, body=body);",
+    "domain": "hardware_debug",
+    "tags": [
+      "python",
+      "redfish",
+      "power_limit",
+      "debug"
+    ],
+    "document_date": "2022-04-25",
+    "event_era": "2022-04-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-04-25",
+    "summary": "Python code snippets using JSON Patch format to replace power limit values.",
+    "evidence": "body = {'PowerControl': [{'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 400}}]}\nbody = {\n    \"op\":\"replace\",\n    \"path\":\"/PowerControl/10\",\n    \"value\":{'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 600}}\n}\n\nbody = {\n    \"op\":\"replace\",\n    \"path\":\"/PowerControl/10/PowerLimit\",\n    \"value\":{'LimitException': 'LogEventOnly', 'LimitInWatts': 600}\n}",
+    "domain": "hardware_debug",
+    "tags": [
+      "python",
+      "redfish",
+      "json_patch",
+      "power_limit",
+      "debug"
+    ],
+    "document_date": "2022-04-25",
+    "event_era": "2022-04-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-04-26",
+    "summary": "Bug report HSD-ES 22015003184 regarding inability to individually set power limit in NM Redfish power schema for Eagle Stream SPR SP.",
+    "evidence": "https://hsdes.intel.com/resource/22015003184",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "bug",
+      "redfish",
+      "power_limit"
+    ],
+    "document_date": "2022-04-26",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-04-26",
+    "summary": "Python code snippet attempting to patch power limits via DMTF object for multiple power control entries.",
+    "evidence": "body = {'PowerControl': [{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerLimit': {'LimitInWatts': None}},\n{'PowerException': 'LogEventOnly', 'LimitInWatts': 410}}]}\n\nresponse = self.DMTF_obj.patch(domain_power_uri, body=body);",
+    "domain": "hardware_debug",
+    "tags": [
+      "python",
+      "redfish",
+      "power_limit",
+      "debug"
+    ],
+    "document_date": "2022-04-26",
+    "event_era": "2022-04-26",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-04-28",
+    "summary": "SSH session to local BMC host using port 4022 with redacted credentials",
+    "evidence": "ssh -p 4022 root@[REDACTED] >>> password: [REDACTED_PASSWORD]",
+    "domain": "operations",
+    "tags": [
+      "ssh",
+      "bmc",
+      "credentials"
+    ],
+    "document_date": "2022-04-28",
+    "event_era": "2022-04-28",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-04-30",
+    "summary": "[STRATEGIC_ANCHOR] DTTC Technical Paper: 'Measuring PECI Performance and Reliability': Authored and presented peer-reviewed technical paper at the Design and Technology Solutions Technical Conference (DTTC) analyzing PECI protocol reliability.",
+    "evidence": "3/30/2022 Insights & DTTC_2022_Peci_Stress.pdf: Delivered 'Measuring PECI performance and reliability' paper to DTTC; analyzed transmission reliability, error recovery, and timing under stress.",
+    "sensitivity": "Public",
+    "tags": [
+      "DTTC",
+      "PECI",
+      "Technical_Paper",
+      "Reliability",
+      "Benchmarking"
+    ],
+    "rank": 5,
+    "id": "GEM-b31bb2",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-04-30",
+    "summary": "Achieve Wave-1 Platform Production-Candidate of Manageability features with 0-critical 1-high.",
+    "evidence": "Wave-1 PC target: 0-critical 1-high (April 30th)",
+    "domain": "operations",
+    "tags": [
+      "wave-1",
+      "manageability",
+      "pc"
+    ],
+    "document_date": "2022-04-30",
+    "event_era": "2022-04-30",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-04-30",
+    "summary": "Execute Scrum retrospective to drive 3 examples of multi-discipline code re-use between testing frameworks.",
+    "evidence": "Scrum retrospective: 3 examples of multi-discipline code re-use (June 25)",
+    "domain": "operations",
+    "tags": [
+      "scrum",
+      "code-reuse",
+      "testing-framework"
+    ],
+    "document_date": "2022-04-30",
+    "event_era": "2022-04-30",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-05-01",
@@ -827,7 +2097,8 @@
       "year": 2022,
       "quarter": "2022-Q2",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-05-01",
@@ -848,7 +2119,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of LTM, DMI CSR, duplicate endpoints.",
+    "trigger_context": "Triggered during platform validation of LTM, DMI CSR, duplicate endpoints. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -861,7 +2132,306 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
+  },
+  {
+    "date": "2022-05-02",
+    "summary": "IPMI user configuration and raw command execution for hardware debug",
+    "evidence": "ipmitool user set name 8 debuguser1\nipmitool user set password 8 [REDACTED_PASSWORD]\nipmitool user enable 8\nipmitool channel setaccess 3 8 ipmi=on privilege=4 \nipmitool channel setaccess 1 8 ipmi=on privilege=4\nipmitool -I lanplus -H 10.227.90.214 -U debuguser1 -P [REDACTED_PASSWORD] -C 17 -t 0x2c -b 0x01 raw 0x2E 0xF2 0x57 0x01 0x00 0",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmitool",
+      "raw_command",
+      "user_config"
+    ],
+    "document_date": "2022-05-02",
+    "event_era": "2022-05-02",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-02",
+    "summary": "Retrieved PECI core module parameters from OpenBMC host to analyze retry intervals and command counts.",
+    "evidence": "root@intel-obmc:~# ls /sys/module/peci_core/parameters/\nretry_interval_max_us total_command_count total_retry_timeout_us total_timeout_count\nretry_interval_min_us total_retry_cc_count total_success_cc_count",
+    "domain": "hardware_debug",
+    "tags": [
+      "pecie",
+      "openbmc",
+      "sysfs",
+      "debug"
+    ],
+    "document_date": "2022-05-02",
+    "event_era": "2022-05-02",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-05",
+    "summary": "Python package installation via internal proxy and BMC configuration JSON file containing credentials.",
+    "evidence": "python -m pip install --extra-index-url https://pypi.igk.intel.com/simple --proxy http://proxy-chain.intel.com:911 -r requirements.txt\n\nC:\\frameworks.validation.bmc.atf-main\\User_Interface\\servers\\RA2AuroraPV04.json\n{\n  \"name\": \"RA2AuroraPV04\",\n  \"address\": \"localhost\",\n  \"rmcpp_port\": \"623\",\n  \"http_port\": \"80\",\n  \"https_port\": \"5443\",\n  \"redfish_port\": \"5443\",\n  \"author\": 73,\n  \"description\": \"Wilson City Close Chassis\",\n  \"username\": \"admin\",\n  \"password\": \"[REDACTED_PASSWORD]\",\n  \"comport\": \"COM7\",\n  \"rsc2\": 0,\n  \"aardvark\": 0,\n  \"location\": \"Hillsboro\",\n  \"selected\": false,\n  \"debuguser\": \"root\",\n  \"debugpass\": \"[REDACTED_PASSWORD]\",\n  \"debugport\": \"COM6\",\n  \"target_json\": \"\"\n}",
+    "domain": "operations",
+    "tags": [
+      "pip",
+      "proxy",
+      "bmc_config",
+      "redfish"
+    ],
+    "document_date": "2022-05-05",
+    "event_era": "2022-05-05",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-06",
+    "summary": "System telemetry and power control operations recorded during platform validation.",
+    "evidence": "ps -A | grep bmcweb; systemctl start bmcweb.socket; curl -k -u admin:[REDACTED_PASSWORD] -H 'Content-Type: application/json' -d '{PowerControl: [ {PowerLimit: {LimitInWatts: None} } ... ]}' -X PATCH https://localhost:5443/redfish/v1/Chassis/Baseboard/Power#/PowerControl/13",
+    "domain": "hardware_debug",
+    "tags": [
+      "power_control",
+      "redfish",
+      "bmcweb"
+    ],
+    "document_date": "2022-05-06",
+    "event_era": "2022-05-06",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-06",
+    "summary": "BMC service status check and restart, followed by Redfish PATCH command to configure power limits and Python ASD service cycle.",
+    "evidence": "ps -A | grep bmcweb\n1192075 ?        00:00:24 bmcweb\nsystemctl start bmcweb.socket\n\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -d {'PowerControl': [{'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 39}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}]} -X PATCH https://localhost:5443/redfish/v1/Chassis/Baseboard/Power#/PowerControl/13\n\n#Cycle asd service off and on\npython3 asd.py cl 4 4 off\npython3 asd.py cl 4 4 on\n\nC:\\Pythonsv\\sapphirerapids>startspr.py",
+    "domain": "operations",
+    "tags": [
+      "bmcweb",
+      "redfish",
+      "power_control",
+      "asd_service"
+    ],
+    "document_date": "2022-05-06",
+    "event_era": "2022-05-06",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-07",
+    "summary": "IPMI command execution logs for enabling/disabling Node Manager policy and setting policy parameters, resulting in a policy ID invalid error (0x80).",
+    "evidence": "ipmitool -I lanplus -H 10.165.96.28 -U debuguser -P [REDACTED_PASSWORD] -C 17 -t 0x2c -b 0x01 raw 0x2E 0xC0 0x57 0x01 0x00 4 1 20\nipmitool -I lanplus -H 10.165.96.28 -U debuguser -P [REDACTED_PASSWORD] -C 17 -t 0x2c -b 0x01 raw 0x2E 0xC1 0x57 0x01 0x00 1 20 0 0 0 0 16 39 0 0 0 0 1 0",
+    "domain": "hardware_debug",
+    "tags": [
+      "ipmi",
+      "node-manager",
+      "policy",
+      "debug_log"
+    ],
+    "document_date": "2022-05-07",
+    "event_era": "2022-05-07",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-09",
+    "summary": "Reference to PECI v4.0 Commands Checkout via MCTP and Core wake on PECI documentation.",
+    "evidence": "PECI v4.0 Commands Checkout (MCTP) https://hsdes.intel.com/appstore/article/#/22014012388\nCore wake on PECI https://hsdes.intel.com/appstore/article/#/22013564066",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "mctp",
+      "documentation"
+    ],
+    "document_date": "2022-05-09",
+    "event_era": "2022-05-09",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-10",
+    "summary": "BIOS SKU configuration set to MCTP Bus Owner CPU/OOBMSM; IPMI policy split validation confirmed.",
+    "evidence": "BIOS: IGN SKU - MCTP Bus Owner set to CPU/OOBMSM",
+    "domain": "hardware_debug",
+    "tags": [
+      "BIOS-SKU",
+      "MCTP-Owner"
+    ],
+    "document_date": "2022-05-10",
+    "event_era": "2022-05-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-10",
+    "summary": "Reference to MIV software Montana pull request commit regarding automation framework.",
+    "evidence": "https://github.com/intel-innersource/frameworks.automation.dtaf.content.montana.miv-software-montana/pull/22/commits/4f6a4745d3a39d50efdaa2f151cbeaed6039eb51",
+    "domain": "operations",
+    "tags": [
+      "git",
+      "automation",
+      "montana"
+    ],
+    "document_date": "2022-05-10",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-11",
+    "summary": "Technical assessment of IPMI flow risks and implementation splitting capabilities.",
+    "evidence": "Is ipmi flow a risk - No.\nCan implementations be split into different classes - Yes\nCan implementations be split into different files - Yes",
+    "domain": "operations",
+    "tags": [
+      "architecture",
+      "ipmi",
+      "design"
+    ],
+    "document_date": "2022-05-11",
+    "event_era": "2022-05-11",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-13",
+    "summary": "HTTPS_PROXY and HTTP_PROXY configuration for Intel proxy endpoints.",
+    "evidence": "set HTTPS_PROXY=http://proxy-us.intel.com:912 set HTTP_PROXY=http://proxy-us.intel.com:911 set no_proxy=.intel.com,127.0.0.1",
+    "domain": "operations",
+    "tags": [
+      "proxy_config",
+      "https_proxy"
+    ],
+    "document_date": "2022-05-13",
+    "event_era": "2022-05-13",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-16",
+    "summary": "MCE PECI access to DIMM SPD registers via I3C.",
+    "evidence": "MCE PECI to access DIMM SPD registers via I3C - https://hsdes.intel.com/appstore/article/#/15011064673",
+    "domain": "hardware_debug",
+    "tags": [
+      "dimm_spd",
+      "peci_i3c"
+    ],
+    "document_date": "2022-05-16",
+    "event_era": "2022-05-16",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-16",
+    "summary": "SSH session to CMM for register access and PECI stress testing using montana.py scripts.",
+    "evidence": "ssh -p 82 root@localhost\nsv.refresh\nsv.sockets.uncore.oobmsm.oobmsm0.gpsb.cpubusno_valid\nsocket0.uncore.oobmsm.oobmsm0.gpsb.cpubusno_valid - 0xcccc6f3f\nsocket1.uncore.oobmsm.oobmsm0.gpsb.cpubusno_valid - 0xcccc6f3f\npy montana.py -f peci_mmio_32.tdf\npy montana.py -f peci_mmio_64.tdf\npy montana.py -f peci_sweep.tdf\npy montana.py -f peci_endpoint_localpci.tdf\npy montana.py -f peci_endpoint_pci.tdf\npy montana.py -f peci_rdpciconfig.tdf\npy montana.py -f peci_rdpciconfig_local.tdf",
+    "domain": "hardware_debug",
+    "tags": [
+      "ssh",
+      "cmm",
+      "register_access",
+      "peci",
+      "montana",
+      "stress_test"
+    ],
+    "document_date": "2022-05-16",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-05-17",
@@ -874,7 +2444,9 @@
       "ramdisk",
       "device_tree"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-05-17",
@@ -886,7 +2458,9 @@
       "DMA",
       "CMA"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-05-17",
@@ -897,7 +2471,165 @@
       "kernel",
       "linux"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "Installed Python pip package manager.",
+    "evidence": "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py\npy -3.8 get-pip.py",
+    "domain": "operations",
+    "tags": [
+      "python",
+      "pip",
+      "installation"
+    ],
+    "document_date": "2022-05-17",
+    "event_era": "2022-05-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "Configured environment proxies and installed Python requirements for BMC ATF framework.",
+    "evidence": "cd C:\\frameworks.validation.bmc.atf-main\nset HTTPS_PROXY=http://proxy-us.intel.com:912\nset HTTP_PROXY=http://proxy-us.intel.com:911\nset no_proxy=.intel.com,127.0.0.1\npython -m pip install -r requirements.txt",
+    "domain": "operations",
+    "tags": [
+      "python",
+      "pip",
+      "proxy",
+      "environment"
+    ],
+    "document_date": "2022-05-17",
+    "event_era": "2022-05-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "Executed OpenBMC sensor severity threshold long-run test.",
+    "evidence": "py tests\\sensors\\SensorSeverityThreshold_OpenBMC_longrun.py",
+    "domain": "hardware_debug",
+    "tags": [
+      "testing",
+      "sensors",
+      "openbmc"
+    ],
+    "document_date": "2022-05-17",
+    "event_era": "2022-05-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "Referenced Montana configuration file for RA2AuroraPV04.",
+    "evidence": "C:\\miv-software-montana\\montana\\configuration\\RA2AuroraPV04.cfg",
+    "domain": "operations",
+    "tags": [
+      "configuration",
+      "montana"
+    ],
+    "document_date": "2022-05-17",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-17",
+    "summary": "Established SSH tunnels to SUT, BMC, and RPI from Windows host.",
+    "evidence": "ssh -p 4022 root@localhost\nssh -p 72 root@localhost\nssh -p 622 pi@localhost",
+    "domain": "operations",
+    "tags": [
+      "ssh",
+      "tunnel",
+      "remote_access"
+    ],
+    "document_date": "2022-05-17",
+    "event_era": "2022-05-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-19",
+    "summary": "PythonSV PECI connection failure to BMC localhost:5443",
+    "evidence": "import peci.peci_framework.peciObj as po; pred = po.peciObj('redfish'); pred.peci_xtor.config_bmc(\"localhost:5443\",'admin','[REDACTED_PASSWORD]')\nError creating peci connection with following info: ip=https://localhost:5443, username=admin, password=[REDACTED_PASSWORD]. Exception: \"HTTPSConnectionPool(host='localhost', port=5443): Max retries exceeded with url: /redfish/v1/SessionService/Sessions (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)))\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "redfish",
+      "connection_error",
+      "pythonsv"
+    ],
+    "document_date": "2022-05-19",
+    "event_era": "2022-05-19",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-19",
+    "summary": "Successful BMC system reset via Redfish on c001n0004bmc",
+    "evidence": "curl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -d '{\"ResetType\":\"On\"}' -X POST https://c001n0004bmc:443/redfish/v1/Systems/system/Actions/ComputerSystem.Reset\nResponse: { \"@Message.ExtendedInfo\": [ { \"@odata.type\": \"#Message.v1_1_1.Message\", \"Message\": \"Successfully Completed Request\", \"MessageId\": \"Base.1.8.1.Success\", \"MessageSeverity\": \"OK\" } ] }",
+    "domain": "operations",
+    "tags": [
+      "redfish",
+      "bmc_reset",
+      "curl",
+      "success"
+    ],
+    "document_date": "2022-05-19",
+    "event_era": "2022-05-19",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-05-20",
@@ -914,7 +2646,283 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "DRM debug parameter override and modprobe reset to suppress i915 hang check, enabling safe PCIe RAS telemetry capture during GPU validation.",
+    "evidence": "echo 0xe > /sys/module/drm/parameters/debug && modprobe i915 reset=0 enable_hangcheck=0\nexport OverrideDrmRegion=0\nexport EnableLocalMemory=1",
+    "domain": "hardware_debug",
+    "tags": [
+      "DRM debug override",
+      "i915 modprobe",
+      "PCIe RAS"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2022-05-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "Montana stack trace exposed a ZeroDivisionError in the RAPL power-limit policy sweep, triggered by an empty LimitInWatts value during a Redfish PATCH request.",
+    "evidence": "errormargin = float((self.limitStats.avg - powerLimit) / float(powerLimit)) * 100",
+    "domain": "hardware_debug",
+    "tags": [
+      "ZeroDivisionError",
+      "RAPL",
+      "PowerLimit"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "PVC card detection detected 5 cards, with thermal and power telemetry showing SOC0 at 45C, SOC1 at 49C, and base frequency at 199 MHz.",
+    "evidence": "Card Power(W)                 :51",
+    "domain": "hardware_debug",
+    "tags": [
+      "PVC",
+      "Thermal",
+      "Power"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2022-05-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "HBM DRAM temperature telemetry recorded 31C to 33C across all tiles, with GT0 and GT1 power at 43W each.",
+    "evidence": "HBM0 DRAM Temp (Tile 0)(C)    :31",
+    "domain": "hardware_debug",
+    "tags": [
+      "HBM",
+      "DRAM",
+      "Power"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2022-05-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "PMCAPSweep module executed a power-cap sweep across three domains, logging domain 0 as 1262W-1281W with a 1264W low threshold and 1279W high threshold, domain 1 as 37W-410W with a 412W low threshold and 410W high threshold, and domain 2 as 37W-37W with a 37W low threshold and 37W high threshold, all passing validation checks.",
+    "evidence": "2022-05-23 00:49:29.527,INFO,montana.nativemodules.pmcapsweep,Idle Power Domain 0 : 0W; Min Power Domain 0 : 1262W; Max Power Domain 0 : 1281W; Low Error Threshold 0 : 1264W; High Error Threshold 0 : 1279W",
+    "domain": "hardware_debug",
+    "tags": [
+      "pmcap",
+      "power-cap-sweep",
+      "montana"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2022-05-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "PMCAPSWEEP telemetry recorded power error margin exceeding target limit and below threshold at 01:51:31 UTC, triggering warning state.",
+    "evidence": "montana.nativemodules.pmcapsweep: Average power error margin was above the target power limit for '1' time(s).",
+    "domain": "hardware_debug",
+    "tags": [
+      "pmcapswEEP",
+      "power_error_margin",
+      "target_power_limit"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "Power target limit 1281.542853445227 applied 3 attepmt(s) to correct error margin.",
+    "evidence": "For power target limit '1281.542853445227', applied '3' attepmt(s) to correct the error margin.",
+    "domain": "hardware_debug",
+    "tags": [
+      "power_target_limit",
+      "atepmt_correction"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2022-05-23",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-05-23",
+    "summary": "Test passed with warnings; PMCAPSWEEP module confirmed operational.",
+    "evidence": "montana.nativemodules.pmcapsweep: Test Passed with warnings!",
+    "domain": "hardware_debug",
+    "tags": [
+      "test_passed",
+      "warnings"
+    ],
+    "document_date": "2022-05-23",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-27",
+    "summary": "POST /redfish/v1/Systems/system/Actions/ComputerSystem.Reset",
+    "evidence": "curl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -d '{\"ResetType\":\"Nmi\"}' -X POST https://c001n0004bmc:443/redfish/v1/Systems/system/Actions/ComputerSystem.Reset",
+    "domain": "hardware_debug",
+    "tags": [
+      "reset",
+      "redfish"
+    ],
+    "document_date": "2022-05-27",
+    "event_era": "2022-05-27",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-05-27",
+    "summary": "Applied power limit policy patch and executed calibration statistics reset on power domains.",
+    "evidence": "PATCH /redfish/v1/Chassis/Baseboard/Power#/PowerControl/0 {'PowerControl': [{'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': None}}]}\nCalibrate: Policy has been set. Policy ID : 21\nCalibrate: Resetting Statistics on domain : 0 (ignore for power schema)\nCalibrate: Resetting Statistics on domain : 1 (ignore for power schema)\nCalibrate: Resetting Statistics on domain : 2 (ignore for power schema)\nCalibrate: Resetting Statistics on domain : 3 (ignore for power schema)\nRe-Calibrate: Start Time : 2022-05-27 12:55:17.696927\nRe-Calibrate: Stop Time : 2022-05-27 12:56:17.696927\nRe-Calibrate: Sleeping until Stop Time\nCalibrate: Getting Statistics on domain : 0",
+    "domain": "hardware_debug",
+    "tags": [
+      "power_policy",
+      "calibration",
+      "redfish"
+    ],
+    "document_date": "2022-05-27",
+    "event_era": "2022-05-27",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
     "sensitivity": "Public"
+  },
+  {
+    "date": "2022-05-27",
+    "summary": "Downloaded BMC firmware artifact and performed firmware update via Redfish UpdateService.",
+    "evidence": "wget http://btr-artifacts.intel.com/builds/exa_bmc/master/od/488/eng/dist/exa_bmc/a21-supernode-bmc-updater-dev.tar.gz\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/octet-stream\" -X POST -T a21-supernode-bmc-updater-dev.tar.gz https://c001n0004bmc/redfish/v1/UpdateService",
+    "domain": "operations",
+    "tags": [
+      "firmware_update",
+      "bmc",
+      "redfish"
+    ],
+    "document_date": "2022-05-27",
+    "event_era": "2022-05-27",
+    "event_year": 2022,
+    "event_quarter": "2022-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-06-30",
+    "summary": "[STRATEGIC_ANCHOR] PLDM NIC Communication via BMC as Validation Engine: Delivered out-of-band network adapter communication utilizing 'BMC as a validation engine' via MCTP APIs across server platforms.",
+    "evidence": "3/30/2022 Insights: Delivered PLDM NIC communication using 'BMC as a validation engine' MCTP API; Guided Aurora Blade manual content execution (BMC, NM OpenBMC) for Phase 1 status.",
+    "sensitivity": "Public",
+    "tags": [
+      "PLDM",
+      "NIC",
+      "MCTP",
+      "BMC",
+      "OpenBMC"
+    ],
+    "rank": 5,
+    "id": "GEM-9d30d5",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-06-30",
@@ -936,7 +2944,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of pecistressor, XPIV, PECI.",
+    "trigger_context": "Triggered during platform validation of pecistressor, XPIV, PECI. (Validated PCIe, memory controller, power management, and platform RAS mechanisms)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -949,7 +2957,308 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
+  },
+  {
+    "date": "2022-07-11",
+    "summary": "Redfish API commands to query and patch BMC power limits on chassis baseboard power control.",
+    "evidence": "curl -sku \"admin:[REDACTED_PASSWORD]\" -X GET https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power\n\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power#/PowerControl/13 -d {'PowerControl': [{'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitException': 'LogEventOnly', 'LimitInWatts': 39}}, {'PowerLimit': {'LimitInWatts': None}}, {'PowerLimit': {'LimitInWatts': None}}]}\n\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power#/PowerControl/13 -d {'PowerControl': [{'PowerLimit': {'LimitInWatts': None}}]}\n\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power -d {'PowerControl': [{'PowerLimit': {\"CorrectionInMs\": null,\"LimitException\": null,\"LimitInWatts\": null}}]}\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power -d {'PowerControl' }\n\ncurl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power -d {'PowerControl':[{'PowerLimit':{\"CorrectionInMs\":null,\"LimitException\":null,\"LimitInWatts\":null}}]}",
+    "domain": "operations",
+    "tags": [
+      "bmc",
+      "redfish",
+      "power_management",
+      "cli"
+    ],
+    "document_date": "2022-07-11",
+    "event_era": "2022-07-11",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-15",
+    "summary": "Stopped and disabled the OpenBMC NodeManager service to isolate platform telemetry from the node controller.",
+    "evidence": "systemctl stop xyz.openbmc_project.NodeManager.service; systemctl disable xyz.openbmc_project.NodeManager.service",
+    "domain": "hardware_debug",
+    "tags": [
+      "openbmc",
+      "node-manager",
+      "telemetry"
+    ],
+    "document_date": "2022-07-15",
+    "event_era": "2022-07-15",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-07-18",
+    "summary": "PCI HSD list review and LTM exception handling for MMIO32 DRAM security hole.",
+    "evidence": "MMIO32 DRAM security hole blocked to PCH; mid-stream update added to LTM exception list.",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCI-HSD",
+      "LTM-exceptions",
+      "MMIO32"
+    ],
+    "document_date": "2022-07-18",
+    "event_era": "2022-07-18",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-07-25",
+    "summary": "Redfish API call to query power consumption metrics.",
+    "evidence": "curl -sku 'admin:[REDACTED_PASSWORD]' -X GET https://c001n0047bmc/redfish/v1/Chassis/Baseboard/Power | grep -E \"LimitInWatts|MemberId|PowerConsumed\"",
+    "domain": "operations",
+    "tags": [
+      "Redfish",
+      "BMC",
+      "Power"
+    ],
+    "document_date": "2022-07-25",
+    "event_era": "2022-07-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-25",
+    "summary": "Redfish API call to check firmware inventory.",
+    "evidence": "curl -sku 'admin:[REDACTED_PASSWORD]' -X GET https://c001n0004bmc:443/redfish/v1/UpdateService/FirmwareInventory/bmc_active",
+    "domain": "operations",
+    "tags": [
+      "Redfish",
+      "Firmware"
+    ],
+    "document_date": "2022-07-25",
+    "event_era": "2022-07-25",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-25",
+    "summary": "Defect tracker record: Aurora power consumption reporting mismatch with PVCPTATMon tool.",
+    "evidence": "16017328972 spr-xcc Aurora 2-high [Aurora] Power consumption reporting for Accelerators (from DMTF Redfish get Request) not matching with PVCPTATMon tool awiatrow bmc_fw WW31: Verified on 1903 BMC - awaiting_ingredient_release 2022-07-17 21:10",
+    "domain": "operations",
+    "tags": [
+      "tracker",
+      "Aurora",
+      "Power"
+    ],
+    "document_date": "2022-07-25",
+    "event_era": "2022-07-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-26",
+    "summary": "Review of LTM whitelist code and PCI HSD list; MMIO32 DRAM security hole blocked to PCH causing endpoint breaks; discussion on LTM blocking behavior and mid-stream updates.",
+    "evidence": "MMIO32 DRAM security hole blocked to PCH. LTM will block (as designed). C:\\PythonSV\\sapphirerapids\\peci\\peci_framework\\Product_Chop_Array_Files\\LTM 0x0017 >>> sv.socket0.uncore.oobmsm.oobmsm0.gpsb.ltm_patch_header.patch_minor 0x18",
+    "domain": "hardware_debug",
+    "tags": [
+      "LTM",
+      "PCI",
+      "DRAM",
+      "PECI"
+    ],
+    "document_date": "2022-07-26",
+    "event_era": "2022-07-26",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-26",
+    "summary": "BEAT process retrospective and addition of logging to PECI rand.",
+    "evidence": "Add logging to PECI rand",
+    "domain": "operations",
+    "tags": [
+      "PECI",
+      "logging"
+    ],
+    "document_date": "2022-07-26",
+    "event_era": "2022-07-26",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-07-28",
+    "summary": "PCIe RAS telemetry and RAPL power instrumentation: Executed PECI command sequence for local PCIe endpoint configuration and IASR register reads, then triggered chassis power cycle to isolate hardware state.",
+    "evidence": "curl -f -u sys_degsi1:[REDACTED_PASSWORD] --ssl-no-revoke -X GET https://ubit-artifactory.intel.com/artifactory/owr-repos/submissions/saf_blob/saf_blob_file_ww17-v2/saf_blob_file_ww17-v2.zip --output C:\\Automation\\Tools\\SPR\\Linux\\saf_blob_file_ww17-v2.zip",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCIe RAS telemetry",
+      "RAPL power instrumentation"
+    ],
+    "document_date": "2022-07-28",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2022-07-28",
+    "summary": "PECI register read loop with IPMI power cycle",
+    "evidence": "root@intel-obmc-AC12:~# date;peci_cmds RdEndpointConfigPCILocal 0 30 1 0 0;peci_cmds RdIAMSR 0 0x408;date;ipmitool power cycle;date;while true;do date;peci_cmds RdEndpointConfigPCILocal 0 30 1 0 0; peci_cmds RdIAMSR 0 0x408; done",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "ipmitool",
+      "power_cycle",
+      "loop"
+    ],
+    "document_date": "2022-07-28",
+    "event_era": "2022-07-28",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
+  },
+  {
+    "date": "2022-08-10",
+    "summary": "PCI enumeration and MMIO stressor validation runs executed against the MIV platform, confirming sv object availability and PCI enumerated bus state.",
+    "evidence": "cmd /c py montana.py -f peci_mmio_32.tdf",
+    "domain": "hardware_debug",
+    "tags": [
+      "PCI enumeration",
+      "MMIO stressor",
+      "validation run"
+    ],
+    "document_date": "2022-08-10",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-08-10",
+    "summary": "Bulk API MSR reads rejected by BMC; single-command configuration required to return MSR data.",
+    "evidence": "curl -k -u \"admin:[REDACTED_PASSWORD]\" -H \"Content-Type: application/json\" -X POST https://c001n0015bmc/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci -d \"{\\\"PECIDevice\": \\\"/dev/peci-0\", \\\"PECICommands\": [[48, 5, 9, 177, 0, 0, 1, 4], [48, 5, 9, 177, 0, 1, 1, 4], [48, 5, 9, 177, 0, 2, 1, 4], [48, 5, 9, 177, 0, 3, 1, 4], [48, 5, 9, 177, 0, 4, 1, 4], [48, 5, 9, 177, 0, 5, 1, 4], [48, 5, 9, 177, 0, 6, 1, 4], [48, 5, 9, 177, 0, 7, 1, 4], [48, 5, 9, 177, 0, 8, 1, 4], [48, 5, 9, 177, 0, 9, 1, 4]]}\"",
+    "domain": "hardware_debug",
+    "tags": [
+      "BMC",
+      "MSR",
+      "Bulk API",
+      "PECI",
+      "Redfish"
+    ],
+    "document_date": "2022-08-10",
+    "event_era": "2022-08-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-08-10",
+    "summary": "MSR reads working via BMC console using peci_cmds utility",
+    "evidence": "root@x1003c5s6b0:~# peci_cmds -d /dev/peci-0 RdIAMSR 1 0x401\n   cc:0x40 0x00000000",
+    "domain": "hardware_debug",
+    "tags": [
+      "BMC",
+      "PECI",
+      "CLI",
+      "MSR",
+      "peci_cmds"
+    ],
+    "document_date": "2022-08-10",
+    "event_era": "2022-08-10",
+    "event_year": 2022,
+    "event_quarter": "2022-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public"
   },
   {
     "date": "2022-08-24",
@@ -976,7 +3285,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of registers, MMIO.",
+    "trigger_context": "Triggered during platform validation of registers, MMIO. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -989,7 +3298,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-09-08",
@@ -1010,7 +3320,26 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2022-09-30",
+    "summary": "[STRATEGIC_ANCHOR] Emerald Rapids (EMR) Power-On Manageability Automation: Enabled automated PECI and manageability execution for Emerald Rapids (EMR) Power-On without breaking Sapphire Rapids (SPR) baselines.",
+    "evidence": "Insights 2022: Recognized for support for PECI code during EMR PO to enable Montana code for EMR PO; enabled Manageability to run automated at EMR PO; merged Montana path into DTAF.",
+    "sensitivity": "Public",
+    "tags": [
+      "EMR",
+      "PECI",
+      "Power_On",
+      "Montana",
+      "SPR"
+    ],
+    "rank": 5,
+    "id": "GEM-e03f7d",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-09-30",
@@ -1031,7 +3360,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of crdefeature2_bs, register access.",
+    "trigger_context": "Triggered during platform validation of crdefeature2_bs, register access. (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)",
     "spatial_anchor": {
       "source_file": "2022_09.json",
       "line_start": 1,
@@ -1045,7 +3374,8 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-1914"
+    "id": "GEM-1914",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage"
   },
   {
     "date": "2022-10-01",
@@ -1072,7 +3402,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of Redfish, IPMI.",
+    "trigger_context": "Triggered during platform validation of Redfish, IPMI. (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)",
     "spatial_anchor": {
       "source_file": "2022.json",
       "line_start": 1,
@@ -1086,7 +3416,78 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage"
+  },
+  {
+    "date": "2022-10-01",
+    "summary": "PMCI DMTF validation telemetry and MCTP service configuration recorded in 2019-2024 era notes.",
+    "evidence": "ipmitool raw 0x30 0xB4 0x3 2",
+    "domain": "hardware_debug",
+    "tags": [
+      "PMCI",
+      "DMTF",
+      "MCTP"
+    ],
+    "document_date": "2022-10-01",
+    "event_era": "2019-01-01",
+    "event_year": 2019,
+    "event_quarter": "2019-Q1",
+    "temporal_confidence": 0.85,
+    "temporal_provenance": "explicit_incident_year",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Developed C++ & IPMI thermal/power transient automation; Optane AEP mailbox tools",
+    "trigger_context": "Triggered during validation (Developed C++ & IPMI thermal/power transient automation; Optane AEP mailbox tools)."
+  },
+  {
+    "date": "2022-10-01",
+    "summary": "MCTP service telemetry endpoints and PCIe slot configuration documented.",
+    "evidence": "/redfish/v1/MctpService",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "SMBus_PCIe_slot"
+    ],
+    "document_date": "2022-10-01",
+    "event_era": "2022-10-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-10-01",
+    "summary": "MCTP payload actions and OID mapping recorded for NIC configuration.",
+    "evidence": "#MctpPayload.SendMctpMessagePayload",
+    "domain": "hardware_debug",
+    "tags": [
+      "MCTP",
+      "Payload"
+    ],
+    "document_date": "2022-10-01",
+    "event_era": "2022-10-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-10-05",
@@ -1108,7 +3509,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-10-06",
@@ -1140,7 +3543,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-10-10",
@@ -1162,7 +3567,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-10-10",
@@ -1183,7 +3590,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-10-12",
@@ -1205,7 +3614,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-10-12",
@@ -1228,7 +3639,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-10-12",
@@ -1250,7 +3663,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-10-20",
@@ -1273,7 +3688,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-10-20",
@@ -1296,7 +3713,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-10-25",
@@ -1318,7 +3737,48 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-10-31",
+    "summary": "[STRATEGIC_ANCHOR] Montana Path Merge into DTAF Core Framework: Successfully unified the Montana validation codebase into the standard Intel DTAF automation harness, eliminating divergent test paths.",
+    "evidence": "Insights 2022: Merged Montana path into DTAF, establishing standard execution across server manageability programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "DTAF",
+      "Montana",
+      "Codebase_Unification",
+      "Harness"
+    ],
+    "rank": 5,
+    "id": "GEM-466f04",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-11-01",
+    "summary": "Git proxy configuration and clone operations for Intel internal framework repositories.",
+    "evidence": "git config --global http.proxy http://proxy-us.intel.com:911\n",
+    "domain": "hardware_debug",
+    "tags": [
+      "git-proxy",
+      "proxy-us"
+    ],
+    "document_date": "2022-11-01",
+    "event_era": "2022-11-01",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 2,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-06",
@@ -1330,7 +3790,9 @@
       "Core Configuration",
       "IPC"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-06",
@@ -1351,7 +3813,9 @@
     "casual": 0.8,
     "intrigue": 0.0,
     "importance": 0.0,
-    "target_domains": []
+    "target_domains": [],
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-06",
@@ -1363,7 +3827,9 @@
       "Software Patching",
       "PCUDATA"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-06",
@@ -1383,7 +3849,9 @@
     "casual": 0.8,
     "intrigue": 0.0,
     "importance": 0.0,
-    "target_domains": []
+    "target_domains": [],
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-09",
@@ -1408,7 +3876,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "rank": 4,
-    "id": "GEM-f14f"
+    "id": "GEM-f14f",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-11-09",
@@ -1431,7 +3901,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "rank": 2,
-    "id": "GEM-efdb"
+    "id": "GEM-efdb",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-09",
@@ -1454,7 +3926,9 @@
     "consecutive_zero_deltas": 0,
     "sensitivity": "Public",
     "rank": 2,
-    "id": "GEM-2085"
+    "id": "GEM-2085",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-11-09",
@@ -1475,7 +3949,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2022-11-15",
@@ -1496,7 +3972,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-16",
@@ -1518,7 +3996,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-11-17",
@@ -1542,7 +4022,8 @@
     "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MSR register access issues and unexpec...This trigger is activated when a PECI/BIOS debug sequence fails to read or write the expected MSR register, causing an unexpected return code that breaks the expected PECI handshake and halts the test.",
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-d90f"
+    "id": "GEM-d90f",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-11-30",
@@ -1564,7 +4045,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-12-01",
@@ -1588,7 +4071,8 @@
     "refinement_level": 2,
     "trigger_context": "[FOYER] Request 0361f7a7 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Deep Thought (Strategy) intuition...[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[STAGE 1/5]  \u2014 COMPLETEDJason, it sounds like we're dealing with a potential issue with Redfish API calls for power management. I'm going to check our telemetry records to see if there's any correlation between those API calls and power-related errors.",
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-12-01",
@@ -1609,7 +4093,9 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 1,
-    "refinement_level": 1
+    "refinement_level": 1,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-01",
@@ -1628,7 +4114,9 @@
     "temporal_confidence": 0.85,
     "temporal_provenance": "explicit_incident_year",
     "impact_level": 1,
-    "refinement_level": 1
+    "refinement_level": 1,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-01",
@@ -1650,7 +4138,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-12-06",
@@ -1671,7 +4161,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-13",
@@ -1694,7 +4186,8 @@
     "refinement_level": 2,
     "trigger_context": "[FOYER] Request a169154e secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a potential issue with Redfish API calls for power management. I'm going to check our telemetry records to see if there's any correlation between those API calls and power-related errors.\",\n  \"search_terms\": \n    \"[Redfish API], [power management], [PLDM], [GetUUID], [GetEID], [communicate [1]]\",\n  \"upvote\": true\n}",
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-12-13",
@@ -1716,7 +4209,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-13",
@@ -1737,7 +4232,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-13",
@@ -1758,7 +4255,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-13",
@@ -1780,7 +4279,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2022-12-21",
@@ -1815,7 +4316,8 @@
       "precision": "EXACT"
     },
     "impact_level": 3,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2022-12-21",
@@ -1829,7 +4331,9 @@
     "tags": [
       "peci_tool",
       "pcs_incrementation"
-    ]
+    ],
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2022-12-21",
@@ -1850,6 +4354,25 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2022-12-31",
+    "summary": "[STRATEGIC_ANCHOR] 2,000 Endpoint PECI CSR Write Automation: Developed automated PECI write coverage across 2,000 config space register endpoints and ECS OOB registers meeting Eagle Stream CCB requirements.",
+    "evidence": "Insights 2022: Automated PECI write tests for all available CSR endpoints (2k), also meeting needs of EGS CCB; Developed test for ECS OOB register access.",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "CSR",
+      "EGS_CCB",
+      "Automation",
+      "Endpoints"
+    ],
+    "rank": 5,
+    "id": "GEM-baab0b",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   }
 ]

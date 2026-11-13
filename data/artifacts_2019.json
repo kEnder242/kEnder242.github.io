@@ -1,82 +1,81 @@
 [
   {
-    "synopsis": "Embedded World v0.6 is a platform telemetry document.",
+    "synopsis": "Embedded systems presentation file.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "Embedded World",
-      "v0.6",
-      "telemetry",
-      "platform",
-      "validation"
+      "embedded",
+      "presentation",
+      "engineering"
     ],
     "filename": "Embedded World v0.6.pptx",
     "method": "AI"
   },
   {
-    "synopsis": "Cross-platform telemetry and BIOS instrumentation logs.",
+    "synopsis": "Low-level hardware debugging and memory configuration scripts.",
     "rank": 2,
-    "type": "Document",
+    "type": "Script",
     "keywords": [
-      "PCIe-RAS",
-      "BIOS",
-      "NVRAM"
+      "hardware-debugging",
+      "memory-tuning",
+      "python",
+      "system-configuration"
     ],
     "filename": "History_PythonSV2-2-19.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Defines validation entry and exit criteria for PV RAS telemetry.",
-    "rank": 4,
+    "synopsis": "Excel file defining entrance and exit criteria for ICX PO PV RAS.",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "Validation",
-      "RAS",
-      "Telemetry",
-      "Silicon",
-      "Validation"
+      "ICX",
+      "PO",
+      "Criteria",
+      "PV",
+      "RAS"
     ],
     "filename": "ICX_PO_Entrance_Exit_Criteria_PV_RAS.xlsx",
     "method": "AI"
   },
   {
-    "synopsis": "MSFT RAS test plan for Intel silicon validation.",
-    "rank": 4,
+    "synopsis": "Intel Microsoft RAS test plan document",
+    "rank": 2,
     "type": "Document",
     "keywords": [
-      "RAS",
       "Intel",
-      "MSFT",
-      "validation",
-      "test-plan"
+      "Microsoft",
+      "RAS",
+      "Test Plan",
+      "Excel"
     ],
     "filename": "Intel_MSFT_RAS_Test_Plan_r07_riv.xlsx",
     "method": "AI"
   },
   {
-    "synopsis": "Intel power node manager external interface specification document.",
+    "synopsis": "Intel IPNM 4.0 external interface specification document.",
     "rank": 2,
     "type": "Document",
     "keywords": [
       "Intel",
-      "Power Node Manager",
-      "External Interface",
-      "Telemetry",
-      "Silicon Validation"
+      "IPNM",
+      "Power Management",
+      "Specification",
+      "Hardware"
     ],
     "filename": "Intel\u00ae Intelligent Power Node Manager 4.0 External Interface.pdf",
     "method": "AI"
   },
   {
-    "synopsis": "Lenovo HSDES Excel workbook for silicon validation telemetry.",
+    "synopsis": "Lenovo hardware design specification database file.",
     "rank": 2,
     "type": "Data",
     "keywords": [
-      "HSDES",
-      "silicon validation",
-      "telemetry",
-      "PCIe RAS",
-      "RAPL"
+      "hardware",
+      "specifications",
+      "Lenovo",
+      "database",
+      "engineering"
     ],
     "filename": "Lenovo HSDES.xlsx",
     "method": "AI"
@@ -88,192 +87,200 @@
     "keywords": [
       "Lenovo",
       "Proton",
-      "retrospective"
+      "Retrospective"
     ],
     "filename": "Lenovo Proton Retrospective.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Lenovo HSDES platform bug telemetry",
+    "synopsis": "Server platform bug tracking log",
     "rank": 2,
     "type": "Data",
     "keywords": [
-      "HSDES",
-      "PCIe",
-      "RAS",
-      "telemetry"
+      "server",
+      "bugs",
+      "hardware",
+      "debugging",
+      "Intel"
     ],
     "filename": "Lenovo_HSDES.txt",
     "method": "AI"
   },
   {
-    "synopsis": "PECI continuous stress test for BMC/ME firmware stability.",
+    "synopsis": "PECI stress test verifying ME FW stability under continuous traffic.",
     "rank": 2,
-    "type": "Script",
+    "type": "Data",
     "keywords": [
       "PECI",
-      "BMC",
+      "Stress Test",
+      "ME Firmware",
       "I2C",
-      "PCI",
-      "ME"
+      "Stability"
     ],
     "filename": "P12_03.15.02_SPS_PECI_Continuous_Peci_Calls_ReqTest_BMC_NMoff_Ipmi.rtf",
     "method": "AI"
   },
   {
-    "synopsis": "Power management overview workbook for silicon validation.",
-    "rank": 2,
-    "type": "Document",
+    "synopsis": "Comprehensive overview of power management systems and strategies.",
+    "rank": 3,
+    "type": "Data",
     "keywords": [
-      "power-management",
-      "silicon-validation",
-      "telemetry"
+      "power management",
+      "systems overview",
+      "engineering",
+      "data analysis"
     ],
     "filename": "Power Management_Overview.xlsx",
     "method": "AI"
   },
   {
-    "synopsis": "Cross-platform validation retrospective deck",
+    "synopsis": "Lenovo collaboration retrospective presentation file",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "validation",
       "retrospective",
-      "cross-platform",
-      ".pptx"
+      "collaboration",
+      "presentation",
+      "Lenovo",
+      "review"
     ],
     "filename": "Purley-R Lenovo Collabration Retrospective .pptx",
     "method": "AI"
   },
   {
-    "synopsis": "Silicon validation slide deck for bug fixing.",
+    "synopsis": "Presentation documenting software stall points for bug fixing.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "validation",
       "bug fixing",
-      "silicon",
-      "telemetry"
+      "stall points",
+      "debugging",
+      "presentation"
     ],
     "filename": "Stall Points (for bug fixing).pptx",
     "method": "AI"
   },
   {
-    "synopsis": "Cycling test case summary document.",
+    "synopsis": "Cycling test case summary document",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "Test Case",
-      "Cycling",
-      "Summary"
+      "testing",
+      "cycling",
+      "summary",
+      "documentation"
     ],
     "filename": "Test Case Summary of Cycling.docx",
     "method": "AI"
   },
   {
-    "synopsis": "Defines RAS validation test cases for silicon platform validation.",
+    "synopsis": "Validation engineering test library RAS summary document.",
     "rank": 2,
     "type": "Document",
     "keywords": [
-      "RAS",
       "validation",
-      "test library",
-      "silicon",
-      "telemetry"
+      "testing",
+      "RAS",
+      "engineering",
+      "summary"
     ],
     "filename": "Test Case Summary of RAS for Test Library on Validation Engineering.docx",
     "method": "AI"
   },
   {
-    "synopsis": "Lenovo Proton validation deck for silicon telemetry.",
+    "synopsis": "Lenovo Proton validation indicator data for week 04.",
     "rank": 2,
-    "type": "Document",
+    "type": "Data",
     "keywords": [
-      "Validation Indicator",
-      "Lenovo Proton",
-      "WW 04",
-      "Silicon Validation",
-      "Telemetry"
+      "Lenovo",
+      "Proton",
+      "Validation",
+      "Metrics",
+      "Weekly"
     ],
     "filename": "Validation Indicator- Lenovo Proton - WW 04.pptx",
     "method": "AI"
   },
   {
-    "synopsis": "Intel confidential PCIe fatal error injection test script.",
-    "rank": 4,
+    "synopsis": "Injects PCIe fatal errors to verify AEP viral state detection",
+    "rank": 3,
     "type": "Script",
     "keywords": [
       "PCIe",
-      "Intel",
-      "RIV",
-      "VIRAL"
+      "Viral State",
+      "AEP",
+      "Error Injection",
+      "RAS"
     ],
     "filename": "_06_02_03_cs_nvd_pcie_fatal.py",
     "method": "AI"
   },
   {
-    "synopsis": "Intel confidential helper script for EINJ PCIe error injection.",
+    "synopsis": "Intel RAS test helper for PCIe error injection via EINJ and viral triggers",
     "rank": 2,
     "type": "Script",
     "keywords": [
+      "Intel",
+      "RAS",
       "EINJ",
       "PCIe",
-      "RIL",
-      "VIRAL",
-      "RAPL"
+      "Testing"
     ],
     "filename": "helper.py",
     "method": "AI"
   },
   {
-    "synopsis": "DDRT telemetry probe configuration and memory error instrumentation.",
+    "synopsis": "Low-level DDR memory debugging and hardware register manipulation script",
     "rank": 2,
     "type": "Script",
     "keywords": [
-      "DDRT",
-      "PMP",
-      "memory-error"
+      "DDR",
+      "Hardware Debug",
+      "Python",
+      "Memory Subsystem",
+      "Register Manipulation"
     ],
     "filename": "history_an04wvaw0716.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Intel power node manager v3 specification document.",
+    "synopsis": "Intel Power Node Manager v3 specification document.",
     "rank": 2,
     "type": "Document",
     "keywords": [
       "Intel",
-      "power",
-      "node-manager",
-      "specification",
-      "PDF"
+      "Power Management",
+      "Specification",
+      "Hardware",
+      "v3"
     ],
     "filename": "intel-power-node-manager-v3-spec.pdf",
     "method": "AI"
   },
   {
-    "synopsis": "Weighted DX MVP score aggregation via equal-weight triangulation.",
+    "synopsis": "DX MVP scoring methodology and dashboard generation guide",
     "rank": 4,
     "type": "Document",
     "keywords": [
-      "DX MVP",
-      "equal weight",
-      "triangulation",
-      "dashboard",
-      "score"
+      "DX",
+      "MVP",
+      "Scoring",
+      "Dashboard",
+      "Heatmap"
     ],
     "filename": "presentation.txt",
     "method": "AI"
   },
   {
-    "synopsis": "Ras-einj.txt documents EINJ PCIe correctable error injection commands for Linux kernel validation.",
+    "synopsis": "EINJ error injection configuration and testing notes",
     "rank": 2,
     "type": "Document",
     "keywords": [
       "EINJ",
+      "RAS",
+      "Linux",
       "PCIe",
-      "error-injection",
-      "Linux"
+      "Memory"
     ],
     "filename": "ras-einj.txt",
     "method": "AI"
@@ -297,14 +304,14 @@
     "drive_id": "1Vgs_Gr9wdk8nc3ByEn4jH859jK29Yut5"
   },
   {
-    "synopsis": "Programs BIOS knobs from workload profile CSV data.",
+    "synopsis": "BIOS knob configuration tool for Windows workloads",
     "rank": 2,
     "type": "Script",
     "keywords": [
       "BIOS",
-      "knobs",
-      "workload",
-      "profile"
+      "automation",
+      "Windows",
+      "configuration"
     ],
     "filename": "workload_profile.py",
     "method": "AI"

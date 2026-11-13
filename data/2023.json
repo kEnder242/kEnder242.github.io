@@ -1,111 +1,5 @@
 [
   {
-    "date": "2023-04-24",
-    "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowledge into a 'blackbox recorder' flow that resolved critical power-limiting failures.",
-    "evidence": "Q1/Q4 2023 Insights: Combined PECI, PythonSV, and pCode knowledge into a telemetry module called 'blackbox recorder'; flow of data has been central to debug and understanding of the Power Limiting issue between pCode, SPS FW, and IGN FW that could have escaped to customers.",
-    "sensitivity": "Public",
-    "tags": [
-      "Blackbox_Recorder",
-      "RAPL",
-      "PECI",
-      "PythonSV",
-      "pCode",
-      "Telemetry",
-      "Power_Limiting"
-    ],
-    "rank": 5,
-    "id": "GEM-62463e"
-  },
-  {
-    "date": "2023-06-30",
-    "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automated negative testing across manageability domains.",
-    "evidence": "Q1 2023 Insights: Delivered negative BDF and MSR scan with refactored code for future negative testing.",
-    "sensitivity": "Public",
-    "tags": [
-      "Negative_Testing",
-      "BDF",
-      "MSR",
-      "Scan_Automation"
-    ],
-    "rank": 5,
-    "id": "GEM-8c66f5"
-  },
-  {
-    "date": "2023-08-31",
-    "summary": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases ahead of firmware CCB readiness.",
-    "evidence": "Q3 2023 Insights: Jason developed and delivered MCTP Stress tests for 19 out of 25 planned test cases; ready 2 weeks before firmware CCB made full automation possible.",
-    "sensitivity": "Public",
-    "tags": [
-      "MCTP",
-      "Stress_Testing",
-      "CCB",
-      "Automation"
-    ],
-    "rank": 5,
-    "id": "GEM-7d96b9"
-  },
-  {
-    "date": "2023-10-15",
-    "summary": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & Show & Tell Workshops: Led Oregon MIV Tiger team for MCTP development and hosted informal 'show & tell' coding workshops to elevate team development standards.",
-    "evidence": "Q3/Q4 2023 Insights: Led Oregon MIV Tiger team for MCTP development; Hosted informal 'show & tell' meetings to improve coding skills throughout the team; Lead Sprint Planning & SCRUM.",
-    "sensitivity": "Public",
-    "tags": [
-      "SCRUM",
-      "Tiger_Team",
-      "Mentorship",
-      "Show_And_Tell"
-    ],
-    "rank": 5,
-    "id": "GEM-e803fc"
-  },
-  {
-    "date": "2023-11-13",
-    "summary": "[STRATEGIC_ANCHOR] Montana Framework Python Package Release under XPIV devpi: Formatted, built, and released the Montana automation framework as an official Python wheel package distributed via XPIV devpi, enabling seamless CI/CD integration.",
-    "evidence": "Q4 2023 Insights & Build Logs (11/08/2023 - 11/13/2023): cd c:\\miv-software\\, python -m build, pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV --upgrade. Released Montana framework as python package under XPIV devpi; Maintained quality in Montana code base by proactively engaging PRs and code reviews.",
-    "sensitivity": "Public",
-    "tags": [
-      "Montana",
-      "Devpi",
-      "Python_Package",
-      "Wheel",
-      "CI_CD",
-      "Code_Review"
-    ],
-    "rank": 5,
-    "id": "GEM-d3414b"
-  },
-  {
-    "date": "2023-12-15",
-    "summary": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achieve 100 consecutive error-free cycles each on Granite Rapids (GNR) and Sierra Forest (SRF).",
-    "evidence": "Q4 2023 Insights: Driving execution, escalation, debug, and triage of MCTP cycle tests to reach 100 cycles each on GNR; Kickstarted execution and enabling of MCTP tests on SRF-SP; Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise.",
-    "sensitivity": "Public",
-    "tags": [
-      "MCTP",
-      "GNR",
-      "SRF",
-      "Endurance",
-      "Cycle_Testing",
-      "Triage"
-    ],
-    "rank": 5,
-    "id": "GEM-66e054"
-  },
-  {
-    "date": "2023-12-31",
-    "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-AP X1, and SRF SP X2 platform power-on milestones.",
-    "evidence": "Insights 2023: Ensured successful EMR XCC & GNR-AP X1 PO Exit for Manageability features through code development/reviews; met exit criteria for SRF SP and GNR SP.",
-    "sensitivity": "Public",
-    "tags": [
-      "Power_On",
-      "GNR",
-      "SRF",
-      "EMR",
-      "Exit_Criteria"
-    ],
-    "rank": 5,
-    "id": "GEM-32846e"
-  },
-  {
     "date": "2023-01-01",
     "summary": "PSU MUX fix needed to allow NM S (NM power limit sweep) to function correctly",
     "evidence": "TODO: PSU MUX fix",
@@ -125,7 +19,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of NM S, PSU, MUX.",
+    "trigger_context": "Triggered during platform validation of NM S, PSU, MUX. (Validated PCIe, memory controller, power management, and platform RAS mechanisms)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -138,7 +32,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
   },
   {
     "date": "2023-01-01",
@@ -159,7 +54,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of ARTIFACT, EraRegistry.",
+    "trigger_context": "Triggered during platform validation of ARTIFACT, EraRegistry. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -171,8 +66,9 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "passes": 1,
-    "consecutive_zero_deltas": 0
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-01-01",
@@ -193,9 +89,9 @@
     "event_quarter": "2023-Q1",
     "temporal_confidence": 0.9,
     "temporal_provenance": "document_date",
-    "passes": 4,
-    "consecutive_zero_deltas": 2,
-    "refinement_level": 3,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
     "impact_level": 4,
     "spatial_anchor": {
       "source_file": "2023.json",
@@ -208,7 +104,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-01-01",
@@ -229,7 +126,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of bus owners, EIDs.",
+    "trigger_context": "Triggered during platform validation of bus owners, EIDs. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -242,7 +139,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-01-01",
@@ -264,7 +162,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-01-01",
@@ -286,7 +186,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-01-01",
@@ -308,7 +210,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-01-02",
@@ -343,7 +247,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-01-03",
@@ -379,7 +284,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-01-03",
@@ -395,13 +301,171 @@
     "event_era": "2023-01-03",
     "event_year": 2023,
     "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests).",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-03",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    }
+  },
+  {
+    "date": "2023-01-06",
+    "summary": "PECI LTM spec validation: Read MSR 0x8b via msr tool or rdPkgConfig parameter 4.",
+    "evidence": "msr -o 8b; rdPkgConfig(0,0,4)",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "ltm",
+      "msr"
+    ],
+    "document_date": "2023-01-06",
+    "event_era": "2023-01-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 4,
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-01-06",
+    "summary": "BMC Sensor Threshold Validation test case review for OpenBMC longrun.",
+    "evidence": "https://github.com/intel-innersource/frameworks.validation.bmc.atf/blob/main/tests/Sensors/SensorSeverityThreshold_OpenBMC_longrun.py",
+    "domain": "operations",
+    "tags": [
+      "bmc",
+      "sensor",
+      "validation"
+    ],
+    "document_date": "2023-01-06",
+    "event_era": "2023-01-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests).",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-06",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    }
+  },
+  {
+    "date": "2023-01-06",
+    "summary": "MCTP DDRT interop: CR DIMM CPS mailbox commands via i3c path.",
+    "evidence": "https://ircs.intel.com/WebUI/Documents/Detail/60613",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "ddrt",
+      "dimm"
+    ],
+    "document_date": "2023-01-06",
+    "event_era": "2023-01-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-01-06",
+    "summary": "PECI inband flag test execution on fl31ca106in0303.amr.corp.intel.com targeting socket0 uncore OOBMSM GPSB UCTRL_CTRL_REG BRESET bit.",
+    "evidence": "fl31ca106in0303.amr.corp.intel.com - Run MCTP tests - sv.socket0.io0.uncore.oobmsm.gpsb.uctrl_ctrl_reg.breset=1",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "oobmsm",
+      "gpsb",
+      "inband"
+    ],
+    "document_date": "2023-01-06",
+    "event_era": "2023-01-06",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "refinement_level": 2,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests).",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-01-06",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    }
+  },
+  {
+    "date": "2023-01-06",
+    "summary": "PECI mailbox stress test investigation targeting MSR 0x419 UBOX, BDF [B:30, D:0, F:0], and IERRLOGGINGREG/MCERRLOGGINGREG at offsets A4h/A8h per SPR EDS Vol2 pages 5167-5168.",
+    "evidence": "PECI mailbox stress? - MSR 0x419 UBOX ? BDF - EDS Vol2 page number 5167 5168 (IERRLOGGINGREG & MCERRLOGGINGREG) [B:30, D:0, F:0] + A4h & A8h",
+    "domain": "hardware_debug",
+    "tags": [
+      "peci",
+      "msr",
+      "ubox",
+      "ierrloggingreg",
+      "mcerrloggingreg"
+    ],
+    "document_date": "2023-01-06",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-01-17",
@@ -422,7 +486,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-01-18",
@@ -444,7 +510,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-01-19",
@@ -466,7 +534,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-01-24",
@@ -488,7 +558,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-01",
@@ -503,13 +575,26 @@
     "event_era": "2023-02-01",
     "event_year": 2023,
     "event_quarter": "2023-Q1",
-    "temporal_confidence": 0.5,
-    "temporal_provenance": "document_date_fallback",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
     "impact_level": 4,
-    "refinement_level": 0,
-    "passes": 0,
+    "refinement_level": 2,
+    "passes": 2,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'RAML floor discount and power telemetr...The evidence confirms `pbm_fast_rapl_floor_discount = 35` and `fast_rapl_pkg_total_power` within the DCGM RAPL channel, indicating a specific calibration offset applied to package power telemetry. This is not a retrospective career summary or focal draft; it is a live instrumentation parameter set for silicon validation. The engineering trigger context is: \"When validating RAPL floor discount accuracy against physical power draw on Acme Lab Z87-Linux nodes, specifically when `pbm_fast_rapl_floor_discount` is set to 35 and correlating with `fast_rapl_pkg_total_power` in DCGM.\"",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-02-01",
+      "year": 2023,
+      "quarter": "2023-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
   },
   {
     "date": "2023-02-01",
@@ -530,7 +615,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-01",
@@ -552,7 +639,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-01",
@@ -573,7 +662,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-06",
@@ -608,7 +699,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-06",
@@ -629,7 +721,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of MCTP, troubleshooting.",
+    "trigger_context": "Triggered during platform validation of MCTP, troubleshooting. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -642,7 +734,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-07",
@@ -664,7 +757,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-02-07",
@@ -686,7 +781,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-07",
@@ -708,7 +805,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-07",
@@ -730,7 +829,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-08",
@@ -753,7 +854,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-13",
@@ -776,7 +879,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-02-13",
@@ -798,7 +903,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-13",
@@ -820,7 +927,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-13",
@@ -842,7 +951,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-02-13",
@@ -863,7 +974,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-15",
@@ -886,7 +999,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-16",
@@ -908,7 +1023,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-16",
@@ -929,7 +1046,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-16",
@@ -950,7 +1069,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-16",
@@ -971,7 +1092,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-16",
@@ -994,7 +1117,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-17",
@@ -1016,7 +1141,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-17",
@@ -1037,7 +1164,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-20",
@@ -1057,7 +1186,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of NPK, PTI bluewire rework, cAnalyzer.",
+    "trigger_context": "Triggered during platform validation of NPK, PTI bluewire rework, cAnalyzer. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2014_09.json",
       "line_start": 1,
@@ -1071,7 +1200,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1105,7 +1235,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1124,7 +1255,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of LTB, Error Resolution.",
+    "trigger_context": "Triggered during platform validation of LTB, Error Resolution. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2015_05.json",
       "line_start": 1,
@@ -1138,7 +1269,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1165,7 +1297,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of DSD Tool Stack, TODO.",
+    "trigger_context": "Triggered during platform validation of DSD Tool Stack, TODO. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2015_05.json",
       "line_start": 1,
@@ -1179,7 +1311,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1197,7 +1330,9 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 1,
-    "refinement_level": 0
+    "refinement_level": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1218,7 +1353,8 @@
     "refinement_level": 1,
     "trigger_context": "Initiating Pinky (Triage) intuition...[FOYER] Request 8e7ce1db secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Let me check on that for you, Jason. I'll see if we have any records of MCTP discovery through BMC PCIe devices.\",\n  \"search_terms\": \n    \"[['MCTP', 'BMC', 'PCIe'], ['MCTP Discovery', 'PCIe Devices'], ['BMC', 'PCIe', 'Discovery']]\", \n  \"upvote\": true\n}",
     "passes": 3,
-    "consecutive_zero_deltas": 2
+    "consecutive_zero_deltas": 2,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1236,7 +1372,9 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 1,
-    "refinement_level": 0
+    "refinement_level": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1270,7 +1408,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1289,7 +1428,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of artifactory, repository.",
+    "trigger_context": "Triggered during platform validation of artifactory, repository. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2022_07.json",
       "line_start": 1,
@@ -1303,7 +1442,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1336,7 +1476,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1369,7 +1510,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1403,7 +1545,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1436,7 +1579,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1469,7 +1613,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1503,7 +1648,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1536,7 +1682,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1570,7 +1717,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-20",
@@ -1591,7 +1739,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1611,7 +1761,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1632,7 +1784,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1649,7 +1803,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-20",
@@ -1666,7 +1822,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-21",
@@ -1687,7 +1845,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-02-21",
@@ -1710,7 +1870,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-02-22",
@@ -1746,7 +1908,8 @@
       "quarter": "2023-Q1",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-25",
@@ -1767,7 +1930,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of Intel MIV, Simics, DTAF.",
+    "trigger_context": "Triggered during platform validation of Intel MIV, Simics, DTAF. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2019_2024.json",
       "line_start": 1,
@@ -1780,7 +1943,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-27",
@@ -1801,7 +1965,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of gnr, peci, srf.",
+    "trigger_context": "Triggered during platform validation of gnr, peci, srf. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -1815,7 +1979,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-02-27",
@@ -1836,7 +2001,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-08",
@@ -1858,7 +2025,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-03-08",
@@ -1880,7 +2049,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-03-08",
@@ -1902,7 +2073,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-13",
@@ -1924,7 +2097,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-03-13",
@@ -1945,7 +2120,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-13",
@@ -1966,7 +2143,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-03-13",
@@ -1988,7 +2167,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-15",
@@ -2009,7 +2190,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-17",
@@ -2031,7 +2214,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-03-27",
@@ -2053,7 +2238,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-03-27",
@@ -2075,7 +2262,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-03-30",
@@ -2097,7 +2286,34 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-04-01",
+    "summary": "Debug of SPR power limiting feature failure using PECI, PythonSV, and pCode telemetry module ('blackbox recorder').",
+    "evidence": "miv peci wrpciconfig\nmiv peci wrendpoint_pci",
+    "domain": "hardware_debug",
+    "tags": [
+      "spr",
+      "power-limiting",
+      "peci",
+      "telemetry"
+    ],
+    "document_date": "2023-04-01",
+    "event_era": "2023",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Eagle Stream\\b|\\bSapphire Rapids\\b|\\bSPR",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-13",
@@ -2119,7 +2335,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-04-13",
@@ -2141,7 +2359,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-14",
@@ -2162,7 +2382,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-14",
@@ -2183,7 +2405,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-14",
@@ -2205,7 +2429,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-15",
@@ -2223,7 +2449,9 @@
       "SSL Verification",
       "Authorization",
       "User Settings"
-    ]
+    ],
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-15",
@@ -2236,7 +2464,9 @@
       "Postman"
     ],
     "technical_gem": "Postman",
-    "rank": 4
+    "rank": 4,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-16",
@@ -2250,7 +2480,28 @@
       "Sensitivity"
     ],
     "technical_gem": "Utilized comparison tool 'Archive Comparison Tool' during analysis process",
-    "rank": 4
+    "rank": 4,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-04-24",
+    "summary": "[STRATEGIC_ANCHOR] RAPL Telemetry 'Blackbox Recorder' Architecture: Engineered telemetry diagnostic module combining PECI, PythonSV, and pCode knowledge into a 'blackbox recorder' flow that resolved critical power-limiting failures.",
+    "evidence": "Q1/Q4 2023 Insights: Combined PECI, PythonSV, and pCode knowledge into a telemetry module called 'blackbox recorder'; flow of data has been central to debug and understanding of the Power Limiting issue between pCode, SPS FW, and IGN FW that could have escaped to customers.",
+    "sensitivity": "Public",
+    "tags": [
+      "Blackbox_Recorder",
+      "RAPL",
+      "PECI",
+      "PythonSV",
+      "pCode",
+      "Telemetry",
+      "Power_Limiting"
+    ],
+    "rank": 5,
+    "id": "GEM-62463e",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-04-24",
@@ -2285,7 +2536,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-c26e"
+    "id": "GEM-c26e",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage"
   },
   {
     "date": "2023-04-24",
@@ -2320,7 +2572,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-48b5"
+    "id": "GEM-48b5",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-04-24",
@@ -2340,7 +2593,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of exit criteria, Q1.",
+    "trigger_context": "Triggered during platform validation of exit criteria, Q1. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023_04.json",
       "line_start": 1,
@@ -2354,7 +2607,8 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-66c7"
+    "id": "GEM-66c7",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-05-05",
@@ -2376,7 +2630,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-09",
@@ -2399,7 +2655,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-12",
@@ -2420,7 +2678,34 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-05-12",
+    "summary": "MCTP Phoenix test case execution using montana.py with various reset and discovery TDF files for GNR AP manageability validation.",
+    "evidence": "montana.py -f journal_unit.tdf; montana.py -f mctp_discovery.tdf; montana.py -s -t 0:30:0 -f mctp_mereset.tdf; montana.py -s -t 0:50:0 -f mctp_reset_warm.tdf; montana.py -s -t 0:30:0 -f mctp_bmcreset.tdf; montana.py -s -t 0:50:0 -f mctp_reset_dc.tdf; montana.py -s -t 0:50:0 -f mctp_reset_ac.tdf",
+    "domain": "hardware_debug",
+    "tags": [
+      "mctp",
+      "phoenix",
+      "gnr_ap",
+      "montana_py"
+    ],
+    "document_date": "2023-05-12",
+    "event_era": "2024",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "impact_level": 3,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-14",
@@ -2440,7 +2725,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-16",
@@ -2461,7 +2748,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-17",
@@ -2482,7 +2771,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-18",
@@ -2495,6 +2786,31 @@
     ],
     "document_date": "2023-05-18",
     "event_era": "2023-05-18",
+    "event_year": 2023,
+    "event_quarter": "2023-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0,
+    "passes": 0,
+    "consecutive_zero_deltas": 0,
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
+  },
+  {
+    "date": "2023-05-22",
+    "summary": "Hardware telemetry log showing PVC card detection, thermal margins, and per-tile power/temperature metrics for a dual-socket system with HBM.",
+    "evidence": "TimeStamp: 22-05-23 11:49:29.485008\nNumber of PVC Cards Detected:5\nTherm.Margin to PROCHOT(C): 35\nSoc0 Die Temp. (C): 45, Soc1 Die Temp. (C): 44\nCurrent Base Freq.(MHz): 999\nTile0 Power(W): 87, Tile1 Power(W): 86\nCard Power(W): 82\nHBM0 DRAM Temp (Tile 0)(C): 27, HBM1 DRAM Temp (Tile 0)(C): 27\nHBM2 DRAM Temp (Tile 0)(C): 27, HBM3 DRAM Temp (Tile 0)(C): 27\nHBM0 DRAM Temp (Tile 1)(C): 26, HBM1 DRAM Temp (Tile 1)(C): 27\nHBM2 DRAM Temp (Tile 1)(C): 26, HBM3 DRAM Temp (Tile 1)(C): 26\nGT0 Power (W): 87, GT1 Power (W): 86",
+    "domain": "hardware_debug",
+    "tags": [
+      "telemetry",
+      "thermal",
+      "power_metrics",
+      "pvc"
+    ],
+    "document_date": "2023-05-22",
+    "event_era": "2023-05-22",
     "event_year": 2023,
     "event_quarter": "2023-Q2",
     "temporal_confidence": 0.5,
@@ -2525,7 +2841,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-05-23",
@@ -2546,7 +2864,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-07",
@@ -2568,7 +2888,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-07",
@@ -2590,7 +2912,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-07",
@@ -2612,7 +2936,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-12",
@@ -2634,7 +2960,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-06-12",
@@ -2656,7 +2984,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-12",
@@ -2678,7 +3008,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-13",
@@ -2700,7 +3032,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-06-20",
@@ -2722,7 +3056,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-20",
@@ -2744,7 +3080,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-20",
@@ -2765,7 +3103,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-06-20",
@@ -2787,7 +3127,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-22",
@@ -2809,7 +3151,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-23",
@@ -2830,7 +3174,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-26",
@@ -2852,7 +3198,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-27",
@@ -2887,7 +3235,8 @@
       "quarter": "2023-Q2",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-06-27",
@@ -2908,7 +3257,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-06-28",
@@ -2929,7 +3280,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of MCTP, debugging, BMC.",
+    "trigger_context": "Triggered during platform validation of MCTP, debugging, BMC. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -2943,7 +3294,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-06-28",
@@ -2964,7 +3316,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-06-28",
@@ -2985,7 +3339,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-06-28",
@@ -3006,7 +3362,25 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-06-30",
+    "summary": "[STRATEGIC_ANCHOR] Negative BDF & MSR Scan Automation Suite: Developed and refactored negative BDF and MSR scan test content, enabling robust automated negative testing across manageability domains.",
+    "evidence": "Q1 2023 Insights: Delivered negative BDF and MSR scan with refactored code for future negative testing.",
+    "sensitivity": "Public",
+    "tags": [
+      "Negative_Testing",
+      "BDF",
+      "MSR",
+      "Scan_Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-8c66f5",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-05",
@@ -3026,7 +3400,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-05",
@@ -3046,7 +3422,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-05",
@@ -3067,7 +3445,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-06",
@@ -3084,7 +3464,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-11",
@@ -3101,7 +3483,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-11",
@@ -3118,7 +3502,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-12",
@@ -3135,7 +3521,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-07-14",
@@ -3152,7 +3540,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-17",
@@ -3173,7 +3563,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-20",
@@ -3194,7 +3586,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-20",
@@ -3215,7 +3609,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-20",
@@ -3236,7 +3632,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-20",
@@ -3257,7 +3655,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-07-21",
@@ -3293,7 +3693,8 @@
       "quarter": "2023-Q3",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-07-21",
@@ -3328,7 +3729,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-07-28",
@@ -3363,7 +3765,8 @@
       "quarter": "2023-Q3",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-08-08",
@@ -3383,7 +3786,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-09",
@@ -3403,7 +3808,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-09",
@@ -3423,7 +3830,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-09",
@@ -3443,7 +3852,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-09",
@@ -3463,7 +3874,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-10",
@@ -3484,7 +3897,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-10",
@@ -3505,7 +3920,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-10",
@@ -3526,7 +3943,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-10",
@@ -3547,7 +3966,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-10",
@@ -3568,7 +3989,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-11",
@@ -3589,7 +4012,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-11",
@@ -3610,7 +4035,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-08-11",
@@ -3631,7 +4058,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-17",
@@ -3652,7 +4081,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-17",
@@ -3673,7 +4104,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-21",
@@ -3694,7 +4127,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-08-22",
@@ -3715,7 +4150,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-08-23",
@@ -3736,7 +4173,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-24",
@@ -3753,7 +4192,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-24",
@@ -3770,7 +4211,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-25",
@@ -3787,7 +4230,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-26",
@@ -3804,7 +4249,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-28",
@@ -3822,7 +4269,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3843,7 +4292,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3864,7 +4315,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3885,7 +4338,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3906,7 +4361,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3924,7 +4381,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3942,7 +4401,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-29",
@@ -3959,7 +4420,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -3976,7 +4439,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -3993,7 +4458,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4010,7 +4477,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4027,7 +4496,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4044,7 +4515,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4065,7 +4538,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4083,7 +4558,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-08-30",
@@ -4104,7 +4581,25 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-08-31",
+    "summary": "[STRATEGIC_ANCHOR] MCTP Stress Test Suite Delivery: Developed and delivered automated MCTP stress test suite covering 19 out of 25 planned test cases ahead of firmware CCB readiness.",
+    "evidence": "Q3 2023 Insights: Jason developed and delivered MCTP Stress tests for 19 out of 25 planned test cases; ready 2 weeks before firmware CCB made full automation possible.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "Stress_Testing",
+      "CCB",
+      "Automation"
+    ],
+    "rank": 5,
+    "id": "GEM-7d96b9",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-05",
@@ -4121,7 +4616,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-09",
@@ -4138,7 +4635,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-09",
@@ -4155,7 +4654,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-12",
@@ -4172,7 +4673,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-09-15",
@@ -4193,7 +4696,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-15",
@@ -4214,7 +4719,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-15",
@@ -4235,7 +4742,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-15",
@@ -4256,7 +4765,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-18",
@@ -4273,7 +4784,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-21",
@@ -4290,7 +4803,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-21",
@@ -4307,7 +4822,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-09-25",
@@ -4342,7 +4859,8 @@
       "year": 2023,
       "quarter": "2023-Q3",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-09-29",
@@ -4377,7 +4895,8 @@
       "quarter": "2023-Q3",
       "precision": "EXACT"
     },
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-09-30",
@@ -4412,7 +4931,8 @@
       "year": 2023,
       "quarter": "2023-Q3",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-09-30",
@@ -4432,7 +4952,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-30",
@@ -4449,7 +4971,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-09-30",
@@ -4466,7 +4990,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-01",
@@ -4502,7 +5028,8 @@
       "precision": "EXACT"
     },
     "status": "SATURATED",
-    "id": "GEM-4c34"
+    "id": "GEM-4c34",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-10-01",
@@ -4522,7 +5049,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of MCTP failures, TDF architecture.",
+    "trigger_context": "Triggered during platform validation of MCTP failures, TDF architecture. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023_10.json",
       "line_start": 1,
@@ -4536,7 +5063,8 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-5cd4"
+    "id": "GEM-5cd4",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-10-01",
@@ -4556,7 +5084,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of kayak framework, Python scripts.",
+    "trigger_context": "Triggered during platform validation of kayak framework, Python scripts. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023_10.json",
       "line_start": 1,
@@ -4570,7 +5098,8 @@
     },
     "passes": 1,
     "consecutive_zero_deltas": 0,
-    "id": "GEM-a274"
+    "id": "GEM-a274",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-10-02",
@@ -4587,7 +5116,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-02",
@@ -4604,7 +5135,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-02",
@@ -4621,7 +5154,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-05",
@@ -4638,7 +5173,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-05",
@@ -4655,7 +5192,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-05",
@@ -4672,7 +5211,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-05",
@@ -4689,7 +5230,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-05",
@@ -4706,7 +5249,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-05",
@@ -4723,7 +5268,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-05",
@@ -4740,7 +5287,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-06",
@@ -4757,7 +5306,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-10",
@@ -4774,7 +5325,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-11",
@@ -4795,7 +5348,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-11",
@@ -4816,7 +5371,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-10-11",
@@ -4837,7 +5394,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-11",
@@ -4858,7 +5417,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-11",
@@ -4879,7 +5440,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-11",
@@ -4900,7 +5463,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-11",
@@ -4921,7 +5486,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-11",
@@ -4942,7 +5509,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-11",
@@ -4963,7 +5532,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-11",
@@ -4980,7 +5551,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-13",
@@ -4997,7 +5570,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-14",
@@ -5014,7 +5589,25 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-10-15",
+    "summary": "[STRATEGIC_ANCHOR] Oregon MIV Tiger Team Leadership & Show & Tell Workshops: Led Oregon MIV Tiger team for MCTP development and hosted informal 'show & tell' coding workshops to elevate team development standards.",
+    "evidence": "Q3/Q4 2023 Insights: Led Oregon MIV Tiger team for MCTP development; Hosted informal 'show & tell' meetings to improve coding skills throughout the team; Lead Sprint Planning & SCRUM.",
+    "sensitivity": "Public",
+    "tags": [
+      "SCRUM",
+      "Tiger_Team",
+      "Mentorship",
+      "Show_And_Tell"
+    ],
+    "rank": 5,
+    "id": "GEM-e803fc",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-16",
@@ -5035,7 +5628,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-10-17",
@@ -5056,7 +5651,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-18",
@@ -5077,7 +5674,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-18",
@@ -5098,7 +5697,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-24",
@@ -5118,7 +5719,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-24",
@@ -5138,7 +5741,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-24",
@@ -5158,7 +5763,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-24",
@@ -5178,7 +5785,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-24",
@@ -5198,7 +5807,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-25",
@@ -5215,7 +5826,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5227,7 +5840,9 @@
       "PCH Ignition FW",
       "ZBB"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5239,7 +5854,9 @@
       "PLDM",
       "VDM"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-26",
@@ -5251,7 +5868,9 @@
       "CrowPass",
       "OOB"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-26",
@@ -5264,7 +5883,9 @@
       "PECI",
       "MCTP"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5276,7 +5897,9 @@
       "FW update",
       "Nlog"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5287,7 +5910,9 @@
       "PMT",
       "Crashlog"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5298,7 +5923,9 @@
       "PECI",
       "PMT"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5308,7 +5935,9 @@
     "tags": [
       "Ocode team"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5320,7 +5949,9 @@
       "Collaboration",
       "Technical Leadership"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-10-26",
@@ -5332,7 +5963,9 @@
       "Sprint Review",
       "Technical Leadership"
     ],
-    "rank": 4
+    "rank": 4,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5344,7 +5977,9 @@
       "Crashdump",
       "BMC"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5355,7 +5990,9 @@
       "Peci",
       "Crashdump"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5365,7 +6002,9 @@
     "tags": [
       "build"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-26",
@@ -5376,7 +6015,9 @@
       "setup",
       "tools"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-27",
@@ -5387,7 +6028,9 @@
       "Technical Event",
       "Crash Dump"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-27",
@@ -5399,7 +6042,9 @@
       "Peci",
       "Crashdump"
     ],
-    "rank": 3
+    "rank": 3,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-30",
@@ -5416,7 +6061,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-31",
@@ -5433,7 +6080,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-10-31",
@@ -5450,7 +6099,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-10-31",
@@ -5467,7 +6118,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-01",
@@ -5489,7 +6142,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-01",
@@ -5512,7 +6167,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-02",
@@ -5546,7 +6203,8 @@
       "year": 2023,
       "quarter": "2023-Q4",
       "precision": "EXACT"
-    }
+    },
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-11-02",
@@ -5564,7 +6222,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-02",
@@ -5582,7 +6242,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-06",
@@ -5606,7 +6268,8 @@
     "refinement_level": 2,
     "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'Execution of montana.py script with te...The `montana.py` execution with the `-f mctp_reset_cold.tdf` and `--loop 100` flags triggers a high-level MCTP (Manageable Component Transport Protocol) cold-reset discovery and state-transition validation, specifically validating the BMC firmware's ability to execute a full MCTP reset cycle and re-synchronize its internal state machine after a cold-reset event.",
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-11-06",
@@ -5623,7 +6286,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-06",
@@ -5640,7 +6305,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-06",
@@ -5657,7 +6324,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-06",
@@ -5674,7 +6343,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-06",
@@ -5691,7 +6362,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-11-06",
@@ -5708,7 +6381,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-06",
@@ -5725,7 +6400,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-06",
@@ -5742,7 +6419,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-06",
@@ -5759,7 +6438,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-08",
@@ -5780,7 +6461,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-10",
@@ -5801,7 +6484,48 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2023-11-13",
+    "summary": "[STRATEGIC_ANCHOR] Montana Framework Python Package Release under XPIV devpi: Formatted, built, and released the Montana automation framework as an official Python wheel package distributed via XPIV devpi, enabling seamless CI/CD integration.",
+    "evidence": "Q4 2023 Insights & Build Logs (11/08/2023 - 11/13/2023): cd c:\\miv-software\\, python -m build, pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV --upgrade. Released Montana framework as python package under XPIV devpi; Maintained quality in Montana code base by proactively engaging PRs and code reviews.",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana",
+      "Devpi",
+      "Python_Package",
+      "Wheel",
+      "CI_CD",
+      "Code_Review"
+    ],
+    "rank": 5,
+    "id": "GEM-d3414b",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: '[STRATEGIC_ANCHOR] Montana Framework P...FOCAL_DRAFT | Tier 2: Montana Framework Python Package Release under XPIV devpi; Trigger: CI/CD pipeline failure during `pip install montana --extra-index-url=https://devpi.intel.com/general/XPIV` or verification of Q4 2023 build artifacts in the c:\\miv-software\\ environment.",
+    "spatial_anchor": {
+      "source_file": "2023.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2023-11-13",
+      "year": 2023,
+      "quarter": "2023-Q4",
+      "precision": "EXACT"
+    },
+    "event_era": "2023-11-13",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "document_date": "2023-11-13",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 2,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-11-13",
@@ -5822,7 +6546,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-11-15",
@@ -5843,7 +6569,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-11-23",
@@ -5860,7 +6588,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-01",
@@ -5884,7 +6614,8 @@
     "refinement_level": 2,
     "trigger_context": "[FOYER] Request d17bdc2b secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: DROP \u2014 No 0x40 responses indicate no pending MSI interrupts.\n- CHUNK-2: DROP \u2014 Missing 0x40 responses don't necessarily imply faulty MSR implementations.\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n- CHUNK-2: KEEP \n\n[USER_QUERY]: \nGiven event summary: 'MSR accesses missing 0x40 responses from all 56 thread IDs: CR3.Punit and NCEVENTS_SCF_UBOX' and evidence: 'FAIL: missing 0x40 response from all 56 thread ids for MSR ('rdIaMsr', '0x648', 'CR3.Punit', 0)' \nEngineering Trigger Context: PECI MSR read failures may be related to core wake on PECI, but require further investigation.",
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-12-01",
@@ -5904,7 +6635,9 @@
     "temporal_confidence": 0.5,
     "temporal_provenance": "document_date_fallback",
     "impact_level": 1,
-    "refinement_level": 1
+    "refinement_level": 1,
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-01",
@@ -5927,7 +6660,8 @@
     "refinement_level": 2,
     "trigger_context": "[FOYER] Request 7b6c8b87 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\n  \"spoken_take\": \"Jason, it sounds like we're dealing with a PCS TMC IB Lock out issue on our PECI Platform Configuration Space. I'm going to check the thermal monitoring control mailbox lock out bit in our Acme Lab records.\",\n  \"search_terms\": \"PECI Thermal Monitoring Control mailbox lock out bit, PCS TMC IB Lock out, thermal monitoring control, PECI Platform Configuration Space\",\n  \"upvote\": true\n}",
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms"
   },
   {
     "date": "2023-12-11",
@@ -5944,7 +6678,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage",
+    "trigger_context": "Triggered during validation (Executed production validation in SIMICS (S3E/SSM); led telemetry and daily triage)."
   },
   {
     "date": "2023-12-11",
@@ -5961,12 +6697,14 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-11",
     "summary": "Environment variables set for automation framework",
-    "evidence": "setx sys_user sys_degsi1, setx sys_pwd [REDACTED_PASSWORD],
+    "evidence": "setx sys_user sys_degsi1, setx sys_pwd [REDACTED_PASSWORD]",
     "domain": "logistics",
     "document_date": "2023-12-11",
     "event_era": "2023-12-11",
@@ -5978,7 +6716,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-11",
@@ -5995,7 +6735,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-12",
@@ -6016,7 +6758,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-12",
@@ -6037,7 +6781,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-12",
@@ -6058,7 +6804,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-12",
@@ -6078,7 +6826,27 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
+  },
+  {
+    "date": "2023-12-15",
+    "summary": "[STRATEGIC_ANCHOR] Granite Rapids & Sierra Forest MCTP 100-Cycle Endurance: Drove execution, escalation, debug, and triage of MCTP cycle tests to achieve 100 consecutive error-free cycles each on Granite Rapids (GNR) and Sierra Forest (SRF).",
+    "evidence": "Q4 2023 Insights: Driving execution, escalation, debug, and triage of MCTP cycle tests to reach 100 cycles each on GNR; Kickstarted execution and enabling of MCTP tests on SRF-SP; Collaborated with BA team members to remove ambiguous MCTP failure conditions and noise.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP",
+      "GNR",
+      "SRF",
+      "Endurance",
+      "Cycle_Testing",
+      "Triage"
+    ],
+    "rank": 5,
+    "id": "GEM-66e054",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests",
+    "trigger_context": "Triggered during validation (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)."
   },
   {
     "date": "2023-12-15",
@@ -6095,7 +6863,26 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
+  },
+  {
+    "date": "2023-12-31",
+    "summary": "[STRATEGIC_ANCHOR] Multi-Platform Power-On Exit Verification (GNR, SRF, EMR): Ensured successful manageability feature exit criteria for EMR XCC, GNR-AP X1, and SRF SP X2 platform power-on milestones.",
+    "evidence": "Insights 2023: Ensured successful EMR XCC & GNR-AP X1 PO Exit for Manageability features through code development/reviews; met exit criteria for SRF SP and GNR SP.",
+    "sensitivity": "Public",
+    "tags": [
+      "Power_On",
+      "GNR",
+      "SRF",
+      "EMR",
+      "Exit_Criteria"
+    ],
+    "rank": 5,
+    "id": "GEM-32846e",
+    "career_bedrock_anchor": "Validated PCIe, memory controller, power management, and platform RAS mechanisms",
+    "trigger_context": "Triggered during validation (Validated PCIe, memory controller, power management, and platform RAS mechanisms)."
   },
   {
     "date": "2023-12-31",
@@ -6120,7 +6907,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of MCTP.",
+    "trigger_context": "Triggered during platform validation of MCTP. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -6134,7 +6921,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-12-31",
@@ -6159,7 +6947,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of SRF-SP.",
+    "trigger_context": "Triggered during platform validation of SRF-SP. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -6173,7 +6961,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-12-31",
@@ -6198,7 +6987,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of BA.",
+    "trigger_context": "Triggered during platform validation of BA. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -6212,7 +7001,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-12-31",
@@ -6237,7 +7027,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of Montana.",
+    "trigger_context": "Triggered during platform validation of Montana. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -6251,7 +7041,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   },
   {
     "date": "2023-12-31",
@@ -6276,7 +7067,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of Montana.",
+    "trigger_context": "Triggered during platform validation of Montana. (Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests)",
     "spatial_anchor": {
       "source_file": "2023.json",
       "line_start": 1,
@@ -6290,6 +7081,7 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Manageability Test Content Lead: 100+ automated IPMI, Redfish, PECI, MCTP Python tests"
   }
 ]

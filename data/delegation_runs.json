@@ -1,18 +1,418 @@
 {
   "summary": {
-    "total_runs": 335,
-    "successful_runs": 219,
-    "total_tokens_blended": 18583996,
-    "total_conductor_tokens": 18345448,
-    "total_l3_tokens": 238548,
-    "total_cached_tokens": 9441288,
-    "total_wall_time_minutes": 2575.12,
-    "estimated_cloud_cost_usd": 66.562704,
-    "estimated_local_power_cost_usd": 1.28756,
-    "net_savings_usd": 65.275144,
+    "total_runs": 355,
+    "successful_runs": 230,
+    "total_tokens_blended": 19710742,
+    "total_conductor_tokens": 19418523,
+    "total_l3_tokens": 292219,
+    "total_cached_tokens": 9780232,
+    "total_wall_time_minutes": 2667.45,
+    "estimated_cloud_cost_usd": 68.789727,
+    "estimated_local_power_cost_usd": 1.333725,
+    "net_savings_usd": 67.456002,
     "local_offload_ratio_pct": 1.9
   },
   "runs": [
+    {
+      "sprint": "112",
+      "story": "112.70",
+      "title": "CONTINUITY_VECTOR Tagging & Deep Thought Hydration",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 799.35,
+      "duration_m": 13.32,
+      "tokens": {
+        "conductor": 103232,
+        "l3": 3822,
+        "total": 107054,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-12T13:16:29"
+    },
+    {
+      "sprint": "112",
+      "story": "112.60",
+      "title": "Out-of-Band MO Expectation Standard & Automated Watchdog Audit",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_TIMEOUT",
+      "duration_s": 889.9,
+      "duration_m": 14.83,
+      "tokens": {
+        "conductor": 121656,
+        "l3": 9036,
+        "total": 130692,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-12T12:59:13"
+    },
+    {
+      "sprint": "112",
+      "story": "112.99",
+      "title": "Canary Swarm Validation",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 362.51,
+      "duration_m": 6.04,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-12T12:16:09"
+    },
+    {
+      "sprint": "112",
+      "story": "112.50",
+      "title": "Layer 2 Connective Scope Expansion & Anti-Censorship Routing",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "SUCCESS",
+      "duration_s": 349.87,
+      "duration_m": 5.83,
+      "tokens": {
+        "conductor": 41919,
+        "l3": 0,
+        "total": 41919,
+        "cache_read": 0
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-11-12T11:08:35"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Fix Indentation and add test_sanitization_tripwire in Watchdog Tests",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "SUCCESS",
+      "duration_s": 178.2,
+      "duration_m": 2.97,
+      "tokens": {
+        "conductor": 81804,
+        "l3": 1890,
+        "total": 83694,
+        "cache_read": 73712
+      },
+      "verification_passed": true,
+      "reflection": "",
+      "timestamp": "2026-11-07T14:16:30"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Update Watchdog Tests for LOOP-006 Sanitization Tripwire",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 99.27,
+      "duration_m": 1.65,
+      "tokens": {
+        "conductor": 55643,
+        "l3": 3780,
+        "total": 59423,
+        "cache_read": 55488
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T14:13:04"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Update Watchdog Tests for LOOP-006 Sanitization Tripwire",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "VERIFICATION_FAILED",
+      "duration_s": 46.25,
+      "duration_m": 0.77,
+      "tokens": {
+        "conductor": 45227,
+        "l3": 3759,
+        "total": 48986,
+        "cache_read": 36192
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T14:10:19"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Restore check_swap_pressure and add check_sanitization_tripwire to audit",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 209.89,
+      "duration_m": 3.5,
+      "tokens": {
+        "conductor": 66607,
+        "l3": 5664,
+        "total": 72271,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T14:08:11"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Finish Story 111.30 LOOP-006 integration",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 458.57,
+      "duration_m": 7.64,
+      "tokens": {
+        "conductor": 120544,
+        "l3": 1884,
+        "total": 122428,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T14:04:01"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Nibbler Prompt Sanitization Tripwire & Self-Hardening Feedback Loop",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "API_ERROR",
+      "duration_s": 369.68,
+      "duration_m": 6.16,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T13:55:49"
+    },
+    {
+      "sprint": "111",
+      "story": "111.30",
+      "title": "Nibbler Prompt Sanitization Tripwire & Self-Hardening Feedback Loop",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 206.64,
+      "duration_m": 3.44,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T13:49:28"
+    },
+    {
+      "sprint": "111",
+      "story": "111.22",
+      "title": "Align check_lora_training with dormant LoRA configuration",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 156.23,
+      "duration_m": 2.6,
+      "tokens": {
+        "conductor": 46771,
+        "l3": 3746,
+        "total": 50517,
+        "cache_read": 45568
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:16:31"
+    },
+    {
+      "sprint": "111",
+      "story": "111.21",
+      "title": "Adjust headroom-proxy health poll deadline to 25s",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 89.42,
+      "duration_m": 1.49,
+      "tokens": {
+        "conductor": 97149,
+        "l3": 3890,
+        "total": 101039,
+        "cache_read": 94320
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:13:04"
+    },
+    {
+      "sprint": "111",
+      "story": "111.21",
+      "title": "Correct flush_swap_residency to restart headroom-proxy.service",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 109.8,
+      "duration_m": 1.83,
+      "tokens": {
+        "conductor": 47459,
+        "l3": 3709,
+        "total": 51168,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:10:53"
+    },
+    {
+      "sprint": "111",
+      "story": "111.21",
+      "title": "Headroom Proxy Maintenance Swap Flush",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 140.07,
+      "duration_m": 2.33,
+      "tokens": {
+        "conductor": 58197,
+        "l3": 1910,
+        "total": 60107,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:08:49"
+    },
+    {
+      "sprint": "111",
+      "story": "111.20",
+      "title": "Fix sovereign_quorum field in probe_deliberation_circuit",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 198.92,
+      "duration_m": 3.32,
+      "tokens": {
+        "conductor": 68083,
+        "l3": 5683,
+        "total": 73766,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:04:51"
+    },
+    {
+      "sprint": "111",
+      "story": "111.20",
+      "title": "Sovereign Quorum Enforcement & Deliberation Circuit Truth",
+      "mode": "cloud",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 330.11,
+      "duration_m": 5.5,
+      "tokens": {
+        "conductor": 63907,
+        "l3": 4898,
+        "total": 68805,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T12:01:01"
+    },
+    {
+      "sprint": "111",
+      "story": "111.20",
+      "title": "Sovereign Quorum Enforcement & Deliberation Circuit Truth",
+      "mode": "local",
+      "tier": "[SWARM:LOCAL]",
+      "model": "my-windows-4090/hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+      "status": "API_ERROR",
+      "duration_s": 203.96,
+      "duration_m": 3.4,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-07T11:55:22"
+    },
+    {
+      "sprint": "110",
+      "story": "110.13",
+      "title": "FreeToken Heterogeneous Architecture and Branch Viability Evaluation",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "COMPLETED_UNVERIFIED",
+      "duration_s": 74.1,
+      "duration_m": 1.23,
+      "tokens": {
+        "conductor": 54877,
+        "l3": 0,
+        "total": 54877,
+        "cache_read": 33664
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-06T17:59:05"
+    },
+    {
+      "sprint": "110",
+      "story": "110.16",
+      "title": "Sprint 106-110 FEAT Alignment & Escapes Audit",
+      "mode": "oracle",
+      "tier": "[SWARM:CLOUD]",
+      "model": "openrouter/openrouter/free",
+      "status": "API_ERROR",
+      "duration_s": 268.94,
+      "duration_m": 4.48,
+      "tokens": {
+        "conductor": 0,
+        "l3": 0,
+        "total": 0,
+        "cache_read": 0
+      },
+      "verification_passed": false,
+      "reflection": "",
+      "timestamp": "2026-11-06T12:32:09"
+    },
     {
       "sprint": "110",
       "story": "110.12",

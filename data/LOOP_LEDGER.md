@@ -41,6 +41,7 @@ This ledger dynamically tracks, categorizes, and audits active, emerging, and re
 * **Operational Horizon:** Multi-night epoch rotation (Gems stay on active rotation until consensus saturation).
 * **Lifecycle State:** `ACTIVE`
 * **Description:** Eliminates the monolithic single-pass refinement trap by decomposing consolidation into iterative, focused connection passes. Unrefined gems remain on rotation across nightly cycles; each pass increments refinement level, evaluates cross-references, updates topological edge density, and gates promotion into Level 3 (quiescent saturation) based on loop consensus.
+* **Operational Hardening (Epoch 170 / Nov 10, 2026):** Resolved 32-epoch deadlock caused by orphaned pre-Sprint 109 monthly file pointers in `refinement_rotation_queue.json`. Implemented self-healing auto-eviction (`ORPHAN_PURGED`) and automatic queue replenishment from canonical annual lakehouse files (`len(queue) < 15`). Verified live convergence at Epoch 170 (`delta: 24`, `status: CONVERGING`).
 
 ### `[LOOP-005]` Post-Turn Scorecard & Step-Trace Telemetry Loop
 * **Vibe Driver:** `VIBE-009` (Feedback Loops as Complexity Engines) / `PHL-008` (Self-Learning Memory Accumulation)
@@ -50,5 +51,14 @@ This ledger dynamically tracks, categorizes, and audits active, emerging, and re
 * **Operational Horizon:** Post-turn execution boundary (non-blocking async) & interactive feedback event.
 * **Lifecycle State:** `STAGED`
 * **Description:** Closes the quality loop after Pinky's voice delivery without blocking streaming TTS. Deep Thought evaluates the turn using Chain-of-Evaluation (reasoning prose before scalar scoring), isolates stage failure origins via Step-Trace attribution, and auto-populates negative exemplars to permanently prevent recurrent hallucinations across turns.
+
+### `[LOOP-006]` Nibbler Prompt Sanitization Tripwire & Self-Hardening Feedback Loop
+* **Vibe Driver:** `VIBE-009` (Feedback Loops as Complexity Engines) / `INS-052` (Machine-Log Boundary / Calibrated Confidentiality)
+* **Governing Protocols:** `BKM-069`, `BKM-015`, `INS-052`, `VIBE-009`
+* **Signal Emitter (Source):** `sanitize_with_tripwire` in `nibble_v2.py` — per-extraction sanitization tripwire.
+* **Signal Consumer (Actuator / Gate):** `standalone_accountability_watchdog.py` and few-shot demonstration generator.
+* **Operational Horizon:** Per-extraction tripwire and daily accountability audit.
+* **Lifecycle State:** `ACTIVE`
+* **Description:** Converts silent regex sanitization into an active tripwire that logs forensic leak traces, flags unearned pass verdicts in watchdog, and auto-generates contrastive few-shot negative demonstrations for prompt self-hardening.
 
 ---

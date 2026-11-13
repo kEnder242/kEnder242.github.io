@@ -12,7 +12,9 @@
       "Silicon_BringUp"
     ],
     "rank": 5,
-    "id": "GEM-d2b674"
+    "id": "GEM-d2b674",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-30",
@@ -26,7 +28,30 @@
       "Pre_Silicon"
     ],
     "rank": 5,
-    "id": "GEM-1f1aa3"
+    "id": "GEM-1f1aa3",
+    "trigger_context": "Triggered during platform validation of Intel.DAL, Fuse, micro-code patch. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-06-30",
+      "year": 2013,
+      "quarter": "2013-Q2",
+      "precision": "EXACT"
+    },
+    "event_era": "2013-06-30",
+    "event_year": 2013,
+    "event_quarter": "2013-Q2",
+    "document_date": "2013-06-30",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-08-31",
@@ -40,7 +65,30 @@
       "Tool_Compatibility"
     ],
     "rank": 5,
-    "id": "GEM-6359a9"
+    "id": "GEM-6359a9",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: '[STRATEGIC_ANCHOR] Broadwell (BDW) VIS...Egad!Zort!FOCAL_DRAFT; Tier 2: Broadwell (BDW) VISA Enablement & TAP XML Generation. Trigger context: When validating JTAG boundary scan integrity or debugging TAP state machine failures on Broadwell silicon, this knowledge activates to verify the correctness of generated XML register definitions against platform-specific stepping variations.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-08-31",
+      "year": 2013,
+      "quarter": "2013-Q3",
+      "precision": "EXACT"
+    },
+    "event_era": "2013-08-31",
+    "event_year": 2013,
+    "event_quarter": "2013-Q3",
+    "document_date": "2013-08-31",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-10-31",
@@ -54,7 +102,30 @@
       "Tooling"
     ],
     "rank": 5,
-    "id": "GEM-adc4d1"
+    "id": "GEM-adc4d1",
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: '[STRATEGIC_ANCHOR] Graphics Trace Tool...FOCAL_DRAFT | Tier 2: Graphics Trace Tool Transition from GTPO to PDT. Trigger context: When graphics trace diagnostics fail due to legacy GTPO support gaps, or when unifying server and client graphics validation under a single platform interface is required.",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-10-31",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "event_era": "2013-10-31",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "document_date": "2013-10-31",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-12-15",
@@ -69,7 +140,30 @@
       "Ownership"
     ],
     "rank": 5,
-    "id": "GEM-4f080c"
+    "id": "GEM-4f080c",
+    "trigger_context": "Triggered during platform validation of BDW B0, SKL A0, SKL ULT A0. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-12-15",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "event_era": "2013-12-15",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "document_date": "2013-12-15",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-12-31",
@@ -83,7 +177,30 @@
       "Sprint_Planning"
     ],
     "rank": 5,
-    "id": "GEM-6a52cd"
+    "id": "GEM-6a52cd",
+    "trigger_context": "Triggered during platform validation of Visa plugin, BDW_U_UC B0. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-12-31",
+      "year": 2013,
+      "quarter": "2013-Q4",
+      "precision": "EXACT"
+    },
+    "event_era": "2013-12-31",
+    "event_year": 2013,
+    "event_quarter": "2013-Q4",
+    "document_date": "2013-12-31",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
+    "impact_level": 1,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 2,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-01-01",
@@ -105,7 +222,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of Intel.DAL, Fuse, micro-code patch.",
+    "trigger_context": "Triggered during platform validation of Intel.DAL, Fuse, micro-code patch. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -117,8 +234,9 @@
       "quarter": "2013-Q1",
       "precision": "EXACT"
     },
-    "passes": 1,
-    "consecutive_zero_deltas": 0
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-01-02",
@@ -151,8 +269,9 @@
       "quarter": "2013-Q1",
       "precision": "EXACT"
     },
-    "passes": 1,
-    "consecutive_zero_deltas": 0
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-01-03",
@@ -186,7 +305,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-01-16",
@@ -201,13 +321,26 @@
     "event_era": "2013-01-16",
     "event_year": 2013,
     "event_quarter": "2013-Q1",
-    "temporal_confidence": 0.5,
-    "temporal_provenance": "document_date_fallback",
+    "temporal_confidence": 0.9,
+    "temporal_provenance": "document_date",
     "impact_level": 1,
-    "refinement_level": 0,
-    "passes": 0,
-    "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "refinement_level": 2,
+    "passes": 3,
+    "consecutive_zero_deltas": 1,
+    "sensitivity": "Public",
+    "trigger_context": "Triggered during platform validation of Signal Assignment, Online Converter. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
+    "spatial_anchor": {
+      "source_file": "2013.json",
+      "line_start": 1,
+      "line_end": 1
+    },
+    "temporal_anchor": {
+      "era": "2013-01-16",
+      "year": 2013,
+      "quarter": "2013-Q1",
+      "precision": "EXACT"
+    },
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-01-16",
@@ -228,7 +361,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -249,7 +384,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -270,7 +407,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -287,7 +426,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -304,7 +445,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -321,7 +464,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -338,7 +483,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -355,7 +502,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -372,7 +521,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -389,7 +540,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-01-16",
@@ -406,7 +559,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-04-17",
@@ -423,7 +578,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-04-17",
@@ -440,7 +597,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-04-17",
@@ -457,7 +616,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-05-15",
@@ -475,7 +636,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-05-15",
@@ -493,7 +656,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-05-15",
@@ -511,7 +676,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-05-15",
@@ -529,7 +696,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-05-15",
@@ -547,7 +716,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-05-16",
@@ -568,7 +739,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-05-16",
@@ -589,7 +762,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-07",
@@ -609,7 +784,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-11",
@@ -626,7 +803,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -649,7 +828,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of BDW B0, SKL A0, SKL ULT A0.",
+    "trigger_context": "Triggered during platform validation of BDW B0, SKL A0, SKL ULT A0. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -662,7 +841,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-06-12",
@@ -683,7 +863,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-06-12",
@@ -704,7 +886,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-06-12",
@@ -725,7 +909,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -746,7 +932,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -767,7 +955,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-06-12",
@@ -788,7 +978,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -809,7 +1001,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -830,7 +1024,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-06-12",
@@ -851,7 +1047,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-08-19",
@@ -872,7 +1070,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of Visa plugin, BDW_U_UC B0.",
+    "trigger_context": "Triggered during platform validation of Visa plugin, BDW_U_UC B0. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -885,7 +1083,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-08-19",
@@ -906,7 +1105,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of HSD, 4723781.",
+    "trigger_context": "Triggered during platform validation of HSD, 4723781. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -919,7 +1118,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-11-22",
@@ -941,7 +1141,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of VISA, SKL PO, GTPO.",
+    "trigger_context": "Triggered during platform validation of VISA, SKL PO, GTPO. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -954,7 +1154,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-11-22",
@@ -975,7 +1176,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 3,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of GTPO, XML.",
+    "trigger_context": "Triggered during platform validation of GTPO, XML. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -989,7 +1190,8 @@
     },
     "passes": 3,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-11-22",
@@ -1010,7 +1212,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 1,
     "refinement_level": 2,
-    "trigger_context": "Triggered during platform validation of Signal Assignment, Online Converter.",
+    "trigger_context": "Triggered during platform validation of Signal Assignment, Online Converter. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -1023,7 +1225,8 @@
       "precision": "EXACT"
     },
     "passes": 1,
-    "consecutive_zero_deltas": 0
+    "consecutive_zero_deltas": 0,
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-11-25",
@@ -1044,7 +1247,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-11-30",
@@ -1067,7 +1272,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-12-02",
@@ -1088,7 +1295,7 @@
     "temporal_provenance": "document_date",
     "impact_level": 3,
     "refinement_level": 3,
-    "trigger_context": "Triggered during platform validation of PDM_Mux, visa_legacy_channel.xml.",
+    "trigger_context": "Triggered during platform validation of PDM_Mux, visa_legacy_channel.xml. (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)",
     "spatial_anchor": {
       "source_file": "2013.json",
       "line_start": 1,
@@ -1102,7 +1309,8 @@
     },
     "passes": 3,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-12-05",
@@ -1138,7 +1346,8 @@
     },
     "passes": 4,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability"
   },
   {
     "date": "2013-12-05",
@@ -1174,7 +1383,8 @@
     },
     "passes": 3,
     "consecutive_zero_deltas": 2,
-    "status": "SATURATED"
+    "status": "SATURATED",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app"
   },
   {
     "date": "2013-12-05",
@@ -1195,7 +1405,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Built TeamCity CI API test suites verifying platform debug toolkit stability",
+    "trigger_context": "Triggered during validation (Built TeamCity CI API test suites verifying platform debug toolkit stability)."
   },
   {
     "date": "2013-12-09",
@@ -1216,7 +1428,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-12-09",
@@ -1237,7 +1451,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-12-17",
@@ -1254,7 +1470,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-12-18",
@@ -1271,7 +1489,9 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   },
   {
     "date": "2013-12-30",
@@ -1288,6 +1508,8 @@
     "refinement_level": 0,
     "passes": 0,
     "consecutive_zero_deltas": 0,
-    "sensitivity": "Public"
+    "sensitivity": "Public",
+    "career_bedrock_anchor": "Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app",
+    "trigger_context": "Triggered during validation (Post-Silicon Debug Software Developer: Owned Intel VISA signal-trace debug app)."
   }
 ]

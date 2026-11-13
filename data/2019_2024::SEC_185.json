@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2022-08-24",
+    "summary": "Defined scope for MIV (Manageability Infrastructure Validation) across legacy and new platforms (IGN, Aurora, EMR), distinguishing between IPMI and Redfish implementations. Established execution and triage ownership for SAF, Crashdump, and PECI tests.",
+    "evidence": "Legacy MIV scope (Montana) NM - power limiting... Aurora - NM on OpenBMC... Redfish power cycle... PECI (OOBMSM) - Jason",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV",
+      "Redfish",
+      "IPMI",
+      "Test Strategy",
+      "OpenBMC",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-08-24",
+    "summary": "Conducted 1:1 with [REDACTED] to align on MIV sync responsibilities and sysdebug meeting coverage.",
+    "evidence": "-1:1 with Frank",
+    "sensitivity": "Public",
+    "tags": [
+      "Coordination",
+      "Management"
+    ],
+    "rank": 2
+  },
+  {
+    "date": "2022-08-29",
+    "summary": "Executed boot script automation using toolext.bootscript.boot module with manual power good methods and IPC pulse/reset commands for hardware bring-up/debug.",
+    "evidence": "import toolext.bootscript.boot as b; b.go(pwrgoodmethod='manual'); ipc.pulsepwrgood(); ipc.forcereconfig()",
+    "sensitivity": "Public",
+    "tags": [
+      "IPC",
+      "Boot Scripting",
+      "Hardware Debug",
+      "Python",
+      "Automation"
+    ],
+    "rank": 4
+  }
+]

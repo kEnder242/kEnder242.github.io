@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2021-02-09",
+    "summary": "Implemented optimization for Redfish PECI fast loops, ensuring cleanup occurs only in hold state rather than flush.",
+    "evidence": "commit 4ef4b53df8943af7217196532caafaedf9792cb2: 'enable fast_loops for redfish peci - only clean up in hold not flush'",
+    "sensitivity": "Public",
+    "tags": [
+      "Optimization",
+      "Redfish",
+      "Git",
+      "PECI"
+    ],
+    "rank": 2
+  },
+  {
+    "date": "2021-02-18",
+    "summary": "Debugged PECI framework unit tests involving Redfish crashdump raw packet transmission and wake-on-PECI configuration. Identified that wake-on-PECI returned a bad code (0x90) and adjusted unit test logic to ignore this specific failure condition.",
+    "evidence": "Log: '*** Aborting: Received abort return code (FAIL) *** ( Setting wake on peci returned 0x90 (bad), try to ignore this in unit test)'",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "Debugging",
+      "Unit Testing",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-02-18",
+    "summary": "Investigated MSR thread scanning issues during PECI checkout, shifting focus to specific thread IDs. Encountered authorization failures (0x80140002) when attempting to unlock CLTAPC0 to Red level, noting that a power cycle might be required to resolve the authorization state.",
+    "evidence": "Log: 'could not authorize LBG_CLTAPC0 to level=Red due to Authorization_Failure == 0x80140002... Power cycle may be required before attempting another unlock.'",
+    "sensitivity": "Public",
+    "tags": [
+      "Authorization",
+      "Debugging",
+      "Hardware Access",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2021-02-18",
+    "summary": "Resolved local Git credential issues on Windows by removing expired credentials and performing a clean pull of the icelakex repository.",
+    "evidence": "Command: 'git fix: Windows Credentials -> remove expired credentials' and 'git clean -fd; git pull'",
+    "sensitivity": "Public",
+    "tags": [
+      "Git",
+      "Environment Setup"
+    ],
+    "rank": 2
+  }
+]

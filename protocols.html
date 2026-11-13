@@ -411,8 +411,7 @@
 | <strong><code>opencode-core.service</code></strong> | Service | <code>user</code> | <code>127.0.0.1:4097</code> | Core OpenCode/Codex REST engine (<code>Headroom wrap codex serve</code>). |
 | <strong><code>field-notes.service</code></strong> | Service | <code>system</code> | <code>:9001</code> | Python HTTP Server serving the Field Notes static dashboard. |
 | <strong><code>acme-pager.service</code></strong> | Service | <code>system</code> | <code>:8501</code> | Neural Pager Streamlit activity log dashboard. |
-| <strong><code>field-notes-nibbler.service</code></strong> | Service | <code>user</code> | Background | Continuous load-aware note scanner and indexer. |
-| <strong><code>field-notes-nightly.timer</code></strong> | Timer | <code>user</code> | <code>02:00 AM</code> | Nightly 2:00 AM note synthesis &amp; date aggregation sweep. |</p>
+| <strong><code>field-notes-nightly.timer</code></strong> | Timer | <code>system</code> | <code>02:00 AM</code> | Nightly 2:00 AM maintenance sweep triggering <code>field-notes-nightly.service</code> (<code>nightly_forge.py</code>). Note intake runs in Step 7 (<code>mass_scan.py --once</code> / <code>nibble_v2.py</code>) until 05:00 AM cutoff. |</p>
 </li>
 <li>
 <p><strong>Proxy Usage</strong>: All agentic orchestration must flow through the <strong>Native MCP Tools</strong> (<code>lab_start</code>, <code>lab_stop</code>, <code>lab_quiesce</code>). These tools act as a stateless proxy to the resident service.
@@ -1236,7 +1235,28 @@
 <li><code>[AGY:PRIMARY]</code>: Story is architectural scaffolding, protocol governance, and schema bootstrap reserved for the primary orchestrator.</li>
 <li><strong>Local-First Default &amp; The 3-Attempt Invariant:</strong> Stories default to local silicon (<code>[SWARM:LOCAL]</code>) for targeted code surgery and unit testing. Under <code>[SWARM:LOCAL]</code>, AGY is strictly forbidden from directly modifying the target codebase files and must focus entirely on enabling delegation as L1 orchestrator across all 3 local attempts (Attempt 1a baseline, 1b diagnostic remediation, 1c harness/anchor calibration).</li>
 <li><strong>The Escalation Ladder &amp; Last-Resort Takeover:</strong> Only after local silicon exhausts all 3 diagnostic rounds does a story promote to Cloud Swarm (<code>[SWARM:CLOUD]</code>). Direct code takeover (<code>[AGY:TAKEOVER]</code>) is strictly the final last resort, permissible only after both local and cloud swarms have executed, failed, and logged an explicit diagnostic post-mortem in the sprint report.</li>
-<li><strong>Anti "Across-the-Board" Review Trigger:</strong> If 100% of the stories in a sprint phase share the identical assignment tag (e.g. all <code>[AGY:PRIMARY]</code>, all <code>[SWARM:LOCAL]</code>, or all <code>[SWARM:CLOUD]</code>), the orchestrator MUST pause during pre-flight planning to review the distribution. Confirm whether tasks were genuinely evaluated by scope or batched out of convenience.</li>
+<li><strong>Anti "Across-the-Board" Review Trigger:</strong> If 100% of the stories in a sprint phase share the identical assignment tag (e.g. all <code>[AGY:PRIMARY]</code>, all <code>[SWARM:LOCAL]</code>, or all <code>[SWARM:CLOUD]</code>), the orchestrator MUST pause during pre-flight planning to review the distribution. Confirm whether tasks were genuinely evaluated by scope or batched out of convenience. Specifically, 100% <code>[AGY:PRIMARY]</code> assignment trips <strong>Pre-Flight Checklist Gate Item 4.1 (<code>BKM-082 §GATE</code>)</strong> and halts sprint planning until leaf code surgeries are decomposed into <code>[SWARM:LOCAL]</code>.</li>
+<li><strong>Task Scope &amp; Complexity Tiering Matrix (Assignment Guidance):</strong>
+   To avoid misrouting complex tasks to ultra-compact local weights or burning cloud tokens on trivial edits, story assignment during sprint planning MUST follow this scope tiering matrix:</li>
+<li><strong><code>[SWARM:LOCAL]</code> (Sovereign Bicameral Silicon - Kender 4090 + M5 Air):</strong><ul>
+<li><strong>Scope Boundary:</strong> Single-file or tightly bounded intra-file edits (&lt;2,000 tokens changed), localized unit testing, or well-scoped AST leaf refactoring.</li>
+<li><strong>Requirements:</strong> Deterministic 4-anchor contracts (<code>[ANCHOR: TARGET]</code>, <code>[ANCHOR: INTENT]</code>, <code>[ANCHOR: TEST]</code>, <code>[ANCHOR: BOUNDARY]</code>), pre-existing test harnesses, single-repository scope.</li>
+<li><strong>Prohibitions:</strong> Multi-repo or cross-submodule synchronizations, greenfield test harness authoring, wide exploratory search across multiple directories.</li>
+</ul>
+</li>
+<li><strong><code>[SWARM:CLOUD]</code> (High-Capacity Cloud Swarm - OpenRouter Free / Sisyphus):</strong><ul>
+<li><strong>Scope Boundary:</strong> Multi-file refactorings (&gt;3 files), cross-submodule or cross-repository implementations (e.g. schema/ledger in <code>Portfolio_Dev</code> + runtime consumers in <code>HomeLabAI</code>), greenfield test suites, and tasks requiring &gt;10,000 tokens of architectural context.</li>
+<li><strong>Requirements:</strong> Clear interface contracts and explicit target file lists.</li>
+</ul>
+</li>
+<li><strong><code>[SWARM:ORACLE]</code> (Deep Analytical Reasoning - Cohere / High-Reasoning Nodes):</strong><ul>
+<li><strong>Scope Boundary:</strong> Pre-sprint architectural evaluations, regression risk audits, and policy reconciliation without codebase mutations.</li>
+</ul>
+</li>
+<li><strong><code>[AGY:PRIMARY]</code> (Primary Conductor / Human-in-the-Loop Pair):</strong><ul>
+<li><strong>Scope Boundary:</strong> Systemd daemon lifecycle (<code>systemctl restart</code>), port management, physical silicon connectivity and live shakedown (<code>BKM-024</code>), sprint roll-up, authority certification, and emergency takeovers (<code>[AGY:TAKEOVER]</code>).</li>
+</ul>
+</li>
 </ol>
 <h4>4. Sovereign Local Silicon Topology Invariant (KENDER -&gt; Air)</h4>
 <ol>
@@ -1245,6 +1265,10 @@
 <li><strong>Conductor (Root Dispatch / Architectural Roles):</strong> Node KENDER (Windows RTX 4090 Ollama: <code>hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL</code> / <code>Atlas</code> / <code>Architect</code>). Receives the sprint story, conducts architecture planning, and dispatches bounded leaf tasks.</li>
 <li><strong>Leaf Worker (Surgical Patching / Execution):</strong> Node Brain (macOS M5 Air MLX via Headroom <code>:8002</code>: <code>TokenAI-zer--Ternary-Bonsai-2-27B-MLX-oQ2-mtp</code> / <code>Sisyphus-Junior</code> or <code>Daedalus</code>). Receives spoon-fed 4-anchor tasks, applies atomic <code>clara-dna_safe_patch</code> edits, and is strictly forbidden from delegating further (<code>task: deny</code>).</li>
 <li><strong>Topology Deviation Invariant:</strong> Any inversion or deviation from this pattern constitutes an immediate operational failure. <code>delegate.py</code> and diagnostic monitors MUST enforce this check and fail immediately upon deviation.</li>
+<li><strong>Local 2-Bit Attention &amp; Prompt Noise Guardrail:</strong></li>
+<li>Node Brain (M5 Air) runs <code>TokenAI-zer--Ternary-Bonsai-2-27B-MLX</code> packed in 2-bit quantization (<code>PQ2_0</code> / <code>oQ2</code>). Highly quantized ternary weights have razor-thin attention entropy margins and are susceptible to catastrophic attention collapse when exposed to conflicting instructions or non-essential prompt ballast.</li>
+<li><strong>Prohibition of Contradictory Upstream Hooks:</strong> Hook extensions that inject competing reminders or intrusive task nagging (e.g. <code>agent-usage-reminder</code>) MUST remain explicitly disabled (<code>"disabled_hooks": ["agent-usage-reminder"]</code> in <code>oh-my-openagent.json</code>) during local worker execution.</li>
+<li><strong>Strict Single-Role Focus:</strong> Leaf workers must receive single, unambiguous objectives. Feeding uncurated diff debris, ambient hook memory bloat, or multi-role tasks to local 2-bit workers triggers repetitive loops (<code>evaluation_s = evaluation_s</code>) and constitutes an operational violation.</li>
 </ol>
 <h4>5. Handover Reflection Ingestion, Live Mandate Audit &amp; Action ([FEAT-654] / [BKM-024])</h4>
 <ol>
@@ -1500,6 +1524,7 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
 <th style="text-align: left;">Prefix</th>
 <th style="text-align: left;">Cognitive Purpose</th>
 <th style="text-align: left;">Primary Question</th>
+<th style="text-align: left;">Chroma Collection</th>
 <th style="text-align: left;">Source of Record</th>
 </tr>
 </thead>
@@ -1509,63 +1534,176 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
 <td style="text-align: left;"><code>INS-xxx</code> <em>(alias: <code>PHL-xxx</code>)</em></td>
 <td style="text-align: left;">Conceptual Worldviews, Invariant Epistemology &amp; Spark Insights</td>
 <td style="text-align: left;"><strong>WHY (First Principle)</strong></td>
-<td style="text-align: left;"><code>inspiration_data.json</code> / <code>philosophy_data.json</code> $\rightarrow$ <code>philosophy_dna</code></td>
+<td style="text-align: left;"><code>inspiration_dna</code> / <code>philosophy_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/dna/inspiration_data.json</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Wisdom</strong></td>
 <td style="text-align: left;"><code>WIS-xxx</code></td>
 <td style="text-align: left;">Practical Lessons, War Stories &amp; Failure Scars</td>
 <td style="text-align: left;"><strong>WHY (Empirical)</strong></td>
-<td style="text-align: left;"><code>stories.html</code> $\rightarrow$ <code>wisdom_data.json</code> $\rightarrow$ <code>wisdom_dna</code></td>
+<td style="text-align: left;"><code>wisdom_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/dna/wisdom_data.json</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Protocols</strong></td>
 <td style="text-align: left;"><code>BKM-xxx</code></td>
-<td style="text-align: left;">Prescriptive Rules &amp; Actionable Directives</td>
+<td style="text-align: left;">Prescriptive Rules &amp; Operational Directives</td>
 <td style="text-align: left;"><strong>HOW (Mandate)</strong></td>
-<td style="text-align: left;"><code>Protocols.md</code> $\rightarrow$ <code>behavioral_dna</code></td>
+<td style="text-align: left;"><code>behavioral_dna</code></td>
+<td style="text-align: left;"><code>HomeLabAI/docs/Protocols.md</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Infrastructure</strong></td>
+<td style="text-align: left;"><code>LAB-xxx</code></td>
+<td style="text-align: left;">Physical Hardware Laws, Silicon Topology &amp; Milestones</td>
+<td style="text-align: left;"><strong>HOW (Physical)</strong></td>
+<td style="text-align: left;"><code>behavioral_dna</code> <em>(type: <code>INFRA</code>)</em></td>
+<td style="text-align: left;"><code>HomeLabAI/docs/LAB_INFRASTRUCTURE.md</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Features</strong></td>
-<td style="text-align: left;"><code>FEAT-xxx</code></td>
-<td style="text-align: left;">Registered Capabilities &amp; Architectural Specs</td>
+<td style="text-align: left;"><code>FEAT-xxx</code>, <code>LAB-xxx</code></td>
+<td style="text-align: left;">Registered Capabilities, Architectural Specs &amp; Engine Levers</td>
 <td style="text-align: left;"><strong>WHAT (Mechanics)</strong></td>
-<td style="text-align: left;"><code>FeatureTracker.md</code> $\rightarrow$ <code>feature_dna</code></td>
+<td style="text-align: left;"><code>feature_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/FeatureTracker.md</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Vibes</strong></td>
 <td style="text-align: left;"><code>VIBE-xxx</code></td>
 <td style="text-align: left;">Behavioral Persona &amp; Conversational Tonality</td>
 <td style="text-align: left;"><strong>WHO (Tone)</strong></td>
-<td style="text-align: left;"><code>vibe_data.json</code> / <code>FeatureTracker.md</code> $\rightarrow$ <code>vibe_dna</code></td>
+<td style="text-align: left;"><code>vibe_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/dna/vibe_data.json</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diagnostics</strong></td>
+<td style="text-align: left;"><code>SCRIPT-xxx</code></td>
+<td style="text-align: left;">Diagnostic Scripts, Benchmarks &amp; Validation Tools</td>
+<td style="text-align: left;"><strong>HOW (Diagnostic)</strong></td>
+<td style="text-align: left;"><code>diagnostic_dna</code></td>
+<td style="text-align: left;"><code>HomeLabAI/docs/DIAGNOSTIC_SCRIPT_MAP.md</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Loop Ledger</strong></td>
+<td style="text-align: left;"><code>LOOP-xxx</code></td>
+<td style="text-align: left;">Self-Correction &amp; Feedback Loop Registries</td>
+<td style="text-align: left;"><strong>HOW (Feedback)</strong></td>
+<td style="text-align: left;"><code>loop_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/field_notes/data/foyer_feedback_ledger.jsonl</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Discoveries</strong></td>
 <td style="text-align: left;"><code>DISC-xxx</code></td>
 <td style="text-align: left;">Distillation Insights &amp; Subconscious Epiphanies</td>
 <td style="text-align: left;"><strong>WHAT (Insight)</strong></td>
-<td style="text-align: left;"><code>discovery</code> collection $\rightarrow$ <code>DISC</code> ledger</td>
+<td style="text-align: left;"><code>discovery</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/field_notes/data/</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Sprint DNA</strong></td>
 <td style="text-align: left;"><code>SPR-xxx</code></td>
-<td style="text-align: left;">Active Sprint Plans, Story Cards &amp; Decoupled ASTs</td>
+<td style="text-align: left;">Active Sprint Plans, Story Cards &amp; ASTs</td>
 <td style="text-align: left;"><strong>WHEN (Active)</strong></td>
-<td style="text-align: left;"><code>SPRINT_PLAN_*.md</code> $\rightarrow$ <code>sprint_dna</code></td>
+<td style="text-align: left;"><code>sprint_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/docs/sprints/active/</code> &amp; <code>archive/</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Reverse DNA</strong></td>
 <td style="text-align: left;"><code>RDNA-xxx</code></td>
 <td style="text-align: left;">Pre-Processed Question Space &amp; HyDE Bypass</td>
 <td style="text-align: left;"><strong>WHEN / ASK</strong></td>
-<td style="text-align: left;"><code>rdna_questions.json</code> $\rightarrow$ <code>rdna</code></td>
+<td style="text-align: left;"><code>rdna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/dna/rdna_questions.json</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Artifacts</strong></td>
 <td style="text-align: left;"><code>ART-xxx</code></td>
 <td style="text-align: left;">External Google Drive / Doc Links &amp; Assets</td>
 <td style="text-align: left;"><strong>WHERE (Asset)</strong></td>
-<td style="text-align: left;"><code>artifact_vault</code> collection</td>
+<td style="text-align: left;"><code>artifact_vault</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev/dna/artifact_vault.json</code></td>
+</tr>
+</tbody>
+</table>
+<h3>2.1 The Canonical Physical Source-of-Record &amp; Ingestion Map</h3>
+<p>All automated memory ingestion across ChromaDB port 8001 is synchronized via three primary orchestrators: <code>sync_chroma_dna.py</code>, <code>sync_sprint_dna.py</code>, and <code>sync_paper_dna.py</code>. Agents must use this physical map to locate sources of record across repositories:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ChromaDB Collection</th>
+<th style="text-align: left;">Repository</th>
+<th style="text-align: left;">Source File Path (Relative to Repo Root)</th>
+<th style="text-align: left;">Synchronizer Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>feature_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>FeatureTracker.md</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>behavioral_dna</code> (<code>BKM</code>)</td>
+<td style="text-align: left;"><code>HomeLabAI</code></td>
+<td style="text-align: left;"><code>docs/Protocols.md</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>behavioral_dna</code> (<code>INFRA</code>)</td>
+<td style="text-align: left;"><code>HomeLabAI</code></td>
+<td style="text-align: left;"><code>docs/LAB_INFRASTRUCTURE.md</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wisdom_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>dna/wisdom_data.json</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>inspiration_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>dna/inspiration_data.json</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>vibe_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>dna/vibe_data.json</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>rdna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>dna/rdna_questions.json</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>loop_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>field_notes/data/foyer_feedback_ledger.jsonl</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>diagnostic_dna</code></td>
+<td style="text-align: left;"><code>HomeLabAI</code></td>
+<td style="text-align: left;"><code>docs/DIAGNOSTIC_SCRIPT_MAP.md</code></td>
+<td style="text-align: left;"><code>sync_chroma_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sprint_dna</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>docs/sprints/active/</code> &amp; <code>archive/</code></td>
+<td style="text-align: left;"><code>sync_sprint_dna.py</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>paper_dna_*</code></td>
+<td style="text-align: left;"><code>Portfolio_Dev</code></td>
+<td style="text-align: left;"><code>curated_papers/</code></td>
+<td style="text-align: left;"><code>sync_paper_dna.py</code></td>
 </tr>
 </tbody>
 </table>
@@ -1576,6 +1714,7 @@ git remote set-url --add --push origin &lt;secondary-mirror-url&gt;
 <li><strong>Horizontal Re-Bucketing:</strong> If an item is discovered in the wrong container (e.g. a raw discovery that is actually an operational mandate), it must be horizontally migrated to its rightful bucket with bidirectional <code>explicit_links</code> preserved.</li>
 <li><strong>JITC Retrieval Law:</strong> Agents must query specific taxonomy buckets on-demand via <code>get_protocol(bkm_id="BKM-xxx")</code> or <code>query_dna(collection="...")</code> rather than loading global taxonomy tables into primary agent prompt context.</li>
 <li><strong>Single-Library &amp; 24/7 ChromaDB Daemon Mesh:</strong> All ambient vector retrieval for Layer 1 strategic planning (whether running via AGY CLI or Cloud OpenCode orchestrators like Prometheus/Sisyphus) MUST consume the single canonical library (<code>HomeLabAI/src/curator/ambient_recall.py</code>) querying the 24/7 resident ChromaDB service on port 8001 (<code>chroma-server.service</code>). Never fork duplicate hook scripts across <code>.agents/scripts/</code> or <code>config/hooks/</code>, and never attach pre-turn ambient hooks to Layer 2/3 local execution workers.</li>
+<li><strong>Physical Source Boundary Law:</strong> Never assume all DNA lives in <code>Portfolio_Dev/dna/</code>. Physical silicon laws, daemon architecture, and operational mandates reside in <code>HomeLabAI/docs/</code> (<code>LAB_INFRASTRUCTURE.md</code>, <code>Protocols.md</code>), while conceptual specs, historical wisdom, and sprint plans reside in <code>Portfolio_Dev/</code>. Agents must consult the Canonical Physical Source Map in §2.1 before initiating cross-repository file edits or synchronization runs.</li>
 </ol>
                             </div>
                         </td>
@@ -2036,8 +2175,10 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 - [ ] <strong>1. 5-Sprint Lookback</strong>: Reviewed last 5 sprints for traps, anti-patterns, and sentinels (<code>BKM-082 §2.1</code>).
 - [ ] <strong>2. Mistakes-Avoided Ledger</strong>: Enumerate $\ge$ 3 concrete historical mistakes avoided (<code>BKM-082 §2.4</code>).
 - [ ] <strong>3. Oracle Review</strong>: Adversarial audit completed and appended via Cloud Synthesizer (<code>BKM-007</code> / <code>BKM-061</code> / <code>delegate.py --mode oracle</code>).
-- [ ] <strong>4. Delegation Justification</strong>: Evaluated <code>LOCAL</code>/<code>CLOUD</code> first; documented rationale for any story assigned to <code>AGY:PRIMARY</code> (<code>Invariant 7</code> / <code>BKM-049</code>).
-- [ ] <strong>5. Risk Assessment</strong>: Evaluated <code>LOCAL</code> tasks for promotion to <code>CLOUD</code> based on blast radius, file scale, or refactoring complexity.
+- [ ] <strong>4. Delegation Gate (<code>BKM-049</code> / <code>BKM-086 §Pillar 3</code>)</strong>: Dispatched to <code>[SWARM:LOCAL]</code> or <code>[SWARM:CLOUD]</code> via <code>delegate.py</code>. Direct <code>[AGY:PRIMARY]</code> authoring is strictly forbidden unless (A) explicitly commanded by the operator in the current prompt, or (B) 3 local and 1 cloud diagnostic rounds have failed in <code>delegation_ledger.jsonl</code>. Prose rationales cannot self-grant authority.
+- [ ] <strong>4.1 Sole-Owner &amp; Zero-Delegation Tripwire (<code>BKM-049 §3.4</code> / <code>BKM-086 §Pillar 3</code>)</strong>: Verified AGY is NOT the sole owner across 100% of sprint stories and zero delegation was assigned. If 100% of stories are tagged <code>[AGY:PRIMARY]</code> without an explicit, in-prompt operator waiver, HALT planning immediately—decouple leaf code surgery into <code>[SWARM:LOCAL]</code> before proceeding.
+- [ ] <strong>5. Risk Assessment</strong>: Evaluated tasks for promotion to <code>CLOUD</code> based on blast radius, file scale, or refactoring complexity.
+- [ ] <strong>6. BKM Invariant &amp; Anti-Bypass Audit</strong>: Explicitly verified plan against core BKMs (<code>BKM-049</code> Anti-Bypass, <code>BKM-048</code> Harness Halt, <code>BKM-044</code> Attendant Authority, <code>BKM-018</code> Orchestrator Gate). Confirmed zero un-waived protocol violations. All operator waivers are strictly phase-scoped per the <strong>Waiver Scope Law (<code>BKM-086 §1.2</code>)</strong>; historical waivers from prior sprints or phases are completely void.
 <em>An agent MUST NOT mark these <code>[x]</code> without citing the corresponding section in the plan. Any unchecked box halts execution.</em></p>
 </blockquote>
 <h3>1. The Core Law: Grounding Before Action</h3>
@@ -2253,6 +2394,11 @@ This guarantees that lessons learned and harness calibrations from Phase $N$ imm
 - <strong>Digital Checkbox Paper Trail</strong>: The AFK checklist lives directly inside the active sprint plan (<code>SPRINT_PLAN_*.md</code>) as an interactive markdown checklist (<code>- [ ] / - [x]</code>). Avoid standalone scratch files; digitally checking each box forces deliberate verification and creates a durable paper trail that prevents glossing over pre-flight gates.
 - <strong>Idempotent Execution</strong>: Paved paths do not need to be followed twice <strong>ONLY WHEN</strong> the BKM flow has <strong>ALREADY</strong> been followed and the corresponding artifacts (grounding, 4-anchor plans, delegation targets, and test harnesses) are <strong>CURRENT</strong>.
 - <strong>Level-of-Entry Flow-Down</strong>: Any additions, scope changes, or newly introduced stories <strong>MUST</strong> trigger a new path flow at the exact level they were added (e.g., introducing a new story mandates Grounding $\to$ 4-Anchor Specification $\to$ Delegation/Verification, rather than jumping directly to execution or skipping preceding BKM gates).</p>
+<h3>1.2 The Waiver Scope Law (Anti-Waiver Bleed Invariant)</h3>
+<p>Operator waivers (e.g., <em>"don't use local delegation for this phase"</em>, <em>"skip oracle audit"</em>, <em>"assign AGY primary"</em>) are strictly <strong>ephemeral, non-transferable, and temporally bounded</strong>:
+1. <strong>Single-Phase Expiration</strong>: An operator waiver expires automatically upon completion of the specific phase or sprint in which it was granted.
+2. <strong>Strict Anti-Bleed Invariant</strong>: An agent is strictly forbidden from carrying a historical waiver forward across sprint or phase boundaries. Treating a past tactical allowance as permanent architectural permission ("Waiver Bleed") is a severe protocol failure.
+3. <strong>Explicit Renewal Mandate</strong>: If an agent believes driver, systemd, or hardware risks still justify bypassing local delegation in a new sprint or phase, it MUST explicitly request a fresh waiver from the operator in chat text before authoring the plan. Self-granting a waiver based on prior conversations is null and void.</p>
 <h3>2. Operational Trigger &amp; Protocol Loop</h3>
 <p>When commanded to run an <strong>AFK Sprint</strong> or <strong>Paved Sprint</strong>:
 1. Check out an isolated sprint branch (<code>sprint-&lt;ID&gt;</code>).
@@ -2314,6 +2460,54 @@ Instead, developers must use the standalone empirical step micro-harness (<code>
 <p>When human judgment is required to evaluate quality, brevity, or persona tone:
 1. <strong>Question 1 (Objective Benchmark Selection)</strong>: Present the quantitative results across 2–3 variants (latency, token count, parse reliability) and select the empirical baseline.
 2. <strong>Question 2 (Subjective Tone Calibration)</strong>: Present the qualitative outputs with focused directional suggestions for operator alignment.</p>
+<h3>3. The Modus Operandi (MO) &amp; Tagged Expectations Standard</h3>
+<p>Under <code>BKM-088 §3</code> (Sprint 112.1 evolution), empirical verification expands beyond ad-hoc scoring into a structured, step-by-step expectation framework:</p>
+<ol>
+<li>
+<p><strong>The Equivalence of Terms</strong>:</p>
+<blockquote>
+<p><strong><code>MO</code> $\equiv$ <code>tags per stage</code> $\equiv$ <code>expectations</code></strong> (used interchangeably across lab documentation).
+   An MO represents the declarative ground-truth expectation vector for each discrete stage of the pipeline (triage domain/vibe, ClaraDB retrieval recall, reasoning anchors, and terminal delivery posture).</p>
+</blockquote>
+</li>
+<li>
+<p><strong>The Runtime Blindness Invariant</strong>:
+   Runtime generation models (<code>Pinky</code>, <code>Deep Thought</code>, <code>Brain</code>) and the sovereign <code>MLX Judge</code> must be <strong>100% BLIND</strong> to the MO during turn execution. The MO is NEVER injected into runtime prompts. It exists strictly out-of-band for the nightly audit watchdog (<code>standalone_accountability_watchdog.py</code>) to audit the pipeline and verify that the judge did not award a "Green Lie".</p>
+</li>
+<li>
+<p><strong>The 4 Expectation Sources (ABCD Framework)</strong>:</p>
+</li>
+<li><strong>Source A (<code>Test Probe</code>)</strong>: Fixed, frozen synthetic benchmark archetypes with deterministic stage expectations.</li>
+<li><strong>Source B (<code>Nightly AGY</code>)</strong>: Curated expectations authored during sprint pre-flight planning and retrospective forensics.</li>
+<li><strong>Source C (<code>Nightly Oracle</code>)</strong>: Autonomous 02:00–06:00 AM Cloud Oracle pass that inspects newly ingested notes, mines prospective test primers, and compiles their expected stage tags.</li>
+<li>
+<p><strong>Source D (<code>Human</code>)</strong>: Direct operator-specified ground truth and expectation vectors.</p>
+</li>
+<li>
+<p><strong>The Anti-Consensus Bubble Invariant</strong>:
+   Expectations MUST be established prior to or strictly isolated from execution results. An expectation is NEVER generated alongside the run it is judging. Post-generation evaluation is executed blindly against the pre-compiled MO vector, completely eliminating expectation bleed and self-fulfilling consensus loops.</p>
+</li>
+<li>
+<p><strong>The Conditional Pass Standard &amp; Epistemic Accountability</strong>:</p>
+</li>
+<li>If a primer queries a concept with genuinely zero records in ClaraDB, the MO tags <code>permissible_outcome: "REFUSAL_MANDATORY"</code>. When Pinky acknowledges evidence limits, the watchdog awards an expected <strong>Conditional Pass</strong>.</li>
+<li>
+<p>Conversely, if records exist in ClaraDB (e.g. in <code>artifact_vault</code> or <code>lab_journal</code>) and the model takes an easy refusal route, the watchdog records a <strong><code>LAZY_REFUSAL_DEFECT</code></strong> (False-Negative Green Lie), overriding any shallow high score from the judge.</p>
+</li>
+<li>
+<p><strong>Conversational Continuity Expectations (<code>CONTINUITY_VECTOR</code>)</strong>:
+   MO stage expectations track multi-turn continuity:</p>
+</li>
+<li><code>stage2_brain</code>: Expects emission of <code>[CONTINUITY_VECTOR: THREAD_CONTINUATION]</code> or <code>[CONTINUITY_VECTOR: TOPIC_PIVOT]</code>.</li>
+<li><code>stage3_deep_thought</code>: On <code>TOPIC_PIVOT</code>, expects hydration of the <strong>Untangling Directive</strong>, actively warning Pinky against conflating prior conversational entities with the current inquiry.</li>
+<li>
+<p><code>stage5_pinky</code>: Expects direct resolution without hallucinating entities from prior turns.</p>
+</li>
+<li>
+<p><strong>Canonical Ledger Archive</strong>:
+   All tagged MO specifications are persisted to <code>Portfolio_Dev/field_notes/data/mo_expectations_ledger.jsonl</code> with flexible per-stage expectation columns and historical audit runs.</p>
+</li>
+</ol>
                             </div>
                         </td>
                     </tr>
@@ -2621,7 +2815,7 @@ Explicit labeling enables the model to properly attribute the work to past histo
 5. <strong>06:00 AM (Decoupled Accountability Watchdog per FEAT-608)</strong>: Standalone watchdog executes the synthetic morning probe and audits overnight health.</p>
 <h3>3. Invariant Operational Directives</h3>
 <ol>
-<li><strong>Zero 24/7 Background Workers</strong>: Persistent continuous scanning services (<code>field-notes-nibbler.service</code>) are strictly barred. Mass scan runs exclusively as Step 7 inside <code>nightly_forge.py</code> with an enforced 05:00 AM hard cutoff gate.</li>
+<li><strong>Zero 24/7 Background Daemons &amp; Sparse Daytime Intake (Story 110.4)</strong>: Persistent continuous scanning daemons (<code>field-notes-nibbler.service</code>) remain permanently retired. Note ingestion (<code>nibble_v2.py</code>) executes outside of nightly in sparse batches (<code>limit=2</code>) protected by Foyer socket preemption (yielding whenever port 8765 or <code>/tmp/foyer_intercom.lock</code> is active). Overnight tail mop-up and mass scan execute inside <code>nightly_forge.py</code> with an enforced 05:00 AM hard cutoff gate (<code>FEAT-416</code>). Heavy GPU LoRA training and diamond gem refinement (<code>refine_gem.py</code>) remain strictly quarantined to the nightly window.</li>
 <li><strong>Strict Daemon Process Boundaries</strong>: External batch maintenance scripts must NEVER directly truncate or mutate files actively open and tailed by running daemons (e.g. <code>foyer_queue.jsonl</code> under <code>lab-attendant.service</code>). Foyer must manage its own queue compaction in-process during idle periods.</li>
 <li><strong>In-Pipeline Serialization</strong>: Tasks within <code>nightly_forge.py</code> execute synchronously in a single process thread; dreaming and gem refinement never execute concurrently.</li>
 </ol>
@@ -2650,6 +2844,75 @@ Explicit labeling enables the model to properly attribute the work to past histo
 2. <strong>Tier 2 (Strategic Focals &amp; Milestones)</strong>: Annual performance reviews (<code>focal_mesh.json</code>) embedded in ChromaDB <code>focal_dna</code>. Probed sub-20ms by <code>step_pre_triage</code> (<code>[FEAT-540]</code>) to supply gravitational <code>vector_hint</code> anchors for conversational triage before HyDE expansion.
 3. <strong>Tier 3 (Technical Scars &amp; Distilled Gems)</strong>: High-density distilled engineering gems indexed in <code>long_term_wisdom</code>. Gems must preserve spatial anchors (<code>line_start</code>, <code>line_end</code>) referencing physical source files.
 4. <strong>Tier 4 (Physical Raw Notes Ground Truth)</strong>: Un-embedded physical journal <code>.txt</code> files in <code>/home/jallred/knowledge_base/</code>. Surgically hydrated on-demand into Deep Thought's prompt payload via automated Ripgrep search pivots (<code>[FEAT-451]</code>).</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--accent-color); font-family: var(--font-stack); vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">BKM-101</td>
+                        <td style="vertical-align: top; padding: 12px 15px; border-bottom: 1px solid var(--border-color);">
+                            <div style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem; margin-bottom: 8px;">The Post-Modification Live Shakedown Protocol (First-Run Verification Mandate)</div>
+                            <div class="protocol-body" style="font-size: 0.85rem; color: var(--text-color); line-height: 1.5;">
+                                <p><strong>Feature Anchor:</strong> <code>[BKM-101]</code> / <code>[BKM-024]</code> / <code>[BKM-062]</code> / <code>[FEAT-619]</code> / <code>[LAB-110]</code><br />
+<strong>Colloquial Alias:</strong> "The Live Shakedown", "Anti-Import Miss Mandate", "First-Run Sanity Gate"<br />
+<strong>Tags:</strong> <code>#shakedown</code>, <code>#live_validation</code>, <code>#first_run</code>, <code>#import_hygiene</code>, <code>#zero_regression</code><br />
+<strong>Domain:</strong> Code Quality, Verification Engineering, Live Deployment, Diagnostics<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. Diagnostic (What Failed)</h3>
+<p>A persistent failure mode in rapid refactoring is declaring victory upon writing code without running a physical "shakedown". 
+- Example: Adding a helper or method (e.g. <code>resolve_probe_topic()</code> using <code>Path</code>) without importing <code>from pathlib import Path</code>. The code looks clean in diff, but fails catastrophically within 0.01s on initial invocation with <code>NameError: name 'Path' is not defined</code>.
+- Second-order failure: Diagnostic wrappers (e.g. watchdogs or sub-process runners) suppressing stderr on non-zero exit codes, masking obvious syntax/import regressions as ambiguous timeouts.</p>
+<h3>2. The Shakedown Definition</h3>
+<p>A <strong>Shakedown</strong> is an immediate, full-fidelity execution of the exact modified script, daemon path, or CLI tool in the authentic target environment (<code>.venv/bin/python3</code>, active environment variables, reachable network endpoints) immediately following code changes to prove the modification contains no obvious syntax errors, import misses, unbound variables, or runtime initialization crashes.</p>
+<h3>3. Invariant Shakedown Mandates</h3>
+<ol>
+<li><strong>First-Run Execution Before Certification</strong>: Never consider an edit, bugfix, or feature complete based solely on a diff, unit mock, or static review. The agent MUST run the modified entrypoint end-to-end once (a live shakedown) in the target environment.</li>
+<li><strong>Target Python Virtual Environment Mandate</strong>: Always invoke scripts using the authoritative project interpreter (e.g. <code>/home/jallred/Dev_Lab/HomeLabAI/.venv/bin/python3</code>), never the unconfigured system python.</li>
+<li><strong>Stderr Transparency in Watchdogs &amp; Harnesses</strong>: Subprocess harnesses and watchdog monitors MUST capture and log <code>res.stderr</code> when exit codes are non-zero. Suppressing stderr or returning generic "failed or timed out" strings is strictly forbidden.</li>
+<li><strong>Physical Output Inspection</strong>: Verify the physical output artifact (e.g. <code>daily_accountability_digest.json</code>, stdout JSON) to confirm real data was generated rather than an unhandled fallback or empty stub.</li>
+</ol>
+<hr />
+<h2>VIBE-020: Orthogonal Triage &amp; Additive Hydration (The "Positive Flags, Zero-Censorship" Law)</h2>
+<p><strong>Feature Anchor:</strong> <code>[FEAT-434]</code> / <code>[FEAT-469]</code> / <code>[FEAT-489]</code> / <code>[FEAT-533]</code> / <code>[FEAT-534]</code> / <code>[FEAT-540]</code> / <code>[FEAT-660]</code> / <code>[FEAT-671]</code><br />
+<strong>Related BKMs &amp; VIBEs:</strong> <code>[BKM-083]</code> (5-Stage Cognitive Hub) / <code>[BKM-085]</code> (JIT Grounding) / <code>[BKM-092]</code> (Temporal Provenance) / <code>[VIBE-006]</code> (Neural Resonance) / <code>[VIBE-019]</code> (Temporal Frame Disentanglement)<br />
+<strong>Colloquial Alias:</strong> "The Positive Flags Law", "Inclusive-OR Hydration", "Orthogonal Triage Mandate"<br />
+<strong>Tags:</strong> <code>#vibe_020</code>, <code>#inclusive_or</code>, <code>#additive_hydration</code>, <code>#zero_censorship</code>, <code>#orthogonal_triage</code><br />
+<strong>Domain:</strong> Semantic Triage, Context Hydration, RAG Architecture, Headroom Governance<br />
+<strong>Status:</strong> ACTIVE / MANDATORY  </p>
+<h3>1. The Orthogonality Axiom</h3>
+<ol>
+<li><strong>Independent Coordinates</strong>: <code>Vibe</code> (conversational mode, stance, tone: e.g. <code>HISTORICAL</code>, <code>OPERATIONAL</code>, <code>TECHNICAL</code>, <code>CASUAL</code>) and <code>Domain</code> (subject matter topic: e.g. <code>work_history</code>, <code>exp_tlm</code>, <code>dna</code>, <code>infra</code>) are strictly <strong>orthogonal dimensions</strong> in cognitive space.</li>
+<li><strong>Zero Artificial Blending</strong>: Vibes and domains do not compete, collide, or require complex mathematical blending or priority override matrices.</li>
+<li><strong>Non-Interference</strong>: A turn's conversational stance (<code>vibe</code>) must never negate or suppress its subject matter (<code>domain</code>), and vice versa. An informal tone (<code>vibe: CASUAL</code>) inquiring about past projects (<code>domain: work_history</code>) is a valid coordinate pair that must receive full grounding.</li>
+</ol>
+<h3>2. The "Positive Flags, Zero-Censorship" Law</h3>
+<ol>
+<li><strong>Inclusive-OR Triggering</strong>: Context hydration operates exclusively via <strong>positive inclusive flags</strong> $(\lor)$:
+   $$\text{Hydrate}(Block) \iff \text{Match}<em>{\text{vibe}}(Block) \lor \text{Match}</em>{\text{domain}}(Block) \lor \text{Match}_{\text{target}}(Block)$$</li>
+<li><strong>Prohibition of Negative Deny Lists</strong>: Hardcoded deny lists (e.g. <code>if v in ("OPERATIONAL", "CASUAL"): return False</code> or <code>_SUPPRESSED_FOR_LIVE_OPS</code>) are banned. If a context is irrelevant, it naturally remains un-triggered because neither its vibe nor domain flag fired; negative drop lists create artificial context starvation.</li>
+<li><strong>Prohibition of <code>elif</code> Mutual Exclusion</strong>: Sequential context blocks must never be chained via <code>if ... elif ... else</code>. An <code>elif</code> falsely treats distinct knowledge domains as mutually exclusive (e.g. dropping live telemetry when career bedrock is present). Each hydration block is evaluated as an independent, sequential <code>if</code>.</li>
+</ol>
+<h3>3. Classification-Bounded Token Budgeting</h3>
+<ol>
+<li><strong>Built-In Cardinality Limits</strong>: Token protection is guaranteed upstream by the triage schema itself:</li>
+<li><code>vibe</code>: Scalar <code>enum</code> (exactly 1 active vibe).</li>
+<li><code>domain</code>: Scalar <code>enum</code> (exactly 1 active primary domain).</li>
+<li><strong>The $1 + 1$ Upper Bound</strong>: Because triage cardinality is strictly $(1 \text{ vibe}, 1 \text{ domain})$, the maximum number of top-level directive blocks that can ever fire simultaneously is <strong>exactly two</strong> (at most 1 from vibe, at most 1 from domain).</li>
+<li><strong>Headroom Invariant</strong>: Runaway prompt stacking is structurally impossible under this schema. The natural stacking payload is capped at ~500 tokens of directive overhead, preserving local silicon headroom (M5 Air 2-bit MLX) without requiring complex runtime shedding heuristics.</li>
+</ol>
+<h3>4. Additive Stacking &amp; Semantic Demarcation Invariants</h3>
+<ol>
+<li><strong>Additive Prompt Stacking</strong>: When both the vibe flag and domain flag fire, their payloads are additive—they physically stack into the turn's prompt context.</li>
+<li><strong>Strict Section Tagging</strong>: To prevent cross-domain or temporal hallucination when disparate contexts stack (e.g. 2012 BMC validation notes stacking with 2026 RTX 4090 GPU vitals), each block MUST be encapsulated in explicit container tags:
+   ```text
+   [HISTORICAL_CAREER_BEDROCK]
+   ...
+   [/HISTORICAL_CAREER_BEDROCK]</li>
+</ol>
+<p>[CURRENT_LAB_TELEMETRY]
+   ...
+   [/CURRENT_LAB_TELEMETRY]
+   ```
+3. <strong>Lean Block Quotas</strong>: Each individual hydration source must maintain a lean byte quota (~200–350 tokens) so that compound stacks never crowd out the model's primary reasoning space.</p>
                             </div>
                         </td>
                     </tr>

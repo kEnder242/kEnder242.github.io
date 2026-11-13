@@ -1,14 +1,14 @@
 [
   {
-    "synopsis": "Scans directory for CSV files containing specific NetFunction tokens.",
+    "synopsis": "CSV scanner filtering CAN bus NetFunction logs against a whitelist.",
     "rank": 2,
     "type": "Script",
     "keywords": [
-      "Python",
+      "CAN",
       "CSV",
-      "NetFunction",
-      "scan",
-      "validation"
+      "Parsing",
+      "Whitelist",
+      "NetFunction"
     ],
     "filename": "scan_NetFunction_8-25-2020.py",
     "method": "AI"

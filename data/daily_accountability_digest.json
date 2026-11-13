@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-11-06T06:01:59.868210",
-  "date": "2026-11-06",
+  "timestamp": "2026-11-13T06:02:04.007171",
+  "date": "2026-11-13",
   "auditor": "standalone_accountability_watchdog (FEAT-619)",
-  "overall_status": "FAIL",
-  "total_checks": 8,
-  "passed_checks": 7,
+  "overall_status": "DEGRADED",
+  "total_checks": 9,
+  "passed_checks": 8,
   "failed_checks": 1,
   "checks": [
     {
@@ -26,39 +26,44 @@
     },
     {
       "name": "Nightly Forge Orchestration",
-      "passed": false,
-      "detail": "Status: FAIL (Age: 999.0h)",
-      "status": "FAIL",
-      "age_hours": 999.0
+      "passed": true,
+      "detail": "Status: COMPLETED (Age: 1.0h)",
+      "status": "COMPLETED",
+      "age_hours": 1.0
     },
     {
       "name": "LoRA Fine-Tuning Multi-Adapter Pass",
       "passed": true,
-      "detail": "Status: COMPLETED",
-      "status": "COMPLETED"
+      "detail": "MOTHBALLED (30m Quiet Soak Active)",
+      "status": "MOTHBALLED"
     },
     {
       "name": "Accountable Subconscious Dreaming",
       "passed": true,
-      "detail": "Fresh: 1.0h, Active Gems: 4",
+      "detail": "Fresh: 1.3h, Active Gems: 4",
       "count": 4
     },
     {
-      "name": "Synthetic Morning Round Table Probe",
+      "name": "Sanitization Escape Tripwire",
       "passed": true,
-      "detail": "Status: PASS, Critic Score: 1.00, Latency: 0.99ms",
-      "critic_score": 1.0
+      "detail": "No credential escapes in last 24h"
+    },
+    {
+      "name": "Synthetic Morning Round Table Probe",
+      "passed": false,
+      "detail": "Probe exit 1: ountability Probe against http://127.0.0.1:8765 (Topic: Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability)...",
+      "critic_score": 0.0
     },
     {
       "name": "Cgroup Swap Pressure Monitor",
       "passed": true,
-      "detail": "Swap: 5213MB/5213MB peak (33.1%)",
-      "swap_peak_mb": 5213.46,
-      "swap_current_mb": 5213.46,
-      "swap_utilization_pct": 33.12
+      "detail": "Swap: 15742MB/15742MB peak (100.0%)",
+      "swap_peak_mb": 15741.9,
+      "swap_current_mb": 15741.9,
+      "swap_utilization_pct": 100.0
     }
   ],
   "discrepancies": [
-    "Nightly Forge did not complete successfully (Status: FAIL (Age: 999.0h))"
+    "Probe exit 1: ountability Probe against http://127.0.0.1:8765 (Topic: Clearwater Forest (CWF) & Diamond Rapids (DMR) Manageability)..."
   ]
 }

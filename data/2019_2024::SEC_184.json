@@ -1,0 +1,93 @@
+[
+  {
+    "date": "2022-08-30",
+    "summary": "Clarification on LTM update validation process and MCTP backup interface risks",
+    "evidence": "\"LTM updates are released, but not validated\" - not sure I follow, perhaps \"Updates are released before validation\"? (validation at BKC level) Can you clairify MCTP? (PECI over PCIe) - is there a risk if wire and MCTP are gone? (i.e. no backup interface)",
+    "sensitivity": "Public",
+    "tags": [
+      "Risk Assessment",
+      "MCTP",
+      "LTM",
+      "Validation"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-08-30",
+    "summary": "PECI Stressor tool analysis: BMC timeout behavior and CPU benchmark impact measurement",
+    "evidence": "XPIV pecistressor Sends large payloads over Redfish Expects BMC to time out and send partial data back - interesting with wake on peci disabled Can be used to measure the impact of PECI traffic on CPU benchmarks - has been done but not as an offcial test case",
+    "sensitivity": "Public",
+    "tags": [
+      "Performance",
+      "PECI Stressor",
+      "Redfish",
+      "XPIV",
+      "BMC"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-08-30",
+    "summary": "Identification of LTM and PCI config space gaps including security and access control issues",
+    "evidence": "LTM & PCI config space gaps New IP in EDS but not approved by security review for OOBMSM/PECI agent Endpoints that should not be accesible via OOBMSM/PECI agent but are readable due to overlap - DMI CSRs should not be readable Duplicate entpoints defined in LTM that mask access to PCH via fail over - No PECI testing outside SPR SOC Chop specific registers - MCC, HBM",
+    "sensitivity": "Public",
+    "tags": [
+      "Debug",
+      "LTM",
+      "PCI",
+      "SPR",
+      "Security",
+      "OOBMSM"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-29",
+    "summary": "Investigation of EGS DRAM ECS information retrieval over Out-of-Band (OOB) PECI",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/14017037890 : EGS DRAM ECS info over OOB PECI",
+    "sensitivity": "Public",
+    "tags": [
+      "OOB",
+      "EGS",
+      "DRAM",
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-29",
+    "summary": "PECI write operation analysis",
+    "evidence": "PECI write",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-29",
+    "summary": "Review of IPMI PECI Proxy command request from LISO DM customer issue",
+    "evidence": "IPMI PECI Proxy command ask from LISO DM customer issue review",
+    "sensitivity": "Public",
+    "tags": [
+      "Debug",
+      "IPMI",
+      "PECI",
+      "LISO"
+    ],
+    "rank": 4
+  },
+  {
+    "date": "2022-09-29",
+    "summary": "Review of Montana/FAI/thermal test cases for missed legacy TMF/TMC/TMS coverage",
+    "evidence": "PM team? Review Montana\\FAI\\thermal for missed legacy TMF/TMC/TMS test cases",
+    "sensitivity": "Public",
+    "tags": [
+      "Montana",
+      "Thermal",
+      "Legacy",
+      "Test Cases"
+    ],
+    "rank": 2
+  }
+]
