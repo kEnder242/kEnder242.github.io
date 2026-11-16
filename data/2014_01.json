@@ -1,0 +1,78 @@
+[
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026975 by correcting CT item selection in the VISA panel",
+    "evidence": "Corrected CT item selection in the VISA panel.",
+    "sensitivity": "Public",
+    "tags": [
+      "error_code",
+      "VISA"
+    ],
+    "rank": 4,
+    "document_date": "2014-01-21",
+    "event_era": "2014-01-21",
+    "event_year": 2014,
+    "event_quarter": "2014-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Resolved error code HSD 5026953 by correcting script generated from CEC register programs",
+    "evidence": "Corrected script generated from CEC register programs.",
+    "sensitivity": "Public",
+    "tags": [
+      "error_code",
+      "VISA"
+    ],
+    "rank": 4,
+    "document_date": "2014-01-21",
+    "event_era": "2014-01-21",
+    "event_year": 2014,
+    "event_quarter": "2014-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2014-01-21",
+    "summary": "Merged Main Visa with Skylake PO",
+    "evidence": "Merged Main Visa with Skylake PO on multiple dates (1/21/2014).",
+    "sensitivity": "Public",
+    "tags": [
+      "Skylake",
+      "VISA"
+    ],
+    "rank": 4,
+    "document_date": "2014-01-21",
+    "event_era": "2014-01-21",
+    "event_year": 2014,
+    "event_quarter": "2014-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2014-01-24",
+    "summary": "Investigating logging for VISA on multiple dates (1/24/2014)",
+    "evidence": "Implementing a logging facade, NLog target, and Log4Net appenderskeleton for VISA.",
+    "sensitivity": "Public",
+    "tags": [
+      "logging",
+      "VISA"
+    ],
+    "rank": 4,
+    "document_date": "2014-01-24",
+    "event_era": "2014-01-24",
+    "event_year": 2014,
+    "event_quarter": "2014-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

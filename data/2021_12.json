@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2021-12-15",
+    "summary": "Redfish OEM API validation meeting",
+    "evidence": "[16014835461] [CCB - BMC - OPEN] Redfish OEM API to issue MCTP RAW packets - Validation purposes (https://hsdes.intel.com/appstore/article/#/16014835461)",
+    "sensitivity": "Public",
+    "tags": [
+      "OEM API",
+      "Redfish"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-15",
+    "event_era": "2021-12-15",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 8b98a921 secured in queue. Igniting Brain...[STAGE 1/5] Preamble & Triage \u2014 STARTED[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED \"inferred_intent\": \"debug_condition_inquiry\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.4, \"intrigue\": 0.6, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"] }",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IEH CORRECT ERROR with ErrorStatus 0x1 and MaxBitIdx 0xA cleared",
+    "evidence": "Local Error Status for Error Source 5, Error Severity 1, and Error Status 0x4000 cleared",
+    "sensitivity": "Public",
+    "tags": [
+      "IEH",
+      "Error Correction"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-20",
+    "event_era": "2021-12-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2021-12-20",
+    "summary": "IFU MCA error in BIOS Serial logs related to Archer City board design",
+    "evidence": "Archer City WIKI Home page (https://wiki.ith.intel.com/display/archer/Archer+City+WIKI+Home)",
+    "sensitivity": "Public",
+    "tags": [
+      "IFU MCA",
+      "Archer City"
+    ],
+    "rank": 4,
+    "document_date": "2021-12-20",
+    "event_era": "2021-12-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

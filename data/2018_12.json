@@ -1,0 +1,61 @@
+[
+  {
+    "date": "2018-12-06",
+    "summary": "Cloned Git repository from remote server to local directory",
+    "evidence": "git clone ssh://jallred@git-amr-7.devtools.intel.com:29418/ptv-riv riv",
+    "sensitivity": "Public",
+    "tags": [
+      "clone",
+      "Git",
+      "repository"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Set user configuration for Git repository",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [
+      "user configuration",
+      "Git"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-12-06",
+    "summary": "Fetched commit-msg hook from remote repository and placed it in local .git/hooks directory",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [
+      "Git",
+      "commit-msg",
+      "hook"
+    ],
+    "rank": 4,
+    "document_date": "2018-12-06",
+    "event_era": "2018-12-06",
+    "event_year": 2018,
+    "event_quarter": "2018-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  }
+]

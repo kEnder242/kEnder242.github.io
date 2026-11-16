@@ -1,0 +1,60 @@
+[
+  {
+    "date": "2015-04-27",
+    "summary": "cfg_apitest64.exe used to run tests in probemode and tap2sb modes",
+    "evidence": "RAW LOGS: P C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_A0 LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*",
+    "sensitivity": "Public",
+    "tags": [
+      "probemode",
+      "cfg_apitest64.exe",
+      "tap2sb"
+    ],
+    "rank": 4,
+    "document_date": "2015-04-27",
+    "event_era": "2015-04-27",
+    "event_year": 2015,
+    "event_quarter": "2015-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2015-04-27",
+    "summary": "ITP bugs [5661248] and [5659929] reported",
+    "evidence": "RAW LOGS: TODO/Research link related to ITP bugs [5661248] and [5659929]",
+    "sensitivity": "Public",
+    "tags": [
+      "ITP",
+      "bugs"
+    ],
+    "rank": 4,
+    "document_date": "2015-04-27",
+    "event_era": "2015-04-27",
+    "event_year": 2015,
+    "event_quarter": "2015-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2015-04-27",
+    "summary": "ipccli module failed to import in Python 2.7.9 environment on Windows",
+    "evidence": "RAW LOGS: ImportError: No module named ipccli",
+    "sensitivity": "Public",
+    "tags": [
+      "Python 2.7.9",
+      "ipccli"
+    ],
+    "rank": 4,
+    "document_date": "2015-04-27",
+    "event_era": "2015-04-27",
+    "event_year": 2015,
+    "event_quarter": "2015-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

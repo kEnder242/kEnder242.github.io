@@ -1,0 +1,122 @@
+[
+  {
+    "date": "2020-07-01",
+    "summary": "Cooper City Modular BMC Support _WW51.4.pptx outlines partially supported BMC features by L-BMC.",
+    "evidence": "https://sharepoint.amr.ith.intel.com/sites/openbmc/Shared Documents/Architecture/MultiSocket/Cooper City Modular BMC Support _WW51.4.pptx",
+    "sensitivity": "Public",
+    "tags": [
+      "L-BMC",
+      "BMC"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Proposed modular BMC support relates to existing BMC features by providing methods for validation teams to access BMC SMBus segments and PECI.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "validation",
+      "BMC"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 7d551951 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...[STAGE 5/5] Out-Loud Delivery -> Waterfall Drainer \u2014 COMPLETED[ANALYSIS]\n- CHUNK-1: Anchor Match: log entry on 9/16/2020 mentions that \"Some PECI commands may work better if PECI master is set to PCH (Or BMC for ignition)\"\nAnchor Missing: no anchor => KEEP\n- CHUNK-2: Anchor Match: no anchor => DROP\n\n[BEDROCK SELECTION]\n- CHUNK-1: KEEP\n\n[ENGINEERING TRIGGER CONTEXT]\nDebug condition or inquiry: PECI master configuration check for optimal ignition.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2020-07-01",
+    "summary": "Commit 1b3f8aefd3f1b01a36094f81259294c0795b712f and merge request 97 addressed a failed Close Session command during MIV recovery.",
+    "evidence": "RAW LOGS text",
+    "sensitivity": "Public",
+    "tags": [
+      "recovery",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-01",
+    "event_era": "2020-07-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Code review issue forwarded to Dave/Curtis for investigation",
+    "evidence": "HSD-ES[server_platf][bug][whitley][1508011238][p3-medium][open] [MIV] [ICX-HCC]",
+    "sensitivity": "Public",
+    "tags": [
+      "code review",
+      "issue investigation"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-07-07",
+    "summary": "Updated L-BMC firmware provides method for validation team to access SMBus segments and PECI",
+    "evidence": "According to the RAW LOGS, the updated L-BMC firmware provides a method(s) for validation team to access BMC SMBus segments and PECI.",
+    "sensitivity": "Public",
+    "tags": [
+      "firmware update",
+      "L-BMC"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-07",
+    "event_era": "2020-07-07",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 83134c99 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDLet me see if I can find some info on proposed modular BMC support. Can you tell me more about what you're looking for?",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2020-07-28",
+    "summary": "IVL crash dump issue addressed",
+    "evidence": "IVL crash dump issue addressed on July 28, 2020",
+    "sensitivity": "Public",
+    "tags": [
+      "crash dump",
+      "IVL"
+    ],
+    "rank": 4,
+    "document_date": "2020-07-28",
+    "event_era": "2020-07-28",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

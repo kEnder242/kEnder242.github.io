@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2024-08-01",
+    "summary": "Inventory management follow-up on SMNC75000143",
+    "evidence": "Note: SMNC75000143 was taken down on 8/29/2019 and followed up with Inventory Management on 1/14/2020.",
+    "sensitivity": "Public",
+    "tags": [
+      "management",
+      "inventory"
+    ],
+    "rank": 4,
+    "document_date": "2024-08-01",
+    "event_era": "2019-08-29",
+    "event_year": 2019,
+    "event_quarter": "2019-Q3",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Simulation targeting Oakstream platform with specific configuration",
+    "evidence": "The simulation targeted the Oakstream platform with the configuration '1_socket_ucc-bmc-oobmsm-pfrprot-s3m' and using the fmod 'pfrprot+oobmsm+s3m+bmc'.",
+    "sensitivity": "Public",
+    "tags": [
+      "Oakstream",
+      "simulation"
+    ],
+    "rank": 4,
+    "document_date": "2024-08-01",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Oakstream",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2024-08-01",
+    "summary": "Error code 0014.D.57 encountered during BIOS configuration",
+    "evidence": "The RAW LOGS mention that error code 0014.D.57 was encountered during BIOS configuration, but they do not provide further information about the cause or implications of this error.",
+    "sensitivity": "Public",
+    "tags": [
+      "error",
+      "BIOS"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request a4c62117 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it sounds like you're looking into the interaction between the Platform Energy Counter (PCS) and the BMC and SUT. I'm checking our archives on the Acme Lab system to see if there's any documentation on this specific scenario.\",\n  \"search_terms\": \n    \"[['PCS', 'BMC', 'SUT'], ['ipmitool', 'Redfish API', 'Linux'], ['energy monitoring', 'power management', 'thermal monitoring']]\",\n  \"upvote\": true\n}",
+    "document_date": "2024-08-01",
+    "event_era": "2024-08-01",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
+    "impact_level": 3
+  }
+]

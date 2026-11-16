@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2015-01-28",
+    "summary": "Resolved IPC error code (0x800e0001) and improved FPGAIntegration stability by patching init_soc.cmm",
+    "evidence": "Log entry from 1/28/2015 mentioning intermittent test failure with IPC error code (0x800e0001) and Python script patching init_soc.cmm",
+    "sensitivity": "Public",
+    "tags": [
+      "init_soc.cmm",
+      "powercycle.py",
+      "FPGAIntegration"
+    ],
+    "rank": 4,
+    "document_date": "2015-01-28",
+    "event_era": "2015-01-28",
+    "event_year": 2015,
+    "event_quarter": "2015-Q1",
+    "temporal_confidence": 0.95,
+    "temporal_provenance": "explicit_incident_date",
+    "impact_level": 3,
+    "refinement_level": 1
+  }
+]

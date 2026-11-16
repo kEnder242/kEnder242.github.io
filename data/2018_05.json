@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2018-05-22",
+    "summary": "Install HAMR (no specific version mentioned)",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "HAMR"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-22",
+    "event_era": "2018-05-22",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-05-23",
+    "summary": "Configure HAMR with shmemcc using UFM - mellanox unified fabric manager",
+    "evidence": "http://www.mellanox.com/related-docs/prod_acceleration_software/HPC-X_Toolkit_User_Manual_v2.1.pdf",
+    "sensitivity": "Public",
+    "tags": [
+      "UFM",
+      "HAMR",
+      "shmemcc"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-23",
+    "event_era": "2018-05-23",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Setup Infiniband port-to-port post-driver using quickstart",
+    "evidence": "https://docs.blazingdb.com/docs/setting-up-infiniband-port-to-port-post-drivers",
+    "sensitivity": "Public",
+    "tags": [
+      "quickstart",
+      "Infiniband"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-24",
+    "event_era": "2018-05-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-05-24",
+    "summary": "Provision AEP DIMM(s) as AppDirect Mode, map to PMEM device under OS, and logical name tag mapped to it",
+    "evidence": "",
+    "sensitivity": "Public",
+    "tags": [
+      "AEP",
+      "PMEM",
+      "AppDirect Mode"
+    ],
+    "rank": 4,
+    "document_date": "2018-05-24",
+    "event_era": "2018-05-24",
+    "event_year": 2018,
+    "event_quarter": "2018-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

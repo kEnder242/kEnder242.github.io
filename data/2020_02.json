@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2020-02-01",
+    "summary": "Using futurize tool as a workaround for resolving issues",
+    "evidence": "RAW LOGS: Command 'futurize -w --stage1' used as a workaround",
+    "sensitivity": "Public",
+    "tags": [
+      "futurize"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-01",
+    "event_era": "2020-02-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Error: No module named 'icelakex' while initializing PECI Xtor IPMI_HOST",
+    "evidence": "RAW LOGS: Error message 'No module named 'icelakex''",
+    "sensitivity": "Public",
+    "tags": [
+      "ipmi_host",
+      "peci"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-26",
+    "event_era": "2020-02-26",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-02-26",
+    "summary": "Using pyghmi and Crypto libraries for MSR reads on host IP address 10.3.3.31",
+    "evidence": "RAW LOGS: Code utilizing pyghmi and Crypto libraries for MSR reads",
+    "sensitivity": "Public",
+    "tags": [
+      "crypto",
+      "msr",
+      "pyghmi"
+    ],
+    "rank": 4,
+    "document_date": "2020-02-26",
+    "event_era": "2020-02-26",
+    "event_year": 2020,
+    "event_quarter": "2020-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  }
+]

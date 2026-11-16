@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2021-01-11",
+    "summary": "PECI framework handles connection aborts by res-establishing the connection.",
+    "evidence": "...if returncode in self.RET_CODES_CONNECTION_ABORTED:...",
+    "sensitivity": "Public",
+    "tags": [
+      "connection_abort",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-11",
+    "event_era": "2021-01-11",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2021-01-20",
+    "summary": "MIV report Weldon/Hooper/Staff...",
+    "evidence": "...-MIV report Weldon/Hooper/Staff...",
+    "sensitivity": "Public",
+    "tags": [
+      "report",
+      "MIV"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-20",
+    "event_era": "2021-01-20",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2021-01-26",
+    "summary": "Fuzzing support added for PECI commands.",
+    "evidence": "...commit 748a0c854f764b1a65c6cab926c1ccfc2a3464a3 (HEAD -> msr_fuzz, origin/msr_fuzz)...",
+    "sensitivity": "Public",
+    "tags": [
+      "fuzzing",
+      "PECI"
+    ],
+    "rank": 4,
+    "document_date": "2021-01-26",
+    "event_era": "2021-01-26",
+    "event_year": 2021,
+    "event_quarter": "2021-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

@@ -1,0 +1,1190 @@
+{
+  "version": "1.0.0",
+  "description": "Navigational Companion Map for Gap Notes File (FEAT-683)",
+  "source_file": "notes_2005_SSPD.txt",
+  "source_file_hash": "76b5dac8f787a3ea9ee82af48242e18c",
+  "total_lines": 2700,
+  "total_sections": 131,
+  "generated_at": "2026-11-02T15:00:46Z",
+  "sections": [
+    {
+      "section_id": "SEC-001",
+      "line_start": 1,
+      "line_end": 6,
+      "section_title": "Header / Environment Overview",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-002",
+      "line_start": 7,
+      "line_end": 13,
+      "section_title": "Done",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-003",
+      "line_start": 14,
+      "line_end": 55,
+      "section_title": "Section at line 14",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-004",
+      "line_start": 56,
+      "line_end": 66,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-005",
+      "line_start": 67,
+      "line_end": 77,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-006",
+      "line_start": 78,
+      "line_end": 88,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-007",
+      "line_start": 89,
+      "line_end": 109,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-008",
+      "line_start": 110,
+      "line_end": 121,
+      "section_title": "Section at line 110",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-009",
+      "line_start": 122,
+      "line_end": 131,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-010",
+      "line_start": 132,
+      "line_end": 141,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-011",
+      "line_start": 142,
+      "line_end": 151,
+      "section_title": "Log Section",
+      "platform": "IPMI/BMC",
+      "implied_era": "2005-Q1",
+      "chunk_type": "watchdog_telemetry"
+    },
+    {
+      "section_id": "SEC-012",
+      "line_start": 152,
+      "line_end": 171,
+      "section_title": "Log Section",
+      "platform": "IPMI/BMC",
+      "implied_era": "2005-Q1",
+      "chunk_type": "watchdog_telemetry"
+    },
+    {
+      "section_id": "SEC-013",
+      "line_start": 172,
+      "line_end": 187,
+      "section_title": "Get Watchdog Timer (Decoded)",
+      "platform": "IPMI/BMC",
+      "implied_era": "2005-Q1",
+      "chunk_type": "watchdog_telemetry"
+    },
+    {
+      "section_id": "SEC-014",
+      "line_start": 188,
+      "line_end": 197,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-015",
+      "line_start": 198,
+      "line_end": 216,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-016",
+      "line_start": 217,
+      "line_end": 226,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-017",
+      "line_start": 227,
+      "line_end": 245,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-018",
+      "line_start": 246,
+      "line_end": 255,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-019",
+      "line_start": 256,
+      "line_end": 319,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-020",
+      "line_start": 320,
+      "line_end": 353,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-021",
+      "line_start": 354,
+      "line_end": 370,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-022",
+      "line_start": 371,
+      "line_end": 381,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-023",
+      "line_start": 382,
+      "line_end": 392,
+      "section_title": "[ERR-060]: Srvr Diag States - The ID String Bytes field on line 3367 i",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-024",
+      "line_start": 393,
+      "line_end": 435,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "hardware_setup"
+    },
+    {
+      "section_id": "SEC-025",
+      "line_start": 436,
+      "line_end": 445,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-026",
+      "line_start": 446,
+      "line_end": 455,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-027",
+      "line_start": 456,
+      "line_end": 479,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-028",
+      "line_start": 480,
+      "line_end": 491,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-029",
+      "line_start": 492,
+      "line_end": 501,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-030",
+      "line_start": 502,
+      "line_end": 513,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-031",
+      "line_start": 514,
+      "line_end": 522,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-032",
+      "line_start": 523,
+      "line_end": 534,
+      "section_title": "sighting: telnet login causes error",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-033",
+      "line_start": 535,
+      "line_end": 544,
+      "section_title": "Section at line 535",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-034",
+      "line_start": 545,
+      "line_end": 568,
+      "section_title": "any user------ (\"login\" usuppoted command similar to \"logon\")",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-035",
+      "line_start": 569,
+      "line_end": 588,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-036",
+      "line_start": 589,
+      "line_end": 729,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-037",
+      "line_start": 730,
+      "line_end": 790,
+      "section_title": "three/three (operator)",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-038",
+      "line_start": 791,
+      "line_end": 813,
+      "section_title": "three/three (operator)",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-039",
+      "line_start": 814,
+      "line_end": 834,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-040",
+      "line_start": 835,
+      "line_end": 879,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-041",
+      "line_start": 880,
+      "line_end": 888,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-042",
+      "line_start": 889,
+      "line_end": 902,
+      "section_title": "Get Self Test Results (Decoded)",
+      "platform": "BMC",
+      "implied_era": "2005-Q1",
+      "chunk_type": "self_test_log"
+    },
+    {
+      "section_id": "SEC-043",
+      "line_start": 903,
+      "line_end": 912,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-044",
+      "line_start": 913,
+      "line_end": 922,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-045",
+      "line_start": 923,
+      "line_end": 942,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-046",
+      "line_start": 943,
+      "line_end": 953,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-047",
+      "line_start": 954,
+      "line_end": 988,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-048",
+      "line_start": 989,
+      "line_end": 1020,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-049",
+      "line_start": 1021,
+      "line_end": 1052,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-050",
+      "line_start": 1053,
+      "line_end": 1084,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-051",
+      "line_start": 1085,
+      "line_end": 1098,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-052",
+      "line_start": 1099,
+      "line_end": 1108,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-053",
+      "line_start": 1109,
+      "line_end": 1138,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-054",
+      "line_start": 1139,
+      "line_end": 1148,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-055",
+      "line_start": 1149,
+      "line_end": 1158,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-056",
+      "line_start": 1159,
+      "line_end": 1171,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-057",
+      "line_start": 1172,
+      "line_end": 1196,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-058",
+      "line_start": 1197,
+      "line_end": 1208,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-059",
+      "line_start": 1209,
+      "line_end": 1231,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-060",
+      "line_start": 1232,
+      "line_end": 1278,
+      "section_title": "Section at line 1232",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-061",
+      "line_start": 1279,
+      "line_end": 1288,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-062",
+      "line_start": 1289,
+      "line_end": 1298,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-063",
+      "line_start": 1299,
+      "line_end": 1308,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-064",
+      "line_start": 1309,
+      "line_end": 1352,
+      "section_title": "Get Enclosure Status (Decoded)",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-065",
+      "line_start": 1353,
+      "line_end": 1384,
+      "section_title": "Get Chassis Status (Decoded)",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-066",
+      "line_start": 1385,
+      "line_end": 1394,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-067",
+      "line_start": 1395,
+      "line_end": 1404,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-068",
+      "line_start": 1405,
+      "line_end": 1426,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-069",
+      "line_start": 1427,
+      "line_end": 1458,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-070",
+      "line_start": 1459,
+      "line_end": 1480,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-071",
+      "line_start": 1481,
+      "line_end": 1529,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-072",
+      "line_start": 1530,
+      "line_end": 1563,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-073",
+      "line_start": 1564,
+      "line_end": 1614,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-074",
+      "line_start": 1615,
+      "line_end": 1673,
+      "section_title": "Section at line 1615",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-075",
+      "line_start": 1674,
+      "line_end": 1710,
+      "section_title": "Log Section",
+      "platform": "BMC",
+      "implied_era": "2005-Q1",
+      "chunk_type": "self_test_log"
+    },
+    {
+      "section_id": "SEC-076",
+      "line_start": 1711,
+      "line_end": 1720,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-077",
+      "line_start": 1721,
+      "line_end": 1733,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-078",
+      "line_start": 1734,
+      "line_end": 1767,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-079",
+      "line_start": 1768,
+      "line_end": 1777,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-080",
+      "line_start": 1778,
+      "line_end": 1787,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-081",
+      "line_start": 1788,
+      "line_end": 1798,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-082",
+      "line_start": 1799,
+      "line_end": 1804,
+      "section_title": "Set PEF Configuration Parameters (Decoded)",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-083",
+      "line_start": 1805,
+      "line_end": 1835,
+      "section_title": "Set PEF Configuration Parameters (Decoded)",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-084",
+      "line_start": 1836,
+      "line_end": 1852,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-085",
+      "line_start": 1853,
+      "line_end": 1862,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-086",
+      "line_start": 1863,
+      "line_end": 1877,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-087",
+      "line_start": 1878,
+      "line_end": 1887,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-088",
+      "line_start": 1888,
+      "line_end": 1904,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-089",
+      "line_start": 1905,
+      "line_end": 1921,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-090",
+      "line_start": 1922,
+      "line_end": 1939,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-091",
+      "line_start": 1940,
+      "line_end": 2002,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-092",
+      "line_start": 2003,
+      "line_end": 2012,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-093",
+      "line_start": 2013,
+      "line_end": 2028,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-094",
+      "line_start": 2029,
+      "line_end": 2096,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-095",
+      "line_start": 2097,
+      "line_end": 2122,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-096",
+      "line_start": 2123,
+      "line_end": 2156,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-097",
+      "line_start": 2157,
+      "line_end": 2166,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-098",
+      "line_start": 2167,
+      "line_end": 2187,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-099",
+      "line_start": 2188,
+      "line_end": 2234,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-100",
+      "line_start": 2235,
+      "line_end": 2249,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-101",
+      "line_start": 2250,
+      "line_end": 2264,
+      "section_title": "Get Enclosure Status (Decoded)",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-102",
+      "line_start": 2265,
+      "line_end": 2271,
+      "section_title": "Section at line 2265",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "chassis_status"
+    },
+    {
+      "section_id": "SEC-103",
+      "line_start": 2272,
+      "line_end": 2282,
+      "section_title": "Section at line 2272",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-104",
+      "line_start": 2283,
+      "line_end": 2288,
+      "section_title": "Section at line 2283",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-105",
+      "line_start": 2289,
+      "line_end": 2295,
+      "section_title": "Section at line 2289",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-106",
+      "line_start": 2296,
+      "line_end": 2309,
+      "section_title": "Section at line 2296",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-107",
+      "line_start": 2310,
+      "line_end": 2321,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-108",
+      "line_start": 2322,
+      "line_end": 2351,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-109",
+      "line_start": 2352,
+      "line_end": 2361,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-110",
+      "line_start": 2362,
+      "line_end": 2371,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-111",
+      "line_start": 2372,
+      "line_end": 2377,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-112",
+      "line_start": 2378,
+      "line_end": 2404,
+      "section_title": "\t--------\t---\t",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-113",
+      "line_start": 2405,
+      "line_end": 2440,
+      "section_title": "\t--------\t---\t",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-114",
+      "line_start": 2441,
+      "line_end": 2451,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-115",
+      "line_start": 2452,
+      "line_end": 2469,
+      "section_title": "Get Lan Configuration Parameters (Decoded)",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-116",
+      "line_start": 2470,
+      "line_end": 2490,
+      "section_title": "Log Section",
+      "platform": "IPMI",
+      "implied_era": "2005-Q1",
+      "chunk_type": "pef_configuration"
+    },
+    {
+      "section_id": "SEC-117",
+      "line_start": 2491,
+      "line_end": 2513,
+      "section_title": "Section at line 2491",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-118",
+      "line_start": 2514,
+      "line_end": 2526,
+      "section_title": "Section at line 2514",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-119",
+      "line_start": 2527,
+      "line_end": 2536,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-120",
+      "line_start": 2537,
+      "line_end": 2548,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-121",
+      "line_start": 2549,
+      "line_end": 2558,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "sighting_tracker"
+    },
+    {
+      "section_id": "SEC-122",
+      "line_start": 2559,
+      "line_end": 2579,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-123",
+      "line_start": 2580,
+      "line_end": 2593,
+      "section_title": "Section at line 2580",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-124",
+      "line_start": 2594,
+      "line_end": 2600,
+      "section_title": "Section at line 2594",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-125",
+      "line_start": 2601,
+      "line_end": 2614,
+      "section_title": "Section at line 2601",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "error_diagnostic"
+    },
+    {
+      "section_id": "SEC-126",
+      "line_start": 2615,
+      "line_end": 2630,
+      "section_title": "Section at line 2615",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-127",
+      "line_start": 2631,
+      "line_end": 2641,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-128",
+      "line_start": 2642,
+      "line_end": 2654,
+      "section_title": "CS",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-129",
+      "line_start": 2655,
+      "line_end": 2663,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-130",
+      "line_start": 2664,
+      "line_end": 2698,
+      "section_title": "MTH",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    },
+    {
+      "section_id": "SEC-131",
+      "line_start": 2699,
+      "line_end": 2700,
+      "section_title": "Log Section",
+      "platform": "SSPD",
+      "implied_era": "2005-Q1",
+      "chunk_type": "diagnostic_log"
+    }
+  ]
+}

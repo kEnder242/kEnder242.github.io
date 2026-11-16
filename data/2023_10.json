@@ -1,0 +1,63 @@
+[
+  {
+    "date": "2023-10-01",
+    "summary": "Montana code updates for PECI/NM/MCTP on GNR/SRF/EMR platforms",
+    "evidence": "RAW LOGS mention ongoing development and testing efforts related to Montana code updates.",
+    "sensitivity": "Public",
+    "tags": [
+      "kayak framework",
+      "Python scripts",
+      "TDF architecture"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 9a196d03 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"It sounds like we're dealing with a tricky authentication issue here, Jason! I'm going to check our logs from the last server firmware update to see if there were any known issues with RDC connections.\",\n  \"search_terms\": \"RDC connection error 0xcaa20002, Remote Desktop Connection, Server firmware update 2018\",\n  \"upvote\": true\n}",
+    "document_date": "2023-10-01",
+    "event_era": "2024-06-01",
+    "event_year": 2024,
+    "event_quarter": "2024-Q3",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Birch Stream\\b|\\bGranite Rapids\\b|\\bGNR",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
+    "impact_level": 4
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Correlating MCTP failures caught by automation with known issues using TDF architecture",
+    "evidence": "RAW LOGS mention correlating 8 distinct MCTP failures caught by automation with known issues.",
+    "sensitivity": "Public",
+    "tags": [
+      "MCTP failures",
+      "TDF architecture"
+    ],
+    "rank": 4,
+    "document_date": "2023-10-01",
+    "event_era": "2023-10-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2023-10-01",
+    "summary": "Running Python scripts using kayak framework to install and test Montana code updates",
+    "evidence": "RAW LOGS mention running Python scripts with the kayak framework.",
+    "sensitivity": "Public",
+    "tags": [
+      "kayak framework",
+      "Python scripts"
+    ],
+    "rank": 4,
+    "document_date": "2023-10-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

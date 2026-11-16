@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2020-05-15",
+    "summary": "Integrated DTAF with MIV content readiness for CPX & ICX platforms using pip install fabric",
+    "evidence": "[RAW LOGS] - pip install fabric",
+    "sensitivity": "Public",
+    "tags": [
+      "MIV content readiness",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-05-15",
+    "summary": "Prioritized PCIE Whitley priority execution requests by Li, Xiang Z and lead BKC owner Xu, Michael Jian Hua",
+    "evidence": "[RAW LOGS] - PCIE Whitley priority execution requests - Li, Xiang Z <xiang.z.li@intel.com> lead BKC owner - Xu, Michael Jian Hua <michael.jian.hua.xu@intel.com>",
+    "sensitivity": "Public",
+    "tags": [
+      "priority execution requests",
+      "PCIE Whitley"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-15",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2020-05-21",
+    "summary": "Configured Crasdump/EINJ knobs to disable and enable Lock Chipset and EV DFX Features",
+    "evidence": "[RAW LOGS] - [Lock Chipset] Bios_Path = Target = Disable, Enable [EV DFX Features] Bios_Path = Target = Enable",
+    "sensitivity": "Public",
+    "tags": [
+      "Crasdump/EINJ knobs",
+      "DTAF"
+    ],
+    "rank": 4,
+    "document_date": "2020-05-21",
+    "event_era": "2020-05-21",
+    "event_year": 2020,
+    "event_quarter": "2020-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

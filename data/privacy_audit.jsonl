@@ -1,0 +1,390 @@
+{"date": "2006-09-20", "summary": "Job search and SOL presentation", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-12-04", "summary": "Refactor IPC Target Access", "evidence": "Code changes", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2015-12-03", "summary": "TraceHub API Test failure investigation", "evidence": "Debug logs", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2015-11-20", "summary": "HSD/PER opened against NPK SDK", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-11-06", "summary": "PythonSV modifications for PMC debugging", "evidence": "Code snippet", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-10-27", "summary": "Install PVT BXTOEM tool", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-10-02", "summary": "Discuss BaseAI visa design with Victor", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-08-11", "summary": "Hold hooks on BSSB", "evidence": "Id like to hold fuse_break on BXTP. This can be done in PythonSV with the MIPI 60 by using ipc.holdhook(0,3,True). How can this be done from BSSB? Is there a GPIO I can access?", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-08-04", "summary": "Meeting with Hadeel about project fit and scrum meetings", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-07-15", "summary": "Emailing Visa handbook - wiki", "evidence": "E-mail subject", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-05-13", "summary": "Fix probemode scripts", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-05-12", "summary": "[Could not stop the target] - Flash VLV2 system with Dediprog SF600", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-05-12", "summary": "[issues with fpga] - help lorena debug FPGA failures", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-04-29", "summary": "Access granted to specific labs", "evidence": "Badge access management information", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-04-28", "summary": "PTI Trace hub crash after Stopping a PTI Trace", "details": "[ERROR] Error: No error occurred."}
+{"date": "2015-04-28", "summary": "ITP Bug [5661232][New][High][] BXT A0 boot script stuck at fuse_break", "details": ""}
+{"date": "2015-04-24", "summary": "Install 1518RC0 stability issues, stuck at fuse_break", "details": ""}
+{"date": "2015-04-23", "summary": "GT and CBO bypass are not being set...", "details": ""}
+{"date": "2015-04-16", "summary": "ITP Bug [5661165] Some Optional_FpgaRegCpu tests fail on BXT Si but not FPGA", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["ITP Bug"]}
+{"date": "2015-04-16", "summary": "HSD ITP Bug [5661166] Extracting patgen trace from MTB results in all zero's", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["ITP Bug"]}
+{"date": "2015-04-15", "summary": "HSD ITP Bug [5661165] Some Optional_FpgaRegCpu tests fail on BXT Si but not FPGA", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["ITP Bug"]}
+{"date": "2015-04-15", "summary": "1512RC3 on BXT Si (Hematite)", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "2015-04-02", "summary": "Test PTI on A0 - [missing Open IPC dll]", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["PTI"]}
+{"date": "2015-04-02", "summary": "Error during execution of decoder instance reader - shutting down", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["PTI"]}
+{"date": "3/13/2015", "content": "svn update C:\\PythonSV\\broxton\\user\\jallred\nfrom broxton.user.jallred import logdiff\nreload(logdiff);logdiff.filter()"}
+{"date": "3/16/2015", "content": "<register_set name=\"SA_TAP_SA_NOALCCFG\" type=\"hswtap\">\n  <ccb>SA</ccb>\n  <chain_group>SA</chain_group>\n  <ir_name>noalccfg</ir_name>\nPortid 54 \n  <ir_code>0x054</ir_code>\n\n???????????????????????????????\nSize 85 \n???????????????????????????????\n\n    <chain_length>75</chain_length>\n0       1       DUMMY_LO                0       0       0                                                                        \n    <register offset=\"0x00\" name=\"SA_TAP_SA_NOALCCFG.DUMMY_LO\" order=\"50\">\n      <field resource=\"dummy_lo\" top=\"0\" bot=\"0\">Dummy low bit</field>\n    </register>\n1       1       SA_BYP_CHANNEL0                 1       0       0        \n2       1       SA_BYP_CHANNEL1                 2       1       1        \n3       3       SA_MUXCTRL_CHANNEL0             3       2       4        \n6       3       SA_MUXCTRL_CHANNEL1             6       5       7        \n9       2       SA_RESERVED                     9       8       9        \n    <register offset=\"0x01\" name=\"SA_TAP_SA_NOALCCFG.SA\" order=\"50\">\n      <field resource=\"sa.byp_channel0\" top=\"0\" bot=\"0\">Bypass mode disable for channel 0. If 0(default) then, bypass mode is enabled</field>\n      <field resource=\"sa.byp_channel1\" top=\"1\" bot=\"1\">Bypass mode disable for channel 1. If 0(default) then, bypass mode is enabled</field>\n      <field resource=\"sa.muxctrl_channel0\" top=\"4\" bot=\"2\">Mux control for channel 0</field>\n      <field resource=\"sa.muxctrl_channel1\" top=\"7\" bot=\"5\">Mux control for channel 1</field>\n      <field resource=\"sa.reserved\" top=\"9\" bot=\"8\">Reserved</field>\n    </register>\nB       3       CBO0_MUXCTRL_CHANNEL0           11      0       2        \nE       2       CBO0_MUXCTRL_CHANNEL1           14      3       4        \n10      3       CBO1_MUXCTRL_CHANNEL0           16      0       2        \n13      2       CBO1_MUXCTRL_CHANNEL1           19      3       4        \n15      3       CBO2_MUXCTRL_CHANNEL0           21      0       2        \n18      2       CBO2_MUXCTRL_CHANNEL1           24      3       4        \n1A      3       CBO3_MUXCTRL_CHANNEL0           26      0       2        \n1D      2       CBO3_MUXCTRL_CHANNEL1           29      3       4        \n    <register offset=\"0x0B\" name=\"SA_TAP_SA_NOALCCFG.CBO0\" order=\"50\">\n      <field resource=\"cbo0.muxctrl_channel0\" top=\"2\" bot=\"0\">Mux control for channel 0.</field>\n      <field resource=\"cbo0.muxctrl_channel1\" top=\"4\" bot=\"3\">Mux control for channel 1.</field>\n    </register>\n    <register offset=\"0x10\" name=\"SA_TAP_SA_NOALCCFG.CBO1\" order=\"50\">\n      <field resource=\"cbo1.muxctrl_channel0\" top=\"2\" bot=\"0\">Mux control for channel 0.</field>\n      <field resource=\"cbo1.muxctrl_channel1\" top=\"4\" bot=\"3\">Mux control for channel 1.</field>\n    </register>\n    <register offset=\"0x15\" name=\"SA_TAP_SA_NOALCCFG.CBO2\" order=\"50\">\n      <field resource=\"cbo2.muxctrl_channel0\" top=\"2\" bot=\"0\">Mux control for channel 0.</field>\n      <field resource=\"cbo2.muxctrl_channel1\" top=\"4\" bot=\"3\">Mux control for channel 1.</field>\n    </register>\n    <register offset=\"0x1A\" name=\"SA_TAP_SA_NOALCCFG.CBO3\" order=\"50\">\n      <field resource=\"cbo3.muxctrl_channel0\" top=\"2\" bot=\"0\">Mux control for channel 0.</field>\n      <field resource=\"cbo3.muxctrl_channel1\" top=\"4\" bot=\"3\">Mux control for channel 1.</field>\n    </register>\n\n???????????????????????????????\n1F      3       CBO4_MUXCTRL_CHANNEL0           31      0       2        \n22      2       CBO4_MUXCTRL_CHANNEL1           34      3       4        \n24      3       CBO5_MUXCTRL_CHANNEL0           36      0       2        \n27      2       CBO5_MUXCTRL_CHANNEL1           39      3       4        \n\n29      1       STACKMUX_LEFTSELECT_CHANNEL0            41      0       0\n2A      1       STACKMUX_LEFTSELECT_CHANNEL1            42      1       1\n2B      1       STACKMUX_CLKDIV_CHANNEL0                43      2       2\n2C      1       STACKMUX_CLKDIV_CHANNEL1                44      3       3\n2D      2       STACKMUX_MUXCTRL_CHANNEL0               45      4       5\n2F      2       STACKMUX_MUXCTRL_CHANNEL1               47      6       7\n    <register offset=\"0x1F\" name=\"SA_TAP_SA_NOALCCFG.STACKMUX\" order=\"50\">\n      <field resource=\"stackmux.leftselect_channel0\" top=\"0\" bot=\"0\">stackmux leftselect for channel 0.</field>\n      <field resource=\"stackmux.leftselect_channel1\" top=\"1\" bot=\"1\">stackmux leftselect for channel 1.</field>\n      <field resource=\"stackmux.clkdiv_channel0\" top=\"2\" bot=\"2\">stackmux clkdiv channel 0.</field>\n      <field resource=\"stackmux.clkdiv_channel1\" top=\"3\" bot=\"3\">stackmux clkdiv channel 1.</field>\n      <field resource=\"stackmux.muxctrl_channel0\" top=\"5\" bot=\"4\">stackmux muxctrl channel 0.</field>\n      <field resource=\"stackmux.muxctrl_channel1\" top=\"7\" bot=\"6\">stackmux muxctrl channel 1.</field>\n    </register>\n31      3       EBO_MUXCTRL_CHANNEL0            49      0       2\n34      2       EBO_MUXCTRL_CHANNEL1            52      3       4\n    <register offset=\"0x27\" name=\"SA_TAP_SA_NOALCCFG.EBO\" order=\"50\">\n      <field resource=\"ebo.muxctrl_channel0\" top=\"2\" bot=\"0\">ebo muxctrl channel 0.</field>\n      <field resource=\"ebo.muxctrl_channel1\" top=\"4\" bot=\"3\">ebo muxctrl channel 1.</field>\n      </register>\n36      4       GT_MUXCTRL_CHANNEL0             54      0       3\n3A      4       GT_MUXCTRL_CHANNEL1             58      4       7\n3E      1       GT_GTSELECT_CHANNEL0            62      8       8\n3F      1       GT_GTSELECT_CHANNEL1            63      9       9\n40      1       GT_CLKDIV_CHANNEL0              64      10      10\n41      1       GT_CLKDIV_CHANNEL1              65      11      11\n42      2       GT_TRICKY_RESET_DEBUG_MODE              66      12      13\n44      3       GT_NOA_PIN_DIRECTION            68      14      16\n47      14      GT_RESERVED             71      17      30\n    <register offset=\"0x2C\" name=\"SA_TAP_SA_NOALCCFG.GT\" order=\"50\">\n      <field resource=\"gt.muxctrl_channel0\" top=\"3\" bot=\"0\">Mux control for channel 0.</field>\n      <field resource=\"gt.muxctrl_channel1\" top=\"7\" bot=\"4\">Mux control for channel 1.</field>\n      <field resource=\"gt.gtselect_channel0\" top=\"8\" bot=\"8\">1'b0 selects SA clk, 1'b1 selects Vclk</field>\n      <field resource=\"gt.gtselect_channel1\" top=\"9\" bot=\"9\">1'b0 selects SA clk, 1'b1 selects Vclk</field>\n      <field resource=\"gt.clkdiv_channel0\" top=\"10\" bot=\"10\">1'b0 selects clk, 1'b1 selects clk/2 for high byte</field>\n      <field resource=\"gt.clkdiv_channel1\" top=\"11\" bot=\"11\">1'b0 selects clk, 1'b1 selects clk/2 for high byte</field>\n      <field resource=\"gt.tricky_reset_debug_mode\" top=\"13\" bot=\"12\">2'b10 selects EarCntTnnnH[1], all others 1'b1</field>\n      <field resource=\"gt.noa_pin_direction\" top=\"16\" bot=\"14\"></field>\n      <field resource=\"gt.reserved\" top=\"30\" bot=\"17\"></field>\n    </register>"}
+{"date": "1/30/2015", "event": "PO Lab 00003FC0", "description": "update pre-si scripts with PO fixes"}
+{"date": "2/2/2015", "event": "", "description": "IPC_PATH - Gtest does not use same OpenIPC as Tap Patch? Copying C:\\PythonSV\\broxton\\vjt\\dfv\\npk\\fpga_patch\\BXT.ProductInfo.xml -> C:\\BuildAgent\\work\\60fa3b03ff6812e9\\OpenIPC\\Deploy\\x64\\Release\\Data\\TargetManager\\BXT.ProductInfo.xml"}
+{"date": "2/2/2015", "event": "", "description": "set IPC_PATH=C:\\BuildAgent\\work\\60fa3b03ff6812e9\\OpenIPC\\Deploy\\x64\\Release\\Bin; set IPCAPIBINDIR=C:\\BuildAgent\\work\\60fa3b03ff6812e9\\OpenIPC\\Deploy\\x64\\Release\\Bin; set NPK_ALL_DEBUG=1; C:\\Intel\\npksdk\\bin\\cfg_apitest64.exe --gtest_output=xml:c:\\test10.xml  TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_FPGA LOGFILE=1 --gtest_filter=*Optional_OpenIpcConnect_simple_tap_register_read*"}
+{"date": "2/2/2015", "event": "", "description": "IPC error code: (0x80000014): The configuration of the IPC API implementation is invalid.  The OpenIPC is not configured; Consult the user's guide for details"}
+{"date": "2/2/2015", "event": "", "description": "updating de*xmls , gt_access_method.xml, visa_legacy_channel.xml and visa_sig_map -ggthippe"}
+{"date": "2/2/2015", "event": "", "description": "cd C:\\ProgramData\\Intel\\VisaPanel;  \"C:\\Program Files (x86)\\IronPython 2.7\\ipy64.exe\" -D -X:TabCompletion -X:ColorfulConsole -i \"c:\\DfxProjects\\Haswell\\HswVisaApi\\tools\\visaApiSetup.py\" -p SkyLake_M0 -c RedCover.cfg"}
+{"date": "2/2/2015", "event": "", "description": "'visaUncoreHandle' HSW_H_UC0 bug. - HSD???"}
+{"date": "2/2/2015", "event": "", "description": "HswConverters.cs - PythonCLI_Converter - FirstConvert;                //put 'quotes' around string 'HSW_U_UC0' but not variable visaUncoreHandle;                uncoreDevName = ''' + hswTapAm.uncoreName + ''';"}
+{"date": "2/2/2015", "event": "", "description": "SkyLake_ULT_J0\\visa_legacy_channel_rs.xml;  <register_set name=\"SA_TAP_SA_NOALCCFG\" type=\"hswtap\">none...;"}
+{"date": "2/2/2015", "event": "", "description": "itp.ureg_raw(visaUncoreHandle, 0x36, \"mem\", 0, 0, 0, 0x50A0, 0, 0x00000013); itp.ureg_raw(visaUncoreHandle, 0x36, \"mem\", 0, 0, 0, 0x50A4, 0, 0x76543210); tempVar = itp.ucrb(visaUncoreHandle, 0x4F20); itp.ucrb(visaUncoreHandle, 0x4F20, (tempVar & 0x0000000E)|0x00000000); tempVar = itp.ureg_raw(visaUncoreHandle, 0x36, \"mem\", 0, 0, 0, 0x501C, 0); itp.ureg_raw(visaUncoreHandle, 0x36, \"mem\", 0, 0, 0, 0x501C, 0, (tempVar & 0xDFFFFFF3)|0x00000000); itp.ureg_raw(visaUncoreHandle, 0x40, \"mem\", 0, 0, 0, 0x6400, 0, 0x00000004); itp.ureg_raw(visaUncoreHandle, 0x40, \"mem\", 0, 0, 0, 0x6410, 0, 0x00000F07); tempVar = itp.ucrb(visaUncoreHandle, 0x4AAC); itp.ucrb(visaUncoreHandle, 0x4AAC, (tempVar & 0x00019DC0)|0x00002000); itp.irdrscan(visaUncoreHandle, 0x54, 76, writeData=noalccfgData); itp.irdrscan(visaUncoreHandle, 0x39, 71, writeData=lgcnoarcompData);"}
+{"date": "2/2/2015", "event": "", "description": "Verify - ITP Bug [5028475][Fixed and in Database][High][jallred] pls create official Q0 support for VISA panel - Verification failed with 1444 PDT"}
+{"date": "2/2/2015", "event": "", "description": "J0 uses 'SKL_U_UC0' instead 'SKL_H_UC0' - https://vthsd.intel.com/hsd/itp/default.aspx#bug/default.aspx?bug_id=5027891"}
+{"date": "2/2/2015", "event": "", "description": "Steps to reproduce:"}
+{"date": "2/2/2015", "event": "", "description": "Assign signal; # Group NOA_PINS_LANE0; /uncore/sa/pcu/pcuctrls/ptpcfsms/noa_PmlinkUX70nH"}
+{"date": "2/2/2015", "event": "", "description": "Register converter - Python StateDef; itp.uncores['SKL_H_UC0'].state.tap.SA_TAP_SA_NOAPINSMUXCFG.put(SA_TAP_SA_NOAPINSMUXCFG);"}
+{"date": "2/2/2015", "event": "", "description": "Register converter - PythonCLI; itp.irdrscan('SKL_U_UC0', 0x97, 17, writeData=sa_noapinsmuxcfgData);"}
+{"date": "2/2/2015", "event": "", "description": "Updated DfxTools.DfxHw.Common.SklRegisterLib.dll - SklConverters.cs - SklPythonCLI_Converter - BeginConvert();   -DevName = rs.uncoreName ?? \"SKL_U_UC0\" ; +DevName = rs.uncoreName ?? DevName;"}
+{"date": "2/2/2015", "event": "", "description": "Assign signal; # Group NOA_PINS_LANE0; /uncore/sa/pcu/pcuctrls/ptpcfsms/noa_PmlinkUX70nH"}
+{"date": "2/2/2015", "event": "", "description": "itp.irdrscan('SKL_H_UC0', 0x39, 89, writeData=lgcnoarcompData);"}
+{"date": "2/2/2015", "event": "", "description": ""}
+{"date": "10/13/2014", "error": "IPC error code: (0x80000001): A pointer parameter was NULL when it should not have been."}
+{"date": "10/13/2014", "error": "IndexError: list index out of range"}
+{"date": "9/10/2014", "description": "PASSED [  FAILED  ] fpgaTest.Optional_FpgaRegCpu_StoreHwImmediate\nPASSED [  FAILED  ] fpgaTest.Optional_FpgaRegCpu_StoreHwSoChapImmediate"}
+{"date": "9/10/2014", "description": "PASSED [  FAILED  ] fpgaTest.Optional_FpgaRegCpu_DebugMode_SoftwareTrace\nPASSED [  FAILED  ] fpgaTest.Optional_FpgaRegCpu_DebugMode_HwTraceNoWrap"}
+{"date": "9/10/2014", "description": "ITP Bug [5028156][New][Medium][] itp.threads[0].mem does not take lowercase p in address."}
+{"date": "9/11/2014", "description": "Meet Daniel in JF5 lab."}
+{"date": "9/11/2014", "description": "Ask victor about writing to npk_sw to generate PTI traffic."}
+{"date": "9/11/2014", "description": "Software Trace Hub HAS 0.9.pdf p15\nBase(m,c) + 0x8 - DnM\nBase(m,c) - Dn  (i.e. D8)"}
+{"date": "9/11/2014", "description": "Set up VLV2 on VTGJF-Coal in JF5-3 South lab"}
+{"date": "9/10/2014", "description": "HSD SEG_VAL_ARCH_TOOLS [sw_tools_sighting]   [201556][Rev:1][New][No entry for queue STH exists in configuration of decoder MIPI_Decoder.]"}
+{"date": "9/10/2014", "description": "Optional_FpgaRegCpu_HWTrig_start_0x00_stop_0x64"}
+{"date": "9/10/2014", "description": "No entry for queue STH exists in configuration of decoder MIPI_Decoder."}
+{"date": "9/10/2014", "description": "Optional_FpgaRegCpu\n[==========] 39 tests from 2 test cases ran. (1346993 ms total)"}
+{"date": "9/10/2014", "description": "[  PASSED  ] 10 tests.\n[  FAILED  ] 29 tests, listed below:"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_TestAllPerfCountMethods\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_ChangeTargetAccess"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_WriteFwSth\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_SwTrace"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_StoreSwImmediate\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_StoreHwSoChapImmediate"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_SwTraceWithTrig\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_CreatePerfTriggerStoreSw"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_CreatePerfTriggerStoreHw\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_TracePatgens"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_TracePatgensWithWrap\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiBlockTracePatgens"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiLaneHwTrigger\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiBufferSwTraceManualStartStop"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_SingleBufferSwTraceTrigWithTimer\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiBuf2WindowSwTrace"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_StreamingSwTrace\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_DebugMode_SoftwareTraceWrap"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_DebugMode_HwTraceNoWrap\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_TraceHWbetween2Events"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiWindowTracePatgen1\n[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiWindowTracePatgen2"}
+{"date": "9/10/2014", "description": "[  FAILED  ] fpgaTest.Optional_FpgaRegCpu_MultiWindowTracePatgen3\n[  FAILED  ] wrapperTest.Optional_FpgaRegCpu_WrapperReplayFile"}
+{"date": "9/10/2014", "description": "[  FAILED  ] wrapperTest.Optional_FpgaRegCpu_WrapperHwTrace\n[  FAILED  ] wrapperTest.Optional_FpgaRegCpu_WrapperHwTraceOneXbarSignal"}
+{"date": "9/10/2014", "description": "[  FAILED  ] wrapperTest.Optional_FpgaRegCpu_WrapperSwTrace"}
+{"date": "8/25/2014", "content": "TA=LTB AM=TAP2SB NPK_TEST_TARGET=BXT_FPGA LOGFILE=0"}
+{"date": "8/22/2014", "content": "Different ways to extract a trace: CSR - Single block MWM - Multi block - Multi Window EXI - BSSB PTI - Noa Pins Extract Trace to memory: (CSR ) Single Block Size: 1 = 4k Base Address: 0x8000"}
+{"date": "8/25/2014", "content": "Optional_ReadWriteNpk_BxtA0_Fpga with MMIO --gtest_filter=\"*BxtA0_Fpga*\" TA=LTB AM=MMIO NPK_TEST_TARGET=BXT_FPGA LOGFILE=0"}
+{"date": "8/25/2014", "content": "msr_read? itp.halt() itp.threads[0].msr(0x512) GeneralProtectionFaultException: The CPU faulted while reading msr:msr(0x512)! Either it is a non-existent msr or some other unknown issue occurred."}
+{"date": "8/22/2014", "content": "# [MEM_WRITE] SCRPD0(bar_value + 0x000000e0) = 0x01000000 itp.threads[0].mem('0x%016Xp' % (npk_cfg_bar + 0xe0), 0x4, 0x1000000) itp.threads[0].mem('0x8000',0x4)"}
+{"date": "8/25/2014", "content": "Unplanned Scrum: Coordinate SLE/FPGA coverage w/ Mike Baumann NPK registers Read/Write test NPK Integration test plan"}
+{"date": "8/22/2014", "content": "Optional_BxtA0_Fpga with MMIO --gtest_filter=\"*BxtA0_Fpga*\" TA=LTB AM=MMIO NPK_TEST_TARGET=BXT_FPGA LOGFILE=0"}
+{"date": "8/25/2014", "content": "RE: GTPO in PDT giving exception on getprog Replace GTPO.dll inside C:\\Intel\\pdt\\plugins\\visapanel with the new version."}
+{"date": "8/25/2014", "content": "namespace Intel.PDT.TraceConfiguration.TraceConfiguration.Red {\n\tpublic class GDXCNode {\n\t\t//GDXCNode parent;\n\t\tpublic List<GDXCNode> children;\n\t\tpublic string parName;\n\n\t\tpublic GDXCNode(string name) {\n\t\t\tparName = name;\n\t\t\tchildren = new List<GDXCNode>();\n\t\t}\n\t}"}
+{"date": "8/25/2014", "content": "Optional_ReadWriteNpk_BxtA0_Fpga --gtest_filter=\"*BxtA0_Fpga*\" TA=LTB AM=MMIO NPK_TEST_TARGET=BXT_FPGA LOGFILE=0"}
+{"date": "8/25/2014", "content": "itp.halt() itp.threads[0].msr(0x512) GeneralProtectionFaultException: The CPU faulted while reading msr:msr(0x512)! Either it is a non-existent msr or some other unknown issue occurred."}
+{"date": "8/22/2014", "content": "Play with buffer??? offset by 16?"}
+{"date": "8/15/2014", "content": "CPU only mode - halt and be able to read and write a register through GUI"}
+{"date": "8/18/2014", "content": "GUI demo (tatiana) - set up counter patgen to memory, run, extract trace, display in GTKWave"}
+{"date": "8/19/2014", "content": "ERR npk::SingleBufferMemTraceExtract::init Invalid amount of data ( > buffer size = 0x0dwords) trace_size_dwords=0x143c2a68"}
+{"date": "8/19/2014", "content": "NPK SLE tests - Mike Baumann"}
+{"date": "2014-07-29", "summary": "Issue with anyconnect connection", "evidence": "Code snippet", "sensitivity": "Sensitive", "tags": []}
+{"date": "2014-04-14", "summary": "Bug resolution related to Visa Panel and MCdec signals", "evidence": "Bug ID, XML files, code snippets", "sensitivity": "Sensitive"}
+{"date": "2014-01-28", "summary": "Q->D Demux meeting with Joe", "evidence": "Note", "sensitivity": "Sensitive"}
+{"date": "2016-07-01", "summary": "Executing callback with command READ", "sensitivity": "Sensitive", "tags": []}
+{"date": "2016-07-13", "summary": "Running Simics tests with specific parameters", "sensitivity": "Sensitive", "tags": ["Simics"]}
+{"date": "2016-07-01", "summary": "ExecuteCallback Entered with command READ", "sensitivity": "Sensitive", "tags": []}
+{"date": "2016-07-11", "summary": "Inquiry about team tools, developer role, DCMI, call center background, travel details", "sensitivity": "Sensitive", "tags": []}
+{"event": "Compile maestro display tests on windows - C:\\iag_maestro-content\\test_cases\\gfx", "date": "3/22/2016"}
+{"event": "run6 pre60+FLR - SLE - dc6 - clean simics", "date": "3/21/2016"}
+{"event": "run5 pre60+FLR - PV - dc6 - (re-used from run4) - crash?", "date": "3/21/2016"}
+{"event": "run4 pre60+FLR - PV - atomic_base - ", "date": "3/21/2016"}
+{"event": "help carl with copy/paste", "date": "3/21/2016"}
+{"event": "run3 re-use run2 - back-to-back", "date": "3/21/2016"}
+{"event": "run2 pre50 - SLE - atomic_base", "date": "3/21/2016"}
+{"event": "run1 pre60 - SLE - atomic_base", "date": "3/21/2016"}
+{"date": "2016-02-08", "summary": "Access to specific resource (Maxto)", "sensitivity": "Sensitive", "tags": []}
+{"date": "2016-02-02", "summary": "Adjusted log level for broxton.board.nb", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "2016-01-29", "summary": "Sync with Lorena for validation coverage", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "2016-01-27", "summary": "Debug Trace for Manas - VISA patgen over BSSB to verify BSSB on BXT E0", "evidence": "Quote", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"event": "Hardware Setup", "description": "Setting up hardware for testing", "evidence": "Not applicable"}
+{"event": "OS Installation", "description": "Installing the operating system", "evidence": "Not applicable"}
+{"event": "Driver Installation", "description": "Installing necessary drivers for hardware testing", "evidence": "Not applicable"}
+{"event": "Software Installation", "description": "Installing software required for the test", "evidence": "Not applicable"}
+{"event": "Test Configuration", "description": "Configuring the test environment", "evidence": "Not applicable"}
+{"event": "Test Execution", "description": "Running the hardware test", "evidence": [{"file": "test_results.log", "type": "Log File"}]}
+{"event": "Test Analysis", "description": "Analyzing the test results to determine hardware health", "evidence": [{"file": "test_analysis.report", "type": "Report"}]}
+{"event": "Test Completion", "description": "Completing the hardware test and documenting results", "evidence": [{"file": "test_completion.report", "type": "Report"}]}
+{"event": "Hardware Maintenance", "description": "Performing any necessary maintenance on the hardware", "evidence": [{"file": "maintenance_log.log", "type": "Log File"}]}
+{"event": "Hardware Decommissioning", "description": "Decommissioning the hardware if necessary", "evidence": [{"file": "decommission_report.report", "type": "Report"}]}
+{"date": "9/7/2018", "event": "-Proton1"}
+{"date": "9/7/2018", "details": "Creating partitions and filesystems on persistent memory devices (pmem0-pmem7)"}
+{"date": "9/7/2018", "event": "Sequential write/read"}
+{"date": "9/7/2018", "details": "Performing sequential read and write tests on /mnt/ext4-pmem0 using fio tool"}
+{"date": "9/7/2018", "event": "cycling-lib.sh:"}
+{"date": "9/7/2018", "details": "Performing random read and write tests on /mnt/ext4-pmem0 using cycling-lib.sh script"}
+{"date": "9/7/2018", "event": "test:"}
+{"date": "9/7/2018", "details": "Performing random read and write tests on /mnt/ext4-pmem0 using fio tool"}
+{"date": "9/7/2018", "event": "-Proton2 - 4S 1-1-1"}
+{"date": "9/7/2018", "details": "Configuring Mesh Mode"}
+{"event": "System Boot", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "System started"}
+{"event": "Persistence Domain Setup", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Setting up persistence domains on /dev/pmem0 to /dev/pmem7"}
+{"event": "Filesystem Creation", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Creating ext4 filesystems on /dev/pmem0 to /dev/pmem7"}
+{"event": "Mounting Filesystems", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Mounting the newly created filesystems on /mnt/ext4-pmem0 to /mnt/ext4-pmem7"}
+{"event": "DCPMM Cycler Installation", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Installing DCPMM cycler on the system"}
+{"event": "Wait Time Set", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Setting wait time after boot to 600 seconds"}
+{"event": "Clearing SEL Logs", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Clearing SEL logs"}
+{"event": "Log Rotation", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "Rotating log files"}
+{"event": "DCPMM Cycler Started", "timestamp": "Wed Sep 12 08:34:01 CST 2018", "description": "DCPMM cycler started"}
+{"date": "9/7/2018", "event": "-Proton1"}
+{"date": "9/7/2018", "details": "Creating partitions and filesystems on persistent memory devices (pmem0-pmem7)"}
+{"date": "9/7/2018", "event": "Sequential write/read"}
+{"date": "9/7/2018", "details": "Performing sequential read and write tests on /mnt/ext4-pmem0 using fio with specified parameters"}
+{"date": "9/7/2018", "event": "cycling-lib.sh:", "details": "Performing cyclic read and write tests on /mnt/ext4-pmem0 using fio with specified parameters"}
+{"date": "9/7/2018", "event": "test", "details": "Running a test using fio to perform cyclic read and write tests on /mnt/ext4-pmem0 with specified parameters and saving the results in fio_readwrite.log"}
+{"date": "9/7/2018", "event": "-Proton2 - 4S 1-1-1", "details": "Configuring Mesh Mode"}
+{"date": "9/7/2018", "event": "ERROR:", "details": "Internal fabric error detected in PSF PIDs 0xBA, 0x70, 0x36 (twice), and 0x36 (again on PortGroup 0x1)"}
+{"date": "9/7/2018", "event": "-Hiccup Heuristic for bugs w/ Carl WeinBerger"}
+{"date": "8/29/2018", "event": "Proton2: Send FFDC log to Brian - 7X12ABC1WW_0000000000_xcc_180829-173954.tzz", "links": ["https://logupload.lenovo.com/"]}
+{"date": "8/29/2018", "event": "+HSD 'Show Topology in 1-1-1 lists AEP as DDR4' https://hsdes.intel.com/appstore/article/#/2205427028"}
+{"date": "8/29/2018", "event": "-Proton2 aep_rebooter", "sub_events": [{"date": "Wed Aug 29 07:08:22 CST 2018", "event": "Boot: 1"}, {"date": "Wed Aug 29 07:30:54 CST 2018", "event": "Boot: 2"}, {"date": "Wed Aug 29 07:51:22 CST 2018", "event": "Boot: 3"}, {"date": "Wed Aug 29 08:11:47 CST 2018", "event": "Boot: 4"}, {"date": "Wed Aug 29 08:32:12 CST 2018", "event": "Boot: 5"}, {"date": "Wed Aug 29 08:52:36 CST 2018", "event": "Boot: 6"}, {"date": "Wed Aug 29 09:12:32 CST 2018", "event": "Boot: 7"}, {"date": "Wed Aug 29 09:32:55 CST 2018", "event": "Boot: 8"}, {"date": "Wed Aug 29 09:53:18 CST 2018", "event": "Boot: 9"}, {"date": "Wed Aug 29 10:13:45 CST 2018", "event": "Boot:10"}]}
+{"date": "8/29/2018", "event": "ipmctl show -topology | grep '^0x' | sort -k 5", "sub_events": [{"dimm": "0x3020", "memory_type": "DDR4", "size": "125.7 GiB"}, {"dimm": "0x0120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x0020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x1120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x1020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x2120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x2020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x3120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x3020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x4120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x4020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x5120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x5020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x6120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x6020", "memory_type": "DDR4", "size": "125.6 GiB"}, {"dimm": "0x7120", "memory_type": "DCPMEM", "size": "125.6 GiB"}, {"dimm": "0x7020", "memory_type": "DDR4", "size": "125.6 GiB"}]}
+{"date": "2018-08-14", "summary": "Meeting with Scott", "evidence": "Notes", "sensitivity": "Sensitive"}
+{"date": "7/3/2018", "event": "Proton2 Problem board", "description": "AddHC for device A0, XHCI: Serial Bus Release Number is 30, XHCI: MaxSlots 40, MaxIntrs 8, Doorbell Offset 3000, Controller #1 added to HCStrucTable"}
+{"date": "7/3/2018", "event": "CLX for Juno", "description": "M8X81E3400489 - pcsd522159, M8446FL500233 - pcsd522158"}
+{"date": "7/3/2018", "event": "From Dell", "description": "M7HP757100947, M7RJ388700882, M7RJ388700394, M7RJ388700383"}
+{"date": "7/3/2018", "event": "Dimm status logs", "description": "ixpdimm-cli show -d HealthState -dimm > status.log; ixpdimm-cli show -d LastShutdownStatus -dimm >> status.log; ixpdimm-cli show -d LastShutdownTime -dimm >> status.log; ixpdimm-cli show -sensor >> status.log"}
+{"date": "7/3/2018", "event": "Mounting and testing files", "description": "mount -o dax /dev/pmem24p1 /mnt/ext4-pmem1, mount -o dax /dev/pmem25p1 /mnt/ext4-pmem2, mount -o dax /dev/pmem26p1 /mnt/ext4-pmem3, mount -o dax /dev/pmem27p1 /mnt/ext4-pmem4, fio -filename=/mnt/ext4-pmem1/test1.bin -direct=1 -iodepth 1 -readwrite=randread -ioengine=psync -bs=16k -size=5G -numjobs=32 -runtime=300 -group_reporting -name=01 --output=/mnt/ext4-pmem4/test1.bin"}
+{"date": "7/22/2024", "event": "Failed to send PECI command: Input/output error (5)"}
+{"date": "7/22/2024", "event": "Failed to send PECI command: No message of desired type (42)"}
+{"date": "7/16/2024", "event": "Failed to send PECI command: Input/output error (5)"}
+{"date": "7/16/2024", "event": "Failed to send PECI command: No message of desired type (42)"}
+{"date": "2024-05-20", "summary": "DMR Man. SS Sync - Review with Mayank tomorrow", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "2018-06-04", "summary": "ipmitool used to activate SOL on BMC of Proton2", "evidence": "ipmitool command used for SOL activation", "sensitivity": "Sensitive"}
+{"date": "2021-02-03", "summary": "MCTP related research", "evidence": "MCTP - what is PLDM?", "sensitivity": "Sensitive"}
+{"date": "2021-01-12", "summary": "Worked on SPR OpenBMC provisioning and password setting", "evidence": "'0penBmc1' password setting", "sensitivity": "Sensitive"}
+{"date": "2020-05-11", "summary": "Become a parent", "evidence": "", "sensitivity": "Personal", "tags": []}
+{"date": "2023-04-15", "summary": "Investigate power limiting possibility for Guadi3", "evidence": "Investigate power limiting possibility for Guadi3", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "Investigate PCS->TPMI transiton with PAE @Chen, Howard", "evidence": "Investigate PCS->TPMI transiton with PAE @Chen, Howard", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "Review and document clear Goals, Length, & Expectations of DOT assignment", "evidence": "Review and document clear Goals, Length, & Expectations of DOT assignment", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "Moving PECI to PythonSV - Deliver PECI technical presentation to XPIV team", "evidence": "Moving PECI to PythonSV - Deliver PECI technical presentation to XPIV team", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "AR Jason set up weekly OKR/Insight discussion", "evidence": "AR Jason set up weekly OKR/Insight discussion", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "AR Jason - Plan coverage - Sabatical Sabbatical 4 weeks  October - WW40.4-44.3", "evidence": "AR Jason - Plan coverage - Sabatical Sabbatical 4 weeks  October - WW40.4-44.3", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "AR Jason - Scrub Placeholders -> Steps", "evidence": "AR Jason - Scrub Placeholders -> Steps", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "[RE: RdIAMSR/Ex via I3C across Dies ]", "evidence": "[RE: RdIAMSR/Ex via I3C across Dies ]", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "[RE: TPMI control interface use case example]", "evidence": "[RE: TPMI control interface use case example]", "sensitivity": "Sensitive"}
+{"date": "2023-04-15", "summary": "~Goal: Execute a kayak automation test on simics - rdiamsr?", "evidence": "~Goal: Execute a kayak automation test on simics - rdiamsr?", "sensitivity": "Sensitive"}
+{"date": "Q4 2023", "summary": "Took Vacation and FMLA to care for and connect with extended family", "evidence": "In addition, Jason took Vacation and FMLA to care for and connect with extended family.", "sensitivity": "Personal", "tags": ["Vacation", "FMLA"]}
+{"date": "2022-11-01", "summary": "Improvement needed: Develop a clear understanding of individual R&Rs and team operations to improve interaction with leads in the growing manageability landscape; grow automation workgroup to bi-weekly meetings", "evidence": "Quote", "sensitivity": "Sensitive"}
+{"date": "2021-08-23", "summary": "Sensitive: Sending IPMI Command : 0x2E 0xC1 (SetNmPolicy)", "evidence": "Sending IPMI Command : 0x2E 0xC1 (SetNmPolicy)", "sensitivity": "Sensitive"}
+{"Date": "Gap/Context", "Tracker": "35698", "File": "mca_L1D_2.txt", "Description": "This does not appear to depend on the BIOS used."}
+{"Date": "Gap/Context", "Tracker": "39991", "Title": "Get Sensor Event Status only returns 2bytes when 3 bytes are required"}
+{"Date": "Gap/Context", "Tracker": "39993", "Title": "Device Slot Status returns the wrong values for a drive inserted"}
+{"Date": "Gap/Context", "Description": "Get FRU Inventory Area Info should return 0xCB (Requested sensor, data or record not found). Instead returns 0x00 (Good) and FRU Size = 0x00 bytes. Incidently, Device 10 returns Good and 0x1000 Bytes."}
+{"Date": "Gap/Context", "Title": "Inconsistent FP status LED behavior relating to power state"}
+{"Date": "Gap/Context", "Description": "IBM 6.2 Failed: 50   Passed:299 check nvramDefaultTest.log"}
+{"Date": "Gap/Context", "Title": "Fujitsu injected PAR and RAR64 (PCI) error using PCI tester."}
+{"Date": "Gap/Context", "Tracker": "637712", "Title": "SMBIOS table CPU max Speed incorrect  Verify Release"}
+{"date": "2023-05-17", "highs": "", "lows": "", "plans": ""}
+{"date": "2023-05-16", "highs": "", "lows": "", "trackers": ["26210"]}
+{"date": "2023-05-09", "highs": "", "reservations": [{"date": "22 May-30-2006 14:00 15:00 JF5-318-8  JF5", "reviewer": "JF5"}, {"date": "23 Jun-06-2006 14:00 15:00 JF5-304-8  JF5", "reviewer": "JF5"}, {"date": "24 Jun-13-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "25 Jun-20-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "26 Jun-27-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "27 Jul-04-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "28 Jul-11-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "29 Jul-18-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "30 Jul-25-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "31 Aug-01-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "32 Aug-08-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "33 Aug-15-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "34 Aug-22-2006 14:00 15:00 JF5-317-14 JF5 ", "reviewer": "JF5"}, {"date": "35 Aug-29-2006 14:00 15:00 JF5-317-14 JF5 "}]}
+{"date": "2023-05-08", "highs": "", "lows": "", "trackers": ["26496"]}
+{"date": "2023-05-04", "highs": "", "low": "Investigated API errors"}
+{"date": "2006-04-25", "summary": "Console redirection on Alcolu", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "WARN: A transport error occured. i.e. 256 - TRANSPORT ERROR: 2 - I2C_TIMEOUT", "error": "TRANSPORT ERROR: 2 - I2C_TIMEOUT"}
+{"date": "ERROR - can't read \"rsp(LowerNonCritical)\": no such element in array: test_main", "error": "no such element in array: test_main"}
+{"title": "Bluetooth Low Energy (BLE) Protocol", "description": "This document describes the Bluetooth Low Energy (BLE) protocol, including its architecture, packet structure, and security features."}
+{"title": "IPMI 2.0 Specification", "description": "The IPMI 2.0 specification outlines the Intelligent Platform Management Interface version 2.0, which is a standard for managing computer systems remotely."}
+{"title": "Telnet Client Configuration TCL Script", "description": "This Telnet client configuration TCL script sets up and configures a Telnet session with a remote device."}
+{"title": "IPMI RMCP+ Documentation & Tests", "description": "This collection includes documentation and test scripts for IPMI Remote Management Controller Protocol version + (RMCP+), a protocol used for managing computer systems remotely."}
+{"title": "SOL Functionality TCL Script", "description": "This TCL script tests the functionality of the System On LAN (SOL) feature, which allows remote management of Intel servers."}
+{"title": "LAN Functions API 2.0 Test Script", "description": "This test script verifies the functionality of the LAN Functions API version 2.0, which is used for managing network devices."}
+{"title": "RMCP+ Access Limits TCL Script", "description": "This TCL script tests the access limits feature of IPMI Remote Management Controller Protocol version + (RMCP+)."}
+{"date": "7/22/2024", "event": "Failed to send PECI command: Input/output error (5)"}
+{"date": "7/22/2024", "event": "Failed to send PECI command: No message of desired type (42)"}
+{"date": "7/16/2024", "event": "Failed to send PECI command: Input/output error (5)"}
+{"date": "7/16/2024", "event": "Failed to send PECI command: No message of desired type (42)"}
+{"date": "6/4/2024", "content": "https://hsdes.intel.com/appstore/generalapps/#/pages/community/16015342909?queryId=15015593694"}
+{"date": "6/4/2024", "content": "[2:37 PM] Chunduru, Suresh Babu N"}
+{"date": "2024-05-20", "summary": "DMR Man. SS Sync - Review with Mayank tomorrow", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "4/8/2024", "notes": "Welcome to BMC from Simics!"}
+{"date": "4/17/2024", "items": [{"title": "Gig w/Caesar", "details": "Jason to help with peciframework - TPMI - OOBMSM, join working group sessions - assigned tasks - Leaders Anurag & Nacho"}, {"title": "Opens", "details": ["Find a good Percentage & balance with ETA in mind", "Is any multi-die changes being saved from Kailiang's work on GNR?"]}, {"title": "Jason's concerns", "details": ["Learn tools behind peciframework - LTM tools", "Support PV's investment in peciframework - DMR & PV intersection", "Move PV tests to pythonsv peciframework", "Help or support CWF?", "SIMICS? Yes - all content will need to run on SIMICS."]}, {"title": "Caesar's concerns", "details": ["LTM checkout", "MSR tests", "Telemetry", "TPMI - replace and enhance - scope is changed", "Documentation - lack of it, need more"]}, {"title": "Links", "details": ["https://wiki.ith.intel.com/pages/viewpage.action?pageId=3096889670", "https://wiki.ith.intel.com/display/fvcommon/TPMI+on+Simics+DMR"]}]}
+{"date": "4/18/2024", "items": [{"title": "Log", "details": "Mock, Fix, Wake"}]}
+{"date": "4/20/2024", "notes": "BMC: MCTP devices found and tested."}
+{"date": "4/21/2024", "items": [{"title": "MCTP Devices", "details": ["xyz.openbmc_project.MCTP_I3C_MNG_CPU1", "xyz.openbmc_project.MCTP_I3C_MNG_CPU2", "xyz.openbmc_project.MCTP_I3C_MNG_PFR", "xyz.openbmc_project.MCTP_I3C_MNG_PFR_Secure_MB", "xyz.openbmc_project.MCTP_PCIe"]}]}
+{"date": "4/22/2024", "items": [{"title": "MCTP Device Testing", "details": ["busctl call xyz.openbmc_project.MCTP_I3C_MNG_CPU1 /xyz/openbmc_project/mctp xyz.openbmc_project.MCTP.Base SendReceiveMctpMessagePayload yayq 8 3 0 129 13 1000", "busctl call xyz.openbmc_project.MCTP_I3C_MNG_CPU1 /xyz/openbmc_project/mctp xyz.openbmc_project.MCTP.Base SendReceiveMctpMessagePayload yayq 8 3 0 129 2 1000", "busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU1"]}, {"title": "MCTP PCIe Testing", "details": ["busctl call xyz.openbmc_project.MCTP_PCIe /xyz/openbmc_project/mctp xyz.openbmc_project.MCTP.Base SendReceiveMctpMessagePayload yayq 8 3 0 129 13 1000"]}, {"title": "MCTP SMBus HSBP", "details": ["busctl tree xyz.openbmc_project.MCTP_SMBus_HSBP - Failed to introspect object / of service xyz.openbmc_project.MCTP_SMBus_HSBP: The name is not activatable"]}, {"title": "PECI Commands", "details": ["peci_cmds -d /dev/peci-i3c RdEndpointConfigPCILocal 0 30 1 0 0", "peci_cmds RdEndpointConfigPCILocal 0 30 1 0 0", "peci_cmds -i 8 RdEndpointConfigPCILocal 0 0 3 0 0 -v"]}]}
+{"date": "4/23/2024", "notes": "PECI commands failed with an I/O error."}
+{"event_date": "3/8/2024", "url": "https://hsdes.intel.com/appstore/article/#/22019588264", "description": "[OKS][DMR][Manageability][PPO 0.8] PECI RdIAMSR  returns status 0x00"}
+{"event_date": "3/8/2024", "url": "https://hsdes.intel.com/appstore/article/#/22019588270", "description": "[OKS][DMR][Manageability][PPO 0.8] MCTP busctl tree xyz.openbmc_project.MCTP_PCIe missing devices"}
+{"event_date": "3/8/2024", "url": "https://hsdes.intel.com/appstore/article/#/22019588271", "description": "[OKS][DMR][Manageability][PPO 0.8] MCTP busctl tree xyz.openbmc_project.MCTP_SMBus_PCIe_slot missing devices"}
+{"event_date": "3/8/2024", "url": "https://hsdes.intel.com/appstore/article/#/22019588286", "description": "[OKS][DMR][Manageability][PPO 0.8] MCTP busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU1 only returns root device 29"}
+{"event_date": "3/13/2024", "url": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1", "description": ""}
+{"event_date": "3/13/2024", "url": "curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X POST https://10.45.167.144/redfish/v1/Systems/system/LogServices/Crashdump/Actions/Oem/Crashdump.SendRawPeci -d \"{\"PECIDevice\": \"/dev/peci-0\", \"PECICommands\": [[48, 5, 9, 177, 0, 0, 1, 4]]}\"", "description": ""}
+{"event_date": "3/8/2024", "url": "DMR Simics - https://hsdes.intel.com/appstore/article/#/server_platf.bug", "description": ""}
+{"date": "2/14/2024", "tcd": "", "description": "Merge montana from c drive local repo to dtaf content preserving history", "commands": ["git clone https://github.com/intel-innersource/frameworks.automation.dtaf.content.egs.dtaf-content-egs dtaf-content-egs", "cd /c/dtaf-content-egs", "git branch montana_merge_v2", "git checkout montana_merge_v2", "git remote add old-miv-repo /c/frameworks.automation.dtaf.content.montana.miv-software-montana/", "git pull old-miv-repo master --allow-unrelated-histories", "git remote rm old-miv-repo", "git push --set-upstream origin montana_merge_v2"]}
+{"date": "2/23/2024", "tcd": "", "description": "Simics tests for Oakstream BMC MCTP", "commands": ["simics targets/setup_tests.simics", "simics test/oakstream/bmc/autogen/consumer/release/1_socket_ucc/08-bmc-oobmsm-pfrprot-s3m/03-bmc-mctp/s-test.py"]}
+{"date": "2/26/2024", "tcd": "", "description": "Query MCTP I3C MNG CPU1 using Redfish API", "commands": ["curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU1"]}
+{"date": "2/26/2024", "tcd": "", "description": "Query MCTP PCIe using Redfish API", "commands": ["curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_PCIe"]}
+{"date": "2/26/2024", "tcd": "", "description": "Query MCTP SMBus HSBP using Redfish API", "commands": ["curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_SMBus_HSBP"]}
+{"date": "2/26/2024", "tcd": "", "description": "Query MCTP I3C MNG CPU2 using Redfish API", "commands": ["curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_I3C_MNG_CPU2"]}
+{"date": "2/26/2024", "tcd": "", "description": "Query MCTP SMBus PCIe slot using Redfish API", "commands": ["curl -sku \"debuguser:0penBmc1\" -H \"Content-Type: application/json\" -X GET https://10.45.167.144/redfish/v1/Managers/bmc/MctpService/MCTP_SMBus_PCIe_slot"]}
+{"date": "2/23/2024", "tcd": "", "description": "peci commands and Redfish API queries for MCTP", "commands": ["peci_cmds -d /dev/peci-i3c RdIAMSR 1 0x401", "busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU1", "busctl tree xyz.openbmc_project.MCTP_PCIe", "busctl tree xyz.openbmc_project.MCTP_SMBus_HSBP", "busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU2", "busctl tree xyz.openbmc_project.MCTP_SMBus_PCIe_slot"]}
+{"date": "2/14/2024", "tcd": "", "description": "Rename history using filter-repo for iod migration to DTAF content", "commands": ["pip3 install git-filter-repo", "git clone https://github.com/intel-innersource/applications.validation.manageability.iod", "cd applications.validation.manageability.iod", "git filter-repo --to-subdirectory-filter src/miv"]}
+{"date": "2/14/2024", "tcd": "", "description": "Merge iod from local repo to DTAF content preserving history", "commands": ["git clone https://github.com/kEnder242/frameworks.automation.dtaf.content.egs.dtaf-content-egs dtaf-content-egs", "cd /c/dtaf-content-egs", "git branch iod_migration", "git checkout iod_migration", "git remote add old-iod-repo /c/applications.validation.manageability.iod/", "git pull old-iod-repo main --allow-unrelated-histories", "git remote rm old-iod-repo", "git push --set-upstream origin iod_migration"]}
+{"date": "2/23/2024", "tcd": "kayak.plugins.iod.plugin src/iod/iod_driver.py", "description": "Execute TCD using kayak for iod driver", "commands": ["kayak -p kayak.plugins.iod.plugin src/iod/iod_driver.py --execute {TCD}"]}
+{"date": "2/14/2024", "tcd": "", "description": "Install filter-repo to rename history for iod migration to DTAF content", "commands": ["pip3 install git-filter-repo"]}
+{"date": "2/14/2024", "tcd": "", "description": "Move iod history on c drive local repo to src/miv to match DTAF directory structure", "commands": ["git clone https://github.com/intel-innersource/frameworks.automation.dtaf.content.montana.miv-software-montana", "cd /c/frameworks.automation.dtaf.content.montana.miv-software-montana", "git filter-repo --to-subdirectory-filter src/miv"]}
+{"date": "2/14/2024", "tcd": "", "description": "Merge montana from c drive local repo to DTAF content preserving history (Draft example)", "commands": ["git clone https://github.com/intel-innersource/frameworks.automation.dtaf.content.egs.dtaf-content-egs.git", "cd /c/frameworks.automation.dtaf.content.egs.dtaf-content-egs", "git branch montana_merge_v2", "git checkout montana_merge_v2", "git remote add old-miv-repo /c/frameworks.automation.dtaf.content.montana.miv-software-montana/", "git pull old-miv-repo master --allow-unrelated-histories", "git remote rm old-miv-repo", "git push --set-upstream origin montana_merge_v2"]}
+{"date": "2024-02-12", "summary": "DMR deltas discussion", "evidence": "Email with Phoenix team", "sensitivity": "Sensitive", "tags": []}
+{"date": "2024-02-06", "summary": "PECI and MCTP testing on Simics", "evidence": "[DMR Manageability Pre-Si Sync] WW18 - PECI & MCTP on simics", "sensitivity": "Sensitive", "tags": ["Simics", "PECI", "MCTP"]}
+{"date": "2023-Q4", "summary": "Took vacation to care for family", "evidence": "Result", "sensitivity": "Personal"}
+{"date": "12/11/2023", "description": "Running Kayak tests for Montana driver and MCTP BMC reset"}
+{"date": "11/23/2023", "description": "Comparing MCTP discovery topology dataframes, UUID sorted mismatch found"}
+{"date": "10/31/2023", "output": ["[  192.996954] dracut Warning: Killing all remaining processes", "dracut Warning: Killing all remaining processes", "[  193.351207] dracut Warning: Unmounted /oldroot.", "dracut Warning: Unmounted /oldroot."]}
+{"date": "11/02/2023", "output": ["2023-11-02 09:20:07.882,INFO   ,execute->_execute()                               :testmctpdata.py:363,Using topology instance #2 mctpdiscovery_toplology df=", "                                     uuid                                              redfish_network  OwnEID                 routing_network journal_network redfish_bdf routing_bdf journal_location                                                                                                         lspci_device"]}
+{"date": "2023-08-30", "summary": "SUT failed to boot to OS", "evidence": "Error Message", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-08-30", "summary": "Busybox Installation failed!", "evidence": "Error Message", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-07-12", "summary": "Accessing Intel Artifactory repository", "evidence": "Command output", "sensitivity": "Sensitive", "tags": []}
+{"date": "4/14/2023", "content": [{"key": "C:\\Windows\\System32\\drivers\\etc\\hosts", "value": "10.49.14.251 DESKTOP-NSE9UUM.gar.corp.intel.com"}, {"key": "DESKTOP-NSE9UUM.gar.corp.intel.com", "value": "GAR\\Intel"}, {"key": "NUC IP :", "value": "10.49.14.251"}, {"key": "Username :", "value": "intel"}, {"key": "Pwd :", "value": "intel@123"}, {"key": "PDU IP:", "value": "https://10.49.14.75/"}, {"key": "Username :", "value": "admin"}, {"key": "Pwd :", "value": "sprsid_intel@123"}, {"key": "KVM IP  :", "value": "https://10.49.15.38/"}, {"key": "Username :", "value": "admin"}, {"key": "Pwd :", "value": "sprsid_intel@123"}, {"key": "BMC IP :", "value": "10.49.15.77"}]}
+{"date": "4/20/2023", "content": [{"key": "self.log.error_stream.getvalue()", "value": ""}, {"key": "from ..utilities.logger import Logger", "value": ""}, {"key": "_logger = Logger()", "value": ""}, {"key": "self.log = logging.getLogger(__name__)", "value": ""}, {"key": "logging.root", "value": ""}, {"key": "logging.Logger.manager = logging.Manager(Logger.root)", "value": ""}]}
+{"date": "2023-03-30", "summary": "sendrecive_mctp_payload", "evidence": "JF5-3 South Lab 5324 - Common (R1434,1436,1437,1438,1439)", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-03-30", "summary": "PCI Offset analysis", "evidence": "Bus: 10 Device: 3 Function: 0 Offset 0: FFFFFFFF ... PCI Offset: E0 : 00000000 00000000 00000000 00000000", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-03-10", "summary": "Adjusted RDP MTU size", "evidence": "Registry command", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-03-08", "summary": "Suppressed logs from specific modules", "evidence": "Code snippet for suppressing logs", "sensitivity": "Sensitive", "tags": []}
+{"date": "2023-01-23", "summary": "Debugging and understanding of SPR power limiting feature failure", "evidence": "Drove/Pushed for debug of SPR power limiting feature failure through sysdebug, pcode, and NM teams", "sensitivity": "Sensitive", "tags": ["SPR"]}
+{"date": "2022-12-13", "summary": "Collaborating with Architects & Developers on NM (New work on collecting pCode telemetry), PECI wrap up, and MCTP", "evidence": "Email mentioning tiger teams, NM, negative tests using pecistressor, Stimulate Protocol via Redfish API, and Application->Trace->Evaluate", "sensitivity": "Sensitive", "tags": ["NM", "PECI", "MCTP"]}
+{"date": "2022-12-12", "summary": "Setting power limits for system components", "evidence": "Code snippet setting global_slow_limits_pbm_limit_0, fast_rapl_pkg_total_power, and pmeter_platform_total_power", "sensitivity": "Sensitive", "tags": ["Power Limits"]}
+{"date": "2022-12-12", "summary": "Stopping and starting MCTP daemon instances and PECI driver logging", "evidence": "Code snippets for stopping and starting mctp daemons, and enabling PECI driver logging", "sensitivity": "Sensitive", "tags": ["MCTP", "PECI"]}
+{"date": "2022-12-06", "summary": "Refreshing system components using pysvtools", "evidence": "Code snippet refreshing system components using pysvtools", "sensitivity": "Sensitive", "tags": ["pysvtools"]}
+{"date": "2022-12-02", "summary": "Dumping PCU data using pysvtools", "evidence": "Code snippet dumping PCU data using pysvtools", "sensitivity": "Sensitive", "tags": ["pysvtools", "PCU Data"]}
+{"date": "7/26/2022", "notes": ["-1:1 w/ Jeff [demo new LTM whitelist code & review PCI HSD list]", "MMIO32 DRAM security hole blocked to PCH", "But this broke some endpoints", "Add to LTM?  Consequences", "LTM will block (as designed)", "Mid stream update", "New to LTM, but still in exceptions list", "Exceptions list is looked at"]}
+{"date": "7/25/2022", "notes": ["curl -k -u \"admin:initial0\" -H \"Content-Type: application/json\" -X PATCH https://c001n0004bmc/redfish/v1/Chassis/Baseboard/Power/PowerControl/0 -d {\"PowerLimit\": {\"LimitInWatts\": 3500}}", "curl -sku \"admin:initial0\" -H \"Content-Type: application/json\" -X PATCH https://localhost:5443/redfish/v1/Chassis/Baseboard/Power/PowerControl/0 -d {\"PowerLimit\": {\"LimitInWatts\": 3500}}", "curl -sku admin:initial0 -X GET https://c001n0047bmc/redfish/v1/Chassis/Baseboard/Power | grep -E \"LimitInWatts|MemberId|PowerConsumed\"", "curl -sku \"admin:initial0\" -X GET https://c001n0004bmc:443/redfish/v1/UpdateService/FirmwareInventory/bmc_active"]}
+{"date": "7/18/2022", "notes": ["CR3.Punit, NCEVENTS_SCF_UBOX"]}
+{"date": "2022-05-03", "summary": "Policy ID Invalid, Error deleting policy", "evidence": "Log messages", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2022-05-09", "summary": "Sending IPMI Command to enable/disable NM policy control", "evidence": "Log messages", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2022-01-24", "summary": "Discussion about MCTP DDRT with Sobocinski, Nalborski, and Krithivas", "evidence": "Email conversation", "sensitivity": "Sensitive", "tags": ["MCTP", "DDRT"]}
+{"date": "2022-01-20", "summary": "One-on-one meeting with Boris about platform components and security vulnerability search", "evidence": "Notes from meeting", "sensitivity": "Sensitive", "tags": ["Platform Components", "Security Vulnerabilities"]}
+{"date": "2022-01-05", "summary": "Power control issue", "evidence": "Error logs", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-12-11", "summary": "Request for hardware debug support", "evidence": "Quote", "sensitivity": "Sensitive", "tags": []}
+{"date": "10/13/2021", "event": "Checking device 40 to be registered", "status": "Success", "device": "40"}
+{"date": "10/13/2021", "event": "Adding device 56", "status": "Success", "device": "56"}
+{"date": "10/12/2021", "event": "import mc.sprMcUtils as mcu", "execution_time": "~1 min"}
+{"date": "10/12/2021", "event": "mcu.show_memory_errors()", "execution_time": "~2min"}
+{"date": "10/12/2021", "event": "h.analyze_live_system(source='reg')", "execution_time": "~46min"}
+{"date": "10/12/2021", "event": "status_scope.run(collectors=['namednodes'], analyzers=['ubox', 'ieh', 'upi','m2mem'])", "execution_time": "4 hours 12 min"}
+{"date": "10/12/2021", "event": "status_scope.run(collectors=['namednodes','mca'], analyzers=['ubox', 'cha', 'upi','mem'])", "execution_time": "40 mins"}
+{"date": "10/12/2021", "event": "status_scope.run(collectors=['statedump'], analyzers=['mem','ddrio'])", "execution_time": "AFD"}
+{"date": "10/5/2021", "event": "[Mca]CheckMcBankErrorStatus returns TRUE", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]McaDetectAndHandle start", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]McaDetectAndHandle, state is 0x0", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]McaDetectAndHandle, state is 0x1", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]ProcessSocketMcBankError: Inside the function", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T0 [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x1", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T0 [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x2", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T0 [CpuRas]MC status 0x0, class INVALID", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x1", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x2", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [CpuRas]MC status 0x8000004000050005, class CORRECTED", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [Mca]McBankErrorHandler: Skt = 0x0, McBank = 0x0, State = 0x4", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [CpuRas]MC status 0x8000004000050005, class CORRECTED", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "System address:FFFFFFFFFFFFFFFF is not DRAM address", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "ERROR: C00000002:V03071008 I0 D6476950-2481-4CBB-8400-442542C766C8 7C9F1418", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]McaDetectAndHandle, severity = 0x2, Broadcast is 0x1", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca] Clear Status", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]ClearErrLogReg", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "[Mca]Sending CMCI for CPU 0x1B Bank 0x0, Socket 0x0 Core 0xD", "severity": "", "broadcast": ""}
+{"date": "10/5/2021", "event": "S0 C13 T1 [CpuRas]Successfully notify OS via CMCI", "severity": "", "broadcast": ""}
+{"date": "2021-09-01", "summary": "BKC-EGS", "evidence": "Person", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-08-25", "summary": "Unlock, reconfigure, patch revision, and halt the system", "evidence": "Code snippet", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-08-02", "summary": "AC0195 D0 upgrade", "evidence": "Text message", "sensitivity": "Sensitive"}
+{"date": "2021-07-27", "summary": "Debug: rawReadPkgCfg command issue", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-07-20", "summary": "Issue with Domain 0/1/2 Power limiting broken with OpenBMC NM FW", "evidence": "Email link", "sensitivity": "Sensitive", "tags": ["OpenBMC", "Power Limiting"]}
+{"date": "2021-07-07", "summary": "Access to Intel Command Center logs", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-07-07", "summary": "Accessed Intel Command Center logs", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2021-05-17", "summary": "Enhanced warning logged", "evidence": "Log", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-03-30", "summary": "Request for access to SMS Docs RO", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2021-01-20", "summary": "Accessing MIV report", "evidence": "URL", "sensitivity": "Sensitive", "tags": ["Power Management"]}
+{"date": "2020-11-17", "summary": "IPMI Command Failed", "evidence": "Logs", "sensitivity": "Sensitive", "tags": ["IPMI"]}
+{"date": "2020-09-14", "summary": "Setting user name and password for debuguser5 and debuguser6", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2020-09-08", "summary": "Setting user name and password for debuguser5", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2020-03-17", "summary": "RDP credentials and Python dependencies for RSC2 software installation"}
+{"date": "2020-03-18", "summary": "Summary of power limit accuracy test results"}
+{"date": "2020-02-13", "summary": "Power limit accuracy test log with detailed statistics"}
+{"date": "2020-03-03", "summary": "MCTP Discovery discussion", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2020-02-18", "event": "-[RE: XCC C0 Pre ES0 \"SF\" checkout] Chris & Nguyen, Minh N <minh.n.nguyen@intel.com>"}
+{"date": "2020-02-14", "event": "C:\\Users\\jallred\\Documents\\MIV\\16010777195_miv_rapl_stats_d1.csv"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 48 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 49 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 50 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 51 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 52 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 53 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 54 0 0"}
+{"date": "2020-02-14", "event": "ipmitool -I lanplus -H 169.254.9.108 -U root -P 0penBmc -C 17 -t 0x2c -b 0x01 raw 0x2E 0x40 0x57 0x01 0x00 55 0 0"}
+{"date": "2020-02-19", "event": "-How to dump BIOS registers? - anthonyx.nazzaro@intel.com"}
+{"date": "2020-02-12", "summary": "Task assignment: Touch up MIV Execution ppt and send out Kudos", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2020-02-12", "summary": "Task assignment: Scrub content issues, Hand off other issues to execution team", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-10-17", "summary": "Neon City RMM setup", "evidence": "Notes", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-09-13", "summary": "PTU - pmax log", "evidence": "Log file", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-09-10", "summary": "Log file creation", "evidence": "Code snippet", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-09-04", "summary": "Error in reading PCI device space", "evidence": "Error message", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-08-27", "summary": "Search for 'ERROR,montana.base.platform'", "evidence": "Log output", "sensitivity": "Sensitive", "tags": ["Montana"]}
+{"date": "8/7/2019", "notes": "[JF04WVAW0217] Neon City #2"}
+{"date": "8/7/2019", "notes": "-[RE: 1:1 Christopher C/Jason]"}
+{"date": "8/7/2019", "notes": "-[insight bullet list] -> Chris"}
+{"date": "8/7/2019", "notes": "-[MIV HSDs] -> Rapczynski, Pawel"}
+{"date": "8/12/2019", "notes": "Search \"FAIL\" (14 hits in 1 file)"}
+{"date": "8/12/2019", "notes": "Search \"ERROR\" (4 hits in 1 file)"}
+{"date": "8/13/2019", "notes": "Jim Notes: Dynamic Power Saving is HWP."}
+{"date": "8/13/2019", "notes": "Hex Notes:"}
+{"date": "8/13/2019", "notes": "-HPE - Stephen VL - Windows hang?"}
+{"date": "8/13/2019", "notes": "matrix - xls - this can be N/A:"}
+{"date": "8/13/2019", "notes": "DATE: 8/12/2019"}
+{"date": "8/12/2019", "notes": "Search \"FAIL\" (14 hits in 1 file)"}
+{"date": "8/12/2019", "notes": "Search \"ERROR\" (4 hits in 1 file)"}
+{"date": "8/13/2019", "notes": "-[RE: 1:1 Christopher C/Jason]"}
+{"date": "8/13/2019", "notes": "[Whitley feature domain owner] email from Yao, Fengying"}
+{"date": "8/7/2019", "notes": "-[RE: 1:1 Christopher C/Jason]"}
+{"date": "8/7/2019", "notes": "[Whitley feature domain owner] email from Yao, Fengying"}
+{"date": "8/13/2019", "notes": "-[insight bullet list] -> Chris"}
+{"date": "8/7/2019", "notes": "MIV is a concern, need more visibility"}
+{"date": "8/7/2019", "notes": "Inside MIV; test cases are running, failures are generating HSDs, HSDs are driving developer engagement, and execution readiness is driving collaborating with GDC execution teams."}
+{"date": "8/7/2019", "notes": "Code rot in disused thermal tests is a concern."}
+{"date": "8/7/2019", "notes": "Jason will reply to daily updates with goals from morning sync to improve visibility"}
+{"date": "8/7/2019", "notes": "[JF04WVAW0217] Neon City #2"}
+{"date": "8/7/2019", "notes": "COM4:"}
+{"date": "8/7/2019", "notes": "Check POR Compatibility -- Started"}
+{"date": "8/7/2019", "notes": "Get Status -- Started"}
+{"date": "8/7/2019", "notes": "No memory found!"}
+{"date": "8/7/2019", "notes": "Enhanced warning of type 1 logged:"}
+{"date": "8/7/2019", "notes": "Major Warning Code = 0x2A, Minor Warning Code = 0x01,"}
+{"date": "8/7/2019", "notes": "Major Checkpoint: 0xB0"}
+{"date": "8/7/2019", "notes": "Minor Checkpoint: 0x04"}
+{"date": "8/7/2019", "notes": "Warning upgraded to Fatal Error!"}
+{"date": "8/7/2019", "notes": "FatalError: BSP - SocketId = 0 registered Major Code = 0x2a, Minor Code = 0x 1"}
+{"date": "8/7/2019", "notes": "ERROR: BSP has an error Reported to SocketId = 1 registered Major Code = 2a, Minor Code = 1"}
+{"date": "8/7/2019", "notes": "ERROR: AP detected error on SocketId = 0 registered Major Code = 2a,Minor Code = 1"}
+{"date": "8/7/2019", "notes": "NC_BMC:"}
+{"date": "8/7/2019", "notes": "# ifconfig | grep net"}
+{"date": "8/7/2019", "notes": "eth0      Link encap:Ethernet  HWaddr 00:00:00:00:03:18"}
+{"date": "8/7/2019", "notes": "eth1      Link encap:Ethernet  HWaddr 00:00:00:00:03:1A"}
+{"date": "8/7/2019", "notes": "eth2      Link encap:Ethernet  HWaddr 00:00:00:00:03:19"}
+{"date": "8/7/2019", "notes": "          inet addr:127.0.0.1  Mask:255.0.0.0"}
+{"date": "8/7/2019", "notes": "          inet6 addr: ::1/128 Scope:Host"}
+{"date": "8/7/2019", "notes": "tulip0    Link encap:Ethernet  HWaddr 00:00:00:00:00:00"}
+{"date": "8/7/2019", "notes": "          inet6 addr: fe80::200:ff:fe00:0/64 Scope:Link"}
+{"date": "8/7/2019", "notes": "ifconfig eth1 down"}
+{"date": "8/7/2019", "notes": "ifconfig eth1 hw ether 90:49:FA:00:D4:19"}
+{"date": "8/7/2019", "notes": "ifconfig eth1 up"}
+{"date": "8/7/2019", "notes": "#enable root user"}
+{"date": "8/7/2019", "notes": "cmdtool 20 18 47 2 1"}
+{"date": "8/7/2019", "notes": "#superuser"}
+{"date": "8/7/2019", "notes": "cmdtool 20 18 47 2 2  73 75 70 65  72 75 73 65  72 0 0 0 0 0 0 0"}
+{"date": "8/7/2019", "notes": "# Enable DHCP"}
+{"date": "8/7/2019", "notes": "cmdtool 20 30 1 3 4 2"}
+{"date": "2019-08-05", "summary": "Montana workaround and testing", "evidence": "Git commands, Montana scripts, error messages", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-07-23", "summary": "PECI Access Enhancements Story assigned to Sukay", "evidence": "Email", "sensitivity": "Sensitive", "tags": []}
+{"date": "2019-06-07", "summary": "Discussion with colleagues about test cases and review", "evidence": "Email excerpts", "sensitivity": "Sensitive"}
+{"date": "8-16-06", "context": "SOL under linux (ipmitool) with encryption and as user 2\n\nipmitool -C3 -I lanplus -o intelplus -H 222.222.222.98 -U two -P xxxxxxxx sol set enabled true\nipmitool -C3 -I lanplus -o intelplus -H 222.222.222.98 -U two -P xxxxxxxx sol activate", "description": "SOL activation under Linux using ipmitool with encryption and as user 2"}
+{"date": "8-16-06", "context": "M:\\Firmware\\FTF\\FTF_202\\tests\\fwtests\\LAN\\Functions\\2.0\\RmcpSol2.tcl\n\nfixed password problem?", "description": "Fixing a password issue in RmcpSol2.tcl script"}
+{"date": "2023-12-31", "summary": "Took Vacation and FMLA in Q4 to care for and connect with extended family", "evidence": "", "sensitivity": "Sensitive", "tags": [], "relations": []}

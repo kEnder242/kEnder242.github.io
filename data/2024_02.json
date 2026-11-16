@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2024-02-27",
+    "summary": "MCTP device discovery and interaction using various tools.",
+    "evidence": "RAW LOGS: busctl, i2cdetect, i2cget used to discover and interact with MCTP devices on PCIe, I3C, and SMBus buses.",
+    "sensitivity": "Public",
+    "tags": [
+      "busctl",
+      "i2cdetect",
+      "i2cget",
+      "MCTP"
+    ],
+    "rank": 4,
+    "trigger_context": "[FOYER] Request 8b5a7dc1 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\"inferred_intent\": \"debug_imh_offset_search\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.7, \"target_domains\": [\"exp_tlm\"]}",
+    "document_date": "2024-02-27",
+    "event_era": "2024-02-27",
+    "event_year": 2024,
+    "event_quarter": "2024-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 2,
+    "impact_level": 3
+  }
+]

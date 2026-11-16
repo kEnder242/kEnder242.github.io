@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2018-2019-01",
+    "summary": "Primary TODO or research link mentioned in the Technical Abstract",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt",
+    "sensitivity": "Public",
+    "tags": [
+      "error injection",
+      "APEI/EINJ"
+    ],
+    "rank": 4,
+    "document_date": "2018-2019-01",
+    "event_era": "2018-2019-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Purpose of running the Python script `startCscripts.py` with arguments `-a ipc` and `-c CLX_LBG_XDPA`",
+    "evidence": "c:\\cscripts\\startCscripts.py -a ipc -c CLX_LBG_XDPA",
+    "sensitivity": "Public",
+    "tags": [
+      "CLX_LBG_XDPA",
+      "IPC"
+    ],
+    "rank": 4,
+    "document_date": "2018-2019-01",
+    "event_era": "2018-2019-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 2,
+    "trigger_context": "[FOYER] Request 913f7ebd secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETEDInitiating Pinky (Triage) intuition...Jason, I'm intrigued by your question! It seems like you're trying to understand why the Python script `startCscripts.py` was run with specific arguments.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  },
+  {
+    "date": "2018-2019-01",
+    "summary": "Significance of reviewing documentation on APEI/EINJ and verifying OS log error messages",
+    "evidence": "-Read https://www.kernel.org/doc/Documentation/acpi/apei/einj.txt -review - verify_os_log_error_messages",
+    "sensitivity": "Public",
+    "tags": [
+      "APEI/EINJ",
+      "OS log error messages"
+    ],
+    "rank": 4,
+    "document_date": "2018-2019-01",
+    "event_era": "2018-2019-01",
+    "event_year": 2018,
+    "event_quarter": "2018-Q7",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

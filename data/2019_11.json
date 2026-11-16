@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2019-10-22",
+    "summary": "Policy #231 sets expected average power limit to 312W.",
+    "evidence": "Line 2356: INFO, montana.FAI.nodeManager.avgpowercmp,**Initial average power 312w compared to 362W",
+    "sensitivity": "Public",
+    "tags": [
+      "avgpowercmp",
+      "policy #231"
+    ],
+    "rank": 4,
+    "document_date": "2019-10-22",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-10-22",
+    "summary": "avgpowercmp module identifies discrepancies in average power readings within \u00b15% range.",
+    "evidence": "Line 664: INFO, montana.FAI.nodeManager.avgpowercmp,**In +- 5% Avg Range - Pass!!",
+    "sensitivity": "Public",
+    "tags": [
+      "avgpowercmp",
+      "discrepancy detection"
+    ],
+    "rank": 4,
+    "document_date": "2019-10-22",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-10-22",
+    "summary": "avgpowercmp module reports 'Fail!!' when actual value exceeds \u00b15% range.",
+    "evidence": "Line 2357: INFO, montana.FAI.nodeManager.avgpowercmp,**Above +5% Avg Range - Fail!!",
+    "sensitivity": "Public",
+    "tags": [
+      "error reporting",
+      "avgpowercmp"
+    ],
+    "rank": 4,
+    "document_date": "2019-10-22",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

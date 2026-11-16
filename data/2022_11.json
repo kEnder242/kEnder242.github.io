@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2022-11-17",
+    "summary": "MSR register access issues and unexpected return codes encountered during PECI tests.",
+    "evidence": "RAW LOGS: MSR register access issues were encountered, specifically RdIaMsrEx testing of 9296 ia64 MSR's not listed in RdIaMsrEx_msr_whitelist. Unexpected PECI return codes for CORE:0x280-0x40f and MCDDR_CR_0-3.",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI tests",
+      "unexpected return codes",
+      "MSR register access issues"
+    ],
+    "rank": 4,
+    "document_date": "2022-11-17",
+    "event_era": "2022-11-17",
+    "event_year": 2022,
+    "event_quarter": "2022-Q4",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 2,
+    "trigger_context": "[INTERNAL MAINTENANCE] Refinement pass initiated: Given event summary: 'MSR register access issues and unexpec...This trigger is activated when a PECI/BIOS debug sequence fails to read or write the expected MSR register, causing an unexpected return code that breaks the expected PECI handshake and halts the test.",
+    "passes": 1,
+    "consecutive_zero_deltas": 0
+  }
+]

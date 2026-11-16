@@ -1,0 +1,138 @@
+[
+  {
+    "id": "RDNA-001",
+    "question": "How do you develop code?",
+    "intent_category": "interview_philosophy",
+    "question_variants": [
+      "What is your creative process for engineering and software design?",
+      "How do you approach turning ideas into working code?",
+      "Can you describe your code development workflow?",
+      "How do you brainstorm and implement software solutions?",
+      "What is your philosophy on creative design versus methodical implementation?"
+    ],
+    "target_dna": {
+      "collection": "philosophy_dna",
+      "id": "PHL-032",
+      "title": "The Dual-Engine Creative Process: Passive Cross-Domain Synthesis & Active Methodical Execution"
+    },
+    "confidence_floor": 0.75,
+    "metadata": {
+      "tags": [
+        "interview-prep",
+        "creative-process",
+        "software-development",
+        "cross-domain",
+        "passive-synthesis",
+        "active-execution"
+      ],
+      "created_at": "2026-09-16T11:25:00Z"
+    }
+  },
+  {
+    "id": "RDNA-002",
+    "question": "What is your philosophy on agentic AI workflows and LLMs in engineering?",
+    "intent_category": "interview_philosophy",
+    "question_variants": [
+      "How do you use AI agents in your day-to-day software development?",
+      "Is AI coding a gimmick or a real workflow multiplier?",
+      "How do you delegate tasks to LLMs effectively?",
+      "What is your approach to human-in-the-loop agentic coding?"
+    ],
+    "target_dna": {
+      "collection": "philosophy_dna",
+      "id": "PHL-002",
+      "title": "The Hippocampus & Prefrontal Cortex Architecture"
+    },
+    "confidence_floor": 0.75,
+    "metadata": {
+      "tags": [
+        "human-ai",
+        "agents",
+        "workflow",
+        "delegation",
+        "tooling"
+      ],
+      "created_at": "2026-09-16T11:25:00Z"
+    }
+  },
+  {
+    "id": "RDNA-003",
+    "question": "How do you maintain stability and prevent drift in autonomous multi-agent systems?",
+    "intent_category": "systems_architecture",
+    "question_variants": [
+      "How do you close the feedback loop with autonomous coding agents?",
+      "What prevents LLMs from compounding errors when executing tasks?",
+      "What is the role of backpressure in agent orchestration?",
+      "How do you prevent prompt drift in long-running agent workflows?"
+    ],
+    "target_dna": {
+      "collection": "philosophy_dna",
+      "id": "PHL-003",
+      "title": "The Single-Tenant Invariant & Session Hygiene"
+    },
+    "confidence_floor": 0.75,
+    "metadata": {
+      "tags": [
+        "feedback-loop",
+        "backpressure",
+        "delegation",
+        "prompt-drift",
+        "self-healing"
+      ],
+      "created_at": "2026-09-16T11:25:00Z"
+    }
+  },
+  {
+    "id": "RDNA-004",
+    "question": "How do you approach complex systems and bridge technical complexity with actionable insight?",
+    "intent_category": "engineering_leadership",
+    "question_variants": [
+      "How do you communicate complex firmware/hardware bugs to stakeholders?",
+      "What is your approach to debugging obscure datacenter-scale failures?",
+      "How do you turn validation noise into clear engineering decisions?",
+      "What is your core strength as a Staff/Senior Validation Engineer?"
+    ],
+    "target_dna": {
+      "collection": "philosophy_dna",
+      "id": "PHL-001",
+      "title": "The Three Pillars & Just-In-Time Context (JITC)"
+    },
+    "confidence_floor": 0.75,
+    "metadata": {
+      "tags": [
+        "systems-thinking",
+        "clarity",
+        "validation",
+        "career",
+        "leadership"
+      ],
+      "created_at": "2026-09-16T11:25:00Z"
+    }
+  },
+  {
+    "id": "RDNA-005",
+    "question": "Why is architectural decoupling so important in complex systems?",
+    "intent_category": "systems_architecture",
+    "question_variants": [
+      "How do you design systems that resist cascade failures?",
+      "What is the benefit of decoupling AI generation from static document compilation?",
+      "Why should data records be self-contained rather than live-tethered?",
+      "Can you give an example of architectural decoupling solving a major software problem?"
+    ],
+    "target_dna": {
+      "collection": "philosophy_dna",
+      "id": "PHL-031",
+      "title": "The Decoupled Determinism Tenet (Artifacts of Record vs. Ephemeral Runtime)"
+    },
+    "confidence_floor": 0.75,
+    "metadata": {
+      "tags": [
+        "decoupling",
+        "dual-decoupling",
+        "anti-embellishment",
+        "self-contained-ast"
+      ],
+      "created_at": "2026-09-16T11:25:00Z"
+    }
+  }
+]

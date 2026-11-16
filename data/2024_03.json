@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2023-02-20",
+    "summary": "Discovery of Intel BMC topology using busctl tree commands in Simics test environment.",
+    "evidence": "busctl tree xyz.openbmc_project.MCTP_I3C_MNG_CPU1\nbusctl tree xyz.openbmc_project.MCTP_PCIe\nbusctl tree xyz.openbmc_project.MCTP_SMBus_HSBP",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel BMC",
+      "Simics test environment",
+      "busctl tree"
+    ],
+    "trigger_context": "[FOYER] Request 04c16bb6 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.Initiating Pinky (Triage) intuition...{ \"inferred_intent\": \"debug_interface_query\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.6, \"intrigue\": 0.8, \"importance\": 0.6, \"target_domains\": [\"exp_tlm\"] }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 1,
+    "impact_level": 4
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Execution of PECI commands using peci_cmds with specific payload values.",
+    "evidence": "peci_cmds -d /dev/peci-i3c RdEndpointConfigPCILocal 0 30 1 0 0\npeci_cmds -d /dev/peci-i3c RdIAMSR 1 0x401",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI commands",
+      "peci_cmds"
+    ],
+    "trigger_context": "[FOYER] Request 6aff6460 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition\", \"addressed_to\": \"NONE\", \"vibe\": \"FORENSIC\", \"domain\": \"exp_for\", \"casual\": 0.0, \"intrigue\": 0.0, \"importance\": 0.0 }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 1,
+    "impact_level": 3
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Research link to article on Intel's appstore.",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/16013235666",
+    "sensitivity": "Public",
+    "tags": [
+      "Intel appstore",
+      "research link"
+    ],
+    "trigger_context": "[FOYER] Request 4a062df9 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"search_intel_appstore\", \"addressed_to\": \"NONE\", \"vibe\": \"HISTORICAL\", \"domain\": \"work_history\", \"casual\": 0.8, \"intrigue\": 0.6, \"importance\": 0.4 }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 1,
+    "impact_level": 1
+  }
+]

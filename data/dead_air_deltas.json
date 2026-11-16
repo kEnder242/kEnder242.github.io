@@ -1,0 +1,39 @@
+[
+  {
+    "condition": "OPERATIONAL_HOT",
+    "pre_state": "OPERATIONAL",
+    "pre_vram": 7142,
+    "t0_dispatch": 1788420037.8419783,
+    "t1_triage": null,
+    "t2_pinky_stance": null,
+    "t3_brain_arch": null,
+    "t4_deep_thought": null,
+    "t5_pinky_judgment": 2.455,
+    "delta_t1": null,
+    "delta_t2": null,
+    "delta_t3": null,
+    "delta_t4": null,
+    "delta_t5": 2.455,
+    "total_round_trip": 2.455,
+    "events": [
+      {
+        "elapsed_s": 0.029,
+        "src": "[ME [SID: E5B638F3]]",
+        "body_preview": "[STRATEGIC] Compare silicon memory limits of RTX 2080 Ti and M5 Air.",
+        "is_crosstalk": false
+      },
+      {
+        "elapsed_s": 2.455,
+        "src": "[BRAIN (LOCAL BASELINE) [SID: E5B638F3]]",
+        "body_preview": "Initiating Brain (Local Baseline) intuition...",
+        "is_crosstalk": true
+      },
+      {
+        "elapsed_s": 2.455,
+        "src": "[BRAIN (ARCHIVE) [SID: E5B638F3] [PID: 827342]]",
+        "body_preview": "Strategic Brief\n\nThe system under investigation appears to be a high-performance",
+        "is_crosstalk": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "date": "2019-05-07",
+    "summary": "Cloned Git repository ptv-riv from remote server git-amr-7.devtools.intel.com using SSH.",
+    "evidence": "git clone ssh://git-amr-7.devtools.intel.com/ptv-riv.git",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Configured local repository with user name and email address.",
+    "evidence": "git config user.name \"Allred, Jason\"; git config user.email \"jason.a.allred@intel.com\"",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-05-07",
+    "summary": "Retrieved commit-msg hook from remote server via SCP.",
+    "evidence": "scp -P 29418 jallred@git-amr-7.devtools.intel.com:hooks/commit-msg .git/hooks/",
+    "sensitivity": "Public",
+    "tags": [],
+    "rank": 4,
+    "document_date": "2019-05-07",
+    "event_era": "2019-05-07",
+    "event_year": 2019,
+    "event_quarter": "2019-Q2",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 3,
+    "refinement_level": 1
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "TODO: Research SPS HSD issue with sighting ID 5388174 at https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174.",
+    "evidence": "https://vthsd.intel.com/hsd/bios_purley/default.aspx#sighting/default.aspx?sighting_id=5388174",
+    "sensitivity": "Public",
+    "tags": [
+      "TODO",
+      "SPS HSD issue"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Used Postman with IP address 10.23.20.135 and Redfish protocol for API interactions during MIV test cases.",
+    "evidence": "Postman used with IP address 10.23.20.135 and Redfish protocol",
+    "sensitivity": "Public",
+    "tags": [
+      "API interactions",
+      "MIV test cases"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 4,
+    "refinement_level": 1,
+    "trigger_context": "Initiating Pinky (Triage) intuition...[FOYER] Request 8e7ce1db secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Let me check on that for you, Jason. I'll see if we have any records of MCTP discovery through BMC PCIe devices.\",\n  \"search_terms\": \n    \"[['MCTP', 'BMC', 'PCIe'], ['MCTP Discovery', 'PCIe Devices'], ['BMC', 'PCIe', 'Discovery']]\", \n  \"upvote\": true\n}",
+    "passes": 2,
+    "consecutive_zero_deltas": 1
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "Glasgow ID list on Sharepoint referenced for content readiness, IDs ranging from 58637 to 59211.",
+    "evidence": "Glasgow ID list on Sharepoint with IDs 58637-59211",
+    "sensitivity": "Public",
+    "tags": [
+      "Sharepoint",
+      "content readiness"
+    ],
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "impact_level": 1,
+    "refinement_level": 0
+  }
+]

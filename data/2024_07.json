@@ -1,0 +1,67 @@
+[
+  {
+    "date": "2023-02-20",
+    "summary": "Authentication method used for Redfish API queries in this system",
+    "evidence": "-sku option used to authenticate as \"debuguser:[REDACTED_PASSWORD]\"",
+    "sensitivity": "Public",
+    "tags": [
+      "Redfish",
+      "API",
+      "authentication"
+    ],
+    "trigger_context": "[FOYER] Request 1946f4c8 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{ \"inferred_intent\": \"debug_condition_inquiry\", \"addressed_to\": \"NONE\", \"vibe\": \"HISTORICAL\", \"domain\": \"work_history\", \"casual\": 0.8, \"intrigue\": 0.7, \"importance\": 0.6, \"target_domains\": [\"work_history\"] }",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 1,
+    "impact_level": 4
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "PECI commands executed and modified on the system using peci_cmds tool",
+    "evidence": "Examples of PECI commands being executed with different options and arguments",
+    "sensitivity": "Public",
+    "tags": [
+      "PECI",
+      "peci_cmds"
+    ],
+    "trigger_context": "[FOYER] Request bbefa6b9 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.{\"inferred_intent\": \"authentication method for Redfish API\", \"addressed_to\": \"NONE\", \"vibe\": \"TECHNICAL\", \"domain\": \"exp_tlm\", \"casual\": 0.3, \"intrigue\": 0.8, \"importance\": 0.9, \"target_domains\": [\"exp_tlm\", \"work_history\"]}",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 1,
+    "consecutive_zero_deltas": 0,
+    "refinement_level": 1,
+    "impact_level": 3
+  },
+  {
+    "date": "2023-02-20",
+    "summary": "System architecture mentioned in technical details, including interfaces supported by the system",
+    "evidence": "Intel-based system with MCTP and PECI interfaces",
+    "sensitivity": "Public",
+    "tags": [
+      "system architecture",
+      "MCTP",
+      "PECI"
+    ],
+    "trigger_context": "[FOYER] Request 071063e5 secured in queue. Igniting Brain...[DEEP THOUGHT]: Deep Thought: System operational. Awaiting command parameters.[STAGE 1/5]  \u2014 STARTED[STAGE 1/5]  \u2014 COMPLETED{\n  \"spoken_take\": \"Jason, it seems like you're looking into authentication methods for Redfish API queries. I'm checking our records on how we handled Redfish authentication in the past, specifically around the use of sku options.\",\n  \"search_terms\": \"Redfish API authentication, sku option, debuguser, OpenBMC, Intel VISA\",\n  \"upvote\": true\n}",
+    "document_date": "2023-02-20",
+    "event_era": "2023-02-20",
+    "event_year": 2023,
+    "event_quarter": "2023-Q1",
+    "temporal_confidence": 0.5,
+    "temporal_provenance": "document_date_fallback",
+    "passes": 2,
+    "consecutive_zero_deltas": 1,
+    "refinement_level": 1,
+    "impact_level": 4
+  }
+]

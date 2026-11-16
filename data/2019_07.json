@@ -1,0 +1,59 @@
+[
+  {
+    "date": "2019-07-01",
+    "summary": "Power limit accuracy issue across domains reported",
+    "evidence": "https://hsdes.intel.com/appstore/article/#/2208036139 [MIV][ICX] Power limit accuracy across domains reports Min power is equal to Max power",
+    "sensitivity": "Public",
+    "tags": [
+      "domains",
+      "power_limit_accuracy"
+    ],
+    "rank": 4,
+    "document_date": "2019-07-01",
+    "event_era": "2020-06-01",
+    "event_year": 2020,
+    "event_quarter": "2020-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Whitley\\b|\\bIce Lake[- ]SP\\b|\\bICX",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Montana testing affects stability of UUT, causing fatal error due to BIST errors disabling all cores",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "bist_errors",
+      "montana_testing"
+    ],
+    "rank": 4,
+    "document_date": "2019-07-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  },
+  {
+    "date": "2019-07-01",
+    "summary": "Tool 'montana.nativemodules.pmcapsweep' used to investigate power limit accuracy errors",
+    "evidence": "RAW LOGS: ... (see above)",
+    "sensitivity": "Public",
+    "tags": [
+      "power_limit_accuracy",
+      "pmcapsweep"
+    ],
+    "rank": 4,
+    "document_date": "2019-07-01",
+    "event_era": "2023-06-01",
+    "event_year": 2023,
+    "event_quarter": "2023-Q4",
+    "temporal_confidence": 0.7,
+    "temporal_provenance": "platform_heuristic_Kayak\\b|\\bMontana",
+    "impact_level": 1,
+    "refinement_level": 1
+  }
+]

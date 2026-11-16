@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-11-04T23:39:04+00:00",
+  "cuda_card": "NVIDIA GeForce RTX 2080 Ti (11GB)",
+  "arc_card": "Intel Arc B580 (16GB ReBAR)",
+  "vllm_baseline_rtx2080ti": {
+    "model": "Llama-3.2-3B-AWQ",
+    "status": "PASS",
+    "ttft_ms": 90.78,
+    "tokens_per_second": 24.76,
+    "cuda_vram_mb": 6199.0
+  },
+  "silicon_benchmarks_llama_3_2_3b_q4_k_m": {
+    "engine": "llama.cpp (build 3de52ac, Vulkan backend)",
+    "pure_rtx2080ti": {
+      "device": "Vulkan1 (RTX 2080 Ti 11GB)",
+      "pp512_tokens_sec": 4658.06,
+      "tg128_tokens_sec": 182.98
+    },
+    "pure_arc_b580": {
+      "device": "Vulkan0 (Intel Arc B580 16GB ReBAR)",
+      "pp512_tokens_sec": 2293.27,
+      "tg128_tokens_sec": 50.58
+    },
+    "dual_gpu_hybrid_layer_split": {
+      "devices": "Vulkan0/Vulkan1 (Arc B580 16GB + RTX 2080 Ti 11GB)",
+      "split_mode": "layer",
+      "tensor_split": "1.00/1.00",
+      "pp512_tokens_sec": 2851.17,
+      "tg128_tokens_sec": 77.09,
+      "speedup_vs_arc_standalone": "+52.4%",
+      "speedup_vs_vllm_baseline": "+211.3% (3.11x)"
+    }
+  },
+  "silicon_benchmarks_qwen2_5_32b_q4_k_m": {
+    "engine": "llama.cpp (build 3de52ac, Vulkan backend)",
+    "model_size_gib": 18.48,
+    "total_params_b": 32.76,
+    "offload_layers": "48/64 (dual-GPU partial offload coexisting with vLLM)",
+    "devices": "Vulkan0/Vulkan1 (Arc B580 16GB + RTX 2080 Ti 11GB)",
+    "tensor_split": "10.00/4.00",
+    "pp64_tokens_sec": 2.95,
+    "tg16_tokens_sec": 1.72,
+    "bottleneck_analysis": "16 layers evaluated on CPU due to 6.2GB vLLM reservation on RTX 2080 Ti; constrained by DDR host memory and swap."
+  },
+  "device_order_characterization_32b": {
+    "arc_first_Vulkan0_Vulkan1": {
+      "order": "Arc B580 -> RTX 2080 Ti",
+      "pp64_tokens_sec": 59.13,
+      "tg32_tokens_sec": 10.22
+    },
+    "rtx_first_Vulkan1_Vulkan0": {
+      "order": "RTX 2080 Ti -> Arc B580",
+      "pp64_tokens_sec": 69.7,
+      "tg32_tokens_sec": 10.03,
+      "prefill_speedup": "+17.9% faster prompt processing"
+    },
+    "architectural_verdict": "Placing RTX 2080 Ti at head of pipeline (Vulkan1/Vulkan0) yields +17.9% prefill speedup due to 616 GB/s memory bus and faster embedding lookup, while decode throughput remains symmetric (~10.1 t/s) across both cards."
+  },
+  "silicon_benchmarks_qwen3_8_27b_q4_k_m": {
+    "engine": "llama.cpp (build 3de52ac, Vulkan backend)",
+    "model_identifier": "qwen35 27B Q4_K - Medium",
+    "file": "Qwen3.8-27B-UD-Q4_K_M.gguf",
+    "model_size_gib": 15.32,
+    "total_params_b": 27.32,
+    "offload_layers": "64/64 (100% full VRAM offload, 0 CPU layers)",
+    "devices": "Vulkan1/Vulkan0 (RTX 2080 Ti 11GB + Arc B580 16GB)",
+    "ratio_11_16_arc_heavy": {
+      "tensor_split": "11.00/16.00",
+      "pp64_tokens_sec": 48.31,
+      "tg32_tokens_sec": 8.93
+    },
+    "ratio_1_1_balanced": {
+      "tensor_split": "1.00/1.00",
+      "pp64_tokens_sec": 71.1,
+      "tg32_tokens_sec": 11.33,
+      "speedup_vs_unbalanced": "+47.2% prefill, +26.9% decode"
+    },
+    "comparison_vs_32b": "11.33 t/s vs 10.03 t/s (+13.0% decode speedup matching 15.3GB vs 18.5GB bandwidth reduction)"
+  },
+  "silicon_benchmarks_qwen3_7_flash_8b_q8_0": {
+    "engine": "llama.cpp (build 3de52ac, Vulkan backend)",
+    "model_identifier": "qwen3 8B Q8_0",
+    "file": "Qwen3.7-Flash-8B-Q8_0.gguf",
+    "model_size_gib": 8.11,
+    "total_params_b": 8.19,
+    "pure_rtx2080ti": {
+      "device": "Vulkan1 (RTX 2080 Ti 11GB)",
+      "pp64_tokens_sec": 907.59,
+      "tg32_tokens_sec": 59.96,
+      "vram_allocation_gib": 8.11,
+      "remaining_headroom_gib": 2.77
+    },
+    "pure_arc_b580": {
+      "device": "Vulkan0 (Intel Arc B580 16GB)",
+      "pp64_tokens_sec": 357.8,
+      "tg32_tokens_sec": 9.53,
+      "vram_allocation_gib": 8.11,
+      "remaining_headroom_gib": 3.82
+    },
+    "dual_gpu_50_50_split": {
+      "devices": "Vulkan1/Vulkan0 (RTX 2080 Ti + Arc B580)",
+      "tensor_split": "1.00/1.00",
+      "pp64_tokens_sec": 508.71,
+      "tg32_tokens_sec": 14.9,
+      "vram_per_card_gib": 4.06
+    }
+  }
+}
