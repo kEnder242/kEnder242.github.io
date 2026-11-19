@@ -236,7 +236,7 @@ function renderThroughputLiveChart(records) {
         const dur = Number(r.duration_seconds);
         const tp = (r.throughput_tok_s !== null && r.throughput_tok_s !== undefined) ? Number(r.throughput_tok_s) : NaN;
         const ts = Number(r.timestamp);
-        return isFinite(tp) && tp > 0 && tp <= 1000.0 && isFinite(dur) && dur >= 1.0 && isFinite(ts) && ts >= minTimelineFloor;
+        return isFinite(tp) && tp > 0 && tp <= 80.0 && isFinite(dur) && dur >= 1.0 && isFinite(ts) && ts >= minTimelineFloor;
     });
 
     if (!validRecords.length) {
@@ -352,11 +352,15 @@ function renderThroughputLiveChart(records) {
 function renderDecodeEfficiencyChart(records) {
     const canvas = document.getElementById('decode-efficiency-chart');
     if (!canvas) return;
+    if (!canvas.width || canvas.width === 0) canvas.width = 1000;
+    if (!canvas.height || canvas.height === 0) canvas.height = 320;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const width = canvas.width;
     const height = canvas.height;
+
+    records = (Array.isArray(records) && records.length > 0) ? records : (window.cachedLiveRecords || []);
 
     // Reset background
     ctx.fillStyle = '#0d1117';

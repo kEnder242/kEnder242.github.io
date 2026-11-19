@@ -623,11 +623,17 @@
             if (tabId === 'tab-delta-t' && typeof initDeltaTView === 'function') {
                 setTimeout(initDeltaTView, 50);
             }
-            if (tabId === 'tab-arena' && typeof renderThroughputLiveChart === 'function' && window.cachedLiveRecords) {
+            if (tabId === 'tab-arena') {
                 setTimeout(() => {
-                    renderThroughputLiveChart(window.cachedLiveRecords);
-                    if (typeof renderDecodeEfficiencyChart === 'function') {
-                        renderDecodeEfficiencyChart(window.cachedLiveRecords);
+                    if (window.cachedLiveRecords) {
+                        if (typeof renderThroughputLiveChart === 'function') {
+                            renderThroughputLiveChart(window.cachedLiveRecords);
+                        }
+                        if (typeof renderDecodeEfficiencyChart === 'function') {
+                            renderDecodeEfficiencyChart(window.cachedLiveRecords);
+                        }
+                    } else if (typeof loadLiveUsageStream === 'function') {
+                        loadLiveUsageStream();
                     }
                 }, 50);
             }
@@ -636,6 +642,6 @@
             }
         }
     </script>
-    <script src="benchmarks.js?v=540ea8dd"></script>
+    <script src="benchmarks.js?v=11384f98"></script>
 </body>
 </html>
