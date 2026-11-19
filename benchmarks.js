@@ -215,38 +215,40 @@ function renderThroughputLiveChart(records) {
 
     const SEAT_COLORS = {
         'Windows 4090RTX': '#58a6ff',
+        'Hybrid GPU (2080 Ti + Arc B580)': '#3fb950',
         'Linux 2080ti': '#3fb950',
         'Apple M5 Air': '#bc8cff',
         'Cloud Swarm': '#f778ba'
     };
     const SEAT_LABELS = {
         'Windows 4090RTX': 'Kender 4090',
-        'Linux 2080ti': '2080 Ti',
+        'Hybrid GPU (2080 Ti + Arc B580)': 'Hybrid GPU (2080 Ti + Arc B580)',
+        'Linux 2080ti': 'Hybrid GPU (2080 Ti + Arc B580)',
         'Apple M5 Air': 'M5 Air',
         'Cloud Swarm': 'Cloud'
     };
     const colorFor = (seat) => SEAT_COLORS[seat] || '#8b949e';
     const labelFor = (seat) => SEAT_LABELS[seat] || seat || 'Unknown';
 
-    // Filter valid receipts with true hardware throughput (Metric 1)
+    // [STORY 113.82] Filter valid receipts >= 2026-10-08 timeline clamp
+    const minTimelineFloor = 1791417600; // 2026-10-08 00:00:00 UTC
     const validRecords = (Array.isArray(records) ? records : []).filter(r => {
         const dur = Number(r.duration_seconds);
         const tp = (r.throughput_tok_s !== null && r.throughput_tok_s !== undefined) ? Number(r.throughput_tok_s) : NaN;
         const ts = Number(r.timestamp);
-        return isFinite(tp) && tp > 0 && tp <= 1000.0 && isFinite(dur) && dur >= 1.0 && isFinite(ts) && ts > 0;
+        return isFinite(tp) && tp > 0 && tp <= 1000.0 && isFinite(dur) && dur >= 1.0 && isFinite(ts) && ts >= minTimelineFloor;
     });
 
     if (!validRecords.length) {
         ctx.fillStyle = '#8b949e';
         ctx.font = '12px "JetBrains Mono", monospace';
         ctx.textAlign = 'center';
-        ctx.fillText('⚡ No live throughput telemetry recorded yet. Awaiting workload dispatches.', width / 2, height / 2);
+        ctx.fillText('⚡ No live throughput telemetry recorded yet for this timeline window.', width / 2, height / 2);
         return;
     }
 
     validRecords.sort((a, b) => Number(a.timestamp) - Number(b.timestamp));
 
-    // Full empirical timeline starting from 2026-08-31 across all recorded receipts
     const bySeat = {};
     validRecords.forEach(r => {
         const seat = r.seat || 'Unknown';
@@ -287,7 +289,7 @@ function renderThroughputLiveChart(records) {
         ctx.fillText(val.toFixed(1), padLeft - 10, y + 3);
     }
 
-    // Universal Timeline X ticks & gridlines
+    // Universal Timeline X ticks & gridlines (starting 2026-10-08)
     const timeSteps = 5;
     for (let i = 0; i <= timeSteps; i++) {
         const curTs = minTime + (timeSpan > 0 ? (timeSpan * i) / timeSteps : 0);
@@ -311,55 +313,182 @@ function renderThroughputLiveChart(records) {
         ctx.fillText(dateLabel, x, height - padBottom + 18);
     }
 
-    // Per-seat lines + points + value badges (all overlaid across universal time axis)
+    // [STORY 113.82] Pure Scatter Plot: dense points rendered as dots without line strokes
     seatNames.forEach(seat => {
         const pts = bySeat[seat];
         const color = colorFor(seat);
 
-        // Multi-point series line connecting points chronologically
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 2.0;
-        ctx.beginPath();
-        pts.forEach((r, idx) => {
-            const x = getX(Number(r.timestamp));
-            const y = getY(Number(r.throughput_tok_s));
-            if (idx === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-
-        // Dots on each sample point
+        // Scatter points
         pts.forEach(r => {
             const x = getX(Number(r.timestamp));
             const val = Number(r.throughput_tok_s);
             const y = getY(val);
             ctx.fillStyle = color;
             ctx.beginPath();
-            ctx.arc(x, y, 4.0, 0, Math.PI * 2);
+            ctx.arc(x, y, 3.2, 0, Math.PI * 2);
             ctx.fill();
-            ctx.strokeStyle = '#0d1117';
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
         });
 
-        // Value badge above the latest point(s) of this seat
-        const seatPts = pts.slice(-2);
-        seatPts.forEach(r => {
-            const x = getX(Number(r.timestamp));
-            const y = getY(Number(r.throughput_tok_s));
+        // Value badge above the latest point of this seat
+        if (pts.length > 0) {
+            const lastR = pts[pts.length - 1];
+            const x = getX(Number(lastR.timestamp));
+            const y = getY(Number(lastR.throughput_tok_s));
             ctx.fillStyle = color;
             ctx.font = 'bold 9px "JetBrains Mono", monospace';
             ctx.textAlign = 'center';
-            ctx.fillText(Number(r.throughput_tok_s).toFixed(1), x, y - 8);
-        });
+            ctx.fillText(Number(lastR.throughput_tok_s).toFixed(1), x, y - 8);
+        }
     });
 
     ctx.fillStyle = '#8b949e';
     ctx.font = '10px "JetBrains Mono", monospace';
     ctx.textAlign = 'left';
-    ctx.fillText('▲ Live Throughput (tok/s)', padLeft, padTop - 12);
+    ctx.fillText('▲ Live Post-Prefill Throughput (tok/s)', padLeft, padTop - 12);
     ctx.textAlign = 'right';
     ctx.fillText('Universal Timeline (Chronological) ►', width - padRight, height - padBottom + 34);
+}
+
+function renderDecodeEfficiencyChart(records) {
+    const canvas = document.getElementById('decode-efficiency-chart');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Reset background
+    ctx.fillStyle = '#0d1117';
+    ctx.fillRect(0, 0, width, height);
+
+    const SEAT_COLORS = {
+        'Windows 4090RTX': '#58a6ff',
+        'Hybrid GPU (2080 Ti + Arc B580)': '#3fb950',
+        'Linux 2080ti': '#3fb950',
+        'Apple M5 Air': '#bc8cff',
+        'Cloud Swarm': '#f778ba'
+    };
+    const colorFor = (seat) => SEAT_COLORS[seat] || '#8b949e';
+
+    const minTimelineFloor = 1791417600; // 2026-10-08
+    const validPoints = (Array.isArray(records) ? records : []).filter(r => {
+        const ts = Number(r.timestamp);
+        const tok = Number(r.tokens_generated);
+        const dur = Number(r.decode_duration_s || (r.duration_seconds - (r.ttft_s || 0)));
+        return isFinite(ts) && ts >= minTimelineFloor && isFinite(tok) && tok > 5 && isFinite(dur) && dur > 0.05 && dur <= 60.0;
+    });
+
+    if (!validPoints.length) {
+        ctx.fillStyle = '#8b949e';
+        ctx.font = '12px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText('⚡ No empirical decode receipts available for generation curves.', width / 2, height / 2);
+        return;
+    }
+
+    const padLeft = 70;
+    const padRight = 50;
+    const padTop = 35;
+    const padBottom = 45;
+    const chartW = width - padLeft - padRight;
+    const chartH = height - padTop - padBottom;
+
+    // X: Net decode seconds (t_wall - t_TTFT)
+    // Y: Output Tokens
+    const maxX = 30.0; // clamp view to 30s
+    const maxY = 600.0; // clamp view to 600 tokens
+
+    const getX = (dur) => padLeft + (Math.min(dur, maxX) / maxX) * chartW;
+    const getY = (tok) => padTop + chartH - (Math.min(tok, maxY) / maxY) * chartH;
+
+    // Horizontal grid & Y labels (Tokens)
+    const ySteps = 5;
+    for (let i = 0; i <= ySteps; i++) {
+        const val = (maxY / ySteps) * i;
+        const y = padTop + chartH - (val / maxY) * chartH;
+        ctx.strokeStyle = '#1f242c';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(padLeft, y);
+        ctx.lineTo(width - padRight, y);
+        ctx.stroke();
+
+        ctx.fillStyle = '#8b949e';
+        ctx.font = '10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'right';
+        ctx.fillText(`${val.toFixed(0)} tok`, padLeft - 10, y + 3);
+    }
+
+    // Vertical grid & X labels (Seconds)
+    const xSteps = 6;
+    for (let i = 0; i <= xSteps; i++) {
+        const val = (maxX / xSteps) * i;
+        const x = padLeft + (val / maxX) * chartW;
+        ctx.strokeStyle = '#161b22';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, padTop);
+        ctx.lineTo(x, height - padBottom);
+        ctx.stroke();
+
+        ctx.fillStyle = '#8b949e';
+        ctx.font = '10px "JetBrains Mono", monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(`${val.toFixed(0)}s`, x, height - padBottom + 18);
+    }
+
+    // Reference Slope Rays: tok = rate * seconds
+    const slopes = [
+        { label: '4090 Target (35 tok/s)', rate: 35.0, color: '#58a6ff' },
+        { label: 'Hybrid GPU (24 tok/s)', rate: 24.0, color: '#3fb950' },
+        { label: 'M5 Air (16 tok/s)', rate: 16.0, color: '#bc8cff' }
+    ];
+
+    ctx.save();
+    ctx.setLineDash([4, 4]);
+    slopes.forEach(s => {
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        const startX = getX(0);
+        const startY = getY(0);
+        const endSec = Math.min(maxX, maxY / s.rate);
+        const endTok = s.rate * endSec;
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(getX(endSec), getY(endTok));
+        ctx.stroke();
+
+        // Label near the end of the ray
+        ctx.fillStyle = s.color;
+        ctx.font = '9px "JetBrains Mono", monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText(s.label, getX(endSec) - 80, getY(endTok) - 6);
+    });
+    ctx.restore();
+
+    // Plot empirical data points
+    validPoints.forEach(r => {
+        const dur = Number(r.decode_duration_s || (r.duration_seconds - (r.ttft_s || 0)));
+        const tok = Number(r.tokens_generated);
+        if (dur > maxX || tok > maxY) return;
+        const x = getX(dur);
+        const y = getY(tok);
+        const color = colorFor(r.seat);
+
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(x, y, 3.2, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    // Axis titles
+    ctx.fillStyle = '#8b949e';
+    ctx.font = '10px "JetBrains Mono", monospace';
+    ctx.textAlign = 'left';
+    ctx.fillText('▲ Output Tokens (count)', padLeft, padTop - 12);
+    ctx.textAlign = 'right';
+    ctx.fillText('Net Decode Duration (t_wall - t_TTFT) [seconds] ►', width - padRight, height - padBottom + 34);
 }
 
 async function loadLiveUsageStream() {
@@ -384,6 +513,7 @@ async function loadLiveUsageStream() {
         }).filter(r => r !== null && Number(r.duration_seconds) >= 1.0);
         window.cachedLiveRecords = allRecords;
         renderThroughputLiveChart(allRecords);
+        renderDecodeEfficiencyChart(allRecords);
 
         const records = [...allRecords].reverse();
         let tableHtml = '<div style="overflow-x:auto;"><table class="live-stream-table" style="margin:0;"><thead><tr><th style="background:#0d1117;">Timestamp</th><th style="background:#0d1117;">Tier</th><th style="background:#0d1117;">Seat</th><th style="background:#0d1117;">Task / Story</th><th style="background:#0d1117;">Model</th><th style="background:#0d1117; text-align:right;">Output Tokens</th><th style="background:#0d1117; text-align:right;">Duration</th><th style="background:#0d1117; text-align:right;">Throughput</th></tr></thead><tbody>';
@@ -534,11 +664,11 @@ function renderDeltaTChart(data) {
     }
 
     const series = [
-        { key: 'triage', name: 'Δt1: Triage', color: '#58a6ff' },
-        { key: 'pinky_stance', name: 'Δt2: Pinky', color: '#f778ba' },
-        { key: 'brain_arch', name: 'Δt3: Brain', color: '#f85149' },
-        { key: 'oracle', name: 'Δt4: Oracle', color: '#bc8cff' },
-        { key: 'pinky_judgment', name: 'Δt5: Judgment', color: '#3fb950' }
+        { key: 'triage', name: 'Δt1: Triage (Kender)', color: '#58a6ff' },
+        { key: 'pinky_stance', name: 'Δt2: Brain Gatekeeper (Moat RAG)', color: '#f778ba' },
+        { key: 'brain_arch', name: 'Δt3: Deep Thought (Synthesis)', color: '#f85149' },
+        { key: 'oracle', name: 'Δt4: Pinky Voice (Delivery Pop)', color: '#bc8cff' },
+        { key: 'pinky_judgment', name: 'Δt5: Sovereign Critic (Entailment Audit)', color: '#3fb950' }
     ];
 
     const numTurns = data.length;
@@ -762,8 +892,8 @@ function renderBlackboardLedger(data) {
     reversedData.forEach((turn, idx) => {
         const checkpoints = turn.checkpoints_elapsed_s || turn.cumulative || {};
         const deltas = turn.deltas_elapsed_s || turn.deltas || {};
-        const deltaSummary = `Δt1: ${((deltas.triage || 0) * 1000).toFixed(0)}ms | Δt2: ${((deltas.pinky_stance || 0) * 1000).toFixed(0)}ms | Δt3: ${((deltas.brain_arch || 0) * 1000).toFixed(0)}ms | Δt4: ${((deltas.oracle || 0) * 1000).toFixed(0)}ms | Δt5: ${((deltas.pinky_judgment || 0) * 1000).toFixed(0)}ms`;
-        const elapsedSummary = `t1: ${(checkpoints.triage || 0).toFixed(2)}s → t2: ${(checkpoints.pinky_stance || 0).toFixed(2)}s → t3: ${(checkpoints.brain_arch || 0).toFixed(2)}s → t4: ${(checkpoints.oracle || 0).toFixed(2)}s → t5: ${(turn.total_elapsed_s || turn.total_s || 0).toFixed(2)}s`;
+        const deltaSummary = `Δt1: ${((deltas.triage || 0) * 1000).toFixed(0)}ms (Triage) | Δt2: ${((deltas.pinky_stance || 0) * 1000).toFixed(0)}ms (Gatekeeper) | Δt3: ${((deltas.brain_arch || 0) * 1000).toFixed(0)}ms (Deep Thought) | Δt4: ${((deltas.oracle || 0) * 1000).toFixed(0)}ms (Pinky Voice) | Δt5: ${((deltas.pinky_judgment || 0) * 1000).toFixed(0)}ms (Sovereign Critic)`;
+        const elapsedSummary = `t1: ${(checkpoints.triage || 0).toFixed(2)}s (Triage) → t2: ${(checkpoints.pinky_stance || 0).toFixed(2)}s (Gatekeeper) → t3: ${(checkpoints.brain_arch || 0).toFixed(2)}s (Deep Thought) → t4: ${(checkpoints.oracle || 0).toFixed(2)}s (Pinky Voice) → t5: ${(turn.total_elapsed_s || turn.total_s || 0).toFixed(2)}s (Sovereign Critic)`;
 
         // Find nested subagent dispatches for this turn
         const matchingDispatches = liveRecords.filter(r => r.turn === turn.turn || r.turn_id === turn.turn);

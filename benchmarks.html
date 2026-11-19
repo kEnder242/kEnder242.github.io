@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=9855deef">
-    <script src="mission-control.js?v=9f1019d4" defer></script>
+    <script src="mission-control.js?v=8fef985d" defer></script>
     <style>
         body {
             background-color: var(--bg-color, #0a0e14);
@@ -478,11 +478,11 @@
                     <span class="chart-subtitle">Monotonic time elapsed since turn start ($t_1 \rightarrow t_5$). Lines show cumulative elapsed progression; vertical gaps represent isolated stage durations.</span>
                 </div>
                 <div class="delta-t-legend">
-                    <div class="legend-pill"><div class="legend-color" style="background:#58a6ff;"></div><span>&Delta;t1: Triage Resolution (Elapsed)</span></div>
-                    <div class="legend-pill"><div class="legend-color" style="background:#f778ba;"></div><span>&Delta;t2: Pinky Stance (Elapsed)</span></div>
-                    <div class="legend-pill"><div class="legend-color" style="background:#f85149;"></div><span>&Delta;t3: Brain Architecture (Elapsed)</span></div>
-                    <div class="legend-pill"><div class="legend-color" style="background:#bc8cff;"></div><span>&Delta;t4: Deep Thought Oracle (Elapsed)</span></div>
-                    <div class="legend-pill"><div class="legend-color" style="background:#3fb950;"></div><span>&Delta;t5: Pinky Judgment (Total Elapsed)</span></div>
+                    <div class="legend-pill"><div class="legend-color" style="background:#58a6ff;"></div><span>&Delta;t1: Triage (Kender)</span></div>
+                    <div class="legend-pill"><div class="legend-color" style="background:#f778ba;"></div><span>&Delta;t2: Brain Gatekeeper (Moat RAG)</span></div>
+                    <div class="legend-pill"><div class="legend-color" style="background:#f85149;"></div><span>&Delta;t3: Deep Thought (Synthesis)</span></div>
+                    <div class="legend-pill"><div class="legend-color" style="background:#bc8cff;"></div><span>&Delta;t4: Pinky Voice (Delivery Pop)</span></div>
+                    <div class="legend-pill"><div class="legend-color" style="background:#3fb950;"></div><span>&Delta;t5: Sovereign Critic (Entailment Audit)</span></div>
                 </div>
                 <div style="overflow-x: auto;">
                     <canvas id="delta-t-chart" width="1000" height="340"></canvas>
@@ -503,19 +503,34 @@
 
         <!-- TAB 2: SILICON ARENA & WORKLOAD STREAM (SPEED, LATENCY, LIVE RUNS) -->
         <div id="tab-arena" class="tab-pane hidden">
-            <!-- Live Model Throughput Canvas [STORY 102.18] -->
+            <!-- Live Model Throughput Canvas [STORY 102.18 / STORY 113.82] -->
             <div class="chart-card">
                 <div class="chart-title">
-                    <span>⚡ Live Model Throughput Trajectory (tok/s)</span>
+                    <span>⚡ Live Model Throughput Trajectory (Post-Prefill Decode tok/s)</span>
                 </div>
-                <div class="chart-subtitle" style="margin: 0 0 10px 0;">Live production receipts from data/live_usage_stream.jsonl overlaid across universal chronological timeline.</div>
+                <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill decode throughput receipts from data/live_usage_stream.jsonl (starting 2026-10-08).</div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090</span>
-                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>2080 Ti</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Hybrid GPU (2080 Ti + Arc B580)</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>M5 Air</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud</span>
                 </div>
                 <canvas id="throughput-live-chart" width="1000" height="280" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+            </div>
+
+            <!-- Decode Generation Efficiency Curves: Output Tokens vs Net Decode Time (Wall - TTFT) [STORY 113.83] -->
+            <div class="chart-card" style="margin-top: 20px;">
+                <div class="chart-title">
+                    <span>📈 Decode Generation Efficiency: Output Tokens vs. Net Decode Duration (t_wall - t_TTFT)</span>
+                </div>
+                <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill generation curves. Slope represents true hardware decoding throughput (tok/s) across varying output token lengths.</div>
+                <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090 (35 tok/s slope)</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Hybrid GPU (2080 Ti + Arc B580) (24-28 tok/s slope)</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>M5 Air (16 tok/s slope)</span>
+                    <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud Swarm</span>
+                </div>
+                <canvas id="decode-efficiency-chart" width="1000" height="320" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
             </div>
 
             <!-- Live Swarm Workload Stream (Moved inside Arena tab) -->
@@ -609,13 +624,18 @@
                 setTimeout(initDeltaTView, 50);
             }
             if (tabId === 'tab-arena' && typeof renderThroughputLiveChart === 'function' && window.cachedLiveRecords) {
-                setTimeout(() => renderThroughputLiveChart(window.cachedLiveRecords), 50);
+                setTimeout(() => {
+                    renderThroughputLiveChart(window.cachedLiveRecords);
+                    if (typeof renderDecodeEfficiencyChart === 'function') {
+                        renderDecodeEfficiencyChart(window.cachedLiveRecords);
+                    }
+                }, 50);
             }
             if (tabId === 'tab-delegation' && typeof renderSwarmTokenChart === 'function' && window.cachedDelegationRuns) {
                 setTimeout(() => renderSwarmTokenChart(window.cachedDelegationRuns), 50);
             }
         }
     </script>
-    <script src="benchmarks.js?v=spr107_truth_831"></script>
+    <script src="benchmarks.js?v=540ea8dd"></script>
 </body>
 </html>
