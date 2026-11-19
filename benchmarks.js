@@ -231,12 +231,14 @@ function renderThroughputLiveChart(records) {
     const labelFor = (seat) => SEAT_LABELS[seat] || seat || 'Unknown';
 
     // [STORY 113.82] Filter valid receipts >= 2026-10-08 timeline clamp
+    // [INVARIANT] Anything less than a second is bad data
     const minTimelineFloor = 1791417600; // 2026-10-08 00:00:00 UTC
     const validRecords = (Array.isArray(records) ? records : []).filter(r => {
         const dur = Number(r.duration_seconds);
+        const decDur = Number(r.decode_duration_s !== undefined ? r.decode_duration_s : dur);
         const tp = (r.throughput_tok_s !== null && r.throughput_tok_s !== undefined) ? Number(r.throughput_tok_s) : NaN;
         const ts = Number(r.timestamp);
-        return isFinite(tp) && tp > 0 && tp <= 80.0 && isFinite(dur) && dur >= 1.0 && isFinite(ts) && ts >= minTimelineFloor;
+        return isFinite(tp) && tp > 0 && tp <= 80.0 && isFinite(dur) && dur >= 1.0 && isFinite(decDur) && decDur >= 1.0 && isFinite(ts) && ts >= minTimelineFloor;
     });
 
     if (!validRecords.length) {
@@ -376,11 +378,12 @@ function renderDecodeEfficiencyChart(records) {
     const colorFor = (seat) => SEAT_COLORS[seat] || '#8b949e';
 
     const minTimelineFloor = 1791417600; // 2026-10-08
+    // [INVARIANT] Anything less than a second is bad data
     const validPoints = (Array.isArray(records) ? records : []).filter(r => {
         const ts = Number(r.timestamp);
         const tok = Number(r.tokens_generated);
-        const dur = Number(r.decode_duration_s || (r.duration_seconds - (r.ttft_s || 0)));
-        return isFinite(ts) && ts >= minTimelineFloor && isFinite(tok) && tok > 5 && isFinite(dur) && dur > 0.05 && dur <= 60.0;
+        const dur = Number(r.decode_duration_s !== undefined ? r.decode_duration_s : (r.duration_seconds - (r.ttft_s || 0)));
+        return isFinite(ts) && ts >= minTimelineFloor && isFinite(tok) && tok > 5 && isFinite(dur) && dur >= 1.0 && dur <= 60.0;
     });
 
     if (!validPoints.length) {
