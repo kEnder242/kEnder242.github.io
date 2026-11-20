@@ -592,13 +592,29 @@
                     <span>📈 Decode Generation Efficiency: Output Tokens vs. Net Decode Duration (t_wall - t_TTFT)</span>
                 </div>
                 <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill generation curves. Slope represents true hardware decoding throughput (tok/s) across varying output token lengths.</div>
+                <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 8px 0 12px 0;">
+                    <button class="view-btn active" id="btn-de-canvas" onclick="setDecodeEfficiencyView('canvas')">Canvas Curve</button>
+                    <button class="view-btn" id="btn-de-grafana" onclick="setDecodeEfficiencyView('grafana')">Grafana Full History</button>
+                </div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090 (35 tok/s slope)</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Hybrid GPU (2080 Ti + Arc B580) (24-28 tok/s slope)</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>M5 Air (16 tok/s slope)</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud Swarm</span>
                 </div>
-                <canvas id="decode-efficiency-chart" width="1000" height="320" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                <div id="de-display-container" class="dual-view-container">
+                    <div id="de-canvas-wrap">
+                        <canvas id="decode-efficiency-chart" width="1000" height="320" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                    </div>
+                    <div id="de-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="de-grafana-frame" src="" width="100%" height="320" frameborder="0" style="background:#0d1117;"></iframe>
+                        <div style="padding:4px 8px; background:#161b22; text-align:right; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
+                            <a id="de-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-90d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
+                            <span style="color:#484f58; margin: 0 6px;">|</span>
+                            <a id="de-dash-link" href="http://z87-linux:3000/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark" target="_blank" style="color:#79c0ff; text-decoration:none;">Full Dashboard</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Live Swarm Workload Stream (Moved inside Arena tab) -->

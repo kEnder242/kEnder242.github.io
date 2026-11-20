@@ -1239,7 +1239,7 @@ function setRoundTableView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-90d&to=now&theme=dark';
             if (frame && frame.src !== targetSrc) {
                 frame.src = targetSrc;
             }
@@ -1273,13 +1273,47 @@ function setThroughputView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=10&from=now-90d&to=now&theme=dark';
             if (frame && frame.src !== targetSrc) {
                 frame.src = targetSrc;
             }
             const lSolo = document.getElementById('tp-grafana-link');
             if (lSolo) lSolo.href = targetSrc;
             const lDash = document.getElementById('tp-dash-link');
+            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
+        }
+    }
+}
+
+function setDecodeEfficiencyView(mode) {
+    const canvasWrap = document.getElementById('de-canvas-wrap');
+    const grafanaWrap = document.getElementById('de-grafana-wrap');
+    const frame = document.getElementById('de-grafana-frame');
+
+    ['btn-de-canvas', 'btn-de-grafana'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+
+    if (mode === 'canvas') {
+        const b = document.getElementById('btn-de-canvas');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) grafanaWrap.style.display = 'none';
+    } else if (mode === 'grafana') {
+        const b = document.getElementById('btn-de-grafana');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'none';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            const base = getGrafanaBaseUrl();
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-90d&to=now&theme=dark';
+            if (frame && frame.src !== targetSrc) {
+                frame.src = targetSrc;
+            }
+            const lSolo = document.getElementById('de-grafana-link');
+            if (lSolo) lSolo.href = targetSrc;
+            const lDash = document.getElementById('de-dash-link');
             if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
         }
     }
@@ -1316,7 +1350,7 @@ function setDelegationView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=9&from=now-90d&to=now&theme=dark';
             if (frame && frame.src !== targetSrc) {
                 frame.src = targetSrc;
             }
