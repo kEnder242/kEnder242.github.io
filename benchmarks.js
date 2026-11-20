@@ -1208,7 +1208,13 @@ function toggleDelegationAccordion(row) {
 // ============================================================================
 
 function getGrafanaBaseUrl() {
-    return 'https://monitor.jason-lab.dev';
+    const host = window.location.hostname;
+    if (host && host.endsWith('jason-lab.dev')) {
+        return 'https://monitor.jason-lab.dev';
+    }
+    const proto = window.location.protocol === 'https:' ? 'https:' : 'http:';
+    const targetHost = (host && host !== '' && host !== '0.0.0.0') ? host : 'z87-linux';
+    return `${proto}//${targetHost}:3000`;
 }
 
 function setRoundTableView(mode) {
@@ -1232,9 +1238,15 @@ function setRoundTableView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+            const base = getGrafanaBaseUrl();
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+            if (frame && frame.src !== targetSrc) {
+                frame.src = targetSrc;
             }
+            const lSolo = document.getElementById('rt-grafana-link');
+            if (lSolo) lSolo.href = targetSrc;
+            const lDash = document.getElementById('rt-dash-link');
+            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
         }
     }
 }
@@ -1260,9 +1272,15 @@ function setThroughputView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+            const base = getGrafanaBaseUrl();
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+            if (frame && frame.src !== targetSrc) {
+                frame.src = targetSrc;
             }
+            const lSolo = document.getElementById('tp-grafana-link');
+            if (lSolo) lSolo.href = targetSrc;
+            const lDash = document.getElementById('tp-dash-link');
+            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
         }
     }
 }
@@ -1297,9 +1315,15 @@ function setDelegationView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+            const base = getGrafanaBaseUrl();
+            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+            if (frame && frame.src !== targetSrc) {
+                frame.src = targetSrc;
             }
+            const lSolo = document.getElementById('delg-grafana-link');
+            if (lSolo) lSolo.href = targetSrc;
+            const lDash = document.getElementById('delg-dash-link');
+            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
         }
     }
 }
