@@ -751,6 +751,7 @@ function renderDeltaTChart(data) {
 }
 
 function renderSwarmTokenChart(runs) {
+    window._lastDelegationRuns = runs;
     const canvas = document.getElementById('swarm-token-chart');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -842,34 +843,59 @@ function renderSwarmTokenChart(runs) {
         ctx.fillText(s, x, height - padBottom + 18);
     });
 
-    series.forEach(s => {
-        ctx.strokeStyle = s.color;
-        ctx.lineWidth = 2.5;
-        ctx.beginPath();
+    const isBar = (window.swarmChartMode === 'bar');
+    if (isBar) {
+        // [Story 113.85 / Item 1.3] Option B: Discrete Grouped Bars (no continuous connecting lines)
+        const barW = Math.max(8, Math.min(18, (chartW / (n || 1)) / 4.5));
         sprints.forEach((sp, idx) => {
-            const x = getX(idx);
-            const y = getY(agg[sp][s.key]);
-            if (idx === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+            const centerX = getX(idx);
+            series.forEach((s, sIdx) => {
+                const val = agg[sp][s.key];
+                const y = getY(val);
+                const baseY = getY(0);
+                const barH = Math.max(1, baseY - y);
+                const barX = centerX + (sIdx - 1) * (barW + 3) - barW / 2;
+                ctx.fillStyle = s.color;
+                ctx.fillRect(barX, y, barW, barH);
+                if (val > 0) {
+                    ctx.fillStyle = s.color;
+                    ctx.font = 'bold 8px "JetBrains Mono", monospace';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(fmt(val), barX + barW / 2, y - 4);
+                }
+            });
         });
-        ctx.stroke();
-
-        sprints.forEach((sp, idx) => {
-            const x = getX(idx);
-            const val = agg[sp][s.key];
-            const y = getY(val);
-            ctx.fillStyle = s.color;
+    } else {
+        // [Story 113.85 / Item 1.3] Option A: Continuous trend line
+        series.forEach(s => {
+            ctx.strokeStyle = s.color;
+            ctx.lineWidth = 2.5;
             ctx.beginPath();
-            ctx.arc(x, y, 4.5, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.strokeStyle = '#0d1117';
-            ctx.lineWidth = 1.5;
+            sprints.forEach((sp, idx) => {
+                const x = getX(idx);
+                const y = getY(agg[sp][s.key]);
+                if (idx === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+            });
             ctx.stroke();
-            ctx.fillStyle = s.color;
-            ctx.font = 'bold 9px "JetBrains Mono", monospace';
-            ctx.textAlign = 'center';
-            if (val > 0) ctx.fillText(Number(val).toLocaleString(), x, y - 9);
+
+            sprints.forEach((sp, idx) => {
+                const x = getX(idx);
+                const val = agg[sp][s.key];
+                const y = getY(val);
+                ctx.fillStyle = s.color;
+                ctx.beginPath();
+                ctx.arc(x, y, 4.5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = '#0d1117';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+                ctx.fillStyle = s.color;
+                ctx.font = 'bold 9px "JetBrains Mono", monospace';
+                ctx.textAlign = 'center';
+                if (val > 0) ctx.fillText(Number(val).toLocaleString(), x, y - 9);
+            });
         });
-    });
+    }
 
     ctx.fillStyle = '#8b949e';
     ctx.font = '10px "JetBrains Mono", monospace';
@@ -1174,5 +1200,151 @@ function toggleDelegationAccordion(row) {
     if (detail && detail.classList.contains('delegation-detail')) {
         detail.style.display = (detail.style.display === 'none') ? 'table-row' : 'none';
         row.cells[0].textContent = (detail.style.display === 'none') ? '▶' : '▼';
+    }
+}
+
+// ============================================================================
+// [Story 113.85 / Item 1.1, 1.2, 1.3] Side-by-Side Canvas + Grafana Integration
+// ============================================================================
+
+function getGrafanaBaseUrl() {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    return isLocal ? 'http://127.0.0.1:3000' : 'https://monitor.jason-lab.dev';
+}
+
+function setRoundTableView(mode) {
+    const canvasWrap = document.getElementById('rt-canvas-wrap');
+    const grafanaWrap = document.getElementById('rt-grafana-wrap');
+    const container = document.getElementById('rt-display-container');
+    const frame = document.getElementById('rt-grafana-frame');
+
+    ['btn-rt-canvas', 'btn-rt-grafana', 'btn-rt-split'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+
+    if (mode === 'canvas') {
+        const b = document.getElementById('btn-rt-canvas');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) grafanaWrap.style.display = 'none';
+        if (container) container.classList.remove('dual-view-split');
+    } else if (mode === 'grafana') {
+        const b = document.getElementById('btn-rt-grafana');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'none';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.remove('dual-view-split');
+    } else if (mode === 'split') {
+        const b = document.getElementById('btn-rt-split');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.add('dual-view-split');
+    }
+}
+
+function setThroughputView(mode) {
+    const canvasWrap = document.getElementById('tp-canvas-wrap');
+    const grafanaWrap = document.getElementById('tp-grafana-wrap');
+    const container = document.getElementById('tp-display-container');
+    const frame = document.getElementById('tp-grafana-frame');
+
+    ['btn-tp-canvas', 'btn-tp-grafana', 'btn-tp-split'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+
+    if (mode === 'canvas') {
+        const b = document.getElementById('btn-tp-canvas');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) grafanaWrap.style.display = 'none';
+        if (container) container.classList.remove('dual-view-split');
+    } else if (mode === 'grafana') {
+        const b = document.getElementById('btn-tp-grafana');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'none';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.remove('dual-view-split');
+    } else if (mode === 'split') {
+        const b = document.getElementById('btn-tp-split');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.add('dual-view-split');
+    }
+}
+
+function setDelegationView(mode) {
+    const canvasWrap = document.getElementById('delg-canvas-wrap');
+    const grafanaWrap = document.getElementById('delg-grafana-wrap');
+    const container = document.getElementById('delg-display-container');
+    const frame = document.getElementById('delg-grafana-frame');
+
+    ['btn-delg-trend', 'btn-delg-bars', 'btn-delg-grafana', 'btn-delg-split'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+
+    if (mode === 'trend') {
+        const b = document.getElementById('btn-delg-trend');
+        if (b) b.classList.add('active');
+        window.swarmChartMode = 'line';
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) grafanaWrap.style.display = 'none';
+        if (container) container.classList.remove('dual-view-split');
+        if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
+    } else if (mode === 'bars') {
+        const b = document.getElementById('btn-delg-bars');
+        if (b) b.classList.add('active');
+        window.swarmChartMode = 'bar';
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) grafanaWrap.style.display = 'none';
+        if (container) container.classList.remove('dual-view-split');
+        if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
+    } else if (mode === 'grafana') {
+        const b = document.getElementById('btn-delg-grafana');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'none';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.remove('dual-view-split');
+    } else if (mode === 'split') {
+        const b = document.getElementById('btn-delg-split');
+        if (b) b.classList.add('active');
+        if (canvasWrap) canvasWrap.style.display = 'block';
+        if (grafanaWrap) {
+            grafanaWrap.style.display = 'block';
+            if (frame && !frame.src) {
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+            }
+        }
+        if (container) container.classList.add('dual-view-split');
+        if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
     }
 }

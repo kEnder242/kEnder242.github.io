@@ -50,6 +50,44 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
+        /* View Toggle Buttons & Dual-View Container */
+        .view-btn {
+            background: #161b22;
+            border: 1px solid #30363d;
+            color: #8b949e;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .view-btn:hover {
+            color: #f0f3f6;
+            border-color: #58a6ff;
+        }
+        .view-btn.active {
+            background: #1f242c;
+            color: #58a6ff;
+            border-color: #58a6ff;
+            font-weight: 700;
+        }
+        .dual-view-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+        .dual-view-container.dual-view-split {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media screen and (max-width: 900px) {
+            .dual-view-container.dual-view-split {
+                grid-template-columns: 1fr !important;
+            }
+        }
 
         .status-badge {
             display: inline-block;
@@ -484,8 +522,18 @@
                     <div class="legend-pill"><div class="legend-color" style="background:#bc8cff;"></div><span>&Delta;t4: Pinky Voice (Delivery Pop)</span></div>
                     <div class="legend-pill"><div class="legend-color" style="background:#3fb950;"></div><span>&Delta;t5: Sovereign Critic (Entailment Audit)</span></div>
                 </div>
-                <div style="overflow-x: auto;">
-                    <canvas id="delta-t-chart" width="1000" height="340"></canvas>
+                <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 10px 0 12px 0;">
+                    <button class="view-btn active" id="btn-rt-canvas" onclick="setRoundTableView('canvas')">Canvas View</button>
+                    <button class="view-btn" id="btn-rt-grafana" onclick="setRoundTableView('grafana')">Grafana (All Turns)</button>
+                    <button class="view-btn" id="btn-rt-split" onclick="setRoundTableView('split')">Side-by-Side</button>
+                </div>
+                <div id="rt-display-container" class="dual-view-container">
+                    <div id="rt-canvas-wrap" style="overflow-x: auto;">
+                        <canvas id="delta-t-chart" width="1000" height="340"></canvas>
+                    </div>
+                    <div id="rt-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="rt-grafana-frame" src="" width="100%" height="340" frameborder="0" style="background:#0d1117;"></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -509,13 +557,25 @@
                     <span>⚡ Live Model Throughput Trajectory (Post-Prefill Decode tok/s)</span>
                 </div>
                 <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill decode throughput receipts from data/live_usage_stream.jsonl (starting 2026-10-08).</div>
+                <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 8px 0 12px 0;">
+                    <button class="view-btn active" id="btn-tp-canvas" onclick="setThroughputView('canvas')">Canvas Scatter</button>
+                    <button class="view-btn" id="btn-tp-grafana" onclick="setThroughputView('grafana')">Grafana Full History</button>
+                    <button class="view-btn" id="btn-tp-split" onclick="setThroughputView('split')">Side-by-Side</button>
+                </div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Hybrid GPU (2080 Ti + Arc B580)</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>M5 Air</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud</span>
                 </div>
-                <canvas id="throughput-live-chart" width="1000" height="280" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                <div id="tp-display-container" class="dual-view-container">
+                    <div id="tp-canvas-wrap">
+                        <canvas id="throughput-live-chart" width="1000" height="280" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                    </div>
+                    <div id="tp-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="tp-grafana-frame" src="" width="100%" height="280" frameborder="0" style="background:#0d1117;"></iframe>
+                    </div>
+                </div>
             </div>
 
             <!-- Decode Generation Efficiency Curves: Output Tokens vs Net Decode Time (Wall - TTFT) [STORY 113.83] -->
@@ -576,12 +636,25 @@
             <div class="chart-block" style="margin: 18px 0;">
                 <div class="chart-title">🐝 Sovereign Swarm Token Trajectory (Tokens per Sprint)</div>
                 <div class="chart-subtitle" style="margin-bottom:8px;">Total tokens per sprint partitioned by tier — local silicon vs Primary AGY vs cloud &amp; oracle offloads.</div>
+                <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 8px 0 12px 0;">
+                    <button class="view-btn active" id="btn-delg-trend" onclick="setDelegationView('trend')">📈 Continuous Trend</button>
+                    <button class="view-btn" id="btn-delg-bars" onclick="setDelegationView('bars')">📊 Grouped Bars</button>
+                    <button class="view-btn" id="btn-delg-grafana" onclick="setDelegationView('grafana')">⚡ Grafana Panel</button>
+                    <button class="view-btn" id="btn-delg-split" onclick="setDelegationView('split')">🔀 Side-by-Side</button>
+                </div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Local Silicon</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#bc8cff; display:inline-block;"></span>Primary AGY</span>
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud &amp; Oracle</span>
                 </div>
-                <canvas id="swarm-token-chart" width="1000" height="260" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                <div id="delg-display-container" class="dual-view-container">
+                    <div id="delg-canvas-wrap">
+                        <canvas id="swarm-token-chart" width="1000" height="260" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
+                    </div>
+                    <div id="delg-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="delg-grafana-frame" src="" width="100%" height="260" frameborder="0" style="background:#0d1117;"></iframe>
+                    </div>
+                </div>
             </div>
 
 <div class="delegation-filter-row" id="delegation-sprint-filter">
@@ -642,6 +715,6 @@
             }
         }
     </script>
-    <script src="benchmarks.js?v=11384f98"></script>
+    <script src="benchmarks.js?v=7b92f4c1"></script>
 </body>
 </html>
