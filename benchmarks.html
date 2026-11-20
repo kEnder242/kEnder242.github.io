@@ -525,7 +525,6 @@
                 <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 10px 0 12px 0;">
                     <button class="view-btn active" id="btn-rt-canvas" onclick="setRoundTableView('canvas')">Canvas View</button>
                     <button class="view-btn" id="btn-rt-grafana" onclick="setRoundTableView('grafana')">Grafana (All Turns)</button>
-                    <button class="view-btn" id="btn-rt-split" onclick="setRoundTableView('split')">Side-by-Side</button>
                 </div>
                 <div id="rt-display-container" class="dual-view-container">
                     <div id="rt-canvas-wrap" style="overflow-x: auto;">
@@ -560,7 +559,6 @@
                 <div class="view-toggle-bar" style="display:flex; gap:8px; margin: 8px 0 12px 0;">
                     <button class="view-btn active" id="btn-tp-canvas" onclick="setThroughputView('canvas')">Canvas Scatter</button>
                     <button class="view-btn" id="btn-tp-grafana" onclick="setThroughputView('grafana')">Grafana Full History</button>
-                    <button class="view-btn" id="btn-tp-split" onclick="setThroughputView('split')">Side-by-Side</button>
                 </div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#58a6ff; display:inline-block;"></span>Kender 4090</span>
@@ -640,7 +638,6 @@
                     <button class="view-btn active" id="btn-delg-trend" onclick="setDelegationView('trend')">📈 Continuous Trend</button>
                     <button class="view-btn" id="btn-delg-bars" onclick="setDelegationView('bars')">📊 Grouped Bars</button>
                     <button class="view-btn" id="btn-delg-grafana" onclick="setDelegationView('grafana')">⚡ Grafana Panel</button>
-                    <button class="view-btn" id="btn-delg-split" onclick="setDelegationView('split')">🔀 Side-by-Side</button>
                 </div>
                 <div style="display:flex; gap:18px; align-items:center; margin:6px 0 10px 0; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#3fb950; display:inline-block;"></span>Local Silicon</span>
@@ -715,6 +712,6 @@
             }
         }
     </script>
-    <script src="benchmarks.js?v=7b92f4c1"></script>
+    <script src="benchmarks.js?v=e318a99c"></script>
 </body>
 </html>

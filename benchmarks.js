@@ -1208,17 +1208,15 @@ function toggleDelegationAccordion(row) {
 // ============================================================================
 
 function getGrafanaBaseUrl() {
-    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    return isLocal ? 'http://127.0.0.1:3000' : 'https://monitor.jason-lab.dev';
+    return 'https://monitor.jason-lab.dev';
 }
 
 function setRoundTableView(mode) {
     const canvasWrap = document.getElementById('rt-canvas-wrap');
     const grafanaWrap = document.getElementById('rt-grafana-wrap');
-    const container = document.getElementById('rt-display-container');
     const frame = document.getElementById('rt-grafana-frame');
 
-    ['btn-rt-canvas', 'btn-rt-grafana', 'btn-rt-split'].forEach(id => {
+    ['btn-rt-canvas', 'btn-rt-grafana'].forEach(id => {
         const btn = document.getElementById(id);
         if (btn) btn.classList.remove('active');
     });
@@ -1228,7 +1226,6 @@ function setRoundTableView(mode) {
         if (b) b.classList.add('active');
         if (canvasWrap) canvasWrap.style.display = 'block';
         if (grafanaWrap) grafanaWrap.style.display = 'none';
-        if (container) container.classList.remove('dual-view-split');
     } else if (mode === 'grafana') {
         const b = document.getElementById('btn-rt-grafana');
         if (b) b.classList.add('active');
@@ -1236,31 +1233,18 @@ function setRoundTableView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
             }
         }
-        if (container) container.classList.remove('dual-view-split');
-    } else if (mode === 'split') {
-        const b = document.getElementById('btn-rt-split');
-        if (b) b.classList.add('active');
-        if (canvasWrap) canvasWrap.style.display = 'block';
-        if (grafanaWrap) {
-            grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark';
-            }
-        }
-        if (container) container.classList.add('dual-view-split');
     }
 }
 
 function setThroughputView(mode) {
     const canvasWrap = document.getElementById('tp-canvas-wrap');
     const grafanaWrap = document.getElementById('tp-grafana-wrap');
-    const container = document.getElementById('tp-display-container');
     const frame = document.getElementById('tp-grafana-frame');
 
-    ['btn-tp-canvas', 'btn-tp-grafana', 'btn-tp-split'].forEach(id => {
+    ['btn-tp-canvas', 'btn-tp-grafana'].forEach(id => {
         const btn = document.getElementById(id);
         if (btn) btn.classList.remove('active');
     });
@@ -1270,7 +1254,6 @@ function setThroughputView(mode) {
         if (b) b.classList.add('active');
         if (canvasWrap) canvasWrap.style.display = 'block';
         if (grafanaWrap) grafanaWrap.style.display = 'none';
-        if (container) container.classList.remove('dual-view-split');
     } else if (mode === 'grafana') {
         const b = document.getElementById('btn-tp-grafana');
         if (b) b.classList.add('active');
@@ -1278,31 +1261,18 @@ function setThroughputView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
             }
         }
-        if (container) container.classList.remove('dual-view-split');
-    } else if (mode === 'split') {
-        const b = document.getElementById('btn-tp-split');
-        if (b) b.classList.add('active');
-        if (canvasWrap) canvasWrap.style.display = 'block';
-        if (grafanaWrap) {
-            grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark';
-            }
-        }
-        if (container) container.classList.add('dual-view-split');
     }
 }
 
 function setDelegationView(mode) {
     const canvasWrap = document.getElementById('delg-canvas-wrap');
     const grafanaWrap = document.getElementById('delg-grafana-wrap');
-    const container = document.getElementById('delg-display-container');
     const frame = document.getElementById('delg-grafana-frame');
 
-    ['btn-delg-trend', 'btn-delg-bars', 'btn-delg-grafana', 'btn-delg-split'].forEach(id => {
+    ['btn-delg-trend', 'btn-delg-bars', 'btn-delg-grafana'].forEach(id => {
         const btn = document.getElementById(id);
         if (btn) btn.classList.remove('active');
     });
@@ -1313,7 +1283,6 @@ function setDelegationView(mode) {
         window.swarmChartMode = 'line';
         if (canvasWrap) canvasWrap.style.display = 'block';
         if (grafanaWrap) grafanaWrap.style.display = 'none';
-        if (container) container.classList.remove('dual-view-split');
         if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
     } else if (mode === 'bars') {
         const b = document.getElementById('btn-delg-bars');
@@ -1321,7 +1290,6 @@ function setDelegationView(mode) {
         window.swarmChartMode = 'bar';
         if (canvasWrap) canvasWrap.style.display = 'block';
         if (grafanaWrap) grafanaWrap.style.display = 'none';
-        if (container) container.classList.remove('dual-view-split');
         if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
     } else if (mode === 'grafana') {
         const b = document.getElementById('btn-delg-grafana');
@@ -1330,21 +1298,8 @@ function setDelegationView(mode) {
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
             if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
+                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
             }
         }
-        if (container) container.classList.remove('dual-view-split');
-    } else if (mode === 'split') {
-        const b = document.getElementById('btn-delg-split');
-        if (b) b.classList.add('active');
-        if (canvasWrap) canvasWrap.style.display = 'block';
-        if (grafanaWrap) {
-            grafanaWrap.style.display = 'block';
-            if (frame && !frame.src) {
-                frame.src = getGrafanaBaseUrl() + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark';
-            }
-        }
-        if (container) container.classList.add('dual-view-split');
-        if (window._lastDelegationRuns) renderSwarmTokenChart(window._lastDelegationRuns);
     }
 }
