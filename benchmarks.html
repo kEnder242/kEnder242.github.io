@@ -533,9 +533,10 @@
             <p class="console-subtitle">Live Federated Silicon Telemetry &amp; ROI Workbench</p>
         </div>
 
-
-
-
+        <!-- Universal System Console & Error Trap [FEAT-417] -->
+        <div id="sys-console">
+            <div>[INIT] Benchmarks telemetry uplink established. Monitoring silicon runs...</div>
+        </div>
 
         <!-- GLOBAL HARDWARE DASHBOARD: Model Seats outside tabs [USER DIRECTIVE] -->
         <div class="seat-grid" id="seat-cards-container">
@@ -565,8 +566,8 @@
                 </div>
                 <div class="view-toggle-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin: 10px 0 12px 0;">
                     <div style="display:flex; gap:8px; align-items:center;">
-                        <button class="view-btn active" id="btn-rt-canvas" onclick="setRoundTableView('canvas')">Canvas View</button>
-                        <button class="view-btn" id="btn-rt-grafana" onclick="setRoundTableView('grafana')">Grafana (All Turns)</button>
+                        <button class="view-btn" id="btn-rt-canvas" onclick="setRoundTableView('canvas')">Canvas View</button>
+                        <button class="view-btn active" id="btn-rt-grafana" onclick="setRoundTableView('grafana')">Grafana (All Turns)</button>
                     </div>
                     <div class="time-nav-strip" id="time-nav-rt">
                         <button class="time-nav-btn" onclick="panTime('rt', -0.35)" title="Pan Left (Back in time)">◀</button>
@@ -581,13 +582,13 @@
                     </div>
                 </div>
                 <div id="rt-display-container" class="dual-view-container">
-                    <div id="rt-canvas-wrap" style="overflow-x: auto;">
+                    <div id="rt-canvas-wrap" style="display:none; overflow-x: auto;">
                         <canvas id="delta-t-chart" width="1000" height="340"></canvas>
                     </div>
-                    <div id="rt-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
-                        <iframe id="rt-grafana-frame" src="" width="100%" height="340" frameborder="0" style="background:#0d1117;"></iframe>
+                    <div id="rt-grafana-wrap" style="display:block; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="rt-grafana-frame" src="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-120d&to=now&theme=dark" width="100%" height="340" frameborder="0" style="background:#0d1117;"></iframe>
                         <div style="padding:4px 8px; background:#161b22; text-align:right; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
-                            <a id="rt-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-7d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
+                            <a id="rt-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-120d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
                             <span style="color:#484f58; margin: 0 6px;">|</span>
                             <a id="rt-dash-link" href="http://z87-linux:3000/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark" target="_blank" style="color:#79c0ff; text-decoration:none;">Full Dashboard</a>
                         </div>
@@ -617,8 +618,8 @@
                 <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill decode throughput receipts from data/live_usage_stream.jsonl (starting 2026-10-08).</div>
                 <div class="view-toggle-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin: 8px 0 12px 0;">
                     <div style="display:flex; gap:8px; align-items:center;">
-                        <button class="view-btn active" id="btn-tp-canvas" onclick="setThroughputView('canvas')">Canvas Scatter</button>
-                        <button class="view-btn" id="btn-tp-grafana" onclick="setThroughputView('grafana')">Grafana Full History</button>
+                        <button class="view-btn" id="btn-tp-canvas" onclick="setThroughputView('canvas')">Canvas Scatter</button>
+                        <button class="view-btn active" id="btn-tp-grafana" onclick="setThroughputView('grafana')">Grafana Full History</button>
                     </div>
                     <div class="time-nav-strip" id="time-nav-tp">
                         <button class="time-nav-btn" onclick="panTime('tp', -0.35)" title="Pan Left (Back in time)">◀</button>
@@ -639,13 +640,13 @@
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud</span>
                 </div>
                 <div id="tp-display-container" class="dual-view-container">
-                    <div id="tp-canvas-wrap">
+                    <div id="tp-canvas-wrap" style="display:none;">
                         <canvas id="throughput-live-chart" width="1000" height="280" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
                     </div>
-                    <div id="tp-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
-                        <iframe id="tp-grafana-frame" src="" width="100%" height="280" frameborder="0" style="background:#0d1117;"></iframe>
+                    <div id="tp-grafana-wrap" style="display:block; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="tp-grafana-frame" src="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=10&from=now-120d&to=now&theme=dark" width="100%" height="280" frameborder="0" style="background:#0d1117;"></iframe>
                         <div style="padding:4px 8px; background:#161b22; text-align:right; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
-                            <a id="tp-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=1&from=now-30d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
+                            <a id="tp-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=10&from=now-120d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
                             <span style="color:#484f58; margin: 0 6px;">|</span>
                             <a id="tp-dash-link" href="http://z87-linux:3000/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark" target="_blank" style="color:#79c0ff; text-decoration:none;">Full Dashboard</a>
                         </div>
@@ -661,8 +662,8 @@
                 <div class="chart-subtitle" style="margin: 0 0 10px 0;">Empirical post-prefill generation curves. Slope represents true hardware decoding throughput (tok/s) across varying output token lengths.</div>
                 <div class="view-toggle-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin: 8px 0 12px 0;">
                     <div style="display:flex; gap:8px; align-items:center;">
-                        <button class="view-btn active" id="btn-de-canvas" onclick="setDecodeEfficiencyView('canvas')">Canvas Curve</button>
-                        <button class="view-btn" id="btn-de-grafana" onclick="setDecodeEfficiencyView('grafana')">Grafana Full History</button>
+                        <button class="view-btn" id="btn-de-canvas" onclick="setDecodeEfficiencyView('canvas')">Canvas Curve</button>
+                        <button class="view-btn active" id="btn-de-grafana" onclick="setDecodeEfficiencyView('grafana')">Grafana Full History</button>
                     </div>
                     <div class="time-nav-strip" id="time-nav-de">
                         <button class="time-nav-btn" onclick="panTime('de', -0.35)" title="Pan Left (Back in time)">◀</button>
@@ -683,13 +684,13 @@
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud Swarm</span>
                 </div>
                 <div id="de-display-container" class="dual-view-container">
-                    <div id="de-canvas-wrap">
+                    <div id="de-canvas-wrap" style="display:none;">
                         <canvas id="decode-efficiency-chart" width="1000" height="320" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
                     </div>
-                    <div id="de-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
-                        <iframe id="de-grafana-frame" src="" width="100%" height="320" frameborder="0" style="background:#0d1117;"></iframe>
+                    <div id="de-grafana-wrap" style="display:block; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="de-grafana-frame" src="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-120d&to=now&theme=dark" width="100%" height="320" frameborder="0" style="background:#0d1117;"></iframe>
                         <div style="padding:4px 8px; background:#161b22; text-align:right; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
-                            <a id="de-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-90d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
+                            <a id="de-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-120d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
                             <span style="color:#484f58; margin: 0 6px;">|</span>
                             <a id="de-dash-link" href="http://z87-linux:3000/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark" target="_blank" style="color:#79c0ff; text-decoration:none;">Full Dashboard</a>
                         </div>
@@ -742,9 +743,9 @@
                 <div class="chart-subtitle" style="margin-bottom:8px;">Total tokens per sprint partitioned by tier — local silicon vs Primary AGY vs cloud &amp; oracle offloads.</div>
                 <div class="view-toggle-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin: 8px 0 12px 0;">
                     <div style="display:flex; gap:8px; align-items:center;">
-                        <button class="view-btn active" id="btn-delg-trend" onclick="setDelegationView('trend')">📈 Continuous Trend</button>
+                        <button class="view-btn" id="btn-delg-trend" onclick="setDelegationView('trend')">📈 Continuous Trend</button>
                         <button class="view-btn" id="btn-delg-bars" onclick="setDelegationView('bars')">📊 Grouped Bars</button>
-                        <button class="view-btn" id="btn-delg-grafana" onclick="setDelegationView('grafana')">⚡ Grafana Panel</button>
+                        <button class="view-btn active" id="btn-delg-grafana" onclick="setDelegationView('grafana')">⚡ Grafana Panel</button>
                     </div>
                     <div class="time-nav-strip" id="time-nav-delg">
                         <button class="time-nav-btn" onclick="panTime('delg', -0.35)" title="Pan Left (Back in time)">◀</button>
@@ -764,13 +765,13 @@
                     <span style="display:inline-flex; align-items:center; gap:6px;"><span style="width:10px; height:10px; border-radius:50%; background:#f778ba; display:inline-block;"></span>Cloud &amp; Oracle</span>
                 </div>
                 <div id="delg-display-container" class="dual-view-container">
-                    <div id="delg-canvas-wrap">
+                    <div id="delg-canvas-wrap" style="display:none;">
                         <canvas id="swarm-token-chart" width="1000" height="260" style="width:100%; max-width:1000px; height:auto; background:#0d1117; border:1px solid #1f242c; border-radius:6px;"></canvas>
                     </div>
-                    <div id="delg-grafana-wrap" style="display:none; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
-                        <iframe id="delg-grafana-frame" src="" width="100%" height="260" frameborder="0" style="background:#0d1117;"></iframe>
+                    <div id="delg-grafana-wrap" style="display:block; width:100%; border-radius:6px; overflow:hidden; border:1px solid #1f242c;">
+                        <iframe id="delg-grafana-frame" src="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=9&from=now-120d&to=now&theme=dark" width="100%" height="260" frameborder="0" style="background:#0d1117;"></iframe>
                         <div style="padding:4px 8px; background:#161b22; text-align:right; font-family:'JetBrains Mono', monospace; font-size:0.72rem;">
-                            <a id="delg-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=7&from=now-30d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
+                            <a id="delg-grafana-link" href="http://z87-linux:3000/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=9&from=now-120d&to=now&theme=dark" target="_blank" style="color:#58a6ff; text-decoration:none;">↗ Open Solo Panel in Grafana</a>
                             <span style="color:#484f58; margin: 0 6px;">|</span>
                             <a id="delg-dash-link" href="http://z87-linux:3000/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark" target="_blank" style="color:#79c0ff; text-decoration:none;">Full Dashboard</a>
                         </div>
@@ -836,6 +837,7 @@
             }
         }
     </script>
+    <script src="script.js?v=9855deef"></script>
     <script src="benchmarks.js?v=c478d10f"></script>
 </body>
 </html>

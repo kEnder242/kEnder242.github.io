@@ -1217,16 +1217,6 @@ function getGrafanaBaseUrl() {
     return `${proto}//${targetHost}:3000`;
 }
 
-function setRoundTableView(mode) {
-    const canvasWrap = document.getElementById('rt-canvas-wrap');
-    const grafanaWrap = document.getElementById('rt-grafana-wrap');
-    const frame = document.getElementById('rt-grafana-frame');
-
-    ['btn-rt-canvas', 'btn-rt-grafana'].forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) btn.classList.remove('active');
-    });
-
 // Time State Management for Benchmarks Navigation [Pan, Zoom, Presets]
 const timeState = {
     rt: { from: 'now-120d', to: 'now', range: 'all', panelId: 5 },
@@ -1446,6 +1436,29 @@ function setDelegationView(mode) {
         }
     }
 }
+
+function initGrafanaFrames() {
+    ['rt', 'tp', 'de', 'delg'].forEach(scope => {
+        const st = timeState[scope];
+        if (st) {
+            applyTimeWindow(scope, st.from, st.to, st.range);
         }
-    }
+    });
 }
+
+// Ensure default Grafana frames load on page startup
+window.addEventListener('DOMContentLoaded', () => {
+    initGrafanaFrames();
+});
+
+// Explicitly bind handlers to window for HTML onclick attributes
+window.timeState = timeState;
+window.applyTimeWindow = applyTimeWindow;
+window.updateTimeRange = updateTimeRange;
+window.zoomTime = zoomTime;
+window.panTime = panTime;
+window.setRoundTableView = setRoundTableView;
+window.setThroughputView = setThroughputView;
+window.setDecodeEfficiencyView = setDecodeEfficiencyView;
+window.setDelegationView = setDelegationView;
+window.initGrafanaFrames = initGrafanaFrames;
