@@ -1227,6 +1227,122 @@ function setRoundTableView(mode) {
         if (btn) btn.classList.remove('active');
     });
 
+// Time State Management for Benchmarks Navigation [Pan, Zoom, Presets]
+const timeState = {
+    rt: { from: 'now-120d', to: 'now', range: 'all', panelId: 5 },
+    tp: { from: 'now-120d', to: 'now', range: 'all', panelId: 10 },
+    de: { from: 'now-120d', to: 'now', range: 'all', panelId: 8 },
+    delg: { from: 'now-120d', to: 'now', range: 'all', panelId: 9 }
+};
+
+function resolveRangeWindow(scope) {
+    const st = timeState[scope] || { from: 'now-120d', to: 'now' };
+    const now = Date.now();
+    let fromMs, toMs;
+
+    if (typeof st.to === 'number') {
+        toMs = st.to;
+    } else if (st.to === 'now') {
+        toMs = now;
+    } else {
+        toMs = now;
+    }
+
+    if (typeof st.from === 'number') {
+        fromMs = st.from;
+    } else if (typeof st.from === 'string' && st.from.startsWith('now-')) {
+        const raw = st.from.replace('now-', '');
+        const num = parseInt(raw, 10) || 90;
+        const unit = raw.slice(-1);
+        let mult = 86400 * 1000;
+        if (unit === 'd') mult = 86400 * 1000;
+        else if (unit === 'h') mult = 3600 * 1000;
+        else if (unit === 'm') mult = 60 * 1000;
+        fromMs = toMs - (num * mult);
+    } else {
+        fromMs = toMs - (120 * 86400 * 1000);
+    }
+    return { fromMs, toMs };
+}
+
+function applyTimeWindow(scope, fromVal, toVal, rangeLabel) {
+    if (!timeState[scope]) return;
+    timeState[scope].from = fromVal;
+    timeState[scope].to = toVal;
+    if (rangeLabel) timeState[scope].range = rangeLabel;
+    else timeState[scope].range = null;
+
+    // Update active highlight on preset buttons
+    ['7d', '30d', '90d', 'all'].forEach(r => {
+        const b = document.getElementById(`tbtn-${scope}-${r}`);
+        if (b) b.classList.toggle('active', rangeLabel === r);
+    });
+
+    // Update iframe src
+    const frameId = `${scope}-grafana-frame`;
+    const frame = document.getElementById(frameId);
+    const base = getGrafanaBaseUrl();
+    const pid = timeState[scope].panelId;
+    const targetSrc = `${base}/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=${pid}&from=${fromVal}&to=${toVal}&theme=dark`;
+
+    if (frame && frame.src !== targetSrc) {
+        frame.src = targetSrc;
+    }
+    const soloLink = document.getElementById(`${scope}-grafana-link`);
+    if (soloLink) soloLink.href = targetSrc;
+    const dashLink = document.getElementById(`${scope}-dash-link`);
+    if (dashLink) dashLink.href = `${base}/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark`;
+}
+
+function updateTimeRange(scope, range) {
+    let fromVal = 'now-90d';
+    let toVal = 'now';
+    if (range === '7d') fromVal = 'now-7d';
+    else if (range === '30d') fromVal = 'now-30d';
+    else if (range === '90d') fromVal = 'now-90d';
+    else if (range === 'all') fromVal = 'now-120d';
+    applyTimeWindow(scope, fromVal, toVal, range);
+}
+
+function zoomTime(scope, factor) {
+    const { fromMs, toMs } = resolveRangeWindow(scope);
+    const span = toMs - fromMs;
+    const newSpan = span * factor;
+    const center = (fromMs + toMs) / 2;
+    let newFrom = Math.round(center - (newSpan / 2));
+    let newTo = Math.round(center + (newSpan / 2));
+    const now = Date.now();
+    if (newTo > now) {
+        const diff = newTo - now;
+        newTo = now;
+        newFrom = Math.max(0, newFrom - diff);
+    }
+    applyTimeWindow(scope, newFrom, newTo, null);
+}
+
+function panTime(scope, shiftRatio) {
+    const { fromMs, toMs } = resolveRangeWindow(scope);
+    const span = toMs - fromMs;
+    const shift = Math.round(span * shiftRatio);
+    let newFrom = fromMs + shift;
+    let newTo = toMs + shift;
+    const now = Date.now();
+    if (newTo > now) {
+        newTo = now;
+        newFrom = now - span;
+    }
+    applyTimeWindow(scope, newFrom, newTo, null);
+}
+
+function setRoundTableView(mode) {
+    const canvasWrap = document.getElementById('rt-canvas-wrap');
+    const grafanaWrap = document.getElementById('rt-grafana-wrap');
+
+    ['btn-rt-canvas', 'btn-rt-grafana'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+    });
+
     if (mode === 'canvas') {
         const b = document.getElementById('btn-rt-canvas');
         if (b) b.classList.add('active');
@@ -1238,15 +1354,8 @@ function setRoundTableView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=5&from=now-90d&to=now&theme=dark';
-            if (frame && frame.src !== targetSrc) {
-                frame.src = targetSrc;
-            }
-            const lSolo = document.getElementById('rt-grafana-link');
-            if (lSolo) lSolo.href = targetSrc;
-            const lDash = document.getElementById('rt-dash-link');
-            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
+            const st = timeState.rt;
+            applyTimeWindow('rt', st.from, st.to, st.range);
         }
     }
 }
@@ -1254,7 +1363,6 @@ function setRoundTableView(mode) {
 function setThroughputView(mode) {
     const canvasWrap = document.getElementById('tp-canvas-wrap');
     const grafanaWrap = document.getElementById('tp-grafana-wrap');
-    const frame = document.getElementById('tp-grafana-frame');
 
     ['btn-tp-canvas', 'btn-tp-grafana'].forEach(id => {
         const btn = document.getElementById(id);
@@ -1272,15 +1380,8 @@ function setThroughputView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=10&from=now-90d&to=now&theme=dark';
-            if (frame && frame.src !== targetSrc) {
-                frame.src = targetSrc;
-            }
-            const lSolo = document.getElementById('tp-grafana-link');
-            if (lSolo) lSolo.href = targetSrc;
-            const lDash = document.getElementById('tp-dash-link');
-            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
+            const st = timeState.tp;
+            applyTimeWindow('tp', st.from, st.to, st.range);
         }
     }
 }
@@ -1288,7 +1389,6 @@ function setThroughputView(mode) {
 function setDecodeEfficiencyView(mode) {
     const canvasWrap = document.getElementById('de-canvas-wrap');
     const grafanaWrap = document.getElementById('de-grafana-wrap');
-    const frame = document.getElementById('de-grafana-frame');
 
     ['btn-de-canvas', 'btn-de-grafana'].forEach(id => {
         const btn = document.getElementById(id);
@@ -1306,15 +1406,8 @@ function setDecodeEfficiencyView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=8&from=now-90d&to=now&theme=dark';
-            if (frame && frame.src !== targetSrc) {
-                frame.src = targetSrc;
-            }
-            const lSolo = document.getElementById('de-grafana-link');
-            if (lSolo) lSolo.href = targetSrc;
-            const lDash = document.getElementById('de-dash-link');
-            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
+            const st = timeState.de;
+            applyTimeWindow('de', st.from, st.to, st.range);
         }
     }
 }
@@ -1322,7 +1415,6 @@ function setDecodeEfficiencyView(mode) {
 function setDelegationView(mode) {
     const canvasWrap = document.getElementById('delg-canvas-wrap');
     const grafanaWrap = document.getElementById('delg-grafana-wrap');
-    const frame = document.getElementById('delg-grafana-frame');
 
     ['btn-delg-trend', 'btn-delg-bars', 'btn-delg-grafana'].forEach(id => {
         const btn = document.getElementById(id);
@@ -1349,15 +1441,11 @@ function setDelegationView(mode) {
         if (canvasWrap) canvasWrap.style.display = 'none';
         if (grafanaWrap) {
             grafanaWrap.style.display = 'block';
-            const base = getGrafanaBaseUrl();
-            const targetSrc = base + '/d-solo/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&panelId=9&from=now-90d&to=now&theme=dark';
-            if (frame && frame.src !== targetSrc) {
-                frame.src = targetSrc;
-            }
-            const lSolo = document.getElementById('delg-grafana-link');
-            if (lSolo) lSolo.href = targetSrc;
-            const lDash = document.getElementById('delg-dash-link');
-            if (lDash) lDash.href = base + '/d/federated-benchmarks-01/federated-silicon-benchmarks-and-swarm-telemetry?orgId=1&theme=dark';
+            const st = timeState.delg;
+            applyTimeWindow('delg', st.from, st.to, st.range);
+        }
+    }
+}
         }
     }
 }
