@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2025-2026 Jason Allred. All rights reserved.
 # sync_timeline.sh [v1.0]
 # Purpose: Deploy the Novel Ideas Evolutionary Timeline to the public airlock.
 

@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 // [FEAT-097] Dynamic Typewriter Rendering
 const CONFIG = {
     // [SECURITY] Enforce loopback binding for local development

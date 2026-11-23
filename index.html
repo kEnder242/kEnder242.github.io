@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Copyright 2025-2026 Jason Allred. All rights reserved. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,6 +145,10 @@
             .trailer-img { height: 250px; }
         }
     </style>
+    <style id="option-b-viewport-fix">
+        html, body { height: auto !important; min-height: 100vh !important; overflow-y: auto !important; overflow-x: hidden; flex-direction: column !important; }
+        footer.apache-copyright-footer { width: 100%; box-sizing: border-box; flex-shrink: 0; }
+    </style>
 </head>
 <body>
     <header>
@@ -249,5 +254,9 @@
         checkStatus();
         setInterval(checkStatus, 30000);
     </script>
+
+    <footer class="apache-copyright-footer" style="text-align:center; padding:20px 16px; margin-top:28px; border-top:1px solid rgba(255,255,255,0.12); color:#8b949e; font-size:0.78rem; font-family:monospace;">
+        Copyright 2025&ndash;2026 Jason Allred
+    </footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 // =============================================================
 // SYNAPSE KNOWLEDGE GRAPH ENGINE [FEAT-596 / FEAT-603]
 // Tiered Progressive-Disclosure Dynamic Constellation Canvas

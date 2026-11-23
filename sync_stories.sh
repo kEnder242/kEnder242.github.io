@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2025-2026 Jason Allred. All rights reserved.
 # sync_stories.sh [v1.0]
 # Purpose: Sanitize the internal Stories page and deploy to the public airlock.
 

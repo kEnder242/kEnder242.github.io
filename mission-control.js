@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 class MissionControl extends HTMLElement {
     connectedCallback() {
         const currentPath = window.location.pathname;

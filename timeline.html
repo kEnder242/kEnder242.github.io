@@ -543,6 +543,11 @@
             margin-top: 10px;
         }
     </style>
+    <style id="option-b-viewport-fix">
+        html, body { height: auto !important; min-height: 100vh !important; overflow-y: auto !important; overflow-x: hidden; }
+        main { max-width: none !important; height: auto !important; min-height: 100vh; overflow-y: visible !important; flex: 1 1 auto; min-width: 0; }
+        footer.apache-copyright-footer { width: 100%; box-sizing: border-box; flex-shrink: 0; }
+    </style>
 </head>
 <body>
 
@@ -563,11 +568,11 @@
             <div class="metrics-bar">
                 <div class="metric-pill">
                     <span>Milestones:</span>
-                    <span class="metric-val">17</span>
+                    <span class="metric-val">25</span>
                 </div>
                 <div class="metric-pill">
                     <span>Mature Axioms:</span>
-                    <span class="metric-val" style="color: var(--accent-green);">13</span>
+                    <span class="metric-val" style="color: var(--accent-green);">21</span>
                 </div>
                 <div class="metric-pill">
                     <span>Active Horizons:</span>
@@ -575,7 +580,7 @@
                 </div>
                 <div class="metric-pill">
                     <span>Epoch Span:</span>
-                    <span class="metric-val" style="color: var(--accent-gold);">2025-11-04 → 2026-11-10</span>
+                    <span class="metric-val" style="color: var(--accent-gold);">2025-11-04 → 2026-11-21</span>
                 </div>
                 <div class="metric-pill" style="cursor: pointer;" id="btn-toggle-outliers">
                     <span>Pending Outliers:</span>
@@ -600,7 +605,7 @@
                 <button id="btn-reset-filters" class="btn-filter">Reset</button>
             </div>
             <div class="lanes-filter-row" id="lanes-filter-container">
-                <button class="btn-filter active" data-lane="all">All Swimlanes (17)</button>
+                <button class="btn-filter active" data-lane="all">All Swimlanes (25)</button>
             </div>
         </section>
 
@@ -623,7 +628,7 @@
 
         <section class="list-section">
             <div class="list-title">
-                <span id="list-counter-label">📋 All Innovations (17)</span>
+                <span id="list-counter-label">📋 All Innovations (25)</span>
                 <span style="font-size: 0.8rem; color: var(--text-dim); font-weight: normal;">Sorted Chronologically</span>
             </div>
 
@@ -631,11 +636,15 @@
                 <!-- Populated dynamically via JS -->
             </div>
         </section>
+
+        <footer class="apache-copyright-footer" style="text-align: center; padding: 20px 16px; margin-top: 28px; border-top: 1px solid var(--border-dim); color: var(--text-dim); font-size: 0.78rem; font-family: var(--font-mono);">
+            Copyright 2025–2026 Jason Allred
+        </footer>
     </main>
 
     <script src="mission-control.js?v=16cf2268"></script>
     <script>
-        const DISCOVERIES = [{"id": "DISC-002", "title": "QQ Protocol (Informational Silence)", "conception_date": "2025-11-04", "implementation_date": "2025-11-12", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "BKM-004 / PROTO-QQ", "sprint_ref": "SPRINT_PLAN_SPR_44_0.md", "code_anchors": ["AGENTS.md", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Strict invariant operational law where prompts prefixed with 'QQ' are read-only informational inquiries, forbidding premature state changes, inferred work, or autonomous dispatches.", "status": "MATURE", "tags": ["qq-protocol", "triage", "operational-law", "silence", "governance"]}, {"id": "DISC-003", "title": "3-Tier Fast-Path RAG Architecture", "conception_date": "2025-12-08", "implementation_date": "2025-12-22", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-142 / BKM-046", "sprint_ref": "SPRINT_PLAN_SPR_48_0.md", "code_anchors": ["HomeLabAI/config/hooks/icm_hook.py", "HomeLabAI/src/nodes/lab_dna_router.py"], "arxiv_inspiration": "2312.10997 (Retrieval-Augmented Generation for AI-Generated Content)", "summary": "Multi-tier retrieval bypassing massive 200KB+ markdown file reads via sub-100ms vector queries on ChromaDB port 8001 and persistent SQLite ICM session memory.", "status": "MATURE", "tags": ["3-tier-rag", "fast-path", "chromadb", "icm", "retrieval"]}, {"id": "DISC-004", "title": "Just-In-Time Context (JITC) Lifecycle", "conception_date": "2026-01-02", "implementation_date": "2026-01-28", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "WIS-001 / FEAT-546", "sprint_ref": "SPRINT_PLAN_SPR_54_0.md", "code_anchors": ["HomeLabAI/src/curator/sync_sprint_dna.py", "HomeLabAI/config/hooks/icm_hook.py"], "arxiv_inspiration": "2307.03172 (Lost in the Middle: How Language Models Use Long Contexts)", "summary": "The dual-channel memory architecture replacing monolithic context scaling with runtime dynamic anchor injection, floating up only the exact 2-3 required vectors milliseconds before inference.", "status": "MATURE", "tags": ["jitc", "context-scoping", "dual-channel-memory", "attention-dilution"]}, {"id": "DISC-001", "title": "Subconscious Dreaming Cycle", "conception_date": "2026-01-14", "implementation_date": "2026-01-19", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "VIBE-005 / FEAT-067", "sprint_ref": "SPRINT_PLAN_SPR_52_0.md", "code_anchors": ["HomeLabAI/src/infra/nightly_forge.py", "Portfolio_Dev/field_notes/mass_scan.py"], "arxiv_inspiration": "2401.03412 (Reflexion & Self-Consolidation in Autonomous Agents)", "summary": "Automated off-peak synthesis converting raw daily notes into Rank 4/5 diamond pearls, discovering latent associations during host idle hours.", "status": "MATURE", "tags": ["dreaming", "distillation", "nightly-forge", "latent-associations", "pearls"]}, {"id": "DISC-005", "title": "Token Golf Prompt Optimization", "conception_date": "2026-01-20", "implementation_date": "2026-02-04", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "WIS-002 / BKM-051 / FEAT-526", "sprint_ref": "SPRINT_PLAN_SPR_58_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Treating prompt tokens as scarce golf strokes; minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp and subagent prompts capped strictly under 1,500 tokens.", "status": "MATURE", "tags": ["token-golf", "prompt-budget", "subagent-scoping", "efficiency"]}, {"id": "DISC-006", "title": "Multi-Stage Gem Refinement Pipeline", "conception_date": "2026-01-25", "implementation_date": "2026-02-10", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "FEAT-470 / FEAT-492", "sprint_ref": "SPRINT_PLAN_SPR_62_0.md", "code_anchors": ["Portfolio_Dev/field_notes/refine_gem.py", "Portfolio_Dev/field_notes/refine_wisdom.py"], "arxiv_inspiration": "2305.14314 (Self-Refine: Iterative Refinement with Self-Feedback)", "summary": "Two-tier asynchronous refinement where small local models filter raw notes and larger reasoning models polish insights into diamond pearls while keeping origin quotes 100% immutable.", "status": "MATURE", "tags": ["gem-polishing", "refinement", "diamond-ranking", "wisdom-synthesis"]}, {"id": "DISC-007", "title": "Decoupled Bicameral Silicon Harness", "conception_date": "2026-02-12", "implementation_date": "2026-02-28", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "SPR-76.0 / FEAT-548", "sprint_ref": "SPRINT_PLAN_SPR_76_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py", "HomeLabAI/src/attendant_liveliness.py"], "arxiv_inspiration": null, "summary": "Physical and logical decoupling of heavy code execution (Atlas RTX 4090) and high-parameter reasoning synthesis (Junior M5 Air Qwen 27B) over a private zero-trust network.", "status": "MATURE", "tags": ["bicameral", "heterogeneous-silicon", "m5-air", "rtx-4090", "orchestration"]}, {"id": "DISC-008", "title": "The Handover Reflection Pattern", "conception_date": "2026-02-15", "implementation_date": "2026-02-24", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "WIS-003 / BKM-034 / FEAT-522", "sprint_ref": "SPRINT_PLAN_SPR_75_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Autonomous worker subagents reflect candidly upon task completion on how the task was handed over, sending closed-loop backpressure to dispatcher prompts to self-heal instruction drift.", "status": "MATURE", "tags": ["handover-reflection", "backpressure", "feedback-loops", "prompt-drift"]}, {"id": "DISC-009", "title": "Zero-Symlink Whitepaper Thought Organizer", "conception_date": "2026-03-02", "implementation_date": "2026-03-10", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-564 / Story 77.4", "sprint_ref": "SPRINT_PLAN_SPR_77_0.md", "code_anchors": ["Portfolio_Dev/field_notes/writer.html", "Portfolio_Dev/scripts/build_writer.py"], "arxiv_inspiration": null, "summary": "Workspace-wide transition from fragile OS-level symlinks to explicit canonical manifest routing for LaTeX whitepaper publishing, eliminating cross-platform artifact resolution failure.", "status": "ACTIVE", "tags": ["writer-studio", "zero-symlinks", "whitepaper", "manifest", "latex"]}, {"id": "DISC-010", "title": "Tri-Loop Diagnostic Delegation Ladder", "conception_date": "2026-03-05", "implementation_date": "2026-03-11", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "BKM-049 / FEAT-560", "sprint_ref": "SPRINT_PLAN_SPR_77_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Automated verification execution with 3-fix-retry ladder escalating across local silicon, cloud swarm models, and human AGY takeover with pre-retry hardware/log diagnostics.", "status": "ACTIVE", "tags": ["delegation", "tri-loop", "diagnostics", "bkm-049", "escalation"]}, {"id": "DISC-016", "title": "The Separation of Atomic Substance from Narrative Topology", "conception_date": "2026-09-11", "implementation_date": "2026-10-20", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-665 / ADR-008 / FEAT-601", "sprint_ref": "SPR-107.0", "code_anchors": ["Portfolio_Dev/field_notes/writer.html", "Portfolio_Dev/scripts/build_writer.py"], "arxiv_inspiration": null, "summary": "Conflating atomic note content with narrative spine ordering forces paragraph reflows to corrupt revision history; separating Kabal Spines from AST reconciliation allows arbitrary narrative permutations over immutable substance.", "status": "ACTIVE", "tags": ["kabal-spines", "ast-reconciliation", "writer-studio", "atomic-substance"]}, {"id": "DISC-011", "title": "The Just-In-Time Illusion", "conception_date": "2026-09-17", "implementation_date": "2026-10-08", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "FEAT-642 / FEAT-643 / BKM-049 / BKM-060 / LAB-019", "sprint_ref": "SPR-97.0", "code_anchors": ["HomeLabAI/src/logic/context_prewarmer.py", "HomeLabAI/src/mcp/clara_dna_mcp_server.py", "HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Separate dynamic structural discovery (instant AST) from semantic comprehension (pre-warmed/volunteered micro-digests), preserving L2 agency while bounding context below 350 tokens.", "status": "MATURE", "tags": ["jitc", "prewarm", "ast-blueprint", "swarm-governance", "context-budget"]}, {"id": "DISC-013", "title": "The 'Island of Green' Trap & Judicial Daemon Assertion", "conception_date": "2026-09-23", "implementation_date": "2026-10-17", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "BKM-062 / BKM-024 / FEAT-608 / FEAT-619", "sprint_ref": "SPR-92.0", "code_anchors": ["HomeLabAI/src/infra/probe_round_table_accountability.py", "HomeLabAI/src/infra/standalone_accountability_watchdog.py"], "arxiv_inspiration": null, "summary": "Unit test suites pass green by asserting self-affirming mocks while physical background processes are dead; true verification requires Judicial Assertion inspecting live socket handshakes and running proc states.", "status": "MATURE", "tags": ["anti-green-lie", "judicial-assertion", "accountability-watchdog", "live-validation"]}, {"id": "DISC-012", "title": "Subversive Tool-Mediated Context Injection", "conception_date": "2026-10-03", "implementation_date": "2026-10-08", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "INS-044 / FEAT-647 / BKM-072 / BKM-049", "sprint_ref": "SPR-97.0 / SPR-98.0", "code_anchors": ["HomeLabAI/src/mcp/clara_dna_mcp_server.py", "HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Reasoning models exhibit strong grounding skepticism (INS-044); serving pre-computed conductor patch notes dynamically through tools (jitc_research) satisfies agent agency while bounding context below 500 tokens.", "status": "MATURE", "tags": ["tool-ipc", "jitc-research", "grounding-skepticism", "swarm-governance"]}, {"id": "DISC-020", "title": "Step-Trace Backward Fault Localization", "conception_date": "2026-10-08", "implementation_date": "2026-10-26", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "FEAT-638 / FEAT-671 / BKM-035", "sprint_ref": "SPR-108.0", "code_anchors": ["HomeLabAI/src/logic/cognitive_hub.py", "HomeLabAI/src/v5/foyer/router.py", "HomeLabAI/src/tests/test_step_trace_attribution.py"], "arxiv_inspiration": null, "summary": "Treating negative user feedback as a monolithic loss yields zero learning signal; walking backward across pipeline artifacts (Voice -> Stance -> Filter -> Search) isolates the exact defect stage into labeled exemplars.", "status": "ACTIVE", "tags": ["step-trace", "fault-localization", "feedback-flywheel", "telemetry"]}, {"id": "DISC-014", "title": "Continuous Interest Fluidity vs. Binary Gate Clamping", "conception_date": "2026-10-14", "implementation_date": "2026-10-24", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "FEAT-523 / FEAT-645 / VIBE-015 / BKM-083", "sprint_ref": "SPR-103.0", "code_anchors": ["HomeLabAI/src/logic/cognitive_hub.py"], "arxiv_inspiration": null, "summary": "Binary condition gates choke conversational flow and mute heavy reasoning nodes; continuous interest smoothly modulates token headroom (clamp(I * 150, 32, 1500)) without silencing downstream models.", "status": "MATURE", "tags": ["continuous-interest", "hydraulic-pacing", "zero-bifurcation", "cognitive-flow"]}, {"id": "DISC-015", "title": "Two-Dimensional Epistemic Stability & Subconscious De-Starvation", "conception_date": "2026-10-18", "implementation_date": "2026-11-10", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "LOOP-004 / FEAT-662 / FEAT-067 / FEAT-127", "sprint_ref": "SPR-106.0", "code_anchors": ["Portfolio_Dev/field_notes/refine_gem.py", "Portfolio_Dev/field_notes/refine_wisdom.py"], "arxiv_inspiration": null, "summary": "Monolithic rank scoring causes database amnesia and starvation; decoupling substance (impact_level 1-4) from topology (refinement_level 0-3 via Lyapunov stability delta=0) preserves low-level operational exhaust.", "status": "MATURE", "tags": ["epistemic-stability", "kabal", "subconscious-dreaming", "refinement"]}];
+        const DISCOVERIES = [{"id": "DISC-002", "title": "QQ Protocol (Informational Silence)", "conception_date": "2025-11-04", "implementation_date": "2025-11-12", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "BKM-004 / PROTO-QQ", "sprint_ref": "SPRINT_PLAN_SPR_44_0.md", "code_anchors": ["AGENTS.md", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Strict invariant operational law where prompts prefixed with 'QQ' are read-only informational inquiries, forbidding premature state changes, inferred work, or autonomous dispatches.", "status": "MATURE", "tags": ["qq-protocol", "triage", "operational-law", "silence", "governance"], "first_commit": {"sha": "e6144fb", "date": "2026-01-08", "repo": "HomeLabAI"}, "last_commit": {"sha": "d2a045d", "date": "2026-11-21", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-21", "revisions": [{"date": "2026-01-08", "label": "feat(round-table): implement agentic facil\u2026", "sha": "e6144fb", "repo": "HomeLabAI"}, {"date": "2026-03-01", "label": "[PROTOCOL] Phase 2: Finalized behavioral r\u2026", "sha": "7a075ea", "repo": "HomeLabAI"}, {"date": "2026-05-10", "label": "Human updating Protocols", "sha": "3dad9a3", "repo": "HomeLabAI"}, {"date": "2026-07-02", "label": "docs(protocols): add BKM-034 detailing Ope\u2026", "sha": "230de88", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_44_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_44_0.md"}]}, {"id": "DISC-003", "title": "3-Tier Fast-Path RAG Architecture", "conception_date": "2025-12-08", "implementation_date": "2025-12-22", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-142 / BKM-046", "sprint_ref": "SPRINT_PLAN_SPR_48_0.md", "code_anchors": ["HomeLabAI/config/hooks/icm_hook.py", "HomeLabAI/src/nodes/lab_dna_router.py"], "arxiv_inspiration": "2312.10997 (Retrieval-Augmented Generation for AI-Generated Content)", "summary": "Multi-tier retrieval bypassing massive 200KB+ markdown file reads via sub-100ms vector queries on ChromaDB port 8001 and persistent SQLite ICM session memory.", "status": "MATURE", "tags": ["3-tier-rag", "fast-path", "chromadb", "icm", "retrieval"], "first_commit": {"sha": "add938a", "date": "2026-08-25", "repo": "HomeLabAI"}, "last_commit": {"sha": "91f1bcd", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-08-25", "label": "feat(router): deliver Lab DNA Router satel\u2026", "sha": "add938a", "repo": "HomeLabAI"}, {"date": "2026-09-08", "label": "feat(curator): implement sync_sprint_dna.p\u2026", "sha": "b112209", "repo": "HomeLabAI"}, {"date": "2026-10-04", "label": "feat(ambient): canonical ambient_recall en\u2026", "sha": "9e39325", "repo": "HomeLabAI"}, {"date": "2026-11-12", "label": "feat(vibe-020): abolish post-retrieval col\u2026", "sha": "91f1bcd", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_48_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_48_0.md"}]}, {"id": "DISC-004", "title": "Just-In-Time Context (JITC) Lifecycle", "conception_date": "2026-01-02", "implementation_date": "2026-01-28", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "WIS-001 / FEAT-546", "sprint_ref": "SPRINT_PLAN_SPR_54_0.md", "code_anchors": ["HomeLabAI/src/curator/sync_sprint_dna.py", "HomeLabAI/config/hooks/icm_hook.py"], "arxiv_inspiration": "2307.03172 (Lost in the Middle: How Language Models Use Long Contexts)", "summary": "The dual-channel memory architecture replacing monolithic context scaling with runtime dynamic anchor injection, floating up only the exact 2-3 required vectors milliseconds before inference.", "status": "MATURE", "tags": ["jitc", "context-scoping", "dual-channel-memory", "attention-dilution"], "first_commit": {"sha": "b112209", "date": "2026-09-08", "repo": "HomeLabAI"}, "last_commit": {"sha": "9e39325", "date": "2026-10-04", "repo": "HomeLabAI"}, "last_evolved_date": "2026-10-04", "revisions": [{"date": "2026-09-08", "label": "feat(curator): implement sync_sprint_dna.p\u2026", "sha": "b112209", "repo": "HomeLabAI"}, {"date": "2026-10-04", "label": "feat(ambient): canonical ambient_recall en\u2026", "sha": "9e39325", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_54_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_54_0.md"}]}, {"id": "DISC-001", "title": "Subconscious Dreaming Cycle", "conception_date": "2026-01-14", "implementation_date": "2026-01-19", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "VIBE-005 / FEAT-067", "sprint_ref": "SPRINT_PLAN_SPR_52_0.md", "code_anchors": ["HomeLabAI/src/infra/nightly_forge.py", "Portfolio_Dev/field_notes/mass_scan.py"], "arxiv_inspiration": "2401.03412 (Reflexion & Self-Consolidation in Autonomous Agents)", "summary": "Automated off-peak synthesis converting raw daily notes into Rank 4/5 diamond pearls, discovering latent associations during host idle hours.", "status": "MATURE", "tags": ["dreaming", "distillation", "nightly-forge", "latent-associations", "pearls"], "first_commit": {"sha": "1a3deffd", "date": "2026-02-07", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "8d05f1d", "date": "2026-11-15", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-15", "revisions": [{"date": "2026-02-07", "label": "Engine v2.2: Continuous Research loop with\u2026", "sha": "1a3deffd", "repo": "Portfolio_Dev"}, {"date": "2026-05-06", "label": "feat(governor): [SPR-27.0] Enable signal-b\u2026", "sha": "bd58d8d3", "repo": "Portfolio_Dev"}, {"date": "2026-08-04", "label": "feat(notes): update scanner resilience and\u2026", "sha": "bf2cee3f", "repo": "Portfolio_Dev"}, {"date": "2026-10-01", "label": "[FEAT-632/633/634] Sprint 96.5/96.7: Foyer\u2026", "sha": "b4988aa", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_52_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_52_0.md"}]}, {"id": "DISC-022", "title": "Living Cognitive DNA & Morphology Architecture", "conception_date": "2026-01-15", "implementation_date": "2026-03-18", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "BKM-060 / FEAT-582 / FEAT-585", "sprint_ref": "SPRINT_PLAN_SPR_78_0.md", "code_anchors": ["HomeLabAI/src/mcp/clara_dna_mcp_server.py", "HomeLabAI/src/curator/sync_chroma_dna.py"], "arxiv_inspiration": null, "summary": "Peer-level federated DNA taxonomy (INS/WIS/BKM/LAB/FEAT/VIBE/DISC/LOOP) synchronized into ChromaDB and exposed via MCP (clara-dna), giving autonomous agents a living, curated cognitive morphology.", "status": "MATURE", "tags": ["dna", "morphology", "clara-dna", "mcp", "chromadb"], "first_commit": {"sha": "8502da6", "date": "2026-10-06", "repo": "HomeLabAI"}, "last_commit": {"sha": "5404f20", "date": "2026-10-25", "repo": "HomeLabAI"}, "last_evolved_date": "2026-10-25", "revisions": [{"date": "2026-10-06", "label": "feat(mcp): [BKM-041] Canonicalize clara_dn\u2026", "sha": "8502da6", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_78_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_78_0.md"}]}, {"id": "DISC-005", "title": "Token Golf Prompt Optimization", "conception_date": "2026-01-20", "implementation_date": "2026-02-04", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "WIS-002 / BKM-051 / FEAT-526", "sprint_ref": "SPRINT_PLAN_SPR_58_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Treating prompt tokens as scarce golf strokes; minimizing input token payloads while maximizing prompt fidelity to keep attention razor-sharp and subagent prompts capped strictly under 1,500 tokens.", "status": "MATURE", "tags": ["token-golf", "prompt-budget", "subagent-scoping", "efficiency"], "first_commit": {"sha": "e6144fb", "date": "2026-01-08", "repo": "HomeLabAI"}, "last_commit": {"sha": "d2a045d", "date": "2026-11-21", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-21", "revisions": [{"date": "2026-03-01", "label": "[PROTOCOL] Phase 2: Finalized behavioral r\u2026", "sha": "7a075ea", "repo": "HomeLabAI"}, {"date": "2026-05-10", "label": "Human updating Protocols", "sha": "3dad9a3", "repo": "HomeLabAI"}, {"date": "2026-07-02", "label": "docs(protocols): add BKM-034 detailing Ope\u2026", "sha": "230de88", "repo": "HomeLabAI"}, {"date": "2026-09-01", "label": "[FEAT-515] Story 69.6: Delegation Harness \u2026", "sha": "7bcb4bf", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_58_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_58_0.md"}]}, {"id": "DISC-006", "title": "Multi-Stage Gem Refinement Pipeline", "conception_date": "2026-01-25", "implementation_date": "2026-02-10", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "FEAT-470 / FEAT-492", "sprint_ref": "SPRINT_PLAN_SPR_62_0.md", "code_anchors": ["Portfolio_Dev/field_notes/refine_gem.py", "Portfolio_Dev/field_notes/refine_wisdom.py"], "arxiv_inspiration": "2305.14314 (Self-Refine: Iterative Refinement with Self-Feedback)", "summary": "Two-tier asynchronous refinement where small local models filter raw notes and larger reasoning models polish insights into diamond pearls while keeping origin quotes 100% immutable.", "status": "MATURE", "tags": ["gem-polishing", "refinement", "diamond-ranking", "wisdom-synthesis"], "first_commit": {"sha": "bd345771", "date": "2026-02-09", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "915a14ab", "date": "2026-11-12", "repo": "Portfolio_Dev"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-07-02", "label": "feat(field_notes): complete Sprint 36 Phas\u2026", "sha": "83be0638", "repo": "Portfolio_Dev"}, {"date": "2026-08-21", "label": "feat(refine): upgrade to Tri-Field Gem Sch\u2026", "sha": "cf074e16", "repo": "Portfolio_Dev"}, {"date": "2026-09-11", "label": "[WISDOM] Multi-DNA Workbench, REST disk pe\u2026", "sha": "cb1d7cba", "repo": "Portfolio_Dev"}, {"date": "2026-10-08", "label": "feat(wisdom): resolve canonical wisdom_dat\u2026", "sha": "227a7674", "repo": "Portfolio_Dev"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_62_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_62_0.md"}]}, {"id": "DISC-007", "title": "Decoupled Bicameral Silicon Harness", "conception_date": "2026-02-12", "implementation_date": "2026-02-28", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "SPR-76.0 / FEAT-548", "sprint_ref": "SPRINT_PLAN_SPR_76_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py", "HomeLabAI/src/attendant_liveliness.py"], "arxiv_inspiration": null, "summary": "Physical and logical decoupling of heavy code execution (Atlas RTX 4090) and high-parameter reasoning synthesis (Junior M5 Air Qwen 27B) over a private zero-trust network.", "status": "MATURE", "tags": ["bicameral", "heterogeneous-silicon", "m5-air", "rtx-4090", "orchestration"], "first_commit": {"sha": "819a793", "date": "2026-02-11", "repo": "HomeLabAI"}, "last_commit": {"sha": "b1508f3", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-05-26", "label": "feat: stabilize Sprint 30 Gold Master base\u2026", "sha": "2bd0e97", "repo": "HomeLabAI"}, {"date": "2026-06-17", "label": "saving 6-17 work", "sha": "b74e0cf", "repo": "HomeLabAI"}, {"date": "2026-07-29", "label": "feat(rag): SPR-48 Story 5 \u2014 End-to-End RAG\u2026", "sha": "fc22810", "repo": "HomeLabAI"}, {"date": "2026-08-04", "label": "feat(hyde): implement multi-voice HyDE eng\u2026", "sha": "8326355", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_76_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_76_0.md"}]}, {"id": "DISC-008", "title": "The Handover Reflection Pattern", "conception_date": "2026-02-15", "implementation_date": "2026-02-24", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "WIS-003 / BKM-034 / FEAT-522", "sprint_ref": "SPRINT_PLAN_SPR_75_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Autonomous worker subagents reflect candidly upon task completion on how the task was handed over, sending closed-loop backpressure to dispatcher prompts to self-heal instruction drift.", "status": "MATURE", "tags": ["handover-reflection", "backpressure", "feedback-loops", "prompt-drift"], "first_commit": {"sha": "fc22810", "date": "2026-07-29", "repo": "HomeLabAI"}, "last_commit": {"sha": "b1508f3", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-07-29", "label": "feat(rag): SPR-48 Story 5 \u2014 End-to-End RAG\u2026", "sha": "fc22810", "repo": "HomeLabAI"}, {"date": "2026-08-04", "label": "feat(hyde): implement multi-voice HyDE eng\u2026", "sha": "8326355", "repo": "HomeLabAI"}, {"date": "2026-09-01", "label": "[FEAT-515] Story 69.6: Delegation Harness \u2026", "sha": "7bcb4bf", "repo": "HomeLabAI"}, {"date": "2026-10-01", "label": "chore(delegate): prune redundant 1500-toke\u2026", "sha": "9b0c98c", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_75_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_75_0.md"}]}, {"id": "DISC-025", "title": "Automated Benchmark Gauntlet & Nightly Watchdog", "conception_date": "2026-02-20", "implementation_date": "2026-05-26", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "FEAT-454 / BKM-024 / BKM-029", "sprint_ref": "SPRINT_PLAN_SPR_59_0.md", "code_anchors": ["HomeLabAI/src/infra/standalone_accountability_watchdog.py", "Portfolio_Dev/field_notes/export_public_benchmarks.py"], "arxiv_inspiration": null, "summary": "Deterministic multi-model benchmark gauntlets (uber_5x5) paired with nightly live accountability watchdogs and automated telemetry digests verifying running silicon endpoints.", "status": "MATURE", "tags": ["benchmarks", "nightly-runs", "watchdog", "telemetry"], "first_commit": {"sha": "ffdf62af", "date": "2026-09-02", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "9011698", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-09-02", "label": "feat(benchmarks): add sanitized public ben\u2026", "sha": "ffdf62af", "repo": "Portfolio_Dev"}, {"date": "2026-10-02", "label": "feat(infra): [Story 971] single-home accou\u2026", "sha": "b964240", "repo": "HomeLabAI"}, {"date": "2026-11-07", "label": "feat(watchdog): add sanitization tripwire \u2026", "sha": "2c8673c", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_59_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_59_0.md"}]}, {"id": "DISC-009", "title": "Zero-Symlink Whitepaper Thought Organizer", "conception_date": "2026-03-02", "implementation_date": "2026-03-10", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-564 / Story 77.4", "sprint_ref": "SPRINT_PLAN_SPR_77_0.md", "code_anchors": ["Portfolio_Dev/field_notes/writer.html", "Portfolio_Dev/scripts/build_writer.py"], "arxiv_inspiration": null, "summary": "Workspace-wide transition from fragile OS-level symlinks to explicit canonical manifest routing for LaTeX whitepaper publishing, eliminating cross-platform artifact resolution failure.", "status": "ACTIVE", "tags": ["writer-studio", "zero-symlinks", "whitepaper", "manifest", "latex"], "first_commit": {"sha": "8c3dbdea", "date": "2026-09-08", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "4c7b43da", "date": "2026-10-25", "repo": "Portfolio_Dev"}, "last_evolved_date": "2026-10-25", "revisions": [{"date": "2026-09-08", "label": "feat(whitepaper): build dual-view paper.ht\u2026", "sha": "8c3dbdea", "repo": "Portfolio_Dev"}, {"date": "2026-10-18", "label": "feat(kabal): implement Phase 5 polymorphic\u2026", "sha": "5c9e1be7", "repo": "Portfolio_Dev"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_77_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_77_0.md"}]}, {"id": "DISC-021", "title": "Waterfall & Multi-LoRA Feedback Streaming", "conception_date": "2026-03-03", "implementation_date": "2026-04-07", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "FEAT-226 / FEAT-523 / BKM-035", "sprint_ref": "SPRINT_PLAN_SPR_59_0.md", "code_anchors": ["HomeLabAI/src/logic/cognitive_hub.py", "HomeLabAI/src/v5/foyer/router.py"], "arxiv_inspiration": null, "summary": "Cascading multi-tier model routing with live LoRA adapter switching and fourth-wall feedback streaming so fast local tiers respond immediately while heavy reasoning tiers refine in parallel.", "status": "MATURE", "tags": ["waterfall", "multi-lora", "streaming", "feedback-loop"], "first_commit": {"sha": "43d71ca", "date": "2026-03-03", "repo": "HomeLabAI"}, "last_commit": {"sha": "b282541", "date": "2026-11-20", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-20", "revisions": [{"date": "2026-05-05", "label": "human: save mid sprint", "sha": "326e961", "repo": "HomeLabAI"}, {"date": "2026-06-01", "label": "feat(sprint-31): promote V5 router and man\u2026", "sha": "537b98f", "repo": "HomeLabAI"}, {"date": "2026-07-02", "label": "feat(brain): implement handle_workspace_sa\u2026", "sha": "b3499cd", "repo": "HomeLabAI"}, {"date": "2026-08-04", "label": "feat(hyde): implement multi-voice HyDE eng\u2026", "sha": "8326355", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_59_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/SPRINT_PLAN_SPR_59_0.md"}]}, {"id": "DISC-010", "title": "Tri-Loop Diagnostic Delegation Ladder", "conception_date": "2026-03-05", "implementation_date": "2026-03-11", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "BKM-049 / FEAT-560", "sprint_ref": "SPRINT_PLAN_SPR_77_0.md", "code_anchors": ["HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Automated verification execution with 3-fix-retry ladder escalating across local silicon, cloud swarm models, and human AGY takeover with pre-retry hardware/log diagnostics.", "status": "ACTIVE", "tags": ["delegation", "tri-loop", "diagnostics", "bkm-049", "escalation"], "first_commit": {"sha": "fc22810", "date": "2026-07-29", "repo": "HomeLabAI"}, "last_commit": {"sha": "b1508f3", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-07-29", "label": "feat(rag): SPR-48 Story 5 \u2014 End-to-End RAG\u2026", "sha": "fc22810", "repo": "HomeLabAI"}, {"date": "2026-08-04", "label": "feat(hyde): implement multi-voice HyDE eng\u2026", "sha": "8326355", "repo": "HomeLabAI"}, {"date": "2026-09-01", "label": "[FEAT-515] Story 69.6: Delegation Harness \u2026", "sha": "7bcb4bf", "repo": "HomeLabAI"}, {"date": "2026-10-01", "label": "chore(delegate): prune redundant 1500-toke\u2026", "sha": "9b0c98c", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_77_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_77_0.md"}]}, {"id": "DISC-027", "title": "Heads-Up / Heads-Down (AFK) Swarm Governance", "conception_date": "2026-04-14", "implementation_date": "2026-07-22", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "BKM-006 / BKM-007 / BKM-082 / BKM-086", "sprint_ref": "SPRINT_PLAN_SPR_100_0.md", "code_anchors": ["AGENTS.md", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Strict modal separation between breadth-first Heads-Up consultation and authorized Heads-Down AFK sprint execution gated by pre-flight checklists and multi-tier delegation assignments.", "status": "MATURE", "tags": ["heads-down", "afk-governance", "sprint-planning", "swarm"], "first_commit": {"sha": "e6144fb", "date": "2026-01-08", "repo": "HomeLabAI"}, "last_commit": {"sha": "d2a045d", "date": "2026-11-21", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-21", "revisions": [{"date": "2026-08-02", "label": "docs(bkm-034): resolve delegation root cau\u2026", "sha": "2986509", "repo": "HomeLabAI"}, {"date": "2026-09-01", "label": "feat(swarm): streamline AGENTS.md, disable\u2026", "sha": "4f2f33a", "repo": "Dev_Lab"}, {"date": "2026-10-01", "label": "docs(agents): update heads down directives\u2026", "sha": "3397547", "repo": "Dev_Lab"}, {"date": "2026-11-01", "label": "docs(protocols): harmonize BKM-049/084/085\u2026", "sha": "c60089f", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_100_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_100_0.md"}]}, {"id": "DISC-023", "title": "Ambient Hooks & Sub-600ms Grounding Transparency", "conception_date": "2026-05-12", "implementation_date": "2026-08-25", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "FEAT-600 / BKM-076 / BKM-046", "sprint_ref": "SPRINT_PLAN_SPR_92_0.md", "code_anchors": ["HomeLabAI/config/hooks/icm_hook.py", "HomeLabAI/src/nodes/lab_dna_router.py"], "arxiv_inspiration": null, "summary": "Ephemeral pre-turn ambient hooks that inject targeted DNA vectors in under 600ms and emit compact single-line grounding badges with latency guardrails for full auditability.", "status": "MATURE", "tags": ["ambient-hooks", "grounding-transparency", "feat-600", "latency-budget"], "first_commit": {"sha": "add938a", "date": "2026-08-25", "repo": "HomeLabAI"}, "last_commit": {"sha": "91f1bcd", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-09-08", "label": "feat(curator): implement sync_sprint_dna.p\u2026", "sha": "b112209", "repo": "HomeLabAI"}, {"date": "2026-10-04", "label": "feat(ambient): canonical ambient_recall en\u2026", "sha": "9e39325", "repo": "HomeLabAI"}, {"date": "2026-11-12", "label": "feat(vibe-020): abolish post-retrieval col\u2026", "sha": "91f1bcd", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_92_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_92_0.md"}]}, {"id": "DISC-024", "title": "Heterogeneous Cross-Vendor GPU VRAM Pooling", "conception_date": "2026-06-18", "implementation_date": "2026-10-25", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "LAB-122 / SPR-110.0 / FEAT-499", "sprint_ref": "SPRINT_PLAN_SPR_110_0.md", "code_anchors": ["HomeLabAI/docs/LAB_INFRASTRUCTURE.md", "HomeLabAI/src/infra/engine_ctl.sh"], "arxiv_inspiration": null, "summary": "Pooling heterogeneous NVIDIA Turing (RTX 2080 Ti CUDA) and Intel Battlemage (Arc B580 Vulkan/ReBAR) GPUs via local llama.cpp RPC alongside Apple Silicon (M5 oMLX) without DDR3 swap thrashing.", "status": "MATURE", "tags": ["heterogeneous-computing", "vram-pooling", "cuda-vulkan-rpc", "rebar"], "first_commit": {"sha": "59d12ad", "date": "2026-02-23", "repo": "HomeLabAI"}, "last_commit": {"sha": "827e824", "date": "2026-11-16", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-16", "revisions": [{"date": "2026-11-01", "label": "docs(dna): update LAB-115, LAB-116, add LA\u2026", "sha": "d643375", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_110_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_110_0.md"}]}, {"id": "DISC-026", "title": "Tracked Conversational Lanes & Dropped Threads Ledger", "conception_date": "2026-07-10", "implementation_date": "2026-09-20", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "BKM-064 / BKM-077 / BKM-084 / BKM-097", "sprint_ref": "SPRINT_PLAN_SPR_102_0.md", "code_anchors": ["AGENTS.md", "HomeLabAI/docs/Protocols.md"], "arxiv_inspiration": null, "summary": "Numerical conversational lane governance paired with a persistent lettered Dropped Threads Ledger (A:, B:, C:) and Roll-Up Audit reconciliation ensuring no engineering insight vanishes across turns.", "status": "MATURE", "tags": ["tracked-conversations", "dropped-threads", "bkm-084", "rollup-audit"], "first_commit": {"sha": "e6144fb", "date": "2026-01-08", "repo": "HomeLabAI"}, "last_commit": {"sha": "d2a045d", "date": "2026-11-21", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-21", "revisions": [{"date": "2026-10-01", "label": "docs(agents): update heads down directives\u2026", "sha": "3397547", "repo": "Dev_Lab"}, {"date": "2026-11-01", "label": "docs(protocols): harmonize BKM-049/084/085\u2026", "sha": "c60089f", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_102_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_102_0.md"}]}, {"id": "DISC-028", "title": "Dynamic Multi-View Paper Projection & Drift Engine", "conception_date": "2026-08-18", "implementation_date": "2026-09-28", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "FEAT-616 / FEAT-665 / PAPER-001", "sprint_ref": "SPRINT_PLAN_SPR_94_0.md", "code_anchors": ["Portfolio_Dev/scripts/publish_paper.py", "Portfolio_Dev/papers/paper_jitc_intuition.json"], "arxiv_inspiration": null, "summary": "Offline multi-view technical paper publishing engine projecting immutable atomic claims across executive, academic, and narrative views with automated consistency drift heuristics.", "status": "MATURE", "tags": ["papers", "multi-view-projection", "drift-heuristic", "jitc-paper"], "first_commit": {"sha": "5a8b054f", "date": "2026-09-12", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "de31bba0", "date": "2026-09-28", "repo": "Portfolio_Dev"}, "revisions": [], "sprint_links": [{"label": "SPRINT_PLAN_SPR_94_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_94_0.md"}]}, {"id": "DISC-016", "title": "The Separation of Atomic Substance from Narrative Topology", "conception_date": "2026-09-11", "implementation_date": "2026-10-20", "bucket_id": "storage", "lane": "Memory & Substrate Storage", "origin_artifact": "FEAT-665 / ADR-008 / FEAT-601", "sprint_ref": "SPR-107.0", "code_anchors": ["Portfolio_Dev/field_notes/writer.html", "Portfolio_Dev/scripts/build_writer.py"], "arxiv_inspiration": null, "summary": "Conflating atomic note content with narrative spine ordering forces paragraph reflows to corrupt revision history; separating Kabal Spines from AST reconciliation allows arbitrary narrative permutations over immutable substance.", "status": "ACTIVE", "tags": ["kabal-spines", "ast-reconciliation", "writer-studio", "atomic-substance"], "first_commit": {"sha": "8c3dbdea", "date": "2026-09-08", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "4c7b43da", "date": "2026-10-25", "repo": "Portfolio_Dev"}, "last_evolved_date": "2026-10-25", "revisions": [], "sprint_links": [{"label": "SPRINT_PLAN_SPR_107_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_107_0.md"}]}, {"id": "DISC-011", "title": "The Just-In-Time Illusion", "conception_date": "2026-09-17", "implementation_date": "2026-10-08", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "FEAT-642 / FEAT-643 / BKM-049 / BKM-060 / LAB-019", "sprint_ref": "SPR-97.0", "code_anchors": ["HomeLabAI/src/logic/context_prewarmer.py", "HomeLabAI/src/mcp/clara_dna_mcp_server.py", "HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Separate dynamic structural discovery (instant AST) from semantic comprehension (pre-warmed/volunteered micro-digests), preserving L2 agency while bounding context below 350 tokens.", "status": "MATURE", "tags": ["jitc", "prewarm", "ast-blueprint", "swarm-governance", "context-budget"], "first_commit": {"sha": "fc22810", "date": "2026-07-29", "repo": "HomeLabAI"}, "last_commit": {"sha": "b1508f3", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-11-02", "label": "feat(epistemic-memory): restore 4-tier epi\u2026", "sha": "f6d247a", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_97_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_97_0.md"}]}, {"id": "DISC-013", "title": "The 'Island of Green' Trap & Judicial Daemon Assertion", "conception_date": "2026-09-23", "implementation_date": "2026-10-17", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "BKM-062 / BKM-024 / FEAT-608 / FEAT-619", "sprint_ref": "SPR-92.0", "code_anchors": ["HomeLabAI/src/infra/probe_round_table_accountability.py", "HomeLabAI/src/infra/standalone_accountability_watchdog.py"], "arxiv_inspiration": null, "summary": "Unit test suites pass green by asserting self-affirming mocks while physical background processes are dead; true verification requires Judicial Assertion inspecting live socket handshakes and running proc states.", "status": "MATURE", "tags": ["anti-green-lie", "judicial-assertion", "accountability-watchdog", "live-validation"], "first_commit": {"sha": "ce8335a", "date": "2026-09-23", "repo": "HomeLabAI"}, "last_commit": {"sha": "f08044a", "date": "2026-11-17", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-17", "revisions": [{"date": "2026-11-01", "label": "feat(judge,router,probe): implement Storie\u2026", "sha": "5c8d6ba", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_92_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_92_0.md"}]}, {"id": "DISC-012", "title": "Subversive Tool-Mediated Context Injection", "conception_date": "2026-10-03", "implementation_date": "2026-10-08", "bucket_id": "llm_kernel", "lane": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "origin_artifact": "INS-044 / FEAT-647 / BKM-072 / BKM-049", "sprint_ref": "SPR-97.0 / SPR-98.0", "code_anchors": ["HomeLabAI/src/mcp/clara_dna_mcp_server.py", "HomeLabAI/src/tests/delegate.py"], "arxiv_inspiration": null, "summary": "Reasoning models exhibit strong grounding skepticism (INS-044); serving pre-computed conductor patch notes dynamically through tools (jitc_research) satisfies agent agency while bounding context below 500 tokens.", "status": "MATURE", "tags": ["tool-ipc", "jitc-research", "grounding-skepticism", "swarm-governance"], "first_commit": {"sha": "fc22810", "date": "2026-07-29", "repo": "HomeLabAI"}, "last_commit": {"sha": "b1508f3", "date": "2026-11-12", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-12", "revisions": [{"date": "2026-11-02", "label": "feat(epistemic-memory): restore 4-tier epi\u2026", "sha": "f6d247a", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_97_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_97_0.md"}, {"label": "SPRINT_PLAN_SPR_98_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_98_0.md"}]}, {"id": "DISC-020", "title": "Step-Trace Backward Fault Localization", "conception_date": "2026-10-08", "implementation_date": "2026-10-26", "bucket_id": "ambient_hooks", "lane": "Ambient Hooks & Monitors", "origin_artifact": "FEAT-638 / FEAT-671 / BKM-035", "sprint_ref": "SPR-108.0", "code_anchors": ["HomeLabAI/src/logic/cognitive_hub.py", "HomeLabAI/src/v5/foyer/router.py", "HomeLabAI/src/tests/test_step_trace_attribution.py"], "arxiv_inspiration": null, "summary": "Treating negative user feedback as a monolithic loss yields zero learning signal; walking backward across pipeline artifacts (Voice -> Stance -> Filter -> Search) isolates the exact defect stage into labeled exemplars.", "status": "ACTIVE", "tags": ["step-trace", "fault-localization", "feedback-flywheel", "telemetry"], "first_commit": {"sha": "43d71ca", "date": "2026-03-03", "repo": "HomeLabAI"}, "last_commit": {"sha": "b282541", "date": "2026-11-20", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-20", "revisions": [{"date": "2026-11-01", "label": "feat(judge,router,probe): implement Storie\u2026", "sha": "5c8d6ba", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_108_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_108_0.md"}]}, {"id": "DISC-014", "title": "Continuous Interest Fluidity vs. Binary Gate Clamping", "conception_date": "2026-10-14", "implementation_date": "2026-10-24", "bucket_id": "triage", "lane": "Triage & Classification", "origin_artifact": "FEAT-523 / FEAT-645 / VIBE-015 / BKM-083", "sprint_ref": "SPR-103.0", "code_anchors": ["HomeLabAI/src/logic/cognitive_hub.py"], "arxiv_inspiration": null, "summary": "Binary condition gates choke conversational flow and mute heavy reasoning nodes; continuous interest smoothly modulates token headroom (clamp(I * 150, 32, 1500)) without silencing downstream models.", "status": "MATURE", "tags": ["continuous-interest", "hydraulic-pacing", "zero-bifurcation", "cognitive-flow"], "first_commit": {"sha": "43d71ca", "date": "2026-03-03", "repo": "HomeLabAI"}, "last_commit": {"sha": "b282541", "date": "2026-11-20", "repo": "HomeLabAI"}, "last_evolved_date": "2026-11-20", "revisions": [{"date": "2026-11-02", "label": "fix(import): add src.nodes fallback for ar\u2026", "sha": "366c224", "repo": "HomeLabAI"}], "sprint_links": [{"label": "SPRINT_PLAN_SPR_103_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_103_0.md"}]}, {"id": "DISC-015", "title": "Two-Dimensional Epistemic Stability & Subconscious De-Starvation", "conception_date": "2026-10-18", "implementation_date": "2026-11-10", "bucket_id": "distillation", "lane": "Distillation & Synthesis", "origin_artifact": "LOOP-004 / FEAT-662 / FEAT-067 / FEAT-127", "sprint_ref": "SPR-106.0", "code_anchors": ["Portfolio_Dev/field_notes/refine_gem.py", "Portfolio_Dev/field_notes/refine_wisdom.py"], "arxiv_inspiration": null, "summary": "Monolithic rank scoring causes database amnesia and starvation; decoupling substance (impact_level 1-4) from topology (refinement_level 0-3 via Lyapunov stability delta=0) preserves low-level operational exhaust.", "status": "MATURE", "tags": ["epistemic-stability", "kabal", "subconscious-dreaming", "refinement"], "first_commit": {"sha": "bd345771", "date": "2026-02-09", "repo": "Portfolio_Dev"}, "last_commit": {"sha": "915a14ab", "date": "2026-11-12", "repo": "Portfolio_Dev"}, "last_evolved_date": "2026-11-12", "revisions": [], "sprint_links": [{"label": "SPRINT_PLAN_SPR_106_0.md", "url": "https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/active/SPRINT_PLAN_SPR_106_0.md"}]}];
         const OUTLIERS = [{"id": "OUT-001", "title": "Natural Language Audio Intercom Feedback Protocol", "conception_date": "2026-02-18", "implementation_date": "2026-02-27", "candidate_bucket": "human_ai_interface", "similarity_score": 0.582, "source": "SPR-50 Audio Stream Experiments", "summary": "Full-duplex low-latency audio stream with PCM buffer sentinel; falls between JITC context scoping and sensory human-AI interface.", "operator_status": "PENDING_REVIEW", "recommended_action": "Evaluate declaring new Sensory Stream lane or assign to Human-AI Foil.", "inferred_intent": "greeting", "addressed_to": "NONE", "vibe": "CASUAL", "domain": "unknown", "casual": 0.8, "intrigue": 0.0, "importance": 0.0, "target_domains": []}];
         const LANES = [{"id": "triage", "title": "Triage & Classification", "short": "Triage", "color": "#388bfd", "bg": "rgba(56, 139, 253, 0.15)", "desc": "Informational inquiry gates, QQ protocol, model routing via Foyer, and semantic triage."}, {"id": "ambient_hooks", "title": "Ambient Hooks & Monitors", "short": "Ambient Hooks", "color": "#2ea043", "bg": "rgba(46, 160, 67, 0.15)", "desc": "Background watchdogs, filesystem monitors, git reset hooks, quiescence timers, and AST memory guards."}, {"id": "llm_kernel", "title": "LLM Kernel (Context \u00b7 Attention \u00b7 Reply)", "short": "LLM Kernel", "color": "#e3b341", "bg": "rgba(227, 179, 65, 0.15)", "desc": "In-LLM cognitive pipeline: runtime context assembly/Token Golf, attention & swarm delegation, and safe reply patching."}, {"id": "distillation", "title": "Distillation & Synthesis", "short": "Distillation", "color": "#a371f7", "bg": "rgba(163, 113, 247, 0.15)", "desc": "Post-turn synthesis, subconscious dreaming, blackboard gem refinement, and error-to-protocol crystallization."}, {"id": "storage", "title": "Memory & Substrate Storage", "short": "Memory & Storage", "color": "#f85149", "bg": "rgba(248, 81, 73, 0.15)", "desc": "ChromaDB vector vaults, persistent ICM SQLite episodic recall, git commit ledger, and zero-torch precomputed caches."}];
 
@@ -744,19 +753,17 @@
             const filtered = getFilteredDiscoveries();
 
             const minTime = new Date('2025-10-15T00:00:00Z').getTime();
-            const maxTime = new Date('2026-04-15T00:00:00Z').getTime();
+            const maxTime = new Date('2026-11-22T00:00:00Z').getTime();
             const totalDuration = maxTime - minTime;
 
             const activeLanes = LANES.filter(l => currentLaneFilter === 'all' || currentLaneFilter === l.id);
-            const laneHeight = 64;
-            const headerHeight = 36;
-            const svgWidth = Math.max(920, document.getElementById('gantt-container').clientWidth);
-            const leftMargin = 190;
-            const chartWidth = svgWidth - leftMargin - 30;
-            const svgHeight = headerHeight + (activeLanes.length * laneHeight);
-
-            svg.setAttribute('viewBox', `0 0 ${svgWidth} ${svgHeight}`);
-            svg.setAttribute('height', svgHeight);
+            const rowHeight = 28;
+            const lanePadY = 14;
+            const headerHeight = 40;
+            const svgWidth = Math.max(960, document.getElementById('gantt-container').clientWidth);
+            const leftMargin = 195;
+            const rightMargin = 40;
+            const chartWidth = svgWidth - leftMargin - rightMargin;
 
             function getX(dateStr) {
                 const t = new Date(dateStr + 'T00:00:00Z').getTime();
@@ -764,15 +771,66 @@
                 return leftMargin + (ratio * chartWidth);
             }
 
+            // Compute dynamic lane heights based on number of items so horizontal lines never overlap
+            const laneLayouts = [];
+            let currentY = headerHeight;
+            activeLanes.forEach(lane => {
+                const laneItems = filtered
+                    .filter(d => d.bucket_id === lane.id)
+                    .sort((a, b) => a.conception_date.localeCompare(b.conception_date));
+                const laneH = Math.max(54, (laneItems.length * rowHeight) + (lanePadY * 2));
+                laneLayouts.push({ lane, items: laneItems, y: currentY, height: laneH });
+                currentY += laneH;
+            });
+            const svgHeight = currentY + 12;
+
+            svg.setAttribute('viewBox', `0 0 ${svgWidth} ${svgHeight}`);
+            svg.setAttribute('height', svgHeight);
+
             const months = [
-                { label: "Nov 2025", date: "2025-11-01" },
-                { label: "Dec 2025", date: "2025-12-01" },
-                { label: "Jan 2026", date: "2026-01-01" },
-                { label: "Feb 2026", date: "2026-02-01" },
-                { label: "Mar 2026", date: "2026-03-01" },
-                { label: "Apr 2026", date: "2026-04-01" }
+                { label: "Nov '25", date: "2025-11-01" },
+                { label: "Dec '25", date: "2025-12-01" },
+                { label: "Jan '26", date: "2026-01-01" },
+                { label: "Feb '26", date: "2026-02-01" },
+                { label: "Mar '26", date: "2026-03-01" },
+                { label: "Apr '26", date: "2026-04-01" },
+                { label: "May '26", date: "2026-05-01" },
+                { label: "Jun '26", date: "2026-06-01" },
+                { label: "Jul '26", date: "2026-07-01" },
+                { label: "Aug '26", date: "2026-08-01" },
+                { label: "Sep '26", date: "2026-09-01" },
+                { label: "Oct '26", date: "2026-10-01" },
+                { label: "Nov '26", date: "2026-11-01" }
             ];
 
+            // Draw lane backgrounds first
+            laneLayouts.forEach(({ lane, y, height }) => {
+                const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                rect.setAttribute('x', 0);
+                rect.setAttribute('y', y);
+                rect.setAttribute('width', svgWidth);
+                rect.setAttribute('height', height);
+                rect.setAttribute('class', 'gantt-lane-band');
+                svg.appendChild(rect);
+
+                const marker = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                marker.setAttribute('x', 6);
+                marker.setAttribute('y', y + 10);
+                marker.setAttribute('width', 4);
+                marker.setAttribute('height', height - 20);
+                marker.setAttribute('fill', lane.color);
+                marker.setAttribute('rx', 2);
+                svg.appendChild(marker);
+
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('x', 18);
+                label.setAttribute('y', y + (height / 2) + 4);
+                label.setAttribute('class', 'gantt-lane-label');
+                label.textContent = lane.short;
+                svg.appendChild(label);
+            });
+
+            // Draw monthly vertical grid lines
             months.forEach(m => {
                 const x = getX(m.date);
                 const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
@@ -785,103 +843,106 @@
 
                 const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
                 text.setAttribute('x', x);
-                text.setAttribute('y', 22);
+                text.setAttribute('y', 24);
                 text.setAttribute('class', 'gantt-month-label');
                 text.textContent = m.label;
                 svg.appendChild(text);
             });
+            const freezeX = getX('2026-11-22');
 
-            activeLanes.forEach((lane, idx) => {
-                const y = headerHeight + (idx * laneHeight);
-
-                const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                rect.setAttribute('x', 0);
-                rect.setAttribute('y', y);
-                rect.setAttribute('width', svgWidth);
-                rect.setAttribute('height', laneHeight);
-                rect.setAttribute('class', 'gantt-lane-band');
-                svg.appendChild(rect);
-
-                const marker = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                marker.setAttribute('x', 6);
-                marker.setAttribute('y', y + 14);
-                marker.setAttribute('width', 4);
-                marker.setAttribute('height', laneHeight - 28);
-                marker.setAttribute('fill', lane.color);
-                marker.setAttribute('rx', 2);
-                svg.appendChild(marker);
-
-                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                label.setAttribute('x', 18);
-                label.setAttribute('y', y + (laneHeight / 2) + 4);
-                label.setAttribute('class', 'gantt-lane-label');
-                label.textContent = lane.short;
-                svg.appendChild(label);
-
-                const laneItems = filtered.filter(d => d.bucket_id === lane.id);
-                laneItems.forEach(item => {
+            // Draw horizontal evolution lines + vertical revision ticks per item
+            laneLayouts.forEach(({ lane, items, y }) => {
+                items.forEach((item, rowIdx) => {
+                    const endDate = item.implementation_date;
                     const xStart = getX(item.conception_date);
-                    const xEnd = getX(item.implementation_date);
-                    const barWidth = Math.max(14, xEnd - xStart);
-                    const itemY = y + 16;
-                    const itemH = 32;
+                    const xImpl = getX(item.implementation_date);
+                    const xEnd = Math.max(xStart + 10, getX(endDate));
+                    const lineY = y + lanePadY + (rowIdx * rowHeight) + (rowHeight / 2);
+                    const isSelected = selectedId === item.id;
 
-                    const bar = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                    bar.setAttribute('x', xStart);
-                    bar.setAttribute('y', itemY);
-                    bar.setAttribute('width', barWidth);
-                    bar.setAttribute('height', itemH);
-                    bar.setAttribute('fill', lane.color);
-                    bar.setAttribute('opacity', selectedId === item.id ? '1.0' : '0.85');
-                    bar.setAttribute('class', 'gantt-bar');
-                    if (selectedId === item.id) {
-                        bar.setAttribute('stroke', '#ffffff');
-                        bar.setAttribute('stroke-width', '2');
-                    }
+                    const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                    group.style.cursor = 'pointer';
 
-                    const cCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                    cCircle.setAttribute('cx', xStart);
-                    cCircle.setAttribute('cy', itemY + (itemH / 2));
-                    cCircle.setAttribute('r', 5);
-                    cCircle.setAttribute('fill', '#ffffff');
-                    cCircle.setAttribute('stroke', lane.color);
-                    cCircle.setAttribute('stroke-width', '2');
-                    cCircle.setAttribute('class', 'gantt-node-conception');
+                    // Horizontal evolution line
+                    const hLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    hLine.setAttribute('x1', xStart);
+                    hLine.setAttribute('y1', lineY);
+                    hLine.setAttribute('x2', xEnd);
+                    hLine.setAttribute('y2', lineY);
+                    hLine.setAttribute('stroke', lane.color);
+                    hLine.setAttribute('stroke-width', isSelected ? '4.5' : '3');
+                    hLine.setAttribute('stroke-linecap', 'round');
+                    hLine.setAttribute('opacity', isSelected ? '1.0' : '0.88');
+                    group.appendChild(hLine);
 
-                    const diamond = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-                    const dSize = 6;
-                    const dy = itemY + (itemH / 2);
-                    diamond.setAttribute('points', `${xEnd},${dy - dSize} ${xEnd + dSize},${dy} ${xEnd},${dy + dSize} ${xEnd - dSize},${dy}`);
-                    diamond.setAttribute('fill', '#ffffff');
-                    diamond.setAttribute('stroke', lane.color);
-                    diamond.setAttribute('stroke-width', '2');
-                    diamond.setAttribute('class', 'gantt-node-impl');
+                    // Collect vertical revision ticks (conception, implementation, and any explicit revisions)
+                    const tickDates = new Set([item.conception_date, item.implementation_date]);
+                    // Keep ticks crisp at conception & implementation on the graph; full git history is linked on each card
 
-                    const barText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                    barText.setAttribute('x', xStart + 8);
-                    barText.setAttribute('y', itemY + 20);
-                    barText.setAttribute('class', 'gantt-item-text');
-                    const maxChars = Math.max(3, Math.floor(barWidth / 8));
-                    barText.textContent = item.title.length > maxChars ? item.title.slice(0, maxChars - 2) + '…' : item.title;
+                    tickDates.forEach(dStr => {
+                        const tx = getX(dStr);
+                        const isOrigin = dStr === item.conception_date;
+                        const tickH = isOrigin ? 8 : 6;
+                        const vTick = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        vTick.setAttribute('x1', tx);
+                        vTick.setAttribute('y1', lineY - tickH);
+                        vTick.setAttribute('x2', tx);
+                        vTick.setAttribute('y2', lineY + tickH);
+                        vTick.setAttribute('stroke', isSelected ? '#ffffff' : lane.color);
+                        vTick.setAttribute('stroke-width', isOrigin ? '3' : '2');
+                        vTick.setAttribute('stroke-linecap', 'round');
+                        group.appendChild(vTick);
+                    });
+
+                    // Inline label placed to the right (or left if near freeze edge)
+                    const labelText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    const placeLeft = (freezeX - xEnd) < 165;
+                    labelText.setAttribute('x', placeLeft ? (xStart - 8) : (xEnd + 8));
+                    labelText.setAttribute('y', lineY + 3.5);
+                    labelText.setAttribute('text-anchor', placeLeft ? 'end' : 'start');
+                    labelText.setAttribute('fill', isSelected ? '#ffffff' : '#c9d1d9');
+                    labelText.setAttribute('font-size', '11');
+                    labelText.setAttribute('font-family', 'var(--font-mono)');
+                    const shortTitle = item.title.length > 32 ? item.title.slice(0, 30) + '…' : item.title;
+                    labelText.textContent = `${item.id}: ${shortTitle}`;
+                    group.appendChild(labelText);
+
+                    // Wide invisible hit target for easy hover/click
+                    const hitLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    hitLine.setAttribute('x1', xStart - 6);
+                    hitLine.setAttribute('y1', lineY);
+                    hitLine.setAttribute('x2', xEnd + 6);
+                    hitLine.setAttribute('y2', lineY);
+                    hitLine.setAttribute('stroke', 'transparent');
+                    hitLine.setAttribute('stroke-width', '18');
+                    group.appendChild(hitLine);
 
                     const showTip = (e) => {
                         const rectBox = document.getElementById('gantt-container').getBoundingClientRect();
                         const clientX = e.clientX || (e.touches && e.touches[0].clientX);
                         const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-                        tooltip.style.left = (clientX - rectBox.left + 15) + 'px';
+                        const tipX = Math.min(rectBox.width - 320, Math.max(10, clientX - rectBox.left + 15));
+                        tooltip.style.left = tipX + 'px';
                         tooltip.style.top = (clientY - rectBox.top + 15) + 'px';
+                        const revHtml = (Array.isArray(item.revisions) && item.revisions.length)
+                            ? `<div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 4px;">Revisions: ${item.revisions.map(r => `${r.date} (${r.label})`).join(' • ')}</div>`
+                            : '';
+                        const evolvedHtml = item.last_evolved_date
+                            ? `<br>Last Evolved: <strong style="color: var(--text-bright);">${item.last_evolved_date}</strong>`
+                            : '';
                         tooltip.innerHTML = `
                             <div style="font-family: var(--font-mono); color: ${lane.color}; font-weight: bold; margin-bottom: 4px;">
                                 [${item.id}] ${item.title}
                             </div>
                             <div style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 6px;">
                                 Conception: <strong style="color: var(--text-bright);">${item.conception_date}</strong><br>
-                                Implementation: <strong style="color: var(--text-bright);">${item.implementation_date}</strong>
+                                First Build: <strong style="color: var(--text-bright);">${item.implementation_date}</strong>${evolvedHtml}
                             </div>
                             <div style="font-size: 0.8rem; color: var(--text-main); margin-bottom: 6px;">
                                 ${item.summary}
                             </div>
-                            <div style="font-size: 0.7rem; color: var(--accent-gold); font-family: var(--font-mono);">
+                            ${revHtml}
+                            <div style="font-size: 0.7rem; color: var(--accent-gold); font-family: var(--font-mono); margin-top: 4px;">
                                 Sprint: ${item.sprint_ref}
                             </div>
                         `;
@@ -902,19 +963,12 @@
                         }
                     };
 
-                    [bar, cCircle, diamond].forEach(el => {
-                        el.addEventListener('mouseenter', showTip);
-                        el.addEventListener('mousemove', showTip);
-                        el.addEventListener('mouseleave', hideTip);
-                        el.addEventListener('click', clickItem);
-                    });
+                    group.addEventListener('mouseenter', showTip);
+                    group.addEventListener('mousemove', showTip);
+                    group.addEventListener('mouseleave', hideTip);
+                    group.addEventListener('click', clickItem);
 
-                    svg.appendChild(bar);
-                    svg.appendChild(cCircle);
-                    svg.appendChild(diamond);
-                    if (barWidth > 45) {
-                        svg.appendChild(barText);
-                    }
+                    svg.appendChild(group);
                 });
             });
         }
@@ -955,9 +1009,41 @@
                 const durationDays = calculateDurationDays(item.conception_date, item.implementation_date);
                 const isSelected = selectedId === item.id;
 
-                const codeAnchorsHtml = (item.code_anchors || []).map(a => `
-                    <span class="anchor-tag"><code>${a}</code></span>
-                `).join('');
+                const codeAnchorsHtml = (item.code_anchors || []).map(a => {
+                    if (a.startsWith('HomeLabAI/')) {
+                        const rel = a.slice('HomeLabAI/'.length);
+                        const blobUrl = `https://github.com/kEnder242/HomeLabAI/blob/main/${rel}`;
+                        const histUrl = `https://github.com/kEnder242/HomeLabAI/commits/main/${rel}`;
+                        return `<span class="anchor-tag"><a href="${blobUrl}" target="_blank" onclick="event.stopPropagation()" style="color: inherit; text-decoration: none;"><code>${a}</code></a> <a href="${histUrl}" target="_blank" onclick="event.stopPropagation()" title="View Git commit history" style="text-decoration: none; opacity: 0.75;">⏱</a></span>`;
+                    }
+                    if (a.startsWith('Portfolio_Dev/')) {
+                        const rel = a.slice('Portfolio_Dev/'.length);
+                        const blobUrl = `https://github.com/kEnder242/Portfolio_Dev/blob/main/${rel}`;
+                        const histUrl = `https://github.com/kEnder242/Portfolio_Dev/commits/main/${rel}`;
+                        return `<span class="anchor-tag"><a href="${blobUrl}" target="_blank" onclick="event.stopPropagation()" style="color: inherit; text-decoration: none;"><code>${a}</code></a> <a href="${histUrl}" target="_blank" onclick="event.stopPropagation()" title="View Git commit history" style="text-decoration: none; opacity: 0.75;">⏱</a></span>`;
+                    }
+                    return `<span class="anchor-tag" title="Private workspace file"><code>${a}</code> <span style="opacity:0.6; font-size:0.65rem;">[private]</span></span>`;
+                }).join('');
+
+                const sprintLinksHtml = (item.sprint_links && item.sprint_links.length)
+                    ? item.sprint_links.map(sl => sl.url
+                        ? `<a href="${sl.url}" target="_blank" onclick="event.stopPropagation()">${sl.label} ↗</a>`
+                        : `<span>${sl.label}</span>`
+                    ).join(' &nbsp;/&nbsp; ')
+                    : `<span>${item.sprint_ref}</span>`;
+
+                const fmtCommit = (c, prefix) => {
+                    if (!c || !c.sha) return '';
+                    if (c.repo === 'HomeLabAI' || c.repo === 'Portfolio_Dev') {
+                        const url = `https://github.com/kEnder242/${c.repo}/commit/${c.sha}`;
+                        return `${prefix}: <a href="${url}" target="_blank" onclick="event.stopPropagation()" style="font-family: var(--font-mono);">${c.sha}</a> <span style="opacity:0.7;">(${c.date})</span>`;
+                    }
+                    return `${prefix}: <code>${c.sha}</code> <span style="opacity:0.7;">(${c.date})</span>`;
+                };
+                const gitRowParts = [fmtCommit(item.first_commit, 'First'), fmtCommit(item.last_commit, 'Latest')].filter(Boolean);
+                const gitRowHtml = gitRowParts.length
+                    ? `<div class="meta-row"><span class="meta-key">Git:</span><span class="meta-val" style="font-size:0.75rem;">${gitRowParts.join(' &nbsp;•&nbsp; ')}</span></div>`
+                    : '';
 
                 const tagsHtml = (item.tags || []).map(t => `
                     <span class="tag-pill">#${t}</span>
@@ -982,8 +1068,8 @@
                             </div>
                             <span class="date-span-pill">⏱️ ${durationDays} days span</span>
                             <div class="date-node" style="text-align: right;">
-                                <span class="date-label">◆ Implementation</span>
-                                <span class="date-val">${item.implementation_date}</span>
+                                <span class="date-label">◆ ${item.last_evolved_date ? 'Last Evolved' : 'Implementation'}</span>
+                                <span class="date-val">${item.last_evolved_date || item.implementation_date}</span>
                             </div>
                         </div>
 
@@ -998,12 +1084,9 @@
                             </div>
                             <div class="meta-row">
                                 <span class="meta-key">Sprint:</span>
-                                <span class="meta-val">
-                                    <a href="https://github.com/kEnder242/Portfolio_Dev/blob/main/docs/sprints/archive/${item.sprint_ref}" target="_blank">
-                                        ${item.sprint_ref} ↗
-                                    </a>
-                                </span>
+                                <span class="meta-val">${sprintLinksHtml}</span>
                             </div>
+                            ${gitRowHtml}
                             ${item.arxiv_inspiration ? `
                                 <div class="meta-row">
                                     <span class="meta-key">ArXiv:</span>

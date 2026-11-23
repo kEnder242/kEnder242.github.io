@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2025-2026 Jason Allred. All rights reserved.
 # sync_research.sh [v1.3]
 # Purpose: Sanitize the internal Research Ledger and deploy to the public airlock.
 

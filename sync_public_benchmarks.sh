@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2025-2026 Jason Allred. All rights reserved.
 # sync_public_benchmarks.sh [v1.0]
 # Purpose: Sync the public benchmarks showcase and sanitized telemetry to public airlock.
 

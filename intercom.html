@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Copyright 2025-2026 Jason Allred. All rights reserved. -->
 <html lang="en">
 <head>
     <script>
@@ -255,6 +256,11 @@
         .fb-btn.active-down { opacity:1; border-color:#f85149; color:#f85149; background:rgba(248,81,73,0.12); box-shadow:0 0 8px rgba(248,81,73,0.5); }
         .fb-btn:disabled { cursor:default; }
     </style>
+    <style id="option-b-viewport-fix">
+        html, body { height: auto !important; min-height: 100vh !important; overflow-y: auto !important; overflow-x: hidden; }
+        main { max-width: none !important; height: auto !important; min-height: 100vh; overflow-y: visible !important; flex: 1 1 auto; min-width: 0; }
+        footer.apache-copyright-footer { width: 100%; box-sizing: border-box; flex-shrink: 0; }
+    </style>
 </head>
 <body>
     <button id="menu-toggle" style="position:fixed; top:10px; left:10px; z-index:100; background:rgba(0,0,0,0.5); color:#fff; border:none; border-radius:4px; padding:5px 10px; cursor:pointer;">☰ MENU</button>
@@ -300,7 +306,11 @@
             </div>
         </section>
 
-    </main>
+    
+    <footer class="apache-copyright-footer" style="text-align:center; padding:20px 16px; margin-top:28px; border-top:1px solid rgba(255,255,255,0.12); color:#8b949e; font-size:0.78rem; font-family:monospace;">
+        Copyright 2025&ndash;2026 Jason Allred
+    </footer>
+</main>
 
     <script src="assets/marked.min.js"></script>
     <script src="intercom_v2.js?v=d90b03c8"></script>

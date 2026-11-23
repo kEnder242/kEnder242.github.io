@@ -216,4 +216,12 @@ async function checkStatus() {
 }
 ```
 
+---
 
+## Copyright & Authorship Notice
+
+**Copyright 2025–2026 Jason Allred. All rights reserved.**
+
+*   **Sole Author & Copyright Holder:** Jason Allred
+*   **IP Snapshot Date:** `2026-11-22` (Tag: `v2026.11.22-ip-snapshot`)
+*   This static portfolio site, its prose, whitepapers, and compiled presentations are published for viewing and portfolio reference only; no open-source license is granted for redistribution or derivative works without prior written permission from Jason Allred.

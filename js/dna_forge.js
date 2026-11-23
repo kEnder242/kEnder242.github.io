@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 // =============================================================
 // DNA FORGE STUDIO CLIENT ENGINE [FEAT-582 / FEAT-597 / FEAT-598]
 // Tab Switching, Drafting Decomposition, Bone Rack, & Review Grid

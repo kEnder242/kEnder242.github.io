@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 // [FEAT-223] Global Error Sentry
 // ── CONSOLIDATED GLOBAL ERROR TRAP (FEAT-268) ──
 (function() {

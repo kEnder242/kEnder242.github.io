@@ -1,3 +1,4 @@
+// Copyright 2025-2026 Jason Allred. All rights reserved.
 /**
  * Federated Silicon Benchmarks & Round Table Delta-T Engine
  * [FEAT-525] Multi-Seat Hardware Dashboard, ROI & Cumulative Stage Delta-T Telemetry
